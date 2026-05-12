@@ -572,7 +572,6 @@ function renderUpcomingPanel() {
   if (!panel) return;
 
   panel.innerHTML = `
-    <div class="upcoming-title">Upcoming Retirements</div>
     ${upcoming.length === 0 ? '<div class="upcoming-empty">None within 1 year</div>' : ''}
     ${upcoming.map(p => `
       <div class="upcoming-item ${p.tenure.status}" onclick="selectView('${escHtml(p.parent_id)}')">

@@ -396,8 +396,9 @@
     "source_label": "Tripura HC Digital Law Reports team page",
     "confidence": "named",
     "notes": "THCDLR team page lists Shri Saamyajyoti Debnath as CPC; an older 2024 notification listed Shri Sarbajeet Choudhury.",
-    "photo_url": "https://thc.nic.in/images/S_Debnath.jpg",
-    "photo_source": "High Court of Tripura administrative setup"
+    "photo_url": "assets/photos/ADMIN-CPC-TRI/portrait.jpg",
+    "photo_source": "High Court of Tripura administrative setup",
+    "photo_original_url": "https://thc.nic.in/images/S_Debnath.jpg"
   },
   {
     "id": "ADMIN-CPC-UTK",
@@ -436,8 +437,9 @@
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
     "notes": "",
-    "photo_url": "https://thc.nic.in/images/RG_A_Debbarma_25032026.jpg",
-    "photo_source": "High Court of Tripura administrative setup"
+    "photo_url": "assets/photos/ADMIN-TRI-RG/portrait.jpg",
+    "photo_source": "High Court of Tripura administrative setup",
+    "photo_original_url": "https://thc.nic.in/images/RG_A_Debbarma_25032026.jpg"
   },
   {
     "id": "ADMIN-TRI-REG-ADMN",
@@ -456,8 +458,9 @@
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
     "notes": "",
-    "photo_url": "https://thc.nic.in/images/S_Datta.jpg",
-    "photo_source": "High Court of Tripura administrative setup"
+    "photo_url": "assets/photos/ADMIN-TRI-REG-ADMN/portrait.jpg",
+    "photo_source": "High Court of Tripura administrative setup",
+    "photo_original_url": "https://thc.nic.in/images/S_Datta.jpg"
   },
   {
     "id": "ADMIN-TRI-REG-VIG",
@@ -476,8 +479,9 @@
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
     "notes": "",
-    "photo_url": "https://thc.nic.in/images/RBhattacharjee.jpg",
-    "photo_source": "High Court of Tripura administrative setup"
+    "photo_url": "assets/photos/ADMIN-TRI-REG-VIG/portrait.jpg",
+    "photo_source": "High Court of Tripura administrative setup",
+    "photo_original_url": "https://thc.nic.in/images/RBhattacharjee.jpg"
   },
   {
     "id": "ADMIN-TRI-REG-JUD",
@@ -496,8 +500,9 @@
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
     "notes": "",
-    "photo_url": "https://thc.nic.in/images/S_Bikas.png",
-    "photo_source": "High Court of Tripura administrative setup"
+    "photo_url": "assets/photos/ADMIN-TRI-REG-JUD/portrait.png",
+    "photo_source": "High Court of Tripura administrative setup",
+    "photo_original_url": "https://thc.nic.in/images/S_Bikas.png"
   },
   {
     "id": "ADMIN-TRI-JR-DDO",
@@ -516,8 +521,9 @@
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
     "notes": "",
-    "photo_url": "https://thc.nic.in/images/ashimroy.JPG",
-    "photo_source": "High Court of Tripura administrative setup"
+    "photo_url": "assets/photos/ADMIN-TRI-JR-DDO/portrait.jpg",
+    "photo_source": "High Court of Tripura administrative setup",
+    "photo_original_url": "https://thc.nic.in/images/ashimroy.JPG"
   },
   {
     "id": "ADMIN-TRI-DR-JUD",
@@ -536,8 +542,9 @@
     "source_label": "Tripura HC administrative setup",
     "confidence": "vacant",
     "notes": "",
-    "photo_url": "https://thc.nic.in/images/blank.jpg",
-    "photo_source": "High Court of Tripura administrative setup"
+    "photo_url": "assets/photos/ADMIN-TRI-DR-JUD/portrait.jpg",
+    "photo_source": "High Court of Tripura administrative setup",
+    "photo_original_url": "https://thc.nic.in/images/blank.jpg"
   },
   {
     "id": "ADMIN-TRI-DR-ADMN",
@@ -556,8 +563,9 @@
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
     "notes": "",
-    "photo_url": "https://thc.nic.in/images/rks.jpg",
-    "photo_source": "High Court of Tripura administrative setup"
+    "photo_url": "assets/photos/ADMIN-TRI-DR-ADMN/portrait.jpg",
+    "photo_source": "High Court of Tripura administrative setup",
+    "photo_original_url": "https://thc.nic.in/images/rks.jpg"
   },
   {
     "id": "ADMIN-TRI-DR-PROTOCOL",
@@ -576,8 +584,9 @@
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
     "notes": "",
-    "photo_url": "https://thc.nic.in/images/rks.jpg",
-    "photo_source": "High Court of Tripura administrative setup"
+    "photo_url": "assets/photos/ADMIN-TRI-DR-PROTOCOL/portrait.jpg",
+    "photo_source": "High Court of Tripura administrative setup",
+    "photo_original_url": "https://thc.nic.in/images/rks.jpg"
   },
   {
     "id": "ADMIN-TRI-DR-ACCOUNTS",
@@ -596,8 +605,9 @@
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
     "notes": "",
-    "photo_url": "https://thc.nic.in/images/PDatta.jpeg",
-    "photo_source": "High Court of Tripura administrative setup"
+    "photo_url": "assets/photos/ADMIN-TRI-DR-ACCOUNTS/portrait.jpg",
+    "photo_source": "High Court of Tripura administrative setup",
+    "photo_original_url": "https://thc.nic.in/images/PDatta.jpeg"
   },
   {
     "id": "ADMIN-TRI-PS-CJ",
@@ -616,8 +626,9 @@
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
     "notes": "",
-    "photo_url": "https://thc.nic.in/images/SLodh.jpg",
-    "photo_source": "High Court of Tripura administrative setup"
+    "photo_url": "assets/photos/ADMIN-TRI-PS-CJ/portrait.jpg",
+    "photo_source": "High Court of Tripura administrative setup",
+    "photo_original_url": "https://thc.nic.in/images/SLodh.jpg"
   },
   {
     "id": "ADMIN-TRI-LIB",
@@ -636,8 +647,9 @@
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
     "notes": "",
-    "photo_url": "https://thc.nic.in/images/pranam.jpg",
-    "photo_source": "High Court of Tripura administrative setup"
+    "photo_url": "assets/photos/ADMIN-TRI-LIB/portrait.jpg",
+    "photo_source": "High Court of Tripura administrative setup",
+    "photo_original_url": "https://thc.nic.in/images/pranam.jpg"
   },
   {
     "id": "ADMIN-CHG-RG",

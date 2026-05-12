@@ -119,10 +119,10 @@ function renderNotifications() {
   container.innerHTML = `
     <div class="view-header">
       <h2>${escHtml(selectedName)} Notifications</h2>
-      <p class="view-subtitle">Default view shows indexed notifications from ${formatDateIso(SIX_MONTHS_AGO)} through today. PDF links open in a new tab when the court publishes a direct PDF URL.</p>
+      <p class="view-subtitle">Default view shows indexed transfer/posting/staff-movement documents from ${formatDateIso(SIX_MONTHS_AGO)} through today. Notification rows link to individual PDFs; source cards link to the court index pages used to find them.</p>
     </div>
     <div class="stats-bar">
-      <span class="stat-chip">${rows.length} indexed items</span>
+      <span class="stat-chip">${rows.length} PDF documents</span>
       <span class="stat-chip">${sources.length} source page${sources.length === 1 ? '' : 's'}</span>
     </div>
     ${rows.length ? Object.entries(grouped).map(([court, items]) => renderCourtGroup(court, items)).join('') : renderEmptySources(sources)}
@@ -147,7 +147,7 @@ function renderNotificationRow(item) {
       <div class="notification-date">${formatDate(item.date)}</div>
       <div class="notification-main">
         <div class="notification-title">${escHtml(item.title)}</div>
-        <div class="notification-meta">${escHtml(item.category || 'Notification')} · ${escHtml(item.court)}</div>
+        <div class="notification-meta">${escHtml(item.category || 'Notification')} · ${escHtml(item.court)} · Source index: ${sourceLink(item.source_page)}</div>
       </div>
       <div class="notification-file ${isPdf ? 'pdf' : 'index'}">${isPdf ? 'PDF' : 'Index'}</div>
     </a>`;
@@ -166,15 +166,26 @@ function renderSourcePanel(sources) {
     <div class="source-panel">
       <div class="section-label">Official Source Pages</div>
       <div class="source-grid">
-        ${sources.map(s => `
+        ${sources.map(s => s.url ? `
           <a class="source-card" href="${escHtml(s.url)}" target="_blank" rel="noopener">
             <div class="source-title">${escHtml(s.court)}</div>
             <div class="source-url">${escHtml(s.url)}</div>
             <div class="source-notes">${escHtml(s.notes || '')}</div>
           </a>
+        ` : `
+          <div class="source-card source-card-missing">
+            <div class="source-title">${escHtml(s.court)}</div>
+            <div class="source-url">Needs source verification</div>
+            <div class="source-notes">${escHtml(s.notes || '')}</div>
+          </div>
         `).join('')}
       </div>
     </div>`;
+}
+
+function sourceLink(url) {
+  if (!url) return 'not recorded';
+  return `<a class="inline-link" href="${escHtml(url)}" target="_blank" rel="noopener">index</a>`;
 }
 
 window.selectNotificationCourt = function(id) {

@@ -30,8 +30,9 @@ window.COURTS_DATA = [
     "parent_high_court": "Punjab & Haryana",
     "parent_id": "SC",
     "notes": "53rd CJI. Born 10 Feb 1962. Nominated by CJI B.R. Gavai. Appointed by President Droupadi Murmu.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2025102910.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-CJI/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2025102910.jpg"
   },
   {
     "id": "SC-002",
@@ -46,8 +47,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 24 Sep 1962. Next in seniority after CJI. Expected 54th CJI (Feb–Sep 2027).",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2025110998.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-002/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2025110998.jpg"
   },
   {
     "id": "SC-003",
@@ -62,8 +64,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 29 Jun 1961.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/20240111100.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-003/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/20240111100.jpg"
   },
   {
     "id": "SC-004",
@@ -78,8 +81,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 30 Oct 1962. Expected to be 55th CJI (Sep–Oct 2027) — India's first woman CJI.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2024011390.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-004/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2024011390.jpg"
   },
   {
     "id": "SC-005",
@@ -94,8 +98,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 21 Jul 1962.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2024011338.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-005/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2024011338.jpg"
   },
   {
     "id": "SC-006",
@@ -110,8 +115,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 03 May 1963.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011184.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-006/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011184.jpg"
   },
   {
     "id": "SC-007",
@@ -126,8 +132,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 12 Aug 1965.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011184-1.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-007/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011184-1.jpg"
   },
   {
     "id": "SC-008",
@@ -142,8 +149,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 09 Feb 1965.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011141.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-008/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011141.jpg"
   },
   {
     "id": "SC-009",
@@ -158,8 +166,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 17 Jun 1961.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011110.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-009/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011110.jpg"
   },
   {
     "id": "SC-010",
@@ -174,8 +183,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 23 Aug 1961.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011112.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-010/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011112.jpg"
   },
   {
     "id": "SC-011",
@@ -190,8 +200,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 14 Aug 1963.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011172.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-011/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011172.jpg"
   },
   {
     "id": "SC-012",
@@ -206,8 +217,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 11 May 1963.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2025090883.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-012/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2025090883.jpg"
   },
   {
     "id": "SC-013",
@@ -222,8 +234,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 02 Jun 1965.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011127.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-013/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011127.jpg"
   },
   {
     "id": "SC-014",
@@ -238,8 +251,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 14 Jul 1962.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011116.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-014/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011116.jpg"
   },
   {
     "id": "SC-015",
@@ -254,8 +268,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 29 Aug 1964.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011162.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-015/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011162.jpg"
   },
   {
     "id": "SC-016",
@@ -270,8 +285,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 26 May 1966.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011127-1.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-016/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011127-1.jpg"
   },
   {
     "id": "SC-017",
@@ -286,8 +302,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 02 Aug 1964.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011177.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-017/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011177.jpg"
   },
   {
     "id": "SC-018",
@@ -302,8 +319,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 06 May 1962.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011123-1.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-018/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011123-1.jpg"
   },
   {
     "id": "SC-019",
@@ -318,8 +336,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 30 Nov 1961.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/12/2024011113.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-019/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/12/2024011113.jpg"
   },
   {
     "id": "SC-020",
@@ -334,8 +353,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 12 Mar 1963.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/12/2024011142.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-020/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/12/2024011142.jpg"
   },
   {
     "id": "SC-021",
@@ -350,8 +370,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 11 Jan 1963.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/12/2024011135.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-021/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/12/2024011135.jpg"
   },
   {
     "id": "SC-022",
@@ -366,8 +387,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 23 Jun 1962.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2024021530-scaled-e1748753979960.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-022/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2024021530-scaled-e1748753979960.jpg"
   },
   {
     "id": "SC-023",
@@ -382,8 +404,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 01 Mar 1963.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/07/2024080379-scaled-e1748754095610.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-023/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/07/2024080379-scaled-e1748754095610.jpg"
   },
   {
     "id": "SC-024",
@@ -398,8 +421,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 10 Jun 1963.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/07/2024120978-e1733723449364.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-024/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/07/2024120978-e1733723449364.jpg"
   },
   {
     "id": "SC-025",
@@ -414,8 +438,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 17 Dec 1962.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/12/2024121925.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-025/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/12/2024121925.jpg"
   },
   {
     "id": "SC-026",
@@ -430,8 +455,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 25 Apr 1963.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/01/2025012065.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-026/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/01/2025012065.jpg"
   },
   {
     "id": "SC-027",
@@ -446,8 +472,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 03 Oct 1966.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/03/2025032612-e1748754168828.jpeg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-027/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/03/2025032612-e1748754168828.jpeg"
   },
   {
     "id": "SC-028",
@@ -462,8 +489,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 23 Mar 1965.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/05/2025061738.jpeg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-028/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/05/2025061738.jpeg"
   },
   {
     "id": "SC-029",
@@ -478,8 +506,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 26 Mar 1964.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/05/2025080775.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-029/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/05/2025080775.jpg"
   },
   {
     "id": "SC-030",
@@ -494,8 +523,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 07 Apr 1965.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/05/2025082310.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-030/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/05/2025082310.jpg"
   },
   {
     "id": "SC-031",
@@ -510,8 +540,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 13 Apr 1964.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/08/2025091540.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-031/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/08/2025091540.jpg"
   },
   {
     "id": "SC-032",
@@ -526,8 +557,9 @@ window.COURTS_DATA = [
     "parent_high_court": "",
     "parent_id": "SC",
     "notes": "Born 28 May 1968.",
-    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/08/2025082950.jpg",
-    "photo_source": "Supreme Court of India"
+    "photo_url": "assets/photos/SC-032/portrait.jpg",
+    "photo_source": "Supreme Court of India",
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/08/2025082950.jpg"
   },
   {
     "id": "HC-ALD",
@@ -1870,8 +1902,9 @@ window.ADMIN_STAFF_DATA = [
     "source_label": "Tripura HC Digital Law Reports team page",
     "confidence": "named",
     "notes": "THCDLR team page lists Shri Saamyajyoti Debnath as CPC; an older 2024 notification listed Shri Sarbajeet Choudhury.",
-    "photo_url": "https://thc.nic.in/images/S_Debnath.jpg",
-    "photo_source": "High Court of Tripura administrative setup"
+    "photo_url": "assets/photos/ADMIN-CPC-TRI/portrait.jpg",
+    "photo_source": "High Court of Tripura administrative setup",
+    "photo_original_url": "https://thc.nic.in/images/S_Debnath.jpg"
   },
   {
     "id": "ADMIN-CPC-UTK",
@@ -1910,8 +1943,9 @@ window.ADMIN_STAFF_DATA = [
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
     "notes": "",
-    "photo_url": "https://thc.nic.in/images/RG_A_Debbarma_25032026.jpg",
-    "photo_source": "High Court of Tripura administrative setup"
+    "photo_url": "assets/photos/ADMIN-TRI-RG/portrait.jpg",
+    "photo_source": "High Court of Tripura administrative setup",
+    "photo_original_url": "https://thc.nic.in/images/RG_A_Debbarma_25032026.jpg"
   },
   {
     "id": "ADMIN-TRI-REG-ADMN",
@@ -1930,8 +1964,9 @@ window.ADMIN_STAFF_DATA = [
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
     "notes": "",
-    "photo_url": "https://thc.nic.in/images/S_Datta.jpg",
-    "photo_source": "High Court of Tripura administrative setup"
+    "photo_url": "assets/photos/ADMIN-TRI-REG-ADMN/portrait.jpg",
+    "photo_source": "High Court of Tripura administrative setup",
+    "photo_original_url": "https://thc.nic.in/images/S_Datta.jpg"
   },
   {
     "id": "ADMIN-TRI-REG-VIG",
@@ -1950,8 +1985,9 @@ window.ADMIN_STAFF_DATA = [
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
     "notes": "",
-    "photo_url": "https://thc.nic.in/images/RBhattacharjee.jpg",
-    "photo_source": "High Court of Tripura administrative setup"
+    "photo_url": "assets/photos/ADMIN-TRI-REG-VIG/portrait.jpg",
+    "photo_source": "High Court of Tripura administrative setup",
+    "photo_original_url": "https://thc.nic.in/images/RBhattacharjee.jpg"
   },
   {
     "id": "ADMIN-TRI-REG-JUD",
@@ -1970,8 +2006,9 @@ window.ADMIN_STAFF_DATA = [
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
     "notes": "",
-    "photo_url": "https://thc.nic.in/images/S_Bikas.png",
-    "photo_source": "High Court of Tripura administrative setup"
+    "photo_url": "assets/photos/ADMIN-TRI-REG-JUD/portrait.png",
+    "photo_source": "High Court of Tripura administrative setup",
+    "photo_original_url": "https://thc.nic.in/images/S_Bikas.png"
   },
   {
     "id": "ADMIN-TRI-JR-DDO",
@@ -1990,8 +2027,9 @@ window.ADMIN_STAFF_DATA = [
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
     "notes": "",
-    "photo_url": "https://thc.nic.in/images/ashimroy.JPG",
-    "photo_source": "High Court of Tripura administrative setup"
+    "photo_url": "assets/photos/ADMIN-TRI-JR-DDO/portrait.jpg",
+    "photo_source": "High Court of Tripura administrative setup",
+    "photo_original_url": "https://thc.nic.in/images/ashimroy.JPG"
   },
   {
     "id": "ADMIN-TRI-DR-JUD",
@@ -2010,8 +2048,9 @@ window.ADMIN_STAFF_DATA = [
     "source_label": "Tripura HC administrative setup",
     "confidence": "vacant",
     "notes": "",
-    "photo_url": "https://thc.nic.in/images/blank.jpg",
-    "photo_source": "High Court of Tripura administrative setup"
+    "photo_url": "assets/photos/ADMIN-TRI-DR-JUD/portrait.jpg",
+    "photo_source": "High Court of Tripura administrative setup",
+    "photo_original_url": "https://thc.nic.in/images/blank.jpg"
   },
   {
     "id": "ADMIN-TRI-DR-ADMN",
@@ -2030,8 +2069,9 @@ window.ADMIN_STAFF_DATA = [
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
     "notes": "",
-    "photo_url": "https://thc.nic.in/images/rks.jpg",
-    "photo_source": "High Court of Tripura administrative setup"
+    "photo_url": "assets/photos/ADMIN-TRI-DR-ADMN/portrait.jpg",
+    "photo_source": "High Court of Tripura administrative setup",
+    "photo_original_url": "https://thc.nic.in/images/rks.jpg"
   },
   {
     "id": "ADMIN-TRI-DR-PROTOCOL",
@@ -2050,8 +2090,9 @@ window.ADMIN_STAFF_DATA = [
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
     "notes": "",
-    "photo_url": "https://thc.nic.in/images/rks.jpg",
-    "photo_source": "High Court of Tripura administrative setup"
+    "photo_url": "assets/photos/ADMIN-TRI-DR-PROTOCOL/portrait.jpg",
+    "photo_source": "High Court of Tripura administrative setup",
+    "photo_original_url": "https://thc.nic.in/images/rks.jpg"
   },
   {
     "id": "ADMIN-TRI-DR-ACCOUNTS",
@@ -2070,8 +2111,9 @@ window.ADMIN_STAFF_DATA = [
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
     "notes": "",
-    "photo_url": "https://thc.nic.in/images/PDatta.jpeg",
-    "photo_source": "High Court of Tripura administrative setup"
+    "photo_url": "assets/photos/ADMIN-TRI-DR-ACCOUNTS/portrait.jpg",
+    "photo_source": "High Court of Tripura administrative setup",
+    "photo_original_url": "https://thc.nic.in/images/PDatta.jpeg"
   },
   {
     "id": "ADMIN-TRI-PS-CJ",
@@ -2090,8 +2132,9 @@ window.ADMIN_STAFF_DATA = [
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
     "notes": "",
-    "photo_url": "https://thc.nic.in/images/SLodh.jpg",
-    "photo_source": "High Court of Tripura administrative setup"
+    "photo_url": "assets/photos/ADMIN-TRI-PS-CJ/portrait.jpg",
+    "photo_source": "High Court of Tripura administrative setup",
+    "photo_original_url": "https://thc.nic.in/images/SLodh.jpg"
   },
   {
     "id": "ADMIN-TRI-LIB",
@@ -2110,8 +2153,9 @@ window.ADMIN_STAFF_DATA = [
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
     "notes": "",
-    "photo_url": "https://thc.nic.in/images/pranam.jpg",
-    "photo_source": "High Court of Tripura administrative setup"
+    "photo_url": "assets/photos/ADMIN-TRI-LIB/portrait.jpg",
+    "photo_source": "High Court of Tripura administrative setup",
+    "photo_original_url": "https://thc.nic.in/images/pranam.jpg"
   },
   {
     "id": "ADMIN-CHG-RG",
@@ -2516,12 +2560,89 @@ window.ADMIN_STAFF_DATA = [
 ];
 window.NOTIFICATIONS_DATA = [
   {
+    "id": "JKL-2026-05-04-651",
+    "court_id": "HC-JKL",
+    "court": "J&K and Ladakh High Court",
+    "date": "2026-05-04",
+    "category": "Transfer / Posting",
+    "title": "Order No. 651 of 2026/RG regarding transfers and postings of Judicial Officers",
+    "url": "https://jkhighcourt.nic.in/upload/orders%26cir/order_651_04052026.pdf",
+    "source_page": "https://jkhighcourt.nic.in/jo.php",
+    "file_type": "pdf"
+  },
+  {
+    "id": "JKL-2025-12-03-1779",
+    "court_id": "HC-JKL",
+    "court": "J&K and Ladakh High Court",
+    "date": "2025-12-03",
+    "category": "Transfer / Posting",
+    "title": "Order No. 1779 of 2025/RG regarding transfers and postings of Judicial Officers",
+    "url": "https://jkhighcourt.nic.in/upload/orders%26cir/order_1779_03122025.pdf",
+    "source_page": "https://jkhighcourt.nic.in/jo.php",
+    "file_type": "pdf"
+  },
+  {
+    "id": "JKL-2025-11-19-1664",
+    "court_id": "HC-JKL",
+    "court": "J&K and Ladakh High Court",
+    "date": "2025-11-19",
+    "category": "Posting / Registry",
+    "title": "Order No. 1664 of 2025/RG regarding posting of Judicial Officers in the Registry",
+    "url": "https://jkhighcourt.nic.in/upload/orders%26cir/order_1664_19112025.pdf",
+    "source_page": "https://jkhighcourt.nic.in/jo.php",
+    "file_type": "pdf"
+  },
+  {
+    "id": "JKL-2025-11-19-1672",
+    "court_id": "HC-JKL",
+    "court": "J&K and Ladakh High Court",
+    "date": "2025-11-19",
+    "category": "Transfer / Posting",
+    "title": "Order No. 1672 of 2025/RG regarding transfers and postings of Judicial Officers",
+    "url": "https://jkhighcourt.nic.in/upload/orders%26cir/order_1672_19112025.pdf",
+    "source_page": "https://jkhighcourt.nic.in/jo.php",
+    "file_type": "pdf"
+  },
+  {
+    "id": "JKL-2025-11-14-1638",
+    "court_id": "HC-JKL",
+    "court": "J&K and Ladakh High Court",
+    "date": "2025-11-14",
+    "category": "Transfer / Posting",
+    "title": "Order No. 1638 of 2025/RG regarding transfers and postings of Judicial Officers",
+    "url": "https://jkhighcourt.nic.in/upload/orders%26cir/order_1638_14112025.pdf",
+    "source_page": "https://jkhighcourt.nic.in/jo.php",
+    "file_type": "pdf"
+  },
+  {
+    "id": "GUJ-2026-05-07-DJ",
+    "court_id": "HC-GUJ",
+    "court": "Gujarat High Court",
+    "date": "2026-05-07",
+    "category": "Transfer / Posting",
+    "title": "Notification - Transfer and Posting of Judicial Officers (District Judge cadre)",
+    "url": "https://gujarathighcourt.nic.in/hccms/sites/default/files/miscnotifications/Notification%20-%20Transfer%20and%20Posting%20of%20Judicial%20Officers%20%28District%20Judge%20cadre%29%20Gujarat%20High%20Court%2007052026.pdf",
+    "source_page": "https://gujarathighcourt.nic.in/miscnotifications",
+    "file_type": "pdf"
+  },
+  {
+    "id": "GUJ-2026-05-07-SCJ",
+    "court_id": "HC-GUJ",
+    "court": "Gujarat High Court",
+    "date": "2026-05-07",
+    "category": "Transfer / Posting",
+    "title": "Notification - Transfer and Posting of Judicial Officers (Senior Civil Judge cadre)",
+    "url": "https://gujarathighcourt.nic.in/hccms/sites/default/files/miscnotifications/Notification%20-%20Transfer%20and%20Posting%20of%20Judicial%20Officers%20%28Senior%20Civil%20Judge%20cadre%29%20Gujarat%20High%20Court%20-%2007052026.pdf",
+    "source_page": "https://gujarathighcourt.nic.in/miscnotifications",
+    "file_type": "pdf"
+  },
+  {
     "id": "GUJ-2026-05-07-CJ",
     "court_id": "HC-GUJ",
     "court": "Gujarat High Court",
     "date": "2026-05-07",
     "category": "Transfer / Posting",
-    "title": "Notification - Transfer & Posting of Judicial Officers (Civil Judge cadre)",
+    "title": "Notification - Transfer Posting of Judicial Officers (Civil Judge cadre)",
     "url": "https://gujarathighcourt.nic.in/hccms/sites/default/files/miscnotifications/Notification%20-%20Transfer%20Posting%20of%20Judicial%20Officers%20%28Civil%20Judge%20cadre%29%20Gujarat%20High%20Court%2007052026.pdf",
     "source_page": "https://gujarathighcourt.nic.in/miscnotifications",
     "file_type": "pdf"
@@ -2533,9 +2654,9 @@ window.NOTIFICATIONS_DATA = [
     "date": "2026-02-23",
     "category": "Transfer / Posting",
     "title": "Notification - Transfer Posting of Judicial Officers (Senior Civil Judge cadre)",
-    "url": "https://gujarathighcourt.nic.in/miscnotifications",
+    "url": "https://gujarathighcourt.nic.in/hccms/sites/default/files/miscnotifications/Notification%20-%20Transfer%20Posting%20of%20Judicial%20Officers%20%28Senior%20Civil%20Judge%20cadre%29%20Gujarat%20High%20Court%2023022026.pdf",
     "source_page": "https://gujarathighcourt.nic.in/miscnotifications",
-    "file_type": "index"
+    "file_type": "pdf"
   },
   {
     "id": "GUJ-2025-12-24-DJ-CORR",
@@ -2543,109 +2664,43 @@ window.NOTIFICATIONS_DATA = [
     "court": "Gujarat High Court",
     "date": "2025-12-24",
     "category": "Transfer / Posting",
-    "title": "Corrigendum Notification - Transfer and Posting of Judicial Officers (District Judge cadre)",
+    "title": "Corrigendum - Transfer and Posting of Judicial Officers (District Judge cadre)",
     "url": "https://gujarathighcourt.nic.in/hccms/sites/default/files/miscnotifications/Corrigendum%20%20Notification%20-%20Transfer%20and%20Posting%20of%20Judicial%20Officers%20%28District%20Judge%20cadre%29%20Gujarat%20High%20Court%2024122025_signed.pdf",
     "source_page": "https://gujarathighcourt.nic.in/miscnotifications",
     "file_type": "pdf"
   },
   {
-    "id": "MP-2026-04-30-513",
+    "id": "MP-2026-02-25-213",
     "court_id": "HC-MP",
     "court": "Madhya Pradesh High Court",
-    "date": "2026-04-30",
-    "category": "Transfer / Posting",
-    "title": "513-Confdl-2026 - Revocation of suspension of Shri Pankaj Yadav",
-    "url": "https://mphc.gov.in/transfer",
+    "date": "2026-02-25",
+    "category": "Posting",
+    "title": "213-Confdl-2026 regarding posting of Civil Judge, Junior Division",
+    "url": "https://mphc.gov.in/PDF/web_pdf/TP/213-Confdl-2026.pdf",
     "source_page": "https://mphc.gov.in/transfer",
-    "file_type": "index"
+    "file_type": "pdf"
   },
   {
-    "id": "MP-2026-04-29-484",
+    "id": "MP-2026-02-25-211",
     "court_id": "HC-MP",
     "court": "Madhya Pradesh High Court",
-    "date": "2026-04-29",
-    "category": "Transfer / Posting",
-    "title": "484-Confdl-2026 - Board change of District & Additional Sessions Judges",
-    "url": "https://mphc.gov.in/transfer",
+    "date": "2026-02-25",
+    "category": "Posting",
+    "title": "211-Confdl-2026 regarding posting of Civil Judge, Junior Division",
+    "url": "https://mphc.gov.in/PDF/web_pdf/TP/211-Confdl-2026.pdf",
     "source_page": "https://mphc.gov.in/transfer",
-    "file_type": "index"
+    "file_type": "pdf"
   },
   {
-    "id": "MP-2026-04-18-412",
+    "id": "MP-2026-02-25-209",
     "court_id": "HC-MP",
     "court": "Madhya Pradesh High Court",
-    "date": "2026-04-18",
-    "category": "Transfer / Posting",
-    "title": "412-Confdl-2026 - Transfer of District & Additional Sessions Judges",
-    "url": "https://mphc.gov.in/transfer",
+    "date": "2026-02-25",
+    "category": "Posting",
+    "title": "209-Confdl-2026 regarding posting of Civil Judges, Senior Division",
+    "url": "https://mphc.gov.in/PDF/web_pdf/TP/209-Confdl-2026.pdf",
     "source_page": "https://mphc.gov.in/transfer",
-    "file_type": "index"
-  },
-  {
-    "id": "DEL-2026-05-RECENT-1",
-    "court_id": "HC-DEL",
-    "court": "Delhi High Court",
-    "date": "2026-05-12",
-    "category": "Transfer / Posting",
-    "title": "Order regarding posting in the Delhi Higher Judicial Service with immediate effect",
-    "url": "https://www.delhihighcourt.nic.in/",
-    "source_page": "https://www.delhihighcourt.nic.in/",
-    "file_type": "index"
-  },
-  {
-    "id": "DEL-2026-05-RECENT-2",
-    "court_id": "HC-DEL",
-    "court": "Delhi High Court",
-    "date": "2026-05-12",
-    "category": "Transfer / Posting",
-    "title": "Order regarding postings/transfers in the Delhi Higher Judicial Service",
-    "url": "https://www.delhihighcourt.nic.in/",
-    "source_page": "https://www.delhihighcourt.nic.in/",
-    "file_type": "index"
-  },
-  {
-    "id": "MAN-2025-05-15-CPC",
-    "court_id": "HC-MAN",
-    "court": "Manipur High Court",
-    "date": "2025-05-15",
-    "category": "CPC / Registry",
-    "title": "Notification regarding assignment of charge of Central Project Coordinator to Registrar (Judicial)",
-    "url": "https://hcmimphal.nic.in/Notice.html",
-    "source_page": "https://hcmimphal.nic.in/Notice.html",
-    "file_type": "index"
-  },
-  {
-    "id": "SIK-2026-05-07-62",
-    "court_id": "HC-SIK",
-    "court": "Sikkim High Court",
-    "date": "2026-05-07",
-    "category": "Case Management / Technology",
-    "title": "Notification No. 62/HCS - phased implementation of District Sikkim Integrated Case Management System",
-    "url": "https://hcs.gov.in/",
-    "source_page": "https://hcs.gov.in/",
-    "file_type": "index"
-  },
-  {
-    "id": "TRI-2026-04-23-DB",
-    "court_id": "HC-TRI",
-    "court": "Tripura High Court",
-    "date": "2026-04-23",
-    "category": "Bench / Sitting",
-    "title": "Notification - Division Bench sitting arrangement for 24 April 2026",
-    "url": "https://www.thc.nic.in/",
-    "source_page": "https://www.thc.nic.in/",
-    "file_type": "index"
-  },
-  {
-    "id": "SCI-2026-02-26-COLLEGIUM",
-    "court_id": "SC",
-    "court": "Supreme Court of India",
-    "date": "2026-02-26",
-    "category": "Collegium / Transfer",
-    "title": "Statement regarding transfer of a Judge and appointment of Chief Justices in two High Courts",
-    "url": "https://www.sci.gov.in/collegium-resolutions/",
-    "source_page": "https://www.sci.gov.in/collegium-resolutions/",
-    "file_type": "index"
+    "file_type": "pdf"
   }
 ];
 window.NOTIFICATION_SOURCES_DATA = [
@@ -2653,156 +2708,182 @@ window.NOTIFICATION_SOURCES_DATA = [
     "court_id": "SC",
     "court": "Supreme Court of India",
     "url": "https://www.sci.gov.in/collegium-resolutions/",
-    "notes": "Collegium resolutions include Supreme Court and High Court appointment / transfer recommendations."
+    "scope": "judge-transfer-recommendations",
+    "notes": "Collegium resolutions include recommendations for inter-High-Court judicial transfers and Chief Justice appointments."
   },
   {
     "court_id": "HC-ALD",
     "court": "Allahabad High Court",
-    "url": "https://www.allahabadhighcourt.in/",
-    "notes": "Official site publishes notice/event links from homepage."
+    "url": "https://www.allahabadhighcourt.in/calendar/notification2k6.jsp?e=2026-12-31&s=2026-01-01",
+    "scope": "judicial-officer-transfers",
+    "notes": "Dedicated year-wise index: Notifications of Transfer of Judicial Officers."
   },
   {
     "court_id": "HC-AP",
     "court": "Andhra Pradesh High Court",
-    "url": "https://aphc.gov.in/",
-    "notes": "Homepage has Notifications dropdown with General, Recruitment, Tender, Circular Instructions and Gazette Publications."
+    "url": "https://aphc.gov.in/notifications.php?year=2026",
+    "scope": "staff-and-judicial-officer-movement",
+    "notes": "General notifications index includes transfer/posting orders for judicial officers and district-court staff."
   },
   {
     "court_id": "HC-BOM",
     "court": "Bombay High Court",
-    "url": "https://www.bombayhighcourt.gov.in/",
-    "notes": "Homepage carries notices, notifications and circulars."
+    "url": "",
+    "scope": "needs-source-verification",
+    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
   },
   {
     "court_id": "HC-CAL",
     "court": "Calcutta High Court",
-    "url": "https://www.calcuttahighcourt.gov.in/Notice-Files/",
-    "notes": "Official notice files area; registry page links latest notifications."
+    "url": "https://www.calcuttahighcourt.gov.in/Notices/transfer-notice",
+    "scope": "judicial-officer-transfers",
+    "notes": "Dedicated index: Notices -> Transfer / Posting of Judicial Officers."
   },
   {
     "court_id": "HC-CHG",
     "court": "Chhattisgarh High Court",
-    "url": "https://highcourt.cg.gov.in/",
-    "notes": "Homepage has Latest Notification block."
+    "url": "",
+    "scope": "needs-source-verification",
+    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
   },
   {
     "court_id": "HC-DEL",
     "court": "Delhi High Court",
-    "url": "https://www.delhihighcourt.nic.in/",
-    "notes": "Homepage lists updates, notifications and transfer/posting orders."
+    "url": "https://delhihighcourt.nic.in/web/public-notice",
+    "scope": "posting-transfer-orders",
+    "notes": "General notices page includes orders regarding postings/transfers in Delhi Judicial Service / Delhi Higher Judicial Service."
   },
   {
     "court_id": "HC-GAU",
     "court": "Gauhati High Court",
     "url": "https://ghconline.gov.in/index.php/category/notifications/",
-    "notes": "Official WordPress notification category."
+    "scope": "notifications-needs-filtering",
+    "notes": "Notification index; use only rows that are transfer/posting/staff movement and link to direct PDFs."
   },
   {
     "court_id": "HC-GUJ",
     "court": "Gujarat High Court",
     "url": "https://gujarathighcourt.nic.in/miscnotifications",
-    "notes": "Miscellaneous notifications include transfer and posting PDFs."
+    "scope": "judicial-officer-transfers",
+    "notes": "Misc notifications index includes transfer/posting PDFs for District Judge, Senior Civil Judge and Civil Judge cadres."
   },
   {
     "court_id": "HC-HP",
     "court": "Himachal Pradesh High Court",
-    "url": "https://highcourt.hp.gov.in/",
-    "notes": "Official site home and notices sections."
+    "url": "",
+    "scope": "needs-source-verification",
+    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
   },
   {
     "court_id": "HC-JKL",
     "court": "J&K and Ladakh High Court",
-    "url": "https://jkhighcourt.nic.in/noti.php",
-    "notes": "Official notifications page."
+    "url": "https://jkhighcourt.nic.in/jo.php",
+    "scope": "judicial-officer-transfers",
+    "notes": "Dedicated page: Transfer Orders of Judicial Officers. Notification rows should link to each order PDF under upload/orders&cir/."
   },
   {
     "court_id": "HC-JHK",
     "court": "Jharkhand High Court",
-    "url": "https://jharkhandhighcourt.nic.in/",
-    "notes": "Official homepage / notices."
+    "url": "",
+    "scope": "needs-source-verification",
+    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
   },
   {
     "court_id": "HC-KAR",
     "court": "Karnataka High Court",
-    "url": "https://karnatakajudiciary.kar.nic.in/",
-    "notes": "Official judiciary portal."
+    "url": "",
+    "scope": "needs-source-verification",
+    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
   },
   {
     "court_id": "HC-KER",
     "court": "Kerala High Court",
-    "url": "https://highcourt.kerala.gov.in/",
-    "notes": "Announcements and High Court communications on official site."
+    "url": "https://www.highcourt.kerala.gov.in/",
+    "scope": "announcements-needs-filtering",
+    "notes": "No dedicated transfer/posting index identified yet. Staff/judicial movement notices appear through homepage announcements / notice board."
   },
   {
     "court_id": "HC-MP",
     "court": "Madhya Pradesh High Court",
     "url": "https://mphc.gov.in/transfer",
-    "notes": "Transfer / posting page."
+    "scope": "transfer-posting-orders",
+    "notes": "Dedicated transfer page with posting/board-change/registry/district-establishment transfer PDFs."
   },
   {
     "court_id": "HC-MAD",
     "court": "Madras High Court",
-    "url": "https://www.hcmadras.tn.nic.in/",
-    "notes": "Official site notices / notifications."
+    "url": "",
+    "scope": "needs-source-verification",
+    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
   },
   {
     "court_id": "HC-MAN",
     "court": "Manipur High Court",
     "url": "https://hcmimphal.nic.in/Notice.html",
-    "notes": "Official notices page."
+    "scope": "notifications-needs-filtering",
+    "notes": "Notices page; use only staff movement / transfer / posting rows with direct PDFs."
   },
   {
     "court_id": "HC-MEG",
     "court": "Meghalaya High Court",
     "url": "https://meghalayahighcourt.nic.in/notifications",
-    "notes": "Official notification area."
+    "scope": "notifications-needs-filtering",
+    "notes": "Notifications index; transfer/posting records exist as individual pages with PDF downloads."
   },
   {
     "court_id": "HC-ORI",
     "court": "Orissa High Court",
     "url": "https://www.orissahighcourt.nic.in/notification/",
-    "notes": "Official notification page."
+    "scope": "notifications-needs-filtering",
+    "notes": "Notification index; use only transfer/posting/staff movement rows with direct PDFs."
   },
   {
     "court_id": "HC-PAT",
     "court": "Patna High Court",
-    "url": "https://patnahighcourt.gov.in/",
-    "notes": "Homepage lists court notifications and general notices."
+    "url": "",
+    "scope": "needs-source-verification",
+    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
   },
   {
     "court_id": "HC-PHC",
     "court": "Punjab & Haryana High Court",
-    "url": "https://highcourtchd.gov.in/",
-    "notes": "Official site carries notices, roster and administration updates."
+    "url": "",
+    "scope": "needs-source-verification",
+    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
   },
   {
     "court_id": "HC-RAJ",
     "court": "Rajasthan High Court",
-    "url": "https://hcraj.nic.in/",
-    "notes": "Official site latest updates / administrative orders."
+    "url": "",
+    "scope": "needs-source-verification",
+    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
   },
   {
     "court_id": "HC-SIK",
     "court": "Sikkim High Court",
-    "url": "https://hcs.gov.in/",
-    "notes": "Homepage has Notification block."
+    "url": "",
+    "scope": "needs-source-verification",
+    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
   },
   {
     "court_id": "HC-TEL",
     "court": "Telangana High Court",
-    "url": "https://tshc.gov.in/",
-    "notes": "Homepage flash / notifications."
+    "url": "",
+    "scope": "needs-source-verification",
+    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
   },
   {
     "court_id": "HC-TRI",
     "court": "Tripura High Court",
-    "url": "https://www.thc.nic.in/",
-    "notes": "Homepage has Notifications tabs including Transfer & Postings."
+    "url": "https://thc.nic.in/notification/",
+    "scope": "transfer-postings-tab",
+    "notes": "Notifications page has Transfer & Postings tab; use only direct notification/order PDFs."
   },
   {
     "court_id": "HC-UTK",
     "court": "Uttarakhand High Court",
-    "url": "https://highcourtofuttarakhand.gov.in/",
-    "notes": "Official site notices / notifications."
+    "url": "",
+    "scope": "needs-source-verification",
+    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
   }
 ];

@@ -1,11 +1,88 @@
 [
   {
+    "id": "JKL-2026-05-04-651",
+    "court_id": "HC-JKL",
+    "court": "J&K and Ladakh High Court",
+    "date": "2026-05-04",
+    "category": "Transfer / Posting",
+    "title": "Order No. 651 of 2026/RG regarding transfers and postings of Judicial Officers",
+    "url": "https://jkhighcourt.nic.in/upload/orders%26cir/order_651_04052026.pdf",
+    "source_page": "https://jkhighcourt.nic.in/jo.php",
+    "file_type": "pdf"
+  },
+  {
+    "id": "JKL-2025-12-03-1779",
+    "court_id": "HC-JKL",
+    "court": "J&K and Ladakh High Court",
+    "date": "2025-12-03",
+    "category": "Transfer / Posting",
+    "title": "Order No. 1779 of 2025/RG regarding transfers and postings of Judicial Officers",
+    "url": "https://jkhighcourt.nic.in/upload/orders%26cir/order_1779_03122025.pdf",
+    "source_page": "https://jkhighcourt.nic.in/jo.php",
+    "file_type": "pdf"
+  },
+  {
+    "id": "JKL-2025-11-19-1664",
+    "court_id": "HC-JKL",
+    "court": "J&K and Ladakh High Court",
+    "date": "2025-11-19",
+    "category": "Posting / Registry",
+    "title": "Order No. 1664 of 2025/RG regarding posting of Judicial Officers in the Registry",
+    "url": "https://jkhighcourt.nic.in/upload/orders%26cir/order_1664_19112025.pdf",
+    "source_page": "https://jkhighcourt.nic.in/jo.php",
+    "file_type": "pdf"
+  },
+  {
+    "id": "JKL-2025-11-19-1672",
+    "court_id": "HC-JKL",
+    "court": "J&K and Ladakh High Court",
+    "date": "2025-11-19",
+    "category": "Transfer / Posting",
+    "title": "Order No. 1672 of 2025/RG regarding transfers and postings of Judicial Officers",
+    "url": "https://jkhighcourt.nic.in/upload/orders%26cir/order_1672_19112025.pdf",
+    "source_page": "https://jkhighcourt.nic.in/jo.php",
+    "file_type": "pdf"
+  },
+  {
+    "id": "JKL-2025-11-14-1638",
+    "court_id": "HC-JKL",
+    "court": "J&K and Ladakh High Court",
+    "date": "2025-11-14",
+    "category": "Transfer / Posting",
+    "title": "Order No. 1638 of 2025/RG regarding transfers and postings of Judicial Officers",
+    "url": "https://jkhighcourt.nic.in/upload/orders%26cir/order_1638_14112025.pdf",
+    "source_page": "https://jkhighcourt.nic.in/jo.php",
+    "file_type": "pdf"
+  },
+  {
+    "id": "GUJ-2026-05-07-DJ",
+    "court_id": "HC-GUJ",
+    "court": "Gujarat High Court",
+    "date": "2026-05-07",
+    "category": "Transfer / Posting",
+    "title": "Notification - Transfer and Posting of Judicial Officers (District Judge cadre)",
+    "url": "https://gujarathighcourt.nic.in/hccms/sites/default/files/miscnotifications/Notification%20-%20Transfer%20and%20Posting%20of%20Judicial%20Officers%20%28District%20Judge%20cadre%29%20Gujarat%20High%20Court%2007052026.pdf",
+    "source_page": "https://gujarathighcourt.nic.in/miscnotifications",
+    "file_type": "pdf"
+  },
+  {
+    "id": "GUJ-2026-05-07-SCJ",
+    "court_id": "HC-GUJ",
+    "court": "Gujarat High Court",
+    "date": "2026-05-07",
+    "category": "Transfer / Posting",
+    "title": "Notification - Transfer and Posting of Judicial Officers (Senior Civil Judge cadre)",
+    "url": "https://gujarathighcourt.nic.in/hccms/sites/default/files/miscnotifications/Notification%20-%20Transfer%20and%20Posting%20of%20Judicial%20Officers%20%28Senior%20Civil%20Judge%20cadre%29%20Gujarat%20High%20Court%20-%2007052026.pdf",
+    "source_page": "https://gujarathighcourt.nic.in/miscnotifications",
+    "file_type": "pdf"
+  },
+  {
     "id": "GUJ-2026-05-07-CJ",
     "court_id": "HC-GUJ",
     "court": "Gujarat High Court",
     "date": "2026-05-07",
     "category": "Transfer / Posting",
-    "title": "Notification - Transfer & Posting of Judicial Officers (Civil Judge cadre)",
+    "title": "Notification - Transfer Posting of Judicial Officers (Civil Judge cadre)",
     "url": "https://gujarathighcourt.nic.in/hccms/sites/default/files/miscnotifications/Notification%20-%20Transfer%20Posting%20of%20Judicial%20Officers%20%28Civil%20Judge%20cadre%29%20Gujarat%20High%20Court%2007052026.pdf",
     "source_page": "https://gujarathighcourt.nic.in/miscnotifications",
     "file_type": "pdf"
@@ -17,9 +94,9 @@
     "date": "2026-02-23",
     "category": "Transfer / Posting",
     "title": "Notification - Transfer Posting of Judicial Officers (Senior Civil Judge cadre)",
-    "url": "https://gujarathighcourt.nic.in/miscnotifications",
+    "url": "https://gujarathighcourt.nic.in/hccms/sites/default/files/miscnotifications/Notification%20-%20Transfer%20Posting%20of%20Judicial%20Officers%20%28Senior%20Civil%20Judge%20cadre%29%20Gujarat%20High%20Court%2023022026.pdf",
     "source_page": "https://gujarathighcourt.nic.in/miscnotifications",
-    "file_type": "index"
+    "file_type": "pdf"
   },
   {
     "id": "GUJ-2025-12-24-DJ-CORR",
@@ -27,108 +104,42 @@
     "court": "Gujarat High Court",
     "date": "2025-12-24",
     "category": "Transfer / Posting",
-    "title": "Corrigendum Notification - Transfer and Posting of Judicial Officers (District Judge cadre)",
+    "title": "Corrigendum - Transfer and Posting of Judicial Officers (District Judge cadre)",
     "url": "https://gujarathighcourt.nic.in/hccms/sites/default/files/miscnotifications/Corrigendum%20%20Notification%20-%20Transfer%20and%20Posting%20of%20Judicial%20Officers%20%28District%20Judge%20cadre%29%20Gujarat%20High%20Court%2024122025_signed.pdf",
     "source_page": "https://gujarathighcourt.nic.in/miscnotifications",
     "file_type": "pdf"
   },
   {
-    "id": "MP-2026-04-30-513",
+    "id": "MP-2026-02-25-213",
     "court_id": "HC-MP",
     "court": "Madhya Pradesh High Court",
-    "date": "2026-04-30",
-    "category": "Transfer / Posting",
-    "title": "513-Confdl-2026 - Revocation of suspension of Shri Pankaj Yadav",
-    "url": "https://mphc.gov.in/transfer",
+    "date": "2026-02-25",
+    "category": "Posting",
+    "title": "213-Confdl-2026 regarding posting of Civil Judge, Junior Division",
+    "url": "https://mphc.gov.in/PDF/web_pdf/TP/213-Confdl-2026.pdf",
     "source_page": "https://mphc.gov.in/transfer",
-    "file_type": "index"
+    "file_type": "pdf"
   },
   {
-    "id": "MP-2026-04-29-484",
+    "id": "MP-2026-02-25-211",
     "court_id": "HC-MP",
     "court": "Madhya Pradesh High Court",
-    "date": "2026-04-29",
-    "category": "Transfer / Posting",
-    "title": "484-Confdl-2026 - Board change of District & Additional Sessions Judges",
-    "url": "https://mphc.gov.in/transfer",
+    "date": "2026-02-25",
+    "category": "Posting",
+    "title": "211-Confdl-2026 regarding posting of Civil Judge, Junior Division",
+    "url": "https://mphc.gov.in/PDF/web_pdf/TP/211-Confdl-2026.pdf",
     "source_page": "https://mphc.gov.in/transfer",
-    "file_type": "index"
+    "file_type": "pdf"
   },
   {
-    "id": "MP-2026-04-18-412",
+    "id": "MP-2026-02-25-209",
     "court_id": "HC-MP",
     "court": "Madhya Pradesh High Court",
-    "date": "2026-04-18",
-    "category": "Transfer / Posting",
-    "title": "412-Confdl-2026 - Transfer of District & Additional Sessions Judges",
-    "url": "https://mphc.gov.in/transfer",
+    "date": "2026-02-25",
+    "category": "Posting",
+    "title": "209-Confdl-2026 regarding posting of Civil Judges, Senior Division",
+    "url": "https://mphc.gov.in/PDF/web_pdf/TP/209-Confdl-2026.pdf",
     "source_page": "https://mphc.gov.in/transfer",
-    "file_type": "index"
-  },
-  {
-    "id": "DEL-2026-05-RECENT-1",
-    "court_id": "HC-DEL",
-    "court": "Delhi High Court",
-    "date": "2026-05-12",
-    "category": "Transfer / Posting",
-    "title": "Order regarding posting in the Delhi Higher Judicial Service with immediate effect",
-    "url": "https://www.delhihighcourt.nic.in/",
-    "source_page": "https://www.delhihighcourt.nic.in/",
-    "file_type": "index"
-  },
-  {
-    "id": "DEL-2026-05-RECENT-2",
-    "court_id": "HC-DEL",
-    "court": "Delhi High Court",
-    "date": "2026-05-12",
-    "category": "Transfer / Posting",
-    "title": "Order regarding postings/transfers in the Delhi Higher Judicial Service",
-    "url": "https://www.delhihighcourt.nic.in/",
-    "source_page": "https://www.delhihighcourt.nic.in/",
-    "file_type": "index"
-  },
-  {
-    "id": "MAN-2025-05-15-CPC",
-    "court_id": "HC-MAN",
-    "court": "Manipur High Court",
-    "date": "2025-05-15",
-    "category": "CPC / Registry",
-    "title": "Notification regarding assignment of charge of Central Project Coordinator to Registrar (Judicial)",
-    "url": "https://hcmimphal.nic.in/Notice.html",
-    "source_page": "https://hcmimphal.nic.in/Notice.html",
-    "file_type": "index"
-  },
-  {
-    "id": "SIK-2026-05-07-62",
-    "court_id": "HC-SIK",
-    "court": "Sikkim High Court",
-    "date": "2026-05-07",
-    "category": "Case Management / Technology",
-    "title": "Notification No. 62/HCS - phased implementation of District Sikkim Integrated Case Management System",
-    "url": "https://hcs.gov.in/",
-    "source_page": "https://hcs.gov.in/",
-    "file_type": "index"
-  },
-  {
-    "id": "TRI-2026-04-23-DB",
-    "court_id": "HC-TRI",
-    "court": "Tripura High Court",
-    "date": "2026-04-23",
-    "category": "Bench / Sitting",
-    "title": "Notification - Division Bench sitting arrangement for 24 April 2026",
-    "url": "https://www.thc.nic.in/",
-    "source_page": "https://www.thc.nic.in/",
-    "file_type": "index"
-  },
-  {
-    "id": "SCI-2026-02-26-COLLEGIUM",
-    "court_id": "SC",
-    "court": "Supreme Court of India",
-    "date": "2026-02-26",
-    "category": "Collegium / Transfer",
-    "title": "Statement regarding transfer of a Judge and appointment of Chief Justices in two High Courts",
-    "url": "https://www.sci.gov.in/collegium-resolutions/",
-    "source_page": "https://www.sci.gov.in/collegium-resolutions/",
-    "file_type": "index"
+    "file_type": "pdf"
   }
 ]
