@@ -15,8 +15,8 @@ with open(os.path.join(root, 'data', 'courts.json'), encoding='utf-8') as f:
 with open(os.path.join(root, 'data', 'ministries.json'), encoding='utf-8') as f:
     ministries = json.load(f)
 
-with open(os.path.join(root, 'data', 'cpcs.json'), encoding='utf-8') as f:
-    cpcs = json.load(f)
+with open(os.path.join(root, 'data', 'admin-staff.json'), encoding='utf-8') as f:
+    admin_staff = json.load(f)
 
 with open(os.path.join(root, 'data', 'notifications.json'), encoding='utf-8') as f:
     notifications = json.load(f)
@@ -28,7 +28,7 @@ js = f"""// AUTO-GENERATED - do not edit directly.
 // Edit JSON files in data/, then re-run: python3 tools/gen_data_js.py
 window.COURTS_DATA = {json.dumps(courts, indent=2, ensure_ascii=False)};
 window.MINISTRIES_DATA = {json.dumps(ministries, indent=2, ensure_ascii=False)};
-window.CPCS_DATA = {json.dumps(cpcs, indent=2, ensure_ascii=False)};
+window.ADMIN_STAFF_DATA = {json.dumps(admin_staff, indent=2, ensure_ascii=False)};
 window.NOTIFICATIONS_DATA = {json.dumps(notifications, indent=2, ensure_ascii=False)};
 window.NOTIFICATION_SOURCES_DATA = {json.dumps(notification_sources, indent=2, ensure_ascii=False)};
 """
@@ -40,5 +40,5 @@ with open(out, 'w', encoding='utf-8') as f:
 print(
     f"Regenerated {out} "
     f"({len(courts)} court records, {len(ministries)} ministry records, "
-    f"{len(cpcs)} CPC records, {len(notifications)} notifications)"
+    f"{len(admin_staff)} admin staff records, {len(notifications)} notifications)"
 )

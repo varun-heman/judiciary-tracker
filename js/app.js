@@ -10,7 +10,8 @@
 const state = {
   courts: [],
   ministries: [],
-  cpcs: [],
+  adminStaff: [],
+  adminRoleFilter: 'ALL',
   selectedId: 'SC',
   searchQuery: '',
 };
@@ -55,21 +56,21 @@ function tenureProgress(assumedStr, retireStr) {
 async function loadData() {
   // 1. Try fetch (works on GitHub Pages, Netlify, or any HTTP server)
   try {
-    const [courts, ministries, cpcs] = await Promise.all([
+    const [courts, ministries, adminStaff] = await Promise.all([
       fetch('data/courts.json').then(r => { if (!r.ok) throw new Error(); return r.json(); }),
       fetch('data/ministries.json').then(r => { if (!r.ok) throw new Error(); return r.json(); }),
-      fetch('data/cpcs.json').then(r => { if (!r.ok) throw new Error(); return r.json(); }),
+      fetch('data/admin-staff.json').then(r => { if (!r.ok) throw new Error(); return r.json(); }),
     ]);
     state.courts = courts;
     state.ministries = ministries;
-    state.cpcs = cpcs;
+    state.adminStaff = adminStaff;
     return true;
   } catch (e) {
     // 2. Fall back to embedded data from data/data.js (works with file:// open)
     if (Array.isArray(window.COURTS_DATA) && Array.isArray(window.MINISTRIES_DATA)) {
       state.courts = window.COURTS_DATA;
       state.ministries = window.MINISTRIES_DATA;
-      state.cpcs = Array.isArray(window.CPCS_DATA) ? window.CPCS_DATA : [];
+      state.adminStaff = Array.isArray(window.ADMIN_STAFF_DATA) ? window.ADMIN_STAFF_DATA : [];
       // Show a subtle banner so user knows they're on embedded data
       const bar = document.querySelector('.data-notice');
       if (bar) bar.innerHTML += ' &nbsp;|&nbsp; <span style="color:var(--warning)">Using embedded data because this page was opened directly</span>';
@@ -149,11 +150,11 @@ function renderNav() {
   // ── Court Staff ──
   html += `<div class="nav-section">
     <div class="nav-section-title">Court Staff</div>
-    <a class="nav-item ${state.selectedId === 'CPCS' ? 'active' : ''}"
-       href="#" onclick="selectView('CPCS'); return false;">
+    <a class="nav-item ${state.selectedId === 'ADMIN' ? 'active' : ''}"
+       href="#" onclick="selectView('ADMIN'); return false;">
       <span class="nav-icon">▣</span>
-      <span class="nav-label">CPCs & Computer Teams</span>
-      <span class="nav-badge">${state.cpcs.length}</span>
+      <span class="nav-label">Court Administration</span>
+      <span class="nav-badge">${state.adminStaff.length}</span>
     </a>
     <a class="nav-item" href="notifications.html">
       <span class="nav-icon">↗</span>
@@ -253,7 +254,7 @@ function statsFor(people) {
 // ─────────────────────────────────────────────────────────────────────────────
 function renderContent() {
   const container = document.getElementById('main-content');
-  const all = [...state.courts, ...state.ministries, ...state.cpcs];
+  const all = [...state.courts, ...state.ministries, ...state.adminStaff];
 
   // ── Search mode ──
   if (state.searchQuery.length > 1) {
@@ -271,13 +272,13 @@ function renderContent() {
         <div class="view-meta">${results.length} result${results.length !== 1 ? 's' : ''}</div>
       </div>
       ${results.length
-        ? `<div class="cards-grid">${results.map(r => renderCard(r)).join('')}</div>`
+        ? `<div class="cards-grid">${results.map(r => r.role_group ? renderAdminCard(r) : renderCard(r)).join('')}</div>`
         : `<div class="empty-state"><p>No results found for "${escHtml(state.searchQuery)}"</p></div>`}`;
     return;
   }
 
-  if (state.selectedId === 'CPCS') {
-    container.innerHTML = renderCpcView();
+  if (state.selectedId === 'ADMIN') {
+    container.innerHTML = renderAdminStaffView();
     return;
   }
 
@@ -308,6 +309,9 @@ function renderContent() {
 
 function renderCourtView(root, all, children) {
   const people = children.filter(c => c.type !== 'institution');
+  const adminStaff = state.adminStaff
+    .filter(p => p.court_id === root.id)
+    .sort((a, b) => adminSort(a, b));
   const head   = people.find(p =>
     p.role === 'Chief Justice of India' ||
     p.role === 'Chief Justice' ||
@@ -339,6 +343,12 @@ function renderCourtView(root, all, children) {
   if (rest.length > 0) {
     html += `<div class="section-label">Judges <span class="section-count">${rest.length}</span></div>`;
     html += `<div class="cards-grid">${rest.map(j => renderCard(j)).join('')}</div>`;
+  }
+
+  if (adminStaff.length > 0) {
+    html += `<div class="section-label">Court Administration <span class="section-count">${adminStaff.length}</span></div>`;
+    html += `<div class="admin-toolbar">${renderAdminRoleButtons(adminStaff, root.id)}</div>`;
+    html += `<div class="cards-grid">${adminStaff.map(renderAdminCard).join('')}</div>`;
   }
 
   if (people.length === 0) {
@@ -378,37 +388,74 @@ function renderMinistryView(root, all, children) {
   return html;
 }
 
-function renderCpcView() {
-  const cpcs = state.cpcs.slice().sort((a, b) => a.court.localeCompare(b.court));
-  const named = cpcs.filter(c => c.confidence === 'named').length;
-  const pending = cpcs.length - named;
+function renderAdminStaffView() {
+  const staff = filteredAdminStaff();
+  const roles = uniqueAdminRoles(state.adminStaff);
+  const named = staff.filter(c => c.confidence === 'named').length;
+  const pending = staff.filter(c => c.confidence !== 'named').length;
 
   return `
     <div class="view-header">
-      <h2>CPCs & Computer Teams</h2>
-      <p class="view-subtitle">Court staff are tracked separately from judges. These records focus on e-Courts, ICT, registry technology and CPC contact points.</p>
+      <h2>Court Administration</h2>
+      <p class="view-subtitle">Administrative roles are tracked separately from judges, but each court view also shows that court's registry, CPC, IT and administrative officers.</p>
     </div>
     <div class="stats-bar">
-      <span class="stat-chip">${cpcs.length} courts tracked</span>
+      <span class="stat-chip">${staff.length} records shown</span>
       <span class="stat-chip">${named} named officers</span>
       ${pending ? `<span class="stat-chip warning">${pending} contact/role-only records</span>` : ''}
     </div>
-    <div class="cards-grid">${cpcs.map(renderCpcCard).join('')}</div>
+    <div class="role-filter-bar">
+      <button class="role-filter ${state.adminRoleFilter === 'ALL' ? 'active' : ''}" onclick="setAdminRoleFilter('ALL')">All roles</button>
+      ${roles.map(role => `<button class="role-filter ${state.adminRoleFilter === role ? 'active' : ''}" onclick="setAdminRoleFilter('${escAttr(role)}')">${escHtml(role)}</button>`).join('')}
+    </div>
+    <div class="cards-grid">${staff.map(renderAdminCard).join('')}</div>
   `;
 }
 
-function renderCpcCard(cpc) {
+function filteredAdminStaff() {
+  return state.adminStaff
+    .filter(row => state.adminRoleFilter === 'ALL' || row.role_group === state.adminRoleFilter)
+    .sort(adminSort);
+}
+
+function uniqueAdminRoles(rows) {
+  return [...new Set(rows.map(r => r.role_group).filter(Boolean))]
+    .sort((a, b) => {
+      const priority = ['CPC', 'IT / Computerisation', 'Registrar General', 'Registrar Administration', 'Registrar Judicial', 'Registrar Vigilance'];
+      const ai = priority.indexOf(a);
+      const bi = priority.indexOf(b);
+      if (ai !== -1 || bi !== -1) return (ai === -1 ? 999 : ai) - (bi === -1 ? 999 : bi);
+      return a.localeCompare(b);
+    });
+}
+
+function adminSort(a, b) {
+  const roles = uniqueAdminRoles([a, b]);
+  const roleCompare = roles.indexOf(a.role_group) - roles.indexOf(b.role_group);
+  if (roleCompare) return roleCompare;
+  return (a.court || '').localeCompare(b.court || '') || (a.name || '').localeCompare(b.name || '');
+}
+
+function renderAdminRoleButtons(rows, courtId) {
+  const roles = uniqueAdminRoles(rows);
+  return roles.map(role =>
+    `<button class="role-filter" onclick="selectView('ADMIN'); setAdminRoleFilter('${escAttr(role)}'); return false;">${escHtml(role)}</button>`
+  ).join('');
+}
+
+function renderAdminCard(cpc) {
   const confidenceLabel = {
     named: 'Named',
     'contact-only': 'Contact only',
-    'role-only': 'Role only'
+    'role-only': 'Role only',
+    vacant: 'Vacant'
   }[cpc.confidence] || 'Unchecked';
 
   return `
     <div class="person-card cpc-card border-${cpc.confidence === 'named' ? 'good' : 'warning'}">
       <div class="card-top">
         <div class="card-left">
-          <span class="card-role-badge cpc">${escHtml(cpc.role || 'CPC')}</span>
+          <span class="card-role-badge cpc">${escHtml(cpc.role_group || cpc.role || 'Admin')}</span>
           <div class="person-name">${escHtml(cpc.name)}</div>
           <div class="parent-court">${escHtml(cpc.court)} · ${escHtml(cpc.state)}</div>
         </div>
@@ -426,12 +473,20 @@ function renderCpcCard(cpc) {
     </div>`;
 }
 
+window.setAdminRoleFilter = function(role) {
+  state.adminRoleFilter = role;
+  if (state.selectedId !== 'ADMIN') state.selectedId = 'ADMIN';
+  renderNav();
+  renderContent();
+};
+
 // ─────────────────────────────────────────────────────────────────────────────
 // Global interactions
 // ─────────────────────────────────────────────────────────────────────────────
 window.selectView = function(id) {
   state.selectedId  = id;
   state.searchQuery = '';
+  if (id !== 'ADMIN') state.adminRoleFilter = 'ALL';
   document.getElementById('search-input').value = '';
   renderNav();
   renderContent();
@@ -440,6 +495,10 @@ window.selectView = function(id) {
 
 function escHtml(str) {
   return (str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function escAttr(str) {
+  return escHtml(str).replace(/'/g, '&#39;');
 }
 
 // ─────────────────────────────────────────────────────────────────────────────

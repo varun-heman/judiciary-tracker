@@ -94,41 +94,5 @@
     "tenure_end": "",
     "parent_id": "MOL-DOJ",
     "notes": "Oversees judicial appointments process; eCourts Mission Mode Project."
-  },
-  {
-    "id": "MOL-ADM",
-    "name": "Court Project Coordinators",
-    "ministry": "Ministry of Law & Justice",
-    "department": "Judicial Administration & Technology",
-    "role": "Section",
-    "type": "institution",
-    "assumed_office": "",
-    "tenure_end": "",
-    "parent_id": "MOL",
-    "notes": "Tracks CPC (Court/Chief Project Coordinator) roles and heads of court technology teams (NIC; eCourts; eCommittee of SC)."
-  },
-  {
-    "id": "MOL-CPC",
-    "name": "[Name to be added]",
-    "ministry": "Ministry of Law & Justice",
-    "department": "Judicial Administration & Technology",
-    "role": "Court Project Coordinator (CPC)",
-    "type": "placeholder",
-    "assumed_office": "",
-    "tenure_end": "",
-    "parent_id": "MOL-ADM",
-    "notes": "CPC — Court/Chief Project Coordinator. Fill in the name and dates once confirmed."
-  },
-  {
-    "id": "MOL-TECH",
-    "name": "[Name to be added]",
-    "ministry": "Ministry of Law & Justice",
-    "department": "Judicial Administration & Technology",
-    "role": "Head of Computer Teams",
-    "type": "placeholder",
-    "assumed_office": "",
-    "tenure_end": "",
-    "parent_id": "MOL-ADM",
-    "notes": "Head of court digitisation / NIC court tech team. Fill in once confirmed."
   }
 ]
