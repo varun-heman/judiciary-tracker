@@ -1,9 +1,7 @@
 /**
  * India Judiciary & Ministry Tracker
- * Data is read entirely from CSV files — all visuals are in CSS/HTML.
- * To update data, edit: data/courts.csv and data/ministries.csv
- *
- * Requires an HTTP server (CORS). Run: python3 -m http.server 8000
+ * Data is read from JSON files — all visuals are in CSS/HTML.
+ * To update data, edit: data/courts.json and data/ministries.json
  */
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -15,42 +13,6 @@ const state = {
   selectedId: 'SC',
   searchQuery: '',
 };
-
-// ─────────────────────────────────────────────────────────────────────────────
-// CSV Parser  (handles quoted fields, commas inside quotes)
-// ─────────────────────────────────────────────────────────────────────────────
-function parseLine(line) {
-  const vals = [];
-  let cur = '';
-  let inQ = false;
-  for (let i = 0; i < line.length; i++) {
-    const ch = line[i];
-    if (ch === '"') {
-      if (inQ && line[i + 1] === '"') { cur += '"'; i++; }
-      else { inQ = !inQ; }
-    } else if (ch === ',' && !inQ) {
-      vals.push(cur);
-      cur = '';
-    } else {
-      cur += ch;
-    }
-  }
-  vals.push(cur);
-  return vals;
-}
-
-function parseCSV(text) {
-  const lines = text.trim().split(/\r?\n/);
-  const headers = parseLine(lines[0]).map(h => h.trim());
-  return lines.slice(1)
-    .filter(l => l.trim())
-    .map(line => {
-      const vals = parseLine(line);
-      const obj = {};
-      headers.forEach((h, i) => obj[h] = (vals[i] || '').trim());
-      return obj;
-    });
-}
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Date & Tenure Helpers
@@ -90,23 +52,23 @@ function tenureProgress(assumedStr, retireStr) {
 // Data Loading
 // ─────────────────────────────────────────────────────────────────────────────
 async function loadData() {
-  // 1. Try fetch (works when served via HTTP server)
+  // 1. Try fetch (works on GitHub Pages, Netlify, or any HTTP server)
   try {
-    const [courtsText, ministriesText] = await Promise.all([
-      fetch('data/courts.csv').then(r => { if (!r.ok) throw new Error(); return r.text(); }),
-      fetch('data/ministries.csv').then(r => { if (!r.ok) throw new Error(); return r.text(); }),
+    const [courts, ministries] = await Promise.all([
+      fetch('data/courts.json').then(r => { if (!r.ok) throw new Error(); return r.json(); }),
+      fetch('data/ministries.json').then(r => { if (!r.ok) throw new Error(); return r.json(); }),
     ]);
-    state.courts     = parseCSV(courtsText);
-    state.ministries = parseCSV(ministriesText);
+    state.courts = courts;
+    state.ministries = ministries;
     return true;
   } catch (e) {
     // 2. Fall back to embedded data from data/data.js (works with file:// open)
-    if (window.COURTS_CSV_EMBEDDED && window.MINISTRIES_CSV_EMBEDDED) {
-      state.courts     = parseCSV(window.COURTS_CSV_EMBEDDED);
-      state.ministries = parseCSV(window.MINISTRIES_CSV_EMBEDDED);
+    if (Array.isArray(window.COURTS_DATA) && Array.isArray(window.MINISTRIES_DATA)) {
+      state.courts = window.COURTS_DATA;
+      state.ministries = window.MINISTRIES_DATA;
       // Show a subtle banner so user knows they're on embedded data
       const bar = document.querySelector('.data-notice');
-      if (bar) bar.innerHTML += ' &nbsp;|&nbsp; <span style="color:var(--warning)">⚠ Using embedded data — run a local server to pick up CSV edits</span>';
+      if (bar) bar.innerHTML += ' &nbsp;|&nbsp; <span style="color:var(--warning)">Using embedded data because this page was opened directly</span>';
       return true;
     }
     // 3. Nothing worked
@@ -114,7 +76,7 @@ async function loadData() {
       <div class="error-state">
         <div class="error-icon">⚠️</div>
         <h2>Cannot load data files</h2>
-        <p>For the best experience, serve via a local HTTP server:</p>
+        <p>For the best experience, serve the folder via a local HTTP server:</p>
         <div class="code-block">python3 -m http.server 8000</div>
         <p>Then open: <a href="http://localhost:8000" target="_blank">http://localhost:8000</a></p>
       </div>`;
@@ -359,7 +321,7 @@ function renderCourtView(root, all, children) {
     html += `
       <div class="empty-state">
         <p>No individual judges loaded for this court yet.</p>
-        <p>Add rows to <code>data/courts.csv</code> with <code>parent_id = ${escHtml(root.id)}</code></p>
+        <p>Add entries to <code>data/courts.json</code> with <code>parent_id = ${escHtml(root.id)}</code></p>
         <p>The Chief Justices of all 25 High Courts are already included. Individual puisne judges can be added in bulk.</p>
       </div>`;
   }
