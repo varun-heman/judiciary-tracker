@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>India Judiciary & Ministry Tracker</title>
+  <meta name="description" content="Track sitting judges of India's Supreme Court and 25 High Courts, plus key Ministry officials. Data sourced from sci.gov.in and doj.gov.in.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+  <!-- ── Sidebar ── -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="logo-icon">⚖️</span>
+        <div>
+          <div class="logo-title">Judiciary Tracker</div>
+          <div class="logo-sub">India · Verified May 2026</div>
+        </div>
+      </div>
+      <div class="search-box">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search judges, courts, roles…"
+          autocomplete="off"
+          spellcheck="false"
+        >
+      </div>
+    </div>
+
+    <nav id="nav-list" class="nav-list">
+      <!-- Populated by app.js -->
+      <div class="loading" style="padding: 20px; font-size: 12px; color: var(--text-sidebar-muted);">Loading…</div>
+    </nav>
+  </aside>
+
+  <!-- ── Main Panel ── -->
+  <main class="main-panel" id="main-panel">
+    <header class="top-bar">
+      <button class="menu-toggle-btn" id="menu-toggle" aria-label="Toggle sidebar">☰</button>
+      <div class="data-notice">
+        📊 Data: <a href="https://www.sci.gov.in/chief-justice-judges/" target="_blank" rel="noopener">sci.gov.in</a>
+        &amp; <a href="https://doj.gov.in/list-of-supreme-court-and-high-courts-judges/" target="_blank" rel="noopener">doj.gov.in</a>
+        &amp; <a href="https://lawmin.gov.in/about-us/whos-who" target="_blank" rel="noopener">lawmin.gov.in</a>
+        · Last verified <strong>May 2026</strong>
+        · Edit <code>data/courts.csv</code> or <code>data/ministries.csv</code> to update
+      </div>
+      <button id="theme-toggle" class="theme-btn" title="Toggle dark mode">🌙</button>
+    </header>
+
+    <div id="main-content" class="content-area">
+      <div class="loading">Loading judiciary data…</div>
+    </div>
+  </main>
+
+  <!-- ── Upcoming Retirements Panel ── -->
+  <aside class="upcoming-panel" id="upcoming-outer">
+    <div class="upcoming-title">⏳ Upcoming Retirements</div>
+    <div class="upcoming-scroll" id="upcoming-panel">
+      <div class="upcoming-empty">Loading…</div>
+    </div>
+  </aside>
+
+</div>
+
+<script src="data/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+id,name,ministry,department,role,type,assumed_office,tenure_end,parent_id,notes
+MOL,Ministry of Law & Justice,Ministry of Law & Justice,,Ministry,institution,,,,Source: lawmin.gov.in (verified May 2026)
+MOL-MIN,Shri Arjun Ram Meghwal,Ministry of Law & Justice,,Minister of State (Independent Charge),minister,2024-06-10,,MOL,"Retained in Modi 3.0 government. 4th-term MP from Bikaner. Retired IAS Officer (Rajasthan cadre). LLB; MBA (University of Philippines)."
+MOL-DLA,Department of Legal Affairs,Ministry of Law & Justice,Department of Legal Affairs,Department,institution,,,MOL,Handles legal matters of Union Government; defends cases in courts.
+MOL-DLA-SEC,Dr. Rajiv Mani,Ministry of Law & Justice,Department of Legal Affairs,Secretary,secretary,,,MOL-DLA,Also holds concurrent charge of Legislative Department Secretary.
+MOL-LD,Legislative Department,Ministry of Law & Justice,Legislative Department,Department,institution,,,MOL,Drafts central legislation; manages India Code; oversees legislative process.
+MOL-LD-SEC,Dr. Rajiv Mani,Ministry of Law & Justice,Legislative Department,Secretary,secretary,,,MOL-LD,Concurrent charge — same officer as DLA Secretary.
+MOL-DOJ,Department of Justice,Ministry of Law & Justice,Department of Justice,Department,institution,,,MOL,"Handles appointment of judges; infrastructure for courts; e-Courts project; access to justice."
+MOL-DOJ-SEC,Shri Niraj Verma,Ministry of Law & Justice,Department of Justice,Secretary,secretary,,,MOL-DOJ,Oversees judicial appointments process; eCourts Mission Mode Project.
+MOL-ADM,Court Project Coordinators,Ministry of Law & Justice,Judicial Administration & Technology,Section,institution,,,MOL,"Tracks CPC (Court/Chief Project Coordinator) roles and heads of court technology teams (NIC; eCourts; eCommittee of SC)."
+MOL-CPC,[Name to be added],Ministry of Law & Justice,Judicial Administration & Technology,Court Project Coordinator (CPC),placeholder,,,MOL-ADM,"CPC — Court/Chief Project Coordinator. Fill in the name and dates once confirmed."
+MOL-TECH,[Name to be added],Ministry of Law & Justice,Judicial Administration & Technology,Head of Computer Teams,placeholder,,,MOL-ADM,"Head of court digitisation / NIC court tech team. Fill in once confirmed."

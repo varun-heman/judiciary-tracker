@@ -1,0 +1,101 @@
+// AUTO-GENERATED — do not edit directly.
+// Edit data/courts.csv or data/ministries.csv, then re-run: python3 tools/gen_data_js.py
+// This file allows the site to open directly via file:// without a local server.
+window.COURTS_CSV_EMBEDDED = `id,name,court,state,role,type,date_initial_appointment,date_assumed_role,retirement_date,parent_high_court,parent_id,notes
+SC,Supreme Court of India,Supreme Court of India,National,Apex Court,institution,,,,,,
+SC-CJI,Justice Surya Kant,Supreme Court of India,National,Chief Justice of India,supreme_court,2004-01-09,2025-11-24,2027-02-09,Punjab & Haryana,SC,"53rd CJI. Born 10 Feb 1962. Nominated by CJI B.R. Gavai. Appointed by President Droupadi Murmu."
+SC-002,Justice Vikram Nath,Supreme Court of India,National,Judge,supreme_court,,2021-08-31,2027-09-23,,SC,Born 24 Sep 1962. Next in seniority after CJI. Expected 54th CJI (Feb–Sep 2027).
+SC-003,Justice J.K. Maheshwari,Supreme Court of India,National,Judge,supreme_court,,2021-08-31,2026-06-28,,SC,Born 29 Jun 1961.
+SC-004,Justice B.V. Nagarathna,Supreme Court of India,National,Judge,supreme_court,,2021-08-31,2027-10-29,,SC,"Born 30 Oct 1962. Expected to be 55th CJI (Sep–Oct 2027) — India's first woman CJI."
+SC-005,Justice M.M. Sundresh,Supreme Court of India,National,Judge,supreme_court,,2021-08-31,2027-07-20,,SC,Born 21 Jul 1962.
+SC-006,Justice Pamidighantam Sri Narasimha,Supreme Court of India,National,Judge,supreme_court,,2021-08-31,2028-05-02,,SC,Born 03 May 1963.
+SC-007,Justice J.B. Pardiwala,Supreme Court of India,National,Judge,supreme_court,,2022-05-09,2030-08-11,,SC,Born 12 Aug 1965.
+SC-008,Justice Dipankar Datta,Supreme Court of India,National,Judge,supreme_court,,2022-12-12,2030-02-08,,SC,Born 09 Feb 1965.
+SC-009,Justice Pankaj Mithal,Supreme Court of India,National,Judge,supreme_court,,2023-02-06,2026-06-16,,SC,Born 17 Jun 1961.
+SC-010,Justice Sanjay Karol,Supreme Court of India,National,Judge,supreme_court,,2023-02-06,2026-08-22,,SC,Born 23 Aug 1961.
+SC-011,Justice Sanjay Kumar,Supreme Court of India,National,Judge,supreme_court,,2023-02-06,2028-08-13,,SC,Born 14 Aug 1963.
+SC-012,Justice Ahsanuddin Amanullah,Supreme Court of India,National,Judge,supreme_court,,2023-02-06,2028-05-10,,SC,Born 11 May 1963.
+SC-013,Justice Manoj Misra,Supreme Court of India,National,Judge,supreme_court,,2023-02-06,2030-06-01,,SC,Born 02 Jun 1965.
+SC-014,Justice Aravind Kumar,Supreme Court of India,National,Judge,supreme_court,,2023-02-13,2027-07-13,,SC,Born 14 Jul 1962.
+SC-015,Justice Prashant Kumar Mishra,Supreme Court of India,National,Judge,supreme_court,,2023-05-19,2029-08-28,,SC,Born 29 Aug 1964.
+SC-016,Justice K.V. Viswanathan,Supreme Court of India,National,Judge,supreme_court,,2023-05-19,2031-05-25,,SC,Born 26 May 1966.
+SC-017,Justice Ujjal Bhuyan,Supreme Court of India,National,Judge,supreme_court,,2023-07-14,2029-08-01,,SC,Born 02 Aug 1964.
+SC-018,Justice Sarasa Venkatanarayana Bhatti,Supreme Court of India,National,Judge,supreme_court,,2023-07-14,2027-05-05,,SC,Born 06 May 1962.
+SC-019,Justice Satish Chandra Sharma,Supreme Court of India,National,Judge,supreme_court,,2023-11-09,2026-11-29,,SC,Born 30 Nov 1961.
+SC-020,Justice Augustine George Masih,Supreme Court of India,National,Judge,supreme_court,,2023-11-09,2028-03-11,,SC,Born 12 Mar 1963.
+SC-021,Justice Sandeep Mehta,Supreme Court of India,National,Judge,supreme_court,,2023-11-09,2028-01-10,,SC,Born 11 Jan 1963.
+SC-022,Justice Prasanna Bhalachandra Varale,Supreme Court of India,National,Judge,supreme_court,,2024-01-25,2027-06-22,,SC,Born 23 Jun 1962.
+SC-023,Justice N. Kotiswar Singh,Supreme Court of India,National,Judge,supreme_court,,2024-07-18,2028-02-29,,SC,Born 01 Mar 1963.
+SC-024,Justice R. Mahadevan,Supreme Court of India,National,Judge,supreme_court,,2024-07-18,2028-06-09,,SC,Born 10 Jun 1963.
+SC-025,Justice Manmohan,Supreme Court of India,National,Judge,supreme_court,,2024-12-05,2027-12-16,,SC,Born 17 Dec 1962.
+SC-026,Justice K. Vinod Chandran,Supreme Court of India,National,Judge,supreme_court,,2025-01-16,2028-04-24,,SC,Born 25 Apr 1963.
+SC-027,Justice Joymalya Bagchi,Supreme Court of India,National,Judge,supreme_court,,2025-03-17,2031-10-02,,SC,Born 03 Oct 1966.
+SC-028,Justice N.V. Anjaria,Supreme Court of India,National,Judge,supreme_court,,2025-05-30,2030-03-22,,SC,Born 23 Mar 1965.
+SC-029,Justice Vijay Bishnoi,Supreme Court of India,National,Judge,supreme_court,,2025-05-30,2029-03-25,,SC,Born 26 Mar 1964.
+SC-030,Justice Atul Sharachchandra Chandurkar,Supreme Court of India,National,Judge,supreme_court,,2025-05-30,2030-04-06,,SC,Born 07 Apr 1965.
+SC-031,Justice Alok Aradhe,Supreme Court of India,National,Judge,supreme_court,,2025-08-29,2029-04-12,,SC,Born 13 Apr 1964.
+SC-032,Justice Vipul Manubhai Pancholi,Supreme Court of India,National,Judge,supreme_court,,2025-08-29,2033-05-27,,SC,Born 28 May 1968.
+HC-ALD,Allahabad High Court,Allahabad High Court,Uttar Pradesh,High Court,institution,,,,,,Serves Uttar Pradesh. Largest HC by sanctioned strength.
+HC-ALD-CJ,Justice Arun Bhansali,Allahabad High Court,Uttar Pradesh,Chief Justice,high_court,2013-01-08,2024-02-05,2029-10-14,Rajasthan,HC-ALD,Joined from Rajasthan HC. Retires Oct 2029.
+HC-AP,Andhra Pradesh High Court,Andhra Pradesh High Court,Andhra Pradesh,High Court,institution,,,,,,Established 1 Jan 2019 after bifurcation of AP. Seat: Amaravati.
+HC-AP-CJ,Justice Lisa Gill,Andhra Pradesh High Court,Andhra Pradesh,Chief Justice,high_court,2014-05-13,2026-05-11,2028-12-04,Punjab & Haryana,HC-AP,"Appointed ~May 2026. Succeeded Justice Dhiraj Singh Thakur (retired 24 Apr 2026). Nominated by CJI Surya Kant."
+HC-BOM,Bombay High Court,Bombay High Court,Maharashtra,High Court,institution,,,,,,Serves Maharashtra; Goa; Dadra & Nagar Haveli; Daman & Diu.
+HC-BOM-CJ,Justice Shree Chandrashekhar,Bombay High Court,Maharashtra,Chief Justice,high_court,2013-01-17,2025-09-05,2027-05-24,Jharkhand,HC-BOM,Joined from Jharkhand HC.
+HC-CAL,Calcutta High Court,Calcutta High Court,West Bengal,High Court,institution,,,,,,Serves West Bengal and Andaman & Nicobar Islands.
+HC-CAL-CJ,Justice Sujoy Paul,Calcutta High Court,West Bengal,Chief Justice,high_court,2011-05-27,2026-01-16,2026-06-20,Madhya Pradesh,HC-CAL,"Joined from MP HC. Retiring Jun 2026 — very soon."
+HC-CHG,Chhattisgarh High Court,Chhattisgarh High Court,Chhattisgarh,High Court,institution,,,,,,Principal seat: Bilaspur.
+HC-CHG-CJ,Justice Ramesh Sinha,Chhattisgarh High Court,Chhattisgarh,Chief Justice,high_court,2011-11-21,2023-03-29,2026-09-04,Allahabad,HC-CHG,Joined from Allahabad HC.
+HC-DEL,Delhi High Court,Delhi High Court,Delhi,High Court,institution,,,,,,Serves NCT of Delhi.
+HC-DEL-CJ,Justice Devendra Kumar Upadhyaya,Delhi High Court,Delhi,Chief Justice,high_court,2011-11-21,2023-07-29,2027-06-15,Allahabad,HC-DEL,"Previously 47th CJ of Bombay HC. Joined Delhi 21 Jan 2025. Nominated by both CJI D.Y. Chandrachud and CJI Sanjiv Khanna."
+HC-GAU,Gauhati High Court,Gauhati High Court,Assam,High Court,institution,,,,,,Serves Assam; Nagaland; Mizoram; Arunachal Pradesh.
+HC-GAU-CJ,Justice Ashutosh Kumar,Gauhati High Court,Assam,Chief Justice,high_court,2014-05-15,2025-07-21,2028-09-30,Patna,HC-GAU,Joined from Patna HC.
+HC-GUJ,Gujarat High Court,Gujarat High Court,Gujarat,High Court,institution,,,,,,
+HC-GUJ-CJ,Justice Sunita Agarwal,Gujarat High Court,Gujarat,Chief Justice,high_court,2011-11-21,2023-07-23,2028-04-29,Allahabad,HC-GUJ,Joined from Allahabad HC.
+HC-HP,Himachal Pradesh High Court,Himachal Pradesh High Court,Himachal Pradesh,High Court,institution,,,,,,Principal seat: Shimla.
+HC-HP-CJ,Justice Gurmeet Singh Sandhawalia,Himachal Pradesh High Court,Himachal Pradesh,Chief Justice,high_court,2011-09-30,2024-12-29,2027-10-31,Punjab & Haryana,HC-HP,Joined from Punjab & Haryana HC.
+HC-JKL,J&K and Ladakh High Court,J&K and Ladakh High Court,J&K and Ladakh,High Court,institution,,,,,,Serves J&K and Ladakh Union Territories.
+HC-JKL-CJ,Justice Arun Palli,J&K and Ladakh High Court,J&K and Ladakh,Chief Justice,high_court,2013-12-28,2025-04-16,2026-09-17,Punjab & Haryana,HC-JKL,Joined from Punjab & Haryana HC.
+HC-JHK,Jharkhand High Court,Jharkhand High Court,Jharkhand,High Court,institution,,,,,,Principal seat: Ranchi.
+HC-JHK-CJ,Justice Mahesh Sharadchandra Sonak,Jharkhand High Court,Jharkhand,Chief Justice,high_court,2013-06-21,2026-01-07,2026-12-31,Bombay,HC-JHK,"Joined from Bombay HC. Note: Exact retirement date from DoJ PDF was unclear (entry error); estimated Dec 2026."
+HC-KAR,Karnataka High Court,Karnataka High Court,Karnataka,High Court,institution,,,,,,Principal seat: Bengaluru.
+HC-KAR-CJ,Justice Vibhu Bakhru,Karnataka High Court,Karnataka,Chief Justice,high_court,2013-04-17,2025-07-19,2028-11-01,Delhi,HC-KAR,Joined from Delhi HC.
+HC-KER,Kerala High Court,Kerala High Court,Kerala,High Court,institution,,,,,,Principal seat: Ernakulam.
+HC-KER-CJ,Justice Soumen Sen,Kerala High Court,Kerala,Chief Justice,high_court,2011-04-13,2025-10-08,2027-07-27,Calcutta,HC-KER,"Joined Kerala 10 Jan 2026. Previously 14th CJ of Meghalaya HC."
+HC-MP,Madhya Pradesh High Court,Madhya Pradesh High Court,Madhya Pradesh,High Court,institution,,,,,,Principal seat: Jabalpur.
+HC-MP-CJ,Justice Sanjeev Sachdeva,Madhya Pradesh High Court,Madhya Pradesh,Chief Justice,high_court,2013-04-17,2025-07-17,2026-12-25,Delhi,HC-MP,Joined from Delhi HC.
+HC-MAD,Madras High Court,Madras High Court,Tamil Nadu,High Court,institution,,,,,,Serves Tamil Nadu and Puducherry. One of oldest HCs.
+HC-MAD-CJ,Justice Sushrut Arvind Dharmadhikari,Madras High Court,Tamil Nadu,Chief Justice,high_court,2015-12-01,2026-03-24,2028-08-14,Madhya Pradesh,HC-MAD,"Succeeded M.M. Shrivastava (retired 05 Mar 2026). Nominated by CJI Surya Kant."
+HC-MAN,Manipur High Court,Manipur High Court,Manipur,High Court,institution,,,,,,Principal seat: Imphal.
+HC-MAN-CJ,Justice M. Sundar,Manipur High Court,Manipur,Chief Justice,high_court,2016-10-05,2025-09-15,2028-07-18,Madras,HC-MAN,Joined from Madras HC.
+HC-MEG,Meghalaya High Court,Meghalaya High Court,Meghalaya,High Court,institution,,,,,,Principal seat: Shillong.
+HC-MEG-CJ,Justice Revati Prashant Mohite Dere,Meghalaya High Court,Meghalaya,Chief Justice,high_court,2012-11-27,2026-01-10,2026-11-27,Bombay,HC-MEG,Joined from Bombay HC. Retires Nov 2026.
+HC-ORI,Orissa High Court,Orissa High Court,Odisha,High Court,institution,,,,,,Principal seat: Cuttack.
+HC-ORI-CJ,Justice Harish Tandon,Orissa High Court,Odisha,Chief Justice,high_court,2010-04-13,2025-03-26,2026-11-15,Calcutta,HC-ORI,Joined from Calcutta HC. One of most senior HC judges by initial elevation.
+HC-PAT,Patna High Court,Patna High Court,Bihar,High Court,institution,,,,,,Serves Bihar.
+HC-PAT-CJ,Justice Sangam Kumar Sahoo,Patna High Court,Bihar,Chief Justice,high_court,2014-07-02,2026-01-07,2026-06-04,Orissa,HC-PAT,"Joined from Orissa HC. Retiring 04 Jun 2026 — only ~23 days away."
+HC-PHC,Punjab & Haryana High Court,Punjab & Haryana High Court,Punjab & Haryana,High Court,institution,,,,,,Serves Punjab; Haryana; Chandigarh UT. Seat: Chandigarh.
+HC-PHC-CJ,Justice Sheel Nagu,Punjab & Haryana High Court,Punjab & Haryana,Chief Justice,high_court,2011-05-27,2024-07-09,2026-12-31,Madhya Pradesh,HC-PHC,Joined from Madhya Pradesh HC.
+HC-RAJ,Rajasthan High Court,Rajasthan High Court,Rajasthan,High Court,institution,,,,,,Principal seat: Jodhpur; Bench at Jaipur.
+HC-RAJ-CJ,Justice Sanjeev Prakash Sharma,Rajasthan High Court,Rajasthan,Acting Chief Justice,high_court,2016-11-16,2025-09-28,2026-09-26,Rajasthan,HC-RAJ,"Acting CJ from home court. Retires Sep 2026."
+HC-SIK,Sikkim High Court,Sikkim High Court,Sikkim,High Court,institution,,,,,,Principal seat: Gangtok. Smallest HC.
+HC-SIK-CJ,Justice Muhamed Mustaque Ayumantakath,Sikkim High Court,Sikkim,Chief Justice,high_court,2014-01-23,2026-01-04,2029-05-31,Kerala,HC-SIK,Joined from Kerala HC.
+HC-TEL,Telangana High Court,Telangana High Court,Telangana,High Court,institution,,,,,,Established 1 Jan 2019. Seat: Hyderabad.
+HC-TEL-CJ,Justice Aparesh Kumar Singh,Telangana High Court,Telangana,Chief Justice,high_court,2012-01-24,2023-04-17,2027-07-06,Jharkhand,HC-TEL,"Joined Telangana 19 Jul 2025. Previously 8th CJ of Tripura HC."
+HC-TRI,Tripura High Court,Tripura High Court,Tripura,High Court,institution,,,,,,Principal seat: Agartala.
+HC-TRI-CJ,Justice M.S. Sri Ramachandra Rao,Tripura High Court,Tripura,Chief Justice,high_court,2012-06-29,2023-05-30,2028-08-06,Telangana,HC-TRI,"Joined Tripura 22 Jul 2025. Previously 28th CJ of Himachal Pradesh HC."
+HC-UTK,Uttarakhand High Court,Uttarakhand High Court,Uttarakhand,High Court,institution,,,,,,Principal seat: Nainital.
+HC-UTK-CJ,Justice Manoj Kumar Gupta,Uttarakhand High Court,Uttarakhand,Chief Justice,high_court,2013-04-12,2026-01-10,2026-10-08,Allahabad,HC-UTK,Joined from Allahabad HC. Retires Oct 2026.
+`;
+window.MINISTRIES_CSV_EMBEDDED = `id,name,ministry,department,role,type,assumed_office,tenure_end,parent_id,notes
+MOL,Ministry of Law & Justice,Ministry of Law & Justice,,Ministry,institution,,,,Source: lawmin.gov.in (verified May 2026)
+MOL-MIN,Shri Arjun Ram Meghwal,Ministry of Law & Justice,,Minister of State (Independent Charge),minister,2024-06-10,,MOL,"Retained in Modi 3.0 government. 4th-term MP from Bikaner. Retired IAS Officer (Rajasthan cadre). LLB; MBA (University of Philippines)."
+MOL-DLA,Department of Legal Affairs,Ministry of Law & Justice,Department of Legal Affairs,Department,institution,,,MOL,Handles legal matters of Union Government; defends cases in courts.
+MOL-DLA-SEC,Dr. Rajiv Mani,Ministry of Law & Justice,Department of Legal Affairs,Secretary,secretary,,,MOL-DLA,Also holds concurrent charge of Legislative Department Secretary.
+MOL-LD,Legislative Department,Ministry of Law & Justice,Legislative Department,Department,institution,,,MOL,Drafts central legislation; manages India Code; oversees legislative process.
+MOL-LD-SEC,Dr. Rajiv Mani,Ministry of Law & Justice,Legislative Department,Secretary,secretary,,,MOL-LD,Concurrent charge — same officer as DLA Secretary.
+MOL-DOJ,Department of Justice,Ministry of Law & Justice,Department of Justice,Department,institution,,,MOL,"Handles appointment of judges; infrastructure for courts; e-Courts project; access to justice."
+MOL-DOJ-SEC,Shri Niraj Verma,Ministry of Law & Justice,Department of Justice,Secretary,secretary,,,MOL-DOJ,Oversees judicial appointments process; eCourts Mission Mode Project.
+MOL-ADM,Court Project Coordinators,Ministry of Law & Justice,Judicial Administration & Technology,Section,institution,,,MOL,"Tracks CPC (Court/Chief Project Coordinator) roles and heads of court technology teams (NIC; eCourts; eCommittee of SC)."
+MOL-CPC,[Name to be added],Ministry of Law & Justice,Judicial Administration & Technology,Court Project Coordinator (CPC),placeholder,,,MOL-ADM,"CPC — Court/Chief Project Coordinator. Fill in the name and dates once confirmed."
+MOL-TECH,[Name to be added],Ministry of Law & Justice,Judicial Administration & Technology,Head of Computer Teams,placeholder,,,MOL-ADM,"Head of court digitisation / NIC court tech team. Fill in once confirmed."
+`;
