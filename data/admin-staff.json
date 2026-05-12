@@ -15,7 +15,9 @@
     "source_url": "https://www.allahabadhighcourt.in/event/ecourt_01-12-11.html",
     "source_label": "Allahabad HC e-Court recruitment notice",
     "confidence": "contact-only",
-    "notes": "Located HC pages mention the CPC office/sign-off but did not identify the current officer by name."
+    "notes": "Located HC pages mention the CPC office/sign-off but did not identify the current officer by name.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-AP",
@@ -33,7 +35,9 @@
     "source_url": "https://aphc.gov.in/registry.php",
     "source_label": "APHC registry page",
     "confidence": "named",
-    "notes": "Registry profile lists date of birth, native place, joining date of judicial service, address and CPC email."
+    "notes": "Registry profile lists date of birth, native place, joining date of judicial service, address and CPC email.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-BOM",
@@ -45,13 +49,15 @@
     "role": "Central Project Coordinator",
     "designation": "Central Project Coordinator",
     "email": "cpc-bom@aij.gov.in",
-    "phone": "022-20820565 / 022-20820665",
+    "phone": "+912220820565 / +912220820665",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://www.bombayhighcourt.gov.in/",
     "source_label": "Bombay HC site and tender contact references",
     "confidence": "contact-only",
-    "notes": "Located official tender contact gives CPC office address, phone and email; officer name was not found on a stable HC page."
+    "notes": "Located official tender contact gives CPC office address, phone and email; officer name was not found on a stable HC page.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-CAL",
@@ -63,13 +69,15 @@
     "role": "Central Project Coordinator",
     "designation": "Central Project Coordinator",
     "email": "cpc-cal@aij.gov.in",
-    "phone": "033-2231-8896 / 033-2254-8141",
+    "phone": "+913322318896 / +913322548141",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://www.calcuttahighcourt.gov.in/Notice-Files/ECOURT/2051",
     "source_label": "Calcutta HC CPC contact notice",
     "confidence": "named",
-    "notes": "Same notice also lists Sri Soumik Bhattacharya as System Officer and Sri Abhijit Dey as System Assistant."
+    "notes": "Same notice also lists Sri Soumik Bhattacharya as System Officer and Sri Abhijit Dey as System Assistant.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-DEL",
@@ -87,7 +95,9 @@
     "source_url": "https://delhihighcourt.nic.in/uploads/RTI/RTIFile_Q9DC9YS52AS.PDF",
     "source_label": "Delhi HC official email directory",
     "confidence": "contact-only",
-    "notes": "Official Delhi HC RTI/email directory lists the CPC email account; a current named officer was not located."
+    "notes": "Official Delhi HC RTI/email directory lists the CPC email account; a current named officer was not located.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-GAU",
@@ -105,7 +115,9 @@
     "source_url": "https://ghconline.gov.in/index.php/registry/",
     "source_label": "Gauhati HC registry page",
     "confidence": "role-only",
-    "notes": "Registry page lists Sri Subhrangsu Dhar as Registrar (Judicial & IT); a separate current CPC name was not clearly published."
+    "notes": "Registry page lists Sri Subhrangsu Dhar as Registrar (Judicial & IT); a separate current CPC name was not clearly published.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-GUJ",
@@ -117,13 +129,15 @@
     "role": "Registrar (SCMS & ICT) and CPC",
     "designation": "Registrar (SCMS & ICT) & Central Project Coordinator (CPC), eCourts Project",
     "email": "",
-    "phone": "079-27664624 / 079-27663312 Ext. 209 / Ext. 632",
+    "phone": "+917927664624 / ext209 / ext632",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://gujarathighcourt.nic.in/cntdtls",
     "source_label": "Gujarat HC contact details",
     "confidence": "named",
-    "notes": "Official contact page lists CPC designation and phone details."
+    "notes": "Official contact page lists CPC designation and phone details.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-HP",
@@ -135,13 +149,15 @@
     "role": "Central Project Coordinator",
     "designation": "Central Project Coordinator",
     "email": "cpc-hp@aij.gov.in",
-    "phone": "EPABX 455; mobile 98164-96001",
+    "phone": "+919816496001 / ext455",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://highcourt.hp.gov.in/edirectory/directory_Highcourt.html",
     "source_label": "HP HC telephone directory",
     "confidence": "named",
-    "notes": "Directory lists CPC name, EPABX extension and mobile number."
+    "notes": "Directory lists CPC name, EPABX extension and mobile number.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-JKL",
@@ -159,7 +175,9 @@
     "source_url": "https://jkhighcourt.nic.in/hcregistry.php",
     "source_label": "J&K and Ladakh HC registry page",
     "confidence": "named",
-    "notes": "Registry page describes the CPC role as coordinating e-Courts modules/tasks and liaison with the e-Committee, Supreme Court of India."
+    "notes": "Registry page describes the CPC role as coordinating e-Courts modules/tasks and liaison with the e-Committee, Supreme Court of India.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-JHK",
@@ -177,7 +195,9 @@
     "source_url": "https://jharkhandhighcourt.nic.in/",
     "source_label": "Jharkhand HC official site",
     "confidence": "contact-only",
-    "notes": "Current officer name was not located on a stable official page during this pass."
+    "notes": "Current officer name was not located on a stable official page during this pass.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-KAR",
@@ -195,7 +215,9 @@
     "source_url": "https://karnatakajudiciary.kar.nic.in/",
     "source_label": "Karnataka Judiciary official site",
     "confidence": "contact-only",
-    "notes": "Current named CPC was not located on a stable official page during this pass."
+    "notes": "Current named CPC was not located on a stable official page during this pass.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-KER",
@@ -213,7 +235,9 @@
     "source_url": "https://highcourt.kerala.gov.in/",
     "source_label": "Kerala HC official site",
     "confidence": "contact-only",
-    "notes": "Current named CPC was not located on a stable official page during this pass."
+    "notes": "Current named CPC was not located on a stable official page during this pass.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-MP",
@@ -225,13 +249,15 @@
     "role": "Central Project Coordinator / SPSA (SA)",
     "designation": "Central Project Coordinator / Senior Principal System Analyst (System Administration)",
     "email": "cpc-mp@aij.gov.in",
-    "phone": "0761-2623358",
+    "phone": "+917612623358",
     "date_assumed_role": "2020-02-18",
     "retirement_date": "",
     "source_url": "https://mphc.gov.in/PDF/web_pdf/OR/b-1089-18-02-2020.PDF",
     "source_label": "MPHC CPC nomination order",
     "confidence": "named",
-    "notes": "Order nominates Shri F.H. Qazi as CPC under the e-Court Project till further orders; committee PDFs also list CPC/SPSA (SA)."
+    "notes": "Order nominates Shri F.H. Qazi as CPC under the e-Court Project till further orders; committee PDFs also list CPC/SPSA (SA).",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-MAD",
@@ -249,7 +275,9 @@
     "source_url": "https://www.hcmadras.tn.nic.in/",
     "source_label": "Madras HC official site",
     "confidence": "contact-only",
-    "notes": "Current named CPC was not located on a stable official page during this pass."
+    "notes": "Current named CPC was not located on a stable official page during this pass.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-MAN",
@@ -261,13 +289,15 @@
     "role": "Registrar (Judicial) with CPC charge",
     "designation": "Registrar (Judicial), Central Project Coordinator additional charge",
     "email": "cpc-mnp@aij.gov.in",
-    "phone": "0385-2423021 / 0385-2423014",
+    "phone": "+913852423021 / +913852423014",
     "date_assumed_role": "2025-05-15",
     "retirement_date": "",
     "source_url": "https://hcmimphal.nic.in/Notice.html",
     "source_label": "Manipur HC notifications page",
     "confidence": "role-only",
-    "notes": "Notification dated 15.05.2025 states CPC charge was assigned to Registrar (Judicial) until further orders; homepage publishes CPC email."
+    "notes": "Notification dated 15.05.2025 states CPC charge was assigned to Registrar (Judicial) until further orders; homepage publishes CPC email.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-MEG",
@@ -279,13 +309,15 @@
     "role": "Registrar (Judicial Service)-cum-Central Project Coordinator",
     "designation": "Registrar (Judicial Service)-cum-Central Project Coordinator",
     "email": "cpc-mgl@aij.gov.in",
-    "phone": "PBX 635; office 0364-2225030",
+    "phone": "+913642225030 / ext635",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://meghalayahighcourt.nic.in/whos-who",
     "source_label": "Meghalaya HC who's who",
     "confidence": "named",
-    "notes": "Official Who's Who page lists name, role, PBX and office number."
+    "notes": "Official Who's Who page lists name, role, PBX and office number.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-ORI",
@@ -303,7 +335,9 @@
     "source_url": "https://orissahighcourt.nic.in/details_of_judicial_officer/417/",
     "source_label": "Orissa HC judicial officer profile",
     "confidence": "named",
-    "notes": "Profile lists cadre as Senior Civil Judge, home district Sundargarh, joining judicial service 25.02.2013 and current post from 19.01.2024."
+    "notes": "Profile lists cadre as Senior Civil Judge, home district Sundargarh, joining judicial service 25.02.2013 and current post from 19.01.2024.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-RAJ",
@@ -321,7 +355,9 @@
     "source_url": "https://hcraj.nic.in/",
     "source_label": "Rajasthan HC official site",
     "confidence": "contact-only",
-    "notes": "Current named CPC was not located on a stable official page during this pass."
+    "notes": "Current named CPC was not located on a stable official page during this pass.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-SIK",
@@ -333,13 +369,15 @@
     "role": "Central Project Coordinator",
     "designation": "Central Project Coordinator, High Court of Sikkim",
     "email": "hc-sik@nic.in",
-    "phone": "03592-202280 / 03592-203529 fax",
+    "phone": "+913592202280 / +913592203529",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://ecommitteesci.gov.in/project/steering-committee-high-court-of-sikkim/",
     "source_label": "eCommittee page for Sikkim steering committee",
     "confidence": "named",
-    "notes": "High Court committee page confirms CPC as member; eCommittee page names Mr. Benoy Sharma and lists phone/email."
+    "notes": "High Court committee page confirms CPC as member; eCommittee page names Mr. Benoy Sharma and lists phone/email.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-TRI",
@@ -357,7 +395,9 @@
     "source_url": "https://thcdlr.tripura.gov.in/team.php",
     "source_label": "Tripura HC Digital Law Reports team page",
     "confidence": "named",
-    "notes": "THCDLR team page lists Shri Saamyajyoti Debnath as CPC; an older 2024 notification listed Shri Sarbajeet Choudhury."
+    "notes": "THCDLR team page lists Shri Saamyajyoti Debnath as CPC; an older 2024 notification listed Shri Sarbajeet Choudhury.",
+    "photo_url": "https://thc.nic.in/images/S_Debnath.jpg",
+    "photo_source": "High Court of Tripura administrative setup"
   },
   {
     "id": "ADMIN-CPC-UTK",
@@ -375,7 +415,9 @@
     "source_url": "https://highcourtofuttarakhand.gov.in/",
     "source_label": "Uttarakhand HC official site",
     "confidence": "contact-only",
-    "notes": "Current named CPC was not located on a stable official page during this pass."
+    "notes": "Current named CPC was not located on a stable official page during this pass.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-TRI-RG",
@@ -387,13 +429,15 @@
     "role": "Registrar General",
     "designation": "Registrar General",
     "email": "rg.trphc@indiancourts.nic.in",
-    "phone": "0381-241-0933",
+    "phone": "+913812410933",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://thc.nic.in/adminssetup.html",
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "https://thc.nic.in/images/RG_A_Debbarma_25032026.jpg",
+    "photo_source": "High Court of Tripura administrative setup"
   },
   {
     "id": "ADMIN-TRI-REG-ADMN",
@@ -405,13 +449,15 @@
     "role": "Registrar (Admn., Planning & Management & Head of Office)",
     "designation": "Registrar (Admn., Planning & Management & Head of Office)",
     "email": "",
-    "phone": "0381-241-2210",
+    "phone": "+913812412210",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://thc.nic.in/adminssetup.html",
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "https://thc.nic.in/images/S_Datta.jpg",
+    "photo_source": "High Court of Tripura administrative setup"
   },
   {
     "id": "ADMIN-TRI-REG-VIG",
@@ -429,7 +475,9 @@
     "source_url": "https://thc.nic.in/adminssetup.html",
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "https://thc.nic.in/images/RBhattacharjee.jpg",
+    "photo_source": "High Court of Tripura administrative setup"
   },
   {
     "id": "ADMIN-TRI-REG-JUD",
@@ -441,13 +489,15 @@
     "role": "Registrar (Judicial)",
     "designation": "Registrar (Judicial)",
     "email": "",
-    "phone": "0381-241-5131",
+    "phone": "+913812415131",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://thc.nic.in/adminssetup.html",
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "https://thc.nic.in/images/S_Bikas.png",
+    "photo_source": "High Court of Tripura administrative setup"
   },
   {
     "id": "ADMIN-TRI-JR-DDO",
@@ -459,13 +509,15 @@
     "role": "Joint Registrar (D.D.O.)",
     "designation": "Joint Registrar (D.D.O.)",
     "email": "ashimroyagt@gmail.com",
-    "phone": "9436450839 / 7005666837",
+    "phone": "+919436450839 / +917005666837",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://thc.nic.in/adminssetup.html",
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "https://thc.nic.in/images/ashimroy.JPG",
+    "photo_source": "High Court of Tripura administrative setup"
   },
   {
     "id": "ADMIN-TRI-DR-JUD",
@@ -477,13 +529,15 @@
     "role": "Deputy Registrar (Judicial)",
     "designation": "Deputy Registrar (Judicial)",
     "email": "",
-    "phone": "0381-241-5131",
+    "phone": "+913812415131",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://thc.nic.in/adminssetup.html",
     "source_label": "Tripura HC administrative setup",
     "confidence": "vacant",
-    "notes": ""
+    "notes": "",
+    "photo_url": "https://thc.nic.in/images/blank.jpg",
+    "photo_source": "High Court of Tripura administrative setup"
   },
   {
     "id": "ADMIN-TRI-DR-ADMN",
@@ -495,13 +549,15 @@
     "role": "Deputy Registrar (Admn.)",
     "designation": "Deputy Registrar (Admn.)",
     "email": "iamsimadatta@gmail.com",
-    "phone": "9436533168",
+    "phone": "+919436533168",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://thc.nic.in/adminssetup.html",
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "https://thc.nic.in/images/rks.jpg",
+    "photo_source": "High Court of Tripura administrative setup"
   },
   {
     "id": "ADMIN-TRI-DR-PROTOCOL",
@@ -513,13 +569,15 @@
     "role": "Deputy Registrar (Protocol)",
     "designation": "Deputy Registrar (Protocol)",
     "email": "senguptark0381@gmail.com",
-    "phone": "9436135737 / 9366224748",
+    "phone": "+919436135737 / +919366224748",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://thc.nic.in/adminssetup.html",
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "https://thc.nic.in/images/rks.jpg",
+    "photo_source": "High Court of Tripura administrative setup"
   },
   {
     "id": "ADMIN-TRI-DR-ACCOUNTS",
@@ -531,13 +589,15 @@
     "role": "Deputy Registrar (Accounts)",
     "designation": "Deputy Registrar (Accounts)",
     "email": "pranabamrita21@gmail.com",
-    "phone": "9856588336 / 9436333373",
+    "phone": "+919856588336 / +919436333373",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://thc.nic.in/adminssetup.html",
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "https://thc.nic.in/images/PDatta.jpeg",
+    "photo_source": "High Court of Tripura administrative setup"
   },
   {
     "id": "ADMIN-TRI-PS-CJ",
@@ -549,13 +609,15 @@
     "role": "Principal Secretary to Hon'ble the Chief Justice",
     "designation": "Principal Secretary to Hon'ble the Chief Justice",
     "email": "siddhartha.lodh1110@gmail.com",
-    "phone": "9436454715",
+    "phone": "+919436454715",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://thc.nic.in/adminssetup.html",
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "https://thc.nic.in/images/SLodh.jpg",
+    "photo_source": "High Court of Tripura administrative setup"
   },
   {
     "id": "ADMIN-TRI-LIB",
@@ -567,13 +629,15 @@
     "role": "Chief Librarian",
     "designation": "Chief Librarian",
     "email": "majumder70@gmail.com",
-    "phone": "9233157424",
+    "phone": "+919233157424",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://thc.nic.in/adminssetup.html",
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "https://thc.nic.in/images/pranam.jpg",
+    "photo_source": "High Court of Tripura administrative setup"
   },
   {
     "id": "ADMIN-CHG-RG",
@@ -585,13 +649,15 @@
     "role": "Registrar General",
     "designation": "Registrar General",
     "email": "",
-    "phone": "07752-241021",
+    "phone": "+917752241021",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://highcourt.cg.gov.in/about/contact_us.php",
     "source_label": "Chhattisgarh HC contact page",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CHG-COMP",
@@ -603,13 +669,15 @@
     "role": "Registrar (Computerization)-cum-CPC",
     "designation": "Registrar (Computerization)-cum-CPC",
     "email": "",
-    "phone": "07752-241027",
+    "phone": "+917752241027",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://highcourt.cg.gov.in/about/contact_us.php",
     "source_label": "Chhattisgarh HC contact page",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-GAU-RG",
@@ -621,13 +689,15 @@
     "role": "Registrar General",
     "designation": "Registrar General",
     "email": "rg1.ghc@gmail.com",
-    "phone": "2631227 / 76370-26605",
+    "phone": "+913612631227 / +917637026605",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://ghconline.gov.in/index.php/registry/",
     "source_label": "Gauhati HC registry",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-GAU-IT",
@@ -639,13 +709,15 @@
     "role": "Registrar (Judicial & IT)",
     "designation": "Registrar (Judicial & IT)",
     "email": "regj.ghc@gmail.com",
-    "phone": "2732955 / 76370-26558",
+    "phone": "+913612732955 / +917637026558",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://ghconline.gov.in/index.php/registry/",
     "source_label": "Gauhati HC registry",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CAL-RG",
@@ -657,13 +729,15 @@
     "role": "Registrar General",
     "designation": "Registrar General",
     "email": "",
-    "phone": "+91-33-2213 5472",
+    "phone": "+913322135472",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://www.calcuttahighcourt.gov.in/registry",
     "source_label": "Calcutta HC registry",
     "confidence": "role-only",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CAL-IT",
@@ -675,13 +749,15 @@
     "role": "Registrar (Information Technology)",
     "designation": "Registrar (Information Technology)",
     "email": "",
-    "phone": "+91-33-2248 3928",
+    "phone": "+913322483928",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://www.calcuttahighcourt.gov.in/registry",
     "source_label": "Calcutta HC registry",
     "confidence": "role-only",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-MP-RG",
@@ -699,7 +775,9 @@
     "source_url": "https://mphc.gov.in/registry",
     "source_label": "MPHC registry",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-MP-VIG",
@@ -717,7 +795,9 @@
     "source_url": "https://mphc.gov.in/registry",
     "source_label": "MPHC registry",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-KER-RG",
@@ -735,7 +815,9 @@
     "source_url": "https://highcourt.kerala.gov.in/officers.php",
     "source_label": "Kerala HC officers",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-KER-COMP",
@@ -753,7 +835,9 @@
     "source_url": "https://highcourt.kerala.gov.in/officers.php",
     "source_label": "Kerala HC officers",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-ORI-RG",
@@ -771,7 +855,9 @@
     "source_url": "https://www.orissahighcourt.nic.in/highcourt_registry/",
     "source_label": "Orissa HC registry",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-ORI-ADMN",
@@ -789,7 +875,9 @@
     "source_url": "https://www.orissahighcourt.nic.in/highcourt_registry/",
     "source_label": "Orissa HC registry",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-PAT-RG",
@@ -807,7 +895,9 @@
     "source_url": "https://patnahighcourt.gov.in/officers_of_registry",
     "source_label": "Patna HC officers of registry",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-PAT-CPC",
@@ -825,7 +915,9 @@
     "source_url": "https://patnahighcourt.gov.in/officers_of_registry",
     "source_label": "Patna HC officers of registry",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-PHC-RG",
@@ -843,7 +935,9 @@
     "source_url": "https://highcourtchd.gov.in/?mod=registrars",
     "source_label": "Punjab & Haryana HC registrars",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-PHC-CPC",
@@ -861,7 +955,9 @@
     "source_url": "https://highcourtchd.gov.in/?mod=registrars",
     "source_label": "Punjab & Haryana HC registrars",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-RAJ-RG",
@@ -879,7 +975,9 @@
     "source_url": "https://hcraj.nic.in/hcraj/directory/index.php",
     "source_label": "Rajasthan HC judicial officer directory",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-RAJ-ADMN",
@@ -897,7 +995,9 @@
     "source_url": "https://hcraj.nic.in/hcraj/directory/index.php",
     "source_label": "Rajasthan HC judicial officer directory",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-TEL-RG",
@@ -915,7 +1015,9 @@
     "source_url": "https://tshc.gov.in/processMenuTypes?id=9",
     "source_label": "Telangana HC registrars",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-TEL-CPC",
@@ -933,6 +1035,8 @@
     "source_url": "https://tshc.gov.in/processMenuTypes?id=9",
     "source_label": "Telangana HC registrars",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   }
 ]

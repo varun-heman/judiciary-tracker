@@ -11,7 +11,9 @@
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "SC-CJI",
@@ -25,7 +27,9 @@
     "retirement_date": "2027-02-09",
     "parent_high_court": "Punjab & Haryana",
     "parent_id": "SC",
-    "notes": "53rd CJI. Born 10 Feb 1962. Nominated by CJI B.R. Gavai. Appointed by President Droupadi Murmu."
+    "notes": "53rd CJI. Born 10 Feb 1962. Nominated by CJI B.R. Gavai. Appointed by President Droupadi Murmu.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2025102910.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-002",
@@ -39,7 +43,9 @@
     "retirement_date": "2027-09-23",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 24 Sep 1962. Next in seniority after CJI. Expected 54th CJI (Feb–Sep 2027)."
+    "notes": "Born 24 Sep 1962. Next in seniority after CJI. Expected 54th CJI (Feb–Sep 2027).",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2025110998.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-003",
@@ -53,7 +59,9 @@
     "retirement_date": "2026-06-28",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 29 Jun 1961."
+    "notes": "Born 29 Jun 1961.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/20240111100.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-004",
@@ -67,7 +75,9 @@
     "retirement_date": "2027-10-29",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 30 Oct 1962. Expected to be 55th CJI (Sep–Oct 2027) — India's first woman CJI."
+    "notes": "Born 30 Oct 1962. Expected to be 55th CJI (Sep–Oct 2027) — India's first woman CJI.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2024011390.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-005",
@@ -81,7 +91,9 @@
     "retirement_date": "2027-07-20",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 21 Jul 1962."
+    "notes": "Born 21 Jul 1962.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2024011338.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-006",
@@ -95,7 +107,9 @@
     "retirement_date": "2028-05-02",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 03 May 1963."
+    "notes": "Born 03 May 1963.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011184.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-007",
@@ -109,7 +123,9 @@
     "retirement_date": "2030-08-11",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 12 Aug 1965."
+    "notes": "Born 12 Aug 1965.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011184-1.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-008",
@@ -123,7 +139,9 @@
     "retirement_date": "2030-02-08",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 09 Feb 1965."
+    "notes": "Born 09 Feb 1965.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011141.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-009",
@@ -137,7 +155,9 @@
     "retirement_date": "2026-06-16",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 17 Jun 1961."
+    "notes": "Born 17 Jun 1961.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011110.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-010",
@@ -151,7 +171,9 @@
     "retirement_date": "2026-08-22",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 23 Aug 1961."
+    "notes": "Born 23 Aug 1961.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011112.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-011",
@@ -165,7 +187,9 @@
     "retirement_date": "2028-08-13",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 14 Aug 1963."
+    "notes": "Born 14 Aug 1963.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011172.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-012",
@@ -179,7 +203,9 @@
     "retirement_date": "2028-05-10",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 11 May 1963."
+    "notes": "Born 11 May 1963.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2025090883.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-013",
@@ -193,7 +219,9 @@
     "retirement_date": "2030-06-01",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 02 Jun 1965."
+    "notes": "Born 02 Jun 1965.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011127.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-014",
@@ -207,7 +235,9 @@
     "retirement_date": "2027-07-13",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 14 Jul 1962."
+    "notes": "Born 14 Jul 1962.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011116.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-015",
@@ -221,7 +251,9 @@
     "retirement_date": "2029-08-28",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 29 Aug 1964."
+    "notes": "Born 29 Aug 1964.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011162.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-016",
@@ -235,7 +267,9 @@
     "retirement_date": "2031-05-25",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 26 May 1966."
+    "notes": "Born 26 May 1966.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011127-1.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-017",
@@ -249,7 +283,9 @@
     "retirement_date": "2029-08-01",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 02 Aug 1964."
+    "notes": "Born 02 Aug 1964.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011177.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-018",
@@ -263,7 +299,9 @@
     "retirement_date": "2027-05-05",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 06 May 1962."
+    "notes": "Born 06 May 1962.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011123-1.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-019",
@@ -277,7 +315,9 @@
     "retirement_date": "2026-11-29",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 30 Nov 1961."
+    "notes": "Born 30 Nov 1961.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/12/2024011113.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-020",
@@ -291,7 +331,9 @@
     "retirement_date": "2028-03-11",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 12 Mar 1963."
+    "notes": "Born 12 Mar 1963.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/12/2024011142.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-021",
@@ -305,7 +347,9 @@
     "retirement_date": "2028-01-10",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 11 Jan 1963."
+    "notes": "Born 11 Jan 1963.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/12/2024011135.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-022",
@@ -319,7 +363,9 @@
     "retirement_date": "2027-06-22",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 23 Jun 1962."
+    "notes": "Born 23 Jun 1962.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2024021530-scaled-e1748753979960.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-023",
@@ -333,7 +379,9 @@
     "retirement_date": "2028-02-29",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 01 Mar 1963."
+    "notes": "Born 01 Mar 1963.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/07/2024080379-scaled-e1748754095610.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-024",
@@ -347,7 +395,9 @@
     "retirement_date": "2028-06-09",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 10 Jun 1963."
+    "notes": "Born 10 Jun 1963.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/07/2024120978-e1733723449364.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-025",
@@ -361,7 +411,9 @@
     "retirement_date": "2027-12-16",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 17 Dec 1962."
+    "notes": "Born 17 Dec 1962.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/12/2024121925.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-026",
@@ -375,7 +427,9 @@
     "retirement_date": "2028-04-24",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 25 Apr 1963."
+    "notes": "Born 25 Apr 1963.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/01/2025012065.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-027",
@@ -389,7 +443,9 @@
     "retirement_date": "2031-10-02",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 03 Oct 1966."
+    "notes": "Born 03 Oct 1966.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/03/2025032612-e1748754168828.jpeg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-028",
@@ -403,7 +459,9 @@
     "retirement_date": "2030-03-22",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 23 Mar 1965."
+    "notes": "Born 23 Mar 1965.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/05/2025061738.jpeg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-029",
@@ -417,7 +475,9 @@
     "retirement_date": "2029-03-25",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 26 Mar 1964."
+    "notes": "Born 26 Mar 1964.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/05/2025080775.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-030",
@@ -431,7 +491,9 @@
     "retirement_date": "2030-04-06",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 07 Apr 1965."
+    "notes": "Born 07 Apr 1965.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/05/2025082310.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-031",
@@ -445,7 +507,9 @@
     "retirement_date": "2029-04-12",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 13 Apr 1964."
+    "notes": "Born 13 Apr 1964.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/08/2025091540.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-032",
@@ -459,7 +523,9 @@
     "retirement_date": "2033-05-27",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 28 May 1968."
+    "notes": "Born 28 May 1968.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/08/2025082950.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "HC-ALD",
@@ -473,7 +539,9 @@
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Serves Uttar Pradesh. Largest HC by sanctioned strength."
+    "notes": "Serves Uttar Pradesh. Largest HC by sanctioned strength.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-ALD-CJ",
@@ -487,7 +555,9 @@
     "retirement_date": "2029-10-14",
     "parent_high_court": "Rajasthan",
     "parent_id": "HC-ALD",
-    "notes": "Joined from Rajasthan HC. Retires Oct 2029."
+    "notes": "Joined from Rajasthan HC. Retires Oct 2029.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-AP",
@@ -501,7 +571,9 @@
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Established 1 Jan 2019 after bifurcation of AP. Seat: Amaravati."
+    "notes": "Established 1 Jan 2019 after bifurcation of AP. Seat: Amaravati.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-AP-CJ",
@@ -515,7 +587,9 @@
     "retirement_date": "2028-12-04",
     "parent_high_court": "Punjab & Haryana",
     "parent_id": "HC-AP",
-    "notes": "Appointed ~May 2026. Succeeded Justice Dhiraj Singh Thakur (retired 24 Apr 2026). Nominated by CJI Surya Kant."
+    "notes": "Appointed ~May 2026. Succeeded Justice Dhiraj Singh Thakur (retired 24 Apr 2026). Nominated by CJI Surya Kant.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-BOM",
@@ -529,7 +603,9 @@
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Serves Maharashtra; Goa; Dadra & Nagar Haveli; Daman & Diu."
+    "notes": "Serves Maharashtra; Goa; Dadra & Nagar Haveli; Daman & Diu.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-BOM-CJ",
@@ -543,7 +619,9 @@
     "retirement_date": "2027-05-24",
     "parent_high_court": "Jharkhand",
     "parent_id": "HC-BOM",
-    "notes": "Joined from Jharkhand HC."
+    "notes": "Joined from Jharkhand HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-CAL",
@@ -557,7 +635,9 @@
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Serves West Bengal and Andaman & Nicobar Islands."
+    "notes": "Serves West Bengal and Andaman & Nicobar Islands.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-CAL-CJ",
@@ -571,7 +651,9 @@
     "retirement_date": "2026-06-20",
     "parent_high_court": "Madhya Pradesh",
     "parent_id": "HC-CAL",
-    "notes": "Joined from MP HC. Retiring Jun 2026 — very soon."
+    "notes": "Joined from MP HC. Retiring Jun 2026 — very soon.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-CHG",
@@ -585,7 +667,9 @@
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Principal seat: Bilaspur."
+    "notes": "Principal seat: Bilaspur.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-CHG-CJ",
@@ -599,7 +683,9 @@
     "retirement_date": "2026-09-04",
     "parent_high_court": "Allahabad",
     "parent_id": "HC-CHG",
-    "notes": "Joined from Allahabad HC."
+    "notes": "Joined from Allahabad HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-DEL",
@@ -613,7 +699,9 @@
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Serves NCT of Delhi."
+    "notes": "Serves NCT of Delhi.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-DEL-CJ",
@@ -627,7 +715,9 @@
     "retirement_date": "2027-06-15",
     "parent_high_court": "Allahabad",
     "parent_id": "HC-DEL",
-    "notes": "Previously 47th CJ of Bombay HC. Joined Delhi 21 Jan 2025. Nominated by both CJI D.Y. Chandrachud and CJI Sanjiv Khanna."
+    "notes": "Previously 47th CJ of Bombay HC. Joined Delhi 21 Jan 2025. Nominated by both CJI D.Y. Chandrachud and CJI Sanjiv Khanna.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-GAU",
@@ -641,7 +731,9 @@
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Serves Assam; Nagaland; Mizoram; Arunachal Pradesh."
+    "notes": "Serves Assam; Nagaland; Mizoram; Arunachal Pradesh.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-GAU-CJ",
@@ -655,7 +747,9 @@
     "retirement_date": "2028-09-30",
     "parent_high_court": "Patna",
     "parent_id": "HC-GAU",
-    "notes": "Joined from Patna HC."
+    "notes": "Joined from Patna HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-GUJ",
@@ -669,7 +763,9 @@
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-GUJ-CJ",
@@ -683,7 +779,9 @@
     "retirement_date": "2028-04-29",
     "parent_high_court": "Allahabad",
     "parent_id": "HC-GUJ",
-    "notes": "Joined from Allahabad HC."
+    "notes": "Joined from Allahabad HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-HP",
@@ -697,7 +795,9 @@
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Principal seat: Shimla."
+    "notes": "Principal seat: Shimla.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-HP-CJ",
@@ -711,7 +811,9 @@
     "retirement_date": "2027-10-31",
     "parent_high_court": "Punjab & Haryana",
     "parent_id": "HC-HP",
-    "notes": "Joined from Punjab & Haryana HC."
+    "notes": "Joined from Punjab & Haryana HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-JKL",
@@ -725,7 +827,9 @@
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Serves J&K and Ladakh Union Territories."
+    "notes": "Serves J&K and Ladakh Union Territories.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-JKL-CJ",
@@ -739,7 +843,9 @@
     "retirement_date": "2026-09-17",
     "parent_high_court": "Punjab & Haryana",
     "parent_id": "HC-JKL",
-    "notes": "Joined from Punjab & Haryana HC."
+    "notes": "Joined from Punjab & Haryana HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-JHK",
@@ -753,7 +859,9 @@
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Principal seat: Ranchi."
+    "notes": "Principal seat: Ranchi.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-JHK-CJ",
@@ -767,7 +875,9 @@
     "retirement_date": "2026-12-31",
     "parent_high_court": "Bombay",
     "parent_id": "HC-JHK",
-    "notes": "Joined from Bombay HC. Note: Exact retirement date from DoJ PDF was unclear (entry error); estimated Dec 2026."
+    "notes": "Joined from Bombay HC. Note: Exact retirement date from DoJ PDF was unclear (entry error); estimated Dec 2026.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-KAR",
@@ -781,7 +891,9 @@
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Principal seat: Bengaluru."
+    "notes": "Principal seat: Bengaluru.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-KAR-CJ",
@@ -795,7 +907,9 @@
     "retirement_date": "2028-11-01",
     "parent_high_court": "Delhi",
     "parent_id": "HC-KAR",
-    "notes": "Joined from Delhi HC."
+    "notes": "Joined from Delhi HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-KER",
@@ -809,7 +923,9 @@
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Principal seat: Ernakulam."
+    "notes": "Principal seat: Ernakulam.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-KER-CJ",
@@ -823,7 +939,9 @@
     "retirement_date": "2027-07-27",
     "parent_high_court": "Calcutta",
     "parent_id": "HC-KER",
-    "notes": "Joined Kerala 10 Jan 2026. Previously 14th CJ of Meghalaya HC."
+    "notes": "Joined Kerala 10 Jan 2026. Previously 14th CJ of Meghalaya HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-MP",
@@ -837,7 +955,9 @@
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Principal seat: Jabalpur."
+    "notes": "Principal seat: Jabalpur.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-MP-CJ",
@@ -851,7 +971,9 @@
     "retirement_date": "2026-12-25",
     "parent_high_court": "Delhi",
     "parent_id": "HC-MP",
-    "notes": "Joined from Delhi HC."
+    "notes": "Joined from Delhi HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-MAD",
@@ -865,7 +987,9 @@
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Serves Tamil Nadu and Puducherry. One of oldest HCs."
+    "notes": "Serves Tamil Nadu and Puducherry. One of oldest HCs.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-MAD-CJ",
@@ -879,7 +1003,9 @@
     "retirement_date": "2028-08-14",
     "parent_high_court": "Madhya Pradesh",
     "parent_id": "HC-MAD",
-    "notes": "Succeeded M.M. Shrivastava (retired 05 Mar 2026). Nominated by CJI Surya Kant."
+    "notes": "Succeeded M.M. Shrivastava (retired 05 Mar 2026). Nominated by CJI Surya Kant.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-MAN",
@@ -893,7 +1019,9 @@
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Principal seat: Imphal."
+    "notes": "Principal seat: Imphal.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-MAN-CJ",
@@ -907,7 +1035,9 @@
     "retirement_date": "2028-07-18",
     "parent_high_court": "Madras",
     "parent_id": "HC-MAN",
-    "notes": "Joined from Madras HC."
+    "notes": "Joined from Madras HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-MEG",
@@ -921,7 +1051,9 @@
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Principal seat: Shillong."
+    "notes": "Principal seat: Shillong.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-MEG-CJ",
@@ -935,7 +1067,9 @@
     "retirement_date": "2026-11-27",
     "parent_high_court": "Bombay",
     "parent_id": "HC-MEG",
-    "notes": "Joined from Bombay HC. Retires Nov 2026."
+    "notes": "Joined from Bombay HC. Retires Nov 2026.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-ORI",
@@ -949,7 +1083,9 @@
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Principal seat: Cuttack."
+    "notes": "Principal seat: Cuttack.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-ORI-CJ",
@@ -963,7 +1099,9 @@
     "retirement_date": "2026-11-15",
     "parent_high_court": "Calcutta",
     "parent_id": "HC-ORI",
-    "notes": "Joined from Calcutta HC. One of most senior HC judges by initial elevation."
+    "notes": "Joined from Calcutta HC. One of most senior HC judges by initial elevation.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-PAT",
@@ -977,7 +1115,9 @@
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Serves Bihar."
+    "notes": "Serves Bihar.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-PAT-CJ",
@@ -991,7 +1131,9 @@
     "retirement_date": "2026-06-04",
     "parent_high_court": "Orissa",
     "parent_id": "HC-PAT",
-    "notes": "Joined from Orissa HC. Retiring 04 Jun 2026 — only ~23 days away."
+    "notes": "Joined from Orissa HC. Retiring 04 Jun 2026 — only ~23 days away.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-PHC",
@@ -1005,7 +1147,9 @@
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Serves Punjab; Haryana; Chandigarh UT. Seat: Chandigarh."
+    "notes": "Serves Punjab; Haryana; Chandigarh UT. Seat: Chandigarh.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-PHC-CJ",
@@ -1019,7 +1163,9 @@
     "retirement_date": "2026-12-31",
     "parent_high_court": "Madhya Pradesh",
     "parent_id": "HC-PHC",
-    "notes": "Joined from Madhya Pradesh HC."
+    "notes": "Joined from Madhya Pradesh HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-RAJ",
@@ -1033,7 +1179,9 @@
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Principal seat: Jodhpur; Bench at Jaipur."
+    "notes": "Principal seat: Jodhpur; Bench at Jaipur.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-RAJ-CJ",
@@ -1047,7 +1195,9 @@
     "retirement_date": "2026-09-26",
     "parent_high_court": "Rajasthan",
     "parent_id": "HC-RAJ",
-    "notes": "Acting CJ from home court. Retires Sep 2026."
+    "notes": "Acting CJ from home court. Retires Sep 2026.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-SIK",
@@ -1061,7 +1211,9 @@
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Principal seat: Gangtok. Smallest HC."
+    "notes": "Principal seat: Gangtok. Smallest HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-SIK-CJ",
@@ -1075,7 +1227,9 @@
     "retirement_date": "2029-05-31",
     "parent_high_court": "Kerala",
     "parent_id": "HC-SIK",
-    "notes": "Joined from Kerala HC."
+    "notes": "Joined from Kerala HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-TEL",
@@ -1089,7 +1243,9 @@
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Established 1 Jan 2019. Seat: Hyderabad."
+    "notes": "Established 1 Jan 2019. Seat: Hyderabad.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-TEL-CJ",
@@ -1103,7 +1259,9 @@
     "retirement_date": "2027-07-06",
     "parent_high_court": "Jharkhand",
     "parent_id": "HC-TEL",
-    "notes": "Joined Telangana 19 Jul 2025. Previously 8th CJ of Tripura HC."
+    "notes": "Joined Telangana 19 Jul 2025. Previously 8th CJ of Tripura HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-TRI",
@@ -1117,7 +1275,9 @@
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Principal seat: Agartala."
+    "notes": "Principal seat: Agartala.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-TRI-CJ",
@@ -1131,7 +1291,9 @@
     "retirement_date": "2028-08-06",
     "parent_high_court": "Telangana",
     "parent_id": "HC-TRI",
-    "notes": "Joined Tripura 22 Jul 2025. Previously 28th CJ of Himachal Pradesh HC."
+    "notes": "Joined Tripura 22 Jul 2025. Previously 28th CJ of Himachal Pradesh HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-UTK",
@@ -1145,7 +1307,9 @@
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Principal seat: Nainital."
+    "notes": "Principal seat: Nainital.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-UTK-CJ",
@@ -1159,6 +1323,8 @@
     "retirement_date": "2026-10-08",
     "parent_high_court": "Allahabad",
     "parent_id": "HC-UTK",
-    "notes": "Joined from Allahabad HC. Retires Oct 2026."
+    "notes": "Joined from Allahabad HC. Retires Oct 2026.",
+    "photo_url": "",
+    "photo_source": ""
   }
 ]

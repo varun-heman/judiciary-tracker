@@ -13,7 +13,9 @@ window.COURTS_DATA = [
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "SC-CJI",
@@ -27,7 +29,9 @@ window.COURTS_DATA = [
     "retirement_date": "2027-02-09",
     "parent_high_court": "Punjab & Haryana",
     "parent_id": "SC",
-    "notes": "53rd CJI. Born 10 Feb 1962. Nominated by CJI B.R. Gavai. Appointed by President Droupadi Murmu."
+    "notes": "53rd CJI. Born 10 Feb 1962. Nominated by CJI B.R. Gavai. Appointed by President Droupadi Murmu.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2025102910.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-002",
@@ -41,7 +45,9 @@ window.COURTS_DATA = [
     "retirement_date": "2027-09-23",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 24 Sep 1962. Next in seniority after CJI. Expected 54th CJI (Feb–Sep 2027)."
+    "notes": "Born 24 Sep 1962. Next in seniority after CJI. Expected 54th CJI (Feb–Sep 2027).",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2025110998.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-003",
@@ -55,7 +61,9 @@ window.COURTS_DATA = [
     "retirement_date": "2026-06-28",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 29 Jun 1961."
+    "notes": "Born 29 Jun 1961.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/20240111100.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-004",
@@ -69,7 +77,9 @@ window.COURTS_DATA = [
     "retirement_date": "2027-10-29",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 30 Oct 1962. Expected to be 55th CJI (Sep–Oct 2027) — India's first woman CJI."
+    "notes": "Born 30 Oct 1962. Expected to be 55th CJI (Sep–Oct 2027) — India's first woman CJI.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2024011390.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-005",
@@ -83,7 +93,9 @@ window.COURTS_DATA = [
     "retirement_date": "2027-07-20",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 21 Jul 1962."
+    "notes": "Born 21 Jul 1962.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2024011338.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-006",
@@ -97,7 +109,9 @@ window.COURTS_DATA = [
     "retirement_date": "2028-05-02",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 03 May 1963."
+    "notes": "Born 03 May 1963.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011184.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-007",
@@ -111,7 +125,9 @@ window.COURTS_DATA = [
     "retirement_date": "2030-08-11",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 12 Aug 1965."
+    "notes": "Born 12 Aug 1965.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011184-1.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-008",
@@ -125,7 +141,9 @@ window.COURTS_DATA = [
     "retirement_date": "2030-02-08",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 09 Feb 1965."
+    "notes": "Born 09 Feb 1965.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011141.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-009",
@@ -139,7 +157,9 @@ window.COURTS_DATA = [
     "retirement_date": "2026-06-16",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 17 Jun 1961."
+    "notes": "Born 17 Jun 1961.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011110.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-010",
@@ -153,7 +173,9 @@ window.COURTS_DATA = [
     "retirement_date": "2026-08-22",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 23 Aug 1961."
+    "notes": "Born 23 Aug 1961.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011112.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-011",
@@ -167,7 +189,9 @@ window.COURTS_DATA = [
     "retirement_date": "2028-08-13",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 14 Aug 1963."
+    "notes": "Born 14 Aug 1963.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011172.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-012",
@@ -181,7 +205,9 @@ window.COURTS_DATA = [
     "retirement_date": "2028-05-10",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 11 May 1963."
+    "notes": "Born 11 May 1963.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2025090883.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-013",
@@ -195,7 +221,9 @@ window.COURTS_DATA = [
     "retirement_date": "2030-06-01",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 02 Jun 1965."
+    "notes": "Born 02 Jun 1965.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011127.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-014",
@@ -209,7 +237,9 @@ window.COURTS_DATA = [
     "retirement_date": "2027-07-13",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 14 Jul 1962."
+    "notes": "Born 14 Jul 1962.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011116.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-015",
@@ -223,7 +253,9 @@ window.COURTS_DATA = [
     "retirement_date": "2029-08-28",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 29 Aug 1964."
+    "notes": "Born 29 Aug 1964.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011162.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-016",
@@ -237,7 +269,9 @@ window.COURTS_DATA = [
     "retirement_date": "2031-05-25",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 26 May 1966."
+    "notes": "Born 26 May 1966.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011127-1.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-017",
@@ -251,7 +285,9 @@ window.COURTS_DATA = [
     "retirement_date": "2029-08-01",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 02 Aug 1964."
+    "notes": "Born 02 Aug 1964.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011177.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-018",
@@ -265,7 +301,9 @@ window.COURTS_DATA = [
     "retirement_date": "2027-05-05",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 06 May 1962."
+    "notes": "Born 06 May 1962.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011123-1.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-019",
@@ -279,7 +317,9 @@ window.COURTS_DATA = [
     "retirement_date": "2026-11-29",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 30 Nov 1961."
+    "notes": "Born 30 Nov 1961.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/12/2024011113.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-020",
@@ -293,7 +333,9 @@ window.COURTS_DATA = [
     "retirement_date": "2028-03-11",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 12 Mar 1963."
+    "notes": "Born 12 Mar 1963.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/12/2024011142.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-021",
@@ -307,7 +349,9 @@ window.COURTS_DATA = [
     "retirement_date": "2028-01-10",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 11 Jan 1963."
+    "notes": "Born 11 Jan 1963.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/12/2024011135.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-022",
@@ -321,7 +365,9 @@ window.COURTS_DATA = [
     "retirement_date": "2027-06-22",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 23 Jun 1962."
+    "notes": "Born 23 Jun 1962.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2024021530-scaled-e1748753979960.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-023",
@@ -335,7 +381,9 @@ window.COURTS_DATA = [
     "retirement_date": "2028-02-29",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 01 Mar 1963."
+    "notes": "Born 01 Mar 1963.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/07/2024080379-scaled-e1748754095610.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-024",
@@ -349,7 +397,9 @@ window.COURTS_DATA = [
     "retirement_date": "2028-06-09",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 10 Jun 1963."
+    "notes": "Born 10 Jun 1963.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/07/2024120978-e1733723449364.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-025",
@@ -363,7 +413,9 @@ window.COURTS_DATA = [
     "retirement_date": "2027-12-16",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 17 Dec 1962."
+    "notes": "Born 17 Dec 1962.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/12/2024121925.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-026",
@@ -377,7 +429,9 @@ window.COURTS_DATA = [
     "retirement_date": "2028-04-24",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 25 Apr 1963."
+    "notes": "Born 25 Apr 1963.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/01/2025012065.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-027",
@@ -391,7 +445,9 @@ window.COURTS_DATA = [
     "retirement_date": "2031-10-02",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 03 Oct 1966."
+    "notes": "Born 03 Oct 1966.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/03/2025032612-e1748754168828.jpeg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-028",
@@ -405,7 +461,9 @@ window.COURTS_DATA = [
     "retirement_date": "2030-03-22",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 23 Mar 1965."
+    "notes": "Born 23 Mar 1965.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/05/2025061738.jpeg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-029",
@@ -419,7 +477,9 @@ window.COURTS_DATA = [
     "retirement_date": "2029-03-25",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 26 Mar 1964."
+    "notes": "Born 26 Mar 1964.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/05/2025080775.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-030",
@@ -433,7 +493,9 @@ window.COURTS_DATA = [
     "retirement_date": "2030-04-06",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 07 Apr 1965."
+    "notes": "Born 07 Apr 1965.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/05/2025082310.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-031",
@@ -447,7 +509,9 @@ window.COURTS_DATA = [
     "retirement_date": "2029-04-12",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 13 Apr 1964."
+    "notes": "Born 13 Apr 1964.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/08/2025091540.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "SC-032",
@@ -461,7 +525,9 @@ window.COURTS_DATA = [
     "retirement_date": "2033-05-27",
     "parent_high_court": "",
     "parent_id": "SC",
-    "notes": "Born 28 May 1968."
+    "notes": "Born 28 May 1968.",
+    "photo_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/08/2025082950.jpg",
+    "photo_source": "Supreme Court of India"
   },
   {
     "id": "HC-ALD",
@@ -475,7 +541,9 @@ window.COURTS_DATA = [
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Serves Uttar Pradesh. Largest HC by sanctioned strength."
+    "notes": "Serves Uttar Pradesh. Largest HC by sanctioned strength.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-ALD-CJ",
@@ -489,7 +557,9 @@ window.COURTS_DATA = [
     "retirement_date": "2029-10-14",
     "parent_high_court": "Rajasthan",
     "parent_id": "HC-ALD",
-    "notes": "Joined from Rajasthan HC. Retires Oct 2029."
+    "notes": "Joined from Rajasthan HC. Retires Oct 2029.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-AP",
@@ -503,7 +573,9 @@ window.COURTS_DATA = [
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Established 1 Jan 2019 after bifurcation of AP. Seat: Amaravati."
+    "notes": "Established 1 Jan 2019 after bifurcation of AP. Seat: Amaravati.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-AP-CJ",
@@ -517,7 +589,9 @@ window.COURTS_DATA = [
     "retirement_date": "2028-12-04",
     "parent_high_court": "Punjab & Haryana",
     "parent_id": "HC-AP",
-    "notes": "Appointed ~May 2026. Succeeded Justice Dhiraj Singh Thakur (retired 24 Apr 2026). Nominated by CJI Surya Kant."
+    "notes": "Appointed ~May 2026. Succeeded Justice Dhiraj Singh Thakur (retired 24 Apr 2026). Nominated by CJI Surya Kant.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-BOM",
@@ -531,7 +605,9 @@ window.COURTS_DATA = [
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Serves Maharashtra; Goa; Dadra & Nagar Haveli; Daman & Diu."
+    "notes": "Serves Maharashtra; Goa; Dadra & Nagar Haveli; Daman & Diu.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-BOM-CJ",
@@ -545,7 +621,9 @@ window.COURTS_DATA = [
     "retirement_date": "2027-05-24",
     "parent_high_court": "Jharkhand",
     "parent_id": "HC-BOM",
-    "notes": "Joined from Jharkhand HC."
+    "notes": "Joined from Jharkhand HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-CAL",
@@ -559,7 +637,9 @@ window.COURTS_DATA = [
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Serves West Bengal and Andaman & Nicobar Islands."
+    "notes": "Serves West Bengal and Andaman & Nicobar Islands.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-CAL-CJ",
@@ -573,7 +653,9 @@ window.COURTS_DATA = [
     "retirement_date": "2026-06-20",
     "parent_high_court": "Madhya Pradesh",
     "parent_id": "HC-CAL",
-    "notes": "Joined from MP HC. Retiring Jun 2026 — very soon."
+    "notes": "Joined from MP HC. Retiring Jun 2026 — very soon.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-CHG",
@@ -587,7 +669,9 @@ window.COURTS_DATA = [
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Principal seat: Bilaspur."
+    "notes": "Principal seat: Bilaspur.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-CHG-CJ",
@@ -601,7 +685,9 @@ window.COURTS_DATA = [
     "retirement_date": "2026-09-04",
     "parent_high_court": "Allahabad",
     "parent_id": "HC-CHG",
-    "notes": "Joined from Allahabad HC."
+    "notes": "Joined from Allahabad HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-DEL",
@@ -615,7 +701,9 @@ window.COURTS_DATA = [
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Serves NCT of Delhi."
+    "notes": "Serves NCT of Delhi.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-DEL-CJ",
@@ -629,7 +717,9 @@ window.COURTS_DATA = [
     "retirement_date": "2027-06-15",
     "parent_high_court": "Allahabad",
     "parent_id": "HC-DEL",
-    "notes": "Previously 47th CJ of Bombay HC. Joined Delhi 21 Jan 2025. Nominated by both CJI D.Y. Chandrachud and CJI Sanjiv Khanna."
+    "notes": "Previously 47th CJ of Bombay HC. Joined Delhi 21 Jan 2025. Nominated by both CJI D.Y. Chandrachud and CJI Sanjiv Khanna.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-GAU",
@@ -643,7 +733,9 @@ window.COURTS_DATA = [
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Serves Assam; Nagaland; Mizoram; Arunachal Pradesh."
+    "notes": "Serves Assam; Nagaland; Mizoram; Arunachal Pradesh.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-GAU-CJ",
@@ -657,7 +749,9 @@ window.COURTS_DATA = [
     "retirement_date": "2028-09-30",
     "parent_high_court": "Patna",
     "parent_id": "HC-GAU",
-    "notes": "Joined from Patna HC."
+    "notes": "Joined from Patna HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-GUJ",
@@ -671,7 +765,9 @@ window.COURTS_DATA = [
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-GUJ-CJ",
@@ -685,7 +781,9 @@ window.COURTS_DATA = [
     "retirement_date": "2028-04-29",
     "parent_high_court": "Allahabad",
     "parent_id": "HC-GUJ",
-    "notes": "Joined from Allahabad HC."
+    "notes": "Joined from Allahabad HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-HP",
@@ -699,7 +797,9 @@ window.COURTS_DATA = [
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Principal seat: Shimla."
+    "notes": "Principal seat: Shimla.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-HP-CJ",
@@ -713,7 +813,9 @@ window.COURTS_DATA = [
     "retirement_date": "2027-10-31",
     "parent_high_court": "Punjab & Haryana",
     "parent_id": "HC-HP",
-    "notes": "Joined from Punjab & Haryana HC."
+    "notes": "Joined from Punjab & Haryana HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-JKL",
@@ -727,7 +829,9 @@ window.COURTS_DATA = [
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Serves J&K and Ladakh Union Territories."
+    "notes": "Serves J&K and Ladakh Union Territories.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-JKL-CJ",
@@ -741,7 +845,9 @@ window.COURTS_DATA = [
     "retirement_date": "2026-09-17",
     "parent_high_court": "Punjab & Haryana",
     "parent_id": "HC-JKL",
-    "notes": "Joined from Punjab & Haryana HC."
+    "notes": "Joined from Punjab & Haryana HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-JHK",
@@ -755,7 +861,9 @@ window.COURTS_DATA = [
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Principal seat: Ranchi."
+    "notes": "Principal seat: Ranchi.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-JHK-CJ",
@@ -769,7 +877,9 @@ window.COURTS_DATA = [
     "retirement_date": "2026-12-31",
     "parent_high_court": "Bombay",
     "parent_id": "HC-JHK",
-    "notes": "Joined from Bombay HC. Note: Exact retirement date from DoJ PDF was unclear (entry error); estimated Dec 2026."
+    "notes": "Joined from Bombay HC. Note: Exact retirement date from DoJ PDF was unclear (entry error); estimated Dec 2026.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-KAR",
@@ -783,7 +893,9 @@ window.COURTS_DATA = [
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Principal seat: Bengaluru."
+    "notes": "Principal seat: Bengaluru.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-KAR-CJ",
@@ -797,7 +909,9 @@ window.COURTS_DATA = [
     "retirement_date": "2028-11-01",
     "parent_high_court": "Delhi",
     "parent_id": "HC-KAR",
-    "notes": "Joined from Delhi HC."
+    "notes": "Joined from Delhi HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-KER",
@@ -811,7 +925,9 @@ window.COURTS_DATA = [
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Principal seat: Ernakulam."
+    "notes": "Principal seat: Ernakulam.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-KER-CJ",
@@ -825,7 +941,9 @@ window.COURTS_DATA = [
     "retirement_date": "2027-07-27",
     "parent_high_court": "Calcutta",
     "parent_id": "HC-KER",
-    "notes": "Joined Kerala 10 Jan 2026. Previously 14th CJ of Meghalaya HC."
+    "notes": "Joined Kerala 10 Jan 2026. Previously 14th CJ of Meghalaya HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-MP",
@@ -839,7 +957,9 @@ window.COURTS_DATA = [
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Principal seat: Jabalpur."
+    "notes": "Principal seat: Jabalpur.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-MP-CJ",
@@ -853,7 +973,9 @@ window.COURTS_DATA = [
     "retirement_date": "2026-12-25",
     "parent_high_court": "Delhi",
     "parent_id": "HC-MP",
-    "notes": "Joined from Delhi HC."
+    "notes": "Joined from Delhi HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-MAD",
@@ -867,7 +989,9 @@ window.COURTS_DATA = [
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Serves Tamil Nadu and Puducherry. One of oldest HCs."
+    "notes": "Serves Tamil Nadu and Puducherry. One of oldest HCs.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-MAD-CJ",
@@ -881,7 +1005,9 @@ window.COURTS_DATA = [
     "retirement_date": "2028-08-14",
     "parent_high_court": "Madhya Pradesh",
     "parent_id": "HC-MAD",
-    "notes": "Succeeded M.M. Shrivastava (retired 05 Mar 2026). Nominated by CJI Surya Kant."
+    "notes": "Succeeded M.M. Shrivastava (retired 05 Mar 2026). Nominated by CJI Surya Kant.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-MAN",
@@ -895,7 +1021,9 @@ window.COURTS_DATA = [
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Principal seat: Imphal."
+    "notes": "Principal seat: Imphal.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-MAN-CJ",
@@ -909,7 +1037,9 @@ window.COURTS_DATA = [
     "retirement_date": "2028-07-18",
     "parent_high_court": "Madras",
     "parent_id": "HC-MAN",
-    "notes": "Joined from Madras HC."
+    "notes": "Joined from Madras HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-MEG",
@@ -923,7 +1053,9 @@ window.COURTS_DATA = [
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Principal seat: Shillong."
+    "notes": "Principal seat: Shillong.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-MEG-CJ",
@@ -937,7 +1069,9 @@ window.COURTS_DATA = [
     "retirement_date": "2026-11-27",
     "parent_high_court": "Bombay",
     "parent_id": "HC-MEG",
-    "notes": "Joined from Bombay HC. Retires Nov 2026."
+    "notes": "Joined from Bombay HC. Retires Nov 2026.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-ORI",
@@ -951,7 +1085,9 @@ window.COURTS_DATA = [
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Principal seat: Cuttack."
+    "notes": "Principal seat: Cuttack.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-ORI-CJ",
@@ -965,7 +1101,9 @@ window.COURTS_DATA = [
     "retirement_date": "2026-11-15",
     "parent_high_court": "Calcutta",
     "parent_id": "HC-ORI",
-    "notes": "Joined from Calcutta HC. One of most senior HC judges by initial elevation."
+    "notes": "Joined from Calcutta HC. One of most senior HC judges by initial elevation.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-PAT",
@@ -979,7 +1117,9 @@ window.COURTS_DATA = [
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Serves Bihar."
+    "notes": "Serves Bihar.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-PAT-CJ",
@@ -993,7 +1133,9 @@ window.COURTS_DATA = [
     "retirement_date": "2026-06-04",
     "parent_high_court": "Orissa",
     "parent_id": "HC-PAT",
-    "notes": "Joined from Orissa HC. Retiring 04 Jun 2026 — only ~23 days away."
+    "notes": "Joined from Orissa HC. Retiring 04 Jun 2026 — only ~23 days away.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-PHC",
@@ -1007,7 +1149,9 @@ window.COURTS_DATA = [
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Serves Punjab; Haryana; Chandigarh UT. Seat: Chandigarh."
+    "notes": "Serves Punjab; Haryana; Chandigarh UT. Seat: Chandigarh.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-PHC-CJ",
@@ -1021,7 +1165,9 @@ window.COURTS_DATA = [
     "retirement_date": "2026-12-31",
     "parent_high_court": "Madhya Pradesh",
     "parent_id": "HC-PHC",
-    "notes": "Joined from Madhya Pradesh HC."
+    "notes": "Joined from Madhya Pradesh HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-RAJ",
@@ -1035,7 +1181,9 @@ window.COURTS_DATA = [
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Principal seat: Jodhpur; Bench at Jaipur."
+    "notes": "Principal seat: Jodhpur; Bench at Jaipur.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-RAJ-CJ",
@@ -1049,7 +1197,9 @@ window.COURTS_DATA = [
     "retirement_date": "2026-09-26",
     "parent_high_court": "Rajasthan",
     "parent_id": "HC-RAJ",
-    "notes": "Acting CJ from home court. Retires Sep 2026."
+    "notes": "Acting CJ from home court. Retires Sep 2026.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-SIK",
@@ -1063,7 +1213,9 @@ window.COURTS_DATA = [
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Principal seat: Gangtok. Smallest HC."
+    "notes": "Principal seat: Gangtok. Smallest HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-SIK-CJ",
@@ -1077,7 +1229,9 @@ window.COURTS_DATA = [
     "retirement_date": "2029-05-31",
     "parent_high_court": "Kerala",
     "parent_id": "HC-SIK",
-    "notes": "Joined from Kerala HC."
+    "notes": "Joined from Kerala HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-TEL",
@@ -1091,7 +1245,9 @@ window.COURTS_DATA = [
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Established 1 Jan 2019. Seat: Hyderabad."
+    "notes": "Established 1 Jan 2019. Seat: Hyderabad.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-TEL-CJ",
@@ -1105,7 +1261,9 @@ window.COURTS_DATA = [
     "retirement_date": "2027-07-06",
     "parent_high_court": "Jharkhand",
     "parent_id": "HC-TEL",
-    "notes": "Joined Telangana 19 Jul 2025. Previously 8th CJ of Tripura HC."
+    "notes": "Joined Telangana 19 Jul 2025. Previously 8th CJ of Tripura HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-TRI",
@@ -1119,7 +1277,9 @@ window.COURTS_DATA = [
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Principal seat: Agartala."
+    "notes": "Principal seat: Agartala.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-TRI-CJ",
@@ -1133,7 +1293,9 @@ window.COURTS_DATA = [
     "retirement_date": "2028-08-06",
     "parent_high_court": "Telangana",
     "parent_id": "HC-TRI",
-    "notes": "Joined Tripura 22 Jul 2025. Previously 28th CJ of Himachal Pradesh HC."
+    "notes": "Joined Tripura 22 Jul 2025. Previously 28th CJ of Himachal Pradesh HC.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-UTK",
@@ -1147,7 +1309,9 @@ window.COURTS_DATA = [
     "retirement_date": "",
     "parent_high_court": "",
     "parent_id": "",
-    "notes": "Principal seat: Nainital."
+    "notes": "Principal seat: Nainital.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "HC-UTK-CJ",
@@ -1161,7 +1325,9 @@ window.COURTS_DATA = [
     "retirement_date": "2026-10-08",
     "parent_high_court": "Allahabad",
     "parent_id": "HC-UTK",
-    "notes": "Joined from Allahabad HC. Retires Oct 2026."
+    "notes": "Joined from Allahabad HC. Retires Oct 2026.",
+    "photo_url": "",
+    "photo_source": ""
   }
 ];
 window.MINISTRIES_DATA = [
@@ -1175,7 +1341,12 @@ window.MINISTRIES_DATA = [
     "assumed_office": "",
     "tenure_end": "",
     "parent_id": "",
-    "notes": "Source: lawmin.gov.in (verified May 2026)"
+    "notes": "Source: lawmin.gov.in (verified May 2026)",
+    "photo_url": "",
+    "photo_source": "",
+    "email": "",
+    "phone": "",
+    "fax": ""
   },
   {
     "id": "MOL-MIN",
@@ -1187,7 +1358,13 @@ window.MINISTRIES_DATA = [
     "assumed_office": "2024-06-10",
     "tenure_end": "",
     "parent_id": "MOL",
-    "notes": "Retained in Modi 3.0 government. 4th-term MP from Bikaner. Retired IAS Officer (Rajasthan cadre). LLB; MBA (University of Philippines)."
+    "notes": "Retained in Modi 3.0 government. 4th-term MP from Bikaner. Retired IAS Officer (Rajasthan cadre). LLB; MBA (University of Philippines).",
+    "photo_url": "",
+    "photo_source": "",
+    "email": "mljoffice@gov.in",
+    "phone": "+911123386974",
+    "fax": "+911123384241",
+    "contact_source": "Ministry of Law & Justice Who's Who"
   },
   {
     "id": "MOL-DLA",
@@ -1199,7 +1376,12 @@ window.MINISTRIES_DATA = [
     "assumed_office": "",
     "tenure_end": "",
     "parent_id": "MOL",
-    "notes": "Handles legal matters of Union Government; defends cases in courts."
+    "notes": "Handles legal matters of Union Government; defends cases in courts.",
+    "photo_url": "",
+    "photo_source": "",
+    "email": "",
+    "phone": "",
+    "fax": ""
   },
   {
     "id": "MOL-DLA-SEC",
@@ -1211,7 +1393,13 @@ window.MINISTRIES_DATA = [
     "assumed_office": "",
     "tenure_end": "",
     "parent_id": "MOL-DLA",
-    "notes": "Also holds concurrent charge of Legislative Department Secretary."
+    "notes": "Also holds concurrent charge of Legislative Department Secretary.",
+    "photo_url": "",
+    "photo_source": "",
+    "email": "secylaw-dla@nic.in",
+    "phone": "+911123384205",
+    "fax": "+911123384403",
+    "contact_source": "Ministry of Law & Justice Who's Who"
   },
   {
     "id": "MOL-LD",
@@ -1223,7 +1411,12 @@ window.MINISTRIES_DATA = [
     "assumed_office": "",
     "tenure_end": "",
     "parent_id": "MOL",
-    "notes": "Drafts central legislation; manages India Code; oversees legislative process."
+    "notes": "Drafts central legislation; manages India Code; oversees legislative process.",
+    "photo_url": "",
+    "photo_source": "",
+    "email": "",
+    "phone": "",
+    "fax": ""
   },
   {
     "id": "MOL-LD-SEC",
@@ -1235,7 +1428,13 @@ window.MINISTRIES_DATA = [
     "assumed_office": "",
     "tenure_end": "",
     "parent_id": "MOL-LD",
-    "notes": "Concurrent charge — same officer as DLA Secretary."
+    "notes": "Concurrent charge — same officer as DLA Secretary.",
+    "photo_url": "",
+    "photo_source": "",
+    "email": "secyoffice-ld@gov.in",
+    "phone": "+911123384617",
+    "fax": "+911123382733",
+    "contact_source": "Ministry of Law & Justice Who's Who"
   },
   {
     "id": "MOL-DOJ",
@@ -1247,7 +1446,12 @@ window.MINISTRIES_DATA = [
     "assumed_office": "",
     "tenure_end": "",
     "parent_id": "MOL",
-    "notes": "Handles appointment of judges; infrastructure for courts; e-Courts project; access to justice."
+    "notes": "Handles appointment of judges; infrastructure for courts; e-Courts project; access to justice.",
+    "photo_url": "",
+    "photo_source": "",
+    "email": "",
+    "phone": "",
+    "fax": ""
   },
   {
     "id": "MOL-DOJ-SEC",
@@ -1259,7 +1463,13 @@ window.MINISTRIES_DATA = [
     "assumed_office": "",
     "tenure_end": "",
     "parent_id": "MOL-DOJ",
-    "notes": "Oversees judicial appointments process; eCourts Mission Mode Project."
+    "notes": "Oversees judicial appointments process; eCourts Mission Mode Project.",
+    "photo_url": "",
+    "photo_source": "",
+    "email": "secy-jus@gov.in",
+    "phone": "+911123383674",
+    "fax": "+911123384516",
+    "contact_source": "Department of Justice Who's Who"
   }
 ];
 window.ADMIN_STAFF_DATA = [
@@ -1279,7 +1489,9 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.allahabadhighcourt.in/event/ecourt_01-12-11.html",
     "source_label": "Allahabad HC e-Court recruitment notice",
     "confidence": "contact-only",
-    "notes": "Located HC pages mention the CPC office/sign-off but did not identify the current officer by name."
+    "notes": "Located HC pages mention the CPC office/sign-off but did not identify the current officer by name.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-AP",
@@ -1297,7 +1509,9 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://aphc.gov.in/registry.php",
     "source_label": "APHC registry page",
     "confidence": "named",
-    "notes": "Registry profile lists date of birth, native place, joining date of judicial service, address and CPC email."
+    "notes": "Registry profile lists date of birth, native place, joining date of judicial service, address and CPC email.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-BOM",
@@ -1309,13 +1523,15 @@ window.ADMIN_STAFF_DATA = [
     "role": "Central Project Coordinator",
     "designation": "Central Project Coordinator",
     "email": "cpc-bom@aij.gov.in",
-    "phone": "022-20820565 / 022-20820665",
+    "phone": "+912220820565 / +912220820665",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://www.bombayhighcourt.gov.in/",
     "source_label": "Bombay HC site and tender contact references",
     "confidence": "contact-only",
-    "notes": "Located official tender contact gives CPC office address, phone and email; officer name was not found on a stable HC page."
+    "notes": "Located official tender contact gives CPC office address, phone and email; officer name was not found on a stable HC page.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-CAL",
@@ -1327,13 +1543,15 @@ window.ADMIN_STAFF_DATA = [
     "role": "Central Project Coordinator",
     "designation": "Central Project Coordinator",
     "email": "cpc-cal@aij.gov.in",
-    "phone": "033-2231-8896 / 033-2254-8141",
+    "phone": "+913322318896 / +913322548141",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://www.calcuttahighcourt.gov.in/Notice-Files/ECOURT/2051",
     "source_label": "Calcutta HC CPC contact notice",
     "confidence": "named",
-    "notes": "Same notice also lists Sri Soumik Bhattacharya as System Officer and Sri Abhijit Dey as System Assistant."
+    "notes": "Same notice also lists Sri Soumik Bhattacharya as System Officer and Sri Abhijit Dey as System Assistant.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-DEL",
@@ -1351,7 +1569,9 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://delhihighcourt.nic.in/uploads/RTI/RTIFile_Q9DC9YS52AS.PDF",
     "source_label": "Delhi HC official email directory",
     "confidence": "contact-only",
-    "notes": "Official Delhi HC RTI/email directory lists the CPC email account; a current named officer was not located."
+    "notes": "Official Delhi HC RTI/email directory lists the CPC email account; a current named officer was not located.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-GAU",
@@ -1369,7 +1589,9 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://ghconline.gov.in/index.php/registry/",
     "source_label": "Gauhati HC registry page",
     "confidence": "role-only",
-    "notes": "Registry page lists Sri Subhrangsu Dhar as Registrar (Judicial & IT); a separate current CPC name was not clearly published."
+    "notes": "Registry page lists Sri Subhrangsu Dhar as Registrar (Judicial & IT); a separate current CPC name was not clearly published.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-GUJ",
@@ -1381,13 +1603,15 @@ window.ADMIN_STAFF_DATA = [
     "role": "Registrar (SCMS & ICT) and CPC",
     "designation": "Registrar (SCMS & ICT) & Central Project Coordinator (CPC), eCourts Project",
     "email": "",
-    "phone": "079-27664624 / 079-27663312 Ext. 209 / Ext. 632",
+    "phone": "+917927664624 / ext209 / ext632",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://gujarathighcourt.nic.in/cntdtls",
     "source_label": "Gujarat HC contact details",
     "confidence": "named",
-    "notes": "Official contact page lists CPC designation and phone details."
+    "notes": "Official contact page lists CPC designation and phone details.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-HP",
@@ -1399,13 +1623,15 @@ window.ADMIN_STAFF_DATA = [
     "role": "Central Project Coordinator",
     "designation": "Central Project Coordinator",
     "email": "cpc-hp@aij.gov.in",
-    "phone": "EPABX 455; mobile 98164-96001",
+    "phone": "+919816496001 / ext455",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://highcourt.hp.gov.in/edirectory/directory_Highcourt.html",
     "source_label": "HP HC telephone directory",
     "confidence": "named",
-    "notes": "Directory lists CPC name, EPABX extension and mobile number."
+    "notes": "Directory lists CPC name, EPABX extension and mobile number.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-JKL",
@@ -1423,7 +1649,9 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://jkhighcourt.nic.in/hcregistry.php",
     "source_label": "J&K and Ladakh HC registry page",
     "confidence": "named",
-    "notes": "Registry page describes the CPC role as coordinating e-Courts modules/tasks and liaison with the e-Committee, Supreme Court of India."
+    "notes": "Registry page describes the CPC role as coordinating e-Courts modules/tasks and liaison with the e-Committee, Supreme Court of India.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-JHK",
@@ -1441,7 +1669,9 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://jharkhandhighcourt.nic.in/",
     "source_label": "Jharkhand HC official site",
     "confidence": "contact-only",
-    "notes": "Current officer name was not located on a stable official page during this pass."
+    "notes": "Current officer name was not located on a stable official page during this pass.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-KAR",
@@ -1459,7 +1689,9 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://karnatakajudiciary.kar.nic.in/",
     "source_label": "Karnataka Judiciary official site",
     "confidence": "contact-only",
-    "notes": "Current named CPC was not located on a stable official page during this pass."
+    "notes": "Current named CPC was not located on a stable official page during this pass.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-KER",
@@ -1477,7 +1709,9 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://highcourt.kerala.gov.in/",
     "source_label": "Kerala HC official site",
     "confidence": "contact-only",
-    "notes": "Current named CPC was not located on a stable official page during this pass."
+    "notes": "Current named CPC was not located on a stable official page during this pass.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-MP",
@@ -1489,13 +1723,15 @@ window.ADMIN_STAFF_DATA = [
     "role": "Central Project Coordinator / SPSA (SA)",
     "designation": "Central Project Coordinator / Senior Principal System Analyst (System Administration)",
     "email": "cpc-mp@aij.gov.in",
-    "phone": "0761-2623358",
+    "phone": "+917612623358",
     "date_assumed_role": "2020-02-18",
     "retirement_date": "",
     "source_url": "https://mphc.gov.in/PDF/web_pdf/OR/b-1089-18-02-2020.PDF",
     "source_label": "MPHC CPC nomination order",
     "confidence": "named",
-    "notes": "Order nominates Shri F.H. Qazi as CPC under the e-Court Project till further orders; committee PDFs also list CPC/SPSA (SA)."
+    "notes": "Order nominates Shri F.H. Qazi as CPC under the e-Court Project till further orders; committee PDFs also list CPC/SPSA (SA).",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-MAD",
@@ -1513,7 +1749,9 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.hcmadras.tn.nic.in/",
     "source_label": "Madras HC official site",
     "confidence": "contact-only",
-    "notes": "Current named CPC was not located on a stable official page during this pass."
+    "notes": "Current named CPC was not located on a stable official page during this pass.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-MAN",
@@ -1525,13 +1763,15 @@ window.ADMIN_STAFF_DATA = [
     "role": "Registrar (Judicial) with CPC charge",
     "designation": "Registrar (Judicial), Central Project Coordinator additional charge",
     "email": "cpc-mnp@aij.gov.in",
-    "phone": "0385-2423021 / 0385-2423014",
+    "phone": "+913852423021 / +913852423014",
     "date_assumed_role": "2025-05-15",
     "retirement_date": "",
     "source_url": "https://hcmimphal.nic.in/Notice.html",
     "source_label": "Manipur HC notifications page",
     "confidence": "role-only",
-    "notes": "Notification dated 15.05.2025 states CPC charge was assigned to Registrar (Judicial) until further orders; homepage publishes CPC email."
+    "notes": "Notification dated 15.05.2025 states CPC charge was assigned to Registrar (Judicial) until further orders; homepage publishes CPC email.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-MEG",
@@ -1543,13 +1783,15 @@ window.ADMIN_STAFF_DATA = [
     "role": "Registrar (Judicial Service)-cum-Central Project Coordinator",
     "designation": "Registrar (Judicial Service)-cum-Central Project Coordinator",
     "email": "cpc-mgl@aij.gov.in",
-    "phone": "PBX 635; office 0364-2225030",
+    "phone": "+913642225030 / ext635",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://meghalayahighcourt.nic.in/whos-who",
     "source_label": "Meghalaya HC who's who",
     "confidence": "named",
-    "notes": "Official Who's Who page lists name, role, PBX and office number."
+    "notes": "Official Who's Who page lists name, role, PBX and office number.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-ORI",
@@ -1567,7 +1809,9 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://orissahighcourt.nic.in/details_of_judicial_officer/417/",
     "source_label": "Orissa HC judicial officer profile",
     "confidence": "named",
-    "notes": "Profile lists cadre as Senior Civil Judge, home district Sundargarh, joining judicial service 25.02.2013 and current post from 19.01.2024."
+    "notes": "Profile lists cadre as Senior Civil Judge, home district Sundargarh, joining judicial service 25.02.2013 and current post from 19.01.2024.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-RAJ",
@@ -1585,7 +1829,9 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://hcraj.nic.in/",
     "source_label": "Rajasthan HC official site",
     "confidence": "contact-only",
-    "notes": "Current named CPC was not located on a stable official page during this pass."
+    "notes": "Current named CPC was not located on a stable official page during this pass.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-SIK",
@@ -1597,13 +1843,15 @@ window.ADMIN_STAFF_DATA = [
     "role": "Central Project Coordinator",
     "designation": "Central Project Coordinator, High Court of Sikkim",
     "email": "hc-sik@nic.in",
-    "phone": "03592-202280 / 03592-203529 fax",
+    "phone": "+913592202280 / +913592203529",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://ecommitteesci.gov.in/project/steering-committee-high-court-of-sikkim/",
     "source_label": "eCommittee page for Sikkim steering committee",
     "confidence": "named",
-    "notes": "High Court committee page confirms CPC as member; eCommittee page names Mr. Benoy Sharma and lists phone/email."
+    "notes": "High Court committee page confirms CPC as member; eCommittee page names Mr. Benoy Sharma and lists phone/email.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CPC-TRI",
@@ -1621,7 +1869,9 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://thcdlr.tripura.gov.in/team.php",
     "source_label": "Tripura HC Digital Law Reports team page",
     "confidence": "named",
-    "notes": "THCDLR team page lists Shri Saamyajyoti Debnath as CPC; an older 2024 notification listed Shri Sarbajeet Choudhury."
+    "notes": "THCDLR team page lists Shri Saamyajyoti Debnath as CPC; an older 2024 notification listed Shri Sarbajeet Choudhury.",
+    "photo_url": "https://thc.nic.in/images/S_Debnath.jpg",
+    "photo_source": "High Court of Tripura administrative setup"
   },
   {
     "id": "ADMIN-CPC-UTK",
@@ -1639,7 +1889,9 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://highcourtofuttarakhand.gov.in/",
     "source_label": "Uttarakhand HC official site",
     "confidence": "contact-only",
-    "notes": "Current named CPC was not located on a stable official page during this pass."
+    "notes": "Current named CPC was not located on a stable official page during this pass.",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-TRI-RG",
@@ -1651,13 +1903,15 @@ window.ADMIN_STAFF_DATA = [
     "role": "Registrar General",
     "designation": "Registrar General",
     "email": "rg.trphc@indiancourts.nic.in",
-    "phone": "0381-241-0933",
+    "phone": "+913812410933",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://thc.nic.in/adminssetup.html",
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "https://thc.nic.in/images/RG_A_Debbarma_25032026.jpg",
+    "photo_source": "High Court of Tripura administrative setup"
   },
   {
     "id": "ADMIN-TRI-REG-ADMN",
@@ -1669,13 +1923,15 @@ window.ADMIN_STAFF_DATA = [
     "role": "Registrar (Admn., Planning & Management & Head of Office)",
     "designation": "Registrar (Admn., Planning & Management & Head of Office)",
     "email": "",
-    "phone": "0381-241-2210",
+    "phone": "+913812412210",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://thc.nic.in/adminssetup.html",
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "https://thc.nic.in/images/S_Datta.jpg",
+    "photo_source": "High Court of Tripura administrative setup"
   },
   {
     "id": "ADMIN-TRI-REG-VIG",
@@ -1693,7 +1949,9 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://thc.nic.in/adminssetup.html",
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "https://thc.nic.in/images/RBhattacharjee.jpg",
+    "photo_source": "High Court of Tripura administrative setup"
   },
   {
     "id": "ADMIN-TRI-REG-JUD",
@@ -1705,13 +1963,15 @@ window.ADMIN_STAFF_DATA = [
     "role": "Registrar (Judicial)",
     "designation": "Registrar (Judicial)",
     "email": "",
-    "phone": "0381-241-5131",
+    "phone": "+913812415131",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://thc.nic.in/adminssetup.html",
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "https://thc.nic.in/images/S_Bikas.png",
+    "photo_source": "High Court of Tripura administrative setup"
   },
   {
     "id": "ADMIN-TRI-JR-DDO",
@@ -1723,13 +1983,15 @@ window.ADMIN_STAFF_DATA = [
     "role": "Joint Registrar (D.D.O.)",
     "designation": "Joint Registrar (D.D.O.)",
     "email": "ashimroyagt@gmail.com",
-    "phone": "9436450839 / 7005666837",
+    "phone": "+919436450839 / +917005666837",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://thc.nic.in/adminssetup.html",
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "https://thc.nic.in/images/ashimroy.JPG",
+    "photo_source": "High Court of Tripura administrative setup"
   },
   {
     "id": "ADMIN-TRI-DR-JUD",
@@ -1741,13 +2003,15 @@ window.ADMIN_STAFF_DATA = [
     "role": "Deputy Registrar (Judicial)",
     "designation": "Deputy Registrar (Judicial)",
     "email": "",
-    "phone": "0381-241-5131",
+    "phone": "+913812415131",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://thc.nic.in/adminssetup.html",
     "source_label": "Tripura HC administrative setup",
     "confidence": "vacant",
-    "notes": ""
+    "notes": "",
+    "photo_url": "https://thc.nic.in/images/blank.jpg",
+    "photo_source": "High Court of Tripura administrative setup"
   },
   {
     "id": "ADMIN-TRI-DR-ADMN",
@@ -1759,13 +2023,15 @@ window.ADMIN_STAFF_DATA = [
     "role": "Deputy Registrar (Admn.)",
     "designation": "Deputy Registrar (Admn.)",
     "email": "iamsimadatta@gmail.com",
-    "phone": "9436533168",
+    "phone": "+919436533168",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://thc.nic.in/adminssetup.html",
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "https://thc.nic.in/images/rks.jpg",
+    "photo_source": "High Court of Tripura administrative setup"
   },
   {
     "id": "ADMIN-TRI-DR-PROTOCOL",
@@ -1777,13 +2043,15 @@ window.ADMIN_STAFF_DATA = [
     "role": "Deputy Registrar (Protocol)",
     "designation": "Deputy Registrar (Protocol)",
     "email": "senguptark0381@gmail.com",
-    "phone": "9436135737 / 9366224748",
+    "phone": "+919436135737 / +919366224748",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://thc.nic.in/adminssetup.html",
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "https://thc.nic.in/images/rks.jpg",
+    "photo_source": "High Court of Tripura administrative setup"
   },
   {
     "id": "ADMIN-TRI-DR-ACCOUNTS",
@@ -1795,13 +2063,15 @@ window.ADMIN_STAFF_DATA = [
     "role": "Deputy Registrar (Accounts)",
     "designation": "Deputy Registrar (Accounts)",
     "email": "pranabamrita21@gmail.com",
-    "phone": "9856588336 / 9436333373",
+    "phone": "+919856588336 / +919436333373",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://thc.nic.in/adminssetup.html",
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "https://thc.nic.in/images/PDatta.jpeg",
+    "photo_source": "High Court of Tripura administrative setup"
   },
   {
     "id": "ADMIN-TRI-PS-CJ",
@@ -1813,13 +2083,15 @@ window.ADMIN_STAFF_DATA = [
     "role": "Principal Secretary to Hon'ble the Chief Justice",
     "designation": "Principal Secretary to Hon'ble the Chief Justice",
     "email": "siddhartha.lodh1110@gmail.com",
-    "phone": "9436454715",
+    "phone": "+919436454715",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://thc.nic.in/adminssetup.html",
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "https://thc.nic.in/images/SLodh.jpg",
+    "photo_source": "High Court of Tripura administrative setup"
   },
   {
     "id": "ADMIN-TRI-LIB",
@@ -1831,13 +2103,15 @@ window.ADMIN_STAFF_DATA = [
     "role": "Chief Librarian",
     "designation": "Chief Librarian",
     "email": "majumder70@gmail.com",
-    "phone": "9233157424",
+    "phone": "+919233157424",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://thc.nic.in/adminssetup.html",
     "source_label": "Tripura HC administrative setup",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "https://thc.nic.in/images/pranam.jpg",
+    "photo_source": "High Court of Tripura administrative setup"
   },
   {
     "id": "ADMIN-CHG-RG",
@@ -1849,13 +2123,15 @@ window.ADMIN_STAFF_DATA = [
     "role": "Registrar General",
     "designation": "Registrar General",
     "email": "",
-    "phone": "07752-241021",
+    "phone": "+917752241021",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://highcourt.cg.gov.in/about/contact_us.php",
     "source_label": "Chhattisgarh HC contact page",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CHG-COMP",
@@ -1867,13 +2143,15 @@ window.ADMIN_STAFF_DATA = [
     "role": "Registrar (Computerization)-cum-CPC",
     "designation": "Registrar (Computerization)-cum-CPC",
     "email": "",
-    "phone": "07752-241027",
+    "phone": "+917752241027",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://highcourt.cg.gov.in/about/contact_us.php",
     "source_label": "Chhattisgarh HC contact page",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-GAU-RG",
@@ -1885,13 +2163,15 @@ window.ADMIN_STAFF_DATA = [
     "role": "Registrar General",
     "designation": "Registrar General",
     "email": "rg1.ghc@gmail.com",
-    "phone": "2631227 / 76370-26605",
+    "phone": "+913612631227 / +917637026605",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://ghconline.gov.in/index.php/registry/",
     "source_label": "Gauhati HC registry",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-GAU-IT",
@@ -1903,13 +2183,15 @@ window.ADMIN_STAFF_DATA = [
     "role": "Registrar (Judicial & IT)",
     "designation": "Registrar (Judicial & IT)",
     "email": "regj.ghc@gmail.com",
-    "phone": "2732955 / 76370-26558",
+    "phone": "+913612732955 / +917637026558",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://ghconline.gov.in/index.php/registry/",
     "source_label": "Gauhati HC registry",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CAL-RG",
@@ -1921,13 +2203,15 @@ window.ADMIN_STAFF_DATA = [
     "role": "Registrar General",
     "designation": "Registrar General",
     "email": "",
-    "phone": "+91-33-2213 5472",
+    "phone": "+913322135472",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://www.calcuttahighcourt.gov.in/registry",
     "source_label": "Calcutta HC registry",
     "confidence": "role-only",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-CAL-IT",
@@ -1939,13 +2223,15 @@ window.ADMIN_STAFF_DATA = [
     "role": "Registrar (Information Technology)",
     "designation": "Registrar (Information Technology)",
     "email": "",
-    "phone": "+91-33-2248 3928",
+    "phone": "+913322483928",
     "date_assumed_role": "",
     "retirement_date": "",
     "source_url": "https://www.calcuttahighcourt.gov.in/registry",
     "source_label": "Calcutta HC registry",
     "confidence": "role-only",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-MP-RG",
@@ -1963,7 +2249,9 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://mphc.gov.in/registry",
     "source_label": "MPHC registry",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-MP-VIG",
@@ -1981,7 +2269,9 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://mphc.gov.in/registry",
     "source_label": "MPHC registry",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-KER-RG",
@@ -1999,7 +2289,9 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://highcourt.kerala.gov.in/officers.php",
     "source_label": "Kerala HC officers",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-KER-COMP",
@@ -2017,7 +2309,9 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://highcourt.kerala.gov.in/officers.php",
     "source_label": "Kerala HC officers",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-ORI-RG",
@@ -2035,7 +2329,9 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.orissahighcourt.nic.in/highcourt_registry/",
     "source_label": "Orissa HC registry",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-ORI-ADMN",
@@ -2053,7 +2349,9 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.orissahighcourt.nic.in/highcourt_registry/",
     "source_label": "Orissa HC registry",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-PAT-RG",
@@ -2071,7 +2369,9 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://patnahighcourt.gov.in/officers_of_registry",
     "source_label": "Patna HC officers of registry",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-PAT-CPC",
@@ -2089,7 +2389,9 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://patnahighcourt.gov.in/officers_of_registry",
     "source_label": "Patna HC officers of registry",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-PHC-RG",
@@ -2107,7 +2409,9 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://highcourtchd.gov.in/?mod=registrars",
     "source_label": "Punjab & Haryana HC registrars",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-PHC-CPC",
@@ -2125,7 +2429,9 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://highcourtchd.gov.in/?mod=registrars",
     "source_label": "Punjab & Haryana HC registrars",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-RAJ-RG",
@@ -2143,7 +2449,9 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://hcraj.nic.in/hcraj/directory/index.php",
     "source_label": "Rajasthan HC judicial officer directory",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-RAJ-ADMN",
@@ -2161,7 +2469,9 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://hcraj.nic.in/hcraj/directory/index.php",
     "source_label": "Rajasthan HC judicial officer directory",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-TEL-RG",
@@ -2179,7 +2489,9 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://tshc.gov.in/processMenuTypes?id=9",
     "source_label": "Telangana HC registrars",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   },
   {
     "id": "ADMIN-TEL-CPC",
@@ -2197,7 +2509,9 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://tshc.gov.in/processMenuTypes?id=9",
     "source_label": "Telangana HC registrars",
     "confidence": "named",
-    "notes": ""
+    "notes": "",
+    "photo_url": "",
+    "photo_source": ""
   }
 ];
 window.NOTIFICATIONS_DATA = [

@@ -204,8 +204,13 @@ function renderCard(person, isHead = false) {
   if (isPlaceholder) {
     return `
       <div class="person-card placeholder-card">
-        <div class="card-role">${roleLabel}</div>
-        <div class="person-name">${person.name}</div>
+        <div class="card-identity">
+          ${renderAvatar(person)}
+          <div>
+            <div class="card-role">${roleLabel}</div>
+            <div class="person-name">${person.name}</div>
+          </div>
+        </div>
         ${person.notes ? `<div class="card-notes">${person.notes}</div>` : ''}
       </div>`;
   }
@@ -218,10 +223,13 @@ function renderCard(person, isHead = false) {
   return `
     <div class="person-card ${isHead ? 'head-card' : ''} border-${tenure.status}">
       <div class="card-top">
-        <div class="card-left">
-          <span class="card-role-badge ${person.type || ''}">${roleLabel}</span>
-          <div class="person-name">${person.name}</div>
-          ${person.parent_high_court ? `<div class="parent-court">From: ${person.parent_high_court} HC</div>` : ''}
+        <div class="card-identity">
+          ${renderAvatar(person)}
+          <div class="card-left">
+            <span class="card-role-badge ${person.type || ''}">${roleLabel}</span>
+            <div class="person-name">${person.name}</div>
+            ${person.parent_high_court ? `<div class="parent-court">From: ${person.parent_high_court} HC</div>` : ''}
+          </div>
         </div>
         ${retireStr ? `<div class="tenure-chip ${tenure.status}">${tenure.label}</div>` : ''}
       </div>
@@ -230,9 +238,54 @@ function renderCard(person, isHead = false) {
         ${assumedStr  ? `<div class="meta-row"><span class="meta-icon">📅</span><span>In role since ${formatDate(assumedStr)}</span></div>` : ''}
         ${initialStr  ? `<div class="meta-row"><span class="meta-icon">🔰</span><span>Initially elevated ${formatDate(initialStr)}</span></div>` : ''}
         ${retireStr   ? `<div class="meta-row"><span class="meta-icon">🔚</span><span>Retires ${formatDate(retireStr)}</span></div>` : ''}
+        ${renderContactRows(person)}
+        ${person.photo_source ? `<div class="meta-row"><span class="meta-icon">▧</span><span>Photo: ${escHtml(person.photo_source)}</span></div>` : ''}
         ${person.notes ? `<div class="meta-row notes-row"><span class="meta-icon">ℹ</span><span>${person.notes}</span></div>` : ''}
       </div>
     </div>`;
+}
+
+function renderAvatar(person) {
+  const name = person.name || '';
+  const initials = initialsFor(name);
+  if (person.photo_url) {
+    return `<img class="person-photo" src="${escHtml(person.photo_url)}" alt="${escHtml(name)}" loading="lazy" onerror="this.replaceWith(renderInitialsAvatar('${escAttr(initials)}'))">`;
+  }
+  return `<div class="person-photo avatar-fallback" aria-hidden="true">${escHtml(initials)}</div>`;
+}
+
+window.renderInitialsAvatar = function(initials) {
+  const el = document.createElement('div');
+  el.className = 'person-photo avatar-fallback';
+  el.textContent = initials || '?';
+  return el;
+};
+
+function initialsFor(name) {
+  const clean = (name || '')
+    .replace(/^Hon'?ble\s+/i, '')
+    .replace(/^Justice\s+/i, '')
+    .replace(/^(Shri|Sri|Smt\.?|Ms\.?|Mr\.?|Dr\.?|Sh\.)\s+/i, '')
+    .replace(/\[[^\]]+\]/g, '')
+    .trim();
+  if (!clean || /^not published|^vacant/i.test(clean)) return '?';
+  return clean.split(/\s+/).slice(0, 2).map(w => w[0]).join('').toUpperCase();
+}
+
+function renderContactRows(person) {
+  const rows = [];
+  if (person.email) {
+    rows.push(`<div class="meta-row"><span class="meta-icon">@</span><span><a class="inline-link" href="mailto:${escHtml(person.email)}">${escHtml(person.email)}</a></span></div>`);
+  }
+  if (person.phone) {
+    const first = (person.phone.split('/')[0] || '').trim();
+    const tel = first.startsWith('+') ? first : '';
+    rows.push(`<div class="meta-row"><span class="meta-icon">☎</span><span>${tel ? `<a class="inline-link" href="tel:${escHtml(tel)}">${escHtml(person.phone)}</a>` : escHtml(person.phone)}</span></div>`);
+  }
+  if (person.fax) {
+    rows.push(`<div class="meta-row"><span class="meta-icon">Fax</span><span>${escHtml(person.fax)}</span></div>`);
+  }
+  return rows.join('');
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -454,19 +507,22 @@ function renderAdminCard(cpc) {
   return `
     <div class="person-card cpc-card border-${cpc.confidence === 'named' ? 'good' : 'warning'}">
       <div class="card-top">
-        <div class="card-left">
-          <span class="card-role-badge cpc">${escHtml(cpc.role_group || cpc.role || 'Admin')}</span>
-          <div class="person-name">${escHtml(cpc.name)}</div>
-          <div class="parent-court">${escHtml(cpc.court)} · ${escHtml(cpc.state)}</div>
+        <div class="card-identity">
+          ${renderAvatar(cpc)}
+          <div class="card-left">
+            <span class="card-role-badge cpc">${escHtml(cpc.role_group || cpc.role || 'Admin')}</span>
+            <div class="person-name">${escHtml(cpc.name)}</div>
+            <div class="parent-court">${escHtml(cpc.court)} · ${escHtml(cpc.state)}</div>
+          </div>
         </div>
         <div class="tenure-chip ${cpc.confidence === 'named' ? 'good' : 'warning'}">${escHtml(confidenceLabel)}</div>
       </div>
       <div class="card-meta">
         ${cpc.designation ? `<div class="meta-row"><span class="meta-icon">▣</span><span>${escHtml(cpc.designation)}</span></div>` : ''}
-        ${cpc.email ? `<div class="meta-row"><span class="meta-icon">@</span><span>${escHtml(cpc.email)}</span></div>` : ''}
-        ${cpc.phone ? `<div class="meta-row"><span class="meta-icon">☎</span><span>${escHtml(cpc.phone)}</span></div>` : ''}
+        ${renderContactRows(cpc)}
         ${cpc.date_assumed_role ? `<div class="meta-row"><span class="meta-icon">📅</span><span>In role since ${formatDate(cpc.date_assumed_role)}</span></div>` : ''}
         ${cpc.retirement_date ? `<div class="meta-row"><span class="meta-icon">🔚</span><span>Retires ${formatDate(cpc.retirement_date)}</span></div>` : ''}
+        ${cpc.photo_source ? `<div class="meta-row"><span class="meta-icon">▧</span><span>Photo: ${escHtml(cpc.photo_source)}</span></div>` : ''}
         ${cpc.source_url ? `<div class="meta-row"><span class="meta-icon">↗</span><span><a class="inline-link" href="${escHtml(cpc.source_url)}" target="_blank" rel="noopener">${escHtml(cpc.source_label || 'Official source')}</a></span></div>` : ''}
         ${cpc.notes ? `<div class="meta-row notes-row"><span class="meta-icon">ℹ</span><span>${escHtml(cpc.notes)}</span></div>` : ''}
       </div>

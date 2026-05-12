@@ -9,7 +9,12 @@
     "assumed_office": "",
     "tenure_end": "",
     "parent_id": "",
-    "notes": "Source: lawmin.gov.in (verified May 2026)"
+    "notes": "Source: lawmin.gov.in (verified May 2026)",
+    "photo_url": "",
+    "photo_source": "",
+    "email": "",
+    "phone": "",
+    "fax": ""
   },
   {
     "id": "MOL-MIN",
@@ -21,7 +26,13 @@
     "assumed_office": "2024-06-10",
     "tenure_end": "",
     "parent_id": "MOL",
-    "notes": "Retained in Modi 3.0 government. 4th-term MP from Bikaner. Retired IAS Officer (Rajasthan cadre). LLB; MBA (University of Philippines)."
+    "notes": "Retained in Modi 3.0 government. 4th-term MP from Bikaner. Retired IAS Officer (Rajasthan cadre). LLB; MBA (University of Philippines).",
+    "photo_url": "",
+    "photo_source": "",
+    "email": "mljoffice@gov.in",
+    "phone": "+911123386974",
+    "fax": "+911123384241",
+    "contact_source": "Ministry of Law & Justice Who's Who"
   },
   {
     "id": "MOL-DLA",
@@ -33,7 +44,12 @@
     "assumed_office": "",
     "tenure_end": "",
     "parent_id": "MOL",
-    "notes": "Handles legal matters of Union Government; defends cases in courts."
+    "notes": "Handles legal matters of Union Government; defends cases in courts.",
+    "photo_url": "",
+    "photo_source": "",
+    "email": "",
+    "phone": "",
+    "fax": ""
   },
   {
     "id": "MOL-DLA-SEC",
@@ -45,7 +61,13 @@
     "assumed_office": "",
     "tenure_end": "",
     "parent_id": "MOL-DLA",
-    "notes": "Also holds concurrent charge of Legislative Department Secretary."
+    "notes": "Also holds concurrent charge of Legislative Department Secretary.",
+    "photo_url": "",
+    "photo_source": "",
+    "email": "secylaw-dla@nic.in",
+    "phone": "+911123384205",
+    "fax": "+911123384403",
+    "contact_source": "Ministry of Law & Justice Who's Who"
   },
   {
     "id": "MOL-LD",
@@ -57,7 +79,12 @@
     "assumed_office": "",
     "tenure_end": "",
     "parent_id": "MOL",
-    "notes": "Drafts central legislation; manages India Code; oversees legislative process."
+    "notes": "Drafts central legislation; manages India Code; oversees legislative process.",
+    "photo_url": "",
+    "photo_source": "",
+    "email": "",
+    "phone": "",
+    "fax": ""
   },
   {
     "id": "MOL-LD-SEC",
@@ -69,7 +96,13 @@
     "assumed_office": "",
     "tenure_end": "",
     "parent_id": "MOL-LD",
-    "notes": "Concurrent charge — same officer as DLA Secretary."
+    "notes": "Concurrent charge — same officer as DLA Secretary.",
+    "photo_url": "",
+    "photo_source": "",
+    "email": "secyoffice-ld@gov.in",
+    "phone": "+911123384617",
+    "fax": "+911123382733",
+    "contact_source": "Ministry of Law & Justice Who's Who"
   },
   {
     "id": "MOL-DOJ",
@@ -81,7 +114,12 @@
     "assumed_office": "",
     "tenure_end": "",
     "parent_id": "MOL",
-    "notes": "Handles appointment of judges; infrastructure for courts; e-Courts project; access to justice."
+    "notes": "Handles appointment of judges; infrastructure for courts; e-Courts project; access to justice.",
+    "photo_url": "",
+    "photo_source": "",
+    "email": "",
+    "phone": "",
+    "fax": ""
   },
   {
     "id": "MOL-DOJ-SEC",
@@ -93,6 +131,12 @@
     "assumed_office": "",
     "tenure_end": "",
     "parent_id": "MOL-DOJ",
-    "notes": "Oversees judicial appointments process; eCourts Mission Mode Project."
+    "notes": "Oversees judicial appointments process; eCourts Mission Mode Project.",
+    "photo_url": "",
+    "photo_source": "",
+    "email": "secy-jus@gov.in",
+    "phone": "+911123383674",
+    "fax": "+911123384516",
+    "contact_source": "Department of Justice Who's Who"
   }
 ]
