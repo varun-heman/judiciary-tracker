@@ -1,7 +1,7 @@
 /**
  * India Judiciary & Ministry Tracker
  * Data is read from JSON files — all visuals are in CSS/HTML.
- * To update data, edit: data/courts.json and data/ministries.json
+ * To update data, edit JSON files in data/.
  */
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -10,6 +10,7 @@
 const state = {
   courts: [],
   ministries: [],
+  cpcs: [],
   selectedId: 'SC',
   searchQuery: '',
 };
@@ -54,18 +55,21 @@ function tenureProgress(assumedStr, retireStr) {
 async function loadData() {
   // 1. Try fetch (works on GitHub Pages, Netlify, or any HTTP server)
   try {
-    const [courts, ministries] = await Promise.all([
+    const [courts, ministries, cpcs] = await Promise.all([
       fetch('data/courts.json').then(r => { if (!r.ok) throw new Error(); return r.json(); }),
       fetch('data/ministries.json').then(r => { if (!r.ok) throw new Error(); return r.json(); }),
+      fetch('data/cpcs.json').then(r => { if (!r.ok) throw new Error(); return r.json(); }),
     ]);
     state.courts = courts;
     state.ministries = ministries;
+    state.cpcs = cpcs;
     return true;
   } catch (e) {
     // 2. Fall back to embedded data from data/data.js (works with file:// open)
     if (Array.isArray(window.COURTS_DATA) && Array.isArray(window.MINISTRIES_DATA)) {
       state.courts = window.COURTS_DATA;
       state.ministries = window.MINISTRIES_DATA;
+      state.cpcs = Array.isArray(window.CPCS_DATA) ? window.CPCS_DATA : [];
       // Show a subtle banner so user knows they're on embedded data
       const bar = document.querySelector('.data-notice');
       if (bar) bar.innerHTML += ' &nbsp;|&nbsp; <span style="color:var(--warning)">Using embedded data because this page was opened directly</span>';
@@ -141,6 +145,21 @@ function renderNav() {
       </a>`;
   });
   html += `</div>`;
+
+  // ── Court Staff ──
+  html += `<div class="nav-section">
+    <div class="nav-section-title">Court Staff</div>
+    <a class="nav-item ${state.selectedId === 'CPCS' ? 'active' : ''}"
+       href="#" onclick="selectView('CPCS'); return false;">
+      <span class="nav-icon">▣</span>
+      <span class="nav-label">CPCs & Computer Teams</span>
+      <span class="nav-badge">${state.cpcs.length}</span>
+    </a>
+    <a class="nav-item" href="notifications.html">
+      <span class="nav-icon">↗</span>
+      <span class="nav-label">Notifications Tracker</span>
+    </a>
+  </div>`;
 
   // ── Ministries ──
   if (ministries.length > 0) {
@@ -234,7 +253,7 @@ function statsFor(people) {
 // ─────────────────────────────────────────────────────────────────────────────
 function renderContent() {
   const container = document.getElementById('main-content');
-  const all = [...state.courts, ...state.ministries];
+  const all = [...state.courts, ...state.ministries, ...state.cpcs];
 
   // ── Search mode ──
   if (state.searchQuery.length > 1) {
@@ -254,6 +273,11 @@ function renderContent() {
       ${results.length
         ? `<div class="cards-grid">${results.map(r => renderCard(r)).join('')}</div>`
         : `<div class="empty-state"><p>No results found for "${escHtml(state.searchQuery)}"</p></div>`}`;
+    return;
+  }
+
+  if (state.selectedId === 'CPCS') {
+    container.innerHTML = renderCpcView();
     return;
   }
 
@@ -352,6 +376,54 @@ function renderMinistryView(root, all, children) {
   });
 
   return html;
+}
+
+function renderCpcView() {
+  const cpcs = state.cpcs.slice().sort((a, b) => a.court.localeCompare(b.court));
+  const named = cpcs.filter(c => c.confidence === 'named').length;
+  const pending = cpcs.length - named;
+
+  return `
+    <div class="view-header">
+      <h2>CPCs & Computer Teams</h2>
+      <p class="view-subtitle">Court staff are tracked separately from judges. These records focus on e-Courts, ICT, registry technology and CPC contact points.</p>
+    </div>
+    <div class="stats-bar">
+      <span class="stat-chip">${cpcs.length} courts tracked</span>
+      <span class="stat-chip">${named} named officers</span>
+      ${pending ? `<span class="stat-chip warning">${pending} contact/role-only records</span>` : ''}
+    </div>
+    <div class="cards-grid">${cpcs.map(renderCpcCard).join('')}</div>
+  `;
+}
+
+function renderCpcCard(cpc) {
+  const confidenceLabel = {
+    named: 'Named',
+    'contact-only': 'Contact only',
+    'role-only': 'Role only'
+  }[cpc.confidence] || 'Unchecked';
+
+  return `
+    <div class="person-card cpc-card border-${cpc.confidence === 'named' ? 'good' : 'warning'}">
+      <div class="card-top">
+        <div class="card-left">
+          <span class="card-role-badge cpc">${escHtml(cpc.role || 'CPC')}</span>
+          <div class="person-name">${escHtml(cpc.name)}</div>
+          <div class="parent-court">${escHtml(cpc.court)} · ${escHtml(cpc.state)}</div>
+        </div>
+        <div class="tenure-chip ${cpc.confidence === 'named' ? 'good' : 'warning'}">${escHtml(confidenceLabel)}</div>
+      </div>
+      <div class="card-meta">
+        ${cpc.designation ? `<div class="meta-row"><span class="meta-icon">▣</span><span>${escHtml(cpc.designation)}</span></div>` : ''}
+        ${cpc.email ? `<div class="meta-row"><span class="meta-icon">@</span><span>${escHtml(cpc.email)}</span></div>` : ''}
+        ${cpc.phone ? `<div class="meta-row"><span class="meta-icon">☎</span><span>${escHtml(cpc.phone)}</span></div>` : ''}
+        ${cpc.date_assumed_role ? `<div class="meta-row"><span class="meta-icon">📅</span><span>In role since ${formatDate(cpc.date_assumed_role)}</span></div>` : ''}
+        ${cpc.retirement_date ? `<div class="meta-row"><span class="meta-icon">🔚</span><span>Retires ${formatDate(cpc.retirement_date)}</span></div>` : ''}
+        ${cpc.source_url ? `<div class="meta-row"><span class="meta-icon">↗</span><span><a class="inline-link" href="${escHtml(cpc.source_url)}" target="_blank" rel="noopener">${escHtml(cpc.source_label || 'Official source')}</a></span></div>` : ''}
+        ${cpc.notes ? `<div class="meta-row notes-row"><span class="meta-icon">ℹ</span><span>${escHtml(cpc.notes)}</span></div>` : ''}
+      </div>
+    </div>`;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
