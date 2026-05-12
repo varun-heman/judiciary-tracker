@@ -12,9 +12,19 @@ const state = {
   ministries: [],
   adminStaff: [],
   adminRoleFilter: 'ALL',
+  judgeTenureFilter: 'ALL',
   selectedId: 'SC',
   searchQuery: '',
 };
+
+const JUDGE_TENURE_FILTERS = [
+  { id: 'ALL', label: 'All judges', days: null },
+  { id: '1M', label: 'Within 1 month', days: 31 },
+  { id: '2M', label: 'Within 2 months', days: 62 },
+  { id: '3M', label: 'Within 3 months', days: 93 },
+  { id: '6M', label: 'Within 6 months', days: 186 },
+  { id: '12M', label: 'Within 12 months', days: 365 },
+];
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Date & Tenure Helpers
@@ -302,6 +312,33 @@ function statsFor(people) {
   return chips.join('');
 }
 
+function isJudgeRecord(row) {
+  return row && (row.type === 'supreme_court' || row.type === 'high_court');
+}
+
+function matchesJudgeTenureFilter(person) {
+  const activeFilter = JUDGE_TENURE_FILTERS.find(f => f.id === state.judgeTenureFilter) || JUDGE_TENURE_FILTERS[0];
+  if (activeFilter.days === null || !isJudgeRecord(person)) return true;
+  const tenure = getTenure(person.retirement_date);
+  return tenure.daysLeft !== null && tenure.daysLeft >= 0 && tenure.daysLeft <= activeFilter.days;
+}
+
+function renderJudgeTenureFilterBar(judges) {
+  if (!judges.length) return '';
+  return `
+    <div class="judge-filter-bar" aria-label="Filter judges by time left">
+      ${JUDGE_TENURE_FILTERS.map(filter => {
+        const count = filter.days === null
+          ? judges.length
+          : judges.filter(judge => {
+              const tenure = getTenure(judge.retirement_date);
+              return tenure.daysLeft !== null && tenure.daysLeft >= 0 && tenure.daysLeft <= filter.days;
+            }).length;
+        return `<button class="role-filter ${state.judgeTenureFilter === filter.id ? 'active' : ''}" onclick="setJudgeTenureFilter('${filter.id}')">${escHtml(filter.label)} <span class="filter-count">${count}</span></button>`;
+      }).join('')}
+    </div>`;
+}
+
 // ─────────────────────────────────────────────────────────────────────────────
 // Main Content Renderer
 // ─────────────────────────────────────────────────────────────────────────────
@@ -312,18 +349,21 @@ function renderContent() {
   // ── Search mode ──
   if (state.searchQuery.length > 1) {
     const q = state.searchQuery.toLowerCase();
-    const results = all.filter(d =>
+    const rawResults = all.filter(d =>
       d.type !== 'institution' && d.type !== 'placeholder' &&
       (d.name.toLowerCase().includes(q) ||
        (d.role || '').toLowerCase().includes(q) ||
        (d.court || d.ministry || '').toLowerCase().includes(q) ||
        (d.state || '').toLowerCase().includes(q))
     );
+    const resultJudges = rawResults.filter(isJudgeRecord);
+    const results = rawResults.filter(d => !isJudgeRecord(d) || matchesJudgeTenureFilter(d));
     container.innerHTML = `
       <div class="view-header">
         <h2>Search: <em>"${escHtml(state.searchQuery)}"</em></h2>
         <div class="view-meta">${results.length} result${results.length !== 1 ? 's' : ''}</div>
       </div>
+      ${renderJudgeTenureFilterBar(resultJudges)}
       ${results.length
         ? `<div class="cards-grid">${results.map(r => r.role_group ? renderAdminCard(r) : renderCard(r)).join('')}</div>`
         : `<div class="empty-state"><p>No results found for "${escHtml(state.searchQuery)}"</p></div>`}`;
@@ -361,7 +401,8 @@ function renderContent() {
 }
 
 function renderCourtView(root, all, children) {
-  const people = children.filter(c => c.type !== 'institution');
+  const allJudges = children.filter(isJudgeRecord);
+  const people = allJudges.filter(matchesJudgeTenureFilter);
   const adminStaff = state.adminStaff
     .filter(p => p.court_id === root.id)
     .sort((a, b) => adminSort(a, b));
@@ -384,6 +425,8 @@ function renderCourtView(root, all, children) {
 
   let html = '';
 
+  html += renderJudgeTenureFilterBar(allJudges);
+
   if (people.length > 0) {
     html += `<div class="stats-bar">${statsFor(people)}</div>`;
   }
@@ -405,12 +448,17 @@ function renderCourtView(root, all, children) {
   }
 
   if (people.length === 0) {
-    html += `
-      <div class="empty-state">
-        <p>No individual judges loaded for this court yet.</p>
-        <p>Add entries to <code>data/courts.json</code> with <code>parent_id = ${escHtml(root.id)}</code></p>
-        <p>The Chief Justices of all 25 High Courts are already included. Individual puisne judges can be added in bulk.</p>
-      </div>`;
+    const activeFilter = JUDGE_TENURE_FILTERS.find(f => f.id === state.judgeTenureFilter);
+    if (activeFilter && activeFilter.id !== 'ALL') {
+      html += `<div class="empty-state"><p>No judges match "${escHtml(activeFilter.label)}" for this court.</p></div>`;
+    } else {
+      html += `
+        <div class="empty-state">
+          <p>No individual judges loaded for this court yet.</p>
+          <p>Add entries to <code>data/courts.json</code> with <code>parent_id = ${escHtml(root.id)}</code></p>
+          <p>The Chief Justices of all 25 High Courts are already included. Individual puisne judges can be added in bulk.</p>
+        </div>`;
+    }
   }
 
   return html;
@@ -444,8 +492,6 @@ function renderMinistryView(root, all, children) {
 function renderAdminStaffView() {
   const staff = filteredAdminStaff();
   const roles = uniqueAdminRoles(state.adminStaff);
-  const named = staff.filter(c => c.confidence === 'named').length;
-  const pending = staff.filter(c => c.confidence !== 'named').length;
 
   return `
     <div class="view-header">
@@ -454,8 +500,6 @@ function renderAdminStaffView() {
     </div>
     <div class="stats-bar">
       <span class="stat-chip">${staff.length} records shown</span>
-      <span class="stat-chip">${named} named officers</span>
-      ${pending ? `<span class="stat-chip warning">${pending} contact/role-only records</span>` : ''}
     </div>
     <div class="role-filter-bar">
       <button class="role-filter ${state.adminRoleFilter === 'ALL' ? 'active' : ''}" onclick="setAdminRoleFilter('ALL')">All roles</button>
@@ -497,15 +541,8 @@ function renderAdminRoleButtons(rows, courtId) {
 }
 
 function renderAdminCard(cpc) {
-  const confidenceLabel = {
-    named: 'Named',
-    'contact-only': 'Contact only',
-    'role-only': 'Role only',
-    vacant: 'Vacant'
-  }[cpc.confidence] || 'Unchecked';
-
   return `
-    <div class="person-card cpc-card border-${cpc.confidence === 'named' ? 'good' : 'warning'}">
+    <div class="person-card cpc-card border-unknown">
       <div class="card-top">
         <div class="card-identity">
           ${renderAvatar(cpc)}
@@ -515,7 +552,7 @@ function renderAdminCard(cpc) {
             <div class="parent-court">${escHtml(cpc.court)} · ${escHtml(cpc.state)}</div>
           </div>
         </div>
-        <div class="tenure-chip ${cpc.confidence === 'named' ? 'good' : 'warning'}">${escHtml(confidenceLabel)}</div>
+        <div class="court-chip">${escHtml(cpc.court)}</div>
       </div>
       <div class="card-meta">
         ${cpc.designation ? `<div class="meta-row"><span class="meta-icon">▣</span><span>${escHtml(cpc.designation)}</span></div>` : ''}
@@ -533,6 +570,11 @@ window.setAdminRoleFilter = function(role) {
   state.adminRoleFilter = role;
   if (state.selectedId !== 'ADMIN') state.selectedId = 'ADMIN';
   renderNav();
+  renderContent();
+};
+
+window.setJudgeTenureFilter = function(filterId) {
+  state.judgeTenureFilter = filterId;
   renderContent();
 };
 
