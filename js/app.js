@@ -12,15 +12,8 @@ const state = {
   adminStaff: [],
   adminRoleFilter: 'ALL',
   judgeTenureRange: 12,
-  judgeTenureUnit: 'months',
   selectedId: 'SC',
   searchQuery: '',
-};
-
-const JUDGE_TENURE_UNIT_LIMITS = {
-  days: { max: 3650, step: 1 },
-  months: { max: 120, step: 1 },
-  years: { max: 10, step: 1 }
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -315,15 +308,12 @@ function isJudgeRecord(row) {
 
 function judgeTenureRangeDays() {
   const value = Math.max(1, Number(state.judgeTenureRange) || 1);
-  if (state.judgeTenureUnit === 'days') return value;
-  if (state.judgeTenureUnit === 'years') return Math.round(value * 365);
   return Math.round(value * 30.44);
 }
 
 function judgeTenureRangeLabel() {
   const value = Math.max(1, Number(state.judgeTenureRange) || 1);
-  const unit = value === 1 ? state.judgeTenureUnit.replace(/s$/, '') : state.judgeTenureUnit;
-  return `within ${value} ${unit}`;
+  return `${value} month${value === 1 ? '' : 's'}`;
 }
 
 function matchesJudgeTenureFilter(person) {
@@ -334,25 +324,16 @@ function matchesJudgeTenureFilter(person) {
 
 function renderJudgeTenureFilterBar(judges) {
   if (!judges.length) return '';
-  const unitConfig = JUDGE_TENURE_UNIT_LIMITS[state.judgeTenureUnit] || JUDGE_TENURE_UNIT_LIMITS.months;
-  const value = Math.min(unitConfig.max, Math.max(1, Number(state.judgeTenureRange) || 1));
+  const value = Math.min(120, Math.max(1, Number(state.judgeTenureRange) || 1));
   const count = judges.filter(matchesJudgeTenureFilter).length;
   return `
     <div class="judge-filter-bar" aria-label="Filter judges by time left">
       <div class="judge-range-summary">
-        <span>Retiring ${escHtml(judgeTenureRangeLabel())}</span>
-        <strong>${count}</strong>
-        <span>of ${judges.length}</span>
+        <span>Show judges retiring within</span>
+        <strong>${escHtml(judgeTenureRangeLabel())}</strong>
+        <span>${count} match${count === 1 ? '' : 'es'}</span>
       </div>
-      <input class="judge-range-slider" type="range" min="1" max="${unitConfig.max}" step="${unitConfig.step}" value="${value}" oninput="setJudgeTenureRange(this.value)">
-      <div class="judge-range-controls">
-        <input class="judge-range-number" type="number" min="1" max="${unitConfig.max}" step="${unitConfig.step}" value="${value}" oninput="setJudgeTenureRange(this.value)">
-        <select class="judge-range-unit" onchange="setJudgeTenureUnit(this.value)">
-          <option value="days" ${state.judgeTenureUnit === 'days' ? 'selected' : ''}>days</option>
-          <option value="months" ${state.judgeTenureUnit === 'months' ? 'selected' : ''}>months</option>
-          <option value="years" ${state.judgeTenureUnit === 'years' ? 'selected' : ''}>years</option>
-        </select>
-      </div>
+      <input class="judge-range-slider" type="range" min="1" max="120" step="1" value="${value}" oninput="setJudgeTenureRange(this.value)">
     </div>`;
 }
 
@@ -589,15 +570,7 @@ window.setAdminRoleFilter = function(role) {
 };
 
 window.setJudgeTenureRange = function(value) {
-  const unitConfig = JUDGE_TENURE_UNIT_LIMITS[state.judgeTenureUnit] || JUDGE_TENURE_UNIT_LIMITS.months;
-  state.judgeTenureRange = Math.min(unitConfig.max, Math.max(1, Number(value) || 1));
-  renderContent();
-};
-
-window.setJudgeTenureUnit = function(unit) {
-  if (!JUDGE_TENURE_UNIT_LIMITS[unit]) return;
-  state.judgeTenureUnit = unit;
-  state.judgeTenureRange = Math.min(JUDGE_TENURE_UNIT_LIMITS[unit].max, Math.max(1, Number(state.judgeTenureRange) || 1));
+  state.judgeTenureRange = Math.min(120, Math.max(1, Number(value) || 1));
   renderContent();
 };
 

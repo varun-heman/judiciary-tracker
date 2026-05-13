@@ -294,7 +294,8 @@ code { font-family: 'Courier New', monospace; background: var(--unknown-bg); pad
 .judge-filter-bar {
   align-items: center;
   display: grid;
-  grid-template-columns: minmax(180px, auto) minmax(220px, 1fr) auto;
+  grid-template-columns: minmax(320px, auto) minmax(240px, 1fr);
+  gap: 18px;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--border);
 }
@@ -302,7 +303,8 @@ code { font-family: 'Courier New', monospace; background: var(--unknown-bg); pad
 .judge-range-summary {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
+  flex-wrap: wrap;
   color: var(--text-muted);
   font-size: 11.5px;
   font-weight: 800;
@@ -312,8 +314,8 @@ code { font-family: 'Courier New', monospace; background: var(--unknown-bg); pad
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 28px;
-  height: 28px;
+  min-height: 28px;
+  padding: 0 10px;
   border-radius: 999px;
   background: var(--accent2);
   color: #fff;
@@ -323,32 +325,6 @@ code { font-family: 'Courier New', monospace; background: var(--unknown-bg); pad
 .judge-range-slider {
   width: 100%;
   accent-color: var(--accent2);
-}
-
-.judge-range-controls {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-}
-
-.judge-range-number,
-.judge-range-unit {
-  min-height: 32px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  background: var(--bg-card);
-  color: var(--text);
-  font-size: 12px;
-  font-weight: 800;
-}
-
-.judge-range-number {
-  width: 76px;
-  padding: 5px 8px;
-}
-
-.judge-range-unit {
-  padding: 5px 9px;
 }
 
 .admin-toolbar {
@@ -1211,9 +1187,6 @@ body.modal-open {
   .cards-grid { grid-template-columns: 1fr; }
   .judge-filter-bar {
     grid-template-columns: 1fr;
-  }
-  .judge-range-controls {
-    justify-content: flex-start;
   }
   .notification-row {
     grid-template-columns: 1fr;
