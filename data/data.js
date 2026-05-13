@@ -13,7 +13,8 @@ window.COURTS_DATA = [
     "parent_id": "",
     "notes": "",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "SC-CJI",
@@ -30,7 +31,8 @@ window.COURTS_DATA = [
     "notes": "53rd CJI. Born 10 Feb 1962. Nominated by CJI B.R. Gavai. Appointed by President Droupadi Murmu.",
     "photo_url": "assets/photos/SC-CJI/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2025102910.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2025102910.jpg",
+    "date_of_birth": "1962-02-09"
   },
   {
     "id": "SC-002",
@@ -47,7 +49,8 @@ window.COURTS_DATA = [
     "notes": "Born 24 Sep 1962. Next in seniority after CJI. Expected 54th CJI (Feb–Sep 2027).",
     "photo_url": "assets/photos/SC-002/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2025110998.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2025110998.jpg",
+    "date_of_birth": "1962-09-23"
   },
   {
     "id": "SC-003",
@@ -64,7 +67,8 @@ window.COURTS_DATA = [
     "notes": "Born 29 Jun 1961.",
     "photo_url": "assets/photos/SC-003/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/20240111100.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/20240111100.jpg",
+    "date_of_birth": "1961-06-28"
   },
   {
     "id": "SC-004",
@@ -81,7 +85,8 @@ window.COURTS_DATA = [
     "notes": "Born 30 Oct 1962. Expected to be 55th CJI (Sep–Oct 2027) — India's first woman CJI.",
     "photo_url": "assets/photos/SC-004/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2024011390.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2024011390.jpg",
+    "date_of_birth": "1962-10-29"
   },
   {
     "id": "SC-005",
@@ -98,7 +103,8 @@ window.COURTS_DATA = [
     "notes": "Born 21 Jul 1962.",
     "photo_url": "assets/photos/SC-005/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2024011338.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2024011338.jpg",
+    "date_of_birth": "1962-07-20"
   },
   {
     "id": "SC-006",
@@ -115,7 +121,8 @@ window.COURTS_DATA = [
     "notes": "Born 03 May 1963.",
     "photo_url": "assets/photos/SC-006/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011184.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011184.jpg",
+    "date_of_birth": "1963-05-02"
   },
   {
     "id": "SC-007",
@@ -132,7 +139,8 @@ window.COURTS_DATA = [
     "notes": "Born 12 Aug 1965.",
     "photo_url": "assets/photos/SC-007/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011184-1.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011184-1.jpg",
+    "date_of_birth": "1965-08-11"
   },
   {
     "id": "SC-008",
@@ -149,7 +157,8 @@ window.COURTS_DATA = [
     "notes": "Born 09 Feb 1965.",
     "photo_url": "assets/photos/SC-008/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011141.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011141.jpg",
+    "date_of_birth": "1965-02-08"
   },
   {
     "id": "SC-009",
@@ -166,7 +175,8 @@ window.COURTS_DATA = [
     "notes": "Born 17 Jun 1961.",
     "photo_url": "assets/photos/SC-009/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011110.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011110.jpg",
+    "date_of_birth": "1961-06-16"
   },
   {
     "id": "SC-010",
@@ -183,7 +193,8 @@ window.COURTS_DATA = [
     "notes": "Born 23 Aug 1961.",
     "photo_url": "assets/photos/SC-010/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011112.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011112.jpg",
+    "date_of_birth": "1961-08-22"
   },
   {
     "id": "SC-011",
@@ -200,7 +211,8 @@ window.COURTS_DATA = [
     "notes": "Born 14 Aug 1963.",
     "photo_url": "assets/photos/SC-011/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011172.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011172.jpg",
+    "date_of_birth": "1963-08-13"
   },
   {
     "id": "SC-012",
@@ -217,7 +229,8 @@ window.COURTS_DATA = [
     "notes": "Born 11 May 1963.",
     "photo_url": "assets/photos/SC-012/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2025090883.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2025090883.jpg",
+    "date_of_birth": "1963-05-10"
   },
   {
     "id": "SC-013",
@@ -234,7 +247,8 @@ window.COURTS_DATA = [
     "notes": "Born 02 Jun 1965.",
     "photo_url": "assets/photos/SC-013/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011127.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011127.jpg",
+    "date_of_birth": "1965-06-01"
   },
   {
     "id": "SC-014",
@@ -251,7 +265,8 @@ window.COURTS_DATA = [
     "notes": "Born 14 Jul 1962.",
     "photo_url": "assets/photos/SC-014/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011116.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011116.jpg",
+    "date_of_birth": "1962-07-13"
   },
   {
     "id": "SC-015",
@@ -268,7 +283,8 @@ window.COURTS_DATA = [
     "notes": "Born 29 Aug 1964.",
     "photo_url": "assets/photos/SC-015/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011162.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011162.jpg",
+    "date_of_birth": "1964-08-28"
   },
   {
     "id": "SC-016",
@@ -285,7 +301,8 @@ window.COURTS_DATA = [
     "notes": "Born 26 May 1966.",
     "photo_url": "assets/photos/SC-016/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011127-1.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011127-1.jpg",
+    "date_of_birth": "1966-05-25"
   },
   {
     "id": "SC-017",
@@ -302,7 +319,8 @@ window.COURTS_DATA = [
     "notes": "Born 02 Aug 1964.",
     "photo_url": "assets/photos/SC-017/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011177.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011177.jpg",
+    "date_of_birth": "1964-08-01"
   },
   {
     "id": "SC-018",
@@ -319,7 +337,8 @@ window.COURTS_DATA = [
     "notes": "Born 06 May 1962.",
     "photo_url": "assets/photos/SC-018/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011123-1.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011123-1.jpg",
+    "date_of_birth": "1962-05-05"
   },
   {
     "id": "SC-019",
@@ -336,7 +355,8 @@ window.COURTS_DATA = [
     "notes": "Born 30 Nov 1961.",
     "photo_url": "assets/photos/SC-019/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/12/2024011113.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/12/2024011113.jpg",
+    "date_of_birth": "1961-11-29"
   },
   {
     "id": "SC-020",
@@ -353,7 +373,8 @@ window.COURTS_DATA = [
     "notes": "Born 12 Mar 1963.",
     "photo_url": "assets/photos/SC-020/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/12/2024011142.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/12/2024011142.jpg",
+    "date_of_birth": "1963-03-11"
   },
   {
     "id": "SC-021",
@@ -370,7 +391,8 @@ window.COURTS_DATA = [
     "notes": "Born 11 Jan 1963.",
     "photo_url": "assets/photos/SC-021/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/12/2024011135.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/12/2024011135.jpg",
+    "date_of_birth": "1963-01-10"
   },
   {
     "id": "SC-022",
@@ -387,7 +409,8 @@ window.COURTS_DATA = [
     "notes": "Born 23 Jun 1962.",
     "photo_url": "assets/photos/SC-022/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2024021530-scaled-e1748753979960.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2024021530-scaled-e1748753979960.jpg",
+    "date_of_birth": "1962-06-22"
   },
   {
     "id": "SC-023",
@@ -404,7 +427,8 @@ window.COURTS_DATA = [
     "notes": "Born 01 Mar 1963.",
     "photo_url": "assets/photos/SC-023/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/07/2024080379-scaled-e1748754095610.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/07/2024080379-scaled-e1748754095610.jpg",
+    "date_of_birth": "1963-02-29"
   },
   {
     "id": "SC-024",
@@ -421,7 +445,8 @@ window.COURTS_DATA = [
     "notes": "Born 10 Jun 1963.",
     "photo_url": "assets/photos/SC-024/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/07/2024120978-e1733723449364.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/07/2024120978-e1733723449364.jpg",
+    "date_of_birth": "1963-06-09"
   },
   {
     "id": "SC-025",
@@ -438,7 +463,8 @@ window.COURTS_DATA = [
     "notes": "Born 17 Dec 1962.",
     "photo_url": "assets/photos/SC-025/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/12/2024121925.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/12/2024121925.jpg",
+    "date_of_birth": "1962-12-16"
   },
   {
     "id": "SC-026",
@@ -455,7 +481,8 @@ window.COURTS_DATA = [
     "notes": "Born 25 Apr 1963.",
     "photo_url": "assets/photos/SC-026/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/01/2025012065.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/01/2025012065.jpg",
+    "date_of_birth": "1963-04-24"
   },
   {
     "id": "SC-027",
@@ -472,7 +499,8 @@ window.COURTS_DATA = [
     "notes": "Born 03 Oct 1966.",
     "photo_url": "assets/photos/SC-027/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/03/2025032612-e1748754168828.jpeg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/03/2025032612-e1748754168828.jpeg",
+    "date_of_birth": "1966-10-02"
   },
   {
     "id": "SC-028",
@@ -489,7 +517,8 @@ window.COURTS_DATA = [
     "notes": "Born 23 Mar 1965.",
     "photo_url": "assets/photos/SC-028/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/05/2025061738.jpeg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/05/2025061738.jpeg",
+    "date_of_birth": "1965-03-22"
   },
   {
     "id": "SC-029",
@@ -506,7 +535,8 @@ window.COURTS_DATA = [
     "notes": "Born 26 Mar 1964.",
     "photo_url": "assets/photos/SC-029/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/05/2025080775.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/05/2025080775.jpg",
+    "date_of_birth": "1964-03-25"
   },
   {
     "id": "SC-030",
@@ -523,7 +553,8 @@ window.COURTS_DATA = [
     "notes": "Born 07 Apr 1965.",
     "photo_url": "assets/photos/SC-030/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/05/2025082310.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/05/2025082310.jpg",
+    "date_of_birth": "1965-04-06"
   },
   {
     "id": "SC-031",
@@ -540,7 +571,8 @@ window.COURTS_DATA = [
     "notes": "Born 13 Apr 1964.",
     "photo_url": "assets/photos/SC-031/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/08/2025091540.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/08/2025091540.jpg",
+    "date_of_birth": "1964-04-12"
   },
   {
     "id": "SC-032",
@@ -557,7 +589,8 @@ window.COURTS_DATA = [
     "notes": "Born 28 May 1968.",
     "photo_url": "assets/photos/SC-032/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/08/2025082950.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/08/2025082950.jpg",
+    "date_of_birth": "1968-05-27"
   },
   {
     "id": "HC-ALD",
@@ -573,7 +606,8 @@ window.COURTS_DATA = [
     "parent_id": "",
     "notes": "Serves Uttar Pradesh. Largest HC by sanctioned strength.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-ALD-CJ",
@@ -589,7 +623,8 @@ window.COURTS_DATA = [
     "parent_id": "HC-ALD",
     "notes": "Joined from Rajasthan HC. Retires Oct 2029.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1967-10-14"
   },
   {
     "id": "HC-AP",
@@ -605,7 +640,8 @@ window.COURTS_DATA = [
     "parent_id": "",
     "notes": "Established 1 Jan 2019 after bifurcation of AP. Seat: Amaravati.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-AP-CJ",
@@ -621,7 +657,8 @@ window.COURTS_DATA = [
     "parent_id": "HC-AP",
     "notes": "Appointed ~May 2026. Succeeded Justice Dhiraj Singh Thakur (retired 24 Apr 2026). Nominated by CJI Surya Kant.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1966-12-04"
   },
   {
     "id": "HC-BOM",
@@ -637,7 +674,8 @@ window.COURTS_DATA = [
     "parent_id": "",
     "notes": "Serves Maharashtra; Goa; Dadra & Nagar Haveli; Daman & Diu.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-BOM-CJ",
@@ -653,7 +691,8 @@ window.COURTS_DATA = [
     "parent_id": "HC-BOM",
     "notes": "Joined from Jharkhand HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1965-05-24"
   },
   {
     "id": "HC-CAL",
@@ -669,7 +708,8 @@ window.COURTS_DATA = [
     "parent_id": "",
     "notes": "Serves West Bengal and Andaman & Nicobar Islands.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-CAL-CJ",
@@ -685,7 +725,8 @@ window.COURTS_DATA = [
     "parent_id": "HC-CAL",
     "notes": "Joined from MP HC. Retiring Jun 2026 — very soon.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1964-06-20"
   },
   {
     "id": "HC-CHG",
@@ -701,7 +742,8 @@ window.COURTS_DATA = [
     "parent_id": "",
     "notes": "Principal seat: Bilaspur.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-CHG-CJ",
@@ -717,7 +759,8 @@ window.COURTS_DATA = [
     "parent_id": "HC-CHG",
     "notes": "Joined from Allahabad HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1964-09-04"
   },
   {
     "id": "HC-DEL",
@@ -733,7 +776,8 @@ window.COURTS_DATA = [
     "parent_id": "",
     "notes": "Serves NCT of Delhi.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-DEL-CJ",
@@ -749,7 +793,8 @@ window.COURTS_DATA = [
     "parent_id": "HC-DEL",
     "notes": "Previously 47th CJ of Bombay HC. Joined Delhi 21 Jan 2025. Nominated by both CJI D.Y. Chandrachud and CJI Sanjiv Khanna.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1965-06-15"
   },
   {
     "id": "HC-GAU",
@@ -765,7 +810,8 @@ window.COURTS_DATA = [
     "parent_id": "",
     "notes": "Serves Assam; Nagaland; Mizoram; Arunachal Pradesh.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-GAU-CJ",
@@ -781,7 +827,8 @@ window.COURTS_DATA = [
     "parent_id": "HC-GAU",
     "notes": "Joined from Patna HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1966-09-30"
   },
   {
     "id": "HC-GUJ",
@@ -797,7 +844,8 @@ window.COURTS_DATA = [
     "parent_id": "",
     "notes": "",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-GUJ-CJ",
@@ -813,7 +861,8 @@ window.COURTS_DATA = [
     "parent_id": "HC-GUJ",
     "notes": "Joined from Allahabad HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1966-04-29"
   },
   {
     "id": "HC-HP",
@@ -829,7 +878,8 @@ window.COURTS_DATA = [
     "parent_id": "",
     "notes": "Principal seat: Shimla.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-HP-CJ",
@@ -845,7 +895,8 @@ window.COURTS_DATA = [
     "parent_id": "HC-HP",
     "notes": "Joined from Punjab & Haryana HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1965-10-31"
   },
   {
     "id": "HC-JKL",
@@ -861,7 +912,8 @@ window.COURTS_DATA = [
     "parent_id": "",
     "notes": "Serves J&K and Ladakh Union Territories.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-JKL-CJ",
@@ -877,7 +929,8 @@ window.COURTS_DATA = [
     "parent_id": "HC-JKL",
     "notes": "Joined from Punjab & Haryana HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1964-09-17"
   },
   {
     "id": "HC-JHK",
@@ -893,7 +946,8 @@ window.COURTS_DATA = [
     "parent_id": "",
     "notes": "Principal seat: Ranchi.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-JHK-CJ",
@@ -909,7 +963,8 @@ window.COURTS_DATA = [
     "parent_id": "HC-JHK",
     "notes": "Joined from Bombay HC. Note: Exact retirement date from DoJ PDF was unclear (entry error); estimated Dec 2026.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1964-12-31"
   },
   {
     "id": "HC-KAR",
@@ -925,7 +980,8 @@ window.COURTS_DATA = [
     "parent_id": "",
     "notes": "Principal seat: Bengaluru.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-KAR-CJ",
@@ -941,7 +997,8 @@ window.COURTS_DATA = [
     "parent_id": "HC-KAR",
     "notes": "Joined from Delhi HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1966-11-01"
   },
   {
     "id": "HC-KER",
@@ -957,7 +1014,8 @@ window.COURTS_DATA = [
     "parent_id": "",
     "notes": "Principal seat: Ernakulam.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-KER-CJ",
@@ -973,7 +1031,8 @@ window.COURTS_DATA = [
     "parent_id": "HC-KER",
     "notes": "Joined Kerala 10 Jan 2026. Previously 14th CJ of Meghalaya HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1965-07-27"
   },
   {
     "id": "HC-MP",
@@ -989,7 +1048,8 @@ window.COURTS_DATA = [
     "parent_id": "",
     "notes": "Principal seat: Jabalpur.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-MP-CJ",
@@ -1005,7 +1065,8 @@ window.COURTS_DATA = [
     "parent_id": "HC-MP",
     "notes": "Joined from Delhi HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1964-12-25"
   },
   {
     "id": "HC-MAD",
@@ -1021,7 +1082,8 @@ window.COURTS_DATA = [
     "parent_id": "",
     "notes": "Serves Tamil Nadu and Puducherry. One of oldest HCs.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-MAD-CJ",
@@ -1037,7 +1099,8 @@ window.COURTS_DATA = [
     "parent_id": "HC-MAD",
     "notes": "Succeeded M.M. Shrivastava (retired 05 Mar 2026). Nominated by CJI Surya Kant.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1966-08-14"
   },
   {
     "id": "HC-MAN",
@@ -1053,7 +1116,8 @@ window.COURTS_DATA = [
     "parent_id": "",
     "notes": "Principal seat: Imphal.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-MAN-CJ",
@@ -1069,7 +1133,8 @@ window.COURTS_DATA = [
     "parent_id": "HC-MAN",
     "notes": "Joined from Madras HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1966-07-18"
   },
   {
     "id": "HC-MEG",
@@ -1085,7 +1150,8 @@ window.COURTS_DATA = [
     "parent_id": "",
     "notes": "Principal seat: Shillong.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-MEG-CJ",
@@ -1101,7 +1167,8 @@ window.COURTS_DATA = [
     "parent_id": "HC-MEG",
     "notes": "Joined from Bombay HC. Retires Nov 2026.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1964-11-27"
   },
   {
     "id": "HC-ORI",
@@ -1117,7 +1184,8 @@ window.COURTS_DATA = [
     "parent_id": "",
     "notes": "Principal seat: Cuttack.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-ORI-CJ",
@@ -1133,7 +1201,8 @@ window.COURTS_DATA = [
     "parent_id": "HC-ORI",
     "notes": "Joined from Calcutta HC. One of most senior HC judges by initial elevation.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1964-11-15"
   },
   {
     "id": "HC-PAT",
@@ -1149,7 +1218,8 @@ window.COURTS_DATA = [
     "parent_id": "",
     "notes": "Serves Bihar.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-PAT-CJ",
@@ -1165,7 +1235,8 @@ window.COURTS_DATA = [
     "parent_id": "HC-PAT",
     "notes": "Joined from Orissa HC. Retiring 04 Jun 2026 — only ~23 days away.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1964-06-04"
   },
   {
     "id": "HC-PHC",
@@ -1181,7 +1252,8 @@ window.COURTS_DATA = [
     "parent_id": "",
     "notes": "Serves Punjab; Haryana; Chandigarh UT. Seat: Chandigarh.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-PHC-CJ",
@@ -1197,7 +1269,8 @@ window.COURTS_DATA = [
     "parent_id": "HC-PHC",
     "notes": "Joined from Madhya Pradesh HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1964-12-31"
   },
   {
     "id": "HC-RAJ",
@@ -1213,7 +1286,8 @@ window.COURTS_DATA = [
     "parent_id": "",
     "notes": "Principal seat: Jodhpur; Bench at Jaipur.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-RAJ-CJ",
@@ -1229,7 +1303,8 @@ window.COURTS_DATA = [
     "parent_id": "HC-RAJ",
     "notes": "Acting CJ from home court. Retires Sep 2026.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1964-09-26"
   },
   {
     "id": "HC-SIK",
@@ -1245,7 +1320,8 @@ window.COURTS_DATA = [
     "parent_id": "",
     "notes": "Principal seat: Gangtok. Smallest HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-SIK-CJ",
@@ -1261,7 +1337,8 @@ window.COURTS_DATA = [
     "parent_id": "HC-SIK",
     "notes": "Joined from Kerala HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1967-05-31"
   },
   {
     "id": "HC-TEL",
@@ -1277,7 +1354,8 @@ window.COURTS_DATA = [
     "parent_id": "",
     "notes": "Established 1 Jan 2019. Seat: Hyderabad.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-TEL-CJ",
@@ -1293,7 +1371,8 @@ window.COURTS_DATA = [
     "parent_id": "HC-TEL",
     "notes": "Joined Telangana 19 Jul 2025. Previously 8th CJ of Tripura HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1965-07-06"
   },
   {
     "id": "HC-TRI",
@@ -1309,7 +1388,8 @@ window.COURTS_DATA = [
     "parent_id": "",
     "notes": "Principal seat: Agartala.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-TRI-CJ",
@@ -1325,7 +1405,8 @@ window.COURTS_DATA = [
     "parent_id": "HC-TRI",
     "notes": "Joined Tripura 22 Jul 2025. Previously 28th CJ of Himachal Pradesh HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1966-08-06"
   },
   {
     "id": "HC-UTK",
@@ -1341,7 +1422,8 @@ window.COURTS_DATA = [
     "parent_id": "",
     "notes": "Principal seat: Nainital.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-UTK-CJ",
@@ -1357,7 +1439,8 @@ window.COURTS_DATA = [
     "parent_id": "HC-UTK",
     "notes": "Joined from Allahabad HC. Retires Oct 2026.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1964-10-08"
   }
 ];
 window.MINISTRIES_DATA = [
@@ -1519,9 +1602,10 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.allahabadhighcourt.in/District/Officer/6540.html",
     "source_label": "Allahabad HC Officer Profile",
     "confidence": "high",
-    "notes": "Place of posting: Prayagraj. DOB: 1969-03-15.",
+    "notes": "Place of posting: Prayagraj",
     "photo_url": "https://www.allahabadhighcourt.in/image/jo/6540.jpg",
-    "photo_source": "allahabadhighcourt.in"
+    "photo_source": "allahabadhighcourt.in",
+    "date_of_birth": "1969-03-15"
   },
   {
     "id": "ADMIN-AHC-2000",
@@ -1539,9 +1623,10 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.allahabadhighcourt.in/District/Officer/2000.html",
     "source_label": "Allahabad HC Officer Profile",
     "confidence": "high",
-    "notes": "Place of posting: Prayagraj. DOB: 1974-12-01.",
+    "notes": "Place of posting: Prayagraj",
     "photo_url": "https://www.allahabadhighcourt.in/image/jo/2000.jpg",
-    "photo_source": "allahabadhighcourt.in"
+    "photo_source": "allahabadhighcourt.in",
+    "date_of_birth": "1974-12-01"
   },
   {
     "id": "ADMIN-AHC-2005",
@@ -1559,9 +1644,10 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.allahabadhighcourt.in/District/Officer/2005.html",
     "source_label": "Allahabad HC Officer Profile",
     "confidence": "high",
-    "notes": "Place of posting: Lucknow. DOB: 1974-01-11.",
+    "notes": "Place of posting: Lucknow",
     "photo_url": "https://www.allahabadhighcourt.in/image/jo/2005.jpg",
-    "photo_source": "allahabadhighcourt.in"
+    "photo_source": "allahabadhighcourt.in",
+    "date_of_birth": "1974-01-11"
   },
   {
     "id": "ADMIN-AHC-2395",
@@ -1579,9 +1665,10 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.allahabadhighcourt.in/District/Officer/2395.html",
     "source_label": "Allahabad HC Officer Profile",
     "confidence": "high",
-    "notes": "Place of posting: Prayagraj. DOB: 1975-07-01.",
+    "notes": "Place of posting: Prayagraj",
     "photo_url": "https://www.allahabadhighcourt.in/image/jo/2395.jpg",
-    "photo_source": "allahabadhighcourt.in"
+    "photo_source": "allahabadhighcourt.in",
+    "date_of_birth": "1975-07-01"
   },
   {
     "id": "ADMIN-AHC-6099",
@@ -1599,9 +1686,10 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.allahabadhighcourt.in/District/Officer/6099.html",
     "source_label": "Allahabad HC Officer Profile",
     "confidence": "high",
-    "notes": "Place of posting: Prayagraj. DOB: 1969-07-17.",
+    "notes": "Place of posting: Prayagraj",
     "photo_url": "https://www.allahabadhighcourt.in/image/jo/6099.jpg",
-    "photo_source": "allahabadhighcourt.in"
+    "photo_source": "allahabadhighcourt.in",
+    "date_of_birth": "1969-07-17"
   },
   {
     "id": "ADMIN-AHC-6178",
@@ -1619,9 +1707,10 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.allahabadhighcourt.in/District/Officer/6178.html",
     "source_label": "Allahabad HC Officer Profile",
     "confidence": "high",
-    "notes": "Place of posting: Lucknow. DOB: 1976-11-10.",
+    "notes": "Place of posting: Lucknow",
     "photo_url": "https://www.allahabadhighcourt.in/image/jo/6178.jpg",
-    "photo_source": "allahabadhighcourt.in"
+    "photo_source": "allahabadhighcourt.in",
+    "date_of_birth": "1976-11-10"
   },
   {
     "id": "ADMIN-AHC-2405",
@@ -1639,9 +1728,10 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.allahabadhighcourt.in/District/Officer/2405.html",
     "source_label": "Allahabad HC Officer Profile",
     "confidence": "high",
-    "notes": "Place of posting: Prayagraj. DOB: 1980-05-30.",
+    "notes": "Place of posting: Prayagraj",
     "photo_url": "https://www.allahabadhighcourt.in/image/jo/2405.jpg",
-    "photo_source": "allahabadhighcourt.in"
+    "photo_source": "allahabadhighcourt.in",
+    "date_of_birth": "1980-05-30"
   },
   {
     "id": "ADMIN-AHC-6207",
@@ -1659,9 +1749,10 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.allahabadhighcourt.in/District/Officer/6207.html",
     "source_label": "Allahabad HC Officer Profile",
     "confidence": "high",
-    "notes": "Place of posting: Lucknow. DOB: 1969-11-01.",
+    "notes": "Place of posting: Lucknow",
     "photo_url": "https://www.allahabadhighcourt.in/image/jo/6207.jpg",
-    "photo_source": "allahabadhighcourt.in"
+    "photo_source": "allahabadhighcourt.in",
+    "date_of_birth": "1969-11-01"
   },
   {
     "id": "ADMIN-AHC-6249",
@@ -1679,9 +1770,10 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.allahabadhighcourt.in/District/Officer/6249.html",
     "source_label": "Allahabad HC Officer Profile",
     "confidence": "high",
-    "notes": "Place of posting: Lucknow. DOB: 1977-06-24.",
+    "notes": "Place of posting: Lucknow",
     "photo_url": "https://www.allahabadhighcourt.in/image/jo/6249.jpg",
-    "photo_source": "allahabadhighcourt.in"
+    "photo_source": "allahabadhighcourt.in",
+    "date_of_birth": "1977-06-24"
   },
   {
     "id": "ADMIN-AHC-2642",
@@ -1699,9 +1791,10 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.allahabadhighcourt.in/District/Officer/2642.html",
     "source_label": "Allahabad HC Officer Profile",
     "confidence": "high",
-    "notes": "Place of posting: Lucknow. DOB: 1980-01-10.",
+    "notes": "Place of posting: Lucknow",
     "photo_url": "https://www.allahabadhighcourt.in/image/jo/2642.jpg",
-    "photo_source": "allahabadhighcourt.in"
+    "photo_source": "allahabadhighcourt.in",
+    "date_of_birth": "1980-01-10"
   },
   {
     "id": "ADMIN-AHC-6371",
@@ -1719,9 +1812,10 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.allahabadhighcourt.in/District/Officer/6371.html",
     "source_label": "Allahabad HC Officer Profile",
     "confidence": "high",
-    "notes": "Place of posting: Prayagraj. DOB: 1974-07-15.",
+    "notes": "Place of posting: Prayagraj",
     "photo_url": "https://www.allahabadhighcourt.in/image/jo/6371.jpg",
-    "photo_source": "allahabadhighcourt.in"
+    "photo_source": "allahabadhighcourt.in",
+    "date_of_birth": "1974-07-15"
   },
   {
     "id": "ADMIN-AHC-1535",
@@ -1739,9 +1833,10 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.allahabadhighcourt.in/District/Officer/1535.html",
     "source_label": "Allahabad HC Officer Profile",
     "confidence": "high",
-    "notes": "Place of posting: Prayagraj. DOB: 1975-07-01.",
+    "notes": "Place of posting: Prayagraj",
     "photo_url": "https://www.allahabadhighcourt.in/image/jo/1535.jpg",
-    "photo_source": "allahabadhighcourt.in"
+    "photo_source": "allahabadhighcourt.in",
+    "date_of_birth": "1975-07-01"
   },
   {
     "id": "ADMIN-AHC-1544",
@@ -1759,9 +1854,10 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.allahabadhighcourt.in/District/Officer/1544.html",
     "source_label": "Allahabad HC Officer Profile",
     "confidence": "high",
-    "notes": "Place of posting: Prayagraj. DOB: 1976-06-04.",
+    "notes": "Place of posting: Prayagraj",
     "photo_url": "https://www.allahabadhighcourt.in/image/jo/1544.jpg",
-    "photo_source": "allahabadhighcourt.in"
+    "photo_source": "allahabadhighcourt.in",
+    "date_of_birth": "1976-06-04"
   },
   {
     "id": "ADMIN-AHC-1627",
@@ -1779,9 +1875,10 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.allahabadhighcourt.in/District/Officer/1627.html",
     "source_label": "Allahabad HC Officer Profile",
     "confidence": "high",
-    "notes": "Place of posting: Lucknow. DOB: 1976-12-31.",
+    "notes": "Place of posting: Lucknow",
     "photo_url": "https://www.allahabadhighcourt.in/image/jo/1627.jpg",
-    "photo_source": "allahabadhighcourt.in"
+    "photo_source": "allahabadhighcourt.in",
+    "date_of_birth": "1976-12-31"
   },
   {
     "id": "ADMIN-AHC-1551",
@@ -1799,9 +1896,10 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.allahabadhighcourt.in/District/Officer/1551.html",
     "source_label": "Allahabad HC Officer Profile",
     "confidence": "high",
-    "notes": "Place of posting: Prayagraj. DOB: 1983-01-01.",
+    "notes": "Place of posting: Prayagraj",
     "photo_url": "https://www.allahabadhighcourt.in/image/jo/1551.jpg",
-    "photo_source": "allahabadhighcourt.in"
+    "photo_source": "allahabadhighcourt.in",
+    "date_of_birth": "1983-01-01"
   },
   {
     "id": "ADMIN-AHC-1552",
@@ -1819,9 +1917,10 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.allahabadhighcourt.in/District/Officer/1552.html",
     "source_label": "Allahabad HC Officer Profile",
     "confidence": "high",
-    "notes": "Place of posting: Prayagraj. DOB: 1974-07-07.",
+    "notes": "Place of posting: Prayagraj",
     "photo_url": "https://www.allahabadhighcourt.in/image/jo/1552.jpg",
-    "photo_source": "allahabadhighcourt.in"
+    "photo_source": "allahabadhighcourt.in",
+    "date_of_birth": "1974-07-07"
   },
   {
     "id": "ADMIN-AHC-1556",
@@ -1839,9 +1938,10 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.allahabadhighcourt.in/District/Officer/1556.html",
     "source_label": "Allahabad HC Officer Profile",
     "confidence": "high",
-    "notes": "Place of posting: Prayagraj. DOB: 1977-01-25.",
+    "notes": "Place of posting: Prayagraj",
     "photo_url": "https://www.allahabadhighcourt.in/image/jo/1556.jpg",
-    "photo_source": "allahabadhighcourt.in"
+    "photo_source": "allahabadhighcourt.in",
+    "date_of_birth": "1977-01-25"
   },
   {
     "id": "ADMIN-AHC-1564",
@@ -1859,9 +1959,10 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.allahabadhighcourt.in/District/Officer/1564.html",
     "source_label": "Allahabad HC Officer Profile",
     "confidence": "high",
-    "notes": "Place of posting: Prayagraj. DOB: 1983-01-13.",
+    "notes": "Place of posting: Prayagraj",
     "photo_url": "https://www.allahabadhighcourt.in/image/jo/1564.jpg",
-    "photo_source": "allahabadhighcourt.in"
+    "photo_source": "allahabadhighcourt.in",
+    "date_of_birth": "1983-01-13"
   },
   {
     "id": "ADMIN-AHC-1581",
@@ -1879,9 +1980,10 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.allahabadhighcourt.in/District/Officer/1581.html",
     "source_label": "Allahabad HC Officer Profile",
     "confidence": "high",
-    "notes": "Place of posting: Prayagraj. DOB: 1974-08-19.",
+    "notes": "Place of posting: Prayagraj",
     "photo_url": "https://www.allahabadhighcourt.in/image/jo/1581.jpg",
-    "photo_source": "allahabadhighcourt.in"
+    "photo_source": "allahabadhighcourt.in",
+    "date_of_birth": "1974-08-19"
   },
   {
     "id": "ADMIN-AHC-1693",
@@ -1899,9 +2001,10 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.allahabadhighcourt.in/District/Officer/1693.html",
     "source_label": "Allahabad HC Officer Profile",
     "confidence": "high",
-    "notes": "Place of posting: Prayagraj. DOB: 1980-02-11.",
+    "notes": "Place of posting: Prayagraj",
     "photo_url": "https://www.allahabadhighcourt.in/image/jo/1693.jpg",
-    "photo_source": "allahabadhighcourt.in"
+    "photo_source": "allahabadhighcourt.in",
+    "date_of_birth": "1980-02-11"
   },
   {
     "id": "ADMIN-AHC-1695",
@@ -1919,9 +2022,10 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.allahabadhighcourt.in/District/Officer/1695.html",
     "source_label": "Allahabad HC Officer Profile",
     "confidence": "high",
-    "notes": "Place of posting: Lucknow. DOB: 1982-12-12.",
+    "notes": "Place of posting: Lucknow",
     "photo_url": "https://www.allahabadhighcourt.in/image/jo/1695.jpg",
-    "photo_source": "allahabadhighcourt.in"
+    "photo_source": "allahabadhighcourt.in",
+    "date_of_birth": "1982-12-12"
   },
   {
     "id": "ADMIN-AHC-1649",
@@ -1939,9 +2043,10 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.allahabadhighcourt.in/District/Officer/1649.html",
     "source_label": "Allahabad HC Officer Profile",
     "confidence": "high",
-    "notes": "Place of posting: Prayagraj. DOB: 1981-07-15.",
+    "notes": "Place of posting: Prayagraj",
     "photo_url": "https://www.allahabadhighcourt.in/image/jo/1649.jpg",
-    "photo_source": "allahabadhighcourt.in"
+    "photo_source": "allahabadhighcourt.in",
+    "date_of_birth": "1981-07-15"
   },
   {
     "id": "ADMIN-AHC-1652",
@@ -1959,9 +2064,10 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.allahabadhighcourt.in/District/Officer/1652.html",
     "source_label": "Allahabad HC Officer Profile",
     "confidence": "high",
-    "notes": "Place of posting: Prayagraj. DOB: 1978-07-09.",
+    "notes": "Place of posting: Prayagraj",
     "photo_url": "https://www.allahabadhighcourt.in/image/jo/1652.jpg",
-    "photo_source": "allahabadhighcourt.in"
+    "photo_source": "allahabadhighcourt.in",
+    "date_of_birth": "1978-07-09"
   },
   {
     "id": "ADMIN-AHC-3819",
@@ -1979,9 +2085,10 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.allahabadhighcourt.in/District/Officer/3819.html",
     "source_label": "Allahabad HC Officer Profile",
     "confidence": "high",
-    "notes": "Place of posting: Prayagraj. DOB: 1984-06-04.",
+    "notes": "Place of posting: Prayagraj",
     "photo_url": "https://www.allahabadhighcourt.in/image/jo/3819.jpg",
-    "photo_source": "allahabadhighcourt.in"
+    "photo_source": "allahabadhighcourt.in",
+    "date_of_birth": "1984-06-04"
   },
   {
     "id": "ADMIN-AHC-1675",
@@ -1999,9 +2106,10 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.allahabadhighcourt.in/District/Officer/1675.html",
     "source_label": "Allahabad HC Officer Profile",
     "confidence": "high",
-    "notes": "Place of posting: Lucknow. DOB: 1982-07-07.",
+    "notes": "Place of posting: Lucknow",
     "photo_url": "https://www.allahabadhighcourt.in/image/jo/1675.jpg",
-    "photo_source": "allahabadhighcourt.in"
+    "photo_source": "allahabadhighcourt.in",
+    "date_of_birth": "1982-07-07"
   },
   {
     "id": "ADMIN-AHC-1860",
@@ -2019,9 +2127,10 @@ window.ADMIN_STAFF_DATA = [
     "source_url": "https://www.allahabadhighcourt.in/District/Officer/1860.html",
     "source_label": "Allahabad HC Officer Profile",
     "confidence": "high",
-    "notes": "Place of posting: Prayagraj. DOB: 1977-02-18.",
+    "notes": "Place of posting: Prayagraj",
     "photo_url": "https://www.allahabadhighcourt.in/image/jo/1860.jpg",
-    "photo_source": "allahabadhighcourt.in"
+    "photo_source": "allahabadhighcourt.in",
+    "date_of_birth": "1977-02-18"
   },
   {
     "id": "ADMIN-CPC-AP",
@@ -2041,7 +2150,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "named",
     "notes": "Registry profile lists date of birth, native place, joining date of judicial service, address and CPC email.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-CPC-BOM",
@@ -2061,7 +2171,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "contact-only",
     "notes": "Located official tender contact gives CPC office address, phone and email; officer name was not found on a stable HC page.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-CPC-CAL",
@@ -2081,7 +2192,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "named",
     "notes": "Same notice also lists Sri Soumik Bhattacharya as System Officer and Sri Abhijit Dey as System Assistant.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-CPC-DEL",
@@ -2101,7 +2213,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "contact-only",
     "notes": "Official Delhi HC RTI/email directory lists the CPC email account; a current named officer was not located.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-CPC-GAU",
@@ -2121,7 +2234,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "role-only",
     "notes": "Registry page lists Sri Subhrangsu Dhar as Registrar (Judicial & IT); a separate current CPC name was not clearly published.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-CPC-GUJ",
@@ -2141,7 +2255,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "named",
     "notes": "Official contact page lists CPC designation and phone details.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-CPC-HP",
@@ -2161,7 +2276,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "named",
     "notes": "Directory lists CPC name, EPABX extension and mobile number.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-CPC-JKL",
@@ -2181,7 +2297,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "named",
     "notes": "Registry page describes the CPC role as coordinating e-Courts modules/tasks and liaison with the e-Committee, Supreme Court of India.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-CPC-JHK",
@@ -2201,7 +2318,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "contact-only",
     "notes": "Current officer name was not located on a stable official page during this pass.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-CPC-KAR",
@@ -2221,7 +2339,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "contact-only",
     "notes": "Current named CPC was not located on a stable official page during this pass.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-CPC-KER",
@@ -2241,7 +2360,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "contact-only",
     "notes": "Current named CPC was not located on a stable official page during this pass.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-CPC-MP",
@@ -2261,7 +2381,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "named",
     "notes": "Order nominates Shri F.H. Qazi as CPC under the e-Court Project till further orders; committee PDFs also list CPC/SPSA (SA).",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-CPC-MAD",
@@ -2281,7 +2402,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "contact-only",
     "notes": "Current named CPC was not located on a stable official page during this pass.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-CPC-MAN",
@@ -2301,7 +2423,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "role-only",
     "notes": "Notification dated 15.05.2025 states CPC charge was assigned to Registrar (Judicial) until further orders; homepage publishes CPC email.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-CPC-MEG",
@@ -2321,7 +2444,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "named",
     "notes": "Official Who's Who page lists name, role, PBX and office number.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-CPC-ORI",
@@ -2341,7 +2465,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "named",
     "notes": "Profile lists cadre as Senior Civil Judge, home district Sundargarh, joining judicial service 25.02.2013 and current post from 19.01.2024.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-CPC-RAJ",
@@ -2361,7 +2486,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "contact-only",
     "notes": "Current named CPC was not located on a stable official page during this pass.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-CPC-SIK",
@@ -2381,7 +2507,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "named",
     "notes": "High Court committee page confirms CPC as member; eCommittee page names Mr. Benoy Sharma and lists phone/email.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-CPC-TRI",
@@ -2402,7 +2529,8 @@ window.ADMIN_STAFF_DATA = [
     "notes": "THCDLR team page lists Shri Saamyajyoti Debnath as CPC; an older 2024 notification listed Shri Sarbajeet Choudhury.",
     "photo_url": "assets/photos/ADMIN-CPC-TRI/portrait.jpg",
     "photo_source": "High Court of Tripura administrative setup",
-    "photo_original_url": "https://thc.nic.in/images/S_Debnath.jpg"
+    "photo_original_url": "https://thc.nic.in/images/S_Debnath.jpg",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-CPC-UTK",
@@ -2422,7 +2550,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "contact-only",
     "notes": "Current named CPC was not located on a stable official page during this pass.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-TRI-RG",
@@ -2443,7 +2572,8 @@ window.ADMIN_STAFF_DATA = [
     "notes": "",
     "photo_url": "assets/photos/ADMIN-TRI-RG/portrait.jpg",
     "photo_source": "High Court of Tripura administrative setup",
-    "photo_original_url": "https://thc.nic.in/images/RG_A_Debbarma_25032026.jpg"
+    "photo_original_url": "https://thc.nic.in/images/RG_A_Debbarma_25032026.jpg",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-TRI-REG-ADMN",
@@ -2464,7 +2594,8 @@ window.ADMIN_STAFF_DATA = [
     "notes": "",
     "photo_url": "assets/photos/ADMIN-TRI-REG-ADMN/portrait.jpg",
     "photo_source": "High Court of Tripura administrative setup",
-    "photo_original_url": "https://thc.nic.in/images/S_Datta.jpg"
+    "photo_original_url": "https://thc.nic.in/images/S_Datta.jpg",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-TRI-REG-VIG",
@@ -2485,7 +2616,8 @@ window.ADMIN_STAFF_DATA = [
     "notes": "",
     "photo_url": "assets/photos/ADMIN-TRI-REG-VIG/portrait.jpg",
     "photo_source": "High Court of Tripura administrative setup",
-    "photo_original_url": "https://thc.nic.in/images/RBhattacharjee.jpg"
+    "photo_original_url": "https://thc.nic.in/images/RBhattacharjee.jpg",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-TRI-REG-JUD",
@@ -2506,7 +2638,8 @@ window.ADMIN_STAFF_DATA = [
     "notes": "",
     "photo_url": "assets/photos/ADMIN-TRI-REG-JUD/portrait.png",
     "photo_source": "High Court of Tripura administrative setup",
-    "photo_original_url": "https://thc.nic.in/images/S_Bikas.png"
+    "photo_original_url": "https://thc.nic.in/images/S_Bikas.png",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-TRI-JR-DDO",
@@ -2527,7 +2660,8 @@ window.ADMIN_STAFF_DATA = [
     "notes": "",
     "photo_url": "assets/photos/ADMIN-TRI-JR-DDO/portrait.jpg",
     "photo_source": "High Court of Tripura administrative setup",
-    "photo_original_url": "https://thc.nic.in/images/ashimroy.JPG"
+    "photo_original_url": "https://thc.nic.in/images/ashimroy.JPG",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-TRI-DR-JUD",
@@ -2548,7 +2682,8 @@ window.ADMIN_STAFF_DATA = [
     "notes": "",
     "photo_url": "assets/photos/ADMIN-TRI-DR-JUD/portrait.jpg",
     "photo_source": "High Court of Tripura administrative setup",
-    "photo_original_url": "https://thc.nic.in/images/blank.jpg"
+    "photo_original_url": "https://thc.nic.in/images/blank.jpg",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-TRI-DR-ADMN",
@@ -2569,7 +2704,8 @@ window.ADMIN_STAFF_DATA = [
     "notes": "",
     "photo_url": "assets/photos/ADMIN-TRI-DR-ADMN/portrait.jpg",
     "photo_source": "High Court of Tripura administrative setup",
-    "photo_original_url": "https://thc.nic.in/images/rks.jpg"
+    "photo_original_url": "https://thc.nic.in/images/rks.jpg",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-TRI-DR-PROTOCOL",
@@ -2590,7 +2726,8 @@ window.ADMIN_STAFF_DATA = [
     "notes": "",
     "photo_url": "assets/photos/ADMIN-TRI-DR-PROTOCOL/portrait.jpg",
     "photo_source": "High Court of Tripura administrative setup",
-    "photo_original_url": "https://thc.nic.in/images/rks.jpg"
+    "photo_original_url": "https://thc.nic.in/images/rks.jpg",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-TRI-DR-ACCOUNTS",
@@ -2611,7 +2748,8 @@ window.ADMIN_STAFF_DATA = [
     "notes": "",
     "photo_url": "assets/photos/ADMIN-TRI-DR-ACCOUNTS/portrait.jpg",
     "photo_source": "High Court of Tripura administrative setup",
-    "photo_original_url": "https://thc.nic.in/images/PDatta.jpeg"
+    "photo_original_url": "https://thc.nic.in/images/PDatta.jpeg",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-TRI-PS-CJ",
@@ -2632,7 +2770,8 @@ window.ADMIN_STAFF_DATA = [
     "notes": "",
     "photo_url": "assets/photos/ADMIN-TRI-PS-CJ/portrait.jpg",
     "photo_source": "High Court of Tripura administrative setup",
-    "photo_original_url": "https://thc.nic.in/images/SLodh.jpg"
+    "photo_original_url": "https://thc.nic.in/images/SLodh.jpg",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-TRI-LIB",
@@ -2653,7 +2792,8 @@ window.ADMIN_STAFF_DATA = [
     "notes": "",
     "photo_url": "assets/photos/ADMIN-TRI-LIB/portrait.jpg",
     "photo_source": "High Court of Tripura administrative setup",
-    "photo_original_url": "https://thc.nic.in/images/pranam.jpg"
+    "photo_original_url": "https://thc.nic.in/images/pranam.jpg",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-CHG-RG",
@@ -2673,7 +2813,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "named",
     "notes": "",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-CHG-COMP",
@@ -2693,7 +2834,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "named",
     "notes": "",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-GAU-RG",
@@ -2713,7 +2855,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "named",
     "notes": "",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-GAU-IT",
@@ -2733,7 +2876,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "named",
     "notes": "",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-CAL-RG",
@@ -2753,7 +2897,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "role-only",
     "notes": "",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-CAL-IT",
@@ -2773,7 +2918,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "role-only",
     "notes": "",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-MP-RG",
@@ -2793,7 +2939,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "named",
     "notes": "",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-MP-VIG",
@@ -2813,7 +2960,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "named",
     "notes": "",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-KER-RG",
@@ -2833,7 +2981,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "named",
     "notes": "",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-KER-COMP",
@@ -2853,7 +3002,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "named",
     "notes": "",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-ORI-RG",
@@ -2873,7 +3023,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "named",
     "notes": "",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-ORI-ADMN",
@@ -2893,7 +3044,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "named",
     "notes": "",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-PAT-RG",
@@ -2913,7 +3065,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "named",
     "notes": "",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-PAT-CPC",
@@ -2933,7 +3086,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "named",
     "notes": "",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-PHC-RG",
@@ -2953,7 +3107,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "named",
     "notes": "",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-PHC-CPC",
@@ -2973,7 +3128,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "named",
     "notes": "",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-RAJ-RG",
@@ -2993,7 +3149,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "named",
     "notes": "",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-RAJ-ADMN",
@@ -3013,7 +3170,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "named",
     "notes": "",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-TEL-RG",
@@ -3033,7 +3191,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "named",
     "notes": "",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "ADMIN-TEL-CPC",
@@ -3053,7 +3212,8 @@ window.ADMIN_STAFF_DATA = [
     "confidence": "named",
     "notes": "",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   }
 ];
 window.NOTIFICATIONS_DATA = [

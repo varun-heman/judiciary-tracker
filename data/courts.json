@@ -13,7 +13,8 @@
     "parent_id": "",
     "notes": "",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "SC-CJI",
@@ -30,7 +31,8 @@
     "notes": "53rd CJI. Born 10 Feb 1962. Nominated by CJI B.R. Gavai. Appointed by President Droupadi Murmu.",
     "photo_url": "assets/photos/SC-CJI/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2025102910.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2025102910.jpg",
+    "date_of_birth": "1962-02-09"
   },
   {
     "id": "SC-002",
@@ -47,7 +49,8 @@
     "notes": "Born 24 Sep 1962. Next in seniority after CJI. Expected 54th CJI (Feb–Sep 2027).",
     "photo_url": "assets/photos/SC-002/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2025110998.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2025110998.jpg",
+    "date_of_birth": "1962-09-23"
   },
   {
     "id": "SC-003",
@@ -64,7 +67,8 @@
     "notes": "Born 29 Jun 1961.",
     "photo_url": "assets/photos/SC-003/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/20240111100.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/20240111100.jpg",
+    "date_of_birth": "1961-06-28"
   },
   {
     "id": "SC-004",
@@ -81,7 +85,8 @@
     "notes": "Born 30 Oct 1962. Expected to be 55th CJI (Sep–Oct 2027) — India's first woman CJI.",
     "photo_url": "assets/photos/SC-004/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2024011390.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2024011390.jpg",
+    "date_of_birth": "1962-10-29"
   },
   {
     "id": "SC-005",
@@ -98,7 +103,8 @@
     "notes": "Born 21 Jul 1962.",
     "photo_url": "assets/photos/SC-005/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2024011338.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2024011338.jpg",
+    "date_of_birth": "1962-07-20"
   },
   {
     "id": "SC-006",
@@ -115,7 +121,8 @@
     "notes": "Born 03 May 1963.",
     "photo_url": "assets/photos/SC-006/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011184.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011184.jpg",
+    "date_of_birth": "1963-05-02"
   },
   {
     "id": "SC-007",
@@ -132,7 +139,8 @@
     "notes": "Born 12 Aug 1965.",
     "photo_url": "assets/photos/SC-007/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011184-1.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011184-1.jpg",
+    "date_of_birth": "1965-08-11"
   },
   {
     "id": "SC-008",
@@ -149,7 +157,8 @@
     "notes": "Born 09 Feb 1965.",
     "photo_url": "assets/photos/SC-008/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011141.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011141.jpg",
+    "date_of_birth": "1965-02-08"
   },
   {
     "id": "SC-009",
@@ -166,7 +175,8 @@
     "notes": "Born 17 Jun 1961.",
     "photo_url": "assets/photos/SC-009/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011110.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011110.jpg",
+    "date_of_birth": "1961-06-16"
   },
   {
     "id": "SC-010",
@@ -183,7 +193,8 @@
     "notes": "Born 23 Aug 1961.",
     "photo_url": "assets/photos/SC-010/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011112.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011112.jpg",
+    "date_of_birth": "1961-08-22"
   },
   {
     "id": "SC-011",
@@ -200,7 +211,8 @@
     "notes": "Born 14 Aug 1963.",
     "photo_url": "assets/photos/SC-011/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011172.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011172.jpg",
+    "date_of_birth": "1963-08-13"
   },
   {
     "id": "SC-012",
@@ -217,7 +229,8 @@
     "notes": "Born 11 May 1963.",
     "photo_url": "assets/photos/SC-012/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2025090883.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2025090883.jpg",
+    "date_of_birth": "1963-05-10"
   },
   {
     "id": "SC-013",
@@ -234,7 +247,8 @@
     "notes": "Born 02 Jun 1965.",
     "photo_url": "assets/photos/SC-013/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011127.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011127.jpg",
+    "date_of_birth": "1965-06-01"
   },
   {
     "id": "SC-014",
@@ -251,7 +265,8 @@
     "notes": "Born 14 Jul 1962.",
     "photo_url": "assets/photos/SC-014/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011116.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011116.jpg",
+    "date_of_birth": "1962-07-13"
   },
   {
     "id": "SC-015",
@@ -268,7 +283,8 @@
     "notes": "Born 29 Aug 1964.",
     "photo_url": "assets/photos/SC-015/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011162.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011162.jpg",
+    "date_of_birth": "1964-08-28"
   },
   {
     "id": "SC-016",
@@ -285,7 +301,8 @@
     "notes": "Born 26 May 1966.",
     "photo_url": "assets/photos/SC-016/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011127-1.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011127-1.jpg",
+    "date_of_birth": "1966-05-25"
   },
   {
     "id": "SC-017",
@@ -302,7 +319,8 @@
     "notes": "Born 02 Aug 1964.",
     "photo_url": "assets/photos/SC-017/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011177.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011177.jpg",
+    "date_of_birth": "1964-08-01"
   },
   {
     "id": "SC-018",
@@ -319,7 +337,8 @@
     "notes": "Born 06 May 1962.",
     "photo_url": "assets/photos/SC-018/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011123-1.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/2024011123-1.jpg",
+    "date_of_birth": "1962-05-05"
   },
   {
     "id": "SC-019",
@@ -336,7 +355,8 @@
     "notes": "Born 30 Nov 1961.",
     "photo_url": "assets/photos/SC-019/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/12/2024011113.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/12/2024011113.jpg",
+    "date_of_birth": "1961-11-29"
   },
   {
     "id": "SC-020",
@@ -353,7 +373,8 @@
     "notes": "Born 12 Mar 1963.",
     "photo_url": "assets/photos/SC-020/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/12/2024011142.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/12/2024011142.jpg",
+    "date_of_birth": "1963-03-11"
   },
   {
     "id": "SC-021",
@@ -370,7 +391,8 @@
     "notes": "Born 11 Jan 1963.",
     "photo_url": "assets/photos/SC-021/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/12/2024011135.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/12/2024011135.jpg",
+    "date_of_birth": "1963-01-10"
   },
   {
     "id": "SC-022",
@@ -387,7 +409,8 @@
     "notes": "Born 23 Jun 1962.",
     "photo_url": "assets/photos/SC-022/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2024021530-scaled-e1748753979960.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/01/2024021530-scaled-e1748753979960.jpg",
+    "date_of_birth": "1962-06-22"
   },
   {
     "id": "SC-023",
@@ -404,7 +427,8 @@
     "notes": "Born 01 Mar 1963.",
     "photo_url": "assets/photos/SC-023/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/07/2024080379-scaled-e1748754095610.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/07/2024080379-scaled-e1748754095610.jpg",
+    "date_of_birth": "1963-02-29"
   },
   {
     "id": "SC-024",
@@ -421,7 +445,8 @@
     "notes": "Born 10 Jun 1963.",
     "photo_url": "assets/photos/SC-024/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/07/2024120978-e1733723449364.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/07/2024120978-e1733723449364.jpg",
+    "date_of_birth": "1963-06-09"
   },
   {
     "id": "SC-025",
@@ -438,7 +463,8 @@
     "notes": "Born 17 Dec 1962.",
     "photo_url": "assets/photos/SC-025/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/12/2024121925.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2024/12/2024121925.jpg",
+    "date_of_birth": "1962-12-16"
   },
   {
     "id": "SC-026",
@@ -455,7 +481,8 @@
     "notes": "Born 25 Apr 1963.",
     "photo_url": "assets/photos/SC-026/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/01/2025012065.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/01/2025012065.jpg",
+    "date_of_birth": "1963-04-24"
   },
   {
     "id": "SC-027",
@@ -472,7 +499,8 @@
     "notes": "Born 03 Oct 1966.",
     "photo_url": "assets/photos/SC-027/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/03/2025032612-e1748754168828.jpeg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/03/2025032612-e1748754168828.jpeg",
+    "date_of_birth": "1966-10-02"
   },
   {
     "id": "SC-028",
@@ -489,7 +517,8 @@
     "notes": "Born 23 Mar 1965.",
     "photo_url": "assets/photos/SC-028/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/05/2025061738.jpeg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/05/2025061738.jpeg",
+    "date_of_birth": "1965-03-22"
   },
   {
     "id": "SC-029",
@@ -506,7 +535,8 @@
     "notes": "Born 26 Mar 1964.",
     "photo_url": "assets/photos/SC-029/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/05/2025080775.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/05/2025080775.jpg",
+    "date_of_birth": "1964-03-25"
   },
   {
     "id": "SC-030",
@@ -523,7 +553,8 @@
     "notes": "Born 07 Apr 1965.",
     "photo_url": "assets/photos/SC-030/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/05/2025082310.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/05/2025082310.jpg",
+    "date_of_birth": "1965-04-06"
   },
   {
     "id": "SC-031",
@@ -540,7 +571,8 @@
     "notes": "Born 13 Apr 1964.",
     "photo_url": "assets/photos/SC-031/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/08/2025091540.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/08/2025091540.jpg",
+    "date_of_birth": "1964-04-12"
   },
   {
     "id": "SC-032",
@@ -557,7 +589,8 @@
     "notes": "Born 28 May 1968.",
     "photo_url": "assets/photos/SC-032/portrait.jpg",
     "photo_source": "Supreme Court of India",
-    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/08/2025082950.jpg"
+    "photo_original_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2025/08/2025082950.jpg",
+    "date_of_birth": "1968-05-27"
   },
   {
     "id": "HC-ALD",
@@ -573,7 +606,8 @@
     "parent_id": "",
     "notes": "Serves Uttar Pradesh. Largest HC by sanctioned strength.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-ALD-CJ",
@@ -589,7 +623,8 @@
     "parent_id": "HC-ALD",
     "notes": "Joined from Rajasthan HC. Retires Oct 2029.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1967-10-14"
   },
   {
     "id": "HC-AP",
@@ -605,7 +640,8 @@
     "parent_id": "",
     "notes": "Established 1 Jan 2019 after bifurcation of AP. Seat: Amaravati.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-AP-CJ",
@@ -621,7 +657,8 @@
     "parent_id": "HC-AP",
     "notes": "Appointed ~May 2026. Succeeded Justice Dhiraj Singh Thakur (retired 24 Apr 2026). Nominated by CJI Surya Kant.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1966-12-04"
   },
   {
     "id": "HC-BOM",
@@ -637,7 +674,8 @@
     "parent_id": "",
     "notes": "Serves Maharashtra; Goa; Dadra & Nagar Haveli; Daman & Diu.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-BOM-CJ",
@@ -653,7 +691,8 @@
     "parent_id": "HC-BOM",
     "notes": "Joined from Jharkhand HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1965-05-24"
   },
   {
     "id": "HC-CAL",
@@ -669,7 +708,8 @@
     "parent_id": "",
     "notes": "Serves West Bengal and Andaman & Nicobar Islands.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-CAL-CJ",
@@ -685,7 +725,8 @@
     "parent_id": "HC-CAL",
     "notes": "Joined from MP HC. Retiring Jun 2026 — very soon.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1964-06-20"
   },
   {
     "id": "HC-CHG",
@@ -701,7 +742,8 @@
     "parent_id": "",
     "notes": "Principal seat: Bilaspur.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-CHG-CJ",
@@ -717,7 +759,8 @@
     "parent_id": "HC-CHG",
     "notes": "Joined from Allahabad HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1964-09-04"
   },
   {
     "id": "HC-DEL",
@@ -733,7 +776,8 @@
     "parent_id": "",
     "notes": "Serves NCT of Delhi.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-DEL-CJ",
@@ -749,7 +793,8 @@
     "parent_id": "HC-DEL",
     "notes": "Previously 47th CJ of Bombay HC. Joined Delhi 21 Jan 2025. Nominated by both CJI D.Y. Chandrachud and CJI Sanjiv Khanna.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1965-06-15"
   },
   {
     "id": "HC-GAU",
@@ -765,7 +810,8 @@
     "parent_id": "",
     "notes": "Serves Assam; Nagaland; Mizoram; Arunachal Pradesh.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-GAU-CJ",
@@ -781,7 +827,8 @@
     "parent_id": "HC-GAU",
     "notes": "Joined from Patna HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1966-09-30"
   },
   {
     "id": "HC-GUJ",
@@ -797,7 +844,8 @@
     "parent_id": "",
     "notes": "",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-GUJ-CJ",
@@ -813,7 +861,8 @@
     "parent_id": "HC-GUJ",
     "notes": "Joined from Allahabad HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1966-04-29"
   },
   {
     "id": "HC-HP",
@@ -829,7 +878,8 @@
     "parent_id": "",
     "notes": "Principal seat: Shimla.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-HP-CJ",
@@ -845,7 +895,8 @@
     "parent_id": "HC-HP",
     "notes": "Joined from Punjab & Haryana HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1965-10-31"
   },
   {
     "id": "HC-JKL",
@@ -861,7 +912,8 @@
     "parent_id": "",
     "notes": "Serves J&K and Ladakh Union Territories.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-JKL-CJ",
@@ -877,7 +929,8 @@
     "parent_id": "HC-JKL",
     "notes": "Joined from Punjab & Haryana HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1964-09-17"
   },
   {
     "id": "HC-JHK",
@@ -893,7 +946,8 @@
     "parent_id": "",
     "notes": "Principal seat: Ranchi.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-JHK-CJ",
@@ -909,7 +963,8 @@
     "parent_id": "HC-JHK",
     "notes": "Joined from Bombay HC. Note: Exact retirement date from DoJ PDF was unclear (entry error); estimated Dec 2026.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1964-12-31"
   },
   {
     "id": "HC-KAR",
@@ -925,7 +980,8 @@
     "parent_id": "",
     "notes": "Principal seat: Bengaluru.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-KAR-CJ",
@@ -941,7 +997,8 @@
     "parent_id": "HC-KAR",
     "notes": "Joined from Delhi HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1966-11-01"
   },
   {
     "id": "HC-KER",
@@ -957,7 +1014,8 @@
     "parent_id": "",
     "notes": "Principal seat: Ernakulam.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-KER-CJ",
@@ -973,7 +1031,8 @@
     "parent_id": "HC-KER",
     "notes": "Joined Kerala 10 Jan 2026. Previously 14th CJ of Meghalaya HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1965-07-27"
   },
   {
     "id": "HC-MP",
@@ -989,7 +1048,8 @@
     "parent_id": "",
     "notes": "Principal seat: Jabalpur.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-MP-CJ",
@@ -1005,7 +1065,8 @@
     "parent_id": "HC-MP",
     "notes": "Joined from Delhi HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1964-12-25"
   },
   {
     "id": "HC-MAD",
@@ -1021,7 +1082,8 @@
     "parent_id": "",
     "notes": "Serves Tamil Nadu and Puducherry. One of oldest HCs.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-MAD-CJ",
@@ -1037,7 +1099,8 @@
     "parent_id": "HC-MAD",
     "notes": "Succeeded M.M. Shrivastava (retired 05 Mar 2026). Nominated by CJI Surya Kant.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1966-08-14"
   },
   {
     "id": "HC-MAN",
@@ -1053,7 +1116,8 @@
     "parent_id": "",
     "notes": "Principal seat: Imphal.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-MAN-CJ",
@@ -1069,7 +1133,8 @@
     "parent_id": "HC-MAN",
     "notes": "Joined from Madras HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1966-07-18"
   },
   {
     "id": "HC-MEG",
@@ -1085,7 +1150,8 @@
     "parent_id": "",
     "notes": "Principal seat: Shillong.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-MEG-CJ",
@@ -1101,7 +1167,8 @@
     "parent_id": "HC-MEG",
     "notes": "Joined from Bombay HC. Retires Nov 2026.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1964-11-27"
   },
   {
     "id": "HC-ORI",
@@ -1117,7 +1184,8 @@
     "parent_id": "",
     "notes": "Principal seat: Cuttack.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-ORI-CJ",
@@ -1133,7 +1201,8 @@
     "parent_id": "HC-ORI",
     "notes": "Joined from Calcutta HC. One of most senior HC judges by initial elevation.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1964-11-15"
   },
   {
     "id": "HC-PAT",
@@ -1149,7 +1218,8 @@
     "parent_id": "",
     "notes": "Serves Bihar.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-PAT-CJ",
@@ -1165,7 +1235,8 @@
     "parent_id": "HC-PAT",
     "notes": "Joined from Orissa HC. Retiring 04 Jun 2026 — only ~23 days away.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1964-06-04"
   },
   {
     "id": "HC-PHC",
@@ -1181,7 +1252,8 @@
     "parent_id": "",
     "notes": "Serves Punjab; Haryana; Chandigarh UT. Seat: Chandigarh.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-PHC-CJ",
@@ -1197,7 +1269,8 @@
     "parent_id": "HC-PHC",
     "notes": "Joined from Madhya Pradesh HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1964-12-31"
   },
   {
     "id": "HC-RAJ",
@@ -1213,7 +1286,8 @@
     "parent_id": "",
     "notes": "Principal seat: Jodhpur; Bench at Jaipur.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-RAJ-CJ",
@@ -1229,7 +1303,8 @@
     "parent_id": "HC-RAJ",
     "notes": "Acting CJ from home court. Retires Sep 2026.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1964-09-26"
   },
   {
     "id": "HC-SIK",
@@ -1245,7 +1320,8 @@
     "parent_id": "",
     "notes": "Principal seat: Gangtok. Smallest HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-SIK-CJ",
@@ -1261,7 +1337,8 @@
     "parent_id": "HC-SIK",
     "notes": "Joined from Kerala HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1967-05-31"
   },
   {
     "id": "HC-TEL",
@@ -1277,7 +1354,8 @@
     "parent_id": "",
     "notes": "Established 1 Jan 2019. Seat: Hyderabad.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-TEL-CJ",
@@ -1293,7 +1371,8 @@
     "parent_id": "HC-TEL",
     "notes": "Joined Telangana 19 Jul 2025. Previously 8th CJ of Tripura HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1965-07-06"
   },
   {
     "id": "HC-TRI",
@@ -1309,7 +1388,8 @@
     "parent_id": "",
     "notes": "Principal seat: Agartala.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-TRI-CJ",
@@ -1325,7 +1405,8 @@
     "parent_id": "HC-TRI",
     "notes": "Joined Tripura 22 Jul 2025. Previously 28th CJ of Himachal Pradesh HC.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1966-08-06"
   },
   {
     "id": "HC-UTK",
@@ -1341,7 +1422,8 @@
     "parent_id": "",
     "notes": "Principal seat: Nainital.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": ""
   },
   {
     "id": "HC-UTK-CJ",
@@ -1357,6 +1439,7 @@
     "parent_id": "HC-UTK",
     "notes": "Joined from Allahabad HC. Retires Oct 2026.",
     "photo_url": "",
-    "photo_source": ""
+    "photo_source": "",
+    "date_of_birth": "1964-10-08"
   }
 ]

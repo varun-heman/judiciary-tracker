@@ -26,6 +26,17 @@ function formatDate(str) {
   return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
 }
 
+function getAge(dobStr) {
+  if (!dobStr) return null;
+  const today = new Date();
+  const dob   = new Date(dobStr + 'T00:00:00');
+  let age = today.getFullYear() - dob.getFullYear();
+  const notYet = today.getMonth() < dob.getMonth() ||
+    (today.getMonth() === dob.getMonth() && today.getDate() < dob.getDate());
+  if (notYet) age--;
+  return age > 0 ? age : null;
+}
+
 function getTenure(retireDateStr) {
   if (!retireDateStr) return { status: 'unknown', label: 'No date', daysLeft: null, pct: 0 };
   const today = new Date(); today.setHours(0, 0, 0, 0);
@@ -242,6 +253,7 @@ function renderCard(person, isHead = false) {
       </div>
       ${progressBar}
       <div class="card-meta">
+        ${person.date_of_birth ? `<div class="meta-row"><span class="meta-icon">👤</span><span>${getAge(person.date_of_birth)} yrs · born ${formatDate(person.date_of_birth)}</span></div>` : ''}
         ${assumedStr  ? `<div class="meta-row"><span class="meta-icon">📅</span><span>In role since ${formatDate(assumedStr)}</span></div>` : ''}
         ${initialStr  ? `<div class="meta-row"><span class="meta-icon">🔰</span><span>Initially elevated ${formatDate(initialStr)}</span></div>` : ''}
         ${retireStr   ? `<div class="meta-row"><span class="meta-icon">🔚</span><span>Retires ${formatDate(retireStr)}</span></div>` : ''}
@@ -601,6 +613,7 @@ function renderAdminCard(cpc) {
       </div>
       <div class="card-meta">
         ${cpc.designation ? `<div class="meta-row"><span class="meta-icon">▣</span><span>${escHtml(cpc.designation)}</span></div>` : ''}
+        ${cpc.date_of_birth ? `<div class="meta-row"><span class="meta-icon">👤</span><span>${getAge(cpc.date_of_birth)} yrs · born ${formatDate(cpc.date_of_birth)}</span></div>` : ''}
         ${renderContactRows(cpc)}
         ${cpc.date_assumed_role ? `<div class="meta-row"><span class="meta-icon">📅</span><span>In role since ${formatDate(cpc.date_assumed_role)}</span></div>` : ''}
         ${cpc.retirement_date ? `<div class="meta-row"><span class="meta-icon">🔚</span><span>Retires ${formatDate(cpc.retirement_date)}</span></div>` : ''}
