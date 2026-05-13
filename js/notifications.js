@@ -6,6 +6,8 @@ const notificationState = {
   query: ''
 };
 
+let applyingNotificationRoute = false;
+
 const SIX_MONTHS_AGO = (() => {
   const d = new Date();
   d.setHours(0, 0, 0, 0);
@@ -89,6 +91,51 @@ function courtList() {
       if (b.id === 'SC') return 1;
       return a.name.localeCompare(b.name);
     });
+}
+
+function validNotificationCourt(id) {
+  return id === 'ALL' || courtList().some(c => c.id === id);
+}
+
+function readNotificationRoute() {
+  return new URLSearchParams(window.location.hash.replace(/^#/, ''));
+}
+
+function applyNotificationRoute() {
+  const params = readNotificationRoute();
+  notificationState.selectedCourt = 'ALL';
+  notificationState.query = '';
+
+  const court = params.get('court') || params.get('view');
+  if (court && validNotificationCourt(court)) notificationState.selectedCourt = court;
+  notificationState.query = (params.get('q') || '').trim();
+
+  const search = document.getElementById('notification-search');
+  if (search) search.value = notificationState.query;
+}
+
+function writeNotificationRoute({ replace = false } = {}) {
+  if (applyingNotificationRoute) return;
+  const params = new URLSearchParams();
+  if (notificationState.selectedCourt !== 'ALL') params.set('court', notificationState.selectedCourt);
+  if (notificationState.query) params.set('q', notificationState.query);
+
+  const baseUrl = window.location.pathname + window.location.search;
+  const nextUrl = params.toString() ? `${baseUrl}#${params.toString()}` : baseUrl;
+  const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+  if (replace) {
+    history.replaceState(null, '', nextUrl);
+  } else if (currentUrl !== nextUrl) {
+    history.pushState(null, '', nextUrl);
+  }
+}
+
+function rerenderNotificationsFromRoute() {
+  applyingNotificationRoute = true;
+  applyNotificationRoute();
+  renderNotificationNav();
+  renderNotifications();
+  applyingNotificationRoute = false;
 }
 
 // Persistent sidebar collapse state for notifications page
@@ -387,6 +434,7 @@ function renderModalTransferPanel(item) {
 
 window.selectNotificationCourt = function(id) {
   notificationState.selectedCourt = id;
+  writeNotificationRoute();
   renderNotificationNav();
   renderNotifications();
   document.getElementById('main-panel').scrollTop = 0;
@@ -414,6 +462,7 @@ async function initNotifications() {
   const search = document.getElementById('notification-search');
   search.addEventListener('input', e => {
     notificationState.query = e.target.value.trim();
+    writeNotificationRoute({ replace: true });
     renderNotifications();
   });
 
@@ -437,6 +486,7 @@ async function initNotifications() {
 
   const ok = await loadNotificationData();
   if (ok) {
+    applyNotificationRoute();
     renderNotificationNav();
     renderNotifications();
   }
@@ -446,4 +496,6 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeNotificationPdf();
 });
 
+window.addEventListener('hashchange', rerenderNotificationsFromRoute);
+window.addEventListener('popstate', rerenderNotificationsFromRoute);
 document.addEventListener('DOMContentLoaded', initNotifications);

@@ -33,6 +33,8 @@ const state = {
   searchQuery: '',
 };
 
+let applyingRoute = false;
+
 // ─────────────────────────────────────────────────────────────────────────────
 // Date & Tenure Helpers
 // ─────────────────────────────────────────────────────────────────────────────
@@ -109,6 +111,70 @@ async function loadData() {
       </div>`;
     return false;
   }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Hash routing
+// ─────────────────────────────────────────────────────────────────────────────
+function validViewId(id) {
+  if (id === 'ADMIN') return true;
+  return state.courts.some(d => d.id === id) || state.ministries.some(d => d.id === id);
+}
+
+function readRoute() {
+  return new URLSearchParams(window.location.hash.replace(/^#/, ''));
+}
+
+function applyRoute() {
+  const params = readRoute();
+  state.selectedId = 'SC';
+  state.searchQuery = '';
+  state.judgeRoleFilter = 'ALL';
+  state.adminRoleFilter = 'ALL';
+  state.judgeTenureRange = 12;
+  state.judgeTenureShowAll = true;
+
+  const view = params.get('view') || params.get('court') || params.get('ministry');
+  if (view && validViewId(view)) state.selectedId = view;
+
+  state.searchQuery = (params.get('q') || '').trim();
+  state.judgeRoleFilter = params.get('judgeRole') || 'ALL';
+  state.adminRoleFilter = params.get('adminRole') || 'ALL';
+  state.judgeTenureRange = Math.min(84, Math.max(1, Number(params.get('months')) || state.judgeTenureRange));
+  state.judgeTenureShowAll = params.get('showAll') !== '0';
+
+  const searchInput = document.getElementById('search-input');
+  if (searchInput) searchInput.value = state.searchQuery;
+}
+
+function writeRoute({ replace = false } = {}) {
+  if (applyingRoute) return;
+  const params = new URLSearchParams();
+  if (state.selectedId && state.selectedId !== 'SC') params.set('view', state.selectedId);
+  if (state.searchQuery) params.set('q', state.searchQuery);
+  if (state.judgeRoleFilter !== 'ALL') params.set('judgeRole', state.judgeRoleFilter);
+  if (state.adminRoleFilter !== 'ALL') params.set('adminRole', state.adminRoleFilter);
+  if (!state.judgeTenureShowAll) {
+    params.set('months', String(state.judgeTenureRange));
+    params.set('showAll', '0');
+  }
+
+  const baseUrl = window.location.pathname + window.location.search;
+  const nextUrl = params.toString() ? `${baseUrl}#${params.toString()}` : baseUrl;
+  const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+  if (replace) {
+    history.replaceState(null, '', nextUrl);
+  } else if (currentUrl !== nextUrl) {
+    history.pushState(null, '', nextUrl);
+  }
+}
+
+function rerenderFromRoute() {
+  applyingRoute = true;
+  applyRoute();
+  renderNav();
+  renderContent();
+  applyingRoute = false;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -500,6 +566,7 @@ function attachSliderListeners() {
   });
 
   slider.addEventListener('change', function () {
+    writeRoute();
     renderContent(); // full re-render on release — slider DOM survives the drag intact
   });
 }
@@ -737,27 +804,33 @@ function renderAdminCard(cpc) {
 // ─────────────────────────────────────────────────────────────────────────────
 window.setAdminRoleFilter = function(role) {
   state.adminRoleFilter = role;
+  writeRoute();
   renderContent();
 };
 
 window.setJudgeRoleFilter = function(key) {
   state.judgeRoleFilter = key;
+  writeRoute();
   renderContent();
 };
 
 window.clearAllRoleFilters = function() {
   state.judgeRoleFilter = 'ALL';
   state.adminRoleFilter = 'ALL';
+  writeRoute();
   renderContent();
 };
 
 window.setJudgeTenureRange = function(value) {
   state.judgeTenureRange = Math.min(84, Math.max(1, Number(value) || 1));
+  state.judgeTenureShowAll = false;
+  writeRoute();
   renderContent();
 };
 
 window.toggleJudgeTenureShowAll = function() {
   state.judgeTenureShowAll = !state.judgeTenureShowAll;
+  writeRoute();
   renderContent();
 };
 
@@ -771,6 +844,7 @@ window.selectView = function(id) {
   state.adminRoleFilter = 'ALL';
   state.judgeTenureShowAll = true;   // always reset to show all on view change
   document.getElementById('search-input').value = '';
+  writeRoute();
   renderNav();
   renderContent();
   document.getElementById('main-panel').scrollTop = 0;
@@ -816,10 +890,16 @@ async function init() {
   const searchInput = document.getElementById('search-input');
   searchInput.addEventListener('input', e => {
     state.searchQuery = e.target.value.trim();
+    writeRoute({ replace: true });
     renderContent();
   });
   searchInput.addEventListener('keydown', e => {
-    if (e.key === 'Escape') { searchInput.value = ''; state.searchQuery = ''; renderContent(); }
+    if (e.key === 'Escape') {
+      searchInput.value = '';
+      state.searchQuery = '';
+      writeRoute();
+      renderContent();
+    }
   });
 
   // Theme toggle
@@ -846,10 +926,13 @@ async function init() {
 
   const ok = await loadData();
   if (ok) {
+    applyRoute();
     renderNav();
     renderContent();
     renderUpcomingPanel();
   }
 }
 
+window.addEventListener('hashchange', rerenderFromRoute);
+window.addEventListener('popstate', rerenderFromRoute);
 document.addEventListener('DOMContentLoaded', init);
