@@ -28,8 +28,10 @@
 <div class="app-layout">
 
   <!-- ── Sidebar ── -->
+  <div class="sidebar-backdrop" id="sidebar-backdrop" aria-hidden="true"></div>
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
+      <button class="sidebar-close-btn" id="sidebar-close" aria-label="Close menu">×</button>
       <div class="logo" role="button" tabindex="0" onclick="selectHome()" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectHome(); }">
         <img class="logo-icon-img" src="assets/icon.png" alt="Judiciary Tracker icon">
         <div>

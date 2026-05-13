@@ -89,6 +89,12 @@ code { font-family: 'Courier New', monospace; background: var(--unknown-bg); pad
   padding: 16px 14px 10px;
   border-bottom: 1px solid rgba(255,255,255,0.08);
   flex-shrink: 0;
+  position: relative;
+}
+
+.sidebar-close-btn,
+.sidebar-backdrop {
+  display: none;
 }
 
 .logo {
@@ -1632,6 +1638,41 @@ body.modal-open {
     box-shadow: var(--shadow-md);
   }
   .sidebar.open { left: 0; }
+  .sidebar-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    background: rgba(15, 23, 42, 0.42);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+  .sidebar-backdrop.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .sidebar-close-btn {
+    display: flex;
+    position: absolute;
+    top: 14px;
+    right: 12px;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    font-size: 24px;
+    line-height: 1;
+  }
+  .sidebar-close-btn:hover {
+    background: rgba(255,255,255,0.14);
+  }
+  .sidebar .logo {
+    padding-right: 42px;
+  }
   .top-bar {
     height: auto;
     min-height: 58px;
