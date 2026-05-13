@@ -30,11 +30,11 @@
   <!-- ── Sidebar ── -->
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
-      <div class="logo">
+      <div class="logo" role="button" tabindex="0" onclick="selectHome()" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectHome(); }">
         <img class="logo-icon-img" src="assets/icon.png" alt="Judiciary Tracker icon">
         <div>
           <div class="logo-title">Judiciary Tracker</div>
-          <div class="logo-sub">by <a href="https://pvt.is" target="_blank" rel="noopener" class="logo-author">Varun Hemachandran</a></div>
+          <div class="logo-sub">by <a href="https://pvt.is" target="_blank" rel="noopener" class="logo-author" onclick="event.stopPropagation()">Varun Hemachandran</a></div>
         </div>
       </div>
       <div class="search-box">

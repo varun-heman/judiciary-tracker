@@ -29,7 +29,7 @@ const state = {
   judgeRoleFilter: 'ALL',
   judgeTenureRange: 12,
   judgeTenureShowAll: true,
-  selectedId: 'SC',
+  selectedId: 'HOME',
   searchQuery: '',
 };
 
@@ -117,7 +117,7 @@ async function loadData() {
 // Hash routing
 // ─────────────────────────────────────────────────────────────────────────────
 function validViewId(id) {
-  if (id === 'ADMIN') return true;
+  if (id === 'HOME' || id === 'ADMIN') return true;
   return state.courts.some(d => d.id === id) || state.ministries.some(d => d.id === id);
 }
 
@@ -127,7 +127,7 @@ function readRoute() {
 
 function applyRoute() {
   const params = readRoute();
-  state.selectedId = 'SC';
+  state.selectedId = 'HOME';
   state.searchQuery = '';
   state.judgeRoleFilter = 'ALL';
   state.adminRoleFilter = 'ALL';
@@ -150,7 +150,7 @@ function applyRoute() {
 function writeRoute({ replace = false } = {}) {
   if (applyingRoute) return;
   const params = new URLSearchParams();
-  if (state.selectedId && state.selectedId !== 'SC') params.set('view', state.selectedId);
+  if (state.selectedId && state.selectedId !== 'HOME') params.set('view', state.selectedId);
   if (state.searchQuery) params.set('q', state.searchQuery);
   if (state.judgeRoleFilter !== 'ALL') params.set('judgeRole', state.judgeRoleFilter);
   if (state.adminRoleFilter !== 'ALL') params.set('adminRole', state.adminRoleFilter);
@@ -190,6 +190,17 @@ function renderNav() {
   const ministries = state.ministries.filter(d => d.type === 'institution');
 
   let html = '';
+
+  html += `
+    <div class="nav-section">
+      <div class="nav-section-items">
+        <a class="nav-item ${state.selectedId === 'HOME' ? 'active' : ''}"
+           href="#" onclick="selectHome(); return false;">
+          <span class="nav-icon">⌂</span>
+          <span class="nav-label">Overview</span>
+        </a>
+      </div>
+    </div>`;
 
   // ── Supreme Court ──
   if (sc) {
@@ -423,6 +434,47 @@ function statsFor(people) {
   return chips.join('');
 }
 
+function percent(part, total) {
+  if (!total) return 0;
+  return Math.round((part / total) * 100);
+}
+
+function plural(n, one, many = `${one}s`) {
+  return `${n} ${n === 1 ? one : many}`;
+}
+
+function dashboardBar(label, value, total, className = '') {
+  const pct = percent(value, total);
+  return `
+    <div class="dash-bar-row ${className}">
+      <div class="dash-bar-label"><span>${escHtml(label)}</span><strong>${value}</strong></div>
+      <div class="dash-bar-track"><div class="dash-bar-fill" style="width:${pct}%"></div></div>
+    </div>`;
+}
+
+function judgeStatusBuckets(judges) {
+  const active = judges.filter(j => {
+    const t = getTenure(j.retirement_date);
+    return t.status !== 'retired';
+  });
+  return {
+    active,
+    within90: active.filter(j => {
+      const t = getTenure(j.retirement_date);
+      return t.daysLeft !== null && t.daysLeft >= 0 && t.daysLeft <= 90;
+    }),
+    within6m: active.filter(j => {
+      const t = getTenure(j.retirement_date);
+      return t.daysLeft !== null && t.daysLeft >= 0 && t.daysLeft <= 183;
+    }),
+    within12m: active.filter(j => {
+      const t = getTenure(j.retirement_date);
+      return t.daysLeft !== null && t.daysLeft >= 0 && t.daysLeft <= 365;
+    }),
+    unknown: active.filter(j => getTenure(j.retirement_date).daysLeft === null)
+  };
+}
+
 function isJudgeRecord(row) {
   return row && (row.type === 'supreme_court' || row.type === 'high_court');
 }
@@ -614,6 +666,11 @@ function renderContent() {
     return;
   }
 
+  if (state.selectedId === 'HOME') {
+    container.innerHTML = renderDashboardView();
+    return;
+  }
+
   // ── Normal view ──
   const root = all.find(d => d.id === state.selectedId);
   if (!root) {
@@ -638,6 +695,134 @@ function renderContent() {
 
   container.innerHTML = html;
   attachSliderListeners();
+}
+
+function renderDashboardView() {
+  const courtInstitutions = state.courts.filter(d => d.type === 'institution');
+  const highCourts = courtInstitutions.filter(c => c.id !== 'SC');
+  const judges = state.courts.filter(isJudgeRecord);
+  const buckets = judgeStatusBuckets(judges);
+  const courtsWithJudges = courtInstitutions.filter(c => judges.some(j => j.parent_id === c.id));
+  const courtsWithAdmin = courtInstitutions.filter(c => state.adminStaff.some(a => a.court_id === c.id));
+  const photoCount = judges.filter(j => j.photo_url).length;
+  const adminRoles = uniqueAdminRoles(state.adminStaff);
+  const ministryPeople = state.ministries.filter(d => d.type !== 'institution').length;
+  const courtRows = courtInstitutions.map(c => {
+    const courtJudges = judges.filter(j => j.parent_id === c.id);
+    const courtBuckets = judgeStatusBuckets(courtJudges);
+    return {
+      id: c.id,
+      name: c.name,
+      active: courtBuckets.active.length,
+      within12m: courtBuckets.within12m.length,
+      within90: courtBuckets.within90.length
+    };
+  }).sort((a, b) => b.within12m - a.within12m || b.within90 - a.within90 || a.name.localeCompare(b.name));
+  const topRetiringCourts = courtRows.filter(c => c.within12m > 0).slice(0, 6);
+  const roleCounts = ['Chief Justice', 'Judge', 'Additional Judge'].map(role => ({
+    role,
+    count: judges.filter(j => role === 'Chief Justice'
+      ? /chief justice/i.test(j.role || '')
+      : (j.role || '') === role
+    ).length
+  })).filter(r => r.count > 0);
+
+  return `
+    <div class="dashboard-view">
+      <section class="dashboard-hero">
+        <div>
+          <p class="dashboard-kicker">India Judiciary Tracker</p>
+          <h2>Overview</h2>
+          <p class="dashboard-subtitle">A public, AI-parsed snapshot of tracked courts, sitting judges, court administration and upcoming retirements.</p>
+        </div>
+        <a class="dashboard-action" href="notifications.html">Judge/Staff Transfer Notifications</a>
+      </section>
+
+      <section class="dashboard-metrics" aria-label="Tracker summary">
+        <button class="dashboard-metric" onclick="selectView('SC')">
+          <span class="metric-label">Courts tracked</span>
+          <strong>${courtInstitutions.length}</strong>
+          <span>${plural(highCourts.length, 'High Court')} plus Supreme Court</span>
+        </button>
+        <button class="dashboard-metric" onclick="selectView('SC')">
+          <span class="metric-label">Sitting judges</span>
+          <strong>${buckets.active.length}</strong>
+          <span>${percent(photoCount, judges.length)}% have local photos</span>
+        </button>
+        <button class="dashboard-metric critical" onclick="selectView('SC')">
+          <span class="metric-label">Retiring within 90 days</span>
+          <strong>${buckets.within90.length}</strong>
+          <span>Across all tracked courts</span>
+        </button>
+        <button class="dashboard-metric warning" onclick="selectView('SC')">
+          <span class="metric-label">Retiring within 12 months</span>
+          <strong>${buckets.within12m.length}</strong>
+          <span>${percent(buckets.within12m.length, buckets.active.length)}% of active judges</span>
+        </button>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="dashboard-panel">
+          <div class="panel-heading">
+            <h3>Retirement Pipeline</h3>
+            <p>How many active judges are due to retire in common planning windows.</p>
+          </div>
+          ${dashboardBar('Within 90 days', buckets.within90.length, buckets.active.length, 'critical')}
+          ${dashboardBar('Within 6 months', buckets.within6m.length, buckets.active.length, 'warning')}
+          ${dashboardBar('Within 12 months', buckets.within12m.length, buckets.active.length, 'warning')}
+          ${dashboardBar('Date unavailable', buckets.unknown.length, buckets.active.length, 'unknown')}
+        </article>
+
+        <article class="dashboard-panel">
+          <div class="panel-heading">
+            <h3>Data Coverage</h3>
+            <p>What this static tracker currently has structured data for.</p>
+          </div>
+          ${dashboardBar('Courts with judge records', courtsWithJudges.length, courtInstitutions.length)}
+          ${dashboardBar('Courts with admin/staff records', courtsWithAdmin.length, courtInstitutions.length)}
+          ${dashboardBar('Judges with local photos', photoCount, judges.length)}
+          ${dashboardBar('Court admin role categories', adminRoles.length, Math.max(adminRoles.length, 12), 'neutral')}
+        </article>
+
+        <article class="dashboard-panel">
+          <div class="panel-heading">
+            <h3>Judge Mix</h3>
+            <p>Current tracked records by role label.</p>
+          </div>
+          ${roleCounts.map(r => dashboardBar(r.role, r.count, judges.length)).join('')}
+        </article>
+
+        <article class="dashboard-panel">
+          <div class="panel-heading">
+            <h3>Court Administration</h3>
+            <p>Registry, CPC and other administrative records separated from judge records.</p>
+          </div>
+          <div class="dash-split-stat">
+            <div><strong>${state.adminStaff.length}</strong><span>court staff records</span></div>
+            <div><strong>${adminRoles.length}</strong><span>role filters</span></div>
+            <div><strong>${ministryPeople}</strong><span>ministry people</span></div>
+          </div>
+          <button class="dashboard-secondary-action" onclick="selectView('ADMIN')">Explore administration</button>
+        </article>
+      </section>
+
+      <section class="dashboard-panel wide">
+        <div class="panel-heading">
+          <h3>Courts With Upcoming Judge Retirements</h3>
+          <p>Courts with at least one judge retiring within the next 12 months.</p>
+        </div>
+        ${topRetiringCourts.length
+          ? `<div class="retirement-court-list">
+              ${topRetiringCourts.map(c => `
+                <button class="retirement-court-row" onclick="selectView('${escAttr(c.id)}')">
+                  <span>${escHtml(c.name)}</span>
+                  <strong>${c.within12m}</strong>
+                  <em>${c.within90 ? `${c.within90} within 90d` : `${c.active} active judges`}</em>
+                </button>`).join('')}
+            </div>`
+          : `<div class="empty-state compact"><p>No tracked judge retirements within 12 months.</p></div>`}
+      </section>
+    </div>`;
 }
 
 function renderCourtView(root, all, children) {
@@ -832,6 +1017,20 @@ window.toggleJudgeTenureShowAll = function() {
   state.judgeTenureShowAll = !state.judgeTenureShowAll;
   writeRoute();
   renderContent();
+};
+
+window.selectHome = function() {
+  state.selectedId = 'HOME';
+  state.searchQuery = '';
+  state.judgeRoleFilter = 'ALL';
+  state.adminRoleFilter = 'ALL';
+  state.judgeTenureShowAll = true;
+  const searchInput = document.getElementById('search-input');
+  if (searchInput) searchInput.value = '';
+  writeRoute();
+  renderNav();
+  renderContent();
+  document.getElementById('main-panel').scrollTop = 0;
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
