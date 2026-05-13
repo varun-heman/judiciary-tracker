@@ -143,14 +143,14 @@ function renderCourtGroup(court, items) {
 function renderNotificationRow(item) {
   const isPdf = item.file_type === 'pdf' || /\.pdf($|\?)/i.test(item.url);
   return `
-    <a class="notification-row" href="${escHtml(item.url)}" target="_blank" rel="noopener">
+    <div class="notification-row">
       <div class="notification-date">${formatDate(item.date)}</div>
       <div class="notification-main">
-        <div class="notification-title">${escHtml(item.title)}</div>
+        <a class="notification-title" href="${escHtml(item.url)}" target="_blank" rel="noopener">${escHtml(item.title)}</a>
         <div class="notification-meta">${escHtml(item.category || 'Notification')} · ${escHtml(item.court)} · Source index: ${sourceLink(item.source_page)}</div>
       </div>
-      <div class="notification-file ${isPdf ? 'pdf' : 'index'}">${isPdf ? 'PDF' : 'Index'}</div>
-    </a>`;
+      <a class="notification-file ${isPdf ? 'pdf' : 'index'}" href="${escHtml(item.url)}" target="_blank" rel="noopener">${isPdf ? 'PDF' : 'Index'}</a>
+    </div>`;
 }
 
 function renderEmptySources(sources) {

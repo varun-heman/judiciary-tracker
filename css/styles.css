@@ -705,10 +705,16 @@ code { font-family: 'Courier New', monospace; background: var(--unknown-bg); pad
 }
 
 .notification-title {
+  display: inline;
   font-size: 13px;
   font-weight: 700;
   color: var(--text);
   line-height: 1.35;
+}
+
+.notification-title:hover {
+  color: var(--accent2);
+  text-decoration: underline;
 }
 
 .notification-meta {
@@ -719,6 +725,9 @@ code { font-family: 'Courier New', monospace; background: var(--unknown-bg); pad
 
 .notification-file {
   justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 10px;
   font-weight: 800;
   letter-spacing: .04em;
