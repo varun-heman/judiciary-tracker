@@ -298,6 +298,7 @@ function renderCard(person, isHead = false) {
         ${initialStr  ? `<div class="meta-row"><span class="meta-icon">🔰</span><span>Initially elevated ${formatDate(initialStr)}</span></div>` : ''}
         ${retireStr   ? `<div class="meta-row"><span class="meta-icon">🔚</span><span>Retires ${formatDate(retireStr)}</span></div>` : ''}
         ${renderContactRows(person)}
+        ${person.source_url ? `<div class="meta-row"><span class="meta-icon">↗</span><span><a class="inline-link" href="${escHtml(person.source_url)}" target="_blank" rel="noopener">${escHtml(person.source_label || 'Official source')}</a></span></div>` : ''}
         ${person.photo_source ? `<div class="meta-row"><span class="meta-icon">▧</span><span>Photo: ${escHtml(person.photo_source)}</span></div>` : ''}
         ${person.notes ? `<div class="meta-row notes-row"><span class="meta-icon">ℹ</span><span>${person.notes}</span></div>` : ''}
       </div>
