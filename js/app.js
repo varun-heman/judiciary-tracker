@@ -115,10 +115,7 @@ function renderNav() {
   // ── Supreme Court ──
   if (sc) {
     const scJudges = state.courts.filter(d => d.parent_id === 'SC');
-    const scAlert  = scJudges.filter(d => {
-      const t = getTenure(d.retirement_date);
-      return t.status === 'critical';
-    }).length;
+    const scAlert = retiringWithin90Count(sc.id);
     html += `
       <div class="nav-section">
         <div class="nav-section-title">Apex Court</div>
@@ -137,12 +134,13 @@ function renderNav() {
   hcs.forEach(hc => {
     const cj = state.courts.find(d => d.parent_id === hc.id);
     const tenure = cj ? getTenure(cj.retirement_date) : { status: 'unknown' };
+    const criticalCount = retiringWithin90Count(hc.id);
     html += `
       <a class="nav-item ${state.selectedId === hc.id ? 'active' : ''}"
          href="#" onclick="selectView('${hc.id}'); return false;">
         <span class="nav-dot ${tenure.status}"></span>
         <span class="nav-label">${hc.name.replace(' High Court', ' HC')}</span>
-        ${tenure.status === 'critical' ? `<span class="nav-badge critical">!</span>` : ''}
+        ${criticalCount ? `<span class="nav-badge critical">${criticalCount}</span>` : ''}
       </a>`;
   });
   html += `</div>`;
@@ -187,6 +185,14 @@ function renderNav() {
     </div>`;
 
   nav.innerHTML = html;
+}
+
+function retiringWithin90Count(courtId) {
+  return state.courts.filter(person => {
+    if (person.parent_id !== courtId || !isJudgeRecord(person)) return false;
+    const tenure = getTenure(person.retirement_date);
+    return tenure.daysLeft !== null && tenure.daysLeft >= 0 && tenure.daysLeft <= 90;
+  }).length;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
