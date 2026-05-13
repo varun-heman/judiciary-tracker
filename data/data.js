@@ -8595,7 +8595,10 @@ window.ADMIN_STAFF_DATA = [
     "email": "reggentaphc@gov.in",
     "notes": "Place of posting: Vijayawada (Amaravati).",
     "source_url": "https://aphc.gov.in/registry.php",
-    "source_label": "AP HC registry page"
+    "source_label": "AP HC registry page",
+    "photo_original_url": "https://aphc.gov.in/images/300920241657596.png",
+    "photo_url": "assets/photos/ADMIN-AP-001/portrait.png",
+    "photo_source": "Andhra Pradesh High Court"
   },
   {
     "id": "ADMIN-AP-002",
@@ -8609,7 +8612,10 @@ window.ADMIN_STAFF_DATA = [
     "email": "regvigaphc@nic.in",
     "notes": "Native: East Godavari. Place of posting: Vijayawada.",
     "source_url": "https://aphc.gov.in/registry.php",
-    "source_label": "AP HC registry page"
+    "source_label": "AP HC registry page",
+    "photo_original_url": "https://aphc.gov.in/images/30092024165759.png",
+    "photo_url": "assets/photos/ADMIN-AP-002/portrait.png",
+    "photo_source": "Andhra Pradesh High Court"
   },
   {
     "id": "ADMIN-AP-003",
@@ -8617,13 +8623,17 @@ window.ADMIN_STAFF_DATA = [
     "court": "Andhra Pradesh High Court",
     "name": "Dr. Shaik Mohd. Fazulullah",
     "role": "Registrar (Recruitment)",
-    "role_group": "Registrar Administration",
+    "role_group": "Registrar Recruitment",
     "date_of_birth": "1968-06-10",
     "joining_date": "1999-05-23",
     "email": "registrarrecruitment.aphc@gmail.com",
     "notes": "",
     "source_url": "https://aphc.gov.in/registry.php",
-    "source_label": "AP HC registry page"
+    "source_label": "AP HC registry page",
+    "photo_original_url": "https://aphc.gov.in/images/30092024174222.png",
+    "photo_url": "assets/photos/ADMIN-AP-003/portrait.png",
+    "photo_source": "Andhra Pradesh High Court",
+    "designation": "Registrar (Recruitment)"
   },
   {
     "id": "ADMIN-AP-004",
@@ -8637,7 +8647,10 @@ window.ADMIN_STAFF_DATA = [
     "email": "cpc-ap@aij.gov.in",
     "notes": "Native: Vemulabanada, Prakasam District.",
     "source_url": "https://aphc.gov.in/registry.php",
-    "source_label": "AP HC registry page"
+    "source_label": "AP HC registry page",
+    "photo_original_url": "https://aphc.gov.in/images/02102024112911.png",
+    "photo_url": "assets/photos/ADMIN-AP-004/portrait.png",
+    "photo_source": "Andhra Pradesh High Court"
   },
   {
     "id": "ADMIN-AP-005",
@@ -8651,7 +8664,10 @@ window.ADMIN_STAFF_DATA = [
     "email": "regadmtaphc@gov.in",
     "notes": "",
     "source_url": "https://aphc.gov.in/registry.php",
-    "source_label": "AP HC registry page"
+    "source_label": "AP HC registry page",
+    "photo_original_url": "https://aphc.gov.in/images/01102024101259.png",
+    "photo_url": "assets/photos/ADMIN-AP-005/portrait.png",
+    "photo_source": "Andhra Pradesh High Court"
   }
 ];
 window.NOTIFICATIONS_DATA = [
