@@ -12,6 +12,7 @@ const state = {
   adminStaff: [],
   adminRoleFilter: 'ALL',
   judgeTenureRange: 12,
+  judgeTenureShowAll: false,
   selectedId: 'SC',
   searchQuery: '',
 };
@@ -324,6 +325,7 @@ function judgeTenureRangeLabel() {
 
 function matchesJudgeTenureFilter(person) {
   if (!isJudgeRecord(person)) return true;
+  if (state.judgeTenureShowAll) return true;
   const tenure = getTenure(person.retirement_date);
   return tenure.daysLeft !== null && tenure.daysLeft >= 0 && tenure.daysLeft <= judgeTenureRangeDays();
 }
@@ -331,15 +333,23 @@ function matchesJudgeTenureFilter(person) {
 function renderJudgeTenureFilterBar(judges) {
   if (!judges.length) return '';
   const value = Math.min(84, Math.max(1, Number(state.judgeTenureRange) || 1));
+  const showAll = state.judgeTenureShowAll;
   const count = judges.filter(matchesJudgeTenureFilter).length;
   return `
     <div class="judge-filter-bar" aria-label="Filter judges by time left">
       <div class="judge-range-summary">
-        <span>Retiring within</span>
-        <strong id="judge-range-label">${escHtml(judgeTenureRangeLabel())}</strong>
-        <span id="judge-range-count">${count} match${count === 1 ? '' : 'es'}</span>
+        ${showAll
+          ? `<span>Showing <strong id="judge-range-label">all judges</strong></span>`
+          : `<span>Retiring within</span>
+             <strong id="judge-range-label">${escHtml(judgeTenureRangeLabel())}</strong>`}
+        <span id="judge-range-count">${count} shown</span>
       </div>
-      <input class="judge-range-slider" id="judge-range-slider" type="range" min="1" max="84" step="1" value="${value}">
+      <input class="judge-range-slider${showAll ? ' slider-dimmed' : ''}" id="judge-range-slider"
+             type="range" min="1" max="84" step="1" value="${value}">
+      <button class="show-all-btn${showAll ? ' active' : ''}" onclick="toggleJudgeTenureShowAll()"
+              title="${showAll ? 'Switch back to date filter' : 'Show all judges regardless of retirement date'}">
+        ${showAll ? '✕ Show all' : 'Show all'}
+      </button>
     </div>`;
 }
 
@@ -355,6 +365,8 @@ function attachSliderListeners() {
   slider.addEventListener('input', function () {
     const v = Math.min(84, Math.max(1, Number(this.value) || 1));
     state.judgeTenureRange = v;
+    // Moving the slider always re-enables date filtering
+    state.judgeTenureShowAll = false;
     if (labelEl) labelEl.textContent = `${v} month${v === 1 ? '' : 's'}`;
     // Live count update from current court's judges
     if (countEl) {
@@ -362,7 +374,7 @@ function attachSliderListeners() {
         ? state.courts.filter(d => d.parent_id === state.selectedId && isJudgeRecord(d))
         : state.courts.filter(isJudgeRecord);
       const n = judges.filter(matchesJudgeTenureFilter).length;
-      countEl.textContent = `${n} match${n === 1 ? '' : 'es'}`;
+      countEl.textContent = `${n} shown`;
     }
   });
 
@@ -608,6 +620,11 @@ window.setAdminRoleFilter = function(role) {
 
 window.setJudgeTenureRange = function(value) {
   state.judgeTenureRange = Math.min(84, Math.max(1, Number(value) || 1));
+  renderContent();
+};
+
+window.toggleJudgeTenureShowAll = function() {
+  state.judgeTenureShowAll = !state.judgeTenureShowAll;
   renderContent();
 };
 

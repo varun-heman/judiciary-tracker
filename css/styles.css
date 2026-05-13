@@ -294,7 +294,7 @@ code { font-family: 'Courier New', monospace; background: var(--unknown-bg); pad
 .judge-filter-bar {
   align-items: center;
   display: grid;
-  grid-template-columns: minmax(320px, auto) minmax(240px, 1fr);
+  grid-template-columns: minmax(260px, auto) minmax(180px, 1fr) auto;
   gap: 18px;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--border);
@@ -325,6 +325,48 @@ code { font-family: 'Courier New', monospace; background: var(--unknown-bg); pad
 .judge-range-slider {
   width: 100%;
   accent-color: var(--accent2);
+  transition: opacity var(--transition);
+}
+.judge-range-slider.slider-dimmed {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.show-all-btn {
+  margin-left: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+.show-all-btn:hover {
+  background: var(--bg);
+  border-color: var(--accent2);
+  color: var(--accent2);
+}
+.show-all-btn.active {
+  background: var(--accent2);
+  border-color: var(--accent2);
+  color: #fff;
+}
+body.dark .show-all-btn {
+  border-color: #334155;
+  color: var(--text-muted);
+}
+body.dark .show-all-btn:hover {
+  border-color: var(--accent2);
+  color: var(--accent2);
+  background: transparent;
+}
+body.dark .show-all-btn.active {
+  background: var(--accent2);
+  color: #fff;
 }
 
 .admin-toolbar {
@@ -1187,6 +1229,10 @@ body.modal-open {
   .cards-grid { grid-template-columns: 1fr; }
   .judge-filter-bar {
     grid-template-columns: 1fr;
+  }
+  .show-all-btn {
+    margin-left: 0;
+    width: 100%;
   }
   .notification-row {
     grid-template-columns: 1fr;
