@@ -460,9 +460,16 @@ function formatRupees(value) {
 
 function assetValueLabel(assets) {
   if (!assets) return '';
-  const value = assetNumber(assets);
-  if (value !== null && value > 0) return `Disclosed monetary assets ${formatRupees(value)}+`;
-  if (assets.source_url) return 'Asset declaration available';
+  const metrics = assets.metrics || {};
+  const parts = [];
+  const value = assetNumber(assets) || Number(metrics.monetary_total);
+  if (value) parts.push(`💰 ${formatRupees(value)}+`);
+  if (Number(metrics.gold_grams) >= 1000) parts.push(`🏅 ${formatWeight(metrics.gold_grams)} gold`);
+  if (Number(metrics.vehicles_count) > 0) parts.push(`🚗 ${plural(Number(metrics.vehicles_count), 'vehicle')}`);
+  if (Number(metrics.real_estate_count) > 0) parts.push(`🏠 ${plural(Number(metrics.real_estate_count), 'property', 'properties')}`);
+  if (Number(metrics.land_acres) > 0) parts.push(`🌾 ${Number(metrics.land_acres).toLocaleString('en-IN')} acres`);
+  if (parts.length) return parts.slice(0, 4).join(' · ');
+  if (assets.source_url) return '📄 Asset declaration available';
   return '';
 }
 
@@ -470,15 +477,52 @@ function assetList(items) {
   if (!Array.isArray(items) || items.length === 0) {
     return '<div class="asset-empty">No sourced entries added yet.</div>';
   }
-  return items.map(item => `
-    <div class="asset-row">
-      <div>
-        <strong>${escHtml(item.label || item.type || 'Asset')}</strong>
-        ${item.owner ? `<span>${escHtml(item.owner)}</span>` : ''}
-        ${item.description ? `<p>${escHtml(item.description)}</p>` : ''}
+  const visibleItems = items.filter(hasAssetGroupContent);
+  if (!visibleItems.length) {
+    return '<div class="asset-empty">No sourced entries added yet.</div>';
+  }
+  return visibleItems.map(item => `
+    <div class="asset-group ${escAttr(item.category || '')}">
+      <div class="asset-group-head">
+        <div>
+          <strong>${item.emoji ? `<span class="asset-emoji">${escHtml(item.emoji)}</span>` : ''}${escHtml(item.label || item.type || 'Asset')}</strong>
+          ${item.owner ? `<span>${escHtml(item.owner)}</span>` : ''}
+        </div>
+        <em>${assetGroupMeta(item)}</em>
       </div>
-      <em>${assetNumber(item) !== null ? formatRupees(assetNumber(item)) : 'Not valued'}</em>
+      ${item.description ? `<p class="asset-group-desc">${escHtml(item.description)}</p>` : ''}
+      ${Array.isArray(item.items) && item.items.length
+        ? `<ul class="asset-item-list">${item.items.map(entry => `<li>${escHtml(entry)}</li>`).join('')}</ul>`
+        : '<div class="asset-empty">No separated entries found in the declaration.</div>'}
     </div>`).join('');
+}
+
+function hasAssetGroupContent(item) {
+  if (!item) return false;
+  if (Array.isArray(item.items) && item.items.length) return true;
+  if (Number(assetNumber(item)) > 0) return true;
+  return Number(item.gold_grams) > 0
+    || Number(item.silver_grams) > 0
+    || Number(item.count) > 0
+    || Number(item.acres) > 0;
+}
+
+function assetGroupMeta(item) {
+  const value = assetNumber(item);
+  const bits = [];
+  if (value !== null && value > 0) bits.push(formatRupees(value));
+  if (Number(item.gold_grams) > 0) bits.push(`${formatWeight(item.gold_grams)} gold`);
+  if (Number(item.silver_grams) > 0) bits.push(`${formatWeight(item.silver_grams)} silver`);
+  if (Number(item.count) > 0) bits.push(plural(Number(item.count), 'vehicle'));
+  if (Number(item.acres) > 0) bits.push(`${Number(item.acres).toLocaleString('en-IN')} acres`);
+  return bits.length ? escHtml(bits.join(' · ')) : 'Not valued';
+}
+
+function formatWeight(grams) {
+  const n = Number(grams);
+  if (!Number.isFinite(n)) return '';
+  if (n >= 1000) return `${(n / 1000).toFixed(n % 1000 ? 2 : 0)}kg`;
+  return `${Math.round(n)}g`;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────

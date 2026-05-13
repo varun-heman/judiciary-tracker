@@ -71,6 +71,107 @@ def compact_excerpt(text, limit=900):
     return text[:limit].rstrip() + ("..." if len(text) > limit else "")
 
 
+def clean_item(text, limit=240):
+    text = re.sub(r"\s+", " ", text).strip(" -–;,.")
+    text = re.sub(r"\b(?:NIL|-NA-)\b", "", text, flags=re.I).strip(" -–;,.")
+    if not text:
+        return ""
+    return text[:limit].rstrip() + ("..." if len(text) > limit else "")
+
+
+def split_asset_items(text):
+    text = re.sub(r"See\s*:\s*Sl\.\s*No\.[^.]+", " ", text, flags=re.I)
+    text = re.sub(r"(?:SELF/JOINT FAMILY|SPOUSE/JOINT FAMILY|DEPENDENT\(S\), IF ANY)", " ", text, flags=re.I)
+    parts = re.split(r"(?=\b\d+\.\s+|\([a-z]\)\s+)", text)
+    items = []
+    for part in parts:
+        item = clean_item(part)
+        if item and not re.fullmatch(r"(?:nil|na|-)+", item, flags=re.I):
+            items.append(item)
+    return items
+
+
+def amount_contexts(text):
+    pattern = r"(?:Rs\.?|₹)\s*[0-9][0-9,]*(?:\.[0-9]+)?(?:\s*(?:cr\.?|crores?|lakhs?|lacs?))?"
+    seen = set()
+    items = []
+    candidates = split_asset_items(text)
+    if not candidates:
+        candidates = re.split(r"(?<=[.;])\s+", text)
+    for candidate in candidates:
+        if not re.search(pattern, candidate, flags=re.I):
+            continue
+        marker = re.search(r"(?:Investments\s+)?Shares\s*/\s*Mutual|FDRs?\s*:", candidate, flags=re.I)
+        if marker and marker.start() > 0:
+            candidate = candidate[marker.start():]
+        candidate = re.split(r"\s+Movable\s+Property\s+", candidate, maxsplit=1, flags=re.I)[0]
+        candidate = re.split(r"\s+Real\s+Estate\s+", candidate, maxsplit=1, flags=re.I)[0]
+        context = clean_item(candidate, 260)
+        key = re.sub(r"\s+", " ", context.lower())
+        if context and key not in seen:
+            seen.add(key)
+            items.append(context)
+    return items
+
+
+def metal_weight(text, metal):
+    total_g = 0.0
+    patterns = [
+        rf"{metal}[^\n]{{0,60}}?([0-9][0-9,.]*)\s*(kgs?|kilograms?|gms?|grams?)",
+        rf"([0-9][0-9,.]*)\s*(kgs?|kilograms?|gms?|grams?)\s+{metal}",
+    ]
+    for pattern in patterns:
+        for amount, unit in re.findall(pattern, text, flags=re.I):
+            value = float(amount.replace(",", ""))
+            if unit.lower().startswith(("kg", "kilogram")):
+                value *= 1000
+            total_g += value
+    return round(total_g)
+
+
+def acres_total(text):
+    total = 0.0
+    for raw in re.findall(r"([0-9][0-9,.]*)\s*(?:&\s*half\s*)?acres?", text, flags=re.I):
+        total += float(raw.replace(",", ""))
+    for raw in re.findall(r"([0-9][0-9,.]*)\s*&\s*half\s+acres?", text, flags=re.I):
+        total += 0.5
+    return round(total, 2)
+
+
+def vehicle_items(text):
+    brand_pattern = r"(?:Volkswagen|Honda|Toyota|Maruti|Mahindra|Hyundai|Tata|Ford|Renault|Skoda|Kia|BMW|Mercedes|Audi|Scooter|Motor\s*cycle|Motorcycle)[^.;\n]*"
+    items = []
+    for match in re.finditer(brand_pattern, text, flags=re.I):
+        item = clean_item(match.group(0), 180)
+        if item and not re.search(r"\bnil\b", item, flags=re.I):
+            items.append(item)
+    if items:
+        return list(dict.fromkeys(items))
+    for part in re.split(r"(?=Vehicle\s*:|Car\s*:|Motor\s+)", text, flags=re.I):
+        if re.match(r"\s*(?:vehicle|car|motor)", part, flags=re.I):
+            item = clean_item(part, 180)
+            if item and not re.search(r"vehicle\s*:\s*nil|car\s*:\s*nil", item, flags=re.I):
+                items.append(item)
+    return list(dict.fromkeys(items))
+
+
+def jewellery_items(text):
+    items = []
+    for metal in ("gold", "silver"):
+        grams = metal_weight(text, metal)
+        if grams:
+            amount = f"{grams / 1000:g} kg" if grams >= 1000 else f"{grams:g} g"
+            items.append(f"{amount} {metal}")
+    if items:
+        return list(dict.fromkeys(items))
+    for part in re.split(r"(?=Jewellery\s*:|Gold|Silver|Ornaments|Watch)", text, flags=re.I):
+        if re.match(r"\s*(?:jewellery|gold|silver|ornaments|watch)", part, flags=re.I):
+            item = clean_item(part, 200)
+            if item and not re.search(r"jewellery\s*:\s*nil", item, flags=re.I):
+                items.append(item)
+    return list(dict.fromkeys(items))
+
+
 def parse_index(html_text):
     rows = re.findall(
         r"<tr>\s*<td[^>]*>\s*\d+\s*</td>\s*<td[^>]*>(.*?)</td>\s*<td[^>]*>\s*<a[^>]+href=[\"']([^\"']+)[\"']",
@@ -97,28 +198,84 @@ def parse_asset_page(page_html):
         if re.search(r"spouse|daughter|son|dependent|joint family|HUF", line, flags=re.I)
     ]
     all_values = rupee_values(declaration_text)
-    movable_values = rupee_values(investments_text + "\n" + movable_text)
+    movable_block = investments_text + "\n" + movable_text
+    movable_values = rupee_values(movable_block)
     family_values = rupee_values("\n".join(family_lines))
+    money_items = amount_contexts(movable_block)
+    property_items = split_asset_items(immovable_text)
+    land_items = [item for item in property_items if re.search(r"acre|agricultural|land|bigha", item, flags=re.I)]
+    residential_items = [item for item in property_items if item not in land_items]
+    jewellery = jewellery_items(movable_text)
+    vehicles = vehicle_items(movable_text)
+    gold_g = metal_weight(movable_text, "gold")
+    silver_g = metal_weight(movable_text, "silver")
+    acres = acres_total(immovable_text)
+    real_estate_count = len([item for item in property_items if re.search(r"house|apartment|flat|bungalow|plot|property|land|acre|bigha", item, flags=re.I)])
 
     return {
         "total_value": sum(all_values) if all_values else None,
         "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+        "metrics": {
+            "monetary_total": sum(all_values) if all_values else None,
+            "gold_grams": gold_g or None,
+            "silver_grams": silver_g or None,
+            "vehicles_count": len(vehicles),
+            "real_estate_count": real_estate_count,
+            "land_acres": acres or None
+        },
         "movable": [{
-            "label": "Investments and movable property",
+            "category": "money",
+            "emoji": "💰",
+            "label": "Money, deposits and investments",
             "owner": "Self/spouse/dependents as disclosed",
-            "description": compact_excerpt((investments_text + " " + movable_text).strip()),
+            "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+            "items": money_items[:10],
             "value": sum(movable_values) if movable_values else None
+        }, {
+            "category": "jewellery",
+            "emoji": "🏅",
+            "label": "Jewellery and valuables",
+            "owner": "Self/spouse/dependents as disclosed",
+            "description": "Gold, silver, watches and other valuables where declared.",
+            "items": jewellery[:10],
+            "value": None,
+            "gold_grams": gold_g or None,
+            "silver_grams": silver_g or None
+        }, {
+            "category": "vehicles",
+            "emoji": "🚗",
+            "label": "Vehicles",
+            "owner": "Self/spouse/dependents as disclosed",
+            "description": "Cars or other vehicles where declared.",
+            "items": vehicles[:8],
+            "value": None,
+            "count": len(vehicles)
         }],
         "immovable": [{
-            "label": "Real estate / immovable property",
+            "category": "property",
+            "emoji": "🏠",
+            "label": "Homes, flats, plots and buildings",
             "owner": "Self/joint family/spouse/dependents as disclosed",
-            "description": compact_excerpt(immovable_text),
+            "description": "Residential and built-property interests listed in the declaration.",
+            "items": residential_items[:12],
             "value": None
+        }, {
+            "category": "land",
+            "emoji": "🌾",
+            "label": "Agricultural / landed property",
+            "owner": "Self/joint family/spouse/dependents as disclosed",
+            "description": "Agricultural land and other land interests listed in the declaration.",
+            "items": land_items[:12],
+            "value": None,
+            "acres": acres or None
         }],
         "family": [{
+            "category": "family",
+            "emoji": "👪",
             "label": "Family and dependent entries",
             "owner": "Spouse/joint family/dependents as disclosed",
-            "description": compact_excerpt(" ".join(family_lines)),
+            "description": "Family, HUF, spouse and dependent references visible in the public declaration.",
+            "items": [clean_item(line, 220) for line in family_lines if clean_item(line, 220)][:12],
             "value": sum(family_values) if family_values else None
         }] if family_lines else [],
         "raw_title": title_match.group(1).strip() if title_match else ""
@@ -158,6 +315,7 @@ def main():
             "last_verified": "2026-05-13",
             "total_value": parsed["total_value"],
             "total_value_type": parsed["total_value_type"],
+            "metrics": parsed["metrics"],
             "movable": parsed["movable"],
             "immovable": parsed["immovable"],
             "family": parsed["family"],

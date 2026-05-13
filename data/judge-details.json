@@ -11,31 +11,93 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies FDRs : 16 FDRs – amounting to Rs. 4,11,22,395/- including interest upto 31-03-2025 (from 03-09-2015 to 05-02-2025) in the State Bank of India, Punjab & Haryana High Court Branch, Chandigarh FDRs [HUF]: 15 FDRs – amounting to Rs.1,92,24,317/- including interest upto 31-03-2025 (from 17-10-2013 to 09-01-2025) in the State Bank of India, Punjab & Haryana High Court Branch, Chandigarh GPF : Rs. 3,74,03,026/- PPF : Nil FDRs : 6 FDRs – amounting to Rs.1,96,98,377/- including interest upto 31-03-2025 (from 07-01-2023 to 08-01-2025) in the State Bank of India, Punjab & Haryana High Court Branch, Chandigarh PPF : Rs. 49,90,733/- GPF : Nil FDRs : 8 FDRs in the name of elder daughter amounting to Rs.34,22,347/- including interest upto 31-03-2025 (from 07-11-2013 to 18-06-2024) in the State Bank of India,Punjab & Haryana...",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [
+            "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies FDRs : 16 FDRs – amounting to Rs. 4,11,22,395/- including interest upto 31-03-2025 (from 03-09-2015 to 05-02-2025) in the State Bank of India, Punjab & Haryana"
+          ],
           "value": 275793008
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [],
+          "value": null,
+          "gold_grams": null,
+          "silver_grams": null
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [],
+          "value": null,
+          "count": 0
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "1. One kanal House in Sector 10, Chandigarh (Jointly owned by Self/Spouse/HUF) 2. 13 & half acres (approx.) of agricultural land at Village Golpura, District Panchkula. (Jointly owned by Self/Spouse/HUF) 3. 300 Sq. Yards Plot in Sushant Lok-1, Gurugram. (Jointly owned by Self/Spouse/HUF) 4. GF and basement in 285 Sq.Yards house in G.K.-I, New Delhi. (Jointly owned by Self/Spouse) 5. 192 Sq.Yards House in Sector 18-C, Chandigarh (Jointly owned by Self/Spouse) 6. 250 Sq.Yards House in DLF-II, Gurugram (Self) 7. 1/3rd share in the agricultural land measuring about 12 acres and a house at village Petwar, Distt. Hisar. [Ancestral] 8. 1/3rd Share in 250 Sq.Yards House, Urban Estate-II, Hisar. [Inherited from Father] See : Sl. No. 1 of Column “Self/Joint Family” See : Sl. No. 2 of Column “Self/Joint Family” See : Sl. No. 3 of Column “Self/Joint Family” See : Sl. No. 4 of Column “Self/Joint Fami...",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [
+            "1. One kanal House in Sector 10, Chandigarh (Jointly owned by Self/Spouse/HUF)",
+            "3. 300 Sq. Yards Plot in Sushant Lok-1, Gurugram. (Jointly owned by Self/Spouse/HUF)",
+            "4. GF and basement in 285 Sq.Yards house in G.K.-I, New Delhi. (Jointly owned by Self/Spouse)",
+            "5. 192 Sq.Yards House in Sector 18-C, Chandigarh (Jointly owned by Self/Spouse)",
+            "6. 250 Sq.Yards House in DLF-II, Gurugram (Self)",
+            "8. 1/3rd Share in 250 Sq.Yards House, Urban Estate-II, Hisar. [Inherited from Father] . No. 2 of Column “ ” . No. 4 of Column “Self/Joint Fami"
+          ],
           "value": null
+        },
+        {
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [
+            "2. 13 & half acres (approx.) of agricultural land at Village Golpura, District Panchkula. (Jointly owned by Self/Spouse/HUF)",
+            "7. 1/3rd share in the agricultural land measuring about 12 acres and a house at village Petwar, Distt. Hisar. [Ancestral]"
+          ],
+          "value": null,
+          "acres": 25.5
         }
       ],
       "family": [
         {
+          "category": "family",
+          "emoji": "👪",
           "label": "Family and dependent entries",
           "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "SELF/JOINT FAMILY SPOUSE/JOINT FAMILY DEPENDENT(S), IF ANY (Jointly owned by Self/Spouse/HUF) (Jointly owned by Self/Spouse/HUF) (Jointly owned by Self/Spouse/HUF) (Jointly owned by Self/Spouse) (Jointly owned by Self/Spouse) See : Sl. No. 1 of Column “Self/Joint Family” See : Sl. No. 2 of Column “Self/Joint Family” See : Sl. No. 3 of Column “Self/Joint Family” See : Sl. No. 4 of Column “Self/Joint Family” See : Sl. No. 5 of Column “Self/Joint Family” See : Sl. No. 1 of Column “Self/Joint Family” See : Sl. No. 2 of Column “Self/Joint Family” See : Sl. No. 3 of Column “Self/Joint Family” FDRs [HUF]: 15 FDRs – amounting to Rs.1,92,24,317/- including interest upto 31-03-2025 (from 17-10-2013 to 09-01-2025) in the State Bank of India, Punjab & Haryana High Court Branch, Chandigarh FDRs : 8 FDRs in the name of elder daughter amounting to Rs.34,22,347/- including interest upto 31-03-2025 (from...",
+          "description": "Family, HUF, spouse and dependent references visible in the public declaration.",
+          "items": [
+            "(Jointly owned by Self/Spouse/HUF) (Jointly owned by Self/Spouse/HUF) (Jointly owned by Self/Spouse/HUF) (Jointly owned by Self/Spouse) (Jointly owned by Self/Spouse) . No. 2 of Column “ ” . No. 4 of Column “ ” . No. 1 o..."
+          ],
           "value": 34681973
         }
       ],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": 137896504,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": 137896504,
+        "gold_grams": null,
+        "silver_grams": null,
+        "vehicles_count": 0,
+        "real_estate_count": 8,
+        "land_acres": 25.5
+      }
     }
   },
   {
@@ -50,31 +112,82 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies ₹1.5 Cr. approx. ₹3.25 Cr. approx. NIL ) 1. A 2 BHK Apartment in NOIDA, Gautam Budh Nagar (U.P.) 2. A Bungalow in Civil Lines, Allahabad (U.P.) having an area of 2000 sq.yds. (Inherited-Ancestral) 3. Agricultural – About 20 bighas in District Kaushambi (U.P.) (Inherited-Ancestral) 1.A 2 BHK Apartment in Civil Lines, Allahabad (U.P.) NIL Investments Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies ₹1.5 Cr. approx. ₹3.25 Cr. approx. NIL Movable Property Jewellery/Vehicles/Other assets NIL 1000 grams Gold 1500 grams Silver Volkswagen-Polo – 2016-17 model NIL",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [
+            "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies ₹1.5 Cr. approx. ₹3.25 Cr. approx. )",
+            "Investments Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies ₹1.5 Cr"
+          ],
           "value": 95000000
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [
+            "2.5 kg gold",
+            "1.5 kg silver"
+          ],
+          "value": null,
+          "gold_grams": 2500,
+          "silver_grams": 1500
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [
+            "Volkswagen-Polo – 2016-17 model"
+          ],
+          "value": null,
+          "count": 1
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "1. A 2 BHK Apartment in NOIDA, Gautam Budh Nagar (U.P.) 2. A Bungalow in Civil Lines, Allahabad (U.P.) having an area of 2000 sq.yds. (Inherited-Ancestral) 3. Agricultural – About 20 bighas in District Kaushambi (U.P.) (Inherited-Ancestral) 1.A 2 BHK Apartment in Civil Lines, Allahabad (U.P.) NIL",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [
+            "1. A 2 BHK Apartment in NOIDA, Gautam Budh Nagar (U.P.)",
+            "2. A Bungalow in Civil Lines, Allahabad (U.P.) having an area of 2000 sq.yds. (Inherited-Ancestral)"
+          ],
           "value": null
-        }
-      ],
-      "family": [
+        },
         {
-          "label": "Family and dependent entries",
-          "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "SELF/JOINT FAMILY SPOUSE/JOINT FAMILY DEPENDENT(S), IF ANY",
-          "value": null
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [
+            "3. Agricultural – About 20 bighas in District Kaushambi (U.P.) (Inherited-Ancestral) 1.A 2 BHK Apartment in Civil Lines, Allahabad (U.P.)"
+          ],
+          "value": null,
+          "acres": null
         }
       ],
+      "family": [],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": 47500000,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": 47500000,
+        "gold_grams": 2500,
+        "silver_grams": 1500,
+        "vehicles_count": 1,
+        "real_estate_count": 3,
+        "land_acres": null
+      }
     }
   },
   {
@@ -89,31 +202,94 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "Shares/Mutual Funds/FDs/Bonds/Debentures/PPF/GPF/ Insurance Policies Mutual Fund 1. HDFC EQUITY FUND – SIP @ 2500/- per month since 18-12-2015. Total Investment till 31-03-2025 = Rs.37,500/- 2. HDFC MID CAP OPP FUND – SIP @ 2500/- per month since 09-10-2015. Total Investment till 01-04-2025 = Rs.75,000/- 3. SBI MUTUAL FUND – SIP @ 2500/- per month since 10.01.2020. Total Investment till 01-04-2025 = Rs.1,57,500/- LIC 1. Policy No- 203238279 Sum assured Rs.10 Lacs Purchased on 28-10-2011, Annual Premium -Rs.74,008/- 2. Policy No- 203289096 Sum assured Rs.6 Lacs Purchased on 28-06-2016, Annual Premium- Rs.55,538/- GPF Balance as on 31-03-2025 – Rs. 63,87,797/- Bank balance 1. UCO bank, Supreme Court Campus, New Delhi – Rs.10,30,361/- 2. State Bank of India, M.G. Road, Indore – Rs. 4,46,774/- Shares/FDs/Bonds/ Debentures/PPF NIL Mutual Fund 1. HDFC Business Cycle Mutual fund – Rs.5,00,000/-...",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [
+            "2015. Total Investment till 31-03-2025 = Rs.37,500/",
+            "2015. Total Investment till 01-04-2025 = Rs.75,000/",
+            "2020. Total Investment till 01-04-2025 = Rs.1,57,500/- LIC",
+            "1. Policy No- 203238279 Sum assured Rs.10 Lacs Purchased on 28-10-2011, Annual Premium -Rs.74,008/",
+            "2. Policy No- 203289096 Sum assured Rs.6 Lacs Purchased on 28-06-2016, Annual Premium- Rs.55,538/- GPF Balance as on 31-03-2025 – Rs. 63,87,797/- Bank balance",
+            "1. UCO bank, Supreme Court Campus, New Delhi – Rs.10,30,361/",
+            "2. State Bank of India, M.G. Road, Indore – Rs. 4,46,774/- Shares/FDs/Bonds/ Debentures/PPF Mutual Fund",
+            "1. HDFC Business Cycle Mutual fund – Rs.5,00,000/"
+          ],
           "value": 26666342
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [],
+          "value": null,
+          "gold_grams": null,
+          "silver_grams": null
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [],
+          "value": null,
+          "count": 0
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "(1) Residential/commercial House No. 52 situated at Chandra Shekhar Azad Road, Joura – Dist. – Morena [M.P.], received by way of inheritance from the estate of father having 1/4th share in it. (1) Residential/commercial House No. 51 situated at Chandra Shekhar Azad Road, Joura- Dist. – Morena [M.P.] purchased jointly by spouse and three other family members on 17.10.1996, having 1/4th share in it. On both the plots mentioned at sl. no. 1 of column. nos. 2 and 3, house is constructed jointly. (2) Residential house-cum- office premises situated at Municipal House No. 594 Ward No. – 46, Nimbalkar Ki Goth No. -2, Lashkar, Gwalior, purchased on 08/07/1999, admeasuring 2075 sq. ft. (2) Residential house-cum- office premises situated at Municipal House No. 575 Ward No. 46, Nimbalkar Ki Goth No. 2, Lashkar, Gwalior, which was jointly purchased along with wife of elder brother on 30.10.1995. Out...",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [
+            "(1) Residential/commercial House No. 52 situated at Chandra Shekhar Azad Road, Joura – Dist. – Morena [M.P.], received by way of inheritance from the estate of father having 1/4th share in it. (1) Residential/commercial House No. 51 situate...",
+            "1995. Out"
+          ],
           "value": null
+        },
+        {
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [],
+          "value": null,
+          "acres": null
         }
       ],
       "family": [
         {
+          "category": "family",
+          "emoji": "👪",
           "label": "Family and dependent entries",
           "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "SELF/JOINT FAMILY SPOUSE/JOINT FAMILY (1) Residential/commercial House No. 51 situated at Chandra Shekhar Azad Road, Joura- Dist. – Morena [M.P.] purchased jointly by spouse and three other family members on 17.10.1996, having 1/4th share in it. Joining the plots purchased by self, spouse and wife of elder brother, as mentioned at sl. no. 2 of column nos. 2 & 3, the said house was constructed during the financial years 2002-05. The total plot area is approximately 3,000 sq. ft.",
+          "description": "Family, HUF, spouse and dependent references visible in the public declaration.",
+          "items": [
+            "(1) Residential/commercial House No. 51 situated at Chandra Shekhar Azad Road, Joura- Dist. – Morena [M.P.] purchased jointly by spouse and three other family members on 17.10.1996, having 1/4th share in it. Joining the...",
+            "05. The total plot area is approximately 3,000 sq. ft"
+          ],
           "value": 2002
         }
       ],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": 21002993,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": 21002993,
+        "gold_grams": null,
+        "silver_grams": null,
+        "vehicles_count": 0,
+        "real_estate_count": 1,
+        "land_acres": null
+      }
     }
   },
   {
@@ -144,31 +320,91 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "Shares / Mutual Funds / Fixed Deposits / Bonds / Debentures / PPF / GPF / Insurance Policies Shares – NIL GPF – ₹55,81,117 LIC – ₹10 Lakhs Savings Bank Balance: Indian Bank (Joint A/c) – ₹17,85,777 Canara Bank – ₹6,543 UCO Bank (Joint A/c) – ₹4,39,098 Shubhaa Sundresh – Wife No. of Shares: BEML Ltd 13 DLF Ltd 200 First Source Solutions 50 ICICI Bank 60 L & T 20 Liberty Shoes 20 NTPC Ltd 50 Omaxe Ltd 26 ONGC 3 Polaris Soft 10 Powergrid 286 Raj TV 40 Reliance Industries 11 Reliance Power 80 Unitech Ltd 50 Shubhaa, Wife Savings Bank Balance: ICICI Bank (Joint A/c) – ₹1,67,000 Indian Bank – ₹9,45,048 Indian Bank – ₹24,826 Canara Bank – ₹2,68,623 ) (a) House Property – 1/2 Share in House property at Periyanna Gounder Street, Erode. – 10,608 sq.ft (b) House Property – 3/4th Share of 7029 sqft land and building at Rajendra Garden, Vettuvankeni, Chennai -41 (c) Other landed property – M.M. Sundr...",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [
+            "Shares / Mutual Funds / Fixed Deposits / Bonds / Debentures / PPF / GPF / Insurance Policies Shares – GPF – ₹55,81,117 LIC – ₹10 Lakhs Savings Bank Balance: Indian Bank (Joint A/c) – ₹17,85,777 Canara Bank – ₹6,543 UCO Bank (Joint A/c) – ₹"
+          ],
           "value": 20436064
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [],
+          "value": null,
+          "gold_grams": null,
+          "silver_grams": null
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [],
+          "value": null,
+          "count": 0
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "(a) House Property – 1/2 Share in House property at Periyanna Gounder Street, Erode. – 10,608 sq.ft (b) House Property – 3/4th Share of 7029 sqft land and building at Rajendra Garden, Vettuvankeni, Chennai -41 (c) Other landed property – M.M. Sundresh (HUF) Lakkapuram (Solar) 2.28½ Acres Ezhumathur 21.17 Acres 1. 1/4th Share of 7029 sqft land and building at Rajendra Garden, Vettuvankeni, Chennai -41 2. House property at Power House Road, Erode 3509 sqft land and building therein 3. 0.50 acre at Lakkapuram Other landed property – Members – M.M. Sundresh (HUF): 1) M.M. Sundresh, Self 2) Shubhaa Sundresh, Wife 3) Nithila Sundresh, Daughter 4) Muthuchharan Sundresh, Son",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [
+            "(a) House Property – 1/2 Share in House property at Periyanna Gounder Street, Erode. – 10,608 sq.ft"
+          ],
           "value": null
+        },
+        {
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [
+            "(b) House Property – 3/4th Share of 7029 sqft land and building at Rajendra Garden, Vettuvankeni, Chennai -41",
+            "(c) Other landed property – M.M. Sundresh (HUF) Lakkapuram (Solar) 2.28½ Acres Ezhumathur 21.17 Acres",
+            "1. 1/4th Share of 7029 sqft land and building at Rajendra Garden, Vettuvankeni, Chennai -41",
+            "2. House property at Power House Road, Erode 3509 sqft land and building therein",
+            "3. 0.50 acre at Lakkapuram Other landed property – Members – M.M. Sundresh (HUF): 1) M.M. Sundresh, Self 2) Shubhaa Sundresh, Wife 3) Nithila Sundresh, Daughter 4) Muthuchharan Sundresh, Son"
+          ],
+          "value": null,
+          "acres": 21.67
         }
       ],
       "family": [
         {
+          "category": "family",
+          "emoji": "👪",
           "label": "Family and dependent entries",
           "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "SELF/JOINT FAMILY SPOUSE/JOINT FAMILY DEPENDENT(S), IF ANY M.M. Sundresh (HUF) Members – M.M. Sundresh (HUF): 3) Nithila Sundresh, Daughter 4) Muthuchharan Sundresh, Son",
+          "description": "Family, HUF, spouse and dependent references visible in the public declaration.",
+          "items": [
+            "M.M. Sundresh (HUF) Members – M.M. Sundresh (HUF): 3) Nithila Sundresh, Daughter 4) Muthuchharan Sundresh, Son"
+          ],
           "value": null
         }
       ],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": 10218032,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": 10218032,
+        "gold_grams": null,
+        "silver_grams": null,
+        "vehicles_count": 0,
+        "real_estate_count": 6,
+        "land_acres": 21.67
+      }
     }
   },
   {
@@ -183,31 +419,89 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/Insurance Policies (as on 31.03.2025) Amount invested in Mutual funds, Fixed deposits with banks, Sovereign gold bonds, Bank balances – ₹35,49,12,423/- GPF – ₹20,54,694/- Insurance Policy – HDFC SL ProGrowth Flexi – ₹82,91,543/- PPF- NIL Amount invested in Mutual funds, Fixed deposits with banks, Sovereign gold bonds, Bank balances – ₹13,61,000/- Insurance Policies: (i) ICICI Prudential Life Insurance – ₹19,24,371/- (ii) Canara HSBC Oriental Bank of Commerce Life Insurance Smart Lifelong Plan in favour of dependents – ₹29,12,555/- PPF – NIL ) Building House in Sector-15A, Noida, U.P., 200 sq.mtr. (2/3rd) built in 2013-2014 Flat Apartment in Supreme Towers, Sector-99, Noida, U.P., 1954 sq. ft. Allotted in 2014-15 Inherited Property Share in inherited property in Jubilee Hills, Hyderabad, share of 6782.74 sq ft. Building House in...",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [
+            "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/Insurance Policies (as on 31.03.2025) Amount invested in Mutual funds, Fixed deposits with banks, Sovereign gold bonds, Bank balances – ₹35,49,12,423/- GPF – ₹20,54,694/- Insurance",
+            "(i) ICICI Prudential Life Insurance – ₹19,24,371/- (ii) Canara HSBC Oriental Bank of Commerce Life Insurance Smart Lifelong Plan in favour of dependents – ₹29,12,555/- PPF – ) Building House in Sector-15A, Noida, U.P., 200 sq.mtr. (2/3rd)"
+          ],
           "value": 746638172
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [
+            "gold bonds, Bank balances – ₹35,49,12,423/- GPF – ₹20,54,694/- Insurance Policy – HDFC SL ProGrowth Flexi – ₹82,91,543/- PPF-  Amount invested in Mutual funds, Fixed deposits with banks, Sovereign",
+            "gold bonds, Bank balances – ₹13,61,000/- Insurance Policies: (i) ICICI Prudential Life Insurance – ₹19,24,371/- (ii) Canara HSBC Oriental Bank of Commerce Life Insurance Smart Lifelong Plan in favour..."
+          ],
+          "value": null,
+          "gold_grams": null,
+          "silver_grams": null
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [],
+          "value": null,
+          "count": 0
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "Building House in Sector-15A, Noida, U.P., 200 sq.mtr. (2/3rd) built in 2013-2014 Flat Apartment in Supreme Towers, Sector-99, Noida, U.P., 1954 sq. ft. Allotted in 2014-15 Inherited Property Share in inherited property in Jubilee Hills, Hyderabad, share of 6782.74 sq ft. Building House in Sector-15A, Noida, U.P., 200 sq.mtr. (1/3rd) built in 2013-2014 Flat House/Plot, Sector-92, Noida, U.P., 300 sq.mtr. Purchased in 2014-15 Office Space at Bahadur Shah Zafar Marg, New Delhi, 498 sq. ft. Purchased in 2006-07",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [
+            "Building House in Sector-15A, Noida, U.P., 200 sq.mtr. (2/3rd) built in 2013-2014 Flat Apartment in Supreme Towers, Sector-99, Noida, U.P., 1954 sq. ft. Allotted in 2014-15 Inherited Property Share in inherited property in Jubilee Hills, Hy..."
+          ],
           "value": null
+        },
+        {
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [],
+          "value": null,
+          "acres": null
         }
       ],
       "family": [
         {
+          "category": "family",
+          "emoji": "👪",
           "label": "Family and dependent entries",
           "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "(B) SPOUSE (Income Tax Assessee) (ii) Canara HSBC Oriental Bank of Commerce Life Insurance Smart Lifelong Plan in favour of dependents – ₹29,12,555/-",
+          "description": "Family, HUF, spouse and dependent references visible in the public declaration.",
+          "items": [
+            "(B) SPOUSE (Income Tax Assessee) (ii) Canara HSBC Oriental Bank of Commerce Life Insurance Smart Lifelong Plan in favour of dependents – ₹29,12,555/"
+          ],
           "value": 2912555
         }
       ],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": 1004273439,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": 1004273439,
+        "gold_grams": null,
+        "silver_grams": null,
+        "vehicles_count": 0,
+        "real_estate_count": 1,
+        "land_acres": null
+      }
     }
   },
   {
@@ -222,31 +516,99 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "Shares / Mutual Funds / FDs / Bonds / PPF / GPF / Insurance SHARES: 1. ACML Capital Markets Ltd. Statement of Holding Value : ₹4,37,048.00 MUTUAL FUNDS: 2. Mutual funds current value: ₹2,58,55,263.94 (as on 01.04.2025) GPF: 1. ₹9,77,184.00 (as on 31.03.2025) Mrs. Jasmine J. Pardiwala: 1. ACML Capital Markets Ltd. Statement of Holding Value:₹22,91,367.00 2. Mutual funds current value : ₹1,72,44,052.03 (as on 01.04.2025) 1. Ms. Tanya J. Pardiwala (Daughter): Mutual funds current value: ₹14,87,808.59 (as on 01.04.2025) 2. Ms. Siya J. Pardiwala (Daughter): Mutual funds current value: ₹16,18,426.00 (as on 01.04.2025) ) SELF: 1. Tulip Part-II, Near Surdhara Circle, Thaltej, Ahmedabad. 2. Ancestral property in the form of Farm House (Agriculture Land) at village Tithal, Valsad, Gujarat admeasuring 10,000 sq yards 3. Agricultural Land, Village – Nidhrad, Tal. – Sanand, Ahmedabad. JOINT FAMILY: 1...",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [
+            "1. ACML Capital Markets Ltd. Statement of Holding Value : ₹4,37,048.00 MUTUAL FUNDS:",
+            "2. Mutual funds current value: ₹2,58,55,263.94 (as on 01.04.2025) GPF:",
+            "1. ₹9,77,184.00 (as on 31.03.2025) Mrs. Jasmine J. Pardiwala:",
+            "1. ACML Capital Markets Ltd. Statement of Holding Value:₹22,91,367.00",
+            "2. Mutual funds current value : ₹1,72,44,052.03 (as on 01.04.2025)",
+            "1. Ms. Tanya J. Pardiwala (Daughter): Mutual funds current value: ₹14,87,808.59 (as on 01.04.2025)",
+            "2. Ms. Siya J. Pardiwala (Daughter): Mutual funds current value: ₹16,18,426.00 (as on 01.04.2025) ) SELF:"
+          ],
           "value": 99822300
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [],
+          "value": null,
+          "gold_grams": null,
+          "silver_grams": null
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [],
+          "value": null,
+          "count": 0
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "SELF: 1. Tulip Part-II, Near Surdhara Circle, Thaltej, Ahmedabad. 2. Ancestral property in the form of Farm House (Agriculture Land) at village Tithal, Valsad, Gujarat admeasuring 10,000 sq yards 3. Agricultural Land, Village – Nidhrad, Tal. – Sanand, Ahmedabad. JOINT FAMILY: 1. Having share in ancestral property at district Valsad, Gujarat admeasuring 1500 sq yards Mrs. Jasmine J. Pardiwala: 1. Office at ISCON Emporia, Near Jodhpur Cross Road, Satellite, Ahmedabad. –",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [
+            "SELF:",
+            "1. Tulip Part-II, Near Surdhara Circle, Thaltej, Ahmedabad",
+            "1. Having share in ancestral property at district Valsad, Gujarat admeasuring 1500 sq yards Mrs. Jasmine J. Pardiwala:",
+            "1. Office at ISCON Emporia, Near Jodhpur Cross Road, Satellite, Ahmedabad"
+          ],
           "value": null
+        },
+        {
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [
+            "2. Ancestral property in the form of Farm House (Agriculture Land) at village Tithal, Valsad, Gujarat admeasuring 10,000 sq yards",
+            "3. Agricultural Land, Village – Nidhrad, Tal. – Sanand, Ahmedabad. JOINT FAMILY:"
+          ],
+          "value": null,
+          "acres": null
         }
       ],
       "family": [
         {
+          "category": "family",
+          "emoji": "👪",
           "label": "Family and dependent entries",
           "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "SELF / JOINT FAMILY SPOUSE / JOINT FAMILY DEPENDENT(S), IF ANY JOINT FAMILY: 1. Ms. Tanya J. Pardiwala (Daughter): (as on 01.04.2025) 2. Ms. Siya J. Pardiwala (Daughter):",
+          "description": "Family, HUF, spouse and dependent references visible in the public declaration.",
+          "items": [
+            "SELF / JOINT FAMILY SPOUSE / JOINT FAMILY JOINT FAMILY:",
+            "1. Ms. Tanya J. Pardiwala (Daughter): (as on 01.04.2025)",
+            "2. Ms. Siya J. Pardiwala (Daughter):"
+          ],
           "value": null
         }
       ],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": 58963755,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": 58963755,
+        "gold_grams": null,
+        "silver_grams": null,
+        "vehicles_count": 0,
+        "real_estate_count": 3,
+        "land_acres": null
+      }
     }
   },
   {
@@ -261,31 +623,90 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies (1) Shares – ₹7,36,538.25 (approx.). (2) Mutual Funds – ₹6,96,468.55 (approx.) (as on 13 th May, 2025). (3) Savings Bank Accounts – ₹12,46,111.23. (4) PPF A/c – ₹21,81,318.00. (5) GPF A/c – ₹1,19,36,497.00. (6) Fixed Deposit – ₹25,000 with ICICI Bank [amount invested prior to elevation (as Judge of the Calcutta High Court on 22.6.2006) but receipt is not traceable for long]. (7) Insurance – (i) LIC Policy to mature on 31.1.2032; (ii) Axis Max Life Insurance Policy for 50 years w.e.f. 13.8.2015; and (iii) ICICI Prudential Policy to mature on 30.11.2028. (1) 25 shares of Plethico Pharma and 160 shares of Lanco Infra (both are delisted and total value of these shares are Rs.410/-). (2) Mutual Funds – (i) Nippon India Multi Cap Fund for ₹1,80,175.84 (approx.); and (ii) UTI Flexi Cap Fund for Rs.50,323/- as curren...",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [
+            "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies (1) Shares – ₹7,36,538.25 (approx.). (2) Mutual Funds – ₹6,96,468.55 (approx.) (as on 13 th May, 2025). (3) Savings Bank Accounts – ₹12,46,111",
+            "23. (4) PPF A/c – ₹21,81,318",
+            "00. (5) GPF A/c – ₹1,19,36,497",
+            "00. (6) Fixed Deposit – ₹25,000 with ICICI Bank [amount invested prior to elevation (as Judge of the Calcutta High Court on 22.6.2006) but receipt is not traceable for long]. (7) Insurance",
+            "2028. (1) 25 shares of Plethico Pharma and 160 shares of Lanco Infra (both are delisted and total value of these shares are Rs.410/-). (2) Mutual Funds",
+            "(i) Nippon India Multi Cap Fund for ₹1,80,175.84 (approx.); and (ii) UTI Flexi Cap Fund for Rs.50,323/- as curren"
+          ],
           "value": 36368424
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [],
+          "value": null,
+          "gold_grams": null,
+          "silver_grams": null
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [],
+          "value": null,
+          "count": 0
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "Flat measuring 1310 sq. ft., in Madhyamgram, District – North 24 Parganas, West Bengal, with spouse as joint owner. Flat measuring 832 sq. ft. in Sector 168, Noida, Uttar Pradesh, with spouse as joint owner. Registration is pending because of proceedings under the IBC against the developer.",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [
+            "Flat measuring 1310 sq. ft., in Madhyamgram, District – North 24 Parganas, West Bengal, with spouse as joint owner. Flat measuring 832 sq. ft. in Sector 168, Noida, Uttar Pradesh, with spouse as joint owner. Registration is pending because..."
+          ],
           "value": null
+        },
+        {
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [],
+          "value": null,
+          "acres": null
         }
       ],
       "family": [
         {
+          "category": "family",
+          "emoji": "👪",
           "label": "Family and dependent entries",
           "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "SPOUSE (MRS. JHUMA DATTA) Flat measuring 1310 sq. ft., in Madhyamgram, District – North 24 Parganas, West Bengal, with spouse as joint owner. Flat measuring 832 sq. ft. in Sector 168, Noida, Uttar Pradesh, with spouse as joint owner.",
+          "description": "Family, HUF, spouse and dependent references visible in the public declaration.",
+          "items": [
+            "SPOUSE (MRS. JHUMA DATTA) Flat measuring 1310 sq. ft., in Madhyamgram, District – North 24 Parganas, West Bengal, with spouse as joint owner. Flat measuring 832 sq. ft. in Sector 168, Noida, Uttar Pradesh, with spouse as..."
+          ],
           "value": null
         }
       ],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": 18218802,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": 18218802,
+        "gold_grams": null,
+        "silver_grams": null,
+        "vehicles_count": 0,
+        "real_estate_count": 1,
+        "land_acres": null
+      }
     }
   },
   {
@@ -300,31 +721,95 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "Shares / Mutual Funds / Fixed Deposits / Bonds / Debentures / PPF / GPF / Insurance Policies 1. Mutual Funds i) SBI Dividend Yield Fund (Regular Plan) of ₹2,00,000/- ii) SBI Large and Midcap Fund (Regular Growth) of ₹1,00,000/- 2. Fixed Deposits i) SBI (Personal Banking) FDR of ₹29,00,000/- ii) SBI (Prayagraj Branch) FDR of ₹10,00,000/- (HUF) iii) SBI (Prayagraj Branch) FDR of ₹5,00,000/- (HUF) iv) UCO (Supreme Court) e-FDR of ₹1,00,000/- 3. Bonds i) 10 Sovereign Gold Bond, Scheme 20 Series 2 of ₹60,000/- ii) RBI Retails Direct of ₹1,00,000/- 4. PPF SBI PPF Account – ₹3,00,000/- 5. GPF GPF Account with Supreme Court of India ₹1,54,91,811/- as on March, 2025. 6. Post Office i) Sr. Citizen Savings Scheme Account with Post Office, Supreme Court for ₹1,00,000/- dt. 18.10.2023 ii) Sr. Citizen Savings Scheme Account with Post Office, Supreme Court for ₹1,00,000/- dated 12.12.2023 iii) Sr. Citi...",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [
+            "1. Mutual Funds i) SBI Dividend Yield Fund (Regular Plan) of ₹2,00,000/- ii) SBI Large and Midcap Fund (Regular Growth) of ₹1,00,000/",
+            "2. Fixed Deposits i) SBI (Personal Banking) FDR of ₹29,00,000/- ii) SBI (Prayagraj Branch) FDR of ₹10,00,000/- (HUF) iii) SBI (Prayagraj Branch) FDR of ₹5,00,000/- (HUF) iv) UCO (Supreme Court) e-FDR of ₹1,00,000/",
+            "3. Bonds i) 10 Sovereign Gold Bond, Scheme 20 Series 2 of ₹60,000/- ii) RBI Retails Direct of ₹1,00,000/",
+            "4. PPF SBI PPF Account – ₹3,00,000/",
+            "5. GPF GPF Account with Supreme Court of India ₹1,54,91,811/- as on March",
+            "6. Post Office i) Sr. Citizen Savings Scheme Account with Post Office, Supreme Court for ₹1,00,000/- dt. 18.10.2023 ii) Sr. Citizen Savings Scheme Account with Post Office, Supreme Court for ₹1,00,000/- dated 12.12.2023 iii) Sr. Citi"
+          ],
           "value": 86337104
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [
+            "Gold Bond, Scheme 20 Series 2 of ₹60,000/- ii) RBI Retails Direct of ₹1,00,000/- 4. PPF SBI PPF Account – ₹3,00,000/- 5. GPF GPF Account with Supreme Court of India ₹1,54,91,811/- as on March, 2025. 6..."
+          ],
+          "value": null,
+          "gold_grams": null,
+          "silver_grams": null
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [],
+          "value": null,
+          "count": 0
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "1. Flat in Block No.5, Alkapuri Colony, Nyay Marg, Allahabad. (Purchased from Allahabad Development Authority vide sale deed dated 13.7.1993 for a sale consideration of ₹36,200/-)2. Flat in Block No.6, Alkapuri Colony, Nyay Marg, Allahabad. (Purchased jointly with wife vide sale deed dated 03.06.2013 for a sale consideration of ₹50,00,000/-) 3. Flat in The Kings Reserve, Sector Gama, Greater Noida, District Gautam Budh Nagar. (Purchased vide sale deed dated 19.12.2022 for a sale consideration of ₹1,67,50,000/-) NIL 1. Development agreement with M/s Golden Grande for a proposed office at IT Tower-2, Greater Noida (84.45 sq. mts.)-amounting to ₹54 lakh approx.. (Payment made, Sale Deed yet to be executed.)",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [
+            "1. Flat in Block No.5, Alkapuri Colony, Nyay Marg, Allahabad. (Purchased from Allahabad Development Authority vide sale deed dated 13.7.1993 for a sale consideration of ₹36,200/-)",
+            "2. Flat in Block No.6, Alkapuri Colony, Nyay Marg, Allahabad. (Purchased jointly with wife vide sale deed dated 03.06.2013 for a sale consideration of ₹50,00,000/-)",
+            "3. Flat in The Kings Reserve, Sector Gama, Greater Noida, District Gautam Budh Nagar. (Purchased vide sale deed dated 19.12.2022 for a sale consideration of ₹1,67,50,000/-)",
+            "1. Development agreement with M/s Golden Grande for a proposed office at IT Tower-2, Greater Noida (84.45 sq. mts.)-amounting to ₹54 lakh approx.. (Payment made, Sale Deed yet to be executed.)"
+          ],
           "value": null
+        },
+        {
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [],
+          "value": null,
+          "acres": null
         }
       ],
       "family": [
         {
+          "category": "family",
+          "emoji": "👪",
           "label": "Family and dependent entries",
           "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "SELF/JOINT FAMILY SPOUSE/JOINT FAMILY DEPENDENT(S), (Ms. Vani Mithal, Daughter) i) SBI (Personal Banking) FDR of ₹29,00,000/- ii) SBI (Prayagraj Branch) FDR of ₹10,00,000/- (HUF) iii) SBI (Prayagraj Branch) FDR of ₹5,00,000/- (HUF)",
+          "description": "Family, HUF, spouse and dependent references visible in the public declaration.",
+          "items": [
+            "DEPENDENT(S), (Ms. Vani Mithal, Daughter) i) SBI (Personal Banking) FDR of ₹29,00,000/- ii) SBI (Prayagraj Branch) FDR of ₹10,00,000/- (HUF) iii) SBI (Prayagraj Branch) FDR of ₹5,00,000/- (HUF)"
+          ],
           "value": 4400000
         }
       ],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": 56761677,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": 56761677,
+        "gold_grams": null,
+        "silver_grams": null,
+        "vehicles_count": 0,
+        "real_estate_count": 3,
+        "land_acres": null
+      }
     }
   },
   {
@@ -339,31 +824,85 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies Very few shares in listed companies. Fixed deposits: NIL Bonds: NIL Debentures: NIL Amount in Saving Bank Accounts: ₹13,31,990 GPF: ₹61,19,074/- Fixed deposits/Saving Bank Accounts: ₹12,02,815/- PPF: ₹5,22,433/- Bonds: NIL Debentures: NIL NIL ) Flat at 3 rd floor on plot No.152, Block-A, Defence Colony, New Delhi, along with proportionate share in land underneath it with terrace rights – (presently given on lease). (Self-acquired, purchased in the year 2017) Share in the built-up portion in the ancestral building at Bell Villa, The Mall, Shimla along with proportionate share in land underneath it. (part of it is given on lease) (Ancestral) House at Village Khadlu (Churag), Tehsil Karsog, District Mandi. (Ancestral) Agricultural Land/Orchard measuring 60 Bighas (approx.) at Village Khadlu (Churag), Tehsil Kars...",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [
+            "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies Very few shares in listed companies. Fixed deposits: Bonds: Debentures: Amount in Saving Bank Accounts: ₹13,31,990 GPF: ₹61,19,074/- Fixed deposits/Saving Ba"
+          ],
           "value": 18352624
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [],
+          "value": null,
+          "gold_grams": null,
+          "silver_grams": null
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [],
+          "value": null,
+          "count": 0
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "Flat at 3 rd floor on plot No.152, Block-A, Defence Colony, New Delhi, along with proportionate share in land underneath it with terrace rights – (presently given on lease). (Self-acquired, purchased in the year 2017) Share in the built-up portion in the ancestral building at Bell Villa, The Mall, Shimla along with proportionate share in land underneath it. (part of it is given on lease) (Ancestral) House at Village Khadlu (Churag), Tehsil Karsog, District Mandi. (Ancestral) Agricultural Land/Orchard measuring 60 Bighas (approx.) at Village Khadlu (Churag), Tehsil Karsog, District Mandi, HP. (Ancestral) Share in the House at Village Garli; and undivided share in the Agricultural Land of Village and Post Office, Garli, Tehsil Dehra, District Kangra, HP (yet to be identified) (Ancestral) Undivided share in the land measuring 2500 sq. yards approx. at Main Bazaar, Kalka, Haryana (Ancestral)...",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [],
           "value": null
+        },
+        {
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [
+            "Flat at 3 rd floor on plot No.152, Block-A, Defence Colony, New Delhi, along with proportionate share in land underneath it with terrace rights – (presently given on lease). (Self-acquired, purchased in the year 2017) Share in the built-up..."
+          ],
+          "value": null,
+          "acres": null
         }
       ],
       "family": [
         {
+          "category": "family",
+          "emoji": "👪",
           "label": "Family and dependent entries",
           "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "SELF/JOINT FAMILY SPOUSE DEPENDENT(S), IF ANY (Self-acquired, in the name of spouse Ms. Ashu Karol, purchased in the year 2003)",
+          "description": "Family, HUF, spouse and dependent references visible in the public declaration.",
+          "items": [
+            "SPOUSE (Self-acquired, in the name of spouse Ms. Ashu Karol, purchased in the year 2003)"
+          ],
           "value": null
         }
       ],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": 9176312,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": 9176312,
+        "gold_grams": null,
+        "silver_grams": null,
+        "vehicles_count": 0,
+        "real_estate_count": 1,
+        "land_acres": null
+      }
     }
   },
   {
@@ -378,31 +917,95 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies Shares : Bharat Petroleum Corporation Ltd. – 6000 Bharti Airtel Ltd. – 1000 Cholamandalam Finance Ltd. – 1000 HCL Infosystems Limited – 500 HCL Technologies Limited – 176 HDFC Life Insurance Co. Ltd. – 1000 Infosys Limited – 540 ITC Limited – 3000 NMDC Limited – 18000 Olectra Greentech Limited – 2000 Reliance Industries Limited – 1708 Solara Active Pharma Sciences Ltd. – 2000 State Bank of India – 2000 Steel Authority of India Ltd. – 200 Tata Communications Ltd. – 200 Tata Consultancy Services Ltd. – 200 Tata Motors Limited – 2500 Tata Steel -1000 Vedanta Limited – 2000 Jio Finance Ltd. – 854 Vijaya Diagnostic Centre Ltd. – 10000 ITC Hotels – 300 NMDC Steel Ltd. (NSLNISP) – 6000 I sold my half-share in a commercial space in Khader Nawaz Khan Road, Nungambakkam, Chennai, under a registered sale deed. I sold my...",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [],
           "value": 76140154
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [],
+          "value": null,
+          "gold_grams": null,
+          "silver_grams": null
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [
+            "Tata Communications Ltd",
+            "Tata Consultancy Services Ltd",
+            "Tata Motors Limited – 2500 Tata Steel -1000 Vedanta Limited – 2000 Jio Finance Ltd"
+          ],
+          "value": null,
+          "count": 3
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "1. House No. 8-2-248/B/28/A, New No. 808, Nagarjuna Hill, Punjagutta, Hyderabad – 500082. Self – occupied. (Land was purchased in my name under Regd. Sale Deeds bearing Document No.601 of 1984 dated 02-02-1984 and Document No.2103 of 1984 dated 09-04-1984). 2. Small piece of vacant land – H. No. 14/33A, 14th Ward, Gudivada, Krishna District, A.P. 3. Small piece of vacant land – H. No. 405 in the 13th Ward, Gudivada, Krishna District, A.P. 4. Premises, including sheds, vacant land and buildings in the 13th Ward at Gudivada, Krishna District, Andhra Pradesh, hitherto occupied by M/s. Ramakrishna Rice & Groundnut Oil Mills, Gudivada. The mills were wound up and the entire property is kept vacant now. 5. Half-share in the house property in the 13th Ward at Gudivada, A.P. The other half-share is owned by my nephew, Shri Suneil Reddy, son of my eldest sister, Smt. Geetha Reddy. • (Items 2 to 5...",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [
+            "1. House No. 8-2-248/B/28/A, New No. 808, Nagarjuna Hill, Punjagutta, Hyderabad",
+            "5. Half-share in the house property in the 13th Ward at Gudivada, A.P. The other half-share is owned by my nephew, Shri Suneil Reddy, son of my eldest sister, Smt. Geetha Reddy. • (Items 2 to 5"
+          ],
           "value": null
+        },
+        {
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [
+            "500082. Self – occupied. (Land was purchased in my name under Regd. Sale Deeds bearing Document No.601 of 1984 dated 02-02-1984 and Document No.2103 of 1984 dated 09-04-1984)",
+            "2. Small piece of vacant land – H. No. 14/33A, 14th Ward, Gudivada, Krishna District, A.P",
+            "3. Small piece of vacant land – H. No. 405 in the 13th Ward, Gudivada, Krishna District, A.P",
+            "4. Premises, including sheds, vacant land and buildings in the 13th Ward at Gudivada, Krishna District, Andhra Pradesh, hitherto occupied by M/s. Ramakrishna Rice & Groundnut Oil Mills, Gudivada. The mills were wound up and the entire prope..."
+          ],
+          "value": null,
+          "acres": null
         }
       ],
       "family": [
         {
+          "category": "family",
+          "emoji": "👪",
           "label": "Family and dependent entries",
           "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "SPOUSE/JOINT FAMILY DEPENDENT(S), IF ANY 5. Half-share in the house property in the 13th Ward at Gudivada, A.P. The other half-share is owned by my nephew, Shri Suneil Reddy, son of my eldest sister, Smt. Geetha Reddy. 8. Flat No. 502 in Srinivas Apartments, 3-6-467/1, Hardikar Bagh, Himayatnagar, Hyderabad. Half the landed property was bequeathed to me by my father, late Shri P. Ramachandra Reddy. The other half-share was bequeathed to my nephews, Shri Sai Chaitanya and Shri Sai Lalith, sons of my elder sister, Smt. Madhulika. The property was developed by us jointly by constructing a residential apartment building. Flat No. 502 was retained by me. IMMOVABLE PROPERTY JOINTLY OWNED BY ME, MY WIFE AND MY SON: 1. Residential Plot bearing No. 977, situated at Road No. 50, Jubilee Hills, Hyderabad. Purchased under Regd. Sale Deeds bearing Nos. 2155 of 2003 dated 19-6-2003 and 2156 of 2003 da...",
+          "description": "Family, HUF, spouse and dependent references visible in the public declaration.",
+          "items": [
+            "5. Half-share in the house property in the 13th Ward at Gudivada, A.P. The other half-share is owned by my nephew, Shri Suneil Reddy, son of my eldest sister, Smt. Geetha Reddy",
+            "8. Flat No. 502 in Srinivas Apartments, 3-6-467/1, Hardikar Bagh, Himayatnagar, Hyderabad. Half the landed property was bequeathed to me by my father, late Shri P. Ramachandra Reddy. The other half-share was bequeathed t...",
+            "1. Residential Plot bearing No. 977, situated at Road No. 50, Jubilee Hills, Hyderabad. Purchased under Regd. Sale Deeds bearing Nos. 2155 of 2003 dated 19-6-2003 and 2156 of 2003 da"
+          ],
           "value": null
         }
       ],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": 46140154,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": 46140154,
+        "gold_grams": null,
+        "silver_grams": null,
+        "vehicles_count": 3,
+        "real_estate_count": 6,
+        "land_acres": null
+      }
     }
   },
   {
@@ -417,31 +1020,85 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "Shares & Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF (1) LIC Policy for Rs.5,00,000/- (2) Eight IDBI Deep Discount Bond – (Series 1) at the Issue Price of Rs.2,700/- each – in the joint name with brother – gifted by late father (3) Two IDBI Deep Discount Bond – (Series 1) at the Issue Price of Rs.2,700/- each – in the joint name with late parents – bought by late father (4) 400 Magnums in Magnum Monthly Scheme, II of SBI Mutual Fund of Rs.100 each fully paid up – in the joint name with late parents and brother – bought by late father (5) 1000 Units of UTI Growing Corpus Growing Income Plan – 1994 (of Face Value Rs.10 each) – gifted by late father (6) 200 Debenture in 15% secured (“A” Series) – Non Convertible Redeemable Debentures of Rs.100 each of J.K. Synthetics Ltd., – in the joint name with late mother and brother – bought by late father (7) 1000 Equity Shares of Rs.10 each of I...",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [
+            "Shares & Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF (1) LIC Policy for Rs.5,00,000/- (2) Eight IDBI Deep Discount Bond – (Series 1) at the Issue Price of Rs.2,700/- each – in the joint name with brother – gifted by late father (3) Two"
+          ],
           "value": 51414046
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [],
+          "value": null,
+          "gold_grams": null,
+          "silver_grams": null
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [],
+          "value": null,
+          "count": 0
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "Landed Property Flat/Building/Other Landed Property (1) ½ share in a Flat in a multistoried apartments complex in the joint name with brother in New Patliputra Colony, Patna, Bihar – gifted by late father in 1989 (2) 1/5th inherited share in bungalow of late father with appurtenant land in Patliputra Colony, Patna, Bihar built around 1958-61 (3) 2/15th share in a 3009 sq. ft. plot of land at Fraser Road, Patna, Bihar – ancestral property (4) Undefined share in old ancestral Zamindari agricultural lands within the state of Bihar in Patna, Bhojpur, Kaimur and Rohtas districts – extended Muslim joint family property – worth not assessable as cases still pending in courts (5) ½ share in self-acquired property (in the joint name of self and wife) comprising residential house built on 250 sq. mtrs. land in Sector-50, NOIDA, District – Gautam Budh Nagar, U.P. bought in June, 2022 from own resou...",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [],
           "value": null
+        },
+        {
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [
+            "Landed Property Flat/Building/Other Landed Property (1) ½ share in a Flat in a multistoried apartments complex in the joint name with brother in New Patliputra Colony, Patna, Bihar – gifted by late father in 1989 (2) 1/5th inherited share i..."
+          ],
+          "value": null,
+          "acres": null
         }
       ],
       "family": [
         {
+          "category": "family",
+          "emoji": "👪",
           "label": "Family and dependent entries",
           "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "DAUGHTER [Dependent] (4) Undefined share in old ancestral Zamindari agricultural lands within the state of Bihar in Patna, Bhojpur, Kaimur and Rohtas districts – extended Muslim joint family property – worth not assessable as cases still pending in courts",
+          "description": "Family, HUF, spouse and dependent references visible in the public declaration.",
+          "items": [
+            "DAUGHTER [Dependent] (4) Undefined share in old ancestral Zamindari agricultural lands within the state of Bihar in Patna, Bhojpur, Kaimur and Rohtas districts – extended Muslim joint family property – worth not assessab..."
+          ],
           "value": null
         }
       ],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": 37610859,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": 37610859,
+        "gold_grams": null,
+        "silver_grams": null,
+        "vehicles_count": 0,
+        "real_estate_count": 1,
+        "land_acres": null
+      }
     }
   },
   {
@@ -456,31 +1113,87 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies SHARES HELD IN INDIAN COMPANIES (1) Value of Shares of Listed Indian Companies, as on 31.3.2025, held in Demat Accounts: Rs. 22,70,14,516/- (Rupees Twenty-Two Crores Seventy Lacs Fourteen Thousand Five Hundred Sixteen Only) (2) Few old shares currently valued between Rs.6 to 8 lacs held in physical form. Exact details currently not available. BANK DEPOSITS (3) Fixed Deposit dated: 10.12.2024 in HDFC Bank of Rs. 7,00,000/- (seven lacs) (4) Flexi A/c Balance as on 31.3.2025 in PNB: Rs.21,26,664/13p (Twenty One Lacs, Twenty Six Thousand, Six Hundred, Sixty four Only) (5) Savings Bank A/c Balance as on 31.3.2025 in SBI: Rs.8,77,533/70p (Eight Lacs, Seventy Seven Thousand, Five Hundred, Thirty Three Only) (6) Savings Bank A/c Balance as on 31.3.2025 in Uco Bank, Supreme Court: Rs.17,81,651/32p (Seventeen Lacs, Eig...",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [
+            "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies SHARES HELD IN INDIAN COMPANIES (1) Value of Shares of Listed Indian Companies, as on 31.3.2025, held in Demat Accounts: Rs. 22,70,14,516/- (Rupees Twenty-Two C"
+          ],
           "value": 543314808
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [],
+          "value": null,
+          "gold_grams": null,
+          "silver_grams": null
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [],
+          "value": null,
+          "count": 0
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "Free Hold Land held under conversion deed dated 7ᵗʰ July 2000, registered on 15ᵗʰ July 2000, executed by the Governor, State of UP (through District Magistrate Allahabad/ Collector Allahabad, in respect of old Nazul Plot No.BB-1, Civil Station Allahabad, measuring about 7395 square meters, earlier held under lease deed dated 20.08.1993, located at the crossing of Lal Bahadur Shastri Marg (Elgin Road) and Kasturba Gandhi Marg (Stanley Road), Civil Lines, Allahabad (now Prayagraj). Note: The said conversion deed is in joint names of: (1) Pratap Narain Misra (my father); (2) Ajay Misra (my uncle i.e., father’s brother) and (3) My Self. Father has expired on 28.03.2014. Over the said plot residential buildings exist with three municipal numbers: (1) 4/5; (2) 6/5-A and (3) 7/5-B, K.G. Marg (old Stanley Road), Civil Lines, Allahabad (Now Prayagraj). Flat / Apartment on the Second Floor of Buil...",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [
+            "2014. Over the said plot residential buildings exist with three municipal numbers: (1) 4/5; (2) 6/5-A and (3) 7/5-B, K.G. Marg (old Stanley Road), Civil Lines, Allahabad (Now Prayagraj). Flat / Apartment on the Second Floor of Buil"
+          ],
           "value": null
+        },
+        {
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [
+            "Free Hold Land held under conversion deed dated 7ᵗʰ July 2000, registered on 15ᵗʰ July 2000, executed by the Governor, State of UP (through District Magistrate Allahabad/ Collector Allahabad, in respect of old Nazul Plot No.BB-1, Civil Stat..."
+          ],
+          "value": null,
+          "acres": null
         }
       ],
       "family": [
         {
+          "category": "family",
+          "emoji": "👪",
           "label": "Family and dependent entries",
           "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "Spouse: Mrs. Abhilasha Misra Dependents (Nil. As both sons are adult and are income-tax payers) Acquisition Details below: Inherited 1/3ʳᵈ share in freehold land bearing No.5 in Block A-1, admeasuring 490 square yards in the lay out plan of Safdarjung Development Residential Scheme (i.e., now known as Safdarjung Enclave), from parents Shri Manmohan Shukla and Smt. Hemlata Shukla, who died intestate on 10.10.2011 and 5.11.2009, respectively, leaving behind two sons and daughter (i.e., Abhilasha Misra). Thereafter, on basis of a family arrangement, the property was given for re-development vide registered deed dated 17.04.2017 under which four floors were built. One with basement went to one brother. First floor went to the builder. 2nd floor came to Abhilasha Misra; and the third floor went to the other brother.",
+          "description": "Family, HUF, spouse and dependent references visible in the public declaration.",
+          "items": [
+            "Spouse: Mrs. Abhilasha Misra Dependents (. As both sons are adult and are income-tax payers) Acquisition Details below: Inherited 1/3ʳᵈ share in freehold land bearing No.5 in Block A-1, admeasuring 490 square yards in th..."
+          ],
           "value": null
         }
       ],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": 271657404,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": 271657404,
+        "gold_grams": null,
+        "silver_grams": null,
+        "vehicles_count": 0,
+        "real_estate_count": 2,
+        "land_acres": null
+      }
     }
   },
   {
@@ -495,31 +1208,87 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies Mutual Funds Rs.5,50,000/- LIC Policies 2 Nos. Savings Bank Account • State Bank of India – 1,54,99,069/- (as on 4-5-2025) • Kotak Mahindra – 1,17,586.61/- (as on 4-5-2025) Advocates Coop. Society – 1,000/- Nyayamitra Sahakari Bank – 29,664/- Fixed Deposits Canara Bank – Rs. 39,70,925/- Flexicube Time Deposit – Rs.1,83,78,927 (as on 19.04.2025) GPF – Rs.1,32,06,673/- Shares in National Coop. Bank Ltd., Rs.4,625/- Saving Bank Accounts Canara Bank Rs. 96,56,145.92 National Coop. Bank Fixed Deposit- Rs.10,000/- Canara Bank Fixed Deposit Rs.7,64,831/- Rs.4,87,632 /- Investment in Optimix Rs.1,00,000/- ) 1. Co-owner (50% share) in immoveable property at 4th T Block Jayanagar, BANGALORE-560041, measuring East To West 60 feet and North to South 40 with Super Built area of 304.70 Sq. Meters. Co-owner (50% share) in i...",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [
+            "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies Mutual Funds Rs.5,50,000/- LIC Policies 2 Nos. Savings Bank Account • State Bank of India – 1,54,99,069/- (as on 4-5-2025) • Kotak Mahindra – 1,17,586.61/- (as"
+          ],
           "value": 94259521
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [],
+          "value": null,
+          "gold_grams": null,
+          "silver_grams": null
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [
+            "Mahindra – 1,17,586"
+          ],
+          "value": null,
+          "count": 1
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "1. Co-owner (50% share) in immoveable property at 4th T Block Jayanagar, BANGALORE-560041, measuring East To West 60 feet and North to South 40 with Super Built area of 304.70 Sq. Meters. Co-owner (50% share) in im",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [
+            "1. Co-owner (50% share) in immoveable property at 4th T Block Jayanagar, BANGALORE-560041, measuring East To West 60 feet and North to South 40 with Super Built area of 304.70 Sq. Meters. Co-owner (50% share) in im"
+          ],
           "value": null
+        },
+        {
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [],
+          "value": null,
+          "acres": null
         }
       ],
       "family": [
         {
+          "category": "family",
+          "emoji": "👪",
           "label": "Family and dependent entries",
           "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "SPOUSE JOINT FAMILY",
+          "description": "Family, HUF, spouse and dependent references visible in the public declaration.",
+          "items": [
+            "SPOUSE JOINT FAMILY"
+          ],
           "value": null
         }
       ],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": 56275343,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": 56275343,
+        "gold_grams": null,
+        "silver_grams": null,
+        "vehicles_count": 1,
+        "real_estate_count": 1,
+        "land_acres": null
+      }
     }
   },
   {
@@ -534,31 +1303,108 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies 1. Balance held as on 31.03.2025 in Axis Bank, Bilaspur, Joint Account with wife Rs.10,01,625.86 2. Balance held as on 31.03.2025 in Axis Bank, Bilaspur HUF A/c Rs. 4,36,046.22 3. Balance held as on 31.03.2025 in SBI Branch Nirman Bhawan, Delhi- Joint Account with wife Rs. 6,36,454.75 4. Balance held as on 31.03.2025 in SBI Branch Nirman Bhawan, Delhi- (Self salary account) Rs. 54,82,542.74 5. Balance held as on 31.03.2025 in GPF A/c – Rs. 95,86,145.00 6. Balance held as on 31.03.2025 in PPF Account (self) Rs. 53,45,881.84 7. Mutual fund in the name of (HUF) held as on 31.03.2025 Rs. 8,20,181.13. 08. Mutual fund in the name of self held as on 31.03.2025 Rs. 27,58,223.41. 09. LIC Money Plus – Premium paid Rs. 7 lakhs. 10. Equity Shares having present value of Rs. 3,28,84,913.31 as on 31.03.2025 in the name of...",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [
+            "1. Balance held as on 31.03.2025 in Axis Bank, Bilaspur, Joint Account with wife Rs.10,01,625.86",
+            "2. Balance held as on 31.03.2025 in Axis Bank, Bilaspur HUF A/c Rs. 4,36,046.22",
+            "3. Balance held as on 31.03.2025 in SBI Branch Nirman Bhawan, Delhi- Joint Account with wife Rs. 6,36,454.75",
+            "4. Balance held as on 31.03.2025 in SBI Branch Nirman Bhawan, Delhi- (Self salary account) Rs. 54,82,542.74",
+            "5. Balance held as on 31.03.2025 in GPF A/c – Rs. 95,86,145.00",
+            "6. Balance held as on 31.03.2025 in PPF Account (self) Rs. 53,45,881.84",
+            "7. Mutual fund in the name of (HUF) held as on 31.03.2025 Rs. 8,20,181",
+            "08. Mutual fund in the name of self held as on 31.03.2025 Rs. 27,58,223",
+            "09. LIC Money Plus – Premium paid Rs. 7 lakhs",
+            "10. Equity Shares having present value of Rs. 3,28,84,913.31 as on 31.03.2025 in the name of"
+          ],
           "value": 145405348
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [],
+          "value": null,
+          "gold_grams": null,
+          "silver_grams": null
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [],
+          "value": null,
+          "count": 0
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "1. Agricultural Land area 1.31 hectares, Vill. Pauta, P.H. No. 22, R.I. Circle Nayapara Tehsil Abhanpur, Distt. Raipur (C.G.) 2. House & open area 4422.6 sq. ft., Hansa Vihar Colony, Bilaspur 3. In the name of self and spouse 2/4th area from 17500 sq. ft. at Vill. Bodri, H.P. No. 1, R.I Circle & Tehsil Bilha, District Bilaspur (C.G.) 4. One 4 BHK Flat with Garage at Jaypee Greens Noida, Kensington Bouleward. (Sale deed not executed and possession still awaited). 5. Plot No. 28 at Beladula Raigarh, Area – 6874 sq. ft. (Ancestral) 6. 1/3rd share in Agricultural land at village Attarmuda, Distt. Raigarh, Khasra No. 104/2, area 2 acres. (Ancestral) 7. Booked plot at Serikhedi, Raipur C.G. Grih Nirman – Area 3600 sq. ft. (Sale deed not executed and possession still awaited). 1. Agricultural Land area 4.705 hectares, Vill. Sargaon, P.H.No. 46, R.I. Circle Patharia, Tehsil Mungeli, Distt. Bilas...",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [
+            "2. House & open area 4422.6 sq. ft., Hansa Vihar Colony, Bilaspur",
+            "3. In the name of self and spouse 2/4th area from 17500 sq. ft. at Vill. Bodri, H.P. No. 1, R.I Circle & Tehsil Bilha, District Bilaspur (C.G.)",
+            "4. One 4 BHK Flat with Garage at Jaypee Greens Noida, Kensington Bouleward. (Sale deed not executed and possession still awaited)",
+            "5. Plot No. 28 at Beladula Raigarh, Area – 6874 sq. ft. (Ancestral)",
+            "7. Booked plot at Serikhedi, Raipur C.G. Grih Nirman – Area 3600 sq. ft. (Sale deed not executed and possession still awaited)"
+          ],
           "value": null
+        },
+        {
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [
+            "1. Agricultural Land area 1.31 hectares, Vill. Pauta, P.H. No. 22, R.I. Circle Nayapara Tehsil Abhanpur, Distt. Raipur (C.G.)",
+            "6. 1/3rd share in Agricultural land at village Attarmuda, Distt. Raigarh, Khasra No. 104/2, area 2 acres. (Ancestral)",
+            "1. Agricultural Land area 4.705 hectares, Vill. Sargaon, P.H.No. 46, R.I. Circle Patharia, Tehsil Mungeli, Distt. Bilas"
+          ],
+          "value": null,
+          "acres": 2.0
         }
       ],
       "family": [
         {
+          "category": "family",
+          "emoji": "👪",
           "label": "Family and dependent entries",
           "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "SELF/JOINT FAMILY SPOUSE/JOINT FAMILY (Sucheta Mishra) DEPENDENT(S), IF ANY 3. In the name of self and spouse 2/4th area from 17500 sq. ft. at Vill. Bodri, H.P. No. 1, R.I Circle & Tehsil Bilha, District Bilaspur (C.G.) 2. Balance held as on 31.03.2025 in Axis Bank, Bilaspur HUF A/c Rs. 4,36,046.22 7. Mutual fund in the name of (HUF) held as on 31.03.2025 Rs. 8,20,181.13. 10. Equity Shares having present value of Rs. 3,28,84,913.31 as on 31.03.2025 in the name of HUF 12. Equity Shares having present value of Rs. 86,782.39 as on 31.03.2025 in the joint name of self and Spouse/Mrs. Sucheta Mishra HUF – Gold Ornaments weighing 25 Tolas (Approx.) received from parents.",
+          "description": "Family, HUF, spouse and dependent references visible in the public declaration.",
+          "items": [
+            "(Sucheta Mishra)",
+            "3. In the name of self and spouse 2/4th area from 17500 sq. ft. at Vill. Bodri, H.P. No. 1, R.I Circle & Tehsil Bilha, District Bilaspur (C.G.)",
+            "2. Balance held as on 31.03.2025 in Axis Bank, Bilaspur HUF A/c Rs. 4,36,046.22",
+            "7. Mutual fund in the name of (HUF) held as on 31.03.2025 Rs. 8,20,181",
+            "13",
+            "10. Equity Shares having present value of Rs. 3,28,84,913.31 as on 31.03.2025 in the name of HUF",
+            "12. Equity Shares having present value of Rs. 86,782.39 as on 31.03.2025 in the joint name of self and Spouse/Mrs. Sucheta Mishra HUF – Gold Ornaments weighing 25 Tolas (Approx.) received from parents"
+          ],
           "value": 34227922
         }
       ],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": 72702674,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": 72702674,
+        "gold_grams": null,
+        "silver_grams": null,
+        "vehicles_count": 0,
+        "real_estate_count": 7,
+        "land_acres": 2.0
+      }
     }
   },
   {
@@ -573,31 +1419,91 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies ₹1,20,96,90,918 (approx.) Under LRS Scheme of Reserve Bank of India (in USD) – 5,00,000 ₹6,43,87,133 (approx)(including inherited shares) Under LRS Scheme of Reserve Bank of India (in USD) – 5,00,000 ₹1,31,71,097 (approx) ) Builder Floor – Purchased in 2010. Basement/GF (Blk C5 300 sq yd plot) Safdarjung Development Area, New Delhi Builder Floor – Purchased in 2014. Second Floor (Blk C5 300 sq yd plot) Safdarjung Development Area, New Delhi Joint ownership (50% share with spouse) Builder Floor – Purchased in 2016. Basement/GF (D block 300sq yd plot), Gulmohar Park, New Delhi. Apartment – Purchased in 2019 (approx 2000 sq ft) Race Course Road, Coimbatore (Tamil Nadu) DDA Flat (Block C4), Safdarjung Development Area, New Delhi (Inherited 50% of fathers estate) (approx 900 sq ft) Joint ownership (50% share with...",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [
+            "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies ₹1,20,96,90,918 (approx.) Under LRS Scheme of Reserve Bank of India (in USD) – 5,00,000 ₹6,43,87,133 (approx)(including inherited shares) Under LRS Scheme of Re"
+          ],
           "value": 2574498296
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [],
+          "value": null,
+          "gold_grams": null,
+          "silver_grams": null
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [],
+          "value": null,
+          "count": 0
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "Builder Floor – Purchased in 2010. Basement/GF (Blk C5 300 sq yd plot) Safdarjung Development Area, New Delhi Builder Floor – Purchased in 2014. Second Floor (Blk C5 300 sq yd plot) Safdarjung Development Area, New Delhi Joint ownership (50% share with spouse) Builder Floor – Purchased in 2016. Basement/GF (D block 300sq yd plot), Gulmohar Park, New Delhi. Apartment – Purchased in 2019 (approx 2000 sq ft) Race Course Road, Coimbatore (Tamil Nadu) DDA Flat (Block C4), Safdarjung Development Area, New Delhi (Inherited 50% of fathers estate) (approx 900 sq ft) Joint ownership (50% share with spouse) Builder Floor – Purchased in 2016. Basement/GF (D block 300sq yd plot), Gulmohar Park, New Delhi. NIL",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [
+            "Builder Floor – Purchased in",
+            "2010. Basement/GF (Blk C5 300 sq yd plot) Safdarjung Development Area, New Delhi Builder Floor – Purchased in",
+            "2014. Second Floor (Blk C5 300 sq yd plot) Safdarjung Development Area, New Delhi Joint ownership (50% share with spouse) Builder Floor – Purchased in",
+            "2016. Basement/GF (D block 300sq yd plot), Gulmohar Park, New Delhi. Apartment – Purchased in 2019 (approx 2000 sq ft) Race Course Road, Coimbatore (Tamil Nadu) DDA Flat (Block C4), Safdarjung Development Area, New Delhi (Inherited 50% of f...",
+            "2016. Basement/GF (D block 300sq yd plot), Gulmohar Park, New Delhi"
+          ],
           "value": null
+        },
+        {
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [],
+          "value": null,
+          "acres": null
         }
       ],
       "family": [
         {
+          "category": "family",
+          "emoji": "👪",
           "label": "Family and dependent entries",
           "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "SPOUSE DEPENDENT CHILD Joint ownership (50% share with spouse) Builder Floor – Purchased in 2016. Basement/GF (D block 300sq yd plot), Gulmohar Park, New Delhi. Joint ownership (50% share with spouse) Builder Floor – Purchased in 2016. Basement/GF (D block 300sq yd plot), Gulmohar Park, New Delhi.",
+          "description": "Family, HUF, spouse and dependent references visible in the public declaration.",
+          "items": [
+            "SPOUSE DEPENDENT CHILD Joint ownership (50% share with spouse) Builder Floor – Purchased in",
+            "2016. Basement/GF (D block 300sq yd plot), Gulmohar Park, New Delhi. Joint ownership (50% share with spouse) Builder Floor – Purchased in",
+            "2016. Basement/GF (D block 300sq yd plot), Gulmohar Park, New Delhi"
+          ],
           "value": null
         }
       ],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": 3116801175,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": 3116801175,
+        "gold_grams": null,
+        "silver_grams": null,
+        "vehicles_count": 0,
+        "real_estate_count": 4,
+        "land_acres": null
+      }
     }
   },
   {
@@ -612,31 +1518,77 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies Investment in shares of Industrial Cooperative Bank Limited, Guwahati – ₹2,500/- FDR in Bank of Baroda – ₹16,00,000/- as on 8.2.2023. (₹19,55,829.00 – maturity value as on 8.2.2026). PPF – Nil GPF – Nil Insurance Policies: (i) Kotak Life of ₹1,02,364/- (ii) Bajaj Allianz of ₹1,00,000/- (iii) Aviva of ₹51,125/- (iv) Aegon LIP of ₹50,000/- (v) LIC of ₹5,00,000/- Shares/Mutual Funds – Nil FDR in Bank of Baroda – ₹7,00,000/- as on 8.2.2023. (₹8,55,675.00 – maturity value as on 8.2.2026). PPF – Nil GPF – Nil LIC – Nil Shares/Mutual Funds – Nil Fixed Deposits/Bonds/Debentures -Nil PPF – Nil GPF – Nil LIC of ₹3,00,409/- (maturity value as on 28.02.2024) ) 15, B.N. Das Lane, Ambari, Lamb Road, Guwahati – 781001, Assam (Ancestral double storey bungalow with part house at second floor) Flat – At Surabhi Housing Coopera...",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [
+            "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies Investment in shares of Industrial Cooperative Bank Limited, Guwahati – ₹2,500/- FDR in Bank of Baroda – ₹16,00,000/- as on 8.2",
+            "2023. (₹19,55,829.00 – maturity value as on 8.2.2026). PPF – GPF – Insurance Policies:",
+            "(i) Kotak Life of ₹1,02,364/- (ii) Bajaj Allianz of ₹1,00,000/- (iii) Aviva of ₹51,125/- (iv) Aegon LIP of ₹50,000/",
+            "Shares/Mutual Funds – FDR in Bank of Baroda – ₹7,00,000/- as on 8.2",
+            "Shares/Mutual Funds – Fixed Deposits/Bonds/Debentures - PPF – GPF – LIC of ₹3,00,409/- (maturity value as on 28.02.2024) ) 15, B.N. Das Lane, Ambari, Lamb Road, G"
+          ],
           "value": 14036404
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [],
+          "value": null,
+          "gold_grams": null,
+          "silver_grams": null
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [],
+          "value": null,
+          "count": 0
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "15, B.N. Das Lane, Ambari, Lamb Road, Guwahati – 781001, Assam (Ancestral double storey bungalow with part house at second floor) Flat – At Surabhi Housing Cooperative Society (meant for Judges of Bombay High Court) in Oshiwara, Andheri West, Mumbai. Other landed property – Nil One 2-BHK Flat at Jogesh Das Path, Khalihamari, Dibrugarh – 786001, Assam (Ancestral double storey bungalow with part house at second floor) Flat – Nil Other landed property – Nil Nil",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [
+            "15, B.N. Das Lane, Ambari, Lamb Road, Guwahati – 781001, Assam (Ancestral double storey bungalow with part house at second floor) Flat – At Surabhi Housing Cooperative Society (meant for Judges of Bombay High Court) in Oshiwara, Andheri Wes..."
+          ],
           "value": null
-        }
-      ],
-      "family": [
+        },
         {
-          "label": "Family and dependent entries",
-          "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "SELF/JOINT FAMILY SPOUSE/JOINT FAMILY DEPENDENT(S), IF ANY",
-          "value": null
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [],
+          "value": null,
+          "acres": null
         }
       ],
+      "family": [],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": 28418502,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": 28418502,
+        "gold_grams": null,
+        "silver_grams": null,
+        "vehicles_count": 0,
+        "real_estate_count": 1,
+        "land_acres": null
+      }
     }
   },
   {
@@ -651,31 +1603,84 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "as on 31.03.2025 (i) Fixed Deposits (ii) S.B. A/cs (iii) GPF (iv) LIC Savings Bank Accounts : (i) SBI – ₹78,788/- (ii) UCO – ₹4,21,171/- (iii) Union Bank – ₹2,21,674/- GPF – ₹1,68,00,909/- LIC – ₹19,10,000/- (i) S.B. A/cs Balance – ₹1,13,088/- (ii) FDRs/Postal MIS realisable value – ₹2,22,63,246/- (i) Flat (ii) Plot (iii) Buildings Buildings (i) D.No.7/90-91, Gundlur Street, Madanapalli – 517321, A.P. (ii) D.No. 17/179, Gandhi Road, Madanapalli – 517325, A.P. vide Registered Partition Deed No. 7029/2013 dated 27.11.2013, SRO-Madanapalle, A.P. (iii) Flat No. 301, Emerald Park, D.No. 1-2-19 & 20, Gangamahal, Domalguda Road, Domalguda, Hyderabad, Telangana State. (iv) Plot No. 20-155-657-5110-4-F600 in S—No. 63, 66, Inavolu, Amaravathi, Guntur District vide Registered Sale Deed No.4178/2019 dated 24.4.2014, SRO-Thulluru, A.P. (v) Vacant Plot covered by D.No. 2-413-C2, Society Colony, Madana...",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [
+            "(i) SBI – ₹78,788/- (ii) UCO – ₹4,21,171/- (iii) Union Bank – ₹2,21,674/- GPF – ₹1,68,00,909/- LIC – ₹19,10,000/",
+            "(i) S.B. A/cs Balance – ₹1,13,088/- (ii) FDRs/Postal MIS realisable value – ₹2,22,63,246/"
+          ],
           "value": 83617752
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [],
+          "value": null,
+          "gold_grams": null,
+          "silver_grams": null
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [],
+          "value": null,
+          "count": 0
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [],
           "value": null
+        },
+        {
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [],
+          "value": null,
+          "acres": null
         }
       ],
       "family": [
         {
+          "category": "family",
+          "emoji": "👪",
           "label": "Family and dependent entries",
           "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "(B) SELF WITH SPOUSE",
+          "description": "Family, HUF, spouse and dependent references visible in the public declaration.",
+          "items": [
+            "(B) SELF WITH SPOUSE"
+          ],
           "value": null
         }
       ],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": 41808876,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": 41808876,
+        "gold_grams": null,
+        "silver_grams": null,
+        "vehicles_count": 0,
+        "real_estate_count": 0,
+        "land_acres": null
+      }
     }
   },
   {
@@ -690,31 +1695,86 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies Shares & Mutual Funds: Shares of listed companies, valuing Rs. 65,62,731.94, as on date. PPF: Rs. 93 lakhs approx. ) Flat : Flat No. Wega-12, Assotech Celeste, Sector 44, Noida. Booked in the year 2007. Registration not done so far by the builder. Building : House No. 1603, Lala Lajpat Rai Ward constructed on part of Nazul Lease Plot No. 13-5, Block No. 32, Civil Station, Jabalpur. Share in House and Plot No. 53, Bicholi Hapsi, Bypass Road, Indore. Share Transferred by way of Gift Deed, by Uncle. Other Landed Property: About 5 acres from father and sister in Vill. Machhera, Teh. Bankheri, Distt. Hoshangabad. Investments Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies Shares & Mutual Funds: Shares of listed companies, valuing Rs. 65,62,731.94, as on date. PPF: Rs. 93 lakhs appro...",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [
+            "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies Shares & Mutual Funds: Shares of listed companies, valuing Rs. 65,62,731.94, as on date. PPF: Rs. 93 lakhs approx. ) Flat : Flat No. Wega-12, Assotech Celeste"
+          ],
           "value": 31725464
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [],
+          "value": null,
+          "gold_grams": null,
+          "silver_grams": null
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [],
+          "value": null,
+          "count": 0
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "Flat : Flat No. Wega-12, Assotech Celeste, Sector 44, Noida. Booked in the year 2007. Registration not done so far by the builder. Building : House No. 1603, Lala Lajpat Rai Ward constructed on part of Nazul Lease Plot No. 13-5, Block No. 32, Civil Station, Jabalpur. Share in House and Plot No. 53, Bicholi Hapsi, Bypass Road, Indore. Share Transferred by way of Gift Deed, by Uncle. Other Landed Property: About 5 acres from father and sister in Vill. Machhera, Teh. Bankheri, Distt. Hoshangabad.",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [
+            "Flat : Flat No. Wega-12, Assotech Celeste, Sector 44, Noida. Booked in the year",
+            "2007. Registration not done so far by the builder. Building : House No. 1603, Lala Lajpat Rai Ward constructed on part of Nazul Lease Plot No. 13-5, Block No. 32, Civil Station, Jabalpur. Share in House and Plot No. 53, Bicholi Hapsi, Bypas..."
+          ],
           "value": null
+        },
+        {
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [],
+          "value": null,
+          "acres": 5.0
         }
       ],
       "family": [
         {
+          "category": "family",
+          "emoji": "👪",
           "label": "Family and dependent entries",
           "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "(B) SPOUSE",
+          "description": "Family, HUF, spouse and dependent references visible in the public declaration.",
+          "items": [
+            "(B) SPOUSE"
+          ],
           "value": null
         }
       ],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": 15862732,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": 15862732,
+        "gold_grams": null,
+        "silver_grams": null,
+        "vehicles_count": 0,
+        "real_estate_count": 2,
+        "land_acres": 5.0
+      }
     }
   },
   {
@@ -729,31 +1789,94 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "Shares / Mutual Funds / Fixed Deposits / Bonds / Debentures / PPF / GPF / Insurance Policies 1. PPF – ₹3,10,000/- 2. GPF – ₹3,75,533/- Mutual Funds HDFC Large Cap Fund (G) – 352.2050 units (value variable) SBI Flexicap Fund (G) – 3,338.7480 units (value variable) One Insurance Policy from LIC Sum Assured – ₹4,50,000/- Yearly Premium – ₹24,500/- Mutual Funds Bandhan Sterling Value Fund (G) – 289.8160 units (value variable) HSBC Large & Mid Cap Fund (Regular) – 1255.7370 units (value variable) One Insurance Policy from LIC Sum Assured – ₹3,00,000/- Yearly Premium – ₹24,508/- ) 500 Sq. Yards plot in ECO City – 1, New Chandigarh purchased on 17.04.2015 and construction of three storeyed house thereon completed in July 2020. Sources 1. Home Loans from State Bank of Patiala (Now State Bank of India), High Court Branch, Chandigarh. 2. Withdrawal from General Provident Fund (GPF) Accounts (Self...",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [
+            "1. PPF – ₹3,10,000/",
+            "2. GPF – ₹3,75,533/- Mutual Funds HDFC Large Cap Fund (G) – 352.2050 units (value variable) SBI Flexicap Fund (G) – 3,338.7480 units (value variable) One Insurance Policy from LIC Sum Assured – ₹4,50,000/- Yearly Premium – ₹24,500/- Mutual"
+          ],
           "value": 7268182
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [],
+          "value": null,
+          "gold_grams": null,
+          "silver_grams": null
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [],
+          "value": null,
+          "count": 0
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "500 Sq. Yards plot in ECO City – 1, New Chandigarh purchased on 17.04.2015 and construction of three storeyed house thereon completed in July 2020. Sources 1. Home Loans from State Bank of Patiala (Now State Bank of India), High Court Branch, Chandigarh. 2. Withdrawal from General Provident Fund (GPF) Accounts (Self and Spouse). 3. Withdrawal from Saving Accounts (Self and Spouse). 4. Sale proceeds of inherited property (Self and Spouse). 5. Interest free loan from relatives. Mother – Share (Second Floor) of 10 Marla house at Panchkula. (Ancestral Property – As per family settlement) Bank Accounts Bank Balance – ₹17,64,575/- State Bank of India, P&H High Court, Chandigarh – ₹5,57,142/- HDFC Bank, Chandigarh – ₹5,73,958/- UCO Bank, Supreme Court Branch – ₹6,13,475/- Maharashtra Bank, Supreme Court Branch – ₹20,000/- Bank Balance – ₹1,62,030/- PNB, Chandigarh – ₹87,789/- Axis Bank, Chandig...",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [
+            "500 Sq. Yards plot in ECO City – 1, New Chandigarh purchased on 17.04.2015 and construction of three storeyed house thereon completed in July",
+            "2020. Sources",
+            "1. Home Loans from State Bank of Patiala (Now State Bank of India), High Court Branch, Chandigarh",
+            "2. Withdrawal from General Provident Fund (GPF) Accounts (Self and Spouse)",
+            "3. Withdrawal from Saving Accounts (Self and Spouse)",
+            "4. Sale proceeds of inherited property (Self and Spouse)",
+            "5. Interest free loan from relatives. Mother – Share (Second Floor) of 10 Marla house at Panchkula. (Ancestral Property – As per family settlement) Bank Accounts Bank Balance – ₹17,64,575/- State Bank of India, P&H High Court, Chandigarh –..."
+          ],
           "value": null
+        },
+        {
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [],
+          "value": null,
+          "acres": null
         }
       ],
       "family": [
         {
+          "category": "family",
+          "emoji": "👪",
           "label": "Family and dependent entries",
           "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "SPOUSE DEPENDENT(S), IF ANY (Self and Spouse). 3. Withdrawal from Saving Accounts (Self and Spouse). 4. Sale proceeds of inherited property (Self and Spouse).",
+          "description": "Family, HUF, spouse and dependent references visible in the public declaration.",
+          "items": [
+            "SPOUSE (Self and Spouse)",
+            "3. Withdrawal from Saving Accounts (Self and Spouse)",
+            "4. Sale proceeds of inherited property (Self and Spouse)"
+          ],
           "value": null
         }
       ],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": 35764879,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": 35764879,
+        "gold_grams": null,
+        "silver_grams": null,
+        "vehicles_count": 0,
+        "real_estate_count": 3,
+        "land_acres": null
+      }
     }
   },
   {
@@ -768,31 +1891,90 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies Shares: Reliance Power Limited: 27 shares Mutual Funds: a. Power Finance 15 years bond dated 16.11.2013 -₹10,00,000/- b. Rural Electrification 10 Years bond dated 16.11.2015 – ₹1,50,000/- c. Rural Electrification 15 Years bond dated 19.12.2012 – ₹10,00,000/- d. Power Finance 10 years bond dated 19.10.2015 – ₹1,11,000/- e. Railway Finance 10 years bond allotment advise 2182 dated 21.12.2015 – ₹3,96,000/- f. Mutual Funds Equity with HDFC Portfolio -₹36,99,815/- Insurance Policies: Aditya Birla Sun Life Insurance Vision Life Income 2013 dated 11.01.2018 (Premium Annual) – ₹2,16,437/- P.P.F. as on 31.03.2025 – ₹27,65,830.81 G.P.F. as on 31.03.2025 – ₹1,83,82,574/- Bank Balances: (i) SBI Delhi Branch A/c No.*****0917 as on 31.03.2025 – ₹8,45,027.91 (ii) HDFC Saving A/c No.*****1000 as on 31.03.2025 – ₹14,674.94 Sh...",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [
+            "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies Shares: Reliance Power Limited: 27 shares Mutual Funds: a. Power Finance 15 years bond dated 16.11.2013 -₹10,00,000/- b. Rural Electrification 10 Years bond dat",
+            "(i) SBI Delhi Branch A/c No.*****0917 as on 31.03.2025 – ₹8,45,027.91 (ii) HDFC Saving A/c No.*****1000 as on 31.03.2025 – ₹14,674.94 Sh"
+          ],
           "value": 81261984
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [],
+          "value": null,
+          "gold_grams": null,
+          "silver_grams": null
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [],
+          "value": null,
+          "count": 0
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "1. Residence at plot No.43, Paota ‘C’ Road Lane No.3, Opp.I.T.O. Jodhpur 2. Plot at Ummed Heritage Colony, Jodhpur ad-measuring 59x90ft (about 600 sq.yards) 3. Two rooms house on leased Plot at Paota ‘C’ Road Mrs. Suman Mehta W/o Hon’ble Justice Sandeep Mehta 1. Commercial Plot at Paota ‘C’ Road ad-measuring 65×50 ft (361 sq.yards) 2. Plot at Paota ‘C’ Road ad-measuring 85×50 ft (472.22 sq.yards) with old constructed building NIL",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [
+            "1. Residence at plot No.43, Paota ‘C’ Road Lane No.3, Opp.I.T.O. Jodhpur",
+            "2. Plot at Ummed Heritage Colony, Jodhpur ad-measuring 59x90ft (about 600 sq.yards)",
+            "3. Two rooms house on leased Plot at Paota ‘C’ Road Mrs. Suman Mehta W/o Hon’ble Justice Sandeep Mehta",
+            "1. Commercial Plot at Paota ‘C’ Road ad-measuring 65×50 ft (361 sq.yards)",
+            "2. Plot at Paota ‘C’ Road ad-measuring 85×50 ft (472.22 sq.yards) with old constructed building"
+          ],
           "value": null
+        },
+        {
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [],
+          "value": null,
+          "acres": null
         }
       ],
       "family": [
         {
+          "category": "family",
+          "emoji": "👪",
           "label": "Family and dependent entries",
           "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "SPOUSE DEPENDENT(S), IF ANY",
+          "description": "Family, HUF, spouse and dependent references visible in the public declaration.",
+          "items": [
+            "SPOUSE"
+          ],
           "value": null
         }
       ],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": 49030992,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": 49030992,
+        "gold_grams": null,
+        "silver_grams": null,
+        "vehicles_count": 0,
+        "real_estate_count": 5,
+        "land_acres": null
+      }
     }
   },
   {
@@ -807,31 +1989,88 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies (i) Saving Bank Accounts – Rs. 6,97,907/- (ii) FDR’s – Rs. 25,07,403/- FDR’s – Rs. 73,39,546/- (iii) GPF – Rs. 76,29,543/- (approx.) Saving Bank Accounts – Rs. 19,12,355/- (ii) FDR’s – Rs. 10,00,000/- FDR’s – Rs. 25,00,000/- NIL ) Flat allotted jointly by self and Mrs. Geeta Prasanna Varale (Spouse) in the High Court Judges Society viz. “Surabhi” Corporative Housing Society at Oshiwara, Mumbai – under construction. NIL Investments Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies (i) Saving Bank Accounts – Rs. 6,97,907/- (ii) FDR’s – Rs. 25,07,403/- FDR’s – Rs. 73,39,546/- (iii) GPF – Rs. 76,29,543/- (approx.) Saving Bank Accounts – Rs. 19,12,355/- (ii) FDR’s – Rs. 10,00,000/- FDR’s – Rs. 25,00,000/- NIL Movable Property Jewellery/Vehicles/Other assets 50-100 gms. of gold ornamen...",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [
+            "(i) Saving Bank Accounts – Rs. 6,97,907/- (ii) FDR’s – Rs. 25,07,403/- FDR’s – Rs. 73,39,546/- (iii) GPF – Rs. 76,29,543/- (approx.) Saving Bank Accounts – Rs. 19,12,355/- (ii) FDR’s – Rs. 10,00,000/- FDR’s – Rs. 25,00,000/- ) Flat allotte",
+            "(i) Saving Bank Accounts – Rs. 6,97,907/- (ii) FDR’s – Rs. 25,07,403/- FDR’s – Rs. 73,39,546/- (iii) GPF – Rs. 76,29,543/- (approx.) Saving Bank Accounts – Rs. 19,12,355/- (ii) FDR’s – Rs. 10,00,000/- FDR’s – Rs. 25,00,000/- Movable Proper"
+          ],
           "value": 47173508
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [
+            "gold ornamen"
+          ],
+          "value": null,
+          "gold_grams": null,
+          "silver_grams": null
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [],
+          "value": null,
+          "count": 0
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "Flat allotted jointly by self and Mrs. Geeta Prasanna Varale (Spouse) in the High Court Judges Society viz. “Surabhi” Corporative Housing Society at Oshiwara, Mumbai – under construction. NIL",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [
+            "Flat allotted jointly by self and Mrs. Geeta Prasanna Varale (Spouse) in the High Court Judges Society viz. “Surabhi” Corporative Housing Society at Oshiwara, Mumbai – under construction"
+          ],
           "value": null
+        },
+        {
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [],
+          "value": null,
+          "acres": null
         }
       ],
       "family": [
         {
+          "category": "family",
+          "emoji": "👪",
           "label": "Family and dependent entries",
           "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "SPOUSE DEPENDENT(S), IF ANY Flat allotted jointly by self and Mrs. Geeta Prasanna Varale (Spouse) in the High Court Judges Society viz. “Surabhi” Corporative Housing Society at Oshiwara, Mumbai – under construction.",
+          "description": "Family, HUF, spouse and dependent references visible in the public declaration.",
+          "items": [
+            "SPOUSE Flat allotted jointly by self and Mrs. Geeta Prasanna Varale (Spouse) in the High Court Judges Society viz. “Surabhi” Corporative Housing Society at Oshiwara, Mumbai – under construction"
+          ],
           "value": null
         }
       ],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": 36586754,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": 36586754,
+        "gold_grams": null,
+        "silver_grams": null,
+        "vehicles_count": 0,
+        "real_estate_count": 1,
+        "land_acres": null
+      }
     }
   },
   {
@@ -862,31 +2101,85 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies Fixed Deposit – ₹ 1,06,76,547/- GPF – salary Account Savings Bank -₹ 8,36,552/- UCO bank – Salary A/C LIC – ₹ 3,00,000/- Canara HSBC – ₹ 2,50,000/- Fixed Deposit – ₹1,73,88,345/- PPF – ₹ 24,04,106/- Savings Bank -₹ 4,26,973/- LIC- ₹ 4,00,000/- HDFC LIFE SANCHAY PLUS – yearly premium ₹ 10,22,500/- from 2019-28 Shares and Mutual funds- 6,00,000/- Fixed Deposit – ₹ 40,16,197/- PPF – ₹ 24,04,106/- Savings Bank – ₹ 1,47,414/- ) 1) Vacant Plot Nos.178 & 179, at Vengudy Village, Kancheepuram (2400 sq.ft. Each) Year of purchase – 1992 2) Agricultural land in Varadarajapuram Village, Sriperumpudur Taluk of an extent of 3.45 acres. Year of purchase – 1994 3) Agricultural land in Sirugalathur Village, Ponthur Panchayat, Cheyyur Taluk, Kancheepuram District of an extent of 13.44 acres. Year of purchase – 2006 4) Land of...",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [
+            "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies Fixed Deposit – ₹ 1,06,76,547/- GPF – salary Account Savings Bank -₹ 8,36,552/- UCO bank – Salary A/C LIC – ₹ 3,00,000/- Canara HSBC – ₹ 2,50,000/- Fixed Deposi"
+          ],
           "value": 80545480
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [],
+          "value": null,
+          "gold_grams": null,
+          "silver_grams": null
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [],
+          "value": null,
+          "count": 0
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "1) Vacant Plot Nos.178 & 179, at Vengudy Village, Kancheepuram (2400 sq.ft. Each) Year of purchase – 1992 2) Agricultural land in Varadarajapuram Village, Sriperumpudur Taluk of an extent of 3.45 acres. Year of purchase – 1994 3) Agricultural land in Sirugalathur Village, Ponthur Panchayat, Cheyyur Taluk, Kancheepuram District of an extent of 13.44 acres. Year of purchase – 2006 4) Land of an extent of 1800 sqft with building thereon at Pudupalayam, Mudaliarpet, Pondicherry. Year of purchase – 2008 5) Vacant (Plot 2920 sqft) , Vellanur Village, Thiruvallur District. Year of purchase – 2009 6) TNHB -Flat of 1839 Sq.ft at Nerkundram,Chennai. Instalment basis under construction. 1) Agricultural land in Gunturnadu Village, Namakkal District of an extent of 3 acres. Year of purchase – 2007 —",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [],
           "value": null
+        },
+        {
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [
+            "1) Vacant Plot Nos.178 & 179, at Vengudy Village, Kancheepuram (2400 sq.ft. Each) Year of purchase – 1992 2) Agricultural land in Varadarajapuram Village, Sriperumpudur Taluk of an extent of 3.45 acres. Year of purchase – 1994 3) Agricultur..."
+          ],
+          "value": null,
+          "acres": 19.89
         }
       ],
       "family": [
         {
+          "category": "family",
+          "emoji": "👪",
           "label": "Family and dependent entries",
           "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "(B) SPOUSE – Engineer came on VRS (C) Son",
+          "description": "Family, HUF, spouse and dependent references visible in the public declaration.",
+          "items": [
+            "(B) SPOUSE – Engineer came on VRS (C) Son"
+          ],
           "value": null
         }
       ],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": 40272740,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": 40272740,
+        "gold_grams": null,
+        "silver_grams": null,
+        "vehicles_count": 0,
+        "real_estate_count": 1,
+        "land_acres": 19.89
+      }
     }
   },
   {
@@ -901,31 +2194,71 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies Shares – 5,65,474 Mutual Funds – 67,96,345 Fixed Deposits – 11,35,87,716 RBI Bonds- 12,00,00,000 PPF – 72,33,821 GPF – 3,90,50,395 Insurance Policies – 1,30,75,000 *Above mentioned investments includes gifts received from parents over the years who have been Income tax assesses for more than 45 years Shares – 22,01,400 *Above shares are held by Mrs. Nutan Manmohan in All Time Productions Pvt. Ltd. And Arushi Farms Pvt. Ltd. – Two flats of 1904 Sq. feet each at Sujan Singh Park New Delhi are owned respectively by these companies Mutual Funds – 20,24,830 Fixed Deposits – 3,04,50,000 RBI Bonds – 7,90,00,000 PPF – 61,12,439 *Above mentioned investments includes gifts received from parents over the years who have been Income tax assesses for more than 45 years ) 4/11 shares in residential house of 510 sq. meters a...",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [],
           "value": null
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [],
+          "value": null,
+          "gold_grams": null,
+          "silver_grams": null
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [],
+          "value": null,
+          "count": 0
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "4/11 shares in residential house of 510 sq. meters at Vasant Vihar New Delhi Justice Manmohan has inherited his share in this property after the demise of his father by virtue of his WILL -420 sq. meters. plot at Gurgaon -2550 sq. feet flat at Gurgaon -5.246 Acres Agricultural Land at Saharanpur, Uttar Pradesh -53% shares in residential house of 313.54 sq. meters at Golf Links New Delhi Mrs. Nutan Manmohan has inherited her share in this property after the demise of her father by virtue of his WILL N.A.",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [
+            "4/11 shares in residential house of 510 sq. meters at Vasant Vihar New Delhi Justice Manmohan has inherited his share in this property after the demise of his father by virtue of his WILL -420 sq. meters. plot at Gurgaon -2550 sq. feet flat..."
+          ],
           "value": null
-        }
-      ],
-      "family": [
+        },
         {
-          "label": "Family and dependent entries",
-          "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "SELF/JOINT FAMILY SPOUSE/JOINT FAMILY DEPENDENT(S), IF ANY",
-          "value": null
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [],
+          "value": null,
+          "acres": 5.25
         }
       ],
+      "family": [],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": null,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": null,
+        "gold_grams": null,
+        "silver_grams": null,
+        "vehicles_count": 0,
+        "real_estate_count": 1,
+        "land_acres": 5.25
+      }
     }
   },
   {
@@ -940,31 +2273,89 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies Mutual Funds Four mutual funds since 27.03.2018. Total current value as on 31.03.2025, Rs.7,06,413.43/- One mutual fund as on 01.04.2025. Total current value Rs.88,088.60/- Total: Rs.7,94,502.03/- Fixed Deposits Two fixed deposits with Kerala Judicial Officers Co Operative Society since 28.07.2024 and 06.03.2025 for Rs.132609 and Rs.146551 respectively. Total current value with interest as on 31.03.2025 Rs.3,48,320/-. Two FDs Acc. xxxxxxx61 and xxxx88, with Dhanlaxmi Bank, H.C. Branch, Ernakulam. Balance as on 31.03.2025, Rs.18118/- and Rs.181087.49/- respectively. RD Acc.xxxxxxx32 with Dhanlaxmi Bank, Ernakulam. Balance as on 31.03.2025, Rs.17814/- Savings Accounts Saving Acc. xxxxxxx27 with SBI Bank, Ernakulam. Balance as on 31.03.2025 Rs.82,955.83/- Savings Accounts with Spouse Saving Acc. xxxxxxxx67, Dhan...",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [
+            "2018. Total current value as on 31.03.2025, Rs.7,06,413.43/- One mutual fund as on 01.04",
+            "2025. Total current value Rs.88,088.60/- Total: Rs.7,94,502.03/- Fixed Deposits Two fixed deposits with Kerala Judicial Officers Co Operative Society since 28.07.2024 and 06.03.2025 for Rs.132609 and Rs.146551 respectively. Total current va"
+          ],
           "value": 7311520
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [],
+          "value": null,
+          "gold_grams": null,
+          "silver_grams": null
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [],
+          "value": null,
+          "count": 0
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "1. One half share of land having an extent of 4.20 Ares in Aluva West Village, Aluva Taluk, Ernakulam, Kerala. 2. 2.07 Ares in Poonithura Village, Kanayannur Taluk, Ernakulam. 3. 2.48 Ares in Kannadi II Village, Palakkad Taluk, Palakkad District.",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [
+            "2. 2.07 Ares in Poonithura Village, Kanayannur Taluk, Ernakulam",
+            "3. 2.48 Ares in Kannadi II Village, Palakkad Taluk, Palakkad District"
+          ],
           "value": null
+        },
+        {
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [
+            "1. One half share of land having an extent of 4.20 Ares in Aluva West Village, Aluva Taluk, Ernakulam, Kerala"
+          ],
+          "value": null,
+          "acres": null
         }
       ],
       "family": [
         {
+          "category": "family",
+          "emoji": "👪",
           "label": "Family and dependent entries",
           "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "SPOUSE/JOINT FAMILY DEPENDENT(S), IF ANY Savings Accounts with Spouse",
+          "description": "Family, HUF, spouse and dependent references visible in the public declaration.",
+          "items": [
+            "Savings Accounts with Spouse"
+          ],
           "value": null
         }
       ],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": 3655760,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": 3655760,
+        "gold_grams": null,
+        "silver_grams": null,
+        "vehicles_count": 0,
+        "real_estate_count": 1,
+        "land_acres": null
+      }
     }
   },
   {
@@ -979,31 +2370,100 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/ PPF/GPF/Insurance Policies 1. Shares (nominal value): Rs.23,83,405/- 2. Mutual Funds : Nil 3. Fixed Deposits : Rs.22,78,180/- 4. Bonds : Nil 5. LIC : Rs.28,26,818/- 6. Debentures : Nil 7. PPF : Rs. 26,95,407/- 8. GPF: Rs. 1,42,69,840/- 1. Shares (nominal value) : Rs.1,81,502/- 2. Mutual Funds : Nil 3. Fixed Deposits : Rs.10,55,460/- 4. Bonds : Nil 5. LIC : Rs. 9,17,847/- 6. Debentures : Nil 7. PPF : Nil 1. Shares (nominal value) : Rs.7,79,173/- 2. Mutual Funds : Nil 3. Fixed Deposits with SBI : Rs. 71,66,920/- 4. Fixed Deposits with HDFC Limited Rs.18,83,220/- 5. LIC VBY : Rs.4,00,000/- Nil ) 1. Flat No. 3B (1250 sq ft.)at 6A, Keyatala Road, Kolkata – 29 with car parking space Mode of acquisition: Self-acquired in 2004 2. One car parking space (149 sq ft.) at 153, Kankulia Road, Kolkata -29 Mode of acquisition: Self-acquired in 2003 3....",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [
+            "1. Shares (nominal value): Rs.23,83,405/",
+            "3. Fixed Deposits : Rs.22,78,180/",
+            "5. LIC : Rs.28,26,818/",
+            "7. PPF : Rs. 26,95,407/",
+            "8. GPF: Rs. 1,42,69,840/",
+            "1. Shares (nominal value) : Rs.1,81,502/",
+            "3. Fixed Deposits : Rs.10,55,460/",
+            "5. LIC : Rs. 9,17,847/",
+            "1. Shares (nominal value) : Rs.7,79,173/",
+            "3. Fixed Deposits with SBI : Rs. 71,66,920/"
+          ],
           "value": 81351071
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [],
+          "value": null,
+          "gold_grams": null,
+          "silver_grams": null
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [],
+          "value": null,
+          "count": 0
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "1. Flat No. 3B (1250 sq ft.)at 6A, Keyatala Road, Kolkata – 29 with car parking space Mode of acquisition: Self-acquired in 2004 2. One car parking space (149 sq ft.) at 153, Kankulia Road, Kolkata -29 Mode of acquisition: Self-acquired in 2003 3. 5/8 th undivided share in Premises No. 169, Kankulia Road, Kolkata-29. Mode of acquisition: Inherited 1. 1/3 rd share in a Flat (1120 sq.ft) at Premises No. 7/1, Ganesh Banerjee Lane, Kolkata -31 with car parking space. Mode of acquisition: Inherited 1. 1/8 th undivided share in Premises No. 169, Kankulia Road, Kolkata -29. Mode of acquisition: Inherited Nil",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [
+            "1. Flat No. 3B (1250 sq ft.)at 6A, Keyatala Road, Kolkata – 29 with car parking space Mode of acquisition: Self-acquired in 2004",
+            "2. One car parking space (149 sq ft.) at 153, Kankulia Road, Kolkata -29 Mode of acquisition: Self-acquired in 2003",
+            "3. 5/8 th undivided share in Premises No. 169, Kankulia Road, Kolkata",
+            "29. Mode of acquisition: Inherited",
+            "1. 1/3 rd share in a Flat (1120 sq.ft) at Premises No. 7/1, Ganesh Banerjee Lane, Kolkata -31 with car parking space. Mode of acquisition: Inherited",
+            "1. 1/8 th undivided share in Premises No. 169, Kankulia Road, Kolkata",
+            "29. Mode of acquisition: Inherited"
+          ],
           "value": null
+        },
+        {
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [],
+          "value": null,
+          "acres": null
         }
       ],
       "family": [
         {
+          "category": "family",
+          "emoji": "👪",
           "label": "Family and dependent entries",
           "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "SPOUSE DEPENDENTS DAUGHTER",
+          "description": "Family, HUF, spouse and dependent references visible in the public declaration.",
+          "items": [
+            "SPOUSE DEPENDENTS DAUGHTER"
+          ],
           "value": null
         }
       ],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": 44513299,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": 44513299,
+        "gold_grams": null,
+        "silver_grams": null,
+        "vehicles_count": 0,
+        "real_estate_count": 2,
+        "land_acres": null
+      }
     }
   },
   {
@@ -1018,31 +2478,97 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies 1. Fixed Deposits: (i) State Bank of India Rs. 12,47,096/- (ii) Bank of Baroda Rs. 3,72,417/- 2. Balance in the Savings Account of the Bank: (i) State Bank of India Rs. 11,20,665/- (ii) Bank of Baroda Rs. 18,478.02/- (iii) Axis Bank Rs. 65,699.75/- 3. GPF balance: Rs 93,00,590/- 4. PPF balance: Rs. 15,385/- 5. Pension Fund Account balance: Rs. 1,85,912.43/- 6. Mutual Funds: Approximately Rs. 2 Lakhs 7. Shares (Total Market Value): Rs 8,89,12,717/- (Shares were purchased by father during his lifetime, stood in the name of mother jointly with father. Subsequently inherited) 1. Fixed Deposits: (i) Bank of Baroda (a) Rs 2.5 Lakhs (b) Rs 25 Lakhs (Amount received from the sale of house at Adipur, Kachchh, in March 2025) (ii) Punjab National Bank (a) Rs 4 lakhs (iii) Mandvi Mercantile Bank Co. Op Bank Ltd. (a) Rs....",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [
+            "(i) State Bank of India Rs. 12,47,096/- (ii) Bank of Baroda Rs. 3,72,417/",
+            "(i) State Bank of India Rs. 11,20,665/- (ii) Bank of Baroda Rs. 18,478.02/- (iii) Axis Bank Rs. 65,699.75/",
+            "3. GPF balance: Rs 93,00,590/",
+            "4. PPF balance: Rs. 15,385/",
+            "5. Pension Fund Account balance: Rs. 1,85,912.43/",
+            "6. Mutual Funds: Approximately Rs. 2 Lakhs",
+            "7. Shares (Total Market Value): Rs 8,89,12,717/- (Shares were purchased by father during his lifetime, stood in the name of mother jointly with father. Subsequently inherited)",
+            "(a) Rs 2.5 Lakhs",
+            "(b) Rs 25 Lakhs (Amount received from the sale of house at Adipur, Kachchh, in March 2025) (ii) Punjab National Bank",
+            "(a) Rs 4 lakhs (iii) Mandvi Mercantile Bank Co. Op Bank Ltd"
+          ],
           "value": 213743934
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [],
+          "value": null,
+          "gold_grams": null,
+          "silver_grams": null
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [],
+          "value": null,
+          "count": 0
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "1. Residential Flat with four bedrooms B-108, Ground floor, Sun Divine-4, Near Bhagvat Vidyapeeth, Behind Umiya Campus, Sola, Ahmedabad (present residence at Ahmedabad) Approximately 377 sq. mtrs. 2. Residential Flat with two bedrooms E-103, Gangotri Apartments, Vastrapur, Ahmedabad Approximately 96 sq.mtrs. 3. Residential Flat with two bedrooms I-304, Shukan Platinum, Ghatlodia, Ahmedabad Approximately 85 sq.mtrs. [The above three properties are in the joint name with wife] 4. Residential House/ancestral property at Mandvi-Kachchh Municipal property No.1082 and No.1083, city survey no. 327/1 and 328/1 both are adjoining properties used as common residential house in the name of my mother jointly with myself [After death of father on 25.08.2024, the said ancestral property stands in the name of dependent mother-Ms. Devyani Vipinchandra Anjaria jointly with N.V. Anjaria] 377.84 sq mtrs. 1...",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [
+            "1. Residential Flat with four bedrooms B-108, Ground floor, Sun Divine-4, Near Bhagvat Vidyapeeth, Behind Umiya Campus, Sola, Ahmedabad (present residence at Ahmedabad) Approximately 377 sq. mtrs",
+            "2. Residential Flat with two bedrooms E-103, Gangotri Apartments, Vastrapur, Ahmedabad Approximately 96 sq.mtrs",
+            "3. Residential Flat with two bedrooms I-304, Shukan Platinum, Ghatlodia, Ahmedabad Approximately 85 sq.mtrs. [The above three properties are in the joint name with wife]",
+            "4. Residential House/ancestral property at Mandvi-Kachchh Municipal property No.1082 and No.1083, city survey no. 327/1 and 328/1 both are adjoining properties used as common residential house in the name of my mother jointly with myself [A..."
+          ],
           "value": null
+        },
+        {
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [],
+          "value": null,
+          "acres": null
         }
       ],
       "family": [
         {
+          "category": "family",
+          "emoji": "👪",
           "label": "Family and dependent entries",
           "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "SPOUSE DEPENDENT(S), IF ANY [After death of father on 25.08.2024, the said ancestral property stands in the name of dependent mother-Ms. Devyani Vipinchandra Anjaria jointly with N.V. Anjaria] [The above two house properties belong to the father of spouse which has come in inheritance as sole heir]",
+          "description": "Family, HUF, spouse and dependent references visible in the public declaration.",
+          "items": [
+            "SPOUSE [After death of father on 25.08.2024, the said ancestral property stands in the name of dependent mother-Ms. Devyani Vipinchandra Anjaria jointly with N.V. Anjaria] [The above two house properties belong to the fa..."
+          ],
           "value": null
         }
       ],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": 111871970,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": 111871970,
+        "gold_grams": null,
+        "silver_grams": null,
+        "vehicles_count": 0,
+        "real_estate_count": 4,
+        "land_acres": null
+      }
     }
   },
   {
@@ -1057,31 +2583,97 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies Saving Bank Balances : SBI, High Court Campus, Jodhpur- A/c No. xxxx6853 as on 31-03-2025- Rs. 8,15,748/- GPF : Rs. 6,08,936/- Saving Bank Balances: (i) SBI, Osian- A/c No. xxxx3274 as on 31-03-2025 – Rs. 6,23,486/- (ii) UCO Bank, Keroo, Dist. Jodhpur- A/c No .xxxx0781 as on 31-03-2025 – Rs. 46,549/- Bank Fixed Deposits: (i) State Bank of India, Osian – Rs. 21,77,851/- (including interest up to 31-03-2025) (ii) State Bank of India, Osian – Rs. 10,512/- (including interest up to 31-03-2025) (iii) UCO Bank, Keroo, Dist. Jodhpur-4 FDRs – Rs. 4,65,549/- (including interest up to 31-03-2025) ( Note : The above FDRs are reflected in the Balance Sheet of the Proprietary Firm, M/s Osian Filling Station, Osian) Insurance Policies: (i) SBI Life Insurance Policy No.-70000018311, Sum Assured Rs. 51,43,606/- Single Premiu...",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [
+            "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies Saving Bank Balances : SBI, High Court Campus, Jodhpur- A/c No. xxxx6853 as on 31-03-2025- Rs. 8,15,748/- GPF : Rs. 6,08,936/- Saving Bank Balances:",
+            "(i) SBI, Osian- A/c No. xxxx3274 as on 31-03-2025 – Rs. 6,23,486/- (ii) UCO Bank, Keroo, Dist. Jodhpur- A/c No .xxxx0781 as on 31-03-2025 – Rs. 46,549/- Bank Fixed Deposits:",
+            "(i) State Bank of India, Osian – Rs. 21,77,851/- (including interest up to 31-03-2025) (ii) State Bank of India, Osian – Rs. 10,512/- (including interest up to 31-03-2025) (iii) UCO Bank, Keroo, Dist. Jodhpur-4 FDRs – Rs. 4,65,549/- (includ",
+            "(i) SBI Life Insurance Policy No.-70000018311, Sum Assured Rs. 51,43,606/- Single Premiu"
+          ],
           "value": 50646391
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [],
+          "value": null,
+          "gold_grams": null,
+          "silver_grams": null
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [],
+          "value": null,
+          "count": 0
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "1. Residential House at 79, First Polo, Paota, Jodhpur (Raj) – (inherited from father) 2. Agricultural land at Village Raipura, Tehsil Abohar, Dist. Fazilka (Punjab) ad-measuring – 6 Kilas (inherited from father) 1. Plot at Amrapali Enclave, Village Jhalamand, Dist. – Jodhpur(Raj)-ad-measuring 45×80 ft.(400 Sq Yards). 2. Plot at Sushant Lok Yojna, Village Basni Baghela, Dist.-Jodhpur(Raj)-ad-measuring 11.75 x 23.50 meters (330.25 Sq Yards). 3. Plot at Sushant Lok Yojna, Village Basni Baghela, Dist.-Jodhpur(Raj)-ad-measuring 12.50 x 23.50 meters (351.33 Sq Yards). 4. Land for Solar use at Village Ranjeet Nagar, Tehsil Baap, Dist.-Jodhpur-ad-measuring 1.8636 Hectares. 5. Land for Solar use at Village Ranjeet Nagar, Tehsil Baap, Dist.-Jodhpur-ad-measuring 1.991 Hectares. 6. Land & Office Building for Petrol Pump at Village Osian, Dist.-Jodhpur – (i) Land converted for commercial use-ad-meas...",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [
+            "1. Residential House at 79, First Polo, Paota, Jodhpur (Raj) – (inherited from father)",
+            "1. Plot at Amrapali Enclave, Village Jhalamand, Dist. – Jodhpur(Raj)-ad-measuring 45×80 ft.(400 Sq Yards)",
+            "2. Plot at Sushant Lok Yojna, Village Basni Baghela, Dist.-Jodhpur(Raj)-ad-measuring 11.75 x 23.50 meters (330.25 Sq Yards)",
+            "3. Plot at Sushant Lok Yojna, Village Basni Baghela, Dist.-Jodhpur(Raj)-ad-measuring 12.50 x 23.50 meters (351.33 Sq Yards)"
+          ],
           "value": null
+        },
+        {
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [
+            "2. Agricultural land at Village Raipura, Tehsil Abohar, Dist. Fazilka (Punjab) ad-measuring – 6 Kilas (inherited from father)",
+            "4. Land for Solar use at Village Ranjeet Nagar, Tehsil Baap, Dist.-Jodhpur-ad-measuring 1.8636 Hectares",
+            "5. Land for Solar use at Village Ranjeet Nagar, Tehsil Baap, Dist.-Jodhpur-ad-measuring 1.991 Hectares",
+            "6. Land & Office Building for Petrol Pump at Village Osian, Dist.-Jodhpur",
+            "(i) Land converted for commercial use-ad-meas"
+          ],
+          "value": null,
+          "acres": null
         }
       ],
       "family": [
         {
+          "category": "family",
+          "emoji": "👪",
           "label": "Family and dependent entries",
           "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "SPOUSE – MRS. SUMAN BISHNOI DEPENDENT(S), IF ANY",
+          "description": "Family, HUF, spouse and dependent references visible in the public declaration.",
+          "items": [
+            "SPOUSE – MRS. SUMAN BISHNOI"
+          ],
           "value": null
         }
       ],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": 120532857,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": 120532857,
+        "gold_grams": null,
+        "silver_grams": null,
+        "vehicles_count": 0,
+        "real_estate_count": 9,
+        "land_acres": null
+      }
     }
   },
   {
@@ -1112,31 +2704,73 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies (1) Mutual Funds as on 31.08.2025 – Rs.30,83,332.20 (2) Investment in Fixed Deposit as on 31.08.2025 – Rs.70,00,000/- (3) LIC Policy No. 355465225 – Rs.5,00,000/- (4) LIC Policy No. 355465227 – Rs.5,00,000/- (5) GPF – Rs.49,67,348/- — — ) Plot No. 1082/3B with ongoing construction on it. Address : Subhash Chandra Banerjee Ward Jabalpur-482001 Area 2507.50 Sq. Feet Valuation as on date of Purchase Rs. 81,82,156/- — — Investments Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies (1) Mutual Funds as on 31.08.2025 – Rs.30,83,332.20 (2) Investment in Fixed Deposit as on 31.08.2025 – Rs.70,00,000/- (3) LIC Policy No. 355465225 – Rs.5,00,000/- (4) LIC Policy No. 355465227 – Rs.5,00,000/- (5) GPF – Rs.49,67,348/- — — Movable Property Jewellery/Vehicles/Other assets Bank Balance (Saving A...",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [
+            "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies (1) Mutual Funds as on 31.08.2025 – Rs.30,83,332.20 (2) Investment in Fixed Deposit as on 31.08.2025 – Rs.70,00,000/- (3) LIC Policy No. 355465225 – Rs.5,00,000"
+          ],
           "value": 43173979
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [],
+          "value": null,
+          "gold_grams": null,
+          "silver_grams": null
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [],
+          "value": null,
+          "count": 0
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "Plot No. 1082/3B with ongoing construction on it. Address : Subhash Chandra Banerjee Ward Jabalpur-482001 Area 2507.50 Sq. Feet Valuation as on date of Purchase Rs. 81,82,156/- — —",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [
+            "Plot No. 1082/3B with ongoing construction on it. Address : Subhash Chandra Banerjee Ward Jabalpur-482001 Area 2507.50 Sq. Feet Valuation as on date of Purchase Rs. 81,82,156/- — —"
+          ],
           "value": null
-        }
-      ],
-      "family": [
+        },
         {
-          "label": "Family and dependent entries",
-          "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "SELF/JOINT FAMILY SPOUSE/JOINT FAMILY DEPENDENT(S), IF ANY",
-          "value": null
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [],
+          "value": null,
+          "acres": null
         }
       ],
+      "family": [],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": 27156157,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": 27156157,
+        "gold_grams": null,
+        "silver_grams": null,
+        "vehicles_count": 0,
+        "real_estate_count": 1,
+        "land_acres": null
+      }
     }
   },
   {
@@ -1151,31 +2785,93 @@
       "last_verified": "2026-05-13",
       "movable": [
         {
-          "label": "Investments and movable property",
+          "category": "money",
+          "emoji": "💰",
+          "label": "Money, deposits and investments",
           "owner": "Self/spouse/dependents as disclosed",
-          "description": "Shares/Mutual Funds/Fixed Deposits/Bonds/Debentures/PPF/GPF/ Insurance Policies 1. Balance in Savings Account : (i) State Bank of India: (a) Rs. 8,39,043/- (b) Rs. 1,24,396/- (c) Rs. 42,000/- (ii) Bank of Baroda: Rs. 34,411/- (iii) Ahmedabad Mercantile Co-operative Bank Ltd.: Rs. 62045/- 2. GPF : Rs. 57,55,113/- 3. NPS : Rs. 1,57,000/- approx. 4. LIC Policies : Sum assured is Rs. 45 Lacs approx. (yearly premium is Rs. 90,000/- approx.) 1. Balance in Savings Account : (i) Bank of Baroda: Rs. 95,000/- 2. Fixed Deposits : Rs. 5,31,389/- (Joint Name) 3. Insurance Policies : (i) India First Life Policy: Sum assured is Rs. 2 Lacs (yearly premium is Rs. 12,000/-) ) 1. 144-145, Greenfields, Village Palodiya, Taluka Kalol, Distt. Gandhinagar, Gujarat 1/15 th undivided share in Agricultural Land admeasuring 1Hectare, 37 Ares, 45 sq. mtr., Village Kamana, Taluka Visnagar, Distt. Mehsana (inherited...",
+          "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the declaration.",
+          "items": [
+            "(a) Rs. 8,39,043/",
+            "(b) Rs. 1,24,396/",
+            "(c) Rs. 42,000/- (ii) Bank of Baroda: Rs. 34,411/- (iii) Ahmedabad Mercantile Co-operative Bank Ltd.: Rs. 62045/",
+            "2. GPF : Rs. 57,55,113/",
+            "3. NPS : Rs. 1,57,000/- approx",
+            "4. LIC Policies : Sum assured is Rs. 45 Lacs approx. (yearly premium is Rs. 90,000/- approx.)",
+            "(i) Bank of Baroda: Rs. 95,000/",
+            "2. Fixed Deposits : Rs. 5,31,389/- (Joint Name)",
+            "(i) India First Life Policy: Sum assured is Rs. 2 Lacs (yearly premium is Rs. 12,000/-) )"
+          ],
           "value": 26472794
+        },
+        {
+          "category": "jewellery",
+          "emoji": "🏅",
+          "label": "Jewellery and valuables",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Gold, silver, watches and other valuables where declared.",
+          "items": [],
+          "value": null,
+          "gold_grams": null,
+          "silver_grams": null
+        },
+        {
+          "category": "vehicles",
+          "emoji": "🚗",
+          "label": "Vehicles",
+          "owner": "Self/spouse/dependents as disclosed",
+          "description": "Cars or other vehicles where declared.",
+          "items": [],
+          "value": null,
+          "count": 0
         }
       ],
       "immovable": [
         {
-          "label": "Real estate / immovable property",
+          "category": "property",
+          "emoji": "🏠",
+          "label": "Homes, flats, plots and buildings",
           "owner": "Self/joint family/spouse/dependents as disclosed",
-          "description": "1. 144-145, Greenfields, Village Palodiya, Taluka Kalol, Distt. Gandhinagar, Gujarat 1/15 th undivided share in Agricultural Land admeasuring 1Hectare, 37 Ares, 45 sq. mtr., Village Kamana, Taluka Visnagar, Distt. Mehsana (inherited after death of Spouse’s Father)",
+          "description": "Residential and built-property interests listed in the declaration.",
+          "items": [],
           "value": null
+        },
+        {
+          "category": "land",
+          "emoji": "🌾",
+          "label": "Agricultural / landed property",
+          "owner": "Self/joint family/spouse/dependents as disclosed",
+          "description": "Agricultural land and other land interests listed in the declaration.",
+          "items": [
+            "1. 144-145, Greenfields, Village Palodiya, Taluka Kalol, Distt. Gandhinagar, Gujarat 1/15 th undivided share in Agricultural Land admeasuring 1Hectare, 37 Ares, 45 sq. mtr., Village Kamana, Taluka Visnagar, Distt. Mehsana (inherited after d..."
+          ],
+          "value": null,
+          "acres": null
         }
       ],
       "family": [
         {
+          "category": "family",
+          "emoji": "👪",
           "label": "Family and dependent entries",
           "owner": "Spouse/joint family/dependents as disclosed",
-          "description": "SPOUSE/JOINT FAMILY DEPENDENT(S), IF ANY 1/15 th undivided share in Agricultural Land admeasuring 1Hectare, 37 Ares, 45 sq. mtr., Village Kamana, Taluka Visnagar, Distt. Mehsana (inherited after death of Spouse’s Father)",
+          "description": "Family, HUF, spouse and dependent references visible in the public declaration.",
+          "items": [
+            "1/15 th undivided share in Agricultural Land admeasuring 1Hectare, 37 Ares, 45 sq. mtr., Village Kamana, Taluka Visnagar, Distt. Mehsana (inherited after death of Spouse’s Father)"
+          ],
           "value": null
         }
       ],
       "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations.",
       "total_value": 21652439,
-      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles."
+      "total_value_type": "Disclosed monetary amounts only; excludes unvalued real estate, jewellery and vehicles.",
+      "metrics": {
+        "monetary_total": 21652439,
+        "gold_grams": null,
+        "silver_grams": null,
+        "vehicles_count": 0,
+        "real_estate_count": 1,
+        "land_acres": null
+      }
     }
   },
   {
