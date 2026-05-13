@@ -22,5 +22,21 @@
     "scope": "sitting-judges",
     "verified": true,
     "notes": "Official BHC judge roster page. Verified May 2026."
+  },
+  {
+    "court_id": "HC-AP",
+    "court": "Andhra Pradesh High Court",
+    "url": "https://aphc.gov.in/profiles.php",
+    "scope": "sitting-judges",
+    "verified": true,
+    "notes": "Lists all sitting judges with DOB, appointment date, retirement/term-expiry date and inline profile bios. Photos at aphc.gov.in/images/{timestamp}.webp. Verified May 2026."
+  },
+  {
+    "court_id": "HC-CAL",
+    "court": "Calcutta High Court",
+    "url": "https://www.calcuttahighcourt.gov.in/Judges/CJ-and-Judges",
+    "scope": "sitting-judges",
+    "verified": true,
+    "notes": "Swiper carousel layout. Photos at calcuttahighcourt.gov.in/Judge-Photo/{n}. Verified May 2026."
   }
 ]
