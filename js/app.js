@@ -313,12 +313,12 @@ function isJudgeRecord(row) {
 }
 
 function judgeTenureRangeDays() {
-  const value = Math.max(1, Number(state.judgeTenureRange) || 1);
+  const value = Math.min(84, Math.max(1, Number(state.judgeTenureRange) || 1));
   return Math.round(value * 30.44);
 }
 
 function judgeTenureRangeLabel() {
-  const value = Math.max(1, Number(state.judgeTenureRange) || 1);
+  const value = Math.min(84, Math.max(1, Number(state.judgeTenureRange) || 1));
   return `${value} month${value === 1 ? '' : 's'}`;
 }
 
@@ -330,17 +330,45 @@ function matchesJudgeTenureFilter(person) {
 
 function renderJudgeTenureFilterBar(judges) {
   if (!judges.length) return '';
-  const value = Math.min(120, Math.max(1, Number(state.judgeTenureRange) || 1));
+  const value = Math.min(84, Math.max(1, Number(state.judgeTenureRange) || 1));
   const count = judges.filter(matchesJudgeTenureFilter).length;
   return `
     <div class="judge-filter-bar" aria-label="Filter judges by time left">
       <div class="judge-range-summary">
-        <span>Show judges retiring within</span>
-        <strong>${escHtml(judgeTenureRangeLabel())}</strong>
-        <span>${count} match${count === 1 ? '' : 'es'}</span>
+        <span>Retiring within</span>
+        <strong id="judge-range-label">${escHtml(judgeTenureRangeLabel())}</strong>
+        <span id="judge-range-count">${count} match${count === 1 ? '' : 'es'}</span>
       </div>
-      <input class="judge-range-slider" type="range" min="1" max="120" step="1" value="${value}" oninput="setJudgeTenureRange(this.value)">
+      <input class="judge-range-slider" id="judge-range-slider" type="range" min="1" max="84" step="1" value="${value}">
     </div>`;
+}
+
+// Attach smooth slider listeners after every innerHTML write.
+// input  → update label in-place (no DOM rebuild, no sticking)
+// change → full re-render only on mouseup / touchend
+function attachSliderListeners() {
+  const slider = document.getElementById('judge-range-slider');
+  if (!slider) return;
+  const labelEl = document.getElementById('judge-range-label');
+  const countEl = document.getElementById('judge-range-count');
+
+  slider.addEventListener('input', function () {
+    const v = Math.min(84, Math.max(1, Number(this.value) || 1));
+    state.judgeTenureRange = v;
+    if (labelEl) labelEl.textContent = `${v} month${v === 1 ? '' : 's'}`;
+    // Live count update from current court's judges
+    if (countEl) {
+      const judges = state.selectedId && state.selectedId !== 'ADMIN'
+        ? state.courts.filter(d => d.parent_id === state.selectedId && isJudgeRecord(d))
+        : state.courts.filter(isJudgeRecord);
+      const n = judges.filter(matchesJudgeTenureFilter).length;
+      countEl.textContent = `${n} match${n === 1 ? '' : 'es'}`;
+    }
+  });
+
+  slider.addEventListener('change', function () {
+    renderContent(); // full re-render on release — slider DOM survives the drag intact
+  });
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -371,11 +399,13 @@ function renderContent() {
       ${results.length
         ? `<div class="cards-grid">${results.map(r => r.role_group ? renderAdminCard(r) : renderCard(r)).join('')}</div>`
         : `<div class="empty-state"><p>No results found for "${escHtml(state.searchQuery)}"</p></div>`}`;
+    attachSliderListeners();
     return;
   }
 
   if (state.selectedId === 'ADMIN') {
     container.innerHTML = renderAdminStaffView();
+    attachSliderListeners();
     return;
   }
 
@@ -402,6 +432,7 @@ function renderContent() {
   }
 
   container.innerHTML = html;
+  attachSliderListeners();
 }
 
 function renderCourtView(root, all, children) {
@@ -576,7 +607,7 @@ window.setAdminRoleFilter = function(role) {
 };
 
 window.setJudgeTenureRange = function(value) {
-  state.judgeTenureRange = Math.min(120, Math.max(1, Number(value) || 1));
+  state.judgeTenureRange = Math.min(84, Math.max(1, Number(value) || 1));
   renderContent();
 };
 
