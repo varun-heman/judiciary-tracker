@@ -1,7 +1,6 @@
 /**
  * India Judiciary & Ministry Tracker
  * Data is read from JSON files — all visuals are in CSS/HTML.
- * To update data, edit JSON files in data/.
  */
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -455,8 +454,7 @@ function renderCourtView(root, all, children) {
       html += `
         <div class="empty-state">
           <p>No individual judges loaded for this court yet.</p>
-          <p>Add entries to <code>data/courts.json</code> with <code>parent_id = ${escHtml(root.id)}</code></p>
-          <p>The Chief Justices of all 25 High Courts are already included. Individual puisne judges can be added in bulk.</p>
+          <p>Available public data for this court is incomplete.</p>
         </div>`;
     }
   }

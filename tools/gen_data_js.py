@@ -24,9 +24,7 @@ with open(os.path.join(root, 'data', 'notifications.json'), encoding='utf-8') as
 with open(os.path.join(root, 'data', 'notification-sources.json'), encoding='utf-8') as f:
     notification_sources = json.load(f)
 
-js = f"""// AUTO-GENERATED - do not edit directly.
-// Edit JSON files in data/, then re-run: python3 tools/gen_data_js.py
-window.COURTS_DATA = {json.dumps(courts, indent=2, ensure_ascii=False)};
+js = f"""window.COURTS_DATA = {json.dumps(courts, indent=2, ensure_ascii=False)};
 window.MINISTRIES_DATA = {json.dumps(ministries, indent=2, ensure_ascii=False)};
 window.ADMIN_STAFF_DATA = {json.dumps(admin_staff, indent=2, ensure_ascii=False)};
 window.NOTIFICATIONS_DATA = {json.dumps(notifications, indent=2, ensure_ascii=False)};

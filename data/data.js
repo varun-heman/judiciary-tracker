@@ -1,5 +1,3 @@
-// AUTO-GENERATED - do not edit directly.
-// Edit JSON files in data/, then re-run: python3 tools/gen_data_js.py
 window.COURTS_DATA = [
   {
     "id": "SC",
@@ -3676,26 +3674,6 @@ window.NOTIFICATIONS_DATA = [
         "notes": ""
       },
       {
-        "id": "GUJ-2026-05-07-DJ-T026",
-        "person_name": "Mr. Virendra Bhikhubhai Judge Rajput [GJ00692] Additi Ahmeda",
-        "role_type": "District Judge",
-        "from_position": "City Civil Court & onal Sessions Judge, bad",
-        "to_position": "4th Additional District Judge, Bharuch",
-        "assumed_role": "4th Additional District Judge",
-        "effective_date": "2026-05-18",
-        "notes": ""
-      },
-      {
-        "id": "GUJ-2026-05-07-DJ-T027",
-        "person_name": "Mr. Sanjaykumar 2nd Ad Champaklal Gandhi & Addi [GJ00699] Judge, Halol",
-        "role_type": "District Judge",
-        "from_position": "ditional District Judge tional Sessions Panchmahals at",
-        "to_position": "3rd Additional District Judge, Amreli at Dhari",
-        "assumed_role": "3rd Additional District Judge, Amreli",
-        "effective_date": "2026-05-18",
-        "notes": ""
-      },
-      {
         "id": "GUJ-2026-05-07-DJ-T028",
         "person_name": "Mr. Pravinkumar Additi Harishchandra Sharma Additi [GJ00701] Porban",
         "role_type": "District Judge",
@@ -3706,102 +3684,12 @@ window.NOTIFICATIONS_DATA = [
         "notes": ""
       },
       {
-        "id": "GUJ-2026-05-07-DJ-T029",
-        "person_name": "Mr. Hemangkumar Judge Girishkumar Pandya Additi [GJ00705] Ahmeda",
-        "role_type": "District Judge",
-        "from_position": "City Civil Court & onal Sessions Judge, bad",
-        "to_position": "3rd Additional District Judge, Valsad at Vapi",
-        "assumed_role": "3rd Additional District Judge, Valsad",
-        "effective_date": "2026-05-18",
-        "notes": ""
-      },
-      {
-        "id": "GUJ-2026-05-07-DJ-T030",
-        "person_name": "Mrs. Falguni Saumil Princi Parikh [GJ00721] Court, Himatn",
-        "role_type": "District Judge",
-        "from_position": "pal Judge Family Sabarkantha at agar",
-        "to_position": "Principal Judge Family Court, Botad",
-        "assumed_role": "Principal Judge Family Court",
-        "effective_date": "2026-05-18",
-        "notes": ""
-      },
-      {
         "id": "GUJ-2026-05-07-DJ-T031",
         "person_name": "Mr. Viral Hemrajbhai Additi Patel [GJ00736] Additi Sabark",
         "role_type": "District Judge",
         "from_position": "onal District Judge & onal Sessions Judge, antha at Himatnagar",
         "to_position": "7th Additional District Judge, Surat",
         "assumed_role": "7th Additional District Judge",
-        "effective_date": "2026-05-18",
-        "notes": ""
-      },
-      {
-        "id": "GUJ-2026-05-07-DJ-T032",
-        "person_name": "Mr. Vasantkumar Kantilal 7th Ad Bhatt [GJ01764] & Addi Judge,",
-        "role_type": "District Judge",
-        "from_position": "ditional District Judge tional Sessions Rajkot",
-        "to_position": "5th Additional District Judge, Ahmedabad (Rural) at Dholka",
-        "assumed_role": "5th Additional District Judge, Ahmedabad (Rural)",
-        "effective_date": "2026-05-18",
-        "notes": ""
-      },
-      {
-        "id": "GUJ-2026-05-07-DJ-T033",
-        "person_name": "Miss Meherina Balkrishna Judge Dange [GJ00594] Banask",
-        "role_type": "District Judge",
-        "from_position": "Family Court, antha at Deesa",
-        "to_position": "Judge Family Court, Rajkot",
-        "assumed_role": "Judge Family Court",
-        "effective_date": "2026-05-18",
-        "notes": ""
-      },
-      {
-        "id": "GUJ-2026-05-07-DJ-T034",
-        "person_name": "Mr. Manish Arunkumar Judge Pandya [GJ00610] Kachch",
-        "role_type": "District Judge",
-        "from_position": "Family Court, h at Gandhidham",
-        "to_position": "Judge Family Court, Ahmedabad",
-        "assumed_role": "Judge Family Court",
-        "effective_date": "2026-05-18",
-        "notes": ""
-      },
-      {
-        "id": "GUJ-2026-05-07-DJ-T035",
-        "person_name": "Mr. Jaiminkumar 3rd Ad Rameshchandra Pandit & Addi [GJ00620] Judge,",
-        "role_type": "District Judge",
-        "from_position": "ditional District Judge tional Sessions Anand",
-        "to_position": "3rd Additional District Judge, Surendranagar",
-        "assumed_role": "3rd Additional District Judge",
-        "effective_date": "2026-05-18",
-        "notes": ""
-      },
-      {
-        "id": "GUJ-2026-05-07-DJ-T036",
-        "person_name": "Mr. Bhaveshkumar Princi Hiralal Kapadia Court, [GJ00687]",
-        "role_type": "District Judge",
-        "from_position": "pal Judge Family Botad",
-        "to_position": "Judge Family Court, Ahmedabad",
-        "assumed_role": "Judge Family Court",
-        "effective_date": "2026-05-18",
-        "notes": ""
-      },
-      {
-        "id": "GUJ-2026-05-07-DJ-T037",
-        "person_name": "Mr. Nareshbhai 4th Ad Govindbhai Shah & Addi [GJ00751] Judge,",
-        "role_type": "District Judge",
-        "from_position": "ditional District Judge tional Sessions Surendranagar",
-        "to_position": "Judge City Civil Court, Ahmedabad",
-        "assumed_role": "Judge City Civil Court",
-        "effective_date": "2026-05-18",
-        "notes": ""
-      },
-      {
-        "id": "GUJ-2026-05-07-DJ-T038",
-        "person_name": "Dr. Paresh Ambalal 2nd Ad Parmar [GJ00752] & Addi Judge,",
-        "role_type": "District Judge",
-        "from_position": "ditional District Judge tional Sessions Navsari at Ahwa",
-        "to_position": "Recommended as Judge Family Court, Banaskantha at Deesa with Charge of Cluster Tharad and Danta",
-        "assumed_role": "Recommended as Judge Family Court, Banaskantha",
         "effective_date": "2026-05-18",
         "notes": ""
       },
@@ -4061,16 +3949,6 @@ window.NOTIFICATIONS_DATA = [
         "role_type": "District Judge",
         "from_position": "Member, Industrial Court, Vadodara",
         "to_position": "Member, Industrial Court, Ahmedabad",
-        "assumed_role": "Member",
-        "effective_date": "2026-05-18",
-        "notes": ""
-      },
-      {
-        "id": "GUJ-2026-05-07-DJ-T065",
-        "person_name": "Mrs. Razia Salimkhan Pathan [GJ00771] Her Ladyship and Their Lordships 2 and 3 of section 8 the Bharat ther pleased to appoint Judicial s Judge for the Sessions Divisio",
-        "role_type": "District Judge",
-        "from_position": "Member, Industrial Court, Ahmedabad [ II ], in exercise of the powers conferred by su iya Nagarik Suraksha Sanhita, 2023 (46 of 2 Officers named in the Schedule given below n listed against their respective names: SCHEDULE Se",
-        "to_position": "Member, Industrial Court, Vadodara b- 023), as ssions Division",
         "assumed_role": "Member",
         "effective_date": "2026-05-18",
         "notes": ""
@@ -4576,16 +4454,6 @@ window.NOTIFICATIONS_DATA = [
         "notes": ""
       },
       {
-        "id": "GUJ-2026-05-07-DJ-T116",
-        "person_name": "Mr. Maheshkumar Ramjibhai Thakkar [GJ00963] Consequential Posting Effec Her Ladyship and Their Lordship owing Judicial Officers working",
-        "role_type": "District Judge",
-        "from_position": "Additional Sessions Judge [ III ] t within the same Court Establishment s are further pleased to pass the order of in the cadre of District Judge: Ahmedabad District",
-        "to_position": "Surendranagar posting",
-        "assumed_role": "Surendranagar posting",
-        "effective_date": "2026-05-18",
-        "notes": ""
-      },
-      {
         "id": "GUJ-2026-05-07-DJ-T117",
         "person_name": "Mr. Mukundrai Kantilal Upadhyay [GJ00613]",
         "role_type": "District Judge",
@@ -4662,36 +4530,6 @@ window.NOTIFICATIONS_DATA = [
         "from_position": "Additional District Judge & Additional Sessions Judge, Arvalli at Modasa Banaskantha District",
         "to_position": "2nd Additional District Judge, Arvalli at Modasa",
         "assumed_role": "2nd Additional District Judge, Arvalli",
-        "effective_date": "2026-05-18",
-        "notes": ""
-      },
-      {
-        "id": "GUJ-2026-05-07-DJ-T125",
-        "person_name": "Mr. Amit Jayantilal 2nd Addit Kanani [GJ00662] & Additio Judge, Ba Palanpur",
-        "role_type": "District Judge",
-        "from_position": "ional District Judge nal Sessions naskantha at",
-        "to_position": "3rd Additional District Judge, Banaskantha at Palanpur",
-        "assumed_role": "3rd Additional District Judge, Banaskantha",
-        "effective_date": "2026-05-18",
-        "notes": ""
-      },
-      {
-        "id": "GUJ-2026-05-07-DJ-T126",
-        "person_name": "Mr. Ranjan Dhruvakumar 5th Addit Pandey [GJ00813] & Additio Judge, Ba Deodar",
-        "role_type": "District Judge",
-        "from_position": "ional District Judge nal Sessions naskantha at",
-        "to_position": "4th Additional District Judge, Banaskantha at Deodar",
-        "assumed_role": "4th Additional District Judge, Banaskantha",
-        "effective_date": "2026-05-18",
-        "notes": ""
-      },
-      {
-        "id": "GUJ-2026-05-07-DJ-T127",
-        "person_name": "Ms. Shilpa Mansukhlal 6th Addit Kanabar [GJ00814] & Additio Judge, Ba Deesa",
-        "role_type": "District Judge",
-        "from_position": "ional District Judge nal Sessions naskantha at Bharuch District",
-        "to_position": "5th Additional District Judge, Banaskantha at Deesa",
-        "assumed_role": "5th Additional District Judge, Banaskantha",
         "effective_date": "2026-05-18",
         "notes": ""
       },
@@ -5156,7 +4994,7 @@ window.NOTIFICATIONS_DATA = [
         "notes": ""
       }
     ],
-    "transfer_entry_count": 173,
+    "transfer_entry_count": 157,
     "extraction_notes": "Extracted from Gujarat tabular PDF text. Long tables may need spot-checking against the source PDF.",
     "original_url": "https://gujarathighcourt.nic.in/hccms/sites/default/files/miscnotifications/Notification%20-%20Transfer%20and%20Posting%20of%20Judicial%20Officers%20%28District%20Judge%20cadre%29%20Gujarat%20High%20Court%2007052026.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-GUJ/2026/05/GUJ-2026-05-07-DJ.pdf"
@@ -6153,16 +5991,6 @@ window.NOTIFICATIONS_DATA = [
         "notes": ""
       },
       {
-        "id": "GUJ-2026-05-07-SCJ-T099",
-        "person_name": "Mr. Maheshkumar Chimanlal Patel [GJ01199] Mohitkumar tikumar Shah 01208] Devang ndravadan Raval 01209] Nikhil Chandrasen hav [GJ01215] Hardik Prafulchandra al [GJ01220] Mohammedyunus ulrehman Piprani 01222] Kalpesh Thavardas nani [GJ01226] Sunil Lalitkumar ta [GJ01229] . Manisha Yogesh mi [GJ01232] Vipin Kumar Bansal 01233] Miteshkumar dharbhai Vadi 01239] Tej Pratap Singh 01247] Shaileshbhai abhai Patel 01254] Ankurkumar eshchandra Soni 01256] Sunil Waman Wagh 01258] Juzar Abbasbhai gwala [GJ00706] Kalpesh Kedarnath vedi [GJ00768] Dilipgiri Jayantigiri wami [GJ00835] Pushpendra Singh hore [GJ01134] Asif Mohhemmad ib Memon [GJ01251] Ketankumar eshchandra Trivedi 01275] Krushnakant indbhai Patel 01285] Dipenkumar tindrabhai Doshi 01288] Ketankumar okbhai Dabhi 01289] Hardik Dilipbhai pura [GJ01291] Amit Kumar Singh 01295] Dilipkumar Vrajlal alia [GJ01298] Sureshkumar shanbhai Solanki 01299] Jagdishchandra antilal Jadav 01302] Abhinav Mudgal 01332] . Chandni Yuvrajsinh eja [GJ01345] Pradipkumar Bansilal i [GJ01347] Bharatkumar mohanbhai Parmar 01348] Malvika Purohit 01351] Aatmadeep Sharma 01355] Stuti Dineshbhai adia [GJ01356] Ganga Dutt Sharma 01360] Shri Kant Sharma 01367] Naresh Ramchandra hwani [GJ01368] Ghanshyamsinh ndrasinh Vaghela 01373] Ranveer Singh hore [GJ01374] Devangbhai eshkumar Bavishi 01380] Hiren Jitendrabhai avada [GJ01386] Lakshmi Nandwana 01392] Priya Dua 01393] Chirag Vamanrai tt [GJ01395] Miteshkumar ratkumar Mehta 01396] Sudesh [GJ01400] . Chunauty Rajkiran s [GJ01401] Subhashchandra anath Tripathi 01402] Manthankumar lchandra Purohit 01411] Chandravirsinh shnachandrasin hod [GJ01415] Prakher Sharma 01416] Ashvin Chhaganbhai hiya [GJ01418] Arun Soni [GJ01422] Consequential Posting Effect Her Ladyship and Their Lordship owing Judicial Officers working",
-        "role_type": "Senior Civil Judge",
-        "from_position": "Principal Senior Civil Judge Principa and Additional Chief Judicial and Addit Magistrate, Kheda, District Judicial Kheda Mundra, Principal Senior Civil Judge Addition and Additional Chief Judicial Judge and Magistrate, Bardoli, District Judicial Surat District 30th Additional Chief Judicial Principa Magistrate, Ahmedabad City and Addition Judicial District Additional Senior Civil Judge Additiona and Additional Chief Judicial Judge and Magistrate, Kheda, District Judicial Kheda Dediapad Narmada 3rd Additional Senior Civil Spare se Judge and Additional Chief Time Sec Judicial Magistrate, Padra, Legal Se District Vadodara Khambhal Devbhumi 33th Additional Chief Judicial Recommen Magistrate, Ahmedabad City Officer (GSL Ahmedaba Additional Senior Civil Judge Spare ser and Additional Chief Judicial Time Secr Magistrate, Petlad, District Legal Se Anand Lunawada Mahisaga Chief Judicial Magistrate and 7th Addit Additional Senior Civil Judge an Judge, Mahesana Judicial Gandhidh Kachchh 10th Additional Senior Civil 1 Judge and Additional Chief J Judicial Magistrate, Surat J 35th Additional Chief Judicial P Magistrate, Ahmedabad City a J D 4th Additional Senior Civil P Judge and Additional Chief a Judicial Magistrate, Valsad J D Judge Labour Court (SD), S Bhavnagar T L B Additional Senior Civil Judge 3 and Additional Chief Judicial J Magistrate, Kalol, District J Panchmahals S 13th Additional Senior Civil 4 Judge and Additional Chief J Judicial Magistrate, Rajkot J M Principal Senior Civil Judge A and Additional Chief Judicial J Magistrate, Dhoraji, District J Rajkot D Judge Labour Court (SD), 1 Ahmedabad J J 2nd Additional Senior Civil J Judge and Additional Chief V Judicial Magistrate, Mahesana 2nd Additional Senior Civil P Judge and Additional Chief a Judicial Magistrate, J Palanpur, District D Banaskantha 18th Additional Senior Civil C Judge and Additional Chief a Judicial Magistrate, J Vadodara A Additional Senior Civil Judge C and Additional Chief Judicial a Magistrate, Bodeli, District J Chhotaudepur Additional Senior Civil Judge 1 and Additional Chief Judicial J Magistrate, Mangrol, District J Surat Judge Labour Court (SD), 8th Additi Surat Judge and Judicial M Bhavnagar Additional Senior Civil Judge 8th Additi and Additional Chief Judicial Judge and Magistrate, Savarkundla, Judicial M District Amreli Ahmedabad 3rd Additional Senior Civil 9th Additi Judge and Additional Chief Judge and Judicial Magistrate, Bhuj, Judicial M District Kachchh Ahmedabad Judge Labour Court (SD), 34th Addit Surat Judicial M Ahmedabad 5th Additional Senior Civil Spare serv Judge and Additional Chief Time Secre Judicial Magistrate, Valsad Legal Serv Valsad Judge Labour Court (SD), Spare serv Jamnagar Time Secre Legal Serv Vadodara Chief Judicial Magistrate and 18th Addit Additional Senior Civil Judge and Judge, Vyara, District Tapi Judicial M 6th Additional Senior Civil Spare serv Judge and Additional Chief Time Secre Judicial Magistrate, Nadiad, Legal Serv District Kheda Nadiad, Di 3rd Additional Senior Civil Principal Judge and Additional Chief and Additi Judicial Magistrate, Anand Judicial M District S 4th Additional Senior Civil Spare serv Judge and Additional Chief Time Secre Judicial Magistrate, Morbi Legal Serv Gandhinaga 4th Additional Senior Civil Principal Judge and Additional Chief and Additi Judicial Magistrate, Anand Judicial M District B 8th Additional Senior Civil A Judge and Additional Chief J Judicial Magistrate, Nadiad, J District Kheda D 4th Additional Senior Civil 2 Judge and Additional Chief J Judicial Magistrate, J Gandhidham, District V Kachchh M 5th Additional Senior Civil 1 Judge and Additional Chief J Judicial Magistrate, J Palanpur, District Banaskantha 26th Additional Senior Civil P Judge and Additional Chief a Judicial Magistrate, J Vadodara D Additional Senior Civil Judge A and Additional Chief Judicial J Magistrate, Visnagar, District J Mahesana D 7th Additional Senior Civil P Judge and Additional Chief a Judicial Magistrate, J Ahmedabad (Rural) J Judge Labour Court (SD), J Ahmedabad A 3rd Additional Senior Civil S Judge and Additional Chief T Judicial Magistrate, Dahod L D 3rd Additional Senior Civil P Judge and Additional Chief a Judicial Magistrate, Gondal, J District Rajkot D B 8th Additional Senior Civil 2 Judge and Additional Chief J Judicial Magistrate, J Ahmedabad (Rural) V 4th Additional Senior Civil 4 Judge and Additional Chief J Judicial Magistrate, Veraval, J District Gir Somnath 2nd Additional Senior Civil 3 Judge and Additional Chief J Judicial Magistrate, Modasa, A District Arvalli 6th Additional Senior Civil 2 Judge and Additional Chief J Judicial Magistrate, J Gandhinagar 9th Additional Senior Civil 2 Judge and Additional Chief J Judicial Magistrate, J Ahmedabad (Rural) V 27th Additional Senior Civil 6 Judge and Additional Chief J Judicial Magistrate, J Vadodara M 5th Additional Senior Civil A Judge and Additional Chief J Judicial Magistrate, Anand J D 6th Additional Senior Civil A Judge and Additional Chief J Judicial Magistrate, Anand J D 2nd Additional Senior Civil P Judge and Additional Chief a Judicial Magistrate, Anjar, J District Kachchh D 2nd Additional Senior Civil 7 Judge and Additional Chief J Judicial Magistrate, Kadi, J District Mahesana M 11th Additional Senior Civil 2 Judge and Additional Chief C Judicial Magistrate, Ahmedabad (Rural) Additional Senior Civil Judge S and Additional Chief Judicial T Magistrate, Kathor, District L Surat A 3rd Additional Senior Civil 4 Judge and Additional Chief J Judicial Magistrate, Vapi, J District Valsad D Judge Labour Court (SD), A Vadodara J J D [II] within the same Court Establishment s are further pleased to pass the order of in the cadre of Senior Civil Judge: Ahmedabad District",
-        "to_position": "l Senior Civil Judge ional Chief Magistrate, District Kachchh al Senior Civil Additional Chief Magistrate, Halvad, Morbi l Senior Civil Judge al Chief Magistrate, Jasdan, Rajkot l Senior Civil Additional Chief Magistrate, a, District rvices as Full- retary, District rvices Authority, iya, District Dwarka ded as Project SA), d vices as Full- etary, District rvices Authority,, District r ional Senior Civil d Additional Chief Magistrate, am, District 4th Additional Senior Civil udge and Additional Chief udicial Magistrate, Rajkot rincipal Senior Civil Judge nd Additional Chief udicial Magistrate, Dhoraji, istrict Rajkot rincipal Senior Civil Judge nd Additional Chief udicial Magistrate, Naliya, istrict Kachchh pare services as Full- ime Secretary, District egal Services Authority, havnagar rd Additional Senior Civil udge and Additional Chief udicial Magistrate, urendranagar th Additional Senior Civil udge and Additional Chief udicial Magistrate, ahesana dditional Senior Civil udge and Additional Chief udicial Magistrate, Kheda, istrict Kheda 6th Additional Senior Civil udge and Additional Chief udicial Magistrate, Rajkot udge Labour Court (SD), adodara rincipal Senior Civil Judge nd Additional Chief udicial Magistrate, Vagra, istrict Bharuch hief Judicial Magistrate nd Additional Senior Civil udge, Modasa, District rvalli hief Judicial Magistrate nd Additional Senior Civil udge, Chhotaudepur 10/26 6th Additional Senior Civil udge and Additional Chief udicial Magistrate, Surat onal Senior Civil Additional Chief agistrate, onal Senior Civil Additional Chief agistrate, (Rural) onal Senior Civil Additional Chief agistrate, (Rural) ional Chief agistrate, City ices as Full- tary, District ices Authority, ices as Full- tary, District ices Authority, ional Senior Civil Additional Chief agistrate, Surat ices as Full- tary, District ices Authority, strict Kheda Senior Civil Judge onal Chief agistrate, Bardoli, urat ices as Full- tary, District ices Authority, r Senior Civil Judge onal Chief agistrate, Talaja, havnagar 11/26 dditional Senior Civil udge and Additional Chief udicial Magistrate, Rajula, istrict Amreli nd Additional Senior Civil udge and Additional Chief udicial Magistrate, isnagar, District ahesana 9th Additional Senior Civil udge and Additional Chief udicial Magistrate, Surat rincipal Senior Civil Judge nd Additional Chief udicial Magistrate, Idar, istrict Sabarkantha dditional Senior Civil udge and Additional Chief udicial Magistrate, Dabhoi, istrict Vadodara rincipal Senior Civil Judge nd Additional Chief udicial Magistrate, ambusar, District Bharuch udge Small Cause Court, hmedabad pare services as Full- ime Secretary, District egal Services Authority, ahod rincipal Senior Civil Judge nd Additional Chief udicial Magistrate, eodar, District anaskantha 1th Additional Senior Civil udge and Additional Chief udicial Magistrate, adodara th Additional Senior Civil udge and Additional Chief udicial Magistrate, Anand 7th Additional Chief udicial Magistrate, hmedabad City 12/26 2th Additional Senior Civil udge and Additional Chief udicial Magistrate, Rajkot 2th Additional Senior Civil udge and Additional Chief udicial Magistrate, adodara th Additional Senior Civil udge and Additional Chief udicial Magistrate, ahesana dditional Senior Civil udge and Additional Chief udicial Magistrate, Kalol, istrict Panchmahals dditional Senior Civil udge and Additional Chief udicial Magistrate, Kathor, istrict Surat rincipal Senior Civil Judge nd Additional Chief udicial Magistrate, Danta, istrict Banaskantha th Additional Senior Civil udge and Additional Chief udicial Magistrate, ahesana nd Addl. Judge Small ause Court, Surat pare services as Full- ime Secretary, District egal Services Authority, mreli th Additional Senior Civil udge and Additional Chief udicial Magistrate, Deesa, istrict Banaskantha dditional Senior Civil udge and Additional Chief udicial Magistrate, Idar, istrict Sabarkantha 13/26 posting",
-        "assumed_role": "l Senior Civil Judge ional Chief Magistrate",
-        "effective_date": "2026-05-18",
-        "notes": ""
-      },
-      {
         "id": "GUJ-2026-05-07-SCJ-T100",
         "person_name": "s. Mayurika Shivabhai utariya [GJ00846]",
         "role_type": "Senior Civil Judge",
@@ -6983,46 +6811,6 @@ window.NOTIFICATIONS_DATA = [
         "notes": ""
       },
       {
-        "id": "GUJ-2026-05-07-SCJ-T182",
-        "person_name": "s. Jyotsnaben Vinubhai Chief Jud armar [GJ01021] Additiona Judge, Hi Sabarkant",
-        "role_type": "Senior Civil Judge",
-        "from_position": "icial Magistrate and Pr l Senior Civil Ju matnagar, District Sa ha",
-        "to_position": "incipal Senior Civil dge, Himatnagar, District barkantha",
-        "assumed_role": "incipal Senior Civil dge, Himatnagar",
-        "effective_date": "2026-05-18",
-        "notes": ""
-      },
-      {
-        "id": "GUJ-2026-05-07-SCJ-T183",
-        "person_name": "r. Amit Bipinchandra 2nd Addit amtora [GJ01059] Judge and Judicial Himatnaga Sabarkant",
-        "role_type": "Senior Civil Judge",
-        "from_position": "ional Senior Civil Ch Additional Chief an Magistrate, Ju r, District Sa ha",
-        "to_position": "ief Judicial Magistrate d Additional Senior Civil dge, Himatnagar, District barkantha",
-        "assumed_role": "ief Judicial Magistrate d Additional Senior Civil dge, Himatnagar",
-        "effective_date": "2026-05-18",
-        "notes": ""
-      },
-      {
-        "id": "GUJ-2026-05-07-SCJ-T184",
-        "person_name": "r. Changiz Maswar 4th Addit athod [GJ01238] Judge and Judicial Himatnaga Sabarkant",
-        "role_type": "Senior Civil Judge",
-        "from_position": "ional Senior Civil 3r Additional Chief Ju Magistrate, Ju r, District Hi ha Sa",
-        "to_position": "d Additional Senior Civil dge and Additional Chief dicial Magistrate, matnagar, District barkantha",
-        "assumed_role": "d Additional Senior Civil dge and Additional Chief dicial Magistrate, matnagar",
-        "effective_date": "2026-05-18",
-        "notes": ""
-      },
-      {
-        "id": "GUJ-2026-05-07-SCJ-T185",
-        "person_name": "r. Priyam B Bohra 5th Addit GJ01296] Judge and Judicial Himatnaga Sabarkant",
-        "role_type": "Senior Civil Judge",
-        "from_position": "ional Senior Civil 4t Additional Chief Ju Magistrate, Ju r, District Hi ha Sa Surat District",
-        "to_position": "h Additional Senior Civil dge and Additional Chief dicial Magistrate, matnagar, District barkantha",
-        "assumed_role": "h Additional Senior Civil dge and Additional Chief dicial Magistrate, matnagar",
-        "effective_date": "2026-05-18",
-        "notes": ""
-      },
-      {
         "id": "GUJ-2026-05-07-SCJ-T186",
         "person_name": "r. Rajesh Mohanbhai alotra [GJ01035]",
         "role_type": "Senior Civil Judge",
@@ -7148,46 +6936,6 @@ window.NOTIFICATIONS_DATA = [
         "role_type": "Senior Civil Judge",
         "from_position": "3rd Additional Senior Civil 4t Judge and Additional Chief Ju Judicial Magistrate, Ju Surendranagar Su Vadodara District",
         "to_position": "h Additional Senior Civil dge and Additional Chief dicial Magistrate, rendranagar",
-        "assumed_role": "h Additional Senior Civil dge and Additional Chief dicial Magistrate",
-        "effective_date": "2026-05-18",
-        "notes": ""
-      },
-      {
-        "id": "GUJ-2026-05-07-SCJ-T199",
-        "person_name": "r. Mahavirsinh 4th Add ajendrasinh Zala Judge a GJ00954] Judicia Vadodar",
-        "role_type": "Senior Civil Judge",
-        "from_position": "itional Senior Civil 2n nd Additional Chief Ju l Magistrate, Ju a Va",
-        "to_position": "d Additional Senior Civil dge and Additional Chief dicial Magistrate, dodara",
-        "assumed_role": "d Additional Senior Civil dge and Additional Chief dicial Magistrate",
-        "effective_date": "2026-05-18",
-        "notes": ""
-      },
-      {
-        "id": "GUJ-2026-05-07-SCJ-T200",
-        "person_name": "r. Dhirendra 5th Add agroopsinh Rajput Judge a GJ00958] Judicia Vadodar",
-        "role_type": "Senior Civil Judge",
-        "from_position": "itional Senior Civil 3r nd Additional Chief Ju l Magistrate, Ju a Va",
-        "to_position": "d Additional Senior Civil dge and Additional Chief dicial Magistrate, dodara",
-        "assumed_role": "d Additional Senior Civil dge and Additional Chief dicial Magistrate",
-        "effective_date": "2026-05-18",
-        "notes": ""
-      },
-      {
-        "id": "GUJ-2026-05-07-SCJ-T201",
-        "person_name": "r. Bharatsinh 9th Add rabhatsinh Mahida Judge a GJ01122] Judicia Vadodar",
-        "role_type": "Senior Civil Judge",
-        "from_position": "itional Senior Civil 5t nd Additional Chief Ju l Magistrate, Ju a Va",
-        "to_position": "h Additional Senior Civil dge and Additional Chief dicial Magistrate, dodara",
-        "assumed_role": "h Additional Senior Civil dge and Additional Chief dicial Magistrate",
-        "effective_date": "2026-05-18",
-        "notes": ""
-      },
-      {
-        "id": "GUJ-2026-05-07-SCJ-T202",
-        "person_name": "r. Pruthviraj Kailashdan 12th Ad adhvi [GJ01487] Judge a Judicia Vadodar",
-        "role_type": "Senior Civil Judge",
-        "from_position": "ditional Senior Civil 6t nd Additional Chief Ju l Magistrate, Ju a Va Vadodara District",
-        "to_position": "h Additional Senior Civil dge and Additional Chief dicial Magistrate, dodara 23/26",
         "assumed_role": "h Additional Senior Civil dge and Additional Chief dicial Magistrate",
         "effective_date": "2026-05-18",
         "notes": ""
@@ -7343,7 +7091,7 @@ window.NOTIFICATIONS_DATA = [
         "notes": ""
       }
     ],
-    "transfer_entry_count": 217,
+    "transfer_entry_count": 208,
     "extraction_notes": "Extracted from Gujarat tabular PDF text. Long tables may need spot-checking against the source PDF.",
     "original_url": "https://gujarathighcourt.nic.in/hccms/sites/default/files/miscnotifications/Notification%20-%20Transfer%20and%20Posting%20of%20Judicial%20Officers%20%28Senior%20Civil%20Judge%20cadre%29%20Gujarat%20High%20Court%20-%2007052026.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-GUJ/2026/05/GUJ-2026-05-07-SCJ.pdf"
@@ -8380,16 +8128,6 @@ window.NOTIFICATIONS_DATA = [
         "notes": ""
       },
       {
-        "id": "GUJ-2026-05-07-CJ-T103",
-        "person_name": "Ms. Prutha Nirav Purani [GJ01737] Sunita Bhati 01739] Parth Mahavirsinh a [GJ01740] Bhavesh Chandulal a [GJ01741] Somya Ramesh ar Ahuja [GJ01742] Parvati Devrambhai ariya [GJ01743] Kalyani endrakumar Trivedi 01744] Divyakant hnuprasad Pandya 01745] Mitalben Dilipsinh av [GJ01746] Ronit Amrutbhai uhan [GJ01747] Rutvij Falgunbhai vedi [GJ01748] Harshad Rajabhai mal [GJ01749] Prakhar Gautam 01751] Hetalben harathbhai Panchal 01752] Deven Bipinbhai havi [GJ01754] Krunal Bipinchandra vsar [GJ01755] Mayur Subhashbhai od [GJ01756] Mainak Bipinchandra al [GJ01757] Prerana Rajesh apia [GJ01758] Jitenkumar hashchandra Joshi 01760] Priyaben kashchandra Kala 01761] Kausharbanu alkhan Pathan 01762] Bhavyesh inchandra Trivedi 01763] Consequential Posting Effec Her Ladyship and Their Lordship owing Judicial Officers working",
-        "role_type": "Civil Judge",
-        "from_position": "8th Additional Civil Judge and JMFC, Mahesana Additional Civil Judge and JMFC, Palanpur, District Banaskantha Additional Civil Judge and JMFC, Surendranagar 2nd Additional Civil Judge and JMFC, Surendranagar 10th Additional Civil Judge and JMFC, Vadodara Additional Civil Judge and JMFC, Borsad, District Anand 8th Additional Civil Judge and JMFC, Gandhinagar 2nd Additional Civil Judge and JMFC, Pardi, District Valsad 8th Additional Civil Judge and JMFC, Rajkot Additional Civil Judge and JMFC, Anklesvar, District Bharuch Principal Civil Judge and JMFC, Kotda Sangani, District Rajkot Principal Civil Judge and JMFC, Kalavad, District Jamnagar 6th Additional Civil Judge and JMFC, Surat 9th Additional Civil Judge and JMFC, Mahesana 5th Additional Civil Judge and JMFC, Anand 7th Additional Civil Judge and JMFC, Surat Additional Civil Judge and JMFC, Mandvi, District Kachchh Judicial Magistrate First Class (Railways), Rajkot 5th Additional Civil Judge and JMFC, Junagadh 2nd Additional Civil Judge and JMFC, Porbandar 8th Additional Civil Judge and JMFC, Surat 4th Additional Civil Judge and JMFC, Bhavnagar Additional Civil Judge and JMFC, Bhuj, District Kachchh [ II ] t within the same Court Establishment s are further pleased to pass the order of in the cadre of Civil Judge: Ahmedabad District",
-        "to_position": "Principal Civil Judge and JMFC, Mahuva, District Surat 11th Additional Civil Judge and JMFC, Surat Registrar (CCC) Ahmedabad, Ahmedabad Principal Civil Judge and JMFC, Vijaynagar, District Sabarkantha 12th Additional Civil Judge and JMFC, Rajkot 2nd Additional Civil Judge and JMFC, Pardi, District Valsad 9th Additional Civil Judge and JMFC, Vadodara Additional Civil Judge and JMFC, Veraval, District Gir Somnath Principal Civil Judge and JMFC, Harij, District Patan Principal Civil Judge and JMFC, Kalyanpur, District Devbhumi Dwarka Additional Civil Judge and JMFC, Dholka, District Ahmedabad (Rural) Principal Civil Judge and JMFC, Netrang, District Bharuch Principal Civil Judge and JMFC, Bhanvad, District Devbhumi Dwarka 10th Additional Civil Judge and JMFC, Vadodara 12th Additional Civil Judge and JMFC, Surat Principal Civil Judge and JMFC, Kotda Sangani, District Rajkot 13th Additional Civil Judge and JMFC, Surat Additional Civil Judge and JMFC, Viramgam, District Ahmedabad (Rural) 2nd Additional Civil Judge and JMFC, Sanand, District Ahmedabad (Rural) Additional Civil Judge and JMFC, Bharuch Principal Civil Judge and JMFC, Upleta, District Rajkot 8th Additional Civil Judge and JMFC, Mahesana 14th Additional Civil Judge and JMFC, Surat posting",
-        "assumed_role": "Principal Civil Judge and JMFC, Mahuva",
-        "effective_date": "2026-05-18",
-        "notes": ""
-      },
-      {
         "id": "GUJ-2026-05-07-CJ-T104",
         "person_name": "Mr. Gaurav Baldev Siag [GJ01668]",
         "role_type": "Civil Judge",
@@ -8700,7 +8438,7 @@ window.NOTIFICATIONS_DATA = [
         "notes": ""
       }
     ],
-    "transfer_entry_count": 134,
+    "transfer_entry_count": 133,
     "extraction_notes": "Extracted from Gujarat tabular PDF text. Long tables may need spot-checking against the source PDF.",
     "original_url": "https://gujarathighcourt.nic.in/hccms/sites/default/files/miscnotifications/Notification%20-%20Transfer%20Posting%20of%20Judicial%20Officers%20%28Civil%20Judge%20cadre%29%20Gujarat%20High%20Court%2007052026.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-GUJ/2026/05/GUJ-2026-05-07-CJ.pdf"

@@ -222,7 +222,7 @@ function renderTransferDetails(item, entries) {
   return `
     <details class="transfer-details">
       <summary>${label}</summary>
-      ${item.extraction_notes ? `<div class="transfer-note">${escHtml(item.extraction_notes)}</div>` : ''}
+      <div class="transfer-note">AI parsed; not human verified. Check the linked PDF before relying on this data.</div>
       <div class="transfer-table">
         ${entries.map(entry => `
           <div class="transfer-entry">
@@ -259,7 +259,7 @@ function renderEmptySources(sources) {
   return `
     <div class="empty-state">
       <p>No indexed notification PDFs for this filter yet.</p>
-      <p>Use the source links below, then add rows to <code>data/notifications.json</code>.</p>
+      <p>Available public data for this court is incomplete.</p>
     </div>`;
 }
 
@@ -328,7 +328,7 @@ function renderModalTransferPanel(item) {
   }
   return `
     <div class="pdf-transfer-title">Parsed Transfers <span>${entries.length}</span></div>
-    ${item.extraction_notes ? `<div class="transfer-note">${escHtml(item.extraction_notes)}</div>` : ''}
+    <div class="transfer-note">AI parsed; not human verified. Check the PDF before relying on this data.</div>
     <div class="pdf-transfer-list">
       ${entries.map(entry => `
         <div class="modal-transfer-entry">

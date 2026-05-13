@@ -48,6 +48,21 @@ def make_entry(notification_id, idx, name, from_position, to_position, effective
     }
 
 
+def looks_malformed_person_name(name):
+    name = clean(name)
+    if not name:
+        return True
+    if len(name) > 110:
+        return True
+    if name.count("[GJ") > 1:
+        return True
+    if re.search(r"\b(Judge|Magistrate|Court|Posting|Additional|Principal|District|Civil)\b", name, re.I):
+        return True
+    if re.search(r"Consequential|Lordship|Judicial Officers working|High Court|Government|Notification", name, re.I):
+        return True
+    return False
+
+
 def gujarat_effective_date(text):
     m = re.search(r"effective date of taking charge.*?shall be\s+(\d{1,2}[-/]\d{1,2}[-/]\d{4})", text, re.I | re.S)
     return iso_date(m.group(1)) if m else ""
@@ -104,7 +119,7 @@ def parse_gujarat_table(notification_id, text):
         name = clean(" ".join(row["name"]))
         from_position = clean(" ".join(row["from"]))
         to_position = clean(" ".join(row["to"]))
-        if not name or not to_position or len(name) < 3:
+        if looks_malformed_person_name(name) or not to_position or len(name) < 3:
             continue
         row_effective = effective_date
         inline_date = iso_date(to_position)
