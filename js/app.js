@@ -472,7 +472,7 @@ function renderUnifiedFilterBar(judgePool, adminPool) {
       <div class="unified-filter-row role-row">
         <span class="filter-row-label">Role</span>
         <div class="role-pills-wrap">${rolePills}</div>
-        ${hasRoleFilter ? `<button class="clear-filter-btn" onclick="clearAllRoleFilters()">× Clear</button>` : ''}
+        <button class="clear-filter-btn${hasRoleFilter ? '' : ' hidden'}" onclick="clearAllRoleFilters()">× Clear</button>
       </div>` : ''}
     </div>`;
 }
@@ -705,9 +705,7 @@ function renderAdminCard(cpc) {
   // Extract place of posting from notes ("Place of posting: Prayagraj")
   const placeMatch = (cpc.notes || '').match(/Place of posting:\s*([^.]+)/);
   const place = placeMatch ? placeMatch[1].trim() : '';
-  // Sub-line: "Prayagraj · Allahabad HC" or just court abbreviated
   const courtShort = (cpc.court || '').replace(' High Court', ' HC');
-  const subLine = place ? `${place} · ${courtShort}` : courtShort;
   // Remaining notes after stripping place-of-posting
   const cleanNotes = (cpc.notes || '').replace(/Place of posting:[^.]*\.?\s*/g, '').trim();
 
@@ -717,9 +715,12 @@ function renderAdminCard(cpc) {
         <div class="card-identity">
           ${renderAvatar(cpc)}
           <div class="card-left">
-            <span class="card-role-badge cpc">${escHtml(cpc.role_group || cpc.role || 'Admin')}</span>
+            <div class="card-badges-row">
+              <span class="card-role-badge cpc">${escHtml(cpc.role_group || cpc.role || 'Admin')}</span>
+              ${courtShort ? `<span class="court-badge">${escHtml(courtShort)}</span>` : ''}
+            </div>
             <div class="person-name">${escHtml(cpc.name)}</div>
-            <div class="parent-court">${escHtml(subLine)}</div>
+            ${place ? `<div class="parent-court">${escHtml(place)}</div>` : ''}
           </div>
         </div>
       </div>

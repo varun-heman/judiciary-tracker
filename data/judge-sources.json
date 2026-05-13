@@ -1,0 +1,26 @@
+[
+  {
+    "court_id": "SC",
+    "court": "Supreme Court of India",
+    "url": "https://www.sci.gov.in/chief-justice-judges/",
+    "scope": "sitting-judges",
+    "verified": true,
+    "notes": "Official SCI page listing Chief Justice and all sitting judges with appointment dates."
+  },
+  {
+    "court_id": "HC-ALD",
+    "court": "Allahabad High Court",
+    "url": "https://www.allahabadhighcourt.in/judge/judgeShowList.jsp",
+    "scope": "sitting-judges",
+    "verified": true,
+    "notes": "Lists all sitting judges. Individual judge profiles at /judge/judgeHistory.jsp?jid={id}. Photos at /image/jo/{id}.jpg."
+  },
+  {
+    "court_id": "HC-BOM",
+    "court": "Bombay High Court",
+    "url": "https://bombayhighcourt.nic.in/jshow_list.php",
+    "scope": "sitting-judges",
+    "verified": true,
+    "notes": "Official BHC judge roster page. Verified May 2026."
+  }
+]

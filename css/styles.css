@@ -397,10 +397,14 @@ code { font-family: 'Courier New', monospace; background: var(--unknown-bg); pad
   cursor: pointer;
   white-space: nowrap;
   flex-shrink: 0;
-  transition: background var(--transition), color var(--transition);
+  transition: background var(--transition), color var(--transition), opacity var(--transition);
 }
 .clear-filter-btn:hover {
   background: var(--critical-bg);
+}
+.clear-filter-btn.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .judge-range-summary {
@@ -629,6 +633,33 @@ body.dark .show-all-btn.active {
 .card-role-badge.minister      { background: #fff7ed; color: #c2410c; border-color: #fed7aa; }
 .card-role-badge.secretary     { background: #faf5ff; color: #7e22ce; border-color: #e9d5ff; }
 .card-role-badge.cpc           { background: #eef2ff; color: #3730a3; border-color: #c7d2fe; }
+
+.card-badges-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+.card-badges-row .card-role-badge {
+  margin-bottom: 0;
+}
+
+.court-badge {
+  display: inline-block;
+  font-size: 9.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--accent) 10%, var(--bg-card));
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--border));
+}
+body.dark .court-badge {
+  background: color-mix(in srgb, var(--accent) 15%, var(--bg-card));
+}
 
 .card-role { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--text-muted); margin-bottom: 4px; }
 
