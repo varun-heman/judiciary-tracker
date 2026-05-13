@@ -1,0 +1,184 @@
+[
+  {
+    "court_id": "SC",
+    "court": "Supreme Court of India",
+    "url": "https://www.sci.gov.in/collegium-resolutions/",
+    "scope": "judge-transfer-recommendations",
+    "notes": "Collegium resolutions include recommendations for inter-High-Court judicial transfers and Chief Justice appointments."
+  },
+  {
+    "court_id": "HC-ALD",
+    "court": "Allahabad High Court",
+    "url": "https://www.allahabadhighcourt.in/calendar/notification2k6.jsp?e=2026-12-31&s=2026-01-01",
+    "scope": "judicial-officer-transfers",
+    "notes": "Dedicated year-wise index: Notifications of Transfer of Judicial Officers."
+  },
+  {
+    "court_id": "HC-AP",
+    "court": "Andhra Pradesh High Court",
+    "url": "https://aphc.gov.in/notifications.php?year=2026",
+    "scope": "staff-and-judicial-officer-movement",
+    "notes": "General notifications index includes transfer/posting orders for judicial officers and district-court staff."
+  },
+  {
+    "court_id": "HC-BOM",
+    "court": "Bombay High Court",
+    "url": "",
+    "scope": "needs-source-verification",
+    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+  },
+  {
+    "court_id": "HC-CAL",
+    "court": "Calcutta High Court",
+    "url": "https://www.calcuttahighcourt.gov.in/Notices/transfer-notice",
+    "scope": "judicial-officer-transfers",
+    "notes": "Dedicated index: Notices -> Transfer / Posting of Judicial Officers."
+  },
+  {
+    "court_id": "HC-CHG",
+    "court": "Chhattisgarh High Court",
+    "url": "",
+    "scope": "needs-source-verification",
+    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+  },
+  {
+    "court_id": "HC-DEL",
+    "court": "Delhi High Court",
+    "url": "https://delhihighcourt.nic.in/web/public-notice",
+    "scope": "posting-transfer-orders",
+    "notes": "General notices page includes orders regarding postings/transfers in Delhi Judicial Service / Delhi Higher Judicial Service."
+  },
+  {
+    "court_id": "HC-GAU",
+    "court": "Gauhati High Court",
+    "url": "https://ghconline.gov.in/index.php/category/notifications/",
+    "scope": "notifications-needs-filtering",
+    "notes": "Notification index; use only rows that are transfer/posting/staff movement and link to direct PDFs."
+  },
+  {
+    "court_id": "HC-GUJ",
+    "court": "Gujarat High Court",
+    "url": "https://gujarathighcourt.nic.in/miscnotifications",
+    "scope": "judicial-officer-transfers",
+    "notes": "Misc notifications index includes transfer/posting PDFs for District Judge, Senior Civil Judge and Civil Judge cadres."
+  },
+  {
+    "court_id": "HC-HP",
+    "court": "Himachal Pradesh High Court",
+    "url": "",
+    "scope": "needs-source-verification",
+    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+  },
+  {
+    "court_id": "HC-JKL",
+    "court": "J&K and Ladakh High Court",
+    "url": "https://jkhighcourt.nic.in/jo.php",
+    "scope": "judicial-officer-transfers",
+    "notes": "Dedicated page: Transfer Orders of Judicial Officers. Notification rows should link to each order PDF under upload/orders&cir/."
+  },
+  {
+    "court_id": "HC-JHK",
+    "court": "Jharkhand High Court",
+    "url": "",
+    "scope": "needs-source-verification",
+    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+  },
+  {
+    "court_id": "HC-KAR",
+    "court": "Karnataka High Court",
+    "url": "",
+    "scope": "needs-source-verification",
+    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+  },
+  {
+    "court_id": "HC-KER",
+    "court": "Kerala High Court",
+    "url": "https://www.highcourt.kerala.gov.in/",
+    "scope": "announcements-needs-filtering",
+    "notes": "No dedicated transfer/posting index identified yet. Staff/judicial movement notices appear through homepage announcements / notice board."
+  },
+  {
+    "court_id": "HC-MP",
+    "court": "Madhya Pradesh High Court",
+    "url": "https://mphc.gov.in/transfer",
+    "scope": "transfer-posting-orders",
+    "notes": "Dedicated transfer page with posting/board-change/registry/district-establishment transfer PDFs."
+  },
+  {
+    "court_id": "HC-MAD",
+    "court": "Madras High Court",
+    "url": "",
+    "scope": "needs-source-verification",
+    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+  },
+  {
+    "court_id": "HC-MAN",
+    "court": "Manipur High Court",
+    "url": "https://hcmimphal.nic.in/Notice.html",
+    "scope": "notifications-needs-filtering",
+    "notes": "Notices page; use only staff movement / transfer / posting rows with direct PDFs."
+  },
+  {
+    "court_id": "HC-MEG",
+    "court": "Meghalaya High Court",
+    "url": "https://meghalayahighcourt.nic.in/notifications",
+    "scope": "notifications-needs-filtering",
+    "notes": "Notifications index; transfer/posting records exist as individual pages with PDF downloads."
+  },
+  {
+    "court_id": "HC-ORI",
+    "court": "Orissa High Court",
+    "url": "https://www.orissahighcourt.nic.in/notification/",
+    "scope": "notifications-needs-filtering",
+    "notes": "Notification index; use only transfer/posting/staff movement rows with direct PDFs."
+  },
+  {
+    "court_id": "HC-PAT",
+    "court": "Patna High Court",
+    "url": "",
+    "scope": "needs-source-verification",
+    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+  },
+  {
+    "court_id": "HC-PHC",
+    "court": "Punjab & Haryana High Court",
+    "url": "",
+    "scope": "needs-source-verification",
+    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+  },
+  {
+    "court_id": "HC-RAJ",
+    "court": "Rajasthan High Court",
+    "url": "",
+    "scope": "needs-source-verification",
+    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+  },
+  {
+    "court_id": "HC-SIK",
+    "court": "Sikkim High Court",
+    "url": "",
+    "scope": "needs-source-verification",
+    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+  },
+  {
+    "court_id": "HC-TEL",
+    "court": "Telangana High Court",
+    "url": "",
+    "scope": "needs-source-verification",
+    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+  },
+  {
+    "court_id": "HC-TRI",
+    "court": "Tripura High Court",
+    "url": "https://thc.nic.in/notification/",
+    "scope": "transfer-postings-tab",
+    "notes": "Notifications page has Transfer & Postings tab; use only direct notification/order PDFs."
+  },
+  {
+    "court_id": "HC-UTK",
+    "court": "Uttarakhand High Court",
+    "url": "",
+    "scope": "needs-source-verification",
+    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+  }
+]

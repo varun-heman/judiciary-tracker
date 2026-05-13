@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notifications Tracker · India Judiciary Tracker</title>
+  <meta name="description" content="Court-wise index of recent Supreme Court and High Court notifications.">
+  <link rel="stylesheet" href="css/styles.css?v=20260513-2">
+</head>
+<body>
+
+<div class="app-layout notifications-layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="logo-icon">⚖️</span>
+        <div>
+          <div class="logo-title">Notifications</div>
+          <div class="logo-sub">Last 6 months · Court-wise</div>
+        </div>
+      </div>
+      <div class="search-box">
+        <input
+          type="text"
+          id="notification-search"
+          placeholder="Search notifications…"
+          autocomplete="off"
+          spellcheck="false"
+        >
+      </div>
+    </div>
+
+    <nav id="notification-nav" class="nav-list">
+      <div class="loading" style="padding: 20px; font-size: 12px; color: var(--text-sidebar-muted);">Loading…</div>
+    </nav>
+  </aside>
+
+  <main class="main-panel" id="main-panel">
+    <header class="top-bar">
+      <button class="menu-toggle-btn" id="menu-toggle" aria-label="Toggle sidebar">☰</button>
+      <div class="data-notice">
+        <a href="index.html">← Main tracker</a>
+        · Notifications indexed from official court pages
+        · Edit <code>data/notifications.json</code> to update
+      </div>
+      <button id="theme-toggle" class="theme-btn" title="Toggle dark mode">🌙</button>
+    </header>
+
+    <div id="notifications-content" class="content-area">
+      <div class="loading">Loading notifications…</div>
+    </div>
+  </main>
+
+  <aside class="transfer-rail" id="transfer-rail">
+    <div class="transfer-rail-title">Parsed Transfers</div>
+    <div class="transfer-rail-content">
+      <div class="upcoming-empty">Loading…</div>
+    </div>
+  </aside>
+</div>
+
+<div class="pdf-modal" id="pdf-modal" aria-hidden="true">
+  <div class="pdf-modal-backdrop" onclick="closeNotificationPdf()"></div>
+  <div class="pdf-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="pdf-modal-title">
+    <div class="pdf-modal-header">
+      <div>
+        <div class="pdf-modal-kicker" id="pdf-modal-court"></div>
+        <h2 id="pdf-modal-title">Notification PDF</h2>
+      </div>
+      <button class="pdf-modal-close" onclick="closeNotificationPdf()" aria-label="Close PDF viewer">×</button>
+    </div>
+    <div class="pdf-modal-body">
+      <iframe id="pdf-frame" class="pdf-frame" title="Notification PDF"></iframe>
+      <aside class="pdf-transfer-panel" id="pdf-transfer-panel"></aside>
+    </div>
+  </div>
+</div>
+
+<script src="data/data.js?v=20260513-2"></script>
+<script src="js/notifications.js?v=20260513-2"></script>
+</body>
+</html>
