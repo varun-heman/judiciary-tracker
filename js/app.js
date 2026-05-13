@@ -28,7 +28,7 @@ const state = {
   adminRoleFilter: 'ALL',
   judgeRoleFilter: 'ALL',
   judgeTenureRange: 12,
-  judgeTenureShowAll: false,
+  judgeTenureShowAll: true,
   selectedId: 'SC',
   searchQuery: '',
 };
@@ -425,7 +425,7 @@ function renderUnifiedFilterBar(judgePool, adminPool) {
   // ── Judge role pills ──
   const judgeGroups = [
     { key: 'Chief',      label: 'Chief Justice',    test: j => /chief justice/i.test(j.role || '') },
-    { key: 'Puisne',     label: 'Puisne Judge',     test: j => (j.role || '') === 'Judge' },
+    { key: 'Puisne',     label: 'Judge',            test: j => (j.role || '') === 'Judge' },
     { key: 'Additional', label: 'Additional Judge', test: j => (j.role || '') === 'Additional Judge' },
   ].filter(g => judgePool.some(g.test));
 
@@ -580,9 +580,8 @@ function renderContent() {
 function renderCourtView(root, all, children) {
   const allJudges = children.filter(isJudgeRecord);
   const people = allJudges.filter(matchesJudgeTenureFilter);
-  const adminStaff = state.adminStaff
-    .filter(p => p.court_id === root.id)
-    .sort((a, b) => adminSort(a, b));
+  const allAdminStaff = state.adminStaff.filter(p => p.court_id === root.id);
+  const adminStaff = allAdminStaff.filter(matchesAdminFilter).sort(adminSort);
   const head   = people.find(p =>
     p.role === 'Chief Justice of India' ||
     p.role === 'Chief Justice' ||
@@ -600,7 +599,7 @@ function renderCourtView(root, all, children) {
 
   let html = '';
 
-  html += renderUnifiedFilterBar(allJudges, []);
+  html += renderUnifiedFilterBar(allJudges, allAdminStaff);
 
   if (people.length > 0) {
     html += `<div class="stats-bar">${statsFor(people)}</div>`;
@@ -616,9 +615,14 @@ function renderCourtView(root, all, children) {
     html += `<div class="cards-grid">${rest.map(j => renderCard(j)).join('')}</div>`;
   }
 
-  if (adminStaff.length > 0) {
-    html += `<div class="section-label">Court Administration <span class="section-count">${adminStaff.length}</span></div>`;
-    html += `<div class="cards-grid">${adminStaff.map(renderAdminCard).join('')}</div>`;
+  if (allAdminStaff.length > 0) {
+    const countLabel = adminStaff.length < allAdminStaff.length
+      ? `${adminStaff.length} of ${allAdminStaff.length}`
+      : adminStaff.length;
+    html += `<div class="section-label">Court Administration <span class="section-count">${countLabel}</span></div>`;
+    html += adminStaff.length
+      ? `<div class="cards-grid">${adminStaff.map(renderAdminCard).join('')}</div>`
+      : `<div class="empty-state" style="padding:20px 0"><p>No staff match the current role filter.</p></div>`;
   }
 
   if (people.length === 0) {
@@ -764,15 +768,11 @@ window.toggleJudgeTenureShowAll = function() {
 // Global interactions
 // ─────────────────────────────────────────────────────────────────────────────
 window.selectView = function(id) {
-  state.selectedId   = id;
-  state.searchQuery  = '';
+  state.selectedId      = id;
+  state.searchQuery     = '';
   state.judgeRoleFilter = 'ALL';
-  if (id !== 'ADMIN') {
-    state.adminRoleFilter = 'ALL';
-  } else {
-    // In ADMIN view, default to show all so no admin staff are hidden unexpectedly
-    state.judgeTenureShowAll = true;
-  }
+  state.adminRoleFilter = 'ALL';
+  state.judgeTenureShowAll = true;   // always reset to show all on view change
   document.getElementById('search-input').value = '';
   renderNav();
   renderContent();
