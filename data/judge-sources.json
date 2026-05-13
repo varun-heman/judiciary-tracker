@@ -10,10 +10,10 @@
   {
     "court_id": "HC-ALD",
     "court": "Allahabad High Court",
-    "url": "https://www.allahabadhighcourt.in/judge/judgeShowList.jsp",
+    "url": "https://www.allahabadhighcourt.in/service/judgeListSeni.jsp",
     "scope": "sitting-judges",
     "verified": true,
-    "notes": "Lists all sitting judges. Individual judge profiles at /judge/judgeHistory.jsp?jid={id}. Photos at /image/jo/{id}.jpg."
+    "notes": "Official present Chief Justice/Judges page. Individual judge profiles at /service/judgeDetail.jsp?id={id}; photos under /image/judges/ where published."
   },
   {
     "court_id": "HC-BOM",
