@@ -67,15 +67,10 @@ function getTenure(retireDateStr) {
   return { status: 'good', label: `${yrs}y ${mos}m left`, daysLeft, pct: null };
 }
 
-function tenureProgress(assumedStr, retireStr) {
-  if (!assumedStr || !retireStr) return 0;
-  const start = new Date(assumedStr + 'T00:00:00');
-  const end   = new Date(retireStr  + 'T00:00:00');
-  const now   = new Date();
-  const total = end - start;
-  const elapsed = now - start;
-  if (total <= 0) return 0;
-  return Math.min(100, Math.max(0, (elapsed / total) * 100));
+function retirementRemainingProgress(retireDateStr) {
+  const tenure = getTenure(retireDateStr);
+  if (tenure.daysLeft === null || tenure.daysLeft < 0) return 0;
+  return Math.min(100, Math.max(0, (tenure.daysLeft / 365) * 100));
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -255,7 +250,7 @@ function renderCard(person, isHead = false) {
   const assumedStr = person.date_assumed_role || person.assumed_office || '';
   const initialStr = person.date_initial_appointment || '';
   const tenure = getTenure(retireStr);
-  const pct    = assumedStr && retireStr ? tenureProgress(assumedStr, retireStr) : 0;
+  const pct    = retireStr ? retirementRemainingProgress(retireStr) : 0;
   const roleLabel = person.role || 'Official';
   const isPlaceholder = person.type === 'placeholder';
 
@@ -273,8 +268,8 @@ function renderCard(person, isHead = false) {
       </div>`;
   }
 
-  const progressBar = (assumedStr && retireStr && tenure.status !== 'retired') ? `
-    <div class="tenure-progress" title="${pct.toFixed(1)}% of tenure elapsed">
+  const progressBar = (retireStr && tenure.status !== 'retired') ? `
+    <div class="tenure-progress" title="${tenure.daysLeft} days until retirement">
       <div class="tenure-fill ${tenure.status}" style="width:${pct.toFixed(1)}%"></div>
     </div>` : '';
 
