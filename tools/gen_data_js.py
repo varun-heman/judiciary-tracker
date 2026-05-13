@@ -18,6 +18,9 @@ with open(os.path.join(root, 'data', 'ministries.json'), encoding='utf-8') as f:
 with open(os.path.join(root, 'data', 'admin-staff.json'), encoding='utf-8') as f:
     admin_staff = json.load(f)
 
+with open(os.path.join(root, 'data', 'judge-details.json'), encoding='utf-8') as f:
+    judge_details = json.load(f)
+
 with open(os.path.join(root, 'data', 'notifications.json'), encoding='utf-8') as f:
     notifications = json.load(f)
 
@@ -27,6 +30,7 @@ with open(os.path.join(root, 'data', 'notification-sources.json'), encoding='utf
 js = f"""window.COURTS_DATA = {json.dumps(courts, indent=2, ensure_ascii=False)};
 window.MINISTRIES_DATA = {json.dumps(ministries, indent=2, ensure_ascii=False)};
 window.ADMIN_STAFF_DATA = {json.dumps(admin_staff, indent=2, ensure_ascii=False)};
+window.JUDGE_DETAILS_DATA = {json.dumps(judge_details, indent=2, ensure_ascii=False)};
 window.NOTIFICATIONS_DATA = {json.dumps(notifications, indent=2, ensure_ascii=False)};
 window.NOTIFICATION_SOURCES_DATA = {json.dumps(notification_sources, indent=2, ensure_ascii=False)};
 """
@@ -38,5 +42,6 @@ with open(out, 'w', encoding='utf-8') as f:
 print(
     f"Regenerated {out} "
     f"({len(courts)} court records, {len(ministries)} ministry records, "
-    f"{len(admin_staff)} admin staff records, {len(notifications)} notifications)"
+    f"{len(admin_staff)} admin staff records, {len(judge_details)} judge detail records, "
+    f"{len(notifications)} notifications)"
 )

@@ -25,11 +25,13 @@ const state = {
   courts: [],
   ministries: [],
   adminStaff: [],
+  judgeDetails: [],
   adminRoleFilter: 'ALL',
   judgeRoleFilter: 'ALL',
   judgeTenureRange: 12,
   judgeTenureShowAll: true,
   selectedId: 'HOME',
+  selectedJudgeId: '',
   searchQuery: '',
 };
 
@@ -81,14 +83,16 @@ function retirementRemainingProgress(retireDateStr) {
 async function loadData() {
   // 1. Try fetch (works on GitHub Pages, Netlify, or any HTTP server)
   try {
-    const [courts, ministries, adminStaff] = await Promise.all([
+    const [courts, ministries, adminStaff, judgeDetails] = await Promise.all([
       fetch('data/courts.json').then(r => { if (!r.ok) throw new Error(); return r.json(); }),
       fetch('data/ministries.json').then(r => { if (!r.ok) throw new Error(); return r.json(); }),
       fetch('data/admin-staff.json').then(r => { if (!r.ok) throw new Error(); return r.json(); }),
+      fetch('data/judge-details.json').then(r => { if (!r.ok) throw new Error(); return r.json(); }),
     ]);
     state.courts = courts;
     state.ministries = ministries;
     state.adminStaff = adminStaff;
+    state.judgeDetails = judgeDetails;
     return true;
   } catch (e) {
     // 2. Fall back to embedded data from data/data.js (works with file:// open)
@@ -96,6 +100,7 @@ async function loadData() {
       state.courts = window.COURTS_DATA;
       state.ministries = window.MINISTRIES_DATA;
       state.adminStaff = Array.isArray(window.ADMIN_STAFF_DATA) ? window.ADMIN_STAFF_DATA : [];
+      state.judgeDetails = Array.isArray(window.JUDGE_DETAILS_DATA) ? window.JUDGE_DETAILS_DATA : [];
       const bar = document.querySelector('.data-notice');
       if (bar) bar.innerHTML += ' &nbsp;|&nbsp; <span style="color:var(--warning)">Using embedded data because this page was opened directly</span>';
       return true;
@@ -133,9 +138,16 @@ function applyRoute() {
   state.adminRoleFilter = 'ALL';
   state.judgeTenureRange = 12;
   state.judgeTenureShowAll = true;
+  state.selectedJudgeId = '';
 
   const view = params.get('view') || params.get('court') || params.get('ministry');
   if (view && validViewId(view)) state.selectedId = view;
+  const judge = params.get('judge');
+  if (judge && state.courts.some(d => d.id === judge && isJudgeRecord(d))) {
+    state.selectedJudgeId = judge;
+    const judgeRow = state.courts.find(d => d.id === judge);
+    if (judgeRow && judgeRow.parent_id) state.selectedId = judgeRow.parent_id;
+  }
 
   state.searchQuery = (params.get('q') || '').trim();
   state.judgeRoleFilter = params.get('judgeRole') || 'ALL';
@@ -150,6 +162,7 @@ function applyRoute() {
 function writeRoute({ replace = false } = {}) {
   if (applyingRoute) return;
   const params = new URLSearchParams();
+  if (state.selectedJudgeId) params.set('judge', state.selectedJudgeId);
   if (state.selectedId && state.selectedId !== 'HOME') params.set('view', state.selectedId);
   if (state.searchQuery) params.set('q', state.searchQuery);
   if (state.judgeRoleFilter !== 'ALL') params.set('judgeRole', state.judgeRoleFilter);
@@ -330,6 +343,12 @@ function renderCard(person, isHead = false) {
   const pct    = retireStr ? retirementRemainingProgress(retireStr) : 0;
   const roleLabel = person.role || 'Official';
   const isPlaceholder = person.type === 'placeholder';
+  const isJudge = isJudgeRecord(person);
+  const detail = isJudge ? getJudgeDetail(person.id) : null;
+  const assetLabel = detail ? assetValueLabel(detail.assets) : '';
+  const cardAttrs = isJudge
+    ? `role="button" tabindex="0" onclick="if(!event.target.closest('a,button,input,select')) selectJudge('${escAttr(person.id)}')" onkeydown="if((event.key === 'Enter' || event.key === ' ') && !event.target.closest('a,button,input,select')) { event.preventDefault(); selectJudge('${escAttr(person.id)}'); }"`
+    : '';
 
   if (isPlaceholder) {
     return `
@@ -351,7 +370,7 @@ function renderCard(person, isHead = false) {
     </div>` : '';
 
   return `
-    <div class="person-card ${isHead ? 'head-card' : ''} border-${tenure.status}">
+    <div class="person-card ${isHead ? 'head-card' : ''} ${isJudge ? 'clickable-card' : ''} border-${tenure.status}" ${cardAttrs}>
       <div class="card-top">
         <div class="card-identity">
           ${renderAvatar(person)}
@@ -363,6 +382,7 @@ function renderCard(person, isHead = false) {
         </div>
         ${retireStr ? `<div class="tenure-chip ${tenure.status}">${tenure.label}</div>` : ''}
       </div>
+      ${assetLabel ? `<div class="asset-chip">${escHtml(assetLabel)}</div>` : ''}
       ${progressBar}
       <div class="card-meta">
         ${person.date_of_birth ? `<div class="meta-row"><span class="meta-icon">👤</span><span>${getAge(person.date_of_birth)} yrs · born ${formatDate(person.date_of_birth)}</span></div>` : ''}
@@ -418,6 +438,47 @@ function renderContactRows(person) {
     rows.push(`<div class="meta-row"><span class="meta-icon">Fax</span><span>${escHtml(person.fax)}</span></div>`);
   }
   return rows.join('');
+}
+
+function getJudgeDetail(id) {
+  return state.judgeDetails.find(d => d.id === id) || null;
+}
+
+function assetNumber(assets) {
+  if (!assets) return null;
+  const value = assets.total_value ?? assets.disclosed_monetary_total ?? assets.value;
+  return Number.isFinite(Number(value)) ? Number(value) : null;
+}
+
+function formatRupees(value) {
+  if (!Number.isFinite(Number(value))) return 'Not valued';
+  const n = Number(value);
+  if (n >= 10000000) return `₹${(n / 10000000).toFixed(n >= 100000000 ? 1 : 2).replace(/\.0$/, '')} cr`;
+  if (n >= 100000) return `₹${(n / 100000).toFixed(2).replace(/\.0$/, '')} lakh`;
+  return `₹${Math.round(n).toLocaleString('en-IN')}`;
+}
+
+function assetValueLabel(assets) {
+  if (!assets) return '';
+  const value = assetNumber(assets);
+  if (value !== null && value > 0) return `Disclosed monetary assets ${formatRupees(value)}+`;
+  if (assets.source_url) return 'Asset declaration available';
+  return '';
+}
+
+function assetList(items) {
+  if (!Array.isArray(items) || items.length === 0) {
+    return '<div class="asset-empty">No sourced entries added yet.</div>';
+  }
+  return items.map(item => `
+    <div class="asset-row">
+      <div>
+        <strong>${escHtml(item.label || item.type || 'Asset')}</strong>
+        ${item.owner ? `<span>${escHtml(item.owner)}</span>` : ''}
+        ${item.description ? `<p>${escHtml(item.description)}</p>` : ''}
+      </div>
+      <em>${assetNumber(item) !== null ? formatRupees(assetNumber(item)) : 'Not valued'}</em>
+    </div>`).join('');
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -660,6 +721,11 @@ function renderContent() {
     return;
   }
 
+  if (state.selectedJudgeId) {
+    container.innerHTML = renderJudgeDetailView(state.selectedJudgeId);
+    return;
+  }
+
   if (state.selectedId === 'ADMIN') {
     container.innerHTML = renderAdminStaffView();
     attachSliderListeners();
@@ -821,6 +887,79 @@ function renderDashboardView() {
                 </button>`).join('')}
             </div>`
           : `<div class="empty-state compact"><p>No tracked judge retirements within 12 months.</p></div>`}
+      </section>
+    </div>`;
+}
+
+function renderJudgeDetailView(id) {
+  const judge = state.courts.find(d => d.id === id && isJudgeRecord(d));
+  if (!judge) return `<div class="empty-state"><p>Judge profile not found.</p></div>`;
+  const detail = getJudgeDetail(id) || {};
+  const assets = detail.assets || {};
+  const total = assetNumber(assets);
+  const bio = detail.bio || judge.notes || 'No sourced biography has been added for this judge yet.';
+  const sourceUrl = detail.bio_source_url || judge.source_url || '';
+  const sourceLabel = detail.bio_source_label || judge.source_label || 'Official profile';
+  const assetSourceUrl = assets.source_url || '';
+  const assetSourceLabel = assets.source_label || 'Official asset declaration';
+  const totalLabel = total !== null && total > 0 ? `${formatRupees(total)}+` : 'Not fully valued';
+  const valueType = assets.total_value_type || (total ? 'Disclosed monetary amounts only' : 'No monetary total available');
+
+  return `
+    <div class="judge-detail-view">
+      <button class="back-button" onclick="selectView('${escAttr(judge.parent_id)}')">← Back to ${escHtml(judge.court || 'court')}</button>
+      <section class="judge-profile-hero">
+        ${renderAvatar(judge)}
+        <div class="judge-profile-main">
+          <span class="card-role-badge ${judge.type || ''}">${escHtml(judge.role || 'Judge')}</span>
+          <h2>${escHtml(judge.name)}</h2>
+          <p>${escHtml(judge.court || '')}${judge.state ? ` · ${escHtml(judge.state)}` : ''}</p>
+          <div class="judge-profile-facts">
+            ${judge.date_of_birth ? `<span>${getAge(judge.date_of_birth)} yrs</span>` : ''}
+            ${judge.date_assumed_role ? `<span>In role since ${formatDate(judge.date_assumed_role)}</span>` : ''}
+            ${judge.retirement_date ? `<span>Retires ${formatDate(judge.retirement_date)}</span>` : ''}
+          </div>
+        </div>
+        <div class="asset-total-card">
+          <span>Disclosed Assets</span>
+          <strong>${escHtml(totalLabel)}</strong>
+          <em>${escHtml(valueType)}</em>
+        </div>
+      </section>
+
+      <section class="detail-grid">
+        <article class="detail-panel">
+          <div class="panel-heading">
+            <h3>Bio</h3>
+            <p>AI-assisted summary from available public profile/source data.</p>
+          </div>
+          <p class="bio-text">${escHtml(bio)}</p>
+          ${sourceUrl ? `<a class="inline-link" href="${escHtml(sourceUrl)}" target="_blank" rel="noopener">${escHtml(sourceLabel)}</a>` : ''}
+        </article>
+
+        <article class="detail-panel">
+          <div class="panel-heading">
+            <h3>Assets</h3>
+            <p>Only official/public declarations are shown. Unvalued property is not estimated.</p>
+          </div>
+          ${assetSourceUrl ? `<a class="asset-source-link" href="${escHtml(assetSourceUrl)}" target="_blank" rel="noopener">${escHtml(assetSourceLabel)}</a>` : ''}
+          ${assets.notes ? `<p class="asset-note">${escHtml(assets.notes)}</p>` : ''}
+        </article>
+
+        <article class="detail-panel">
+          <div class="panel-heading"><h3>Movable Assets</h3><p>Investments, deposits, jewellery, vehicles and similar movable declarations.</p></div>
+          ${assetList(assets.movable)}
+        </article>
+
+        <article class="detail-panel">
+          <div class="panel-heading"><h3>Immovable Assets</h3><p>Land, houses, plots and other real-estate declarations.</p></div>
+          ${assetList(assets.immovable)}
+        </article>
+
+        <article class="detail-panel wide">
+          <div class="panel-heading"><h3>Family / Dependent Assets</h3><p>Shown only where the judge's public declaration itself includes spouse, joint-family or dependent entries.</p></div>
+          ${assetList(assets.family)}
+        </article>
       </section>
     </div>`;
 }
@@ -1021,6 +1160,7 @@ window.toggleJudgeTenureShowAll = function() {
 
 window.selectHome = function() {
   state.selectedId = 'HOME';
+  state.selectedJudgeId = '';
   state.searchQuery = '';
   state.judgeRoleFilter = 'ALL';
   state.adminRoleFilter = 'ALL';
@@ -1039,11 +1179,27 @@ window.selectHome = function() {
 // ─────────────────────────────────────────────────────────────────────────────
 window.selectView = function(id) {
   state.selectedId      = id;
+  state.selectedJudgeId = '';
   state.searchQuery     = '';
   state.judgeRoleFilter = 'ALL';
   state.adminRoleFilter = 'ALL';
   state.judgeTenureShowAll = true;   // always reset to show all on view change
   document.getElementById('search-input').value = '';
+  writeRoute();
+  renderNav();
+  renderContent();
+  closeSidebar();
+  document.getElementById('main-panel').scrollTop = 0;
+};
+
+window.selectJudge = function(id) {
+  const judge = state.courts.find(d => d.id === id && isJudgeRecord(d));
+  if (!judge) return;
+  state.selectedJudgeId = id;
+  state.selectedId = judge.parent_id || state.selectedId;
+  state.searchQuery = '';
+  const searchInput = document.getElementById('search-input');
+  if (searchInput) searchInput.value = '';
   writeRoute();
   renderNav();
   renderContent();
