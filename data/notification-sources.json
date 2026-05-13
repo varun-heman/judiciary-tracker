@@ -25,7 +25,7 @@
     "court": "Bombay High Court",
     "url": "",
     "scope": "needs-source-verification",
-    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+    "notes": "Transfer/posting-specific index page not yet identified."
   },
   {
     "court_id": "HC-CAL",
@@ -39,7 +39,7 @@
     "court": "Chhattisgarh High Court",
     "url": "",
     "scope": "needs-source-verification",
-    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+    "notes": "Transfer/posting-specific index page not yet identified."
   },
   {
     "court_id": "HC-DEL",
@@ -53,7 +53,7 @@
     "court": "Gauhati High Court",
     "url": "https://ghconline.gov.in/index.php/category/notifications/",
     "scope": "notifications-needs-filtering",
-    "notes": "Notification index; use only rows that are transfer/posting/staff movement and link to direct PDFs."
+    "notes": "Notification index; source contains transfer/posting/staff movement and link to direct PDFs."
   },
   {
     "court_id": "HC-GUJ",
@@ -67,7 +67,7 @@
     "court": "Himachal Pradesh High Court",
     "url": "",
     "scope": "needs-source-verification",
-    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+    "notes": "Transfer/posting-specific index page not yet identified."
   },
   {
     "court_id": "HC-JKL",
@@ -81,14 +81,14 @@
     "court": "Jharkhand High Court",
     "url": "",
     "scope": "needs-source-verification",
-    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+    "notes": "Transfer/posting-specific index page not yet identified."
   },
   {
     "court_id": "HC-KAR",
     "court": "Karnataka High Court",
     "url": "",
     "scope": "needs-source-verification",
-    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+    "notes": "Transfer/posting-specific index page not yet identified."
   },
   {
     "court_id": "HC-KER",
@@ -109,14 +109,14 @@
     "court": "Madras High Court",
     "url": "",
     "scope": "needs-source-verification",
-    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+    "notes": "Transfer/posting-specific index page not yet identified."
   },
   {
     "court_id": "HC-MAN",
     "court": "Manipur High Court",
     "url": "https://hcmimphal.nic.in/Notice.html",
     "scope": "notifications-needs-filtering",
-    "notes": "Notices page; use only staff movement / transfer / posting rows with direct PDFs."
+    "notes": "Notices page; source may include staff movement / transfer / posting rows with direct PDFs."
   },
   {
     "court_id": "HC-MEG",
@@ -130,55 +130,55 @@
     "court": "Orissa High Court",
     "url": "https://www.orissahighcourt.nic.in/notification/",
     "scope": "notifications-needs-filtering",
-    "notes": "Notification index; use only transfer/posting/staff movement rows with direct PDFs."
+    "notes": "Notification index; source may include transfer/posting/staff movement rows with direct PDFs."
   },
   {
     "court_id": "HC-PAT",
     "court": "Patna High Court",
     "url": "",
     "scope": "needs-source-verification",
-    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+    "notes": "Transfer/posting-specific index page not yet identified."
   },
   {
     "court_id": "HC-PHC",
     "court": "Punjab & Haryana High Court",
     "url": "",
     "scope": "needs-source-verification",
-    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+    "notes": "Transfer/posting-specific index page not yet identified."
   },
   {
     "court_id": "HC-RAJ",
     "court": "Rajasthan High Court",
     "url": "",
     "scope": "needs-source-verification",
-    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+    "notes": "Transfer/posting-specific index page not yet identified."
   },
   {
     "court_id": "HC-SIK",
     "court": "Sikkim High Court",
     "url": "",
     "scope": "needs-source-verification",
-    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+    "notes": "Transfer/posting-specific index page not yet identified."
   },
   {
     "court_id": "HC-TEL",
     "court": "Telangana High Court",
     "url": "",
     "scope": "needs-source-verification",
-    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+    "notes": "Transfer/posting-specific index page not yet identified."
   },
   {
     "court_id": "HC-TRI",
     "court": "Tripura High Court",
     "url": "https://thc.nic.in/notification/",
     "scope": "transfer-postings-tab",
-    "notes": "Notifications page has Transfer & Postings tab; use only direct notification/order PDFs."
+    "notes": "Notifications page has Transfer & Postings tab; source may include direct notification/order PDFs."
   },
   {
     "court_id": "HC-UTK",
     "court": "Uttarakhand High Court",
     "url": "",
     "scope": "needs-source-verification",
-    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+    "notes": "Transfer/posting-specific index page not yet identified."
   }
 ]

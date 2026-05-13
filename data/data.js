@@ -2680,7 +2680,7 @@ window.NOTIFICATIONS_DATA = [
       }
     ],
     "transfer_entry_count": 11,
-    "extraction_notes": "Manually normalized from the numbered J&K transfer order text after OCR/text extraction.",
+    "extraction_notes": "AI parsed; not human verified. Check the linked PDF before relying on this data.",
     "original_url": "https://jkhighcourt.nic.in/upload/orders%26cir/order_651_04052026.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-JKL/2026/05/JKL-2026-05-04-651.pdf"
   },
@@ -2727,7 +2727,7 @@ window.NOTIFICATIONS_DATA = [
       }
     ],
     "transfer_entry_count": 3,
-    "extraction_notes": "Manually normalized from the numbered J&K transfer order text after OCR/text extraction.",
+    "extraction_notes": "AI parsed; not human verified. Check the linked PDF before relying on this data.",
     "original_url": "https://jkhighcourt.nic.in/upload/orders%26cir/order_1779_03122025.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-JKL/2025/12/JKL-2025-12-03-1779.pdf"
   },
@@ -2824,7 +2824,7 @@ window.NOTIFICATIONS_DATA = [
       }
     ],
     "transfer_entry_count": 8,
-    "extraction_notes": "Registry posting table extracted from the order.",
+    "extraction_notes": "AI parsed; not human verified. Check the linked PDF before relying on this data.",
     "original_url": "https://jkhighcourt.nic.in/upload/orders%26cir/order_1664_19112025.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-JKL/2025/11/JKL-2025-11-19-1664.pdf"
   },
@@ -3071,7 +3071,7 @@ window.NOTIFICATIONS_DATA = [
       }
     ],
     "transfer_entry_count": 23,
-    "extraction_notes": "Manually normalized from the numbered J&K transfer order text after OCR/text extraction.",
+    "extraction_notes": "AI parsed; not human verified. Check the linked PDF before relying on this data.",
     "original_url": "https://jkhighcourt.nic.in/upload/orders%26cir/order_1672_19112025.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-JKL/2025/11/JKL-2025-11-19-1672.pdf"
   },
@@ -3408,7 +3408,7 @@ window.NOTIFICATIONS_DATA = [
       }
     ],
     "transfer_entry_count": 32,
-    "extraction_notes": "Extracted from numbered transfer/posting order text.",
+    "extraction_notes": "AI parsed; not human verified. Check the linked PDF before relying on this data.",
     "original_url": "https://jkhighcourt.nic.in/upload/orders%26cir/order_1638_14112025.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-JKL/2025/11/JKL-2025-11-14-1638.pdf"
   },
@@ -4995,7 +4995,7 @@ window.NOTIFICATIONS_DATA = [
       }
     ],
     "transfer_entry_count": 157,
-    "extraction_notes": "Extracted from Gujarat tabular PDF text. Long tables may need spot-checking against the source PDF.",
+    "extraction_notes": "AI parsed; not human verified. Check the linked PDF before relying on this data.",
     "original_url": "https://gujarathighcourt.nic.in/hccms/sites/default/files/miscnotifications/Notification%20-%20Transfer%20and%20Posting%20of%20Judicial%20Officers%20%28District%20Judge%20cadre%29%20Gujarat%20High%20Court%2007052026.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-GUJ/2026/05/GUJ-2026-05-07-DJ.pdf"
   },
@@ -7092,7 +7092,7 @@ window.NOTIFICATIONS_DATA = [
       }
     ],
     "transfer_entry_count": 208,
-    "extraction_notes": "Extracted from Gujarat tabular PDF text. Long tables may need spot-checking against the source PDF.",
+    "extraction_notes": "AI parsed; not human verified. Check the linked PDF before relying on this data.",
     "original_url": "https://gujarathighcourt.nic.in/hccms/sites/default/files/miscnotifications/Notification%20-%20Transfer%20and%20Posting%20of%20Judicial%20Officers%20%28Senior%20Civil%20Judge%20cadre%29%20Gujarat%20High%20Court%20-%2007052026.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-GUJ/2026/05/GUJ-2026-05-07-SCJ.pdf"
   },
@@ -8439,7 +8439,7 @@ window.NOTIFICATIONS_DATA = [
       }
     ],
     "transfer_entry_count": 133,
-    "extraction_notes": "Extracted from Gujarat tabular PDF text. Long tables may need spot-checking against the source PDF.",
+    "extraction_notes": "AI parsed; not human verified. Check the linked PDF before relying on this data.",
     "original_url": "https://gujarathighcourt.nic.in/hccms/sites/default/files/miscnotifications/Notification%20-%20Transfer%20Posting%20of%20Judicial%20Officers%20%28Civil%20Judge%20cadre%29%20Gujarat%20High%20Court%2007052026.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-GUJ/2026/05/GUJ-2026-05-07-CJ.pdf"
   },
@@ -8466,7 +8466,7 @@ window.NOTIFICATIONS_DATA = [
       }
     ],
     "transfer_entry_count": 1,
-    "extraction_notes": "Extracted from OCR text.",
+    "extraction_notes": "AI parsed; not human verified. Check the linked PDF before relying on this data.",
     "original_url": "https://gujarathighcourt.nic.in/hccms/sites/default/files/miscnotifications/Notification%20-%20Transfer%20Posting%20of%20Judicial%20Officers%20%28Senior%20Civil%20Judge%20cadre%29%20Gujarat%20High%20Court%2023022026.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-GUJ/2026/02/GUJ-2026-02-23-SCJ.pdf"
   },
@@ -8493,7 +8493,7 @@ window.NOTIFICATIONS_DATA = [
       }
     ],
     "transfer_entry_count": 1,
-    "extraction_notes": "Extracted from Gujarat tabular PDF text. Long tables may need spot-checking against the source PDF.",
+    "extraction_notes": "AI parsed; not human verified. Check the linked PDF before relying on this data.",
     "original_url": "https://gujarathighcourt.nic.in/hccms/sites/default/files/miscnotifications/Corrigendum%20%20Notification%20-%20Transfer%20and%20Posting%20of%20Judicial%20Officers%20%28District%20Judge%20cadre%29%20Gujarat%20High%20Court%2024122025_signed.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-GUJ/2025/12/GUJ-2025-12-24-DJ-CORR.pdf"
   },
@@ -8520,7 +8520,7 @@ window.NOTIFICATIONS_DATA = [
       }
     ],
     "transfer_entry_count": 1,
-    "extraction_notes": "Extracted from OCR text and manually normalized from the small transfer table.",
+    "extraction_notes": "AI parsed; not human verified. Check the linked PDF before relying on this data.",
     "original_url": "https://mphc.gov.in/PDF/web_pdf/TP/213-Confdl-2026.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-MP/2026/02/MP-2026-02-25-213.pdf"
   },
@@ -8547,7 +8547,7 @@ window.NOTIFICATIONS_DATA = [
       }
     ],
     "transfer_entry_count": 1,
-    "extraction_notes": "Extracted from OCR text and manually normalized from the small transfer table.",
+    "extraction_notes": "AI parsed; not human verified. Check the linked PDF before relying on this data.",
     "original_url": "https://mphc.gov.in/PDF/web_pdf/TP/211-Confdl-2026.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-MP/2026/02/MP-2026-02-25-211.pdf"
   },
@@ -8584,7 +8584,7 @@ window.NOTIFICATIONS_DATA = [
       }
     ],
     "transfer_entry_count": 2,
-    "extraction_notes": "Extracted from OCR text and manually normalized from the small transfer table.",
+    "extraction_notes": "AI parsed; not human verified. Check the linked PDF before relying on this data.",
     "original_url": "https://mphc.gov.in/PDF/web_pdf/TP/209-Confdl-2026.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-MP/2026/02/MP-2026-02-25-209.pdf"
   }
@@ -8616,7 +8616,7 @@ window.NOTIFICATION_SOURCES_DATA = [
     "court": "Bombay High Court",
     "url": "",
     "scope": "needs-source-verification",
-    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+    "notes": "Transfer/posting-specific index page not yet identified."
   },
   {
     "court_id": "HC-CAL",
@@ -8630,7 +8630,7 @@ window.NOTIFICATION_SOURCES_DATA = [
     "court": "Chhattisgarh High Court",
     "url": "",
     "scope": "needs-source-verification",
-    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+    "notes": "Transfer/posting-specific index page not yet identified."
   },
   {
     "court_id": "HC-DEL",
@@ -8644,7 +8644,7 @@ window.NOTIFICATION_SOURCES_DATA = [
     "court": "Gauhati High Court",
     "url": "https://ghconline.gov.in/index.php/category/notifications/",
     "scope": "notifications-needs-filtering",
-    "notes": "Notification index; use only rows that are transfer/posting/staff movement and link to direct PDFs."
+    "notes": "Notification index; source contains transfer/posting/staff movement and link to direct PDFs."
   },
   {
     "court_id": "HC-GUJ",
@@ -8658,7 +8658,7 @@ window.NOTIFICATION_SOURCES_DATA = [
     "court": "Himachal Pradesh High Court",
     "url": "",
     "scope": "needs-source-verification",
-    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+    "notes": "Transfer/posting-specific index page not yet identified."
   },
   {
     "court_id": "HC-JKL",
@@ -8672,14 +8672,14 @@ window.NOTIFICATION_SOURCES_DATA = [
     "court": "Jharkhand High Court",
     "url": "",
     "scope": "needs-source-verification",
-    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+    "notes": "Transfer/posting-specific index page not yet identified."
   },
   {
     "court_id": "HC-KAR",
     "court": "Karnataka High Court",
     "url": "",
     "scope": "needs-source-verification",
-    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+    "notes": "Transfer/posting-specific index page not yet identified."
   },
   {
     "court_id": "HC-KER",
@@ -8700,14 +8700,14 @@ window.NOTIFICATION_SOURCES_DATA = [
     "court": "Madras High Court",
     "url": "",
     "scope": "needs-source-verification",
-    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+    "notes": "Transfer/posting-specific index page not yet identified."
   },
   {
     "court_id": "HC-MAN",
     "court": "Manipur High Court",
     "url": "https://hcmimphal.nic.in/Notice.html",
     "scope": "notifications-needs-filtering",
-    "notes": "Notices page; use only staff movement / transfer / posting rows with direct PDFs."
+    "notes": "Notices page; source may include staff movement / transfer / posting rows with direct PDFs."
   },
   {
     "court_id": "HC-MEG",
@@ -8721,55 +8721,55 @@ window.NOTIFICATION_SOURCES_DATA = [
     "court": "Orissa High Court",
     "url": "https://www.orissahighcourt.nic.in/notification/",
     "scope": "notifications-needs-filtering",
-    "notes": "Notification index; use only transfer/posting/staff movement rows with direct PDFs."
+    "notes": "Notification index; source may include transfer/posting/staff movement rows with direct PDFs."
   },
   {
     "court_id": "HC-PAT",
     "court": "Patna High Court",
     "url": "",
     "scope": "needs-source-verification",
-    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+    "notes": "Transfer/posting-specific index page not yet identified."
   },
   {
     "court_id": "HC-PHC",
     "court": "Punjab & Haryana High Court",
     "url": "",
     "scope": "needs-source-verification",
-    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+    "notes": "Transfer/posting-specific index page not yet identified."
   },
   {
     "court_id": "HC-RAJ",
     "court": "Rajasthan High Court",
     "url": "",
     "scope": "needs-source-verification",
-    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+    "notes": "Transfer/posting-specific index page not yet identified."
   },
   {
     "court_id": "HC-SIK",
     "court": "Sikkim High Court",
     "url": "",
     "scope": "needs-source-verification",
-    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+    "notes": "Transfer/posting-specific index page not yet identified."
   },
   {
     "court_id": "HC-TEL",
     "court": "Telangana High Court",
     "url": "",
     "scope": "needs-source-verification",
-    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+    "notes": "Transfer/posting-specific index page not yet identified."
   },
   {
     "court_id": "HC-TRI",
     "court": "Tripura High Court",
     "url": "https://thc.nic.in/notification/",
     "scope": "transfer-postings-tab",
-    "notes": "Notifications page has Transfer & Postings tab; use only direct notification/order PDFs."
+    "notes": "Notifications page has Transfer & Postings tab; source may include direct notification/order PDFs."
   },
   {
     "court_id": "HC-UTK",
     "court": "Uttarakhand High Court",
     "url": "",
     "scope": "needs-source-verification",
-    "notes": "Transfer/posting-specific index page not yet identified. Do not add notification rows until direct PDF URLs are verified."
+    "notes": "Transfer/posting-specific index page not yet identified."
   }
 ];

@@ -214,7 +214,7 @@ function renderTransferRail(rows) {
 function renderTransferDetails(item, entries) {
   const total = (item.transfer_entries || []).length;
   if (!entries.length) {
-    return `<div class="transfer-empty">${escHtml(item.extraction_notes || 'No extracted transfer details yet.')}</div>`;
+    return `<div class="transfer-empty">No parsed transfer details available. AI parsed; not human verified. Check the PDF before relying on this data.</div>`;
   }
   const label = notificationState.query && entries.length !== total
     ? `${entries.length} matching transfer${entries.length === 1 ? '' : 's'} of ${total}`
@@ -324,7 +324,7 @@ function renderModalTransferPanel(item) {
   if (!entries.length) {
     return `
       <div class="pdf-transfer-title">Parsed Transfers</div>
-      <div class="transfer-empty">${escHtml(item.extraction_notes || 'No extracted transfer details yet.')}</div>`;
+      <div class="transfer-empty">No parsed transfer details available. AI parsed; not human verified. Check the PDF before relying on this data.</div>`;
   }
   return `
     <div class="pdf-transfer-title">Parsed Transfers <span>${entries.length}</span></div>

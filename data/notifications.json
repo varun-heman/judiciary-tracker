@@ -122,7 +122,7 @@
       }
     ],
     "transfer_entry_count": 11,
-    "extraction_notes": "Manually normalized from the numbered J&K transfer order text after OCR/text extraction.",
+    "extraction_notes": "AI parsed; not human verified. Check the linked PDF before relying on this data.",
     "original_url": "https://jkhighcourt.nic.in/upload/orders%26cir/order_651_04052026.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-JKL/2026/05/JKL-2026-05-04-651.pdf"
   },
@@ -169,7 +169,7 @@
       }
     ],
     "transfer_entry_count": 3,
-    "extraction_notes": "Manually normalized from the numbered J&K transfer order text after OCR/text extraction.",
+    "extraction_notes": "AI parsed; not human verified. Check the linked PDF before relying on this data.",
     "original_url": "https://jkhighcourt.nic.in/upload/orders%26cir/order_1779_03122025.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-JKL/2025/12/JKL-2025-12-03-1779.pdf"
   },
@@ -266,7 +266,7 @@
       }
     ],
     "transfer_entry_count": 8,
-    "extraction_notes": "Registry posting table extracted from the order.",
+    "extraction_notes": "AI parsed; not human verified. Check the linked PDF before relying on this data.",
     "original_url": "https://jkhighcourt.nic.in/upload/orders%26cir/order_1664_19112025.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-JKL/2025/11/JKL-2025-11-19-1664.pdf"
   },
@@ -513,7 +513,7 @@
       }
     ],
     "transfer_entry_count": 23,
-    "extraction_notes": "Manually normalized from the numbered J&K transfer order text after OCR/text extraction.",
+    "extraction_notes": "AI parsed; not human verified. Check the linked PDF before relying on this data.",
     "original_url": "https://jkhighcourt.nic.in/upload/orders%26cir/order_1672_19112025.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-JKL/2025/11/JKL-2025-11-19-1672.pdf"
   },
@@ -850,7 +850,7 @@
       }
     ],
     "transfer_entry_count": 32,
-    "extraction_notes": "Extracted from numbered transfer/posting order text.",
+    "extraction_notes": "AI parsed; not human verified. Check the linked PDF before relying on this data.",
     "original_url": "https://jkhighcourt.nic.in/upload/orders%26cir/order_1638_14112025.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-JKL/2025/11/JKL-2025-11-14-1638.pdf"
   },
@@ -2437,7 +2437,7 @@
       }
     ],
     "transfer_entry_count": 157,
-    "extraction_notes": "Extracted from Gujarat tabular PDF text. Long tables may need spot-checking against the source PDF.",
+    "extraction_notes": "AI parsed; not human verified. Check the linked PDF before relying on this data.",
     "original_url": "https://gujarathighcourt.nic.in/hccms/sites/default/files/miscnotifications/Notification%20-%20Transfer%20and%20Posting%20of%20Judicial%20Officers%20%28District%20Judge%20cadre%29%20Gujarat%20High%20Court%2007052026.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-GUJ/2026/05/GUJ-2026-05-07-DJ.pdf"
   },
@@ -4534,7 +4534,7 @@
       }
     ],
     "transfer_entry_count": 208,
-    "extraction_notes": "Extracted from Gujarat tabular PDF text. Long tables may need spot-checking against the source PDF.",
+    "extraction_notes": "AI parsed; not human verified. Check the linked PDF before relying on this data.",
     "original_url": "https://gujarathighcourt.nic.in/hccms/sites/default/files/miscnotifications/Notification%20-%20Transfer%20and%20Posting%20of%20Judicial%20Officers%20%28Senior%20Civil%20Judge%20cadre%29%20Gujarat%20High%20Court%20-%2007052026.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-GUJ/2026/05/GUJ-2026-05-07-SCJ.pdf"
   },
@@ -5881,7 +5881,7 @@
       }
     ],
     "transfer_entry_count": 133,
-    "extraction_notes": "Extracted from Gujarat tabular PDF text. Long tables may need spot-checking against the source PDF.",
+    "extraction_notes": "AI parsed; not human verified. Check the linked PDF before relying on this data.",
     "original_url": "https://gujarathighcourt.nic.in/hccms/sites/default/files/miscnotifications/Notification%20-%20Transfer%20Posting%20of%20Judicial%20Officers%20%28Civil%20Judge%20cadre%29%20Gujarat%20High%20Court%2007052026.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-GUJ/2026/05/GUJ-2026-05-07-CJ.pdf"
   },
@@ -5908,7 +5908,7 @@
       }
     ],
     "transfer_entry_count": 1,
-    "extraction_notes": "Extracted from OCR text.",
+    "extraction_notes": "AI parsed; not human verified. Check the linked PDF before relying on this data.",
     "original_url": "https://gujarathighcourt.nic.in/hccms/sites/default/files/miscnotifications/Notification%20-%20Transfer%20Posting%20of%20Judicial%20Officers%20%28Senior%20Civil%20Judge%20cadre%29%20Gujarat%20High%20Court%2023022026.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-GUJ/2026/02/GUJ-2026-02-23-SCJ.pdf"
   },
@@ -5935,7 +5935,7 @@
       }
     ],
     "transfer_entry_count": 1,
-    "extraction_notes": "Extracted from Gujarat tabular PDF text. Long tables may need spot-checking against the source PDF.",
+    "extraction_notes": "AI parsed; not human verified. Check the linked PDF before relying on this data.",
     "original_url": "https://gujarathighcourt.nic.in/hccms/sites/default/files/miscnotifications/Corrigendum%20%20Notification%20-%20Transfer%20and%20Posting%20of%20Judicial%20Officers%20%28District%20Judge%20cadre%29%20Gujarat%20High%20Court%2024122025_signed.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-GUJ/2025/12/GUJ-2025-12-24-DJ-CORR.pdf"
   },
@@ -5962,7 +5962,7 @@
       }
     ],
     "transfer_entry_count": 1,
-    "extraction_notes": "Extracted from OCR text and manually normalized from the small transfer table.",
+    "extraction_notes": "AI parsed; not human verified. Check the linked PDF before relying on this data.",
     "original_url": "https://mphc.gov.in/PDF/web_pdf/TP/213-Confdl-2026.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-MP/2026/02/MP-2026-02-25-213.pdf"
   },
@@ -5989,7 +5989,7 @@
       }
     ],
     "transfer_entry_count": 1,
-    "extraction_notes": "Extracted from OCR text and manually normalized from the small transfer table.",
+    "extraction_notes": "AI parsed; not human verified. Check the linked PDF before relying on this data.",
     "original_url": "https://mphc.gov.in/PDF/web_pdf/TP/211-Confdl-2026.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-MP/2026/02/MP-2026-02-25-211.pdf"
   },
@@ -6026,7 +6026,7 @@
       }
     ],
     "transfer_entry_count": 2,
-    "extraction_notes": "Extracted from OCR text and manually normalized from the small transfer table.",
+    "extraction_notes": "AI parsed; not human verified. Check the linked PDF before relying on this data.",
     "original_url": "https://mphc.gov.in/PDF/web_pdf/TP/209-Confdl-2026.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-MP/2026/02/MP-2026-02-25-209.pdf"
   }
