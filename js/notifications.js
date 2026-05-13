@@ -45,12 +45,40 @@ function recentNotifications() {
   return notificationState.notifications
     .filter(n => new Date(n.date + 'T00:00:00') >= SIX_MONTHS_AGO)
     .filter(n => notificationState.selectedCourt === 'ALL' || n.court_id === notificationState.selectedCourt)
-    .filter(n => {
-      if (!notificationState.query) return true;
-      const q = notificationState.query.toLowerCase();
-      return [n.title, n.court, n.category, n.date].some(v => (v || '').toLowerCase().includes(q));
-    })
+    .filter(notificationMatchesQuery)
     .sort((a, b) => new Date(b.date) - new Date(a.date) || a.court.localeCompare(b.court));
+}
+
+function notificationMatchesQuery(notification) {
+  if (!notificationState.query) return true;
+  const q = notificationState.query.toLowerCase();
+  const fields = [
+    notification.title,
+    notification.court,
+    notification.category,
+    notification.date,
+    notification.extraction_notes
+  ];
+  const transferFields = (notification.transfer_entries || []).flatMap(transferSearchFields);
+  return [...fields, ...transferFields].some(value => (value || '').toLowerCase().includes(q));
+}
+
+function transferSearchFields(entry) {
+  return [
+    entry.person_name,
+    entry.role_type,
+    entry.from_position,
+    entry.to_position,
+    entry.assumed_role,
+    entry.effective_date,
+    entry.notes
+  ];
+}
+
+function transferMatchesQuery(entry) {
+  if (!notificationState.query) return true;
+  const q = notificationState.query.toLowerCase();
+  return transferSearchFields(entry).some(value => (value || '').toLowerCase().includes(q));
 }
 
 function courtList() {
@@ -143,7 +171,8 @@ function renderCourtGroup(court, items) {
 
 function renderNotificationRow(item) {
   const isPdf = item.file_type === 'pdf' || /\.pdf($|\?)/i.test(item.url);
-  const entries = Array.isArray(item.transfer_entries) ? item.transfer_entries : [];
+  const allEntries = Array.isArray(item.transfer_entries) ? item.transfer_entries : [];
+  const entries = notificationState.query ? allEntries.filter(transferMatchesQuery) : allEntries;
   const openAction = `openNotificationPdf('${escAttr(item.id)}')`;
   return `
     <article class="notification-card">
@@ -163,7 +192,9 @@ function renderTransferRail(rows) {
   const rail = document.querySelector('#transfer-rail .transfer-rail-content');
   if (!rail) return;
   const entries = rows.flatMap(row =>
-    (row.transfer_entries || []).map(entry => ({ ...entry, court: row.court, court_id: row.court_id, notification_id: row.id, notification_title: row.title, date: row.date }))
+    (row.transfer_entries || [])
+      .filter(transferMatchesQuery)
+      .map(entry => ({ ...entry, court: row.court, court_id: row.court_id, notification_id: row.id, notification_title: row.title, date: row.date }))
   );
   rail.innerHTML = entries.length ? `
     <div class="transfer-rail-meta">${entries.length} parsed movement${entries.length === 1 ? '' : 's'}</div>
@@ -181,12 +212,16 @@ function renderTransferRail(rows) {
 }
 
 function renderTransferDetails(item, entries) {
+  const total = (item.transfer_entries || []).length;
   if (!entries.length) {
     return `<div class="transfer-empty">${escHtml(item.extraction_notes || 'No extracted transfer details yet.')}</div>`;
   }
+  const label = notificationState.query && entries.length !== total
+    ? `${entries.length} matching transfer${entries.length === 1 ? '' : 's'} of ${total}`
+    : `${entries.length} extracted transfer${entries.length === 1 ? '' : 's'}`;
   return `
     <details class="transfer-details">
-      <summary>${entries.length} extracted transfer${entries.length === 1 ? '' : 's'}</summary>
+      <summary>${label}</summary>
       ${item.extraction_notes ? `<div class="transfer-note">${escHtml(item.extraction_notes)}</div>` : ''}
       <div class="transfer-table">
         ${entries.map(entry => `
