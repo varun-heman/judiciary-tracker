@@ -704,7 +704,7 @@ function renderDashboardView() {
   const buckets = judgeStatusBuckets(judges);
   const courtsWithJudges = courtInstitutions.filter(c => judges.some(j => j.parent_id === c.id));
   const courtsWithAdmin = courtInstitutions.filter(c => state.adminStaff.some(a => a.court_id === c.id));
-  const photoCount = judges.filter(j => j.photo_url).length;
+  const judgesWithRetirementDates = judges.filter(j => getTenure(j.retirement_date).daysLeft !== null).length;
   const adminRoles = uniqueAdminRoles(state.adminStaff);
   const ministryPeople = state.ministries.filter(d => d.type !== 'institution').length;
   const courtRows = courtInstitutions.map(c => {
@@ -747,7 +747,7 @@ function renderDashboardView() {
         <button class="dashboard-metric" onclick="selectView('SC')">
           <span class="metric-label">Sitting judges</span>
           <strong>${buckets.active.length}</strong>
-          <span>${percent(photoCount, judges.length)}% have local photos</span>
+          <span>Across ${plural(courtsWithJudges.length, 'court')} with judge rosters</span>
         </button>
         <button class="dashboard-metric critical" onclick="selectView('SC')">
           <span class="metric-label">Retiring within 90 days</span>
@@ -780,7 +780,7 @@ function renderDashboardView() {
           </div>
           ${dashboardBar('Courts with judge records', courtsWithJudges.length, courtInstitutions.length)}
           ${dashboardBar('Courts with admin/staff records', courtsWithAdmin.length, courtInstitutions.length)}
-          ${dashboardBar('Judges with local photos', photoCount, judges.length)}
+          ${dashboardBar('Judges with retirement dates', judgesWithRetirementDates, judges.length)}
           ${dashboardBar('Court admin role categories', adminRoles.length, Math.max(adminRoles.length, 12), 'neutral')}
         </article>
 
