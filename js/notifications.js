@@ -91,31 +91,56 @@ function courtList() {
     });
 }
 
+// Persistent sidebar collapse state for notifications page
+const notifSectionCollapsed = {};
+
+function getNotifSectionCollapsed(key, itemCount) {
+  if (key in notifSectionCollapsed) return notifSectionCollapsed[key];
+  return itemCount > 4;
+}
+
+window.toggleNotifSection = function(key, itemCount) {
+  notifSectionCollapsed[key] = !getNotifSectionCollapsed(key, itemCount);
+  renderNotificationNav();
+};
+
 function renderNotificationNav() {
   const nav = document.getElementById('notification-nav');
   const courts = courtList();
   const notifications = notificationState.notifications.filter(n => new Date(n.date + 'T00:00:00') >= SIX_MONTHS_AGO);
   const countFor = id => notifications.filter(n => n.court_id === id).length;
 
-  let html = `
-    <div class="nav-section">
-      <div class="nav-section-title">Views</div>
-      <a class="nav-item ${notificationState.selectedCourt === 'ALL' ? 'active' : ''}" href="#" onclick="selectNotificationCourt('ALL'); return false;">
-        <span class="nav-dot good"></span>
-        <span class="nav-label">All Courts</span>
-        <span class="nav-badge">${notifications.length}</span>
-      </a>
-      <a class="nav-item" href="index.html">
-        <span class="nav-icon">↩</span>
-        <span class="nav-label">Main Tracker</span>
-      </a>
-    </div>
-    <div class="nav-section">
-      <div class="nav-section-title">Courts <span class="nav-count">${courts.length}</span></div>`;
+  // Views section (always ≤4, stays expanded)
+  const viewsKey = 'Views';
+  const viewsCount = 2;
+  const viewsCollapsed = getNotifSectionCollapsed(viewsKey, viewsCount);
 
+  let html = `
+    <div class="nav-section${viewsCollapsed ? ' collapsed' : ''}">
+      <button class="nav-section-title collapsible" onclick="toggleNotifSection('${viewsKey}', ${viewsCount}); return false;">
+        <span>Views</span>
+        <span class="nav-collapse-icon">${viewsCollapsed ? '▸' : '▾'}</span>
+      </button>
+      <div class="nav-section-items">
+        <a class="nav-item ${notificationState.selectedCourt === 'ALL' ? 'active' : ''}" href="#" onclick="selectNotificationCourt('ALL'); return false;">
+          <span class="nav-dot good"></span>
+          <span class="nav-label">All Courts</span>
+          <span class="nav-badge">${notifications.length}</span>
+        </a>
+        <a class="nav-item" href="index.html">
+          <span class="nav-icon">↩</span>
+          <span class="nav-label">Main Tracker</span>
+        </a>
+      </div>
+    </div>`;
+
+  // Courts section (26 courts → collapsed by default)
+  const courtsKey = 'Courts';
+  const courtsCollapsed = getNotifSectionCollapsed(courtsKey, courts.length);
+  let courtsItemsHtml = '';
   courts.forEach(court => {
     const count = countFor(court.id);
-    html += `
+    courtsItemsHtml += `
       <a class="nav-item ${notificationState.selectedCourt === court.id ? 'active' : ''}" href="#" onclick="selectNotificationCourt('${court.id}'); return false;">
         <span class="nav-dot ${count ? 'good' : 'unknown'}"></span>
         <span class="nav-label">${escHtml(court.name.replace(' High Court', ' HC'))}</span>
@@ -123,7 +148,16 @@ function renderNotificationNav() {
       </a>`;
   });
 
-  html += `</div>`;
+  html += `
+    <div class="nav-section${courtsCollapsed ? ' collapsed' : ''}">
+      <button class="nav-section-title collapsible" onclick="toggleNotifSection('${courtsKey}', ${courts.length}); return false;">
+        <span>Courts</span>
+        <span class="nav-count">${courts.length}</span>
+        <span class="nav-collapse-icon">${courtsCollapsed ? '▸' : '▾'}</span>
+      </button>
+      <div class="nav-section-items">${courtsItemsHtml}</div>
+    </div>`;
+
   nav.innerHTML = html;
 }
 

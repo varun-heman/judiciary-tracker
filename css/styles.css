@@ -156,6 +156,35 @@ code { font-family: 'Courier New', monospace; background: var(--unknown-bg); pad
   display: flex;
   align-items: center;
   gap: 6px;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: default;
+}
+.nav-section-title.collapsible {
+  cursor: pointer;
+  border-radius: 0;
+  transition: background var(--transition), color var(--transition);
+}
+.nav-section-title.collapsible:hover {
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+}
+.nav-section-title > span:first-child {
+  flex: 1;
+}
+.nav-collapse-icon {
+  font-size: 9px;
+  opacity: 0.45;
+  flex-shrink: 0;
+  transition: opacity var(--transition);
+}
+.nav-section-title.collapsible:hover .nav-collapse-icon {
+  opacity: 0.8;
+}
+.nav-section.collapsed .nav-section-items {
+  display: none;
 }
 .nav-count { background: rgba(255,255,255,0.1); border-radius: 10px; padding: 0 5px; font-size: 9px; }
 
@@ -300,7 +329,6 @@ code { font-family: 'Courier New', monospace; background: var(--unknown-bg); pad
 .stat-chip.warning  { background: var(--warning-bg);  color: var(--warning);  border-color: var(--warning-border); }
 
 .role-filter-bar,
-.judge-filter-bar,
 .admin-toolbar {
   display: flex;
   flex-wrap: wrap;
@@ -308,13 +336,71 @@ code { font-family: 'Courier New', monospace; background: var(--unknown-bg); pad
   margin: 0 0 16px;
 }
 
-.judge-filter-bar {
+/* ── Unified Filter Bar ── */
+.unified-filter-bar {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.unified-filter-row {
+  display: flex;
   align-items: center;
-  display: grid;
-  grid-template-columns: minmax(260px, auto) minmax(180px, 1fr) auto;
-  gap: 18px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--border);
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.unified-filter-row.role-row {
+  border-top: 1px dashed var(--border);
+  padding-top: 9px;
+  margin-top: 9px;
+}
+
+.filter-row-label {
+  font-size: 9.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.role-pills-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  flex: 1;
+}
+
+.filter-shown-count {
+  font-size: 11px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.clear-filter-btn {
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1.5px solid var(--critical-border);
+  background: transparent;
+  color: var(--critical);
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background var(--transition), color var(--transition);
+}
+.clear-filter-btn:hover {
+  background: var(--critical-bg);
 }
 
 .judge-range-summary {
@@ -325,13 +411,14 @@ code { font-family: 'Courier New', monospace; background: var(--unknown-bg); pad
   color: var(--text-muted);
   font-size: 11.5px;
   font-weight: 800;
+  flex-shrink: 0;
 }
 
 .judge-range-summary strong {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 28px;
+  min-height: 26px;
   padding: 0 10px;
   border-radius: 999px;
   background: var(--accent2);
@@ -340,7 +427,8 @@ code { font-family: 'Courier New', monospace; background: var(--unknown-bg); pad
 }
 
 .judge-range-slider {
-  width: 100%;
+  flex: 1;
+  min-width: 80px;
   accent-color: var(--accent2);
   transition: opacity var(--transition);
 }
@@ -350,7 +438,6 @@ code { font-family: 'Courier New', monospace; background: var(--unknown-bg); pad
 }
 
 .show-all-btn {
-  margin-left: 12px;
   padding: 4px 12px;
   border-radius: 20px;
   border: 1.5px solid var(--border);
@@ -360,6 +447,7 @@ code { font-family: 'Courier New', monospace; background: var(--unknown-bg); pad
   font-weight: 600;
   cursor: pointer;
   white-space: nowrap;
+  flex-shrink: 0;
   transition: background var(--transition), color var(--transition), border-color var(--transition);
 }
 .show-all-btn:hover {
@@ -1244,13 +1332,11 @@ body.modal-open {
     color: var(--text);
   }
   .cards-grid { grid-template-columns: 1fr; }
-  .judge-filter-bar {
-    grid-template-columns: 1fr;
-  }
-  .show-all-btn {
-    margin-left: 0;
-    width: 100%;
-  }
+  .unified-filter-bar { padding: 8px 10px; }
+  .judge-range-slider { min-width: 100%; order: 3; }
+  .filter-shown-count { margin-left: 0; }
+  .show-all-btn { width: 100%; }
+  .role-pills-wrap { gap: 5px; }
   .notification-row {
     grid-template-columns: 1fr;
     gap: 6px;

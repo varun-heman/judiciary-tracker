@@ -4,6 +4,21 @@
  */
 
 // ─────────────────────────────────────────────────────────────────────────────
+// Persistent sidebar collapse state (survives renderNav re-renders)
+// ─────────────────────────────────────────────────────────────────────────────
+const sectionCollapsed = {};  // section key → boolean; undefined = use auto-default
+
+function getSectionCollapsed(key, itemCount) {
+  if (key in sectionCollapsed) return sectionCollapsed[key];
+  return itemCount > 4;   // auto-collapse sections with more than 4 items
+}
+
+window.toggleNavSection = function(key, itemCount) {
+  sectionCollapsed[key] = !getSectionCollapsed(key, itemCount);
+  renderNav();
+};
+
+// ─────────────────────────────────────────────────────────────────────────────
 // State
 // ─────────────────────────────────────────────────────────────────────────────
 const state = {
@@ -11,6 +26,7 @@ const state = {
   ministries: [],
   adminStaff: [],
   adminRoleFilter: 'ALL',
+  judgeRoleFilter: 'ALL',
   judgeTenureRange: 12,
   judgeTenureShowAll: false,
   selectedId: 'SC',
@@ -83,7 +99,6 @@ async function loadData() {
       state.courts = window.COURTS_DATA;
       state.ministries = window.MINISTRIES_DATA;
       state.adminStaff = Array.isArray(window.ADMIN_STAFF_DATA) ? window.ADMIN_STAFF_DATA : [];
-      // Show a subtle banner so user knows they're on embedded data
       const bar = document.querySelector('.data-notice');
       if (bar) bar.innerHTML += ' &nbsp;|&nbsp; <span style="color:var(--warning)">Using embedded data because this page was opened directly</span>';
       return true;
@@ -113,41 +128,40 @@ function renderNav() {
     .sort((a, b) => a.name.localeCompare(b.name));
   const ministries = state.ministries.filter(d => d.type === 'institution');
 
-  // Collect upcoming retirements for badge
-  const allPeople = [...state.courts, ...state.ministries].filter(d =>
-    d.type !== 'institution' && d.type !== 'placeholder'
-  );
-  const retiring90 = allPeople.filter(d => {
-    const t = getTenure(d.retirement_date || d.tenure_end);
-    return t.daysLeft !== null && t.daysLeft >= 0 && t.daysLeft <= 90;
-  }).length;
-
   let html = '';
 
   // ── Supreme Court ──
   if (sc) {
-    const scJudges = state.courts.filter(d => d.parent_id === 'SC');
+    const scKey   = 'Apex Court';
+    const scCount = 1;
+    const scCollapsed = getSectionCollapsed(scKey, scCount);
     const scAlert = retiringWithin90Count(sc.id);
     html += `
-      <div class="nav-section">
-        <div class="nav-section-title">Apex Court</div>
-        <a class="nav-item ${state.selectedId === 'SC' ? 'active' : ''}"
-           href="#" onclick="selectView('SC'); return false;">
-          <span class="nav-dot good"></span>
-          <span class="nav-label">Supreme Court of India</span>
-          ${scAlert ? `<span class="nav-badge critical">${scAlert}</span>` : ''}
-        </a>
+      <div class="nav-section${scCollapsed ? ' collapsed' : ''}">
+        <button class="nav-section-title collapsible" onclick="toggleNavSection('${scKey}', ${scCount}); return false;">
+          <span>Apex Court</span>
+          <span class="nav-collapse-icon">${scCollapsed ? '▸' : '▾'}</span>
+        </button>
+        <div class="nav-section-items">
+          <a class="nav-item ${state.selectedId === 'SC' ? 'active' : ''}"
+             href="#" onclick="selectView('SC'); return false;">
+            <span class="nav-dot good"></span>
+            <span class="nav-label">Supreme Court of India</span>
+            ${scAlert ? `<span class="nav-badge critical">${scAlert}</span>` : ''}
+          </a>
+        </div>
       </div>`;
   }
 
   // ── High Courts ──
-  html += `<div class="nav-section">
-    <div class="nav-section-title">High Courts <span class="nav-count">${hcs.length}</span></div>`;
+  const hcKey = 'High Courts';
+  const hcCollapsed = getSectionCollapsed(hcKey, hcs.length);
+  let hcItemsHtml = '';
   hcs.forEach(hc => {
     const cj = state.courts.find(d => d.parent_id === hc.id);
     const tenure = cj ? getTenure(cj.retirement_date) : { status: 'unknown' };
     const criticalCount = retiringWithin90Count(hc.id);
-    html += `
+    hcItemsHtml += `
       <a class="nav-item ${state.selectedId === hc.id ? 'active' : ''}"
          href="#" onclick="selectView('${hc.id}'); return false;">
         <span class="nav-dot ${tenure.status}"></span>
@@ -155,36 +169,62 @@ function renderNav() {
         ${criticalCount ? `<span class="nav-badge critical">${criticalCount}</span>` : ''}
       </a>`;
   });
-  html += `</div>`;
+  html += `
+    <div class="nav-section${hcCollapsed ? ' collapsed' : ''}">
+      <button class="nav-section-title collapsible" onclick="toggleNavSection('${hcKey}', ${hcs.length}); return false;">
+        <span>High Courts</span>
+        <span class="nav-count">${hcs.length}</span>
+        <span class="nav-collapse-icon">${hcCollapsed ? '▸' : '▾'}</span>
+      </button>
+      <div class="nav-section-items">${hcItemsHtml}</div>
+    </div>`;
 
   // ── Court Staff ──
-  html += `<div class="nav-section">
-    <div class="nav-section-title">Court Staff</div>
-    <a class="nav-item ${state.selectedId === 'ADMIN' ? 'active' : ''}"
-       href="#" onclick="selectView('ADMIN'); return false;">
-      <span class="nav-icon">▣</span>
-      <span class="nav-label">Court Administration</span>
-      <span class="nav-badge">${state.adminStaff.length}</span>
-    </a>
-    <a class="nav-item" href="notifications.html">
-      <span class="nav-icon">↗</span>
-      <span class="nav-label">Judge/Staff Transfers</span>
-    </a>
-  </div>`;
+  const csKey = 'Court Staff';
+  const csCount = 2;  // Administration + Transfers (static items)
+  const csCollapsed = getSectionCollapsed(csKey, csCount);
+  html += `
+    <div class="nav-section${csCollapsed ? ' collapsed' : ''}">
+      <button class="nav-section-title collapsible" onclick="toggleNavSection('${csKey}', ${csCount}); return false;">
+        <span>Court Staff</span>
+        <span class="nav-count">${state.adminStaff.length}</span>
+        <span class="nav-collapse-icon">${csCollapsed ? '▸' : '▾'}</span>
+      </button>
+      <div class="nav-section-items">
+        <a class="nav-item ${state.selectedId === 'ADMIN' ? 'active' : ''}"
+           href="#" onclick="selectView('ADMIN'); return false;">
+          <span class="nav-icon">▣</span>
+          <span class="nav-label">Court Administration</span>
+        </a>
+        <a class="nav-item" href="notifications.html">
+          <span class="nav-icon">↗</span>
+          <span class="nav-label">Judge/Staff Transfers</span>
+        </a>
+      </div>
+    </div>`;
 
   // ── Ministries ──
   if (ministries.length > 0) {
-    html += `<div class="nav-section">
-      <div class="nav-section-title">Ministries</div>`;
+    const minKey = 'Ministries';
+    const minCollapsed = getSectionCollapsed(minKey, ministries.length);
+    let minItemsHtml = '';
     ministries.forEach(m => {
-      html += `
+      minItemsHtml += `
         <a class="nav-item ${state.selectedId === m.id ? 'active' : ''}"
            href="#" onclick="selectView('${m.id}'); return false;">
           <span class="nav-icon">🏛</span>
           <span class="nav-label">${m.name}</span>
         </a>`;
     });
-    html += `</div>`;
+    html += `
+      <div class="nav-section${minCollapsed ? ' collapsed' : ''}">
+        <button class="nav-section-title collapsible" onclick="toggleNavSection('${minKey}', ${ministries.length}); return false;">
+          <span>Ministries</span>
+          <span class="nav-count">${ministries.length}</span>
+          <span class="nav-collapse-icon">${minCollapsed ? '▸' : '▾'}</span>
+        </button>
+        <div class="nav-section-items">${minItemsHtml}</div>
+      </div>`;
   }
 
   // ── Legend ──
@@ -335,33 +375,105 @@ function judgeTenureRangeLabel() {
   return `${value} month${value === 1 ? '' : 's'}`;
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// Filters — tenure + role, applied to both judges and admin staff
+// ─────────────────────────────────────────────────────────────────────────────
+function matchesJudgeRoleFilter(person) {
+  if (state.judgeRoleFilter === 'ALL') return true;
+  const role = person.role || '';
+  if (state.judgeRoleFilter === 'Chief')      return /chief justice/i.test(role);
+  if (state.judgeRoleFilter === 'Puisne')     return role === 'Judge';
+  if (state.judgeRoleFilter === 'Additional') return role === 'Additional Judge';
+  return true;
+}
+
 function matchesJudgeTenureFilter(person) {
   if (!isJudgeRecord(person)) return true;
+  if (!matchesJudgeRoleFilter(person)) return false;
   if (state.judgeTenureShowAll) return true;
   const tenure = getTenure(person.retirement_date);
   return tenure.daysLeft !== null && tenure.daysLeft >= 0 && tenure.daysLeft <= judgeTenureRangeDays();
 }
 
-function renderJudgeTenureFilterBar(judges) {
-  if (!judges.length) return '';
-  const value = Math.min(84, Math.max(1, Number(state.judgeTenureRange) || 1));
+// Applies tenure slider + admin role filter to admin staff rows
+function matchesAdminFilter(row) {
+  if (state.adminRoleFilter !== 'ALL' && row.role_group !== state.adminRoleFilter) return false;
+  if (!state.judgeTenureShowAll && row.retirement_date) {
+    const t = getTenure(row.retirement_date);
+    if (t.daysLeft === null || t.daysLeft < 0 || t.daysLeft > judgeTenureRangeDays()) return false;
+  }
+  return true;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Unified Filter Bar — shown in every view
+// judgePool: all judges for this view (unfiltered)
+// adminPool: all admin staff for this view (unfiltered)
+// ─────────────────────────────────────────────────────────────────────────────
+function renderUnifiedFilterBar(judgePool, adminPool) {
+  judgePool = judgePool || [];
+  adminPool = adminPool || [];
+
+  const value   = Math.min(84, Math.max(1, Number(state.judgeTenureRange) || 1));
   const showAll = state.judgeTenureShowAll;
-  const count = judges.filter(matchesJudgeTenureFilter).length;
+
+  // Compute how many are shown after all filters
+  const shownJudges = judgePool.filter(matchesJudgeTenureFilter).length;
+  const shownAdmin  = adminPool.filter(matchesAdminFilter).length;
+  const totalShown  = shownJudges + shownAdmin;
+
+  // ── Judge role pills ──
+  const judgeGroups = [
+    { key: 'Chief',      label: 'Chief Justice',    test: j => /chief justice/i.test(j.role || '') },
+    { key: 'Puisne',     label: 'Puisne Judge',     test: j => (j.role || '') === 'Judge' },
+    { key: 'Additional', label: 'Additional Judge', test: j => (j.role || '') === 'Additional Judge' },
+  ].filter(g => judgePool.some(g.test));
+
+  let judgeRolePills = '';
+  if (judgeGroups.length > 0) {
+    judgeRolePills =
+      `<button class="role-filter ${state.judgeRoleFilter === 'ALL' ? 'active' : ''}" onclick="setJudgeRoleFilter('ALL')">All judges</button>` +
+      judgeGroups.map(g =>
+        `<button class="role-filter ${state.judgeRoleFilter === g.key ? 'active' : ''}" onclick="setJudgeRoleFilter('${g.key}')">${escHtml(g.label)}</button>`
+      ).join('');
+  }
+
+  // ── Admin role pills ──
+  let adminRolePills = '';
+  if (adminPool.length > 0) {
+    const roles = uniqueAdminRoles(adminPool);
+    adminRolePills =
+      `<button class="role-filter ${state.adminRoleFilter === 'ALL' ? 'active' : ''}" onclick="setAdminRoleFilter('ALL')">All roles</button>` +
+      roles.map(role =>
+        `<button class="role-filter ${state.adminRoleFilter === role ? 'active' : ''}" onclick="setAdminRoleFilter('${escAttr(role)}')">${escHtml(role)}</button>`
+      ).join('');
+  }
+
+  const rolePills = judgeRolePills + adminRolePills;
+  const hasRoleFilter = state.judgeRoleFilter !== 'ALL' || state.adminRoleFilter !== 'ALL';
+
   return `
-    <div class="judge-filter-bar" aria-label="Filter judges by time left">
-      <div class="judge-range-summary">
-        ${showAll
-          ? `<span>Showing <strong id="judge-range-label">all judges</strong></span>`
-          : `<span>Retiring within</span>
-             <strong id="judge-range-label">${escHtml(judgeTenureRangeLabel())}</strong>`}
-        <span id="judge-range-count">${count} shown</span>
+    <div class="unified-filter-bar" aria-label="Filter panel">
+      <div class="unified-filter-row">
+        <div class="judge-range-summary">
+          ${showAll
+            ? `<span>Showing</span><strong id="judge-range-label">all</strong>`
+            : `<span>Retiring within</span><strong id="judge-range-label">${escHtml(judgeTenureRangeLabel())}</strong>`}
+        </div>
+        <input class="judge-range-slider${showAll ? ' slider-dimmed' : ''}" id="judge-range-slider"
+               type="range" min="1" max="84" step="1" value="${value}">
+        <button class="show-all-btn${showAll ? ' active' : ''}" onclick="toggleJudgeTenureShowAll()"
+                title="${showAll ? 'Switch back to date filter' : 'Show all regardless of retirement date'}">
+          ${showAll ? '✕ Show all' : 'Show all'}
+        </button>
+        <span id="judge-range-count" class="filter-shown-count">${totalShown} shown</span>
       </div>
-      <input class="judge-range-slider${showAll ? ' slider-dimmed' : ''}" id="judge-range-slider"
-             type="range" min="1" max="84" step="1" value="${value}">
-      <button class="show-all-btn${showAll ? ' active' : ''}" onclick="toggleJudgeTenureShowAll()"
-              title="${showAll ? 'Switch back to date filter' : 'Show all judges regardless of retirement date'}">
-        ${showAll ? '✕ Show all' : 'Show all'}
-      </button>
+      ${rolePills ? `
+      <div class="unified-filter-row role-row">
+        <span class="filter-row-label">Role</span>
+        <div class="role-pills-wrap">${rolePills}</div>
+        ${hasRoleFilter ? `<button class="clear-filter-btn" onclick="clearAllRoleFilters()">× Clear</button>` : ''}
+      </div>` : ''}
     </div>`;
 }
 
@@ -377,15 +489,16 @@ function attachSliderListeners() {
   slider.addEventListener('input', function () {
     const v = Math.min(84, Math.max(1, Number(this.value) || 1));
     state.judgeTenureRange = v;
-    // Moving the slider always re-enables date filtering
     state.judgeTenureShowAll = false;
     if (labelEl) labelEl.textContent = `${v} month${v === 1 ? '' : 's'}`;
-    // Live count update from current court's judges
     if (countEl) {
-      const judges = state.selectedId && state.selectedId !== 'ADMIN'
-        ? state.courts.filter(d => d.parent_id === state.selectedId && isJudgeRecord(d))
-        : state.courts.filter(isJudgeRecord);
-      const n = judges.filter(matchesJudgeTenureFilter).length;
+      let n = 0;
+      if (state.selectedId === 'ADMIN') {
+        n = filteredAdminStaff().length;
+      } else {
+        const judges = state.courts.filter(d => d.parent_id === state.selectedId && isJudgeRecord(d));
+        n = judges.filter(matchesJudgeTenureFilter).length;
+      }
       countEl.textContent = `${n} shown`;
     }
   });
@@ -413,13 +526,18 @@ function renderContent() {
        (d.state || '').toLowerCase().includes(q))
     );
     const resultJudges = rawResults.filter(isJudgeRecord);
-    const results = rawResults.filter(d => !isJudgeRecord(d) || matchesJudgeTenureFilter(d));
+    const resultAdmin  = rawResults.filter(r => r.role_group);
+    const results = rawResults.filter(d => {
+      if (isJudgeRecord(d)) return matchesJudgeTenureFilter(d);
+      if (d.role_group)     return matchesAdminFilter(d);
+      return true;
+    });
     container.innerHTML = `
       <div class="view-header">
         <h2>Search: <em>"${escHtml(state.searchQuery)}"</em></h2>
         <div class="view-meta">${results.length} result${results.length !== 1 ? 's' : ''}</div>
       </div>
-      ${renderJudgeTenureFilterBar(resultJudges)}
+      ${renderUnifiedFilterBar(resultJudges, resultAdmin)}
       ${results.length
         ? `<div class="cards-grid">${results.map(r => r.role_group ? renderAdminCard(r) : renderCard(r)).join('')}</div>`
         : `<div class="empty-state"><p>No results found for "${escHtml(state.searchQuery)}"</p></div>`}`;
@@ -471,12 +589,10 @@ function renderCourtView(root, all, children) {
     p.role === 'Acting Chief Justice'
   );
   const rest = people.filter(p => p !== head).sort((a, b) => {
-    // Sort by date_assumed_role ascending (seniority order)
     if (a.date_assumed_role && b.date_assumed_role) {
       const d = new Date(a.date_assumed_role) - new Date(b.date_assumed_role);
       if (d !== 0) return d;
     }
-    // Fallback: by retirement date ascending (older judge = more senior)
     if (a.retirement_date && b.retirement_date)
       return new Date(a.retirement_date) - new Date(b.retirement_date);
     return 0;
@@ -484,7 +600,7 @@ function renderCourtView(root, all, children) {
 
   let html = '';
 
-  html += renderJudgeTenureFilterBar(allJudges);
+  html += renderUnifiedFilterBar(allJudges, []);
 
   if (people.length > 0) {
     html += `<div class="stats-bar">${statsFor(people)}</div>`;
@@ -502,13 +618,12 @@ function renderCourtView(root, all, children) {
 
   if (adminStaff.length > 0) {
     html += `<div class="section-label">Court Administration <span class="section-count">${adminStaff.length}</span></div>`;
-    html += `<div class="admin-toolbar">${renderAdminRoleButtons(adminStaff, root.id)}</div>`;
     html += `<div class="cards-grid">${adminStaff.map(renderAdminCard).join('')}</div>`;
   }
 
   if (people.length === 0) {
     if (allJudges.length > 0) {
-      html += `<div class="empty-state"><p>No judges match "${escHtml(judgeTenureRangeLabel())}" for this court.</p></div>`;
+      html += `<div class="empty-state"><p>No judges match the current filters for this court.</p></div>`;
     } else {
       html += `
         <div class="empty-state">
@@ -524,14 +639,12 @@ function renderCourtView(root, all, children) {
 function renderMinistryView(root, all, children) {
   let html = '';
 
-  // Direct officials (Minister)
   const directPeople = children.filter(c => c.type !== 'institution');
   if (directPeople.length > 0) {
     html += `<div class="section-label">Political Leadership</div>`;
     html += directPeople.map(p => renderCard(p, true)).join('');
   }
 
-  // Departments
   const depts = children.filter(c => c.type === 'institution');
   depts.forEach(dept => {
     const deptChildren = all.filter(d => d.parent_id === dept.id);
@@ -548,28 +661,22 @@ function renderMinistryView(root, all, children) {
 
 function renderAdminStaffView() {
   const staff = filteredAdminStaff();
-  const roles = uniqueAdminRoles(state.adminStaff);
 
   return `
     <div class="view-header">
       <h2>Court Administration</h2>
-      <p class="view-subtitle">Administrative roles are tracked separately from judges, but each court view also shows that court's registry, CPC, IT and administrative officers.</p>
+      <p class="view-subtitle">Administrative roles tracked separately from judges. Each court view also shows that court's registry, CPC, IT and administrative officers.</p>
     </div>
+    ${renderUnifiedFilterBar([], state.adminStaff)}
     <div class="stats-bar">
-      <span class="stat-chip">${staff.length} records shown</span>
-    </div>
-    <div class="role-filter-bar">
-      <button class="role-filter ${state.adminRoleFilter === 'ALL' ? 'active' : ''}" onclick="setAdminRoleFilter('ALL')">All roles</button>
-      ${roles.map(role => `<button class="role-filter ${state.adminRoleFilter === role ? 'active' : ''}" onclick="setAdminRoleFilter('${escAttr(role)}')">${escHtml(role)}</button>`).join('')}
+      <span class="stat-chip">${staff.length} of ${state.adminStaff.length} records shown</span>
     </div>
     <div class="cards-grid">${staff.map(renderAdminCard).join('')}</div>
   `;
 }
 
 function filteredAdminStaff() {
-  return state.adminStaff
-    .filter(row => state.adminRoleFilter === 'ALL' || row.role_group === state.adminRoleFilter)
-    .sort(adminSort);
+  return state.adminStaff.filter(matchesAdminFilter).sort(adminSort);
 }
 
 function uniqueAdminRoles(rows) {
@@ -590,14 +697,16 @@ function adminSort(a, b) {
   return (a.court || '').localeCompare(b.court || '') || (a.name || '').localeCompare(b.name || '');
 }
 
-function renderAdminRoleButtons(rows, courtId) {
-  const roles = uniqueAdminRoles(rows);
-  return roles.map(role =>
-    `<button class="role-filter" onclick="selectView('ADMIN'); setAdminRoleFilter('${escAttr(role)}'); return false;">${escHtml(role)}</button>`
-  ).join('');
-}
-
 function renderAdminCard(cpc) {
+  // Extract place of posting from notes ("Place of posting: Prayagraj")
+  const placeMatch = (cpc.notes || '').match(/Place of posting:\s*([^.]+)/);
+  const place = placeMatch ? placeMatch[1].trim() : '';
+  // Sub-line: "Prayagraj · Allahabad HC" or just court abbreviated
+  const courtShort = (cpc.court || '').replace(' High Court', ' HC');
+  const subLine = place ? `${place} · ${courtShort}` : courtShort;
+  // Remaining notes after stripping place-of-posting
+  const cleanNotes = (cpc.notes || '').replace(/Place of posting:[^.]*\.?\s*/g, '').trim();
+
   return `
     <div class="person-card cpc-card border-unknown">
       <div class="card-top">
@@ -606,10 +715,9 @@ function renderAdminCard(cpc) {
           <div class="card-left">
             <span class="card-role-badge cpc">${escHtml(cpc.role_group || cpc.role || 'Admin')}</span>
             <div class="person-name">${escHtml(cpc.name)}</div>
-            <div class="parent-court">${escHtml(cpc.court)} · ${escHtml(cpc.state)}</div>
+            <div class="parent-court">${escHtml(subLine)}</div>
           </div>
         </div>
-        <div class="court-chip">${escHtml(cpc.court)}</div>
       </div>
       <div class="card-meta">
         ${cpc.designation ? `<div class="meta-row"><span class="meta-icon">▣</span><span>${escHtml(cpc.designation)}</span></div>` : ''}
@@ -617,17 +725,28 @@ function renderAdminCard(cpc) {
         ${renderContactRows(cpc)}
         ${cpc.date_assumed_role ? `<div class="meta-row"><span class="meta-icon">📅</span><span>In role since ${formatDate(cpc.date_assumed_role)}</span></div>` : ''}
         ${cpc.retirement_date ? `<div class="meta-row"><span class="meta-icon">🔚</span><span>Retires ${formatDate(cpc.retirement_date)}</span></div>` : ''}
-        ${cpc.photo_source ? `<div class="meta-row"><span class="meta-icon">▧</span><span>Photo: ${escHtml(cpc.photo_source)}</span></div>` : ''}
         ${cpc.source_url ? `<div class="meta-row"><span class="meta-icon">↗</span><span><a class="inline-link" href="${escHtml(cpc.source_url)}" target="_blank" rel="noopener">${escHtml(cpc.source_label || 'Official source')}</a></span></div>` : ''}
-        ${cpc.notes ? `<div class="meta-row notes-row"><span class="meta-icon">ℹ</span><span>${escHtml(cpc.notes)}</span></div>` : ''}
+        ${cleanNotes ? `<div class="meta-row notes-row"><span class="meta-icon">ℹ</span><span>${escHtml(cleanNotes)}</span></div>` : ''}
       </div>
     </div>`;
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// Filter & View Handlers
+// ─────────────────────────────────────────────────────────────────────────────
 window.setAdminRoleFilter = function(role) {
   state.adminRoleFilter = role;
-  if (state.selectedId !== 'ADMIN') state.selectedId = 'ADMIN';
-  renderNav();
+  renderContent();
+};
+
+window.setJudgeRoleFilter = function(key) {
+  state.judgeRoleFilter = key;
+  renderContent();
+};
+
+window.clearAllRoleFilters = function() {
+  state.judgeRoleFilter = 'ALL';
+  state.adminRoleFilter = 'ALL';
   renderContent();
 };
 
@@ -645,9 +764,15 @@ window.toggleJudgeTenureShowAll = function() {
 // Global interactions
 // ─────────────────────────────────────────────────────────────────────────────
 window.selectView = function(id) {
-  state.selectedId  = id;
-  state.searchQuery = '';
-  if (id !== 'ADMIN') state.adminRoleFilter = 'ALL';
+  state.selectedId   = id;
+  state.searchQuery  = '';
+  state.judgeRoleFilter = 'ALL';
+  if (id !== 'ADMIN') {
+    state.adminRoleFilter = 'ALL';
+  } else {
+    // In ADMIN view, default to show all so no admin staff are hidden unexpectedly
+    state.judgeTenureShowAll = true;
+  }
   document.getElementById('search-input').value = '';
   renderNav();
   renderContent();
