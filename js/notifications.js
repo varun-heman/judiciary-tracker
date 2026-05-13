@@ -146,7 +146,7 @@ function renderNotifications() {
 
   container.innerHTML = `
     <div class="view-header">
-      <h2>${escHtml(selectedName)} Notifications</h2>
+      <h2>${escHtml(selectedName)} Judge/Staff Transfer Notifications</h2>
       <p class="view-subtitle">Default view shows indexed transfer/posting/staff-movement documents from ${formatDateIso(SIX_MONTHS_AGO)} through today. Notification rows link to individual PDFs; source cards link to the court index pages used to find them.</p>
     </div>
     <div class="stats-bar">

@@ -168,7 +168,7 @@ function renderNav() {
     </a>
     <a class="nav-item" href="notifications.html">
       <span class="nav-icon">↗</span>
-      <span class="nav-label">Notifications Tracker</span>
+      <span class="nav-label">Judge/Staff Transfers</span>
     </a>
   </div>`;
 

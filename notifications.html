@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Notifications Tracker · India Judiciary Tracker</title>
-  <meta name="description" content="Court-wise index of recent Supreme Court and High Court notifications.">
-  <link rel="stylesheet" href="css/styles.css?v=20260513-3">
+  <title>Judge/Staff Transfer Notifications · India Judiciary Tracker</title>
+  <meta name="description" content="Court-wise index of recent judge and staff transfer notifications.">
+  <link rel="stylesheet" href="css/styles.css?v=20260513-4">
 </head>
 <body>
 
@@ -15,7 +15,7 @@
       <div class="logo">
         <span class="logo-icon">⚖️</span>
         <div>
-          <div class="logo-title">Notifications</div>
+          <div class="logo-title">Judge/Staff Transfer Notifications</div>
           <div class="logo-sub">Last 6 months · Court-wise</div>
         </div>
       </div>
@@ -23,7 +23,7 @@
         <input
           type="text"
           id="notification-search"
-          placeholder="Search notifications…"
+          placeholder="Search transfers…"
           autocomplete="off"
           spellcheck="false"
         >
@@ -40,14 +40,14 @@
       <button class="menu-toggle-btn" id="menu-toggle" aria-label="Toggle sidebar">☰</button>
       <div class="data-notice">
         <a href="index.html">← Main tracker</a>
-        · Notifications indexed from official court pages
+        · Judge/staff transfer notifications indexed from official court pages
         · Edit <code>data/notifications.json</code> to update
       </div>
       <button id="theme-toggle" class="theme-btn" title="Toggle dark mode">🌙</button>
     </header>
 
     <div id="notifications-content" class="content-area">
-      <div class="loading">Loading notifications…</div>
+      <div class="loading">Loading transfer notifications…</div>
     </div>
   </main>
 
@@ -65,7 +65,7 @@
     <div class="pdf-modal-header">
       <div>
         <div class="pdf-modal-kicker" id="pdf-modal-court"></div>
-        <h2 id="pdf-modal-title">Notification PDF</h2>
+        <h2 id="pdf-modal-title">Transfer Notification PDF</h2>
       </div>
       <button class="pdf-modal-close" onclick="closeNotificationPdf()" aria-label="Close PDF viewer">×</button>
     </div>
@@ -76,7 +76,7 @@
   </div>
 </div>
 
-<script src="data/data.js?v=20260513-3"></script>
-<script src="js/notifications.js?v=20260513-3"></script>
+<script src="data/data.js?v=20260513-4"></script>
+<script src="js/notifications.js?v=20260513-4"></script>
 </body>
 </html>
