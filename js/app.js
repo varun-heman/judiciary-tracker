@@ -11,19 +11,17 @@ const state = {
   ministries: [],
   adminStaff: [],
   adminRoleFilter: 'ALL',
-  judgeTenureFilter: 'ALL',
+  judgeTenureRange: 12,
+  judgeTenureUnit: 'months',
   selectedId: 'SC',
   searchQuery: '',
 };
 
-const JUDGE_TENURE_FILTERS = [
-  { id: 'ALL', label: 'All judges', days: null },
-  { id: '1M', label: 'Within 1 month', days: 31 },
-  { id: '2M', label: 'Within 2 months', days: 62 },
-  { id: '3M', label: 'Within 3 months', days: 93 },
-  { id: '6M', label: 'Within 6 months', days: 186 },
-  { id: '12M', label: 'Within 12 months', days: 365 },
-];
+const JUDGE_TENURE_UNIT_LIMITS = {
+  days: { max: 3650, step: 1 },
+  months: { max: 120, step: 1 },
+  years: { max: 10, step: 1 }
+};
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Date & Tenure Helpers
@@ -315,26 +313,46 @@ function isJudgeRecord(row) {
   return row && (row.type === 'supreme_court' || row.type === 'high_court');
 }
 
+function judgeTenureRangeDays() {
+  const value = Math.max(1, Number(state.judgeTenureRange) || 1);
+  if (state.judgeTenureUnit === 'days') return value;
+  if (state.judgeTenureUnit === 'years') return Math.round(value * 365);
+  return Math.round(value * 30.44);
+}
+
+function judgeTenureRangeLabel() {
+  const value = Math.max(1, Number(state.judgeTenureRange) || 1);
+  const unit = value === 1 ? state.judgeTenureUnit.replace(/s$/, '') : state.judgeTenureUnit;
+  return `within ${value} ${unit}`;
+}
+
 function matchesJudgeTenureFilter(person) {
-  const activeFilter = JUDGE_TENURE_FILTERS.find(f => f.id === state.judgeTenureFilter) || JUDGE_TENURE_FILTERS[0];
-  if (activeFilter.days === null || !isJudgeRecord(person)) return true;
+  if (!isJudgeRecord(person)) return true;
   const tenure = getTenure(person.retirement_date);
-  return tenure.daysLeft !== null && tenure.daysLeft >= 0 && tenure.daysLeft <= activeFilter.days;
+  return tenure.daysLeft !== null && tenure.daysLeft >= 0 && tenure.daysLeft <= judgeTenureRangeDays();
 }
 
 function renderJudgeTenureFilterBar(judges) {
   if (!judges.length) return '';
+  const unitConfig = JUDGE_TENURE_UNIT_LIMITS[state.judgeTenureUnit] || JUDGE_TENURE_UNIT_LIMITS.months;
+  const value = Math.min(unitConfig.max, Math.max(1, Number(state.judgeTenureRange) || 1));
+  const count = judges.filter(matchesJudgeTenureFilter).length;
   return `
     <div class="judge-filter-bar" aria-label="Filter judges by time left">
-      ${JUDGE_TENURE_FILTERS.map(filter => {
-        const count = filter.days === null
-          ? judges.length
-          : judges.filter(judge => {
-              const tenure = getTenure(judge.retirement_date);
-              return tenure.daysLeft !== null && tenure.daysLeft >= 0 && tenure.daysLeft <= filter.days;
-            }).length;
-        return `<button class="role-filter ${state.judgeTenureFilter === filter.id ? 'active' : ''}" onclick="setJudgeTenureFilter('${filter.id}')">${escHtml(filter.label)} <span class="filter-count">${count}</span></button>`;
-      }).join('')}
+      <div class="judge-range-summary">
+        <span>Retiring ${escHtml(judgeTenureRangeLabel())}</span>
+        <strong>${count}</strong>
+        <span>of ${judges.length}</span>
+      </div>
+      <input class="judge-range-slider" type="range" min="1" max="${unitConfig.max}" step="${unitConfig.step}" value="${value}" oninput="setJudgeTenureRange(this.value)">
+      <div class="judge-range-controls">
+        <input class="judge-range-number" type="number" min="1" max="${unitConfig.max}" step="${unitConfig.step}" value="${value}" oninput="setJudgeTenureRange(this.value)">
+        <select class="judge-range-unit" onchange="setJudgeTenureUnit(this.value)">
+          <option value="days" ${state.judgeTenureUnit === 'days' ? 'selected' : ''}>days</option>
+          <option value="months" ${state.judgeTenureUnit === 'months' ? 'selected' : ''}>months</option>
+          <option value="years" ${state.judgeTenureUnit === 'years' ? 'selected' : ''}>years</option>
+        </select>
+      </div>
     </div>`;
 }
 
@@ -447,9 +465,8 @@ function renderCourtView(root, all, children) {
   }
 
   if (people.length === 0) {
-    const activeFilter = JUDGE_TENURE_FILTERS.find(f => f.id === state.judgeTenureFilter);
-    if (activeFilter && activeFilter.id !== 'ALL') {
-      html += `<div class="empty-state"><p>No judges match "${escHtml(activeFilter.label)}" for this court.</p></div>`;
+    if (allJudges.length > 0) {
+      html += `<div class="empty-state"><p>No judges match "${escHtml(judgeTenureRangeLabel())}" for this court.</p></div>`;
     } else {
       html += `
         <div class="empty-state">
@@ -571,8 +588,16 @@ window.setAdminRoleFilter = function(role) {
   renderContent();
 };
 
-window.setJudgeTenureFilter = function(filterId) {
-  state.judgeTenureFilter = filterId;
+window.setJudgeTenureRange = function(value) {
+  const unitConfig = JUDGE_TENURE_UNIT_LIMITS[state.judgeTenureUnit] || JUDGE_TENURE_UNIT_LIMITS.months;
+  state.judgeTenureRange = Math.min(unitConfig.max, Math.max(1, Number(value) || 1));
+  renderContent();
+};
+
+window.setJudgeTenureUnit = function(unit) {
+  if (!JUDGE_TENURE_UNIT_LIMITS[unit]) return;
+  state.judgeTenureUnit = unit;
+  state.judgeTenureRange = Math.min(JUDGE_TENURE_UNIT_LIMITS[unit].max, Math.max(1, Number(state.judgeTenureRange) || 1));
   renderContent();
 };
 

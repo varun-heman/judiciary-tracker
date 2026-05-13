@@ -292,8 +292,63 @@ code { font-family: 'Courier New', monospace; background: var(--unknown-bg); pad
 }
 
 .judge-filter-bar {
+  align-items: center;
+  display: grid;
+  grid-template-columns: minmax(180px, auto) minmax(220px, 1fr) auto;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--border);
+}
+
+.judge-range-summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--text-muted);
+  font-size: 11.5px;
+  font-weight: 800;
+}
+
+.judge-range-summary strong {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: var(--accent2);
+  color: #fff;
+  font-size: 12px;
+}
+
+.judge-range-slider {
+  width: 100%;
+  accent-color: var(--accent2);
+}
+
+.judge-range-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.judge-range-number,
+.judge-range-unit {
+  min-height: 32px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.judge-range-number {
+  width: 76px;
+  padding: 5px 8px;
+}
+
+.judge-range-unit {
+  padding: 5px 9px;
 }
 
 .admin-toolbar {
@@ -323,23 +378,6 @@ code { font-family: 'Courier New', monospace; background: var(--unknown-bg); pad
   color: #fff;
   background: var(--accent2);
   border-color: var(--accent2);
-}
-
-.filter-count {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 18px;
-  height: 18px;
-  padding: 0 5px;
-  border-radius: 999px;
-  background: color-mix(in srgb, currentColor 10%, transparent);
-  font-size: 10px;
-  font-weight: 800;
-}
-
-.role-filter.active .filter-count {
-  background: rgba(255, 255, 255, .2);
 }
 
 .section-label {
@@ -1171,6 +1209,12 @@ body.modal-open {
     color: var(--text);
   }
   .cards-grid { grid-template-columns: 1fr; }
+  .judge-filter-bar {
+    grid-template-columns: 1fr;
+  }
+  .judge-range-controls {
+    justify-content: flex-start;
+  }
   .notification-row {
     grid-template-columns: 1fr;
     gap: 6px;
