@@ -265,6 +265,10 @@ code { font-family: 'Courier New', monospace; background: var(--unknown-bg); pad
   font-size: 11.5px;
   color: var(--text-muted);
 }
+.data-notice > * + *::before {
+  content: ' · ';
+  color: var(--text-muted);
+}
 .data-notice a { color: var(--accent2); text-decoration: underline; }
 .inline-link { color: var(--accent2); text-decoration: underline; }
 
@@ -1345,6 +1349,9 @@ body.modal-open {
 }
 @media (max-width: 720px) {
   .app-layout { grid-template-columns: 1fr; position: relative; }
+  .main-panel {
+    min-width: 0;
+  }
   .sidebar {
     position: fixed; left: -100%; top: 0; bottom: 0;
     width: var(--sidebar-w); z-index: 100;
@@ -1352,22 +1359,222 @@ body.modal-open {
     box-shadow: var(--shadow-md);
   }
   .sidebar.open { left: 0; }
+  .top-bar {
+    height: auto;
+    min-height: 58px;
+    align-items: flex-start;
+    gap: 10px;
+    padding: max(10px, env(safe-area-inset-top)) 14px 10px;
+  }
   .menu-toggle-btn {
     display: flex !important;
     align-items: center; justify-content: center;
-    width: 32px; height: 32px;
+    width: 36px; height: 36px;
+    flex: 0 0 36px;
     font-size: 18px;
     border-radius: var(--radius-sm);
     background: var(--bg);
     border: 1px solid var(--border);
     color: var(--text);
   }
+  .theme-btn {
+    width: 42px;
+    height: 36px;
+    flex: 0 0 42px;
+  }
+  .data-notice {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 8px;
+    font-size: 12px;
+    line-height: 1.28;
+  }
+  .data-notice > * + *::before {
+    content: none;
+  }
+  .notice-sources {
+    display: none;
+  }
+  .notice-verified {
+    font-weight: 600;
+  }
+  .notice-disclaimer {
+    flex-basis: 100%;
+  }
+  .notice-notifications {
+    flex-basis: 100%;
+    font-weight: 650;
+  }
+  .content-area {
+    padding: 28px 18px 36px;
+  }
+  .view-header {
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+  }
+  .view-header h2 {
+    font-size: 26px;
+    line-height: 1.1;
+    letter-spacing: 0;
+  }
   .cards-grid { grid-template-columns: 1fr; }
-  .unified-filter-bar { padding: 8px 10px; }
-  .judge-range-slider { min-width: 100%; order: 3; }
-  .filter-shown-count { margin-left: 0; }
-  .show-all-btn { width: 100%; }
-  .role-pills-wrap { gap: 5px; }
+  .unified-filter-bar {
+    padding: 14px;
+    border-radius: 14px;
+    margin-bottom: 18px;
+    gap: 12px;
+  }
+  .unified-filter-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px 12px;
+    align-items: center;
+  }
+  .unified-filter-row.role-row {
+    margin-top: 0;
+    padding-top: 12px;
+  }
+  .judge-range-summary {
+    gap: 6px;
+    font-size: 13px;
+  }
+  .judge-range-summary strong {
+    min-height: 30px;
+    padding: 0 13px;
+    font-size: 13px;
+  }
+  .filter-shown-count {
+    margin-left: 0;
+    justify-self: end;
+    font-size: 12px;
+  }
+  .judge-range-slider {
+    grid-column: 1 / -1;
+    min-width: 100%;
+    order: initial;
+  }
+  .judge-range-slider.slider-dimmed {
+    display: none;
+  }
+  .show-all-btn {
+    grid-column: 1 / -1;
+    width: auto;
+    justify-self: stretch;
+    min-height: 38px;
+    border-radius: 12px;
+  }
+  .show-all-btn.active {
+    justify-self: start;
+    width: auto;
+    min-height: 32px;
+    padding: 5px 12px;
+    border-radius: 999px;
+  }
+  .filter-row-label {
+    grid-column: 1 / -1;
+    font-size: 10px;
+  }
+  .role-pills-wrap {
+    grid-column: 1 / -1;
+    gap: 7px;
+  }
+  .role-filter {
+    min-height: 34px;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-size: 12px;
+  }
+  .clear-filter-btn {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+  .stats-bar {
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+  .stat-chip {
+    min-height: 30px;
+    padding: 4px 11px;
+    font-size: 12px;
+  }
+  .section-label {
+    margin: 20px 0 12px;
+    font-size: 12px;
+    letter-spacing: .08em;
+  }
+  .person-card {
+    border-radius: 14px;
+    padding: 14px;
+    border-left-width: 5px;
+  }
+  .head-card {
+    padding: 16px;
+    border-left-width: 5px;
+  }
+  .card-top {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .card-identity {
+    gap: 12px;
+  }
+  .person-photo {
+    width: 64px;
+    height: 76px;
+    flex-basis: 64px;
+    border-radius: 10px;
+  }
+  .head-card .person-photo {
+    width: 74px;
+    height: 88px;
+    flex-basis: 74px;
+  }
+  .card-role-badge {
+    font-size: 10px;
+    line-height: 1.2;
+    padding: 4px 8px;
+    margin-bottom: 7px;
+    max-width: 100%;
+  }
+  .person-name,
+  .head-card .person-name {
+    font-size: 20px;
+    line-height: 1.14;
+  }
+  .parent-court {
+    font-size: 13px;
+    line-height: 1.35;
+    margin-top: 7px;
+  }
+  .tenure-chip {
+    justify-self: start;
+    font-size: 13px;
+    padding: 6px 10px;
+    border-radius: 999px;
+  }
+  .tenure-progress {
+    height: 6px;
+    border-radius: 999px;
+    margin: 12px 0;
+  }
+  .tenure-fill {
+    border-radius: 999px;
+  }
+  .card-meta {
+    gap: 6px;
+  }
+  .meta-row {
+    gap: 8px;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+  .meta-icon {
+    width: 18px;
+  }
   .notification-row {
     grid-template-columns: 1fr;
     gap: 6px;

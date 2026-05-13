@@ -526,7 +526,7 @@ function renderUnifiedFilterBar(judgePool, adminPool) {
                type="range" min="1" max="84" step="1" value="${value}">
         <button class="show-all-btn${showAll ? ' active' : ''}" onclick="toggleJudgeTenureShowAll()"
                 title="${showAll ? 'Switch back to date filter' : 'Show all regardless of retirement date'}">
-          ${showAll ? '✕ Show all' : 'Show all'}
+          ${showAll ? 'Filter by retirement' : 'Show all'}
         </button>
         <span id="judge-range-count" class="filter-shown-count">${totalShown} shown</span>
       </div>
