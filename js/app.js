@@ -212,6 +212,10 @@ function renderNav() {
           <span class="nav-icon">⌂</span>
           <span class="nav-label">Overview</span>
         </a>
+        <a class="nav-item" href="about.html">
+          <span class="nav-icon">ⓘ</span>
+          <span class="nav-label">About</span>
+        </a>
       </div>
     </div>`;
 
@@ -345,7 +349,9 @@ function renderCard(person, isHead = false) {
   const isPlaceholder = person.type === 'placeholder';
   const isJudge = isJudgeRecord(person);
   const detail = isJudge ? getJudgeDetail(person.id) : null;
-  const assetLabel = detail ? assetValueLabel(detail.assets) : '';
+  const assetLabel = isJudge ? assetValueLabel(detail && detail.assets) : '';
+  const assetRank = isJudge ? assetRankLabel(person.id) : '';
+  const assetMissing = isJudge && !hasAssetDeclaration(detail && detail.assets);
   const cardAttrs = isJudge
     ? `role="button" tabindex="0" onclick="if(!event.target.closest('a,button,input,select')) selectJudge('${escAttr(person.id)}')" onkeydown="if((event.key === 'Enter' || event.key === ' ') && !event.target.closest('a,button,input,select')) { event.preventDefault(); selectJudge('${escAttr(person.id)}'); }"`
     : '';
@@ -382,7 +388,8 @@ function renderCard(person, isHead = false) {
         </div>
         ${retireStr ? `<div class="tenure-chip ${tenure.status}">${tenure.label}</div>` : ''}
       </div>
-      ${assetLabel ? `<div class="asset-chip">${escHtml(assetLabel)}</div>` : ''}
+      ${assetLabel ? `<div class="asset-chip ${assetMissing ? 'missing' : ''}">${escHtml(assetLabel)}</div>` : ''}
+      ${assetRank ? `<div class="asset-rank-chip">${escHtml(assetRank)}</div>` : ''}
       ${progressBar}
       <div class="card-meta">
         ${person.date_of_birth ? `<div class="meta-row"><span class="meta-icon">👤</span><span>${getAge(person.date_of_birth)} yrs · born ${formatDate(person.date_of_birth)}</span></div>` : ''}
@@ -444,6 +451,10 @@ function getJudgeDetail(id) {
   return state.judgeDetails.find(d => d.id === id) || null;
 }
 
+function hasAssetDeclaration(assets) {
+  return !!(assets && assets.source_url);
+}
+
 function assetNumber(assets) {
   if (!assets) return null;
   const value = assets.total_value ?? assets.disclosed_monetary_total ?? assets.value;
@@ -459,7 +470,7 @@ function formatRupees(value) {
 }
 
 function assetValueLabel(assets) {
-  if (!assets) return '';
+  if (!hasAssetDeclaration(assets)) return 'Assets Declaration Not Found';
   const metrics = assets.metrics || {};
   const parts = [];
   const value = assetNumber(assets) || Number(metrics.monetary_total);
@@ -469,8 +480,49 @@ function assetValueLabel(assets) {
   if (Number(metrics.real_estate_count) > 0) parts.push(`🏠 ${plural(Number(metrics.real_estate_count), 'property', 'properties')}`);
   if (Number(metrics.land_acres) > 0) parts.push(`🌾 ${Number(metrics.land_acres).toLocaleString('en-IN')} acres`);
   if (parts.length) return parts.slice(0, 4).join(' · ');
-  if (assets.source_url) return '📄 Asset declaration available';
+  if (assets.source_url) return '📄 Asset Declaration Found';
   return '';
+}
+
+function assetRankLabel(judgeId) {
+  const rank = judgeAssetRank(judgeId);
+  if (!rank) return '';
+  const courtBit = rank.courtTotal > 1 ? `Court #${rank.courtRank} of ${rank.courtTotal}` : 'Only declared in court';
+  return `Declared wealth: ${courtBit} · All India #${rank.globalRank} of ${rank.globalTotal}`;
+}
+
+function renderAssetRankSummary(judgeId) {
+  const rank = judgeAssetRank(judgeId);
+  if (!rank) return '';
+  return `
+    <div class="asset-rank-summary">
+      <div><span>Same court</span><strong>#${rank.courtRank}</strong><em>of ${rank.courtTotal} judges with declarations</em></div>
+      <div><span>All tracked courts</span><strong>#${rank.globalRank}</strong><em>of ${rank.globalTotal} judges with declarations</em></div>
+    </div>`;
+}
+
+function judgeAssetRank(judgeId) {
+  const judge = state.courts.find(d => d.id === judgeId && isJudgeRecord(d));
+  const detail = getJudgeDetail(judgeId);
+  const value = assetNumber(detail && detail.assets);
+  if (!judge || value === null || value <= 0 || !hasAssetDeclaration(detail && detail.assets)) return null;
+  const declared = state.courts
+    .filter(isJudgeRecord)
+    .map(j => ({
+      id: j.id,
+      parentId: j.parent_id,
+      value: assetNumber((getJudgeDetail(j.id) || {}).assets)
+    }))
+    .filter(row => row.value !== null && row.value > 0);
+  const globalRank = 1 + declared.filter(row => row.value > value).length;
+  const courtDeclared = declared.filter(row => row.parentId === judge.parent_id);
+  const courtRank = 1 + courtDeclared.filter(row => row.value > value).length;
+  return {
+    globalRank,
+    globalTotal: declared.length,
+    courtRank,
+    courtTotal: courtDeclared.length
+  };
 }
 
 function assetList(items) {
@@ -940,14 +992,19 @@ function renderJudgeDetailView(id) {
   if (!judge) return `<div class="empty-state"><p>Judge profile not found.</p></div>`;
   const detail = getJudgeDetail(id) || {};
   const assets = detail.assets || {};
+  const hasAssets = hasAssetDeclaration(assets);
   const total = assetNumber(assets);
   const bio = detail.bio || judge.notes || 'No sourced biography has been added for this judge yet.';
   const sourceUrl = detail.bio_source_url || judge.source_url || '';
   const sourceLabel = detail.bio_source_label || judge.source_label || 'Official profile';
   const assetSourceUrl = assets.source_url || '';
   const assetSourceLabel = assets.source_label || 'Official asset declaration';
-  const totalLabel = total !== null && total > 0 ? `${formatRupees(total)}+` : 'Not fully valued';
-  const valueType = assets.total_value_type || (total ? 'Disclosed monetary amounts only' : 'No monetary total available');
+  const totalLabel = hasAssets
+    ? (total !== null && total > 0 ? `${formatRupees(total)}+` : 'Not fully valued')
+    : 'Assets Declaration Not Found';
+  const valueType = hasAssets
+    ? (assets.total_value_type || (total ? 'Disclosed monetary amounts only' : 'No monetary total available'))
+    : 'No official/public asset declaration has been added for this judge yet.';
 
   return `
     <div class="judge-detail-view">
@@ -968,6 +1025,7 @@ function renderJudgeDetailView(id) {
           <span>Disclosed Assets</span>
           <strong>${escHtml(totalLabel)}</strong>
           <em>${escHtml(valueType)}</em>
+          ${renderAssetRankSummary(judge.id)}
         </div>
       </section>
 

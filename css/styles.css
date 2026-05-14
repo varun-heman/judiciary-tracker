@@ -109,6 +109,7 @@ code { font-family: 'Courier New', monospace; background: var(--unknown-bg); pad
   margin-left: -4px;
   transition: background var(--transition);
   cursor: pointer;
+  text-decoration: none;
 }
 .logo:hover,
 .logo:focus-visible {
@@ -902,6 +903,37 @@ body.dark .show-all-btn.active {
   font-style: normal;
 }
 
+.asset-rank-summary {
+  display: grid;
+  gap: 7px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid color-mix(in srgb, var(--accent2) 18%, var(--border));
+}
+
+.asset-rank-summary div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 8px;
+  row-gap: 1px;
+  align-items: baseline;
+}
+
+.asset-rank-summary span,
+.asset-rank-summary em {
+  display: block;
+  color: var(--text-muted);
+  font-size: 10.5px;
+}
+
+.asset-rank-summary strong {
+  grid-row: span 2;
+  min-width: 38px;
+  margin: 0;
+  color: var(--accent2);
+  font-size: 18px;
+}
+
 .detail-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1195,6 +1227,27 @@ body.dark .court-badge {
   border: 1px solid color-mix(in srgb, var(--accent2) 22%, var(--border));
   font-size: 11px;
   font-weight: 750;
+  line-height: 1.25;
+}
+
+.asset-chip.missing {
+  background: var(--unknown-bg);
+  color: var(--text-muted);
+  border-color: var(--border);
+}
+
+.asset-rank-chip {
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  margin: -2px 0 8px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--warning) 9%, var(--bg-card));
+  color: var(--warning);
+  border: 1px solid color-mix(in srgb, var(--warning) 28%, var(--border));
+  font-size: 10.5px;
+  font-weight: 800;
   line-height: 1.25;
 }
 
@@ -1839,6 +1892,78 @@ body.modal-open {
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
+   About Page
+───────────────────────────────────────────────────────────────────────────── */
+.about-page {
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--bg-sidebar) 96%, #000) 0 220px, var(--bg) 220px 100%);
+}
+
+.about-shell {
+  width: min(920px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 22px 0 42px;
+}
+
+.about-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.about-logo {
+  width: auto;
+  margin: 0;
+  padding: 6px;
+}
+
+.about-nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.about-nav-links a {
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.about-card {
+  padding: clamp(22px, 4vw, 42px);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--bg-card);
+  box-shadow: var(--shadow-lg);
+}
+
+.about-card h1 {
+  margin: 5px 0 18px;
+  color: var(--text);
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1;
+}
+
+.about-card p {
+  max-width: 760px;
+  margin: 0 0 16px;
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.about-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
    Responsive
 ───────────────────────────────────────────────────────────────────────────── */
 @media (max-width: 1100px) {
@@ -1853,6 +1978,25 @@ body.modal-open {
   }
 }
 @media (max-width: 720px) {
+  .about-shell {
+    width: min(100% - 24px, 920px);
+    padding-top: 14px;
+  }
+  .about-nav {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 18px;
+  }
+  .about-nav-links a {
+    font-size: 11px;
+  }
+  .about-card {
+    border-radius: 14px;
+  }
+  .about-card p {
+    font-size: 14px;
+    line-height: 1.55;
+  }
   .app-layout { grid-template-columns: 1fr; position: relative; }
   .main-panel {
     min-width: 0;
