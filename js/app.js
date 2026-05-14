@@ -725,12 +725,34 @@ function jewelleryAssetTable(rows, item) {
 
   const mp = state.metalPrices;
 
+  // ── Rates strip ─────────────────────────────────────────────────────────────
+  function ratesStrip() {
+    if (!mp) return '';
+    const dateStr = new Date(mp.fetchedAt).toLocaleDateString('en-IN', {
+      day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC'
+    });
+    const pills = [];
+    if (mp.goldPerGram)   pills.push(`<span class="rate-pill gold-rate">🏅 Gold &nbsp;<strong>₹${Math.round(mp.goldPerGram).toLocaleString('en-IN')}/g</strong></span>`);
+    if (mp.silverPerGram) pills.push(`<span class="rate-pill silver-rate">🥈 Silver &nbsp;<strong>₹${Math.round(mp.silverPerGram).toLocaleString('en-IN')}/g</strong></span>`);
+    if (mp.usdToInr)      pills.push(`<span class="rate-pill fx-rate">$ &nbsp;<strong>1 USD = ₹${Number(mp.usdToInr).toFixed(2)}</strong></span>`);
+    return `
+      <div class="metal-rates-strip">
+        <span class="rates-label">Live rates · ${escHtml(dateStr)}</span>
+        <div class="rates-pills">${pills.join('')}</div>
+      </div>`;
+  }
+
   function fmtInr(amt) {
     if (!amt || !isFinite(amt) || amt <= 0) return null;
     if (amt >= 10000000) return `₹${(amt / 10000000).toFixed(2)} Cr`;
     if (amt >= 100000)   return `₹${(amt / 100000).toFixed(2)} L`;
     return `₹${Math.round(amt).toLocaleString('en-IN')}`;
   }
+
+  // Tooltip text for est-value cells — rate basis + disclaimer
+  const estTip = mp ? escAttr(
+    `Rate basis: 22K gold ₹${Math.round(mp.goldPerGram).toLocaleString('en-IN')}/g · 92.5% silver ₹${Math.round(mp.silverPerGram).toLocaleString('en-IN')}/g · 1 USD = ₹${Number(mp.usdToInr).toFixed(2)}\n\nEstimated only. Purity of declared jewellery is not stated in affidavits. Making charges, GST and local market premiums are not included. Actual value may differ substantially.`
+  ) : '';
 
   function metalTable(subRows, label, emoji, footerLabel, footerTotal, footerEmoji, pricePerGram) {
     const hasNotes  = subRows.some(rowHasNote);
@@ -742,7 +764,7 @@ function jewelleryAssetTable(rows, item) {
         <td>${escHtml(row.type)}</td>
         <td class="num">${amountPill(row.grams ? formatWeight(row.grams) : '', emoji)}</td>
         ${showValue ? `<td class="num">${estVal
-          ? `<span class="est-value">${escHtml(estVal)}</span>`
+          ? `<span class="est-value asset-note-tip" data-tip="${estTip}">${escHtml(estVal)}</span>`
           : '<span class="asset-muted-value">—</span>'}</td>` : ''}
         ${hasNotes ? `<td class="note-cell">${rowHasNote(row)
           ? `<span class="asset-note-tip" data-tip="${escAttr(cleanNote(row.note))}">ⓘ</span>`
@@ -767,7 +789,7 @@ function jewelleryAssetTable(rows, item) {
           <td colspan="2">${escHtml(footerLabel)}</td>
           <td class="num">${amountPill(formatWeight(footerTotal), footerEmoji, true)}</td>
           ${showValue ? `<td class="num">${totalEstVal
-            ? `<span class="amount-pill strong">${escHtml(totalEstVal)}</span>`
+            ? `<span class="amount-pill strong est-value asset-note-tip" data-tip="${estTip}">${escHtml(totalEstVal)}</span>`
             : '<span class="asset-muted-value">—</span>'}</td>` : ''}
           ${hasNotes ? '<td></td>' : ''}
         </tr></tfoot>` : ''}
@@ -776,23 +798,17 @@ function jewelleryAssetTable(rows, item) {
   }
 
   const parts = [];
+  parts.push(ratesStrip());
   if (goldRows.length)   parts.push(metalTable(goldRows,   'Gold',               '🏅', 'Total gold',      goldTotal,   '🏅', mp ? mp.goldPerGram   : 0));
   if (silverRows.length) parts.push(metalTable(silverRows, 'Silver',             '🥈', 'Total silver',    silverTotal, '🥈', mp ? mp.silverPerGram : 0));
   if (otherRows.length)  parts.push(metalTable(otherRows,  'Watches & valuables','💎', 'Total valuables', 0,           '💎', 0));
 
   // Disclaimer
   if (mp) {
-    const fetchedStr = mp.fetchedAt
-      ? new Date(mp.fetchedAt).toLocaleString('en-IN', {
-          day: 'numeric', month: 'short', year: 'numeric',
-          hour: '2-digit', minute: '2-digit', timeZone: 'UTC', timeZoneName: 'short'
-        })
-      : 'Unknown';
     parts.push(`
       <div class="metal-price-disclaimer">
         <p class="disclaimer-warning">⚠️ Estimated values only. Actual market value may vary significantly.</p>
-        <p>Prices sourced from <strong>stooq.com</strong> (international spot rates for XAU/USD and XAG/USD, converted to INR). Last refreshed: <strong>${escHtml(fetchedStr)}</strong>.</p>
-        <p><strong>Assumptions:</strong> Gold is priced at 22-karat purity (91.67%). Silver is priced at 92.5% purity (Sterling Silver). Making charges, wastage, GST, and local market premiums are not included. The purity and quality of declared jewellery is not stated in affidavits — actual resale or market values may differ substantially.</p>
+        <p><strong>Assumptions:</strong> Gold valued at 22-karat purity (91.67%). Silver valued at 92.5% purity (Sterling Silver). Making charges, wastage, GST, and local market premiums are not included. The purity and quality of declared jewellery is not stated in affidavits — actual resale or market values may differ substantially.</p>
       </div>`);
   }
 
