@@ -614,10 +614,10 @@ function moneyAssetTable(rows, item) {
           <tr title="${escAttr(row.note)}">
             <td>${escHtml(row.owner || 'Declared')}</td>
             <td>${escHtml(row.type)}</td>
-            <td class="num">${row.amount ? formatRupees(row.amount) : 'Not stated'}</td>
+            <td class="num">${amountPill(row.amount ? formatRupees(row.amount) : '', '💰')}</td>
             <td class="note-cell"><span title="${escAttr(row.note)}">ⓘ</span></td>
           </tr>`).join('')}</tbody>
-        <tfoot><tr><td colspan="2">Total disclosed monetary assets</td><td class="num">${total ? formatRupees(total) : 'Not valued'}</td><td></td></tr></tfoot>
+        <tfoot><tr><td colspan="2">Total disclosed monetary assets</td><td class="num">${amountPill(total ? formatRupees(total) : '', '💰', true)}</td><td></td></tr></tfoot>
       </table>
     </div>`;
 }
@@ -633,10 +633,10 @@ function propertyAssetTable(rows, item) {
             <td>${escHtml(row.owner || 'Declared')}</td>
             <td>${escHtml(row.type)}</td>
             <td>${escHtml(row.share || 'Not stated')}</td>
-            <td class="num">${row.acres ? row.acres.toLocaleString('en-IN') : '—'}</td>
+            <td class="num">${amountPill(row.acres ? `${row.acres.toLocaleString('en-IN')} acres` : '', '🌾')}</td>
             <td class="note-cell"><span title="${escAttr(row.note)}">ⓘ</span></td>
           </tr>`).join('')}</tbody>
-        <tfoot><tr><td colspan="3">Total disclosed acreage</td><td class="num">${totalAcres ? totalAcres.toLocaleString('en-IN') : '—'}</td><td></td></tr></tfoot>
+        <tfoot><tr><td colspan="3">Total disclosed acreage</td><td class="num">${amountPill(totalAcres ? `${totalAcres.toLocaleString('en-IN')} acres` : '', '🌾', true)}</td><td></td></tr></tfoot>
       </table>
     </div>`;
 }
@@ -651,10 +651,10 @@ function jewelleryAssetTable(rows, item) {
           <tr title="${escAttr(row.note)}">
             <td>${escHtml(row.owner || 'Declared')}</td>
             <td>${escHtml(row.type)}</td>
-            <td class="num">${row.grams ? formatWeight(row.grams) : 'Not stated'}</td>
+            <td class="num">${amountPill(row.grams ? formatWeight(row.grams) : '', row.type === 'Silver' ? '🥈' : '🏅')}</td>
             <td class="note-cell"><span title="${escAttr(row.note)}">ⓘ</span></td>
           </tr>`).join('')}</tbody>
-        <tfoot><tr><td colspan="2">Total gold</td><td class="num">${gold ? formatWeight(gold) : '—'}</td><td></td></tr></tfoot>
+        <tfoot><tr><td colspan="2">Total gold</td><td class="num">${amountPill(gold ? formatWeight(gold) : '', '🏅', true)}</td><td></td></tr></tfoot>
       </table>
     </div>`;
 }
@@ -670,7 +670,7 @@ function vehicleAssetTable(rows, item) {
             <td>${escHtml(row.type)}</td>
             <td class="note-cell"><span title="${escAttr(row.note)}">ⓘ</span></td>
           </tr>`).join('')}</tbody>
-        <tfoot><tr><td>Total vehicles</td><td>${Number(item.count) || rows.length}</td><td></td></tr></tfoot>
+        <tfoot><tr><td>Total vehicles</td><td>${amountPill(String(Number(item.count) || rows.length), '🚗', true)}</td><td></td></tr></tfoot>
       </table>
     </div>`;
 }
@@ -700,6 +700,11 @@ function moneyHoldingType(text) {
   if (/lic|insurance/i.test(text)) return 'Insurance';
   if (/bond|debenture|rbi/i.test(text)) return 'Bond / debenture';
   return 'Other monetary holding';
+}
+
+function amountPill(value, emoji = '', strong = false) {
+  if (!value) return '<span class="asset-muted-value">Not stated</span>';
+  return `<span class="amount-pill${strong ? ' strong' : ''}">${emoji ? `<span>${escHtml(emoji)}</span>` : ''}${escHtml(value)}</span>`;
 }
 
 function landHoldingType(text) {
