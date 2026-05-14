@@ -7,6 +7,7 @@
 // Persistent sidebar collapse state (survives renderNav re-renders)
 // ─────────────────────────────────────────────────────────────────────────────
 const sectionCollapsed = {};  // section key → boolean; undefined = use auto-default
+const WIKI_BIO_TTL_MS = 15 * 24 * 60 * 60 * 1000;
 
 function getSectionCollapsed(key, itemCount) {
   if (key in sectionCollapsed) return sectionCollapsed[key];
@@ -482,6 +483,28 @@ function wikipediaSearchUrl(judge, detail) {
   return `https://en.wikipedia.org/w/index.php?search=${encodeURIComponent(query)}`;
 }
 
+function wikipediaCacheKey(title) {
+  return `jt-wiki-bio:${encodeURIComponent(title)}`;
+}
+
+function readWikipediaCache(title) {
+  try {
+    const raw = localStorage.getItem(wikipediaCacheKey(title));
+    if (!raw) return null;
+    const cached = JSON.parse(raw);
+    if (!cached || !cached.fetchedAt || Date.now() - cached.fetchedAt > WIKI_BIO_TTL_MS) return null;
+    return cached.result || null;
+  } catch(e) {
+    return null;
+  }
+}
+
+function writeWikipediaCache(title, result) {
+  try {
+    localStorage.setItem(wikipediaCacheKey(title), JSON.stringify({ fetchedAt: Date.now(), result }));
+  } catch(e) {}
+}
+
 async function loadWikipediaBio(judgeId) {
   const target = document.getElementById(`wiki-bio-${judgeId}`);
   if (!target) return;
@@ -499,6 +522,14 @@ async function loadWikipediaBio(judgeId) {
     return;
   }
 
+  const stored = readWikipediaCache(title);
+  if (stored) {
+    state.wikiBioCache[judgeId] = stored;
+    if (manualBio) renderManualBioSources(judgeId, stored, judge, detail);
+    else target.innerHTML = renderWikipediaBioResult(stored, judge, detail);
+    return;
+  }
+
   try {
     let result = await fetchWikipediaSummary(title);
     if (!result) {
@@ -507,11 +538,13 @@ async function loadWikipediaBio(judgeId) {
     }
     if (!result) throw new Error('No specific Wikipedia biography found');
     state.wikiBioCache[judgeId] = result;
+    writeWikipediaCache(title, result);
     if (manualBio) renderManualBioSources(judgeId, result, judge, detail);
     else target.innerHTML = renderWikipediaBioResult(result, judge, detail);
   } catch (err) {
     const result = { ok: false, message: err.message || 'No Wikipedia summary found' };
     state.wikiBioCache[judgeId] = result;
+    writeWikipediaCache(title, result);
     if (manualBio) renderManualBioSources(judgeId, result, judge, detail);
     else target.innerHTML = renderWikipediaBioResult(result, judge, detail);
   }
