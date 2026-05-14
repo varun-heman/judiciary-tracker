@@ -22101,7 +22101,8 @@ window.NOTIFICATIONS_DATA = [
     "url": "assets/notifications/pdfs/HC-UTK/2026/05/UTK-2026-05-13-177.pdf",
     "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
     "file_type": "pdf",
-    "transfer_entries": []
+    "transfer_entries": [],
+    "movement_scope": "district_judiciary"
   },
   {
     "id": "UTK-2026-05-05-159",
@@ -22113,7 +22114,8 @@ window.NOTIFICATIONS_DATA = [
     "url": "assets/notifications/pdfs/HC-UTK/2026/05/UTK-2026-05-05-159.pdf",
     "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
     "file_type": "pdf",
-    "transfer_entries": []
+    "transfer_entries": [],
+    "movement_scope": "district_judiciary"
   },
   {
     "id": "UTK-2026-04-30-158",
@@ -22125,7 +22127,8 @@ window.NOTIFICATIONS_DATA = [
     "url": "assets/notifications/pdfs/HC-UTK/2026/04/UTK-2026-04-30-158.pdf",
     "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
     "file_type": "pdf",
-    "transfer_entries": []
+    "transfer_entries": [],
+    "movement_scope": "district_judiciary"
   },
   {
     "id": "UTK-2026-04-30-157",
@@ -22137,7 +22140,8 @@ window.NOTIFICATIONS_DATA = [
     "url": "assets/notifications/pdfs/HC-UTK/2026/04/UTK-2026-04-30-157.pdf",
     "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
     "file_type": "pdf",
-    "transfer_entries": []
+    "transfer_entries": [],
+    "movement_scope": "district_judiciary"
   },
   {
     "id": "UTK-2026-04-23-140-151",
@@ -22149,7 +22153,8 @@ window.NOTIFICATIONS_DATA = [
     "url": "assets/notifications/pdfs/HC-UTK/2026/04/UTK-2026-04-23-140-151.pdf",
     "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
     "file_type": "pdf",
-    "transfer_entries": []
+    "transfer_entries": [],
+    "movement_scope": "district_judiciary"
   },
   {
     "id": "UTK-2026-04-20-139",
@@ -22172,7 +22177,8 @@ window.NOTIFICATIONS_DATA = [
         "effective_date": "",
         "notes": "OSD attachment"
       }
-    ]
+    ],
+    "movement_scope": "district_judiciary"
   },
   {
     "id": "UTK-2026-04-18-133",
@@ -22184,7 +22190,8 @@ window.NOTIFICATIONS_DATA = [
     "url": "assets/notifications/pdfs/HC-UTK/2026/04/UTK-2026-04-18-133.pdf",
     "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
     "file_type": "pdf",
-    "transfer_entries": []
+    "transfer_entries": [],
+    "movement_scope": "district_judiciary"
   },
   {
     "id": "UTK-2026-04-15-annual-jd",
@@ -22587,7 +22594,8 @@ window.NOTIFICATIONS_DATA = [
         "effective_date": "",
         "notes": ""
       }
-    ]
+    ],
+    "movement_scope": "district_judiciary"
   },
   {
     "id": "UTK-2026-04-15-annual-sd",
@@ -22840,7 +22848,8 @@ window.NOTIFICATIONS_DATA = [
         "effective_date": "",
         "notes": ""
       }
-    ]
+    ],
+    "movement_scope": "district_judiciary"
   },
   {
     "id": "UTK-2026-04-15-annual-hjs",
@@ -23023,7 +23032,8 @@ window.NOTIFICATIONS_DATA = [
         "effective_date": "",
         "notes": ""
       }
-    ]
+    ],
+    "movement_scope": "district_judiciary"
   },
   {
     "id": "UTK-2026-04-01-28",
@@ -23046,7 +23056,8 @@ window.NOTIFICATIONS_DATA = [
         "effective_date": "",
         "notes": "OSD attachment"
       }
-    ]
+    ],
+    "movement_scope": "district_judiciary"
   },
   {
     "id": "UTK-2026-03-03-18",
@@ -23058,7 +23069,8 @@ window.NOTIFICATIONS_DATA = [
     "url": "assets/notifications/pdfs/HC-UTK/2026/03/UTK-2026-03-03-18.pdf",
     "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
     "file_type": "pdf",
-    "transfer_entries": []
+    "transfer_entries": [],
+    "movement_scope": "district_judiciary"
   },
   {
     "id": "UTK-2026-02-27-17",
@@ -23081,7 +23093,8 @@ window.NOTIFICATIONS_DATA = [
         "effective_date": "",
         "notes": ""
       }
-    ]
+    ],
+    "movement_scope": "district_judiciary"
   },
   {
     "id": "UTK-2026-02-27-16",
@@ -23104,7 +23117,8 @@ window.NOTIFICATIONS_DATA = [
         "effective_date": "",
         "notes": ""
       }
-    ]
+    ],
+    "movement_scope": "district_judiciary"
   },
   {
     "id": "UTK-2026-02-25-15",
@@ -23116,7 +23130,25 @@ window.NOTIFICATIONS_DATA = [
     "url": "assets/notifications/pdfs/HC-UTK/2026/02/UTK-2026-02-25-15.pdf",
     "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
     "file_type": "pdf",
-    "transfer_entries": []
+    "transfer_entries": [],
+    "movement_scope": "district_judiciary"
+  },
+  {
+    "id": "UTK-2026-02-18-14",
+    "court_id": "HC-UTK",
+    "court": "Uttarakhand High Court",
+    "date": "2026-02-18",
+    "category": "Administrative Notification",
+    "title": "No.14/UHC/Admin.A-2/2026 — DDO powers for Family Court, Udham Singh Nagar",
+    "url": "assets/notifications/pdfs/HC-UTK/2026/02/UTK-2026-02-18-14.pdf",
+    "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "file_type": "pdf",
+    "transfer_entries": [],
+    "transfer_entry_count": 0,
+    "extraction_notes": "No transfer movement parsed. Administrative notification indexed from the official Uttarakhand High Court notifications page.",
+    "movement_scope": "district_judiciary_administration",
+    "original_url": "https://cdnbbsr.s3waas.gov.in/s3bc7f621451b4f5df308a8e098112185d/uploads/2026/02/202602181064092584.pdf",
+    "local_pdf": "assets/notifications/pdfs/HC-UTK/2026/02/UTK-2026-02-18-14.pdf"
   },
   {
     "id": "UTK-2026-02-17-13",
@@ -23128,7 +23160,8 @@ window.NOTIFICATIONS_DATA = [
     "url": "assets/notifications/pdfs/HC-UTK/2026/02/UTK-2026-02-17-13.pdf",
     "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
     "file_type": "pdf",
-    "transfer_entries": []
+    "transfer_entries": [],
+    "movement_scope": "district_judiciary"
   },
   {
     "id": "UTK-2026-01-31-11",
@@ -23140,7 +23173,8 @@ window.NOTIFICATIONS_DATA = [
     "url": "assets/notifications/pdfs/HC-UTK/2026/01/UTK-2026-01-31-11.pdf",
     "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
     "file_type": "pdf",
-    "transfer_entries": []
+    "transfer_entries": [],
+    "movement_scope": "district_judiciary"
   },
   {
     "id": "UTK-2026-01-31-10",
@@ -23152,7 +23186,8 @@ window.NOTIFICATIONS_DATA = [
     "url": "assets/notifications/pdfs/HC-UTK/2026/01/UTK-2026-01-31-10.pdf",
     "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
     "file_type": "pdf",
-    "transfer_entries": []
+    "transfer_entries": [],
+    "movement_scope": "district_judiciary"
   },
   {
     "id": "UTK-2026-01-13-09",
@@ -23164,7 +23199,36 @@ window.NOTIFICATIONS_DATA = [
     "url": "assets/notifications/pdfs/HC-UTK/2026/01/UTK-2026-01-13-09.pdf",
     "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
     "file_type": "pdf",
-    "transfer_entries": []
+    "transfer_entries": [],
+    "movement_scope": "district_judiciary"
+  },
+  {
+    "id": "UTK-2026-01-06-05-oath-siddhartha-sah",
+    "court_id": "HC-UTK",
+    "court": "Uttarakhand High Court",
+    "date": "2026-01-06",
+    "category": "HC Judge Movement",
+    "title": "No.05/UHC/Admin.A/2026 — Oath ceremony of Shri Siddhartha Sah as Additional Judge of the High Court of Uttarakhand",
+    "url": "assets/notifications/pdfs/HC-UTK/2026/01/UTK-2026-01-06-05-oath-siddhartha-sah.pdf",
+    "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "file_type": "pdf",
+    "transfer_entries": [
+      {
+        "id": "UTK-2026-01-06-05-oath-siddhartha-sah-T001",
+        "person_name": "Shri Siddhartha Sah",
+        "role_type": "High Court Judge",
+        "from_position": "Not stated in notification",
+        "to_position": "Additional Judge, High Court of Uttarakhand",
+        "assumed_role": "Additional Judge of the High Court of Uttarakhand",
+        "effective_date": "2026-01-08",
+        "notes": "Oath ceremony scheduled for 8 January 2026 at 10:30 AM in the Chief Justice’s Court."
+      }
+    ],
+    "transfer_entry_count": 1,
+    "extraction_notes": "AI parsed; not human verified. Check the linked PDF before relying on this data.",
+    "movement_scope": "constitutional_court_judges",
+    "original_url": "https://cdnbbsr.s3waas.gov.in/s3bc7f621451b4f5df308a8e098112185d/uploads/2026/01/20260106927110351.pdf",
+    "local_pdf": "assets/notifications/pdfs/HC-UTK/2026/01/UTK-2026-01-06-05-oath-siddhartha-sah.pdf"
   },
   {
     "id": "UTK-2026-01-05-02-03",
@@ -23197,7 +23261,8 @@ window.NOTIFICATIONS_DATA = [
         "effective_date": "",
         "notes": ""
       }
-    ]
+    ],
+    "movement_scope": "district_judiciary"
   },
   {
     "id": "UTK-2026-01-05-01",
@@ -23220,7 +23285,8 @@ window.NOTIFICATIONS_DATA = [
         "effective_date": "",
         "notes": ""
       }
-    ]
+    ],
+    "movement_scope": "district_judiciary"
   },
   {
     "id": "UTK-2025-12-22-379-380",
@@ -23253,7 +23319,8 @@ window.NOTIFICATIONS_DATA = [
         "effective_date": "",
         "notes": "OSD attachment"
       }
-    ]
+    ],
+    "movement_scope": "district_judiciary"
   },
   {
     "id": "UTK-2025-12-09-360-361",
@@ -23276,7 +23343,8 @@ window.NOTIFICATIONS_DATA = [
         "effective_date": "",
         "notes": ""
       }
-    ]
+    ],
+    "movement_scope": "district_judiciary"
   },
   {
     "id": "UTK-2025-11-19-340",
@@ -23288,7 +23356,8 @@ window.NOTIFICATIONS_DATA = [
     "url": "assets/notifications/pdfs/HC-UTK/2025/11/UTK-2025-11-19-340.pdf",
     "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
     "file_type": "pdf",
-    "transfer_entries": []
+    "transfer_entries": [],
+    "movement_scope": "district_judiciary"
   }
 ];
 window.NOTIFICATION_SOURCES_DATA = [
@@ -23470,8 +23539,8 @@ window.NOTIFICATION_SOURCES_DATA = [
   {
     "court_id": "HC-UTK",
     "court": "Uttarakhand High Court",
-    "url": "",
-    "scope": "needs-source-verification",
-    "notes": "Transfer/posting-specific index page not yet identified."
+    "url": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "scope": "official-notifications-index",
+    "notes": "Official notifications index. Admin.A-2 rows mainly cover district judiciary/judicial-officer movement; constitutional court judge movement is tagged separately where found."
   }
 ];

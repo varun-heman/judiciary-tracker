@@ -73,6 +73,9 @@ function notificationMatchesScope(notification, scope = notificationState.scope)
 }
 
 function isHcScJudgeNotification(notification) {
+  if (notification.movement_scope === 'constitutional_court_judges') return true;
+  if (notification.movement_scope && notification.movement_scope !== 'constitutional_court_judges') return false;
+
   const text = [
     notification.title,
     notification.category,

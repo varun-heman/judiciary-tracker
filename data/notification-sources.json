@@ -177,8 +177,8 @@
   {
     "court_id": "HC-UTK",
     "court": "Uttarakhand High Court",
-    "url": "",
-    "scope": "needs-source-verification",
-    "notes": "Transfer/posting-specific index page not yet identified."
+    "url": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "scope": "official-notifications-index",
+    "notes": "Official notifications index. Admin.A-2 rows mainly cover district judiciary/judicial-officer movement; constitutional court judge movement is tagged separately where found."
   }
 ]
