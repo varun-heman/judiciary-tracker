@@ -1,3 +1,12 @@
+(function applySavedTheme() {
+  try {
+    if (localStorage.getItem('jt-theme') === 'dark') {
+      document.body.classList.add('dark');
+    }
+  } catch (error) {}
+  document.documentElement.classList.remove('dark-preload');
+})();
+
 (async function loadAboutMarkdown() {
   const container = document.getElementById('about-content');
   if (!container) return;

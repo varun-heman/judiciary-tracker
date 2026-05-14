@@ -7,7 +7,14 @@
   <meta name="description" content="About the India Judiciary Tracker, a personal public-data project by Varun Hemachandran.">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/icon.png">
   <link rel="apple-touch-icon" href="assets/icon.png">
-  <link rel="stylesheet" href="css/styles.css?v=20260514-3">
+  <script>
+    try {
+      if (localStorage.getItem('jt-theme') === 'dark') {
+        document.documentElement.classList.add('dark-preload');
+      }
+    } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="css/styles.css?v=20260514-4">
 </head>
 <body class="about-page">
   <main class="about-shell">
@@ -31,6 +38,6 @@
       <div class="loading">Loading about text…</div>
     </article>
   </main>
-  <script src="js/about.js?v=20260514-3"></script>
+  <script src="js/about.js?v=20260514-4"></script>
 </body>
 </html>
