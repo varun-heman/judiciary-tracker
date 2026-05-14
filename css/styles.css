@@ -1795,6 +1795,41 @@ body.dark .court-badge {
   border-color: var(--border);
 }
 
+/* ── Simplified card asset chip ── */
+.asset-chip-v2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0 0 8px;
+  padding: 3px 8px 3px 5px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent2) 8%, var(--bg-card));
+  border: 1px solid color-mix(in srgb, var(--accent2) 22%, var(--border));
+}
+.asset-emoji-stack {
+  display: flex;
+  align-items: center;
+}
+.asset-emoji-stack span {
+  font-size: 13px;
+  line-height: 1;
+  margin-left: -5px;
+  filter: drop-shadow(0 0 1px var(--bg-card));
+}
+.asset-emoji-stack span:first-child { margin-left: 0; }
+.asset-gross-val {
+  font-size: 11px;
+  font-weight: 750;
+  color: var(--accent2);
+  letter-spacing: 0.01em;
+}
+.asset-chip-v2 .asset-note-tip {
+  font-size: 10px;
+  color: var(--text-muted);
+  cursor: pointer;
+  user-select: none;
+}
+
 .asset-rank-chip {
   display: inline-flex;
   width: fit-content;

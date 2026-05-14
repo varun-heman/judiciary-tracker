@@ -362,9 +362,7 @@ function renderCard(person, isHead = false) {
   const isJudge = isJudgeRecord(person);
   const isRetired = isJudge && isRetiredJudge(person);
   const detail = isJudge ? getJudgeDetail(person.id) : null;
-  const assetLabel = isJudge ? assetValueLabel(detail && detail.assets) : '';
-  const assetRank = isJudge ? assetRankLabel(person.id) : '';
-  const assetMissing = isJudge && !hasAssetDeclaration(detail && detail.assets);
+  const assetChip = isJudge ? renderCardAssetChip(detail && detail.assets) : '';
   const cardAttrs = isJudge
     ? `role="button" tabindex="0" onclick="if(!event.target.closest('a,button,input,select')) selectJudge('${escAttr(person.id)}')" onkeydown="if((event.key === 'Enter' || event.key === ' ') && !event.target.closest('a,button,input,select')) { event.preventDefault(); selectJudge('${escAttr(person.id)}'); }"`
     : '';
@@ -402,8 +400,7 @@ function renderCard(person, isHead = false) {
         </div>
         ${retireStr ? `<div class="tenure-chip ${tenure.status}">${tenure.label}</div>` : ''}
       </div>
-      ${assetLabel ? `<div class="asset-chip ${assetMissing ? 'missing' : ''}">${escHtml(assetLabel)}</div>` : ''}
-      ${assetRank ? `<div class="asset-rank-chip">${escHtml(assetRank)}</div>` : ''}
+      ${assetChip}
       ${progressBar}
       <div class="card-meta">
         ${person.date_of_birth ? `<div class="meta-row"><span class="meta-icon">👤</span><span>${getAge(person.date_of_birth)} yrs · born ${formatDate(person.date_of_birth)}</span></div>` : ''}
@@ -865,6 +862,28 @@ function assetRankLabel(judgeId) {
   if (!rank) return '';
   const courtBit = rank.courtTotal > 1 ? `Court #${rank.courtRank} of ${rank.courtTotal}` : 'Only declared in court';
   return `Declared wealth: ${courtBit} · All India #${rank.globalRank} of ${rank.globalTotal}`;
+}
+
+// New simplified card chip: overlapping emojis + single gross value + ⓘ tooltip
+function renderCardAssetChip(assets) {
+  if (!hasAssetDeclaration(assets)) return '';
+  const nw = computeNetWorth(assets);
+  if (!nw) return '';
+  const metrics = assets.metrics || {};
+  const emojis = ['💰'];
+  if (Number(metrics.gold_grams) >= 1) emojis.push('🏅');
+  if (Number(metrics.silver_grams) >= 1 && Number(metrics.gold_grams) < 1) emojis.push('🥈');
+  if (Number(metrics.real_estate_count) > 0) emojis.push('🏠');
+  if (Number(metrics.vehicles_count) > 0) emojis.push('🚗');
+  if (Number(metrics.land_acres) > 0) emojis.push('🌾');
+  const emojiHtml = emojis.map(e => `<span>${e}</span>`).join('');
+  const tipHtml = escAttr(netWorthTipHtml(nw, assets));
+  const tipText = escAttr(netWorthTip(nw, assets));
+  return `<div class="asset-chip-v2">
+      <div class="asset-emoji-stack">${emojiHtml}</div>
+      <span class="asset-gross-val">${escHtml(formatRupees(nw.gross))}</span>
+      <span class="asset-note-tip nw-tip" data-tip="${tipText}" data-tip-html="${tipHtml}">ⓘ</span>
+    </div>`;
 }
 
 function renderAssetRankSummary(judgeId) {
