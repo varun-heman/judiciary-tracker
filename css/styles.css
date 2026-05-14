@@ -1089,8 +1089,11 @@ body.dark .show-all-btn.active {
 }
 
 .asset-table .note-cell {
-  width: 42px;
+  width: 26px;
+  min-width: 26px;
   text-align: center;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .asset-table .note-cell span {
