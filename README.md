@@ -1,6 +1,6 @@
 # India Judiciary Tracker
 
-**A public, open-source tool for navigating information about India's courts — because transparency is the first step toward accountability.**
+**A public, open-source tracker for navigating information about India’s courts, judges, court administration, transfers, and public asset declarations.**
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![GitHub Actions](https://img.shields.io/github/actions/workflow/status/varun-heman/judiciary-tracker/update-metal-prices.yml?label=daily%20price%20update)](https://github.com/varun-heman/judiciary-tracker/actions)
@@ -10,13 +10,11 @@
 
 ## What this is
 
-India's courts touch nearly every aspect of public life — land, liberty, labour, environment, family, and more. Yet basic information about sitting judges, their appointments, their assets, and their institutional roles is scattered across dozens of official websites with no consistent format, no central search, and no easy way to track changes over time.
+Information about sitting judges, appointments, transfers, administrative roles, and asset declarations is public, but scattered across many official websites with different formats and update patterns. India Judiciary Tracker pulls that material into one searchable, static interface so it is easier to find, compare, and verify.
 
-This tracker is a small attempt to fix that. It pulls together publicly available information on the Supreme Court of India, all High Courts, and selected administrative staff into a single, searchable, open-source interface — with no login, no paywall, and no agenda beyond making public information easier to find.
+The project is maintained by [Varun Hemachandran](https://pvt.is), whose work is closely tied to courts and access to justice. The first version was built over several days in May 2026 with substantial assistance from [OpenAI Codex](https://openai.com/codex) and [Anthropic Claude](https://claude.ai). It remains a personal project, updated from time to time as sources change and the data model improves.
 
-**This project was built by someone who is not a developer.** Varun Hemachandran's full-time work is closely tied to the smooth functioning of courts and to expanding access to justice — and this tracker grew directly from that context. The interface, data extraction, and tooling were built over several days in May 2026 using [OpenAI Codex](https://openai.com/codex) and [Anthropic Claude](https://claude.ai) (via Cowork and Claude Code). The AI tools did most of the coding; Varun directed the work and verified the data.
-
-**On accuracy:** AI-assisted projects make mistakes, and so do humans. Both kinds of error are possible in the data, the code, and the inferences this site draws. We try to mitigate this in two ways. First, every data point links back to its official source — you can always check the primary record. Second, where the site makes assumptions (most notably in estimating net worth from declared assets and live metal prices), it shows exactly how the calculation works, what was included, what was excluded, and why the result may not be accurate. Look for the ⓘ icons throughout the site.
+**Accuracy warning:** this site is AI-assisted and not authoritative. AI and human error are both possible in the data, parsing, calculations, and interface. Use the linked official sources before quoting or relying on anything here. Where the tracker makes assumptions, especially around estimated net worth, the interface shows what was included, excluded, and assumed.
 
 **Live site:** [varun-heman.github.io/judiciary-tracker](https://varun-heman.github.io/judiciary-tracker/)
 
@@ -24,7 +22,7 @@ This tracker is a small attempt to fix that. It pulls together publicly availabl
 
 ## Coverage status
 
-This is an ongoing project. Coverage varies significantly by court — some are fully detailed, others are roster-only, and several are still placeholders. Contributions to fill gaps are very welcome.
+This is an ongoing project. Coverage varies significantly by court: some are detailed, some are roster-only, and several are still placeholders. Contributions to fill gaps are welcome.
 
 | Court | Judges | Roster | Photos | Bios | Asset Declarations |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -57,7 +55,7 @@ This is an ongoing project. Coverage varies significantly by court — some are 
 
 **Key:** ✅ Done &nbsp;·&nbsp; 🟡 Partial &nbsp;·&nbsp; ⬜ Not yet done
 
-If you want to help fill in a court, the best place to start is the [contributing section](#how-to-contribute) below. Official judge rosters and asset declarations are publicly available on each court's website.
+If you want to help fill in a court, start with the [contributing section](#how-to-contribute). Official judge rosters and asset declarations are usually available on court websites, though formats vary.
 
 ---
 
@@ -108,7 +106,7 @@ All data is sourced from official and public records:
 | stooq.com | Daily gold and silver spot prices (XAU/USD, XAG/USD) |
 | open.er-api.com | USD to INR exchange rate |
 
-**Accuracy caveat:** Data is collected by scraping public sources. Both AI-assisted extraction and human review introduce the possibility of error. Do not treat anything on this tracker as definitive. Always verify against the underlying official source before quoting or relying on this data.
+**Accuracy caveat:** data is collected from public sources through scraping, parsing, and manual review. Do not treat anything here as definitive; verify against the linked official source.
 
 ---
 
@@ -217,16 +215,6 @@ The workflow can also be triggered manually from the GitHub Actions tab. No secr
 
 ---
 
-## Why this matters
-
-India has over 18,000 pending judicial appointments and a chronic backlog of cases. Judicial tenure, transfers, and asset declarations are all matters of public record — yet they are genuinely hard to navigate for journalists, researchers, advocates, and citizens who need this information to do their work.
-
-This tracker does not editorialize. It does not rank judges by performance or comment on their decisions. It simply tries to make scattered public data easier to find, compare, and monitor — so that the people who need it can do more with it.
-
-Court transparency is not a partisan issue. Open data builds the foundation for informed public conversation, better reporting, and, over time, more accountable institutions.
-
----
-
 ## License
 
 Copyright 2026 Varun Hemachandran and contributors.
@@ -239,12 +227,10 @@ See [LICENSE](LICENSE) for the full text.
 
 ## Acknowledgements
 
-**Built by** Varun Hemachandran — not a developer by training, but someone whose full-time work is closely tied to the smooth functioning of courts and to expanding access to justice, and who wanted this information to be easier to find.
+**Built by** Varun Hemachandran.
 
-**Built with** [OpenAI Codex](https://openai.com/codex) and [Anthropic Claude](https://claude.ai) (via Cowork and Claude Code). These tools handled the bulk of the coding, data extraction, and interface work over several days in May 2026. This project would not exist without them.
+**Built with** [OpenAI Codex](https://openai.com/codex) and [Anthropic Claude](https://claude.ai). These tools assisted with coding, scraping, data structuring, and interface iteration.
 
 **Data** is sourced exclusively from official and public records. Judge photographs, where present, are sourced from official court websites and reproduced here for identification purposes only.
 
-**A note on errors:** AI-assisted work introduces the possibility of mistakes that neither the AI nor the human caught. If you find an error — in a name, a date, a calculation, or anything else — please open an issue or submit a pull request. The whole point of open source is that more eyes make things more accurate over time.
-
-Corrections, additions, and pull requests are gratefully received.
+If you find an error in a name, date, source, calculation, or interface, please open an issue or submit a pull request.
