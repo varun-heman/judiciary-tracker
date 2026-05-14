@@ -1799,6 +1799,86 @@ async function init() {
   }
 }
 
+// ── Asset note tooltip: hover to read, click to copy ────────────────────────
+(function initAssetTips() {
+  // Build the floating tooltip element once.
+  const tip = document.createElement('div');
+  tip.id = 'jt-tip';
+  tip.innerHTML = '<div class="jt-tip-body"></div><div class="jt-tip-hint">↗ Click to copy</div>';
+  document.body.appendChild(tip);
+
+  // Build the copy toast element once.
+  const toast = document.createElement('div');
+  toast.className = 'jt-toast';
+  toast.textContent = '✓ Copied to clipboard';
+  document.body.appendChild(toast);
+
+  let hideTimer = null;
+  let toastTimer = null;
+
+  function showTip(el) {
+    clearTimeout(hideTimer);
+    tip.querySelector('.jt-tip-body').textContent = el.getAttribute('data-tip') || '';
+    tip.classList.add('visible');
+    positionTip(el);
+  }
+
+  function positionTip(el) {
+    const r   = el.getBoundingClientRect();
+    const tw  = tip.offsetWidth  || 220;
+    const th  = tip.offsetHeight || 60;
+    const vw  = window.innerWidth;
+    const vh  = window.innerHeight;
+    const GAP = 8;
+
+    // Prefer below; flip above if not enough room.
+    let top  = r.bottom + GAP;
+    if (top + th > vh - GAP) top = r.top - th - GAP;
+    if (top < GAP) top = GAP;
+
+    // Align right edge of tooltip to right edge of icon; clamp to viewport.
+    let left = r.right - tw;
+    if (left < GAP) left = GAP;
+    if (left + tw > vw - GAP) left = vw - tw - GAP;
+
+    tip.style.top  = `${top}px`;
+    tip.style.left = `${left}px`;
+  }
+
+  function hideTip() {
+    hideTimer = setTimeout(() => tip.classList.remove('visible'), 120);
+  }
+
+  function showToast() {
+    clearTimeout(toastTimer);
+    toast.classList.add('show');
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 5000);
+  }
+
+  // Keep tooltip visible while hovering it.
+  tip.addEventListener('mouseenter', () => clearTimeout(hideTimer));
+  tip.addEventListener('mouseleave', hideTip);
+
+  document.addEventListener('mouseover', e => {
+    if (e.target.closest('.asset-note-tip')) showTip(e.target.closest('.asset-note-tip'));
+  });
+  document.addEventListener('mouseout', e => {
+    if (e.target.closest('.asset-note-tip')) hideTip();
+  });
+
+  document.addEventListener('click', e => {
+    const el = e.target.closest('.asset-note-tip');
+    if (!el) return;
+    const text = el.getAttribute('data-tip') || '';
+    if (!text) return;
+    navigator.clipboard.writeText(text)
+      .then(() => { tip.classList.remove('visible'); showToast(); })
+      .catch(() => {});
+    e.preventDefault();
+    e.stopPropagation();
+  });
+})();
+
 window.addEventListener('hashchange', rerenderFromRoute);
 window.addEventListener('popstate', rerenderFromRoute);
 document.addEventListener('DOMContentLoaded', init);
