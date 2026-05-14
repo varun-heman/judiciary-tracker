@@ -7,7 +7,7 @@
   <meta name="description" content="About the India Judiciary Tracker, a personal public-data project by Varun Hemachandran.">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/icon.png">
   <link rel="apple-touch-icon" href="assets/icon.png">
-  <link rel="stylesheet" href="css/styles.css?v=20260514-1">
+  <link rel="stylesheet" href="css/styles.css?v=20260514-3">
 </head>
 <body class="about-page">
   <main class="about-shell">
@@ -26,25 +26,11 @@
       </div>
     </nav>
 
-    <article class="about-card">
+    <article class="about-card" id="about-content">
       <p class="dashboard-kicker">About this project</p>
-      <h1>India Judiciary Tracker</h1>
-      <p>
-        India Judiciary Tracker is a personal project by Varun Hemachandran. I put the first version together during the week of May 12, 2026, using Codex and Claude Code to help scrape public data, structure it, and build the interface.
-      </p>
-      <p>
-        The site tracks publicly available information about courts, sitting judges, court administration, selected ministry officials, transfer notifications, and related declarations. I update it from time to time as sources change or as I improve the data model.
-      </p>
-      <p>
-        All source data is scraped from official/public sources, but both AI and human error are possible across the site. Please do not treat anything here as definitive. If you quote or rely on this tracker, you do so at your own risk and should verify the underlying official source first.
-      </p>
-      <p>
-        The public data, code, and interface work are available on GitHub under the Apache 2.0 license. You are welcome to inspect the repository, reuse the work under that license, or point out corrections.
-      </p>
-      <p>
-        I am not a developer by training, but I work closely with courts across India. This project is a small attempt to make scattered public information easier to navigate.
-      </p>
+      <div class="loading">Loading about text…</div>
     </article>
   </main>
+  <script src="js/about.js?v=20260514-3"></script>
 </body>
 </html>
