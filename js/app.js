@@ -222,6 +222,10 @@ function renderNav() {
           <span class="nav-icon">ⓘ</span>
           <span class="nav-label">About</span>
         </a>
+        <a class="nav-item" href="notifications.html">
+          <span class="nav-icon">↗</span>
+          <span class="nav-label">Judge/Staff Transfers</span>
+        </a>
       </div>
     </div></div>`;
 
@@ -296,10 +300,6 @@ function renderNav() {
           <span class="nav-icon">◌</span>
           <span class="nav-label">Retired Judges</span>
           <span class="nav-badge">${retiredJudges().length}</span>
-        </a>
-        <a class="nav-item" href="notifications.html">
-          <span class="nav-icon">↗</span>
-          <span class="nav-label">Judge/Staff Transfers</span>
         </a>
       </div>
     </div></div>`;
