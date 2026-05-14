@@ -314,6 +314,7 @@ body.right-rail-collapsed .app-layout {
 .content-area {
   flex: 1;
   overflow-y: auto;
+  overflow-x: hidden;
   padding: 24px 28px;
   scrollbar-width: thin;
   scrollbar-color: var(--border) transparent;
@@ -936,6 +937,7 @@ body.dark .show-all-btn.active {
   background: color-mix(in srgb, var(--accent2) 8%, var(--bg-card));
   border: 1px solid color-mix(in srgb, var(--accent2) 24%, var(--border));
   align-self: stretch;
+  min-width: 0;
 }
 
 .asset-total-card span,
@@ -1067,6 +1069,8 @@ body.dark .show-all-btn.active {
   background: color-mix(in srgb, var(--accent2) 6%, var(--bg));
   border: 1px solid color-mix(in srgb, var(--accent2) 18%, var(--border));
   border-radius: 8px;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .rates-top-row {
@@ -1178,6 +1182,7 @@ th.est-value-col {
   border-radius: var(--radius);
   background: var(--bg-card);
   box-shadow: var(--shadow);
+  min-width: 0;
 }
 
 .detail-panel.wide {

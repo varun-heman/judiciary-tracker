@@ -12,7 +12,7 @@
 
 Information about sitting judges, appointments, transfers, administrative roles, and asset declarations is public, but scattered across many official websites with different formats and update patterns. India Judiciary Tracker pulls that material into one searchable, static interface so it is easier to find, compare, and verify.
 
-The project is maintained by [Varun Hemachandran](https://pvt.is), whose work is closely tied to courts and access to justice. The first version was built over several days in May 2026 with substantial assistance from [OpenAI Codex](https://openai.com/codex) and [Anthropic Claude](https://claude.ai). It remains a personal project, updated from time to time as sources change and the data model improves.
+The project is maintained by [Varun Hemachandran](https://pvt.is), whose full-time work is closely tied to the smooth functioning of courts and to expanding access to justice. It remains a personal project, updated from time to time as sources change and the data model improves.
 
 **Accuracy warning:** this site is AI-assisted and not authoritative. AI and human error are both possible in the data, parsing, calculations, and interface. Use the linked official sources before quoting or relying on anything here. Where the tracker makes assumptions, especially around estimated net worth, the interface shows what was included, excluded, and assumed.
 
