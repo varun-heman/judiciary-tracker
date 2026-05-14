@@ -1007,6 +1007,7 @@ body.dark .show-all-btn.active {
   flex-wrap: wrap;
   gap: 8px;
   padding: 8px 12px;
+  margin-top: 14px;
   margin-bottom: 10px;
   background: color-mix(in srgb, var(--accent2) 6%, var(--bg));
   border: 1px solid color-mix(in srgb, var(--accent2) 18%, var(--border));
