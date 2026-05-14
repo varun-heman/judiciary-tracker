@@ -2253,36 +2253,46 @@ function judgeProfileHref(judge) {
 // Upcoming Retirements Panel
 // ─────────────────────────────────────────────────────────────────────────────
 function renderUpcomingPanel() {
-  const all = [...state.courts, ...state.ministries];
-  const courtView = state.selectedId && state.selectedId !== 'HOME' && state.selectedId !== 'RETIRED' && state.selectedId !== 'ADMIN';
+  const panel = document.getElementById('upcoming-panel');
+  if (!panel) return;
 
-  const upcoming = all
-    .filter(d => d.type !== 'institution' && d.type !== 'placeholder')
-    .filter(d => !courtView || d.parent_id === state.selectedId || d.id === state.selectedId)
+  const titleEl = document.querySelector('.upcoming-title span');
+  const isAdmin    = state.selectedId === 'ADMIN';
+  const isHome     = !state.selectedId || state.selectedId === 'HOME' || state.selectedId === 'RETIRED';
+  const courtView  = !isAdmin && !isHome;
+
+  let pool, title, emptyMsg;
+
+  if (isAdmin) {
+    // Show court admin staff retirements
+    pool     = state.adminStaff || [];
+    title    = '⏳ Retirements · Admin Staff';
+    emptyMsg = 'No admin staff retiring within 1 year';
+  } else {
+    pool     = [...state.courts, ...state.ministries].filter(d => d.type !== 'institution' && d.type !== 'placeholder');
+    if (courtView) {
+      pool = pool.filter(d => d.parent_id === state.selectedId || d.id === state.selectedId);
+      const courtRecord = state.courts.find(d => d.id === state.selectedId);
+      const shortName   = courtRecord ? (courtRecord.short_name || courtRecord.name || state.selectedId) : state.selectedId;
+      title    = `⏳ Retirements · ${shortName}`;
+      emptyMsg = 'None retiring within 1 year';
+    } else {
+      title    = '⏳ Upcoming Retirements';
+      emptyMsg = 'None within 1 year';
+    }
+  }
+
+  const upcoming = pool
     .map(d => ({ ...d, tenure: getTenure(d.retirement_date || d.tenure_end) }))
     .filter(d => d.tenure.daysLeft !== null && d.tenure.daysLeft >= 0 && d.tenure.daysLeft <= 365)
     .sort((a, b) => a.tenure.daysLeft - b.tenure.daysLeft);
 
-  const panel = document.getElementById('upcoming-panel');
-  if (!panel) return;
+  if (titleEl) titleEl.textContent = title;
 
-  // Update title to reflect scope
-  const titleEl = document.querySelector('.upcoming-title span');
-  if (titleEl) {
-    if (courtView) {
-      const courtRecord = [...state.courts, ...state.ministries].find(d => d.id === state.selectedId);
-      const courtShortName = courtRecord ? (courtRecord.short_name || courtRecord.name || state.selectedId) : state.selectedId;
-      titleEl.textContent = `⏳ Retirements · ${courtShortName}`;
-    } else {
-      titleEl.textContent = '⏳ Upcoming Retirements';
-    }
-  }
-
-  const emptyMsg = courtView ? 'None within 1 year for this court' : 'None within 1 year';
   panel.innerHTML = `
     ${upcoming.length === 0 ? `<div class="upcoming-empty">${emptyMsg}</div>` : ''}
     ${upcoming.map(p => `
-      <div class="upcoming-item ${p.tenure.status}" onclick="selectView('${escHtml(p.parent_id)}')">
+      <div class="upcoming-item ${p.tenure.status}" onclick="selectView('${escHtml(p.parent_id || '')}')">
         <div class="upcoming-name">${escHtml(p.name)}</div>
         <div class="upcoming-court">${escHtml(p.court || p.ministry || '')}</div>
         ${isJudgeRecord(p) ? `<a class="upcoming-profile-link" href="${escAttr(judgeProfileHref(p))}" onclick="event.stopPropagation(); selectJudge('${escAttr(p.id)}'); return false;">View profile</a>` : ''}
