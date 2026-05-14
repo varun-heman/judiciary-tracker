@@ -1309,13 +1309,14 @@ a.source-pill::after {
 }
 
 .asset-table-scroll {
+  max-width: 100%;
   overflow-x: auto;
   border-radius: var(--radius-sm);
 }
 
 .asset-table-wrap {
   margin-top: 10px;
-  overflow: visible;
+  overflow: hidden;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   background: var(--bg-card);
@@ -1323,11 +1324,28 @@ a.source-pill::after {
 
 .asset-table {
   width: 100%;
-  min-width: 0;
+  min-width: 620px;
   table-layout: fixed;
   border-collapse: collapse;
   font-size: 11.5px;
 }
+
+.metal-table {
+  min-width: 760px;
+}
+
+.property-table,
+.land-table {
+  min-width: 700px;
+}
+
+.asset-table .col-owner { width: 30%; }
+.asset-table .col-main { width: auto; }
+.asset-table .col-share { width: 16%; }
+.asset-table .col-size { width: 20%; }
+.asset-table .col-amount { width: 170px; }
+.asset-table .col-est-value { width: 150px; }
+.asset-table .col-note { width: 48px; }
 
 .asset-table th,
 .asset-table td {
@@ -1352,6 +1370,7 @@ a.source-pill::after {
 .asset-table th.num {
   text-align: right;
   white-space: nowrap;
+  overflow-wrap: normal;
 }
 
 .asset-table tfoot td {
@@ -1369,8 +1388,8 @@ a.source-pill::after {
 }
 
 .asset-table th.note-cell {
-  width: 28px;
-  min-width: 28px;
+  width: 48px;
+  min-width: 48px;
   white-space: nowrap;
   text-align: center;
   padding-left: 3px;
@@ -1378,8 +1397,8 @@ a.source-pill::after {
 }
 
 .asset-table td.note-cell {
-  width: 28px;
-  min-width: 28px;
+  width: 48px;
+  min-width: 48px;
   text-align: center;
   padding-left: 3px;
   padding-right: 3px;

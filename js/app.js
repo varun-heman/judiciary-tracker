@@ -980,7 +980,13 @@ function moneyAssetTable(rows, item) {
   const hasNotes = rows.some(rowHasNote);
   return `
     <div class="asset-table-scroll"><div class="asset-table-wrap">
-      <table class="asset-table">
+      <table class="asset-table money-table">
+        <colgroup>
+          <col class="col-owner">
+          <col class="col-main">
+          <col class="col-amount">
+          ${hasNotes ? '<col class="col-note">' : ''}
+        </colgroup>
         <thead><tr><th>Owner</th><th>Holding</th><th class="num">Amount</th>${hasNotes ? '<th class="note-cell">Note</th>' : ''}</tr></thead>
         <tbody>${rows.map(row => `
           <tr>
@@ -1003,7 +1009,14 @@ function builtPropertyAssetTable(rows) {
   const hasNotes = rows.some(rowHasNote);
   return `
     <div class="asset-table-scroll"><div class="asset-table-wrap">
-      <table class="asset-table">
+      <table class="asset-table property-table">
+        <colgroup>
+          <col class="col-owner">
+          <col class="col-main">
+          <col class="col-share">
+          <col class="col-size">
+          ${hasNotes ? '<col class="col-note">' : ''}
+        </colgroup>
         <thead><tr><th>Owner</th><th>Property</th><th>Share</th><th>Size</th>${hasNotes ? '<th class="note-cell">Note</th>' : ''}</tr></thead>
         <tbody>${rows.map(row => `
           <tr>
@@ -1027,7 +1040,14 @@ function landAssetTable(rows, item) {
   const hasNotes = rows.some(rowHasNote);
   return `
     <div class="asset-table-scroll"><div class="asset-table-wrap">
-      <table class="asset-table">
+      <table class="asset-table land-table">
+        <colgroup>
+          <col class="col-owner">
+          <col class="col-main">
+          <col class="col-share">
+          <col class="col-amount">
+          ${hasNotes ? '<col class="col-note">' : ''}
+        </colgroup>
         <thead><tr><th>Owner</th><th>Type</th><th>Share</th><th class="num">Acres</th>${hasNotes ? '<th class="note-cell">Note</th>' : ''}</tr></thead>
         <tbody>${rows.map(row => `
           <tr>
@@ -1108,7 +1128,14 @@ function jewelleryAssetTable(rows, item) {
 
     return `
     <div class="asset-table-scroll"><div class="asset-table-wrap">
-      <table class="asset-table">
+      <table class="asset-table metal-table">
+        <colgroup>
+          <col class="col-owner">
+          <col class="col-main">
+          <col class="col-amount">
+          ${showValue ? '<col class="col-est-value">' : ''}
+          ${hasNotes ? '<col class="col-note">' : ''}
+        </colgroup>
         <thead><tr>
           <th>Owner</th>
           <th>${escHtml(label)}</th>
@@ -1142,7 +1169,12 @@ function vehicleAssetTable(rows, item) {
   const hasNotes = rows.some(rowHasNote);
   return `
     <div class="asset-table-scroll"><div class="asset-table-wrap">
-      <table class="asset-table">
+      <table class="asset-table vehicle-table">
+        <colgroup>
+          <col class="col-owner">
+          <col class="col-main">
+          ${hasNotes ? '<col class="col-note">' : ''}
+        </colgroup>
         <thead><tr><th>Owner</th><th>Vehicle</th>${hasNotes ? '<th class="note-cell">Note</th>' : ''}</tr></thead>
         <tbody>${rows.map(row => `
           <tr>
