@@ -1,10 +1,10 @@
 {
-  "goldPerGram": 13180.4,
-  "silverPerGram": 245.8,
-  "goldSpotUSD": 4672.59,
-  "silverSpotUSD": 86.354,
-  "usdToInr": 95.7125,
-  "fetchedAt": "2026-05-14T04:05:13Z",
+  "goldPerGram": 13278.18,
+  "silverPerGram": 248.8,
+  "goldSpotUSD": 4702.44,
+  "silverSpotUSD": 87.318,
+  "usdToInr": 95.8105,
+  "fetchedAt": "2026-05-14T08:40:27Z",
   "assumptions": {
     "goldKarat": 22,
     "goldPurity": 0.916667,
