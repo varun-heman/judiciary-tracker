@@ -917,6 +917,21 @@ body.dark .show-all-btn.active {
   font-style: normal;
 }
 
+.nw-liab-row {
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid color-mix(in srgb, var(--accent2) 18%, var(--border));
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.nw-net-row {
+  margin-top: 2px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+}
+
 .asset-rank-summary {
   margin-top: 14px;
   padding: 12px 14px 10px;
@@ -1292,8 +1307,8 @@ th.est-value-col {
 #jt-tip {
   position: fixed;
   z-index: 9000;
-  max-width: 280px;
-  min-width: 180px;
+  max-width: 300px;
+  min-width: 200px;
   background: var(--text);
   color: var(--bg-card);
   border-radius: 8px;
@@ -1316,9 +1331,15 @@ th.est-value-col {
   padding: 8px 11px 7px;
   line-height: 1.55;
   word-break: break-word;
+  white-space: pre-wrap;
   font-weight: 400;
   letter-spacing: 0;
   text-transform: none;
+}
+
+#jt-tip.wide {
+  max-width: 360px;
+  min-width: 280px;
 }
 
 .jt-tip-hint {

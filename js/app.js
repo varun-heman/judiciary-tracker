@@ -473,35 +473,130 @@ function assetNumber(assets) {
   return Number.isFinite(Number(value)) ? Number(value) : null;
 }
 
-// Computes net worth = monetary total + estimated metal value (if prices available).
-// Returns null if nothing is available.
+// Extracts and totals declared liabilities from all asset groups.
+function computeLiabilities(assets) {
+  if (!assets) return { total: 0, items: [], hasAmounts: false };
+  const allGroups = [
+    ...((assets.movable  || []).flat()),
+    ...((assets.immovable|| []).flat()),
+    ...((assets.family   || []).flat()),
+  ];
+  const liabGroups = allGroups.filter(g => g && g.category === 'liabilities');
+  let total = 0;
+  let hasAmounts = false;
+  const items = [];
+  for (const grp of liabGroups) {
+    if (grp.value) { total += Number(grp.value); hasAmounts = true; continue; }
+    for (const raw of (grp.items || [])) {
+      const { note } = splitOwnerNote(raw);
+      const amt = parseMoneyAmount(note);
+      if (amt && amt > 0) { total += amt; hasAmounts = true; items.push({ text: note, amount: amt }); }
+      else if (note && note.length > 3) items.push({ text: note, amount: null });
+    }
+  }
+  return { total: Math.round(total), items, hasAmounts };
+}
+
+// Computes net worth = monetary total + estimated metal value − liabilities.
 function computeNetWorth(assets) {
   if (!assets || !hasAssetDeclaration(assets)) return null;
-  const monetary  = assetNumber(assets) || 0;
-  const metrics   = assets.metrics || {};
+  const monetary    = assetNumber(assets) || 0;
+  const metrics     = assets.metrics || {};
   const goldGrams   = Number(metrics.gold_grams)   || 0;
   const silverGrams = Number(metrics.silver_grams) || 0;
   const mp = state.metalPrices;
   const goldVal   = mp && goldGrams   > 0 ? Math.round(goldGrams   * mp.goldPerGram)   : 0;
   const silverVal = mp && silverGrams > 0 ? Math.round(silverGrams * mp.silverPerGram) : 0;
-  const total = monetary + goldVal + silverVal;
-  if (total <= 0) return null;
-  return { total, monetary, goldVal, silverVal, goldGrams, silverGrams, hasMetals: (goldVal + silverVal) > 0 };
+  const liab = computeLiabilities(assets);
+  const gross = monetary + goldVal + silverVal;
+  const net   = gross - (liab.hasAmounts ? liab.total : 0);
+  if (gross <= 0) return null;
+  return {
+    gross, net, monetary,
+    goldVal, silverVal, goldGrams, silverGrams,
+    liabilities: liab,
+    hasMetals: (goldVal + silverVal) > 0,
+    hasLiabilities: liab.items.length > 0,
+  };
 }
 
-// Builds the tooltip text explaining the net worth breakdown.
+// Builds a structured multi-section tooltip for the net worth figure.
 function netWorthTip(nw, assets) {
   if (!nw) return '';
-  const mp = state.metalPrices;
+  const mp      = state.metalPrices;
+  const metrics = (assets && assets.metrics) || {};
+  const rateDate = mp ? new Date(mp.fetchedAt).toLocaleDateString('en-IN',
+    { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }) : 'unknown';
+
+  const pad = (label, value, width = 28) =>
+    label.padEnd(width, ' ') + value;
+
   const lines = [];
+
+  // ── INCLUDED ──────────────────────────────────────
+  lines.push('── INCLUDED ──────────────────────────');
   if (nw.monetary > 0)
-    lines.push(`Monetary holdings (cash, FDs, shares, insurance, etc.): ${formatRupees(nw.monetary)}`);
+    lines.push(pad('Monetary holdings', formatRupees(nw.monetary)));
   if (nw.goldVal > 0)
-    lines.push(`Gold (${formatWeight(nw.goldGrams)}, est. at 22K purity, ₹${Math.round(mp.goldPerGram).toLocaleString('en-IN')}/g): ${formatRupees(nw.goldVal)}`);
+    lines.push(pad(`Gold · ${formatWeight(nw.goldGrams)} at 22K`, formatRupees(nw.goldVal)));
   if (nw.silverVal > 0)
-    lines.push(`Silver (${formatWeight(nw.silverGrams)}, est. at 92.5% purity, ₹${Math.round(mp.silverPerGram).toLocaleString('en-IN')}/g): ${formatRupees(nw.silverVal)}`);
-  lines.push(`\nEst. Net Worth: ${formatRupees(nw.total)}`);
-  lines.push(`\nMonetary figures from official affidavit declarations. Metal values estimated using international spot rates (stooq.com, as of ${mp ? new Date(mp.fetchedAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }) : 'unknown'}). Purity and quality of declared jewellery is not stated in affidavits. Property, vehicles, and other non-monetary assets are not valued. These estimates may not reflect true or current market value.`);
+    lines.push(pad(`Silver · ${formatWeight(nw.silverGrams)} at 92.5%`, formatRupees(nw.silverVal)));
+  lines.push(pad('Gross estimate', formatRupees(nw.gross)));
+
+  // ── LIABILITIES ───────────────────────────────────
+  if (nw.hasLiabilities) {
+    lines.push('');
+    lines.push('── LIABILITIES ───────────────────────');
+    for (const it of nw.liabilities.items) {
+      lines.push(it.amount
+        ? pad('  ' + it.text.slice(0, 22), '−' + formatRupees(it.amount))
+        : '  ' + it.text.slice(0, 38));
+    }
+    if (nw.liabilities.hasAmounts) {
+      lines.push(pad('Total liabilities', '−' + formatRupees(nw.liabilities.total)));
+      lines.push(pad('Net (after liabilities)', formatRupees(nw.net)));
+    } else {
+      lines.push('  Amounts not stated in declaration');
+    }
+  }
+
+  // ── NOT VALUED ────────────────────────────────────
+  const excluded = [];
+  if (Number(metrics.real_estate_count) > 0)
+    excluded.push(`${metrics.real_estate_count} propert${metrics.real_estate_count > 1 ? 'ies' : 'y'}`);
+  if (Number(metrics.land_acres) > 0)
+    excluded.push(`${Number(metrics.land_acres).toLocaleString('en-IN')} acres of land`);
+  if (Number(metrics.vehicles_count) > 0)
+    excluded.push(`${metrics.vehicles_count} vehicle${metrics.vehicles_count > 1 ? 's' : ''}`);
+  if (nw.goldVal === 0 && Number(metrics.gold_grams) > 0)
+    excluded.push('gold (no price data)');
+  // Watches/other valuables — check for jewellery items that aren't gold/silver
+  const jewelleryGroup = [...((assets.movable || []).flat())].find(g => g && g.category === 'jewellery');
+  const watchItems = jewelleryGroup ? (jewelleryGroup.items || []).filter(raw => {
+    const t = String(raw).toLowerCase();
+    return !t.includes('gold') && !t.includes('silver') && t.length > 3;
+  }) : [];
+  if (watchItems.length > 0)
+    excluded.push(`watches & other valuables (${watchItems.length} item${watchItems.length > 1 ? 's' : ''})`);
+
+  if (excluded.length > 0) {
+    lines.push('');
+    lines.push('── NOT VALUED IN THIS ESTIMATE ───────');
+    excluded.forEach(e => lines.push('  · ' + e));
+  }
+
+  // ── ASSUMPTIONS ───────────────────────────────────
+  lines.push('');
+  lines.push('── ASSUMPTIONS & SOURCES ─────────────');
+  if (mp) {
+    lines.push(`  Spot rates: stooq.com · ${rateDate}`);
+    lines.push(`  Gold: ₹${Math.round(mp.goldPerGram).toLocaleString('en-IN')}/g (22K, 91.67% purity)`);
+    lines.push(`  Silver: ₹${Math.round(mp.silverPerGram).toLocaleString('en-IN')}/g (92.5% purity)`);
+  }
+  lines.push('  Monetary figures: official affidavit');
+  lines.push('  Purity of jewellery not stated');
+  lines.push('  Actual value may differ significantly');
+
   return lines.join('\n');
 }
 
@@ -1477,14 +1572,19 @@ function renderJudgeDetailView(id) {
 
   // Net worth label — monetary + metals if available, else monetary only
   const totalLabel = hasAssets
-    ? (nw ? formatRupees(nw.total) : total !== null && total > 0 ? `${formatRupees(total)}+` : 'Not fully valued')
+    ? (nw ? formatRupees(nw.gross) : total !== null && total > 0 ? `${formatRupees(total)}+` : 'Not fully valued')
     : 'Assets Declaration Not Found';
   const valueType = hasAssets
     ? (nw && nw.hasMetals
-        ? `Monetary holdings + est. metal value`
+        ? 'Monetary holdings + est. metal value'
         : assets.total_value_type || (total ? 'Disclosed monetary amounts only' : 'No monetary total available'))
     : 'No official/public asset declaration has been added for this judge yet.';
   const nwTipAttr = nw ? `data-tip="${escAttr(netWorthTip(nw, assets))}"` : '';
+  const liabLabel = nw && nw.hasLiabilities && nw.liabilities.hasAmounts
+    ? `Less liabilities: −${formatRupees(nw.liabilities.total)}`
+    : nw && nw.hasLiabilities ? 'Loans declared (amounts not stated)' : null;
+  const netLabel = nw && nw.liabilities.hasAmounts
+    ? `Net: ${formatRupees(nw.net)}` : null;
   const backView = isArchivedRetiredJudge(judge) ? 'RETIRED' : judge.parent_id;
   const backLabel = isArchivedRetiredJudge(judge) ? 'Retired Judges' : (judge.court || 'court');
 
@@ -1505,12 +1605,14 @@ function renderJudgeDetailView(id) {
           </div>
         </div>
         <div class="asset-total-card">
-          <span>${nw && nw.hasMetals ? 'Est. Net Worth' : 'Disclosed Assets'}</span>
+          <span>${nw && nw.hasMetals ? 'Est. Gross Worth' : 'Disclosed Assets'}</span>
           <strong>
             ${escHtml(totalLabel)}
             ${nw ? `<span class="asset-note-tip nw-tip" ${nwTipAttr}>ⓘ</span>` : ''}
           </strong>
           <em>${escHtml(valueType)}</em>
+          ${liabLabel ? `<div class="nw-liab-row">${escHtml(liabLabel)}</div>` : ''}
+          ${netLabel  ? `<div class="nw-net-row">${escHtml(netLabel)}</div>` : ''}
           ${renderAssetRankSummary(judge.id)}
         </div>
       </section>
@@ -1940,6 +2042,7 @@ async function init() {
   function showTip(el) {
     clearTimeout(hideTimer);
     tip.querySelector('.jt-tip-body').textContent = el.getAttribute('data-tip') || '';
+    tip.classList.toggle('wide', el.classList.contains('nw-tip'));
     tip.classList.add('visible');
     positionTip(el);
   }
