@@ -1399,7 +1399,7 @@ function dashboardBar(label, value, total, className = '') {
     <div class="dash-bar-row ${className}">
       <div class="dash-bar-label"><span>${escHtml(label)}</span><strong>${value}</strong></div>
       <div class="dash-bar-track"><div class="dash-bar-fill" style="width:${pct}%"></div></div>
-    </div></div>`;
+    </div>`;
 }
 
 function judgeStatusBuckets(judges) {
