@@ -1773,6 +1773,12 @@ function renderJudgeDetailView(id) {
               ${judge.date_assumed_role ? `<span>In role since ${formatDate(judge.date_assumed_role)}</span>` : ''}
               ${judge.retirement_date ? `<span>${isRetiredJudge(judge) ? 'Retired' : 'Retires'} ${formatDate(judge.retirement_date)}</span>` : ''}
             </div>
+            <div class="profile-about">
+              <div class="profile-about-label">About</div>
+              <div class="wiki-bio" id="wiki-bio-${escAttr(judge.id)}">
+                ${detail.bio ? renderManualBio(detail, judge) : '<p class="bio-text">Loading Wikipedia summary...</p>'}
+              </div>
+            </div>
           </div>
         </div>
         <div class="asset-total-card">
@@ -1789,16 +1795,6 @@ function renderJudgeDetailView(id) {
       </section>
 
       <section class="detail-grid">
-        <article class="detail-panel">
-          <div class="panel-heading">
-            <h3>About</h3>
-            <p>${detail.bio ? 'Manual summary from public sources, with Wikipedia linked where available.' : 'Live summary from Wikipedia where a matching page exists.'}</p>
-          </div>
-          <div class="wiki-bio" id="wiki-bio-${escAttr(judge.id)}">
-            ${detail.bio ? renderManualBio(detail, judge) : '<p class="bio-text">Loading Wikipedia summary...</p>'}
-          </div>
-        </article>
-
         <article class="detail-panel">
           <div class="panel-heading">
             <h3>Assets</h3>

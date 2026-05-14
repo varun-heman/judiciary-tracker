@@ -887,6 +887,32 @@ body.dark .show-all-btn.active {
   font-size: 13px;
 }
 
+.profile-about {
+  margin-top: 14px;
+  max-width: 680px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.profile-about-label {
+  margin-bottom: 5px;
+  color: var(--text);
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.profile-about .bio-text {
+  margin-bottom: 0;
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+
+.profile-about .source-stack {
+  margin-top: 8px;
+}
+
 .judge-profile-facts {
   display: flex;
   flex-wrap: wrap;
