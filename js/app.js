@@ -473,6 +473,38 @@ function assetNumber(assets) {
   return Number.isFinite(Number(value)) ? Number(value) : null;
 }
 
+// Computes net worth = monetary total + estimated metal value (if prices available).
+// Returns null if nothing is available.
+function computeNetWorth(assets) {
+  if (!assets || !hasAssetDeclaration(assets)) return null;
+  const monetary  = assetNumber(assets) || 0;
+  const metrics   = assets.metrics || {};
+  const goldGrams   = Number(metrics.gold_grams)   || 0;
+  const silverGrams = Number(metrics.silver_grams) || 0;
+  const mp = state.metalPrices;
+  const goldVal   = mp && goldGrams   > 0 ? Math.round(goldGrams   * mp.goldPerGram)   : 0;
+  const silverVal = mp && silverGrams > 0 ? Math.round(silverGrams * mp.silverPerGram) : 0;
+  const total = monetary + goldVal + silverVal;
+  if (total <= 0) return null;
+  return { total, monetary, goldVal, silverVal, goldGrams, silverGrams, hasMetals: (goldVal + silverVal) > 0 };
+}
+
+// Builds the tooltip text explaining the net worth breakdown.
+function netWorthTip(nw, assets) {
+  if (!nw) return '';
+  const mp = state.metalPrices;
+  const lines = [];
+  if (nw.monetary > 0)
+    lines.push(`Monetary holdings (cash, FDs, shares, insurance, etc.): ${formatRupees(nw.monetary)}`);
+  if (nw.goldVal > 0)
+    lines.push(`Gold (${formatWeight(nw.goldGrams)}, est. at 22K purity, ₹${Math.round(mp.goldPerGram).toLocaleString('en-IN')}/g): ${formatRupees(nw.goldVal)}`);
+  if (nw.silverVal > 0)
+    lines.push(`Silver (${formatWeight(nw.silverGrams)}, est. at 92.5% purity, ₹${Math.round(mp.silverPerGram).toLocaleString('en-IN')}/g): ${formatRupees(nw.silverVal)}`);
+  lines.push(`\nEst. Net Worth: ${formatRupees(nw.total)}`);
+  lines.push(`\nMonetary figures from official affidavit declarations. Metal values estimated using international spot rates (stooq.com, as of ${mp ? new Date(mp.fetchedAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }) : 'unknown'}). Purity and quality of declared jewellery is not stated in affidavits. Property, vehicles, and other non-monetary assets are not valued. These estimates may not reflect true or current market value.`);
+  return lines.join('\n');
+}
+
 function formatRupees(value) {
   if (!Number.isFinite(Number(value))) return 'Not valued';
   const n = Number(value);
@@ -523,7 +555,7 @@ function renderAssetRankSummary(judgeId) {
           <em>All tracked courts</em>
         </div>
       </div>
-      <p class="rank-disclaimer">Rankings are based on disclosed financial holdings only — jewellery, property values and other non-monetary assets are not included. These rankings may not be accurate.</p>
+      <p class="rank-disclaimer">Rankings are based on disclosed monetary holdings plus estimated metal (gold/silver) values at spot rates. Property, vehicles, and other non-monetary assets are not valued. Metal values are estimates based on assumed purity — see the net worth tooltip for full details. These rankings may not be accurate.</p>
     </div>`
     + `</div>`;
 }
@@ -531,25 +563,21 @@ function renderAssetRankSummary(judgeId) {
 function judgeAssetRank(judgeId) {
   const judge = state.courts.find(d => d.id === judgeId && isJudgeRecord(d));
   const detail = getJudgeDetail(judgeId);
-  const value = assetNumber(detail && detail.assets);
-  if (!judge || value === null || value <= 0 || !hasAssetDeclaration(detail && detail.assets)) return null;
+  const nw = computeNetWorth(detail && detail.assets);
+  if (!judge || !nw) return null;
+  const value = nw.total;
   const declared = state.courts
     .filter(isJudgeRecord)
-    .map(j => ({
-      id: j.id,
-      parentId: j.parent_id,
-      value: assetNumber((getJudgeDetail(j.id) || {}).assets)
-    }))
-    .filter(row => row.value !== null && row.value > 0);
-  const globalRank = 1 + declared.filter(row => row.value > value).length;
+    .map(j => {
+      const d = getJudgeDetail(j.id) || {};
+      const jnw = computeNetWorth(d.assets);
+      return jnw ? { id: j.id, parentId: j.parent_id, value: jnw.total } : null;
+    })
+    .filter(Boolean);
+  const globalRank  = 1 + declared.filter(row => row.value > value).length;
   const courtDeclared = declared.filter(row => row.parentId === judge.parent_id);
-  const courtRank = 1 + courtDeclared.filter(row => row.value > value).length;
-  return {
-    globalRank,
-    globalTotal: declared.length,
-    courtRank,
-    courtTotal: courtDeclared.length
-  };
+  const courtRank   = 1 + courtDeclared.filter(row => row.value > value).length;
+  return { globalRank, globalTotal: declared.length, courtRank, courtTotal: courtDeclared.length };
 }
 
 function assetList(items) {
@@ -1440,17 +1468,23 @@ function renderJudgeDetailView(id) {
   const assets = detail.assets || {};
   const hasAssets = hasAssetDeclaration(assets);
   const total = assetNumber(assets);
+  const nw    = computeNetWorth(assets);
   const bio = detail.bio || judge.notes || 'No sourced biography has been added for this judge yet.';
   const sourceUrl = detail.bio_source_url || judge.source_url || '';
   const sourceLabel = detail.bio_source_label || judge.source_label || 'Official profile';
   const assetSourceUrl = assets.source_url || '';
   const assetSourceLabel = assets.source_label || 'Official asset declaration';
+
+  // Net worth label — monetary + metals if available, else monetary only
   const totalLabel = hasAssets
-    ? (total !== null && total > 0 ? `${formatRupees(total)}+` : 'Not fully valued')
+    ? (nw ? formatRupees(nw.total) : total !== null && total > 0 ? `${formatRupees(total)}+` : 'Not fully valued')
     : 'Assets Declaration Not Found';
   const valueType = hasAssets
-    ? (assets.total_value_type || (total ? 'Disclosed monetary amounts only' : 'No monetary total available'))
+    ? (nw && nw.hasMetals
+        ? `Monetary holdings + est. metal value`
+        : assets.total_value_type || (total ? 'Disclosed monetary amounts only' : 'No monetary total available'))
     : 'No official/public asset declaration has been added for this judge yet.';
+  const nwTipAttr = nw ? `data-tip="${escAttr(netWorthTip(nw, assets))}"` : '';
   const backView = isArchivedRetiredJudge(judge) ? 'RETIRED' : judge.parent_id;
   const backLabel = isArchivedRetiredJudge(judge) ? 'Retired Judges' : (judge.court || 'court');
 
@@ -1471,8 +1505,11 @@ function renderJudgeDetailView(id) {
           </div>
         </div>
         <div class="asset-total-card">
-          <span>Disclosed Assets</span>
-          <strong>${escHtml(totalLabel)}</strong>
+          <span>${nw && nw.hasMetals ? 'Est. Net Worth' : 'Disclosed Assets'}</span>
+          <strong>
+            ${escHtml(totalLabel)}
+            ${nw ? `<span class="asset-note-tip nw-tip" ${nwTipAttr}>ⓘ</span>` : ''}
+          </strong>
           <em>${escHtml(valueType)}</em>
           ${renderAssetRankSummary(judge.id)}
         </div>

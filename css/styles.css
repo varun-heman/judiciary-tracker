@@ -1100,6 +1100,15 @@ th.est-value-col {
   cursor: pointer;
 }
 
+.nw-tip {
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 0.55;
+  margin-left: 4px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
 
 .detail-grid {
   display: grid;
