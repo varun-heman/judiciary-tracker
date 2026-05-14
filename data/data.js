@@ -22090,6 +22090,1205 @@ window.NOTIFICATIONS_DATA = [
     "extraction_notes": "AI parsed; not human verified. Check the linked PDF before relying on this data.",
     "original_url": "https://mphc.gov.in/PDF/web_pdf/TP/209-Confdl-2026.pdf",
     "local_pdf": "assets/notifications/pdfs/HC-MP/2026/02/MP-2026-02-25-209.pdf"
+  },
+  {
+    "id": "UTK-2026-05-13-177",
+    "court_id": "HC-UTK",
+    "court": "Uttarakhand High Court",
+    "date": "2026-05-13",
+    "category": "Transfer / Posting",
+    "title": "No.177/UHC/Admin.A-2/2026 — Transfer and Posting of Judicial Officers",
+    "url": "assets/notifications/pdfs/HC-UTK/2026/05/UTK-2026-05-13-177.pdf",
+    "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "file_type": "pdf",
+    "transfer_entries": []
+  },
+  {
+    "id": "UTK-2026-05-05-159",
+    "court_id": "HC-UTK",
+    "court": "Uttarakhand High Court",
+    "date": "2026-05-05",
+    "category": "Transfer / Posting",
+    "title": "No.159/UHC/Admin.A-2/2026 — Transfer and Posting of Judicial Officers",
+    "url": "assets/notifications/pdfs/HC-UTK/2026/05/UTK-2026-05-05-159.pdf",
+    "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "file_type": "pdf",
+    "transfer_entries": []
+  },
+  {
+    "id": "UTK-2026-04-30-158",
+    "court_id": "HC-UTK",
+    "court": "Uttarakhand High Court",
+    "date": "2026-04-30",
+    "category": "Transfer / Posting",
+    "title": "No.158/UHC/Admin.A-2/2026 — Transfer and Posting of Judicial Officers",
+    "url": "assets/notifications/pdfs/HC-UTK/2026/04/UTK-2026-04-30-158.pdf",
+    "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "file_type": "pdf",
+    "transfer_entries": []
+  },
+  {
+    "id": "UTK-2026-04-30-157",
+    "court_id": "HC-UTK",
+    "court": "Uttarakhand High Court",
+    "date": "2026-04-30",
+    "category": "Transfer / Posting",
+    "title": "No.157/UHC/Admin.A-2/2026 — Transfer and Posting of Judicial Officers",
+    "url": "assets/notifications/pdfs/HC-UTK/2026/04/UTK-2026-04-30-157.pdf",
+    "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "file_type": "pdf",
+    "transfer_entries": []
+  },
+  {
+    "id": "UTK-2026-04-23-140-151",
+    "court_id": "HC-UTK",
+    "court": "Uttarakhand High Court",
+    "date": "2026-04-23",
+    "category": "Transfer / Posting",
+    "title": "No.140-151/UHC/Admin.A-2/2026 — Transfer and Posting of Judicial Officers",
+    "url": "assets/notifications/pdfs/HC-UTK/2026/04/UTK-2026-04-23-140-151.pdf",
+    "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "file_type": "pdf",
+    "transfer_entries": []
+  },
+  {
+    "id": "UTK-2026-04-20-139",
+    "court_id": "HC-UTK",
+    "court": "Uttarakhand High Court",
+    "date": "2026-04-20",
+    "category": "Transfer / Posting",
+    "title": "No.139/UHC/Admin.A-2/2026 — Transfer and Posting of Judicial Officers",
+    "url": "assets/notifications/pdfs/HC-UTK/2026/04/UTK-2026-04-20-139.pdf",
+    "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "file_type": "pdf",
+    "transfer_entries": [
+      {
+        "id": "UTK-2026-04-20-139-T001",
+        "person_name": "Shri Dharmendra Singh Adhikari",
+        "role_type": "Judicial Officer",
+        "from_position": "2nd Additional District & Sessions Judge, Haldwani, District Nainital",
+        "to_position": "Officer on Special Duty (OSD), High Court of Uttarakhand",
+        "assumed_role": "Officer on Special Duty (OSD)",
+        "effective_date": "",
+        "notes": "OSD attachment"
+      }
+    ]
+  },
+  {
+    "id": "UTK-2026-04-18-133",
+    "court_id": "HC-UTK",
+    "court": "Uttarakhand High Court",
+    "date": "2026-04-18",
+    "category": "Transfer / Posting",
+    "title": "No.133/UHC/Admin.A-2/2026 — Transfer and Posting of Judicial Officers",
+    "url": "assets/notifications/pdfs/HC-UTK/2026/04/UTK-2026-04-18-133.pdf",
+    "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "file_type": "pdf",
+    "transfer_entries": []
+  },
+  {
+    "id": "UTK-2026-04-15-annual-jd",
+    "court_id": "HC-UTK",
+    "court": "Uttarakhand High Court",
+    "date": "2026-04-15",
+    "category": "Transfer / Posting",
+    "title": "Annual Transfers 2026 - Judicial/District Officers",
+    "url": "assets/notifications/pdfs/HC-UTK/2026/04/UTK-2026-04-15-annual-jd.pdf",
+    "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "file_type": "pdf",
+    "transfer_entries": [
+      {
+        "id": "UTK-2026-04-15-annual-jd-T001",
+        "person_name": "Ms. Chandreshwari Singh",
+        "role_type": "Judicial Officer",
+        "from_position": "Judicial Magistrate, Laksar, District Haridwar",
+        "to_position": "Civil Judge (Jr. Div.), Nainital",
+        "assumed_role": "Civil Judge (Jr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T002",
+        "person_name": "Shri Rajendra Kumar",
+        "role_type": "Judicial Officer",
+        "from_position": "Civil Judge (Jr. Div.), Dwarahat, District Almora",
+        "to_position": "Judicial Magistrate, Kashipur, District Udham Singh Nagar",
+        "assumed_role": "Judicial Magistrate",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T003",
+        "person_name": "Ms. Kalpana",
+        "role_type": "Judicial Officer",
+        "from_position": "Civil Judge (Jr. Div.), Dehradun",
+        "to_position": "Judicial Magistrate, Pithoragarh",
+        "assumed_role": "Judicial Magistrate",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T004",
+        "person_name": "Shri Puneet Kumar",
+        "role_type": "Judicial Officer",
+        "from_position": "Civil Judge (Jr. Div.), Bageshwar",
+        "to_position": "Civil Judge (Jr. Div.), Tehri Garhwal",
+        "assumed_role": "Civil Judge (Jr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T005",
+        "person_name": "Shri Rizwan Ansari",
+        "role_type": "Judicial Officer",
+        "from_position": "Civil Judge (Jr. Div.), Udham Singh Nagar",
+        "to_position": "Civil Judge (Jr. Div.), Pauri Garhwal",
+        "assumed_role": "Civil Judge (Jr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T006",
+        "person_name": "Ms. Shivani Nahar",
+        "role_type": "Judicial Officer",
+        "from_position": "Judicial Magistrate-I, Roorkee, District Haridwar",
+        "to_position": "Civil Judge (Jr. Div.) Bageshwar",
+        "assumed_role": "Civil Judge (Jr. Div.) Bageshwar",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T007",
+        "person_name": "Shri Shambhu Nath Singh Sethwal",
+        "role_type": "Judicial Officer",
+        "from_position": "1st Additional Civil Judge (Jr. Div.), Udham Singh Nagar",
+        "to_position": "Civil Judge (Jr. Div.), Udham Singh Nagar",
+        "assumed_role": "Civil Judge (Jr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T008",
+        "person_name": "Shri Laval Kumar Verma",
+        "role_type": "Judicial Officer",
+        "from_position": "Civil Judge (Jr. Div.), Chamoli",
+        "to_position": "Judicial Magistrate, Laksar, District Haridwar",
+        "assumed_role": "Judicial Magistrate",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T009",
+        "person_name": "Shri Kuldeep Narayan",
+        "role_type": "Judicial Officer",
+        "from_position": "Civil Judge (Jr. Div.), Tehri Garhwal",
+        "to_position": "Civil Judge (Jr. Div.), Haridwar",
+        "assumed_role": "Civil Judge (Jr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T010",
+        "person_name": "Ms. Pallavi Gupta",
+        "role_type": "Judicial Officer",
+        "from_position": "Judicial Magistrate, Chamoli",
+        "to_position": "Civil Judge (Jr. Div.), Laksar, District Haridwar",
+        "assumed_role": "Civil Judge (Jr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T011",
+        "person_name": "Ms. Urvashi Rawat",
+        "role_type": "Judicial Officer",
+        "from_position": "Civil Judge (Jr. Div.), Nainital",
+        "to_position": "1st Additional Civil Judge (Jr. Div.), Nainital",
+        "assumed_role": "1st Additional Civil Judge (Jr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T012",
+        "person_name": "Ms. Chairab Batra",
+        "role_type": "Judicial Officer",
+        "from_position": "Judicial Magistrate-II, Roorkee, District Haridwar",
+        "to_position": "Judicial Magistrate-I, Roorkee, District Haridwar",
+        "assumed_role": "Judicial Magistrate-I",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T013",
+        "person_name": "Ms. Tanuja Kashyap",
+        "role_type": "Judicial Officer",
+        "from_position": "Civil Judge (Jr. Div.), Haridwar",
+        "to_position": "1st Additional Civil Judge (Jr. Div.), Haridwar",
+        "assumed_role": "1st Additional Civil Judge (Jr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T014",
+        "person_name": "Ms. Jasmeet Kaur",
+        "role_type": "Judicial Officer",
+        "from_position": "Civil Judge (Jr. Div.), Ranikhet, District Almora",
+        "to_position": "Civil Judge (Jr. Div.), Bazpur, District Udham Singh Nagar",
+        "assumed_role": "Civil Judge (Jr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T015",
+        "person_name": "Ms. Ruchika Goel",
+        "role_type": "Judicial Officer",
+        "from_position": "1st Additional Civil Judge (Jr. Div.), Nainital",
+        "to_position": "Judicial Magistrate, Rishikesh, District Dehradun",
+        "assumed_role": "Judicial Magistrate",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T016",
+        "person_name": "Ms. Suman Bhandari",
+        "role_type": "Judicial Officer",
+        "from_position": "Civil Judge (Jr. Div.), Bazpur, District Udham Singh Nagar",
+        "to_position": "Civil Judge (Jr. Div.), Roorkee, District Haridwar",
+        "assumed_role": "Civil Judge (Jr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T017",
+        "person_name": "Shri Prateek Mathela",
+        "role_type": "Judicial Officer",
+        "from_position": "Judicial Magistrate, Pauri Garhwal",
+        "to_position": "1st Additional Civil Judge (Jr. Div.), Udham Singh Nagar",
+        "assumed_role": "1st Additional Civil Judge (Jr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T018",
+        "person_name": "Shri Vinit Kumar Srivastava",
+        "role_type": "Judicial Officer",
+        "from_position": "Judicial Magistrate, Kashipur, District Udham Singh Nagar",
+        "to_position": "1st Additional Civil Judge (Jr. Div.), Roorkee, District Haridwar",
+        "assumed_role": "1st Additional Civil Judge (Jr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T019",
+        "person_name": "Ms. Deepti Pant",
+        "role_type": "Judicial Officer",
+        "from_position": "1st Additional Civil Judge (Jr. Div.), Kashipur, District Udham Singh Nagar",
+        "to_position": "Judicial Magistrate-II, Roorkee, District Haridwar",
+        "assumed_role": "Judicial Magistrate-II",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T020",
+        "person_name": "Shri Anurag Tripathi",
+        "role_type": "Judicial Officer",
+        "from_position": "Civil Judge (Jr. Div.), Laksar, District Haridwar",
+        "to_position": "Civil Judge (Jr. Div.), Dehradun",
+        "assumed_role": "Civil Judge (Jr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T021",
+        "person_name": "Ms. Pratiksha Kesarwani",
+        "role_type": "Judicial Officer",
+        "from_position": "Civil Judge (Jr. Div.), Pauri Garhwal",
+        "to_position": "2nd Additional Civil Judge (Jr. Div.), Udham Singh Nagar",
+        "assumed_role": "2nd Additional Civil Judge (Jr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T022",
+        "person_name": "Shri Chetan Singh Gautam",
+        "role_type": "Judicial Officer",
+        "from_position": "Civil Judge (Jr. Div.), Kirtinagar, District Tehri Garhwal",
+        "to_position": "1st Additional Civil Judge (Jr. Div.), Kashipur, District Udham Singh Nagar",
+        "assumed_role": "1st Additional Civil Judge (Jr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T023",
+        "person_name": "Ms. Avantika Singh Chaudhary",
+        "role_type": "Judicial Officer",
+        "from_position": "Civil Judge (Jr. Div.), Roorkee, District Haridwar",
+        "to_position": "2nd Additional Civil Judge (Jr. Div.), Roorkee, District Haridwar",
+        "assumed_role": "2nd Additional Civil Judge (Jr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T024",
+        "person_name": "Ms. Ruchika Narula",
+        "role_type": "Judicial Officer",
+        "from_position": "Civil Judge (Jr. Div.), Sitarganj, District Udham Singh Nagar",
+        "to_position": "Civil Judge (Jr. Div.), Tanakpur, District Champawat",
+        "assumed_role": "Civil Judge (Jr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T025",
+        "person_name": "Ms. Nandita Kala",
+        "role_type": "Judicial Officer",
+        "from_position": "Judicial Magistrate, Rishikesh, District Dehradun",
+        "to_position": "Civil Judge (Jr. Div.), Sitarganj, District Udham Singh Nagar",
+        "assumed_role": "Civil Judge (Jr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T026",
+        "person_name": "Ms. Akmal",
+        "role_type": "Judicial Officer",
+        "from_position": "Judicial Magistrate-II, Udham Singh Nagar",
+        "to_position": "Judicial Magistrate, Pauri Garhwal",
+        "assumed_role": "Judicial Magistrate",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T027",
+        "person_name": "Shri Vikas Kumar",
+        "role_type": "Judicial Officer",
+        "from_position": "Judicial Magistrate, Vikasnagar, District Dehradun",
+        "to_position": "Civil Judge (Jr. Div.), Rudraprayag",
+        "assumed_role": "Civil Judge (Jr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T028",
+        "person_name": "Ms. Jainab",
+        "role_type": "Judicial Officer",
+        "from_position": "Civil Judge (Jr. Div.), Garur, District Bageshwar",
+        "to_position": "Judicial Magistrate-II, Dehradun",
+        "assumed_role": "Judicial Magistrate-II",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T029",
+        "person_name": "Ms. Upadhi Singhal",
+        "role_type": "Judicial Officer",
+        "from_position": "1st Additional Civil Judge (Jr. Div.), Roorkee, District Haridwar",
+        "to_position": "Judicial Magistrate-II, Haldwani, District Nainital",
+        "assumed_role": "Judicial Magistrate-II",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T030",
+        "person_name": "Shri Prateek Kapil",
+        "role_type": "Judicial Officer",
+        "from_position": "Judicial Magistrate-II, Dehradun",
+        "to_position": "Civil Judge (Jr. Div.), Dhari, District Nainital",
+        "assumed_role": "Civil Judge (Jr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T031",
+        "person_name": "Ms. Priyanshi Nagarkoti",
+        "role_type": "Judicial Officer",
+        "from_position": "Civil Judge (Jr. Div.), Tanakpur, District Champawat",
+        "to_position": "2nd Additional Civil Judge (Jr. Div.), Haldwani, District Nainital",
+        "assumed_role": "2nd Additional Civil Judge (Jr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T032",
+        "person_name": "Shri Anoop Singh Bhakuni",
+        "role_type": "Judicial Officer",
+        "from_position": "2nd Additional Civil Judge (Jr. Div.), Haridwar",
+        "to_position": "Civil Judge (Jr. Div.), Kirtinagar, District Tehri Garhwal",
+        "assumed_role": "Civil Judge (Jr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T033",
+        "person_name": "Ms. Hina Kousar",
+        "role_type": "Judicial Officer",
+        "from_position": "2nd Additional Civil Judge (Jr. Div.), Dehradun",
+        "to_position": "Civil Judge (Jr. Div.), Chamoli",
+        "assumed_role": "Civil Judge (Jr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T034",
+        "person_name": "Ms. Nancy Chhabra",
+        "role_type": "Judicial Officer",
+        "from_position": "3rd Additional Civil Judge (Jr. Div.), Dehradun",
+        "to_position": "Civil Judge (Jr. Div.), Uttarkashi",
+        "assumed_role": "Civil Judge (Jr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T035",
+        "person_name": "Ms. Sonam Rawat",
+        "role_type": "Judicial Officer",
+        "from_position": "Judicial Magistrate-IV, Dehradun",
+        "to_position": "Civil Judge (Jr. Div.), Ranikhet, District Almora",
+        "assumed_role": "Civil Judge (Jr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T036",
+        "person_name": "Shri Abhishek Kumar Mishra",
+        "role_type": "Judicial Officer",
+        "from_position": "Additional Civil Judge (Jr. Div.), Rishikesh, District Dehradun",
+        "to_position": "Judicial Magistrate-II, Udham Singh Nagar",
+        "assumed_role": "Judicial Magistrate-II",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T037",
+        "person_name": "Shri Jatin Mittal",
+        "role_type": "Judicial Officer",
+        "from_position": "Civil Judge (Jr. Div.), Rudraprayag",
+        "to_position": "Judicial Magistrate, Vikasnagar, District Dehradun",
+        "assumed_role": "Judicial Magistrate",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T038",
+        "person_name": "Shri Naveen Rana",
+        "role_type": "Judicial Officer",
+        "from_position": "Civil Judge (Jr. Div.), Dharchula, District Pithoragarh",
+        "to_position": "2nd Additional Civil Judge (Jr. Div.), Dehradun",
+        "assumed_role": "2nd Additional Civil Judge (Jr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-jd-T039",
+        "person_name": "Ms. Tanya Middha",
+        "role_type": "Judicial Officer",
+        "from_position": "Judicial Magistrate, Pithoragarh",
+        "to_position": "Additional Civil Judge (Jr. Div.), Rishikesh, District Dehradun",
+        "assumed_role": "Additional Civil Judge (Jr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "id": "UTK-2026-04-15-annual-sd",
+    "court_id": "HC-UTK",
+    "court": "Uttarakhand High Court",
+    "date": "2026-04-15",
+    "category": "Transfer / Posting",
+    "title": "Annual Transfers 2026 - Sub-Divisional Officers",
+    "url": "assets/notifications/pdfs/HC-UTK/2026/04/UTK-2026-04-15-annual-sd.pdf",
+    "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "file_type": "pdf",
+    "transfer_entries": [
+      {
+        "id": "UTK-2026-04-15-annual-sd-T001",
+        "person_name": "Shri Yogendra Kumar Sagar",
+        "role_type": "Judicial Officer",
+        "from_position": "Secretary, District Legal Services Authority, Udham Singh Nagar",
+        "to_position": "Civil Judge (Sr. Div.), Bageshwar",
+        "assumed_role": "Civil Judge (Sr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-sd-T002",
+        "person_name": "Ms. Rinky Sahni",
+        "role_type": "Judicial Officer",
+        "from_position": "Chief Judicial Magistrate, Dehradun",
+        "to_position": "Chief Judicial Magistrate, Tehri Garhwal",
+        "assumed_role": "Chief Judicial Magistrate",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-sd-T003",
+        "person_name": "Shri Ravi Prakash",
+        "role_type": "Judicial Officer",
+        "from_position": "Chief Judicial Magistrate, Nainital",
+        "to_position": "Chief Judicial Magistrate, Dehradun",
+        "assumed_role": "Chief Judicial Magistrate",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-sd-T004",
+        "person_name": "Shri Mohammad Yaqoob",
+        "role_type": "Judicial Officer",
+        "from_position": "Chief Judicial Magistrate, Tehri Garhwal",
+        "to_position": "Chief Judicial Magistrate, Almora",
+        "assumed_role": "Chief Judicial Magistrate",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-sd-T005",
+        "person_name": "Ms. Ritika Semwal",
+        "role_type": "Judicial Officer",
+        "from_position": "Civil Judge (Sr. Div.), Roorkee, District Haridwar",
+        "to_position": "Additional Chief Judicial Magistrate, N.I. Act, Special Court, Rudrapur, District Udham Singh Nagar",
+        "assumed_role": "Additional Chief Judicial Magistrate",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-sd-T006",
+        "person_name": "Shri Sanjay Singh",
+        "role_type": "Judicial Officer",
+        "from_position": "Chief Judicial Magistrate, Pithoragarh",
+        "to_position": "1st Additional Chief Judicial Magistrate, Dehradun",
+        "assumed_role": "1st Additional Chief Judicial Magistrate",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-sd-T007",
+        "person_name": "Shri Ravi Shankar Mishra",
+        "role_type": "Judicial Officer",
+        "from_position": "Civil Judge (Sr. Div.). Vikasnagar, District Dehradun",
+        "to_position": "Chief Judicial Magistrate, Nainital",
+        "assumed_role": "Chief Judicial Magistrate",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-sd-T008",
+        "person_name": "Ms. Shachi Sharma",
+        "role_type": "Judicial Officer",
+        "from_position": "Secretary, District Legal Services Authority, Almora",
+        "to_position": "Additional Chief Judicial Magistrate, N.I. Act, Special Court, Kashipur, District Udham Singh Nagar",
+        "assumed_role": "Additional Chief Judicial Magistrate",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-sd-T009",
+        "person_name": "Shri Abhishek Kumar Srivastava",
+        "role_type": "Judicial Officer",
+        "from_position": "OSD/Deputy Secretary, Uttarakhand State Legal Services Authority, Nainital",
+        "to_position": "Civil Judge (Sr. Div.), Vikasnagar, District Dehradun",
+        "assumed_role": "Civil Judge (Sr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-sd-T010",
+        "person_name": "Ms. Arti Saroha",
+        "role_type": "Judicial Officer",
+        "from_position": "Civil Judge (Sr. Div.), Pithoragarh",
+        "to_position": "Additional Chief Judicial Magistrate-I, N.I. Act, Special Court, Dehradun",
+        "assumed_role": "Additional Chief Judicial Magistrate-I",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-sd-T011",
+        "person_name": "Shri Sanjeev Kumar",
+        "role_type": "Judicial Officer",
+        "from_position": "1st Additional Chief Judicial Magistrate, Dehradun",
+        "to_position": "2nd Additional Chief Judicial Magistrate, Dehradun",
+        "assumed_role": "2nd Additional Chief Judicial Magistrate",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-sd-T012",
+        "person_name": "Shri Sandeep Singh Bhandari",
+        "role_type": "Judicial Officer",
+        "from_position": "2nd Additional Chief Judicial Magistrate, Dehradun",
+        "to_position": "3rd Additional Chief Judicial Magistrate, Dehradun",
+        "assumed_role": "3rd Additional Chief Judicial Magistrate",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-sd-T013",
+        "person_name": "Ms. Afiya Mateen",
+        "role_type": "Judicial Officer",
+        "from_position": "Civil Judge (Sr. Div.), Tehri Garhwal",
+        "to_position": "Civil Judge (Sr. Div.), Almora",
+        "assumed_role": "Civil Judge (Sr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-sd-T014",
+        "person_name": "Shri Amit Kumar",
+        "role_type": "Judicial Officer",
+        "from_position": "5th Additional Civil Judge (Sr. Div.), Dehradun",
+        "to_position": "Civil Judge (Sr. Div.), Rudraprayag",
+        "assumed_role": "Civil Judge (Sr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-sd-T015",
+        "person_name": "Shri Alok Ram Tripathi",
+        "role_type": "Judicial Officer",
+        "from_position": "Secretary, District Legal Services Authority, Tehri Garhwal",
+        "to_position": "Civil Judge (Sr. Div.), Nainital",
+        "assumed_role": "Civil Judge (Sr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-sd-T016",
+        "person_name": "Shri Mithilesh Pandey",
+        "role_type": "Judicial Officer",
+        "from_position": "Additional Civil Judge (Sr. Div.), Tehri Garhwal",
+        "to_position": "Civil Judge (Sr. Div.), Tehri Garhwal",
+        "assumed_role": "Civil Judge (Sr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-sd-T017",
+        "person_name": "Shri Ravindra Dev Mishra",
+        "role_type": "Judicial Officer",
+        "from_position": "Civil Judge (Sr. Div.), Almora",
+        "to_position": "4th Additional Civil Judge (Sr. Div.), Udham Singh Nagar",
+        "assumed_role": "4th Additional Civil Judge (Sr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-sd-T018",
+        "person_name": "Ms. Beenu Gulyani",
+        "role_type": "Judicial Officer",
+        "from_position": "Additional Civil Judge (Sr. Div.), Roorkee, District Haridwar",
+        "to_position": "Civil Judge (Sr. Div.), Roorkee, District Haridwar",
+        "assumed_role": "Civil Judge (Sr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-sd-T019",
+        "person_name": "Ms. Sahista Bano",
+        "role_type": "Judicial Officer",
+        "from_position": "3rd Additional Chief Judicial Magistrate, Dehradun",
+        "to_position": "4th Additional Chief Judicial Magistrate, Dehradun",
+        "assumed_role": "4th Additional Chief Judicial Magistrate",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-sd-T020",
+        "person_name": "Ms. Shama Parveen",
+        "role_type": "Judicial Officer",
+        "from_position": "4th Additional Civil Judge (Sr. Div.), Udham Singh Nagar",
+        "to_position": "5th Additional Civil Judge (Sr. Div.), Udham Singh Nagar",
+        "assumed_role": "5th Additional Civil Judge (Sr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-sd-T021",
+        "person_name": "Ms. Suman",
+        "role_type": "Judicial Officer",
+        "from_position": "Civil Judge (Sr. Div.), Rudraprayag",
+        "to_position": "Chief Judicial Magistrate, Pithoragarh",
+        "assumed_role": "Chief Judicial Magistrate",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-sd-T022",
+        "person_name": "Shri Ramesh Chandra",
+        "role_type": "Judicial Officer",
+        "from_position": "4th Additional Chief Judicial Magistrate, Dehradun",
+        "to_position": "Civil Judge (Sr. Div.), Pithoragarh",
+        "assumed_role": "Civil Judge (Sr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-sd-T023",
+        "person_name": "Ms. Bharti Manglani",
+        "role_type": "Judicial Officer",
+        "from_position": "5th Additional Civil Judge (Sr. Div.), Udham Singh Nagar",
+        "to_position": "5th Additional Civil Judge (Sr. Div.), Dehradun",
+        "assumed_role": "5th Additional Civil Judge (Sr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-sd-T024",
+        "person_name": "Ms. Aiswarya Bora",
+        "role_type": "Judicial Officer",
+        "from_position": "Civil Judge (Sr. Div.), Bageshwar",
+        "to_position": "Additional Civil Judge (Sr. Div.), Tehri Garhwal",
+        "assumed_role": "Additional Civil Judge (Sr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "id": "UTK-2026-04-15-annual-hjs",
+    "court_id": "HC-UTK",
+    "court": "Uttarakhand High Court",
+    "date": "2026-04-15",
+    "category": "Transfer / Posting",
+    "title": "Annual Transfers 2026 - Higher Judicial Service Officers",
+    "url": "assets/notifications/pdfs/HC-UTK/2026/04/UTK-2026-04-15-annual-hjs.pdf",
+    "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "file_type": "pdf",
+    "transfer_entries": [
+      {
+        "id": "UTK-2026-04-15-annual-hjs-T001",
+        "person_name": "Shri Malik Mazhar Sultan",
+        "role_type": "Judicial Officer",
+        "from_position": "Chairman, Commercial Tax Tribunal, Uttarakhand, Dehradun",
+        "to_position": "District & Sessions Judge, Uttarkashi",
+        "assumed_role": "District & Sessions Judge",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-hjs-T002",
+        "person_name": "Ms. Neena Aggarwal",
+        "role_type": "Judicial Officer",
+        "from_position": "Judge, Family Court, Almora",
+        "to_position": "District & Sessions Judge, Rudraprayag",
+        "assumed_role": "District & Sessions Judge",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-hjs-T003",
+        "person_name": "Ms. Monika Mittal",
+        "role_type": "Judicial Officer",
+        "from_position": "Additional Principal Judge, Family Court, Kashipur, District Udham Singh Nagar",
+        "to_position": "1st Additional District & Sessions Judge, Dehradun",
+        "assumed_role": "1st Additional District & Sessions Judge",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-hjs-T004",
+        "person_name": "Shri Mahesh Chandra Kaushiwa",
+        "role_type": "Judicial Officer",
+        "from_position": "1st Additional District & Sessions Judge, Dehradun",
+        "to_position": "2nd Additional District & Sessions Judge, Dehradun",
+        "assumed_role": "2nd Additional District & Sessions Judge",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-hjs-T005",
+        "person_name": "Shri Ambika Pant",
+        "role_type": "Judicial Officer",
+        "from_position": "1st Additional District & Sessions Judge, Roorkee, District Haridwar",
+        "to_position": "F.T.C./Additional District & Sessions Judge, POCSO, Udham Singh Nagar",
+        "assumed_role": "F.T.C./Additional District & Sessions Judge",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-hjs-T006",
+        "person_name": "Ms. Reena Negi",
+        "role_type": "Judicial Officer",
+        "from_position": "Additional District & Sessions Judge, Kotdwar, District Pauri Garhwal",
+        "to_position": "1st Additional District & Sessions Judge, Roorkee, District Haridwar",
+        "assumed_role": "1st Additional District & Sessions Judge",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-hjs-T007",
+        "person_name": "Shri Ashutosh Kumar Mishra",
+        "role_type": "Judicial Officer",
+        "from_position": "1st Additional District & Sessions Judge, Udham Singh Nagar",
+        "to_position": "2nd Additional District & Sessions Judge, Roorkee, District Haridwar",
+        "assumed_role": "2nd Additional District & Sessions Judge",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-hjs-T008",
+        "person_name": "Shri Dharmendra Singh Adhikari",
+        "role_type": "Judicial Officer",
+        "from_position": "Registrar (Judicial), High Court of Uttarakhand, Nainital",
+        "to_position": "2nd Additional District & Sessions Judge, Haldwani, District Nainital",
+        "assumed_role": "2nd Additional District & Sessions Judge",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-hjs-T009",
+        "person_name": "Shri Rajoo Kumar Srivastava",
+        "role_type": "Judicial Officer",
+        "from_position": "4th Additional District & Sessions Judge, Haridwar",
+        "to_position": "1st Additional District & Sessions Judge, Udham Singh Nagar",
+        "assumed_role": "1st Additional District & Sessions Judge",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-hjs-T010",
+        "person_name": "Ms. Rajani Shukla",
+        "role_type": "Judicial Officer",
+        "from_position": "Additional District & Sessions Judge/Fast Track Special Court (FTSC)-POCSO Act, Dehradun",
+        "to_position": "Additional District & Sessions Judge, Kotdwar, District Pauri Garhwal",
+        "assumed_role": "Additional District & Sessions Judge",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-hjs-T011",
+        "person_name": "Ms. Anjali Noliyal",
+        "role_type": "Judicial Officer",
+        "from_position": "Additional District & Sessions Judge, Ranikhet, District Almora",
+        "to_position": "Additional District & Sessions Judge, Khatima, District Udham Singh Nagar",
+        "assumed_role": "Additional District & Sessions Judge",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-hjs-T012",
+        "person_name": "Shri Vivek Srivastava",
+        "role_type": "Judicial Officer",
+        "from_position": "2nd Additional District & Sessions Judge, Dehradun",
+        "to_position": "3rd Additional District & Sessions Judge, Dehradun",
+        "assumed_role": "3rd Additional District & Sessions Judge",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-hjs-T013",
+        "person_name": "Ms. Savita Chamoli",
+        "role_type": "Judicial Officer",
+        "from_position": "2nd Additional District & Sessions Judge, Haldwani, District Nainital",
+        "to_position": "F.T.C./Additional District & Sessions Judge, POCSO Act, Haldwani, District Nainital",
+        "assumed_role": "F.T.C./Additional District & Sessions Judge",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-hjs-T014",
+        "person_name": "Shri Madan Ram",
+        "role_type": "Judicial Officer",
+        "from_position": "3rd Additional District & Sessions Judge, Dehradun",
+        "to_position": "4th Additional District & Sessions Judge, Dehradun",
+        "assumed_role": "4th Additional District & Sessions Judge",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-hjs-T015",
+        "person_name": "Ms. Manju Singh Mundey",
+        "role_type": "Judicial Officer",
+        "from_position": "Additional District & Sessions Judge, Khatima, District Udham Singh Nagar",
+        "to_position": "Additional District & Sessions Judge/Fast Track Special Court (FTSC)-POCSO Act, Dehradun",
+        "assumed_role": "Additional District & Sessions Judge/Fast Track Special Court (FTSC)-POCSO Act",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-hjs-T016",
+        "person_name": "Ms. Anjali Benjwal",
+        "role_type": "Judicial Officer",
+        "from_position": "4th Additional District & Sessions Judge, Dehradun",
+        "to_position": "5th Additional District & Sessions Judge, Dehradun",
+        "assumed_role": "5th Additional District & Sessions Judge",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-04-15-annual-hjs-T017",
+        "person_name": "Shri Dhirendra Bhatt",
+        "role_type": "Judicial Officer",
+        "from_position": "Additional Principal Judge-II, Family Court, Roorkee, District Haridwar",
+        "to_position": "Registrar (Judicial), High Court of Uttarakhand, Nainital",
+        "assumed_role": "Registrar (Judicial)",
+        "effective_date": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "id": "UTK-2026-04-01-28",
+    "court_id": "HC-UTK",
+    "court": "Uttarakhand High Court",
+    "date": "2026-04-01",
+    "category": "Transfer / Posting",
+    "title": "No.28/UHC/Admin.A-2/2026 — Transfer and Posting of Judicial Officers",
+    "url": "assets/notifications/pdfs/HC-UTK/2026/04/UTK-2026-04-01-28.pdf",
+    "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "file_type": "pdf",
+    "transfer_entries": [
+      {
+        "id": "UTK-2026-04-01-28-T001",
+        "person_name": "Shri Bhupendra Singh Shah",
+        "role_type": "Judicial Officer",
+        "from_position": "Civil Judge (Jr. Div.), Rishikesh, District Dehradun",
+        "to_position": "Officer on Special Duty (OSD), High Court of Uttarakhand",
+        "assumed_role": "Officer on Special Duty (OSD)",
+        "effective_date": "",
+        "notes": "OSD attachment"
+      }
+    ]
+  },
+  {
+    "id": "UTK-2026-03-03-18",
+    "court_id": "HC-UTK",
+    "court": "Uttarakhand High Court",
+    "date": "2026-03-03",
+    "category": "Transfer / Posting",
+    "title": "No.18/UHC/Admin.A-2/2026 — Transfer and Posting of Judicial Officers",
+    "url": "assets/notifications/pdfs/HC-UTK/2026/03/UTK-2026-03-03-18.pdf",
+    "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "file_type": "pdf",
+    "transfer_entries": []
+  },
+  {
+    "id": "UTK-2026-02-27-17",
+    "court_id": "HC-UTK",
+    "court": "Uttarakhand High Court",
+    "date": "2026-02-27",
+    "category": "Transfer / Posting",
+    "title": "No.17/UHC/Admin.A-2/2026 — Transfer and Posting of Judicial Officers",
+    "url": "assets/notifications/pdfs/HC-UTK/2026/02/UTK-2026-02-27-17.pdf",
+    "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "file_type": "pdf",
+    "transfer_entries": [
+      {
+        "id": "UTK-2026-02-27-17-T001",
+        "person_name": "Ms. Deepali Sharma",
+        "role_type": "Judicial Officer",
+        "from_position": "Not specified",
+        "to_position": "Additional District & Sessions Judge/Special Court (NDPS Act), Rudrapur, District Udham Singh Nagar",
+        "assumed_role": "Additional District & Sessions Judge/Special Court (NDPS Act)",
+        "effective_date": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "id": "UTK-2026-02-27-16",
+    "court_id": "HC-UTK",
+    "court": "Uttarakhand High Court",
+    "date": "2026-02-27",
+    "category": "Transfer / Posting",
+    "title": "No.16/UHC/Admin.A-2/2026 — Transfer and Posting of Judicial Officers",
+    "url": "assets/notifications/pdfs/HC-UTK/2026/02/UTK-2026-02-27-16.pdf",
+    "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "file_type": "pdf",
+    "transfer_entries": [
+      {
+        "id": "UTK-2026-02-27-16-T001",
+        "person_name": "Shri Dhananjay Chaturvedi",
+        "role_type": "Judicial Officer",
+        "from_position": "Principal Secretary, Legislative & Parliamentary Affairs, Government of Uttarakhand, Dehradun",
+        "to_position": "District & Sessions Judge, Pithoragarh",
+        "assumed_role": "District & Sessions Judge",
+        "effective_date": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "id": "UTK-2026-02-25-15",
+    "court_id": "HC-UTK",
+    "court": "Uttarakhand High Court",
+    "date": "2026-02-25",
+    "category": "Transfer / Posting",
+    "title": "No.15/UHC/Admin.A-2/2026 — Transfer and Posting of Judicial Officers",
+    "url": "assets/notifications/pdfs/HC-UTK/2026/02/UTK-2026-02-25-15.pdf",
+    "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "file_type": "pdf",
+    "transfer_entries": []
+  },
+  {
+    "id": "UTK-2026-02-17-13",
+    "court_id": "HC-UTK",
+    "court": "Uttarakhand High Court",
+    "date": "2026-02-17",
+    "category": "Transfer / Posting",
+    "title": "No.13/UHC/Admin.A/2026 — Transfer and Posting of Judicial Officers",
+    "url": "assets/notifications/pdfs/HC-UTK/2026/02/UTK-2026-02-17-13.pdf",
+    "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "file_type": "pdf",
+    "transfer_entries": []
+  },
+  {
+    "id": "UTK-2026-01-31-11",
+    "court_id": "HC-UTK",
+    "court": "Uttarakhand High Court",
+    "date": "2026-01-31",
+    "category": "Transfer / Posting",
+    "title": "No.11/UHC/Admin.A-2/2026 — Transfer and Posting of Judicial Officers",
+    "url": "assets/notifications/pdfs/HC-UTK/2026/01/UTK-2026-01-31-11.pdf",
+    "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "file_type": "pdf",
+    "transfer_entries": []
+  },
+  {
+    "id": "UTK-2026-01-31-10",
+    "court_id": "HC-UTK",
+    "court": "Uttarakhand High Court",
+    "date": "2026-01-31",
+    "category": "Transfer / Posting",
+    "title": "No.10/UHC/Admin.A-2/2026 — Transfer and Posting of Judicial Officers",
+    "url": "assets/notifications/pdfs/HC-UTK/2026/01/UTK-2026-01-31-10.pdf",
+    "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "file_type": "pdf",
+    "transfer_entries": []
+  },
+  {
+    "id": "UTK-2026-01-13-09",
+    "court_id": "HC-UTK",
+    "court": "Uttarakhand High Court",
+    "date": "2026-01-13",
+    "category": "Transfer / Posting",
+    "title": "No.09/UHC/Admin.A-2/2026 — Transfer and Posting of Judicial Officers",
+    "url": "assets/notifications/pdfs/HC-UTK/2026/01/UTK-2026-01-13-09.pdf",
+    "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "file_type": "pdf",
+    "transfer_entries": []
+  },
+  {
+    "id": "UTK-2026-01-05-02-03",
+    "court_id": "HC-UTK",
+    "court": "Uttarakhand High Court",
+    "date": "2026-01-05",
+    "category": "Transfer / Posting",
+    "title": "No.02-03/UHC/Admin.A-2/2026 — Transfer and Posting of Judicial Officers",
+    "url": "assets/notifications/pdfs/HC-UTK/2026/01/UTK-2026-01-05-02-03.pdf",
+    "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "file_type": "pdf",
+    "transfer_entries": [
+      {
+        "id": "UTK-2026-01-05-02-03-T001",
+        "person_name": "Shri Prashant Joshi",
+        "role_type": "Judicial Officer",
+        "from_position": "Principal Secretary (Law)-cum-L.R., Government of Uttarakhand, Dehradun",
+        "to_position": "District & Sessions Judge, Nainital",
+        "assumed_role": "District & Sessions Judge",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2026-01-05-02-03-T002",
+        "person_name": "Shri Nitin Sharma",
+        "role_type": "Judicial Officer",
+        "from_position": "Chairman, State Transport Appellate Tribunal, Dehradun",
+        "to_position": "District & Sessions Judge, Tehri Garhwal",
+        "assumed_role": "District & Sessions Judge",
+        "effective_date": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "id": "UTK-2026-01-05-01",
+    "court_id": "HC-UTK",
+    "court": "Uttarakhand High Court",
+    "date": "2026-01-05",
+    "category": "Transfer / Posting",
+    "title": "No.01/UHC/Admin.A-2/2026 — Transfer and Posting of Judicial Officers",
+    "url": "assets/notifications/pdfs/HC-UTK/2026/01/UTK-2026-01-05-01.pdf",
+    "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "file_type": "pdf",
+    "transfer_entries": [
+      {
+        "id": "UTK-2026-01-05-01-T001",
+        "person_name": "Shri Rahul Kumar Srivastava",
+        "role_type": "Judicial Officer",
+        "from_position": "5th Additional District & Sessions Judge, Dehradun, presently attached to the High Court of Uttarakhand at Nainital as Officer on Special Duty (OSD)",
+        "to_position": "Registrar (Protocol), High Court of Uttarakhand, Nainital",
+        "assumed_role": "Registrar (Protocol)",
+        "effective_date": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "id": "UTK-2025-12-22-379-380",
+    "court_id": "HC-UTK",
+    "court": "Uttarakhand High Court",
+    "date": "2025-12-22",
+    "category": "Transfer / Posting",
+    "title": "No.379-380/UHC/Admin.A-2/2025 — Transfer and Posting of Judicial Officers",
+    "url": "assets/notifications/pdfs/HC-UTK/2025/12/UTK-2025-12-22-379-380.pdf",
+    "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "file_type": "pdf",
+    "transfer_entries": [
+      {
+        "id": "UTK-2025-12-22-379-380-T001",
+        "person_name": "Shri Vivek Srivastava",
+        "role_type": "Judicial Officer",
+        "from_position": "Registrar (Protocol), High Court of Uttarakhand, Nainital",
+        "to_position": "2nd Additional District & Sessions Judge, Dehradun",
+        "assumed_role": "2nd Additional District & Sessions Judge",
+        "effective_date": "",
+        "notes": ""
+      },
+      {
+        "id": "UTK-2025-12-22-379-380-T002",
+        "person_name": "Shri Rahul Kumar Srivastava",
+        "role_type": "Judicial Officer",
+        "from_position": "5th Additional District & Sessions Judge, Dehradun",
+        "to_position": "Officer on Special Duty (OSD), High Court of Uttarakhand",
+        "assumed_role": "Officer on Special Duty (OSD)",
+        "effective_date": "",
+        "notes": "OSD attachment"
+      }
+    ]
+  },
+  {
+    "id": "UTK-2025-12-09-360-361",
+    "court_id": "HC-UTK",
+    "court": "Uttarakhand High Court",
+    "date": "2025-12-09",
+    "category": "Transfer / Posting",
+    "title": "No.360-361/UHC/Admin.A-2/2025 — Transfer and Posting of Judicial Officers",
+    "url": "assets/notifications/pdfs/HC-UTK/2025/12/UTK-2025-12-09-360-361.pdf",
+    "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "file_type": "pdf",
+    "transfer_entries": [
+      {
+        "id": "UTK-2025-12-09-360-361-T001",
+        "person_name": "Shri Paritosh",
+        "role_type": "Judicial Officer",
+        "from_position": "2nd Additional Civil Judge (Jr. Div.), Udham Singh Nagar",
+        "to_position": "Additional Civil Judge (Jr. Div.), Bazpur, District Udham Singh Nagar",
+        "assumed_role": "Additional Civil Judge (Jr. Div.)",
+        "effective_date": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "id": "UTK-2025-11-19-340",
+    "court_id": "HC-UTK",
+    "court": "Uttarakhand High Court",
+    "date": "2025-11-19",
+    "category": "Transfer / Posting",
+    "title": "No.340/UHC/Admin.A-2/2025 — Transfer and Posting of Judicial Officers",
+    "url": "assets/notifications/pdfs/HC-UTK/2025/11/UTK-2025-11-19-340.pdf",
+    "source_page": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "file_type": "pdf",
+    "transfer_entries": []
   }
 ];
 window.NOTIFICATION_SOURCES_DATA = [
