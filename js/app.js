@@ -505,9 +505,22 @@ function renderAssetRankSummary(judgeId) {
   if (!rank) return '';
   return `
     <div class="asset-rank-summary">
-      <div><span>Same court</span><strong>#${rank.courtRank}</strong><em>of ${rank.courtTotal} judges with declarations</em></div>
-      <div><span>All tracked courts</span><strong>#${rank.globalRank}</strong><em>of ${rank.globalTotal} judges with declarations</em></div>
-    </div></div>`;
+      <div class="rank-label-row">Wealth Rankings <span class="rank-basis">based on disclosed wealth</span></div>
+      <div class="rank-blocks">
+        <div class="rank-block">
+          <strong>#${rank.courtRank}</strong>
+          <span>of ${rank.courtTotal}</span>
+          <em>Same court</em>
+        </div>
+        <div class="rank-block rank-block-global">
+          <strong>#${rank.globalRank}</strong>
+          <span>of ${rank.globalTotal}</span>
+          <em>All tracked courts</em>
+        </div>
+      </div>
+      <p class="rank-disclaimer">Rankings are based on disclosed financial holdings only — jewellery, property values and other non-monetary assets are not included. These rankings may not be accurate.</p>
+    </div>`
+    + `</div>`;
 }
 
 function judgeAssetRank(judgeId) {
