@@ -1059,7 +1059,7 @@ function renderJudgeDetailView(id) {
         </article>
 
         <article class="detail-panel wide">
-          <div class="panel-heading"><h3>Family / Dependent Assets</h3><p>Shown only where the judge's public declaration itself includes spouse, joint-family or dependent entries.</p></div>
+          <div class="panel-heading"><h3>Liabilities / Family Entries</h3><p>Shown only where the public declaration includes liabilities, spouse, joint-family or dependent entries.</p></div>
           ${assetList(assets.family)}
         </article>
       </section>

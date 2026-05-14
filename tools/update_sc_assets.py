@@ -2,6 +2,7 @@
 import html
 import json
 import re
+import subprocess
 import urllib.request
 from pathlib import Path
 
@@ -15,9 +16,15 @@ ALIASES = {
 
 
 def fetch(url):
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    with urllib.request.urlopen(req, timeout=30) as res:
-        return res.read().decode("utf-8", errors="replace")
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=30) as res:
+            return res.read().decode("utf-8", errors="replace")
+    except Exception:
+        return subprocess.check_output(
+            ["curl", "-L", "--silent", "--show-error", url],
+            timeout=45,
+        ).decode("utf-8", errors="replace")
 
 
 def clean_text(raw):
@@ -30,6 +37,22 @@ def clean_text(raw):
     text = re.sub(r"[ \t\r\f\v]+", " ", text)
     text = re.sub(r"\n\s+", "\n", text)
     text = re.sub(r"\n{3,}", "\n\n", text)
+    return text.strip()
+
+
+def clean_fragment(raw):
+    raw = re.sub(r"<script\b.*?</script>", " ", raw, flags=re.I | re.S)
+    raw = re.sub(r"<style\b.*?</style>", " ", raw, flags=re.I | re.S)
+    raw = re.sub(r"<br\s*/?>", "\n", raw, flags=re.I)
+    raw = re.sub(r"</p\s*>", "\n", raw, flags=re.I)
+    raw = re.sub(r"<p\b[^>]*>", "\n", raw, flags=re.I)
+    raw = re.sub(r"</(li|div|tr|td|th|h[1-6])>", "\n", raw, flags=re.I)
+    raw = re.sub(r"<[^>]+>", " ", raw)
+    text = html.unescape(raw).replace("\xa0", " ")
+    text = re.sub(r"[ \t\r\f\v]+", " ", text)
+    text = re.sub(r" *\n *", "\n", text)
+    text = re.sub(r"\(\s*\n\s*([a-z0-9]+)\)", r"(\1)", text, flags=re.I)
+    text = re.sub(r"\n{2,}", "\n", text)
     return text.strip()
 
 
@@ -56,6 +79,21 @@ def rupee_values(text):
     return values
 
 
+def investment_values(text):
+    values = rupee_values(text)
+    money_label = r"shares|mutual funds?|fixed deposits?|fdrs?|bonds?|insurance|bank accounts?|savings|ppf|gpf|lic|rbi"
+    for line in re.split(r"\n+", text):
+        if not re.search(money_label, line, flags=re.I):
+            continue
+        if re.search(r"(?:Rs\.?|₹|cr\.?|crores?|lakhs?|lacs?)", line, flags=re.I):
+            continue
+        for raw in re.findall(r"\b([0-9]{1,2}(?:,[0-9]{2}){1,4}(?:,[0-9]{3})?)\b", line):
+            amount = int(raw.replace(",", ""))
+            if amount >= 10000:
+                values.append(amount)
+    return values
+
+
 def section_between(text, start, end_markers):
     start_match = re.search(start, text, flags=re.I)
     if not start_match:
@@ -73,10 +111,54 @@ def compact_excerpt(text, limit=900):
 
 def clean_item(text, limit=240):
     text = re.sub(r"\s+", " ", text).strip(" -–;,.")
-    text = re.sub(r"\b(?:NIL|-NA-)\b", "", text, flags=re.I).strip(" -–;,.")
+    text = re.sub(r"\b(?:NIL|-NA-|N\.A\.?)\b", "", text, flags=re.I).strip(" -–;,.")
     if not text:
         return ""
     return text[:limit].rstrip() + ("..." if len(text) > limit else "")
+
+
+def owner_items(owner, text, limit=260):
+    items = []
+    for line in re.split(r"\n+", text):
+        line = line.strip(" -–;,.")
+        if not line or re.fullmatch(r"(?:nil|na|-)+", line, flags=re.I):
+            continue
+        if re.search(r"^see\s*:\s*sl\.?\s*no\.?", line, flags=re.I):
+            continue
+        item = clean_item(line, limit)
+        if re.search(r":\s*$", item):
+            continue
+        if item:
+            items.append(f"{owner}: {item}")
+    return items
+
+
+def extract_asset_table(page_html):
+    for table in re.findall(r"<table\b.*?</table>", page_html, flags=re.I | re.S):
+        rows = []
+        for row_html in re.findall(r"<tr\b.*?</tr>", table, flags=re.I | re.S):
+            cells = [
+                clean_fragment(cell)
+                for cell in re.findall(r"<t[dh]\b.*?</t[dh]>", row_html, flags=re.I | re.S)
+            ]
+            if cells:
+                rows.append(cells)
+        joined = " ".join(" ".join(row) for row in rows[:2])
+        if re.search(r"ASSETS\s*/\s*LIABIL", joined, flags=re.I):
+            return rows
+    return []
+
+
+def find_asset_row(rows, label_pattern):
+    for row in rows:
+        if row and re.search(label_pattern, row[0], flags=re.I):
+            return row
+    return []
+
+
+def row_owner_cells(row):
+    owners = ["Self / Joint Family", "Spouse / Joint Family", "Dependent(s)"]
+    return list(zip(owners, (row[1:4] + ["", "", ""])[:3]))
 
 
 def split_asset_items(text):
@@ -117,8 +199,9 @@ def amount_contexts(text):
 def metal_weight(text, metal):
     total_g = 0.0
     patterns = [
-        rf"{metal}[^\n]{{0,60}}?([0-9][0-9,.]*)\s*(kgs?|kilograms?|gms?|grams?)",
-        rf"([0-9][0-9,.]*)\s*(kgs?|kilograms?|gms?|grams?)\s+{metal}",
+        rf"{metal}[^\n]{{0,60}}?([0-9][0-9,.]*)\s*(kgs?|kilograms?|gms?|grams?)\.?",
+        rf"([0-9][0-9,.]*)\s*(kgs?|kilograms?|gms?|grams?)\.?\s+{metal}",
+        rf"([0-9][0-9,.]*)\s*(kgs?|kilograms?|gms?|grams?)\.?\s+of\s+{metal}",
     ]
     for pattern in patterns:
         for amount, unit in re.findall(pattern, text, flags=re.I):
@@ -139,8 +222,12 @@ def acres_total(text):
 
 
 def vehicle_items(text):
-    brand_pattern = r"(?:Volkswagen|Honda|Toyota|Maruti|Mahindra|Hyundai|Tata|Ford|Renault|Skoda|Kia|BMW|Mercedes|Audi|Scooter|Motor\s*cycle|Motorcycle)[^.;\n]*"
+    brand_pattern = r"(?:Wagon-?R|Volkswagen|Honda|Toyota|Maruti|Mahindra|Hyundai|Tata|Ford|Renault|Skoda|Kia|BMW|Mercedes|Audi|Scooter|Motor\s*cycle|Motorcycle)[^.;\n]*"
     items = []
+    for match in re.finditer(r"Vehicle\s*:\s*([^\n;,.]+(?:[- ][A-Za-z0-9]+)*)", text, flags=re.I):
+        value = clean_item(match.group(1), 120)
+        if value and not re.search(r"\bnil\b", value, flags=re.I):
+            items.append(value)
     for match in re.finditer(brand_pattern, text, flags=re.I):
         item = clean_item(match.group(0), 180)
         if item and not re.search(r"\bnil\b", item, flags=re.I):
@@ -150,7 +237,7 @@ def vehicle_items(text):
     for part in re.split(r"(?=Vehicle\s*:|Car\s*:|Motor\s+)", text, flags=re.I):
         if re.match(r"\s*(?:vehicle|car|motor)", part, flags=re.I):
             item = clean_item(part, 180)
-            if item and not re.search(r"vehicle\s*:\s*nil|car\s*:\s*nil", item, flags=re.I):
+            if item and not re.search(r"vehicle\s*:\s*nil|car\s*:\s*nil|vehicle\s*:\s*$", item, flags=re.I):
                 items.append(item)
     return list(dict.fromkeys(items))
 
@@ -172,6 +259,140 @@ def jewellery_items(text):
     return list(dict.fromkeys(items))
 
 
+def split_property_items(text):
+    text = re.sub(r"See\s*:\s*Sl\.\s*No\.[^\n]+", " ", text, flags=re.I)
+    pieces = re.split(r"(?=\n?\s*(?:\d+\.|\([0-9a-z]+\))\s+)", text)
+    items = []
+    for piece in pieces:
+        item = clean_item(piece, 420)
+        if re.fullmatch(r"[()a-z0-9]+", item, flags=re.I):
+            continue
+        if re.search(r":\s*$", item):
+            continue
+        if item and not re.fullmatch(r"(?:nil|na|-)+", item, flags=re.I):
+            items.append(item)
+    return items
+
+
+def parse_asset_table(page_html):
+    rows = extract_asset_table(page_html)
+    if not rows:
+        return None
+
+    real_estate_row = find_asset_row(rows, r"Real\s+Estate")
+    investment_row = find_asset_row(rows, r"Investments")
+    movable_row = find_asset_row(rows, r"^Movable\s+Property")
+    liability_row = find_asset_row(rows, r"^Liabilities")
+
+    money_items = []
+    property_items = []
+    jewellery = []
+    vehicles = []
+    liability_items = []
+
+    for owner, text in row_owner_cells(investment_row):
+        money_items.extend([
+            item for item in owner_items(owner, text, 280)
+            if re.search(r"(?:Rs\.?|₹|[0-9])", item)
+        ])
+
+    for owner, text in row_owner_cells(real_estate_row):
+        for item in split_property_items(text):
+            property_items.append(f"{owner}: {item}")
+
+    for owner, text in row_owner_cells(movable_row):
+        owner_jewels = [item for item in owner_items(owner, text, 220) if re.search(r"jewellery|gold|silver|ornaments|watch", item, flags=re.I)]
+        owner_vehicles = [f"{owner}: {item}" for item in vehicle_items(text)]
+        if owner_jewels:
+            jewellery.extend(owner_jewels)
+        vehicles.extend(owner_vehicles)
+
+    for owner, text in row_owner_cells(liability_row):
+        liability_items.extend(owner_items(owner, text, 220))
+
+    investment_text = "\n".join(cell for _, cell in row_owner_cells(investment_row))
+    movable_text = "\n".join(cell for _, cell in row_owner_cells(movable_row))
+    real_estate_text = "\n".join(cell for _, cell in row_owner_cells(real_estate_row))
+    liability_text = "\n".join(cell for _, cell in row_owner_cells(liability_row))
+
+    monetary_total = sum(investment_values(investment_text)) or None
+    gold_g = metal_weight(movable_text, "gold")
+    silver_g = metal_weight(movable_text, "silver")
+    acres = acres_total(real_estate_text)
+    land_items = [item for item in property_items if re.search(r"acre|agricultural|land|bigha", item, flags=re.I)]
+    residential_items = [item for item in property_items if item not in land_items]
+    real_estate_count = len(property_items)
+
+    return {
+        "total_value": monetary_total,
+        "total_value_type": "Disclosed monetary investment/deposit amounts only; excludes unvalued real estate, jewellery, vehicles and liabilities.",
+        "metrics": {
+            "monetary_total": monetary_total,
+            "gold_grams": gold_g or None,
+            "silver_grams": silver_g or None,
+            "vehicles_count": len(vehicles),
+            "real_estate_count": real_estate_count,
+            "land_acres": acres or None,
+        },
+        "movable": [{
+            "category": "money",
+            "emoji": "💰",
+            "label": "Money, deposits and investments",
+            "owner": "Self/spouse/dependents as disclosed",
+            "description": "Bank balances, FDRs, GPF/PPF, insurance, securities and similar monetary assets disclosed in the official table.",
+            "items": money_items[:18],
+            "value": monetary_total,
+        }, {
+            "category": "jewellery",
+            "emoji": "🏅",
+            "label": "Jewellery and valuables",
+            "owner": "Self/spouse/dependents as disclosed",
+            "description": "Gold, silver, watches and other valuables where declared.",
+            "items": jewellery[:14],
+            "value": None,
+            "gold_grams": gold_g or None,
+            "silver_grams": silver_g or None,
+        }, {
+            "category": "vehicles",
+            "emoji": "🚗",
+            "label": "Vehicles",
+            "owner": "Self/spouse/dependents as disclosed",
+            "description": "Cars or other vehicles where declared.",
+            "items": vehicles[:10],
+            "value": None,
+            "count": len(vehicles),
+        }],
+        "immovable": [{
+            "category": "property",
+            "emoji": "🏠",
+            "label": "Homes, flats, plots and buildings",
+            "owner": "Self/joint family/spouse/dependents as disclosed",
+            "description": "Residential and built-property interests listed in the official table.",
+            "items": residential_items[:18],
+            "value": None,
+        }, {
+            "category": "land",
+            "emoji": "🌾",
+            "label": "Agricultural / landed property",
+            "owner": "Self/joint family/spouse/dependents as disclosed",
+            "description": "Agricultural land and other land interests listed in the official table.",
+            "items": land_items[:18],
+            "value": None,
+            "acres": acres or None,
+        }],
+        "family": [{
+            "category": "liabilities",
+            "emoji": "🧾",
+            "label": "Liabilities",
+            "owner": "Self/spouse/dependents as disclosed",
+            "description": "Loans or liabilities where the official table declares them.",
+            "items": liability_items[:12],
+            "value": None,
+        }] if liability_items else [],
+        "raw_title": "",
+    }
+
+
 def parse_index(html_text):
     rows = re.findall(
         r"<tr>\s*<td[^>]*>\s*\d+\s*</td>\s*<td[^>]*>(.*?)</td>\s*<td[^>]*>\s*<a[^>]+href=[\"']([^\"']+)[\"']",
@@ -182,6 +403,13 @@ def parse_index(html_text):
 
 
 def parse_asset_page(page_html):
+    table_parsed = parse_asset_table(page_html)
+    if table_parsed:
+        title_match = re.search(r"<title[^>]*>(.*?)</title>", page_html, flags=re.I | re.S)
+        if title_match:
+            table_parsed["raw_title"] = clean_text(title_match.group(1))
+        return table_parsed
+
     text = clean_text(page_html)
     title_match = re.search(r"Assets\s+[–-]\s+(.+?)(?:\n|PARTICULARS)", text, flags=re.I)
     declaration_text = text
@@ -312,14 +540,14 @@ def main():
             "currency": "INR",
             "source_url": url,
             "source_label": "Supreme Court asset declaration",
-            "last_verified": "2026-05-13",
+            "last_verified": "2026-05-14",
             "total_value": parsed["total_value"],
             "total_value_type": parsed["total_value_type"],
             "metrics": parsed["metrics"],
             "movable": parsed["movable"],
             "immovable": parsed["immovable"],
             "family": parsed["family"],
-            "notes": "Official Supreme Court disclosure. Monetary total is computed from rupee amounts visible in the declaration text and does not estimate unvalued immovable property, jewellery, vehicles or other non-monetary declarations."
+            "notes": "Official Supreme Court disclosure. Monetary total is computed only from rupee amounts visible in the investments/deposits row of the declaration table. It does not estimate unvalued real estate, jewellery, vehicles, liabilities or other non-monetary declarations."
         })
         updated += 1
 
