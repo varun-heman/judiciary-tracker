@@ -34,6 +34,7 @@ const state = {
   selectedJudgeId: '',
   searchQuery: '',
   metalPrices: null,
+  wikiBioCache: {},
 };
 
 let applyingRoute = false;
@@ -461,6 +462,100 @@ function renderContactRows(person) {
 
 function getJudgeDetail(id) {
   return state.judgeDetails.find(d => d.id === id) || null;
+}
+
+function wikipediaQueryTitle(judge, detail) {
+  const explicit = detail && (detail.wikipedia_title || detail.wikipedia_page);
+  if (explicit) return explicit;
+  return (judge.name || '')
+    .replace(/^Hon'?ble\s+/i, '')
+    .replace(/^Mr\.?\s+Justice\s+/i, '')
+    .replace(/^Mrs\.?\s+Justice\s+/i, '')
+    .replace(/^Ms\.?\s+Justice\s+/i, '')
+    .replace(/^Dr\.?\s+Justice\s+/i, '')
+    .replace(/^Justice\s+/i, '')
+    .trim();
+}
+
+function wikipediaSearchUrl(judge, detail) {
+  const query = wikipediaQueryTitle(judge, detail) || judge.name || '';
+  return `https://en.wikipedia.org/w/index.php?search=${encodeURIComponent(query)}`;
+}
+
+async function loadWikipediaBio(judgeId) {
+  const target = document.getElementById(`wiki-bio-${judgeId}`);
+  if (!target) return;
+  const judge = state.courts.find(d => d.id === judgeId && isJudgeRecord(d));
+  if (!judge) return;
+  const detail = getJudgeDetail(judgeId) || {};
+  const title = wikipediaQueryTitle(judge, detail);
+  if (!title) return;
+
+  const cached = state.wikiBioCache[judgeId];
+  if (cached) {
+    target.innerHTML = renderWikipediaBioResult(cached, judge, detail);
+    return;
+  }
+
+  try {
+    let result = await fetchWikipediaSummary(title);
+    if (!result) {
+      const searchTitle = await searchWikipediaTitle(`${title} judge India`);
+      if (searchTitle) result = await fetchWikipediaSummary(searchTitle);
+    }
+    if (!result) throw new Error('No specific Wikipedia biography found');
+    state.wikiBioCache[judgeId] = result;
+    target.innerHTML = renderWikipediaBioResult(result, judge, detail);
+  } catch (err) {
+    const result = { ok: false, message: err.message || 'No Wikipedia summary found' };
+    state.wikiBioCache[judgeId] = result;
+    target.innerHTML = renderWikipediaBioResult(result, judge, detail);
+  }
+}
+
+async function fetchWikipediaSummary(title) {
+  const url = `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`;
+  const res = await fetch(url, { headers: { accept: 'application/json' } });
+  if (!res.ok) return null;
+  const data = await res.json();
+  if (data.type === 'disambiguation' || !data.extract) return null;
+  return {
+    ok: true,
+    title: data.title || title,
+    extract: data.extract,
+    pageUrl: data.content_urls && data.content_urls.desktop && data.content_urls.desktop.page
+      ? data.content_urls.desktop.page
+      : `https://en.wikipedia.org/wiki/${encodeURIComponent(data.title || title).replace(/%20/g, '_')}`,
+    description: data.description || '',
+  };
+}
+
+async function searchWikipediaTitle(query) {
+  const url = `https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&origin=*&srlimit=1&srsearch=${encodeURIComponent(query)}`;
+  const res = await fetch(url, { headers: { accept: 'application/json' } });
+  if (!res.ok) return '';
+  const data = await res.json();
+  const first = data && data.query && Array.isArray(data.query.search) ? data.query.search[0] : null;
+  return first && first.title ? first.title : '';
+}
+
+function renderWikipediaBioResult(result, judge, detail) {
+  const officialUrl = (detail && detail.bio_source_url) || judge.source_url || '';
+  const officialLabel = (detail && detail.bio_source_label) || judge.source_label || 'Official profile';
+  if (result.ok) {
+    return `
+      <p class="bio-text">${escHtml(result.extract)}</p>
+      <div class="source-stack">
+        <a class="source-pill primary" href="${escHtml(result.pageUrl)}" target="_blank" rel="noopener">Source: Wikipedia - ${escHtml(result.title)}</a>
+        ${officialUrl ? `<a class="source-pill" href="${escHtml(officialUrl)}" target="_blank" rel="noopener">Official source: ${escHtml(officialLabel)}</a>` : ''}
+      </div>`;
+  }
+  return `
+    <p class="bio-text">Wikipedia summary not found for this judge. This can happen when a judge does not have a dedicated page or the page title differs from the judge's official name.</p>
+    <div class="source-stack">
+      <a class="source-pill primary" href="${escHtml(wikipediaSearchUrl(judge, detail))}" target="_blank" rel="noopener">Search Wikipedia</a>
+      ${officialUrl ? `<a class="source-pill" href="${escHtml(officialUrl)}" target="_blank" rel="noopener">Official source: ${escHtml(officialLabel)}</a>` : ''}
+    </div>`;
 }
 
 function hasAssetDeclaration(assets) {
@@ -1430,6 +1525,7 @@ function renderContent() {
 
   if (state.selectedJudgeId) {
     container.innerHTML = renderJudgeDetailView(state.selectedJudgeId);
+    loadWikipediaBio(state.selectedJudgeId);
     return;
   }
 
@@ -1612,9 +1708,6 @@ function renderJudgeDetailView(id) {
   const hasAssets = hasAssetDeclaration(assets);
   const total = assetNumber(assets);
   const nw    = computeNetWorth(assets);
-  const bio = detail.bio || judge.notes || 'No sourced biography has been added for this judge yet.';
-  const sourceUrl = detail.bio_source_url || judge.source_url || '';
-  const sourceLabel = detail.bio_source_label || judge.source_label || 'Official profile';
   const assetSourceUrl = assets.source_url || '';
   const assetSourceLabel = assets.source_label || 'Official asset declaration';
 
@@ -1670,11 +1763,12 @@ function renderJudgeDetailView(id) {
       <section class="detail-grid">
         <article class="detail-panel">
           <div class="panel-heading">
-            <h3>Bio</h3>
-            <p>AI-assisted summary from available public profile/source data.</p>
+            <h3>About</h3>
+            <p>Live summary from Wikipedia where a matching page exists.</p>
           </div>
-          <p class="bio-text">${escHtml(bio)}</p>
-          ${sourceUrl ? `<a class="inline-link" href="${escHtml(sourceUrl)}" target="_blank" rel="noopener">${escHtml(sourceLabel)}</a>` : ''}
+          <div class="wiki-bio" id="wiki-bio-${escAttr(judge.id)}">
+            <p class="bio-text">Loading Wikipedia summary...</p>
+          </div>
         </article>
 
         <article class="detail-panel">
