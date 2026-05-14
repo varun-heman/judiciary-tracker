@@ -1,5 +1,13 @@
 [
   {
+    "court_id": "HC-UTK",
+    "court": "Uttarakhand High Court",
+    "url": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
+    "scope": "transfer-notifications",
+    "verified": true,
+    "notes": "Official notifications page. Admin.A-2 category = transfer/posting orders for judicial officers. Hosted on S3WaaS CDN (cdnbbsr.s3waas.gov.in). Verified May 2026."
+  },
+  {
     "court_id": "SC",
     "court": "Supreme Court of India",
     "url": "https://www.sci.gov.in/chief-justice-judges/",
