@@ -31,6 +31,7 @@ const state = {
   judgeRoleFilter: 'ALL',
   judgeTenureRange: 12,
   judgeTenureShowAll: true,
+  retirementMonths: 12,
   selectedId: 'HOME',
   selectedJudgeId: '',
   searchQuery: '',
@@ -127,7 +128,7 @@ async function loadData() {
 // Hash routing
 // ─────────────────────────────────────────────────────────────────────────────
 function validViewId(id) {
-  if (id === 'HOME' || id === 'ADMIN' || id === 'RETIRED') return true;
+  if (id === 'HOME' || id === 'ADMIN' || id === 'RETIRED' || id === 'RETIREMENTS') return true;
   return state.courts.some(d => d.id === id) || state.ministries.some(d => d.id === id);
 }
 
@@ -227,6 +228,11 @@ function renderNav() {
           <span class="nav-icon">◌</span>
           <span class="nav-label">Retired Judges</span>
           <span class="nav-badge">${retiredJudges().length}</span>
+        </a>
+        <a class="nav-item ${state.selectedId === 'RETIREMENTS' ? 'active' : ''}"
+           href="#" onclick="selectView('RETIREMENTS'); return false;">
+          <span class="nav-icon">⏳</span>
+          <span class="nav-label">Upcoming Retirements</span>
         </a>
         <a class="nav-item" href="about.html">
           <span class="nav-icon">ⓘ</span>
@@ -1685,6 +1691,12 @@ function renderContent() {
     return;
   }
 
+  if (state.selectedId === 'RETIREMENTS') {
+    container.innerHTML = renderRetirementsView();
+    attachRetirementSliderListener();
+    return;
+  }
+
   if (state.selectedId === 'HOME') {
     container.innerHTML = renderDashboardView();
     return;
@@ -1938,6 +1950,115 @@ function renderJudgeDetailView(id) {
       </section>
     </div></div>`;
 }
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Upcoming Retirements Page
+// ─────────────────────────────────────────────────────────────────────────────
+function renderRetirementsView() {
+  const months = state.retirementMonths;
+  const cutoffDays = months * 30;
+
+  // Judges pool
+  const judgePool = [...state.courts]
+    .filter(d => d.type !== 'institution' && d.type !== 'placeholder')
+    .map(d => ({ ...d, tenure: getTenure(d.retirement_date) }))
+    .filter(d => d.tenure.daysLeft !== null && d.tenure.daysLeft >= 0 && d.tenure.daysLeft <= cutoffDays);
+
+  // Admin staff pool
+  const adminPool = [...(state.adminStaff || [])]
+    .map(d => ({ ...d, tenure: getTenure(d.retirement_date) }))
+    .filter(d => d.tenure.daysLeft !== null && d.tenure.daysLeft >= 0 && d.tenure.daysLeft <= cutoffDays);
+
+  const allRetiring = [...judgePool, ...adminPool].sort((a, b) => a.tenure.daysLeft - b.tenure.daysLeft);
+
+  // Group by court
+  const byCourtMap = {};
+  for (const p of allRetiring) {
+    const key = p.court || p.ministry || 'Unknown';
+    if (!byCourtMap[key]) byCourtMap[key] = [];
+    byCourtMap[key].push(p);
+  }
+  const courts = Object.entries(byCourtMap).sort((a, b) => {
+    // Sort courts by their earliest retirement
+    const aMin = Math.min(...a[1].map(p => p.tenure.daysLeft));
+    const bMin = Math.min(...b[1].map(p => p.tenure.daysLeft));
+    return aMin - bMin;
+  });
+
+  const sliderLabel = months === 1 ? '1 month' : months < 12 ? `${months} months` : months === 12 ? '1 year' : `${months} months`;
+  const criticalCount = allRetiring.filter(p => p.tenure.status === 'critical').length;
+  const warningCount  = allRetiring.filter(p => p.tenure.status === 'warning').length;
+
+  return `
+    <div class="view-header">
+      <h2>Upcoming Retirements</h2>
+      <p class="view-subtitle">Judges and court staff retiring within the selected window, across all tracked courts.</p>
+    </div>
+
+    <div class="retirement-slider-bar">
+      <label class="retirement-slider-label">
+        Showing retirements within <strong id="ret-months-label">${sliderLabel}</strong>
+      </label>
+      <input type="range" id="ret-months-slider" class="tenure-slider"
+        min="1" max="60" value="${months}" step="1">
+      <div class="retirement-slider-ticks">
+        <span onclick="setRetirementMonths(1)">1mo</span>
+        <span onclick="setRetirementMonths(3)">3mo</span>
+        <span onclick="setRetirementMonths(6)">6mo</span>
+        <span onclick="setRetirementMonths(12)">1yr</span>
+        <span onclick="setRetirementMonths(24)">2yr</span>
+        <span onclick="setRetirementMonths(36)">3yr</span>
+        <span onclick="setRetirementMonths(60)">5yr</span>
+      </div>
+    </div>
+
+    <div class="stats-bar">
+      <span class="stat-chip">${allRetiring.length} retiring within ${sliderLabel}</span>
+      ${criticalCount ? `<span class="stat-chip critical">🔴 ${criticalCount} within 90 days</span>` : ''}
+      ${warningCount  ? `<span class="stat-chip warning">🟡 ${warningCount} within 1 year</span>`  : ''}
+    </div>
+
+    ${allRetiring.length === 0
+      ? `<div class="empty-state"><p>No judges or staff retiring within ${sliderLabel}.</p></div>`
+      : courts.map(([courtName, people]) => `
+          <div class="retirement-court-group">
+            <div class="retirement-court-heading">${escHtml(courtName)}
+              <span class="retirement-court-count">${people.length}</span>
+            </div>
+            <div class="retirement-rows">
+              ${people.map(p => `
+                <div class="retirement-row ${p.tenure.status}">
+                  <div class="retirement-row-name">
+                    ${isJudgeRecord(p)
+                      ? `<a href="${escAttr(judgeProfileHref(p))}" onclick="event.preventDefault(); selectView('${escAttr(p.parent_id || '')}'); selectJudge('${escAttr(p.id)}');">${escHtml(p.name)}</a>`
+                      : escHtml(p.name)}
+                    ${p.role ? `<span class="retirement-row-role">${escHtml(p.role)}</span>` : ''}
+                  </div>
+                  <div class="upcoming-chip ${p.tenure.status}">${p.tenure.label}</div>
+                </div>`).join('')}
+            </div>
+          </div>`).join('')}`;
+}
+
+function attachRetirementSliderListener() {
+  const slider = document.getElementById('ret-months-slider');
+  if (!slider) return;
+  slider.addEventListener('input', () => {
+    state.retirementMonths = Number(slider.value);
+    const label = document.getElementById('ret-months-label');
+    const m = state.retirementMonths;
+    if (label) label.textContent = m === 1 ? '1 month' : m < 12 ? `${m} months` : m === 12 ? '1 year' : `${m} months`;
+  });
+  slider.addEventListener('change', () => {
+    state.retirementMonths = Number(slider.value);
+    renderContent();
+  });
+}
+
+window.setRetirementMonths = function(m) {
+  state.retirementMonths = m;
+  renderContent();
+};
 
 function renderRetiredJudgesView() {
   const retired = retiredJudges();

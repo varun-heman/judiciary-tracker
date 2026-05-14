@@ -3087,3 +3087,118 @@ body.modal-open {
   .pdf-modal-header h2 { font-size: 13px; }
 }
 .menu-toggle-btn { display: none; }
+
+/* ── Upcoming Retirements Page ─────────────────────────────────────────────── */
+.retirement-slider-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 16px;
+}
+.retirement-slider-label {
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+.retirement-slider-label strong {
+  color: var(--text);
+}
+.retirement-slider-bar input[type=range] {
+  width: 100%;
+  accent-color: var(--accent2);
+}
+.retirement-slider-ticks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10.5px;
+  color: var(--text-muted);
+}
+.retirement-slider-ticks span {
+  cursor: pointer;
+  padding: 1px 3px;
+  border-radius: 3px;
+  transition: background 0.15s;
+}
+.retirement-slider-ticks span:hover {
+  background: var(--hover);
+  color: var(--text);
+}
+.retirement-court-group {
+  margin-bottom: 20px;
+}
+.retirement-court-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  padding: 6px 0 8px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 8px;
+}
+.retirement-court-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--bg-subtle, var(--hover));
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+.retirement-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.retirement-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  transition: background 0.12s;
+}
+.retirement-row:hover {
+  background: var(--hover);
+}
+.retirement-row.critical {
+  border-color: var(--critical-border);
+  background: var(--critical-bg);
+}
+.retirement-row.warning {
+  border-color: var(--warning-border);
+  background: var(--warning-bg);
+}
+.retirement-row-name {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.retirement-row-name a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.retirement-row-name a:hover { text-decoration: underline; }
+.retirement-row-role {
+  font-size: 11px;
+  color: var(--text-muted);
+}
