@@ -54,7 +54,7 @@ def main():
         "goldSpotUSD":   round(gold_usd,   2),
         "silverSpotUSD": round(silver_usd, 4),
         "usdToInr":      round(usd_inr,    4),
-        "fetchedAt":     datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "fetchedAt":     datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "assumptions": {
             "goldKarat":     22,
             "goldPurity":    round(GOLD_PURITY, 6),
