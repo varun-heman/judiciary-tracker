@@ -176,7 +176,7 @@ function renderNotificationNav() {
         </a>
         <a class="nav-item" href="index.html">
           <span class="nav-icon">↩</span>
-          <span class="nav-label">Main Tracker</span>
+          <span class="nav-label">Go Back</span>
         </a>
       </div>
     </div>`;
