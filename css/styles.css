@@ -1191,6 +1191,11 @@ th.est-value-col {
   color: var(--accent2);
 }
 
+.source-pill.static {
+  cursor: default;
+  color: var(--text-muted);
+}
+
 .source-pill:hover {
   border-color: color-mix(in srgb, var(--accent2) 42%, var(--border));
   color: var(--accent2);

@@ -490,10 +490,12 @@ async function loadWikipediaBio(judgeId) {
   const detail = getJudgeDetail(judgeId) || {};
   const title = wikipediaQueryTitle(judge, detail);
   if (!title) return;
+  const manualBio = (detail.bio || '').trim();
 
   const cached = state.wikiBioCache[judgeId];
   if (cached) {
-    target.innerHTML = renderWikipediaBioResult(cached, judge, detail);
+    if (manualBio) renderManualBioSources(judgeId, cached, judge, detail);
+    else target.innerHTML = renderWikipediaBioResult(cached, judge, detail);
     return;
   }
 
@@ -505,11 +507,13 @@ async function loadWikipediaBio(judgeId) {
     }
     if (!result) throw new Error('No specific Wikipedia biography found');
     state.wikiBioCache[judgeId] = result;
-    target.innerHTML = renderWikipediaBioResult(result, judge, detail);
+    if (manualBio) renderManualBioSources(judgeId, result, judge, detail);
+    else target.innerHTML = renderWikipediaBioResult(result, judge, detail);
   } catch (err) {
     const result = { ok: false, message: err.message || 'No Wikipedia summary found' };
     state.wikiBioCache[judgeId] = result;
-    target.innerHTML = renderWikipediaBioResult(result, judge, detail);
+    if (manualBio) renderManualBioSources(judgeId, result, judge, detail);
+    else target.innerHTML = renderWikipediaBioResult(result, judge, detail);
   }
 }
 
@@ -554,6 +558,30 @@ function renderWikipediaBioResult(result, judge, detail) {
     <p class="bio-text">Wikipedia summary not found for this judge. This can happen when a judge does not have a dedicated page or the page title differs from the judge's official name.</p>
     <div class="source-stack">
       <a class="source-pill primary" href="${escHtml(wikipediaSearchUrl(judge, detail))}" target="_blank" rel="noopener">Search Wikipedia</a>
+      ${officialUrl ? `<a class="source-pill" href="${escHtml(officialUrl)}" target="_blank" rel="noopener">Official source: ${escHtml(officialLabel)}</a>` : ''}
+    </div>`;
+}
+
+function renderManualBioSources(judgeId, result, judge, detail) {
+  const target = document.getElementById(`manual-bio-sources-${judgeId}`);
+  if (!target) return;
+  const officialUrl = (detail && detail.bio_source_url) || judge.source_url || '';
+  const officialLabel = (detail && detail.bio_source_label) || judge.source_label || 'Official profile';
+  target.innerHTML = `
+    ${result && result.ok ? `<a class="source-pill primary" href="${escHtml(result.pageUrl)}" target="_blank" rel="noopener">Wikipedia: ${escHtml(result.title)}</a>` : '<span class="source-pill static">Bio compiled from public-source summaries</span>'}
+    ${officialUrl ? `<a class="source-pill" href="${escHtml(officialUrl)}" target="_blank" rel="noopener">Official source: ${escHtml(officialLabel)}</a>` : ''}
+  `;
+}
+
+function renderManualBio(detail, judge) {
+  const bio = (detail && detail.bio ? detail.bio : '').trim();
+  if (!bio) return '';
+  const officialUrl = (detail && detail.bio_source_url) || judge.source_url || '';
+  const officialLabel = (detail && detail.bio_source_label) || judge.source_label || 'Official profile';
+  return `
+    <p class="bio-text">${escHtml(bio)}</p>
+    <div class="source-stack" id="manual-bio-sources-${escAttr(judge.id)}">
+      <span class="source-pill static">Checking Wikipedia source...</span>
       ${officialUrl ? `<a class="source-pill" href="${escHtml(officialUrl)}" target="_blank" rel="noopener">Official source: ${escHtml(officialLabel)}</a>` : ''}
     </div>`;
 }
@@ -1764,10 +1792,10 @@ function renderJudgeDetailView(id) {
         <article class="detail-panel">
           <div class="panel-heading">
             <h3>About</h3>
-            <p>Live summary from Wikipedia where a matching page exists.</p>
+            <p>${detail.bio ? 'Manual summary from public sources, with Wikipedia linked where available.' : 'Live summary from Wikipedia where a matching page exists.'}</p>
           </div>
           <div class="wiki-bio" id="wiki-bio-${escAttr(judge.id)}">
-            <p class="bio-text">Loading Wikipedia summary...</p>
+            ${detail.bio ? renderManualBio(detail, judge) : '<p class="bio-text">Loading Wikipedia summary...</p>'}
           </div>
         </article>
 
