@@ -553,9 +553,216 @@ function assetList(items) {
       </div>
       ${item.description ? `<p class="asset-group-desc">${escHtml(item.description)}</p>` : ''}
       ${Array.isArray(item.items) && item.items.length
-        ? `<ul class="asset-item-list">${item.items.map(entry => `<li>${escHtml(entry)}</li>`).join('')}</ul>`
+        ? assetTable(item)
         : '<div class="asset-empty">No separated entries found in the declaration.</div>'}
     </div>`).join('');
+}
+
+function assetTable(item) {
+  const rows = (item.items || []).map(raw => assetTableRow(item.category, raw)).filter(Boolean);
+  if (!rows.length) return '<div class="asset-empty">No separated entries found in the declaration.</div>';
+  if (item.category === 'money') return moneyAssetTable(rows, item);
+  if (item.category === 'property' || item.category === 'land') return propertyAssetTable(rows, item);
+  if (item.category === 'jewellery') return jewelleryAssetTable(rows, item);
+  if (item.category === 'vehicles') return vehicleAssetTable(rows, item);
+  return notesAssetTable(rows, item);
+}
+
+function splitOwnerNote(raw) {
+  const match = String(raw || '').match(/^([^:]{2,40}):\s*(.+)$/);
+  return match
+    ? { owner: match[1].trim(), note: match[2].trim() }
+    : { owner: '', note: String(raw || '').trim() };
+}
+
+function assetTableRow(category, raw) {
+  const { owner, note } = splitOwnerNote(raw);
+  if (!note) return null;
+  if (category === 'money') {
+    return { owner, type: moneyHoldingType(note), amount: parseMoneyAmount(note), note };
+  }
+  if (category === 'property' || category === 'land') {
+    return {
+      owner,
+      type: landHoldingType(note),
+      share: propertyShare(note),
+      acres: parseAcres(note),
+      note
+    };
+  }
+  if (category === 'jewellery') {
+    return {
+      owner,
+      type: /silver/i.test(note) ? 'Silver' : (/watch/i.test(note) ? 'Watch / valuables' : 'Gold'),
+      grams: /silver/i.test(note) ? parseMetalGrams(note, 'silver') : parseMetalGrams(note, 'gold'),
+      note
+    };
+  }
+  if (category === 'vehicles') {
+    return { owner, type: vehicleType(note), note };
+  }
+  return { owner, type: categoryLabel(category), note };
+}
+
+function moneyAssetTable(rows, item) {
+  const total = assetNumber(item) || rows.reduce((sum, row) => sum + (row.amount || 0), 0);
+  return `
+    <div class="asset-table-wrap">
+      <table class="asset-table">
+        <thead><tr><th>Owner</th><th>Holding</th><th class="num">Amount</th><th>Note</th></tr></thead>
+        <tbody>${rows.map(row => `
+          <tr title="${escAttr(row.note)}">
+            <td>${escHtml(row.owner || 'Declared')}</td>
+            <td>${escHtml(row.type)}</td>
+            <td class="num">${row.amount ? formatRupees(row.amount) : 'Not stated'}</td>
+            <td class="note-cell"><span title="${escAttr(row.note)}">ⓘ</span></td>
+          </tr>`).join('')}</tbody>
+        <tfoot><tr><td colspan="2">Total disclosed monetary assets</td><td class="num">${total ? formatRupees(total) : 'Not valued'}</td><td></td></tr></tfoot>
+      </table>
+    </div>`;
+}
+
+function propertyAssetTable(rows, item) {
+  const totalAcres = Number(item.acres) || rows.reduce((sum, row) => sum + (row.acres || 0), 0);
+  return `
+    <div class="asset-table-wrap">
+      <table class="asset-table">
+        <thead><tr><th>Owner</th><th>Type</th><th>Share / size</th><th class="num">Acres</th><th>Note</th></tr></thead>
+        <tbody>${rows.map(row => `
+          <tr title="${escAttr(row.note)}">
+            <td>${escHtml(row.owner || 'Declared')}</td>
+            <td>${escHtml(row.type)}</td>
+            <td>${escHtml(row.share || 'Not stated')}</td>
+            <td class="num">${row.acres ? row.acres.toLocaleString('en-IN') : '—'}</td>
+            <td class="note-cell"><span title="${escAttr(row.note)}">ⓘ</span></td>
+          </tr>`).join('')}</tbody>
+        <tfoot><tr><td colspan="3">Total disclosed acreage</td><td class="num">${totalAcres ? totalAcres.toLocaleString('en-IN') : '—'}</td><td></td></tr></tfoot>
+      </table>
+    </div>`;
+}
+
+function jewelleryAssetTable(rows, item) {
+  const gold = Number(item.gold_grams) || rows.filter(r => r.type === 'Gold').reduce((sum, row) => sum + (row.grams || 0), 0);
+  return `
+    <div class="asset-table-wrap">
+      <table class="asset-table">
+        <thead><tr><th>Owner</th><th>Asset</th><th class="num">Amount</th><th>Note</th></tr></thead>
+        <tbody>${rows.map(row => `
+          <tr title="${escAttr(row.note)}">
+            <td>${escHtml(row.owner || 'Declared')}</td>
+            <td>${escHtml(row.type)}</td>
+            <td class="num">${row.grams ? formatWeight(row.grams) : 'Not stated'}</td>
+            <td class="note-cell"><span title="${escAttr(row.note)}">ⓘ</span></td>
+          </tr>`).join('')}</tbody>
+        <tfoot><tr><td colspan="2">Total gold</td><td class="num">${gold ? formatWeight(gold) : '—'}</td><td></td></tr></tfoot>
+      </table>
+    </div>`;
+}
+
+function vehicleAssetTable(rows, item) {
+  return `
+    <div class="asset-table-wrap">
+      <table class="asset-table">
+        <thead><tr><th>Owner</th><th>Vehicle</th><th>Note</th></tr></thead>
+        <tbody>${rows.map(row => `
+          <tr title="${escAttr(row.note)}">
+            <td>${escHtml(row.owner || 'Declared')}</td>
+            <td>${escHtml(row.type)}</td>
+            <td class="note-cell"><span title="${escAttr(row.note)}">ⓘ</span></td>
+          </tr>`).join('')}</tbody>
+        <tfoot><tr><td>Total vehicles</td><td>${Number(item.count) || rows.length}</td><td></td></tr></tfoot>
+      </table>
+    </div>`;
+}
+
+function notesAssetTable(rows) {
+  return `
+    <div class="asset-table-wrap">
+      <table class="asset-table">
+        <thead><tr><th>Owner</th><th>Type</th><th>Note</th></tr></thead>
+        <tbody>${rows.map(row => `
+          <tr title="${escAttr(row.note)}">
+            <td>${escHtml(row.owner || 'Declared')}</td>
+            <td>${escHtml(row.type)}</td>
+            <td class="note-cell"><span title="${escAttr(row.note)}">ⓘ</span></td>
+          </tr>`).join('')}</tbody>
+      </table>
+    </div>`;
+}
+
+function moneyHoldingType(text) {
+  if (/fdr|fixed deposit/i.test(text)) return 'Fixed deposit';
+  if (/mutual fund/i.test(text)) return 'Mutual fund';
+  if (/shares?/i.test(text)) return 'Shares';
+  if (/bank|saving/i.test(text)) return 'Bank balance';
+  if (/gpf/i.test(text)) return 'GPF';
+  if (/ppf/i.test(text)) return 'PPF';
+  if (/lic|insurance/i.test(text)) return 'Insurance';
+  if (/bond|debenture|rbi/i.test(text)) return 'Bond / debenture';
+  return 'Other monetary holding';
+}
+
+function landHoldingType(text) {
+  if (/agricultural|acre|bigha/i.test(text)) return 'Agricultural land';
+  if (/plot/i.test(text)) return 'Plot';
+  if (/flat|apartment/i.test(text)) return 'Flat / apartment';
+  if (/house|bungalow|residential/i.test(text)) return 'House / residential';
+  if (/land/i.test(text)) return 'Land';
+  return 'Property';
+}
+
+function vehicleType(text) {
+  return text.replace(/^Vehicle\s*:\s*/i, '').trim();
+}
+
+function categoryLabel(category) {
+  return String(category || 'Entry').replace(/_/g, ' ');
+}
+
+function propertyShare(text) {
+  const share = text.match(/\b\d+\/\d+(?:st|nd|rd|th)?\s+share\b|\b\d+\/\d+(?:st|nd|rd|th)?\b/i);
+  const size = text.match(/\b[0-9][0-9,.]*(?:\s*&\s*half|½)?\s*(?:sq\.?\s*(?:yards?|yds?|feet|ft|meters?|mtrs?)|acres?|bighas?|kanal)\b/i);
+  return [share && share[0], size && size[0]].filter(Boolean).join(' · ');
+}
+
+function parseMoneyAmount(text) {
+  const marked = text.match(/(?:Rs\.?|₹)\s*([0-9][0-9,]*(?:\.[0-9]+)?)(?:\s*(cr\.?|crores?|lakhs?|lacs?))?/i);
+  if (marked) return normalizeMoney(marked[1], marked[2]);
+  const bare = text.match(/[–:-]\s*([0-9]{1,2}(?:,[0-9]{2}){1,4}(?:,[0-9]{3})?)\b/);
+  return bare ? Number(bare[1].replace(/,/g, '')) : null;
+}
+
+function normalizeMoney(raw, unit = '') {
+  let amount = Number(String(raw).replace(/,/g, ''));
+  const u = String(unit || '').toLowerCase();
+  if (u.startsWith('cr') || u.startsWith('crore')) amount *= 10000000;
+  if (u.startsWith('lakh') || u.startsWith('lac')) amount *= 100000;
+  return Number.isFinite(amount) ? amount : null;
+}
+
+function parseAcres(text) {
+  const half = text.match(/([0-9][0-9,.]*)\s*&\s*half\s+acres?/i);
+  if (half) return Number(half[1].replace(/,/g, '')) + 0.5;
+  const decimalHalf = text.match(/([0-9][0-9,.]*)½\s*acres?/i);
+  if (decimalHalf) return Number(decimalHalf[1].replace(/,/g, '')) + 0.5;
+  const match = text.match(/([0-9][0-9,.]*)\s*acres?/i);
+  return match ? Number(match[1].replace(/,/g, '')) : null;
+}
+
+function parseMetalGrams(text, metal) {
+  const patterns = [
+    new RegExp(`${metal}[^\\n]{0,60}?([0-9][0-9,.]*)\\s*(kgs?|kilograms?|gms?|grams?)`, 'i'),
+    new RegExp(`([0-9][0-9,.]*)\\s*(kgs?|kilograms?|gms?|grams?)\\.?\\s+(?:of\\s+)?${metal}`, 'i')
+  ];
+  for (const pattern of patterns) {
+    const match = text.match(pattern);
+    if (match) {
+      let value = Number(match[1].replace(/,/g, ''));
+      if (/^kg|kilogram/i.test(match[2])) value *= 1000;
+      return Number.isFinite(value) ? Math.round(value) : null;
+    }
+  }
+  return null;
 }
 
 function hasAssetGroupContent(item) {

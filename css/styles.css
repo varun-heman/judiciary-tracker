@@ -1038,16 +1038,66 @@ body.dark .show-all-btn.active {
   margin-top: 8px;
 }
 
-.asset-item-list {
-  margin-top: 9px;
-  padding-left: 18px;
-  color: var(--text-muted);
-  font-size: 12px;
-  line-height: 1.45;
+.asset-table-wrap {
+  margin-top: 10px;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
 }
 
-.asset-item-list li + li {
-  margin-top: 5px;
+.asset-table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  font-size: 11.5px;
+}
+
+.asset-table th,
+.asset-table td {
+  padding: 7px 8px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
+  text-align: left;
+  vertical-align: top;
+}
+
+.asset-table th {
+  background: var(--bg);
+  color: var(--text);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+.asset-table td.num,
+.asset-table th.num {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.asset-table tfoot td {
+  border-bottom: 0;
+  color: var(--text);
+  font-weight: 850;
+}
+
+.asset-table .note-cell {
+  width: 42px;
+  text-align: center;
+}
+
+.asset-table .note-cell span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--unknown-bg);
+  color: var(--text-muted);
+  cursor: help;
 }
 
 .asset-empty {
