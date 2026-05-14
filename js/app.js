@@ -749,9 +749,9 @@ function jewelleryAssetTable(rows, item) {
     return `₹${Math.round(amt).toLocaleString('en-IN')}`;
   }
 
-  // Tooltip text for est-value cells — rate basis + disclaimer
-  const estTip = mp ? escAttr(
-    `Rate basis: 22K gold ₹${Math.round(mp.goldPerGram).toLocaleString('en-IN')}/g · 92.5% silver ₹${Math.round(mp.silverPerGram).toLocaleString('en-IN')}/g · 1 USD = ₹${Number(mp.usdToInr).toFixed(2)}\n\nEstimated only. Purity of declared jewellery is not stated in affidavits. Making charges, GST and local market premiums are not included. Actual value may differ substantially.`
+  // Single ⓘ tooltip on the column header — rates + disclaimer
+  const estTipText = mp ? escAttr(
+    `Estimated market value based on international spot rates as of ${new Date(mp.fetchedAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' })}.\n\nRates used: 22K gold ₹${Math.round(mp.goldPerGram).toLocaleString('en-IN')}/g · 92.5% silver ₹${Math.round(mp.silverPerGram).toLocaleString('en-IN')}/g · 1 USD = ₹${Number(mp.usdToInr).toFixed(2)}\n\nThese are estimates only and may not reflect the true or current value of the precious metals declared. Purity and quality are not stated in affidavits. Making charges, GST, and local market premiums are excluded.`
   ) : '';
 
   function metalTable(subRows, label, emoji, footerLabel, footerTotal, footerEmoji, pricePerGram) {
@@ -764,7 +764,7 @@ function jewelleryAssetTable(rows, item) {
         <td>${escHtml(row.type)}</td>
         <td class="num">${amountPill(row.grams ? formatWeight(row.grams) : '', emoji)}</td>
         ${showValue ? `<td class="num">${estVal
-          ? `<span class="est-value asset-note-tip" data-tip="${estTip}">${escHtml(estVal)}</span>`
+          ? `<span class="est-value">${escHtml(estVal)}</span>`
           : '<span class="asset-muted-value">—</span>'}</td>` : ''}
         ${hasNotes ? `<td class="note-cell">${rowHasNote(row)
           ? `<span class="asset-note-tip" data-tip="${escAttr(cleanNote(row.note))}">ⓘ</span>`
@@ -781,7 +781,7 @@ function jewelleryAssetTable(rows, item) {
           <th>Owner</th>
           <th>${escHtml(label)}</th>
           <th class="num">Amount</th>
-          ${showValue ? '<th class="num est-value-col">Est. Value</th>' : ''}
+          ${showValue ? `<th class="num est-value-col">Est. Value <span class="asset-note-tip est-value-tip" data-tip="${estTipText}">ⓘ</span></th>` : ''}
           ${hasNotes  ? '<th class="note-cell">Note</th>' : ''}
         </tr></thead>
         <tbody>${rows_html}</tbody>
@@ -789,7 +789,7 @@ function jewelleryAssetTable(rows, item) {
           <td colspan="2">${escHtml(footerLabel)}</td>
           <td class="num">${amountPill(formatWeight(footerTotal), footerEmoji, true)}</td>
           ${showValue ? `<td class="num">${totalEstVal
-            ? `<span class="amount-pill strong est-value asset-note-tip" data-tip="${estTip}">${escHtml(totalEstVal)}</span>`
+            ? `<span class="amount-pill strong est-value">${escHtml(totalEstVal)}</span>`
             : '<span class="asset-muted-value">—</span>'}</td>` : ''}
           ${hasNotes ? '<td></td>' : ''}
         </tr></tfoot>` : ''}

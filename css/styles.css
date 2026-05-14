@@ -1063,13 +1063,19 @@ body.dark .show-all-btn.active {
   font-weight: 600;
   color: var(--accent2);
   white-space: nowrap;
-  cursor: help;
-  border-bottom: 1px dashed color-mix(in srgb, var(--accent2) 40%, transparent);
 }
 
 th.est-value-col {
   white-space: nowrap;
   color: var(--text-muted);
+}
+
+.est-value-tip {
+  font-size: 10px;
+  opacity: 0.6;
+  margin-left: 3px;
+  vertical-align: middle;
+  cursor: pointer;
 }
 
 /* ── Jewellery price disclaimer ────────────────────────────────── */
