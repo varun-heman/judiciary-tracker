@@ -1,11 +1,10 @@
 {
-  "goldPerGram": 8050.00,
-  "silverPerGram": 82.50,
-  "goldSpotUSD": 3250.00,
-  "silverSpotUSD": 33.00,
-  "usdToInr": 84.00,
-  "fetchedAt": "2026-05-14T00:00:00Z",
-  "note": "Seed values — will be replaced by the daily GitHub Action on first run.",
+  "goldPerGram": 13180.4,
+  "silverPerGram": 245.8,
+  "goldSpotUSD": 4672.59,
+  "silverSpotUSD": 86.354,
+  "usdToInr": 95.7125,
+  "fetchedAt": "2026-05-14T04:05:13Z",
   "assumptions": {
     "goldKarat": 22,
     "goldPurity": 0.916667,
@@ -13,7 +12,7 @@
     "troyOzToGrams": 31.1035
   },
   "sources": {
-    "spotPrices": "https://metals.live/api/v1/latest",
-    "fxRate": "https://open.er-api.com/v6/latest/USD"
+    "spotPrices": "stooq.com (xauusd, xagusd)",
+    "fxRate": "stooq.com (usdinr)"
   }
 }
