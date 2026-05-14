@@ -725,20 +725,25 @@ function jewelleryAssetTable(rows, item) {
 
   const mp = state.metalPrices;
 
-  // ── Rates strip ─────────────────────────────────────────────────────────────
-  function ratesStrip() {
+  // ── Rates strip + disclaimer (shown together, above the tables) ─────────────
+  function ratesBlock() {
     if (!mp) return '';
     const dateStr = new Date(mp.fetchedAt).toLocaleDateString('en-IN', {
       day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC'
     });
+    const source = (mp.sources && mp.sources.spotPrices) ? mp.sources.spotPrices : 'stooq.com';
     const pills = [];
     if (mp.goldPerGram)   pills.push(`<span class="rate-pill gold-rate">🏅 Gold &nbsp;<strong>₹${Math.round(mp.goldPerGram).toLocaleString('en-IN')}/g</strong></span>`);
     if (mp.silverPerGram) pills.push(`<span class="rate-pill silver-rate">🥈 Silver &nbsp;<strong>₹${Math.round(mp.silverPerGram).toLocaleString('en-IN')}/g</strong></span>`);
     if (mp.usdToInr)      pills.push(`<span class="rate-pill fx-rate">$ &nbsp;<strong>1 USD = ₹${Number(mp.usdToInr).toFixed(2)}</strong></span>`);
     return `
       <div class="metal-rates-strip">
-        <span class="rates-label">Live rates · ${escHtml(dateStr)}</span>
+        <div class="rates-top-row">
+          <span class="rates-label">Spot rates as of ${escHtml(dateStr)}</span>
+          <span class="rates-source">Source: ${escHtml(source)}</span>
+        </div>
         <div class="rates-pills">${pills.join('')}</div>
+        <p class="rates-disclaimer">⚠️ Estimated values only. Purity and quality of declared jewellery is not stated in affidavits. Values assume 22K gold (91.67% purity) and 92.5% Sterling silver. Making charges, wastage, GST, and local market premiums are not included. Actual value may differ substantially.</p>
       </div>`;
   }
 
@@ -798,19 +803,10 @@ function jewelleryAssetTable(rows, item) {
   }
 
   const parts = [];
-  parts.push(ratesStrip());
+  parts.push(ratesBlock());
   if (goldRows.length)   parts.push(metalTable(goldRows,   'Gold',               '🏅', 'Total gold',      goldTotal,   '🏅', mp ? mp.goldPerGram   : 0));
   if (silverRows.length) parts.push(metalTable(silverRows, 'Silver',             '🥈', 'Total silver',    silverTotal, '🥈', mp ? mp.silverPerGram : 0));
   if (otherRows.length)  parts.push(metalTable(otherRows,  'Watches & valuables','💎', 'Total valuables', 0,           '💎', 0));
-
-  // Disclaimer
-  if (mp) {
-    parts.push(`
-      <div class="metal-price-disclaimer">
-        <p class="disclaimer-warning">⚠️ Estimated values only. Actual market value may vary significantly.</p>
-        <p><strong>Assumptions:</strong> Gold valued at 22-karat purity (91.67%). Silver valued at 92.5% purity (Sterling Silver). Making charges, wastage, GST, and local market premiums are not included. The purity and quality of declared jewellery is not stated in affidavits — actual resale or market values may differ substantially.</p>
-      </div>`);
-  }
 
   return parts.join('');
 }

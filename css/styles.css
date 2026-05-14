@@ -1003,27 +1003,48 @@ body.dark .show-all-btn.active {
 /* ── Live rates strip ──────────────────────────────────────────── */
 .metal-rates-strip {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 8px;
-  padding: 8px 12px;
+  padding: 10px 14px 12px;
   margin-top: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   background: color-mix(in srgb, var(--accent2) 6%, var(--bg));
   border: 1px solid color-mix(in srgb, var(--accent2) 18%, var(--border));
   border-radius: 8px;
 }
 
+.rates-top-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
 .rates-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.rates-source {
   font-size: 10.5px;
   color: var(--text-muted);
-  white-space: nowrap;
 }
 
 .rates-pills {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+}
+
+.rates-disclaimer {
+  margin: 0;
+  font-size: 10.5px;
+  color: var(--text-muted);
+  line-height: 1.55;
+  padding-top: 8px;
+  border-top: 1px solid color-mix(in srgb, var(--accent2) 15%, var(--border));
 }
 
 .rate-pill {
@@ -1079,30 +1100,6 @@ th.est-value-col {
   cursor: pointer;
 }
 
-/* ── Jewellery price disclaimer ────────────────────────────────── */
-.metal-price-disclaimer {
-  margin-top: 10px;
-  padding: 12px 14px;
-  background: color-mix(in srgb, var(--text-muted) 5%, var(--bg-card));
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  font-size: 11px;
-  color: var(--text-muted);
-  line-height: 1.6;
-}
-
-.metal-price-disclaimer p {
-  margin: 0 0 6px;
-}
-
-.metal-price-disclaimer p:last-child {
-  margin-bottom: 0;
-}
-
-.disclaimer-warning {
-  font-weight: 600;
-  color: var(--text) !important;
-}
 
 .detail-grid {
   display: grid;
