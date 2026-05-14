@@ -2612,7 +2612,8 @@ body.modal-open {
     font-size: 14px;
     line-height: 1.55;
   }
-  .app-layout { grid-template-columns: 1fr; position: relative; }
+  .app-layout,
+  body.right-rail-collapsed .app-layout { grid-template-columns: 1fr; position: relative; }
   .main-panel {
     min-width: 0;
   }
