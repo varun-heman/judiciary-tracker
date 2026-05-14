@@ -2292,13 +2292,15 @@ async function init() {
 
   let hideTimer = null;
   let toastTimer = null;
+  let activeTipText = '';
 
   function showTip(el) {
     clearTimeout(hideTimer);
     const body = tip.querySelector('.jt-tip-body');
+    activeTipText = el.getAttribute('data-tip') || '';
     const html = el.getAttribute('data-tip-html');
     if (html) body.innerHTML = html;
-    else body.textContent = el.getAttribute('data-tip') || '';
+    else body.textContent = activeTipText;
     tip.classList.toggle('wide', el.classList.contains('nw-tip'));
     tip.classList.add('visible');
     positionTip(el);
@@ -2336,6 +2338,39 @@ async function init() {
     toastTimer = setTimeout(() => toast.classList.remove('show'), 5000);
   }
 
+  function fallbackCopy(text) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed';
+    ta.style.left = '-9999px';
+    document.body.appendChild(ta);
+    ta.select();
+    let ok = false;
+    try { ok = document.execCommand('copy'); } catch(e) {}
+    ta.remove();
+    return ok;
+  }
+
+  function copyTipText(text) {
+    if (!text) return;
+    const copied = navigator.clipboard && window.isSecureContext
+      ? navigator.clipboard.writeText(text)
+      : Promise.resolve(fallbackCopy(text));
+    copied
+      .then(ok => {
+        if (ok === false && !fallbackCopy(text)) return;
+        tip.classList.remove('visible');
+        showToast();
+      })
+      .catch(() => {
+        if (fallbackCopy(text)) {
+          tip.classList.remove('visible');
+          showToast();
+        }
+      });
+  }
+
   // Keep tooltip visible while hovering it.
   tip.addEventListener('mouseenter', () => clearTimeout(hideTimer));
   tip.addEventListener('mouseleave', hideTip);
@@ -2349,14 +2384,17 @@ async function init() {
 
   document.addEventListener('click', e => {
     const el = e.target.closest('.asset-note-tip');
-    if (!el) return;
-    const text = el.getAttribute('data-tip') || '';
-    if (!text) return;
-    navigator.clipboard.writeText(text)
-      .then(() => { tip.classList.remove('visible'); showToast(); })
-      .catch(() => {});
-    e.preventDefault();
-    e.stopPropagation();
+    if (el) {
+      copyTipText(el.getAttribute('data-tip') || '');
+      e.preventDefault();
+      e.stopPropagation();
+      return;
+    }
+    if (e.target.closest('#jt-tip')) {
+      copyTipText(activeTipText);
+      e.preventDefault();
+      e.stopPropagation();
+    }
   });
 })();
 
