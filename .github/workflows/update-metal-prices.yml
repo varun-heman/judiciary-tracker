@@ -1,0 +1,73 @@
+name: Update Metal Prices
+
+on:
+  schedule:
+    # Runs every day at 06:00 UTC (11:30 AM IST)
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    # Also allows manual trigger from the GitHub Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update-prices:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Fetch and write metal prices
+        run: |
+          python3 - <<'EOF'
+          import json, urllib.request, datetime
+
+          TROY_OZ_GRAMS  = 31.1035
+          GOLD_PURITY    = 22 / 24      # 22-karat
+          SILVER_PURITY  = 0.925        # Sterling silver
+
+          def fetch(url):
+              req = urllib.request.Request(url, headers={"User-Agent": "india-judiciary-tracker/1.0"})
+              return json.loads(urllib.request.urlopen(req, timeout=15).read())
+
+          metals = fetch("https://metals.live/api/v1/latest")
+          fx     = fetch("https://open.er-api.com/v6/latest/USD")
+
+          m       = metals[0] if isinstance(metals, list) else metals
+          usd_inr = fx["rates"]["INR"]
+
+          data = {
+              "goldPerGram":   round((m["gold"]   / TROY_OZ_GRAMS) * GOLD_PURITY   * usd_inr, 2),
+              "silverPerGram": round((m["silver"] / TROY_OZ_GRAMS) * SILVER_PURITY * usd_inr, 2),
+              "goldSpotUSD":   round(m["gold"],   2),
+              "silverSpotUSD": round(m["silver"], 2),
+              "usdToInr":      round(usd_inr, 4),
+              "fetchedAt":     datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+              "assumptions": {
+                  "goldKarat":      22,
+                  "goldPurity":     round(GOLD_PURITY, 6),
+                  "silverPurity":   SILVER_PURITY,
+                  "troyOzToGrams":  TROY_OZ_GRAMS
+              },
+              "sources": {
+                  "spotPrices": "https://metals.live/api/v1/latest",
+                  "fxRate":     "https://open.er-api.com/v6/latest/USD"
+              }
+          }
+
+          with open("data/metal-prices.json", "w") as f:
+              json.dump(data, f, indent=2)
+              f.write("\n")
+
+          print(f"Gold: ₹{data['goldPerGram']}/g  Silver: ₹{data['silverPerGram']}/g  (1 USD = ₹{data['usdToInr']})")
+          EOF
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/metal-prices.json
+          # Only commit if the file actually changed
+          git diff --cached --quiet || git commit -m "chore: update metal prices [$(date -u +'%Y-%m-%d')]"
+          git push

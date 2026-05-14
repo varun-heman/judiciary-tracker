@@ -1,0 +1,19 @@
+{
+  "goldPerGram": 8050.00,
+  "silverPerGram": 82.50,
+  "goldSpotUSD": 3250.00,
+  "silverSpotUSD": 33.00,
+  "usdToInr": 84.00,
+  "fetchedAt": "2026-05-14T00:00:00Z",
+  "note": "Seed values — will be replaced by the daily GitHub Action on first run.",
+  "assumptions": {
+    "goldKarat": 22,
+    "goldPurity": 0.916667,
+    "silverPurity": 0.925,
+    "troyOzToGrams": 31.1035
+  },
+  "sources": {
+    "spotPrices": "https://metals.live/api/v1/latest",
+    "fxRate": "https://open.er-api.com/v6/latest/USD"
+  }
+}

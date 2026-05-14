@@ -84,16 +84,18 @@ function retirementRemainingProgress(retireDateStr) {
 async function loadData() {
   // 1. Try fetch (works on GitHub Pages, Netlify, or any HTTP server)
   try {
-    const [courts, ministries, adminStaff, judgeDetails] = await Promise.all([
+    const [courts, ministries, adminStaff, judgeDetails, metalPrices] = await Promise.all([
       fetch('data/courts.json').then(r => { if (!r.ok) throw new Error(); return r.json(); }),
       fetch('data/ministries.json').then(r => { if (!r.ok) throw new Error(); return r.json(); }),
       fetch('data/admin-staff.json').then(r => { if (!r.ok) throw new Error(); return r.json(); }),
       fetch('data/judge-details.json').then(r => { if (!r.ok) throw new Error(); return r.json(); }),
+      fetch('data/metal-prices.json').then(r => r.ok ? r.json() : null).catch(() => null),
     ]);
     state.courts = courts;
     state.ministries = ministries;
     state.adminStaff = adminStaff;
     state.judgeDetails = judgeDetails;
+    state.metalPrices = metalPrices;
     return true;
   } catch (e) {
     // 2. Fall back to embedded data from data/data.js (works with file:// open)
@@ -780,9 +782,12 @@ function jewelleryAssetTable(rows, item) {
 
   // Disclaimer
   if (mp) {
-    const fetchedStr = new Date(mp.fetchedAt).toLocaleString('en-IN', {
-      day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit'
-    });
+    const fetchedStr = mp.fetchedAt
+      ? new Date(mp.fetchedAt).toLocaleString('en-IN', {
+          day: 'numeric', month: 'short', year: 'numeric',
+          hour: '2-digit', minute: '2-digit', timeZone: 'UTC', timeZoneName: 'short'
+        })
+      : 'Unknown';
     parts.push(`
       <div class="metal-price-disclaimer">
         <p class="disclaimer-warning">⚠️ Estimated values only. Actual market value may vary significantly.</p>
@@ -1807,42 +1812,8 @@ function renderUpcomingPanel() {
 // ─────────────────────────────────────────────────────────────────────────────
 // Init
 // ─────────────────────────────────────────────────────────────────────────────
-// ── Metal spot-price fetching ────────────────────────────────────────────────
-// Prices from metals.live (USD/troy oz), converted to INR via open.er-api.com.
-// Cached in localStorage for 24 hours so the APIs are hit at most once a day.
-const METAL_CACHE_KEY = 'jt_metal_prices';
-const METAL_CACHE_TTL = 24 * 60 * 60 * 1000; // 24 h in ms
-const TROY_OZ_GRAMS   = 31.1035;
-const GOLD_PURITY     = 22 / 24;   // 22-karat (most Indian jewellery)
-const SILVER_PURITY   = 0.925;     // Sterling silver (92.5%)
-
-async function loadMetalPrices() {
-  try {
-    const cached = JSON.parse(localStorage.getItem(METAL_CACHE_KEY) || 'null');
-    if (cached && (Date.now() - cached.fetchedAt) < METAL_CACHE_TTL) {
-      state.metalPrices = cached;
-      return;
-    }
-    const [metalsRaw, fxRaw] = await Promise.all([
-      fetch('https://metals.live/api/v1/latest').then(r => r.json()),
-      fetch('https://open.er-api.com/v6/latest/USD').then(r => r.json()),
-    ]);
-    const metals   = Array.isArray(metalsRaw) ? metalsRaw[0] : metalsRaw;
-    const usdToInr = fxRaw && fxRaw.rates && fxRaw.rates.INR;
-    if (!metals.gold || !metals.silver || !usdToInr) throw new Error('Unexpected response shape');
-
-    const data = {
-      goldPerGram:   (metals.gold   / TROY_OZ_GRAMS) * GOLD_PURITY   * usdToInr,
-      silverPerGram: (metals.silver / TROY_OZ_GRAMS) * SILVER_PURITY * usdToInr,
-      usdToInr,
-      fetchedAt: Date.now(),
-    };
-    try { localStorage.setItem(METAL_CACHE_KEY, JSON.stringify(data)); } catch (_) {}
-    state.metalPrices = data;
-  } catch (e) {
-    console.warn('Metal prices unavailable:', e);
-  }
-}
+// Metal prices are loaded from data/metal-prices.json (updated daily by GitHub Actions)
+// alongside the other data files in loadData(). No client-side API calls needed.
 
 async function init() {
   // Search
@@ -1891,7 +1862,7 @@ async function init() {
     if (e.key === 'Escape') closeSidebar();
   });
 
-  const [ok] = await Promise.all([loadData(), loadMetalPrices()]);
+  const ok = await loadData();
   if (ok) {
     applyRoute();
     renderNav();
