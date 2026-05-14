@@ -531,12 +531,13 @@ async function loadWikipediaBio(judgeId) {
   }
 
   try {
-    let result = await fetchWikipediaSummary(title);
+    const judgeName = wikipediaQueryTitle(judge, detail);
+    let result = await fetchWikipediaSummary(title, judgeName);
     if (!result) {
-      const searchTitle = await searchWikipediaTitle(`${title} judge India`);
-      if (searchTitle) result = await fetchWikipediaSummary(searchTitle);
+      const searchTitle = await searchWikipediaTitle(`${title} judge India`, judgeName);
+      if (searchTitle) result = await fetchWikipediaSummary(searchTitle, judgeName);
     }
-    if (!result) throw new Error('No specific Wikipedia biography found');
+    if (!result) throw new Error('No Wikipedia page found for this judge');
     state.wikiBioCache[judgeId] = result;
     writeWikipediaCache(title, result);
     if (manualBio) renderManualBioSources(judgeId, result, judge, detail);
@@ -550,12 +551,23 @@ async function loadWikipediaBio(judgeId) {
   }
 }
 
-async function fetchWikipediaSummary(title) {
+async function fetchWikipediaSummary(title, judgeName) {
   const url = `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`;
   const res = await fetch(url, { headers: { accept: 'application/json' } });
   if (!res.ok) return null;
   const data = await res.json();
   if (data.type === 'disambiguation' || !data.extract) return null;
+  // Reject list/overview articles — never biographies
+  if (/^list of|^lists of/i.test(data.title || '')) return null;
+  // If we know the judge's name, the article title must share their surname
+  if (judgeName) {
+    const surname = judgeName.trim().split(/\s+/).pop().toLowerCase();
+    if (surname.length > 2 && !(data.title || '').toLowerCase().includes(surname)) return null;
+  }
+  // Require the article to look like a legal biography
+  const legalBio = /judge|justice|jurist|advocate|lawyer|chief justice|high court|supreme court/i;
+  const firstSentence = (data.extract || '').split('.')[0];
+  if (!legalBio.test(data.description || '') && !legalBio.test(firstSentence)) return null;
   return {
     ok: true,
     title: data.title || title,
@@ -567,13 +579,20 @@ async function fetchWikipediaSummary(title) {
   };
 }
 
-async function searchWikipediaTitle(query) {
-  const url = `https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&origin=*&srlimit=1&srsearch=${encodeURIComponent(query)}`;
+async function searchWikipediaTitle(query, judgeName) {
+  const url = `https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&origin=*&srlimit=3&srsearch=${encodeURIComponent(query)}`;
   const res = await fetch(url, { headers: { accept: 'application/json' } });
   if (!res.ok) return '';
   const data = await res.json();
-  const first = data && data.query && Array.isArray(data.query.search) ? data.query.search[0] : null;
-  return first && first.title ? first.title : '';
+  const results = data && data.query && Array.isArray(data.query.search) ? data.query.search : [];
+  if (!results.length) return '';
+  // Only accept a result whose title contains the judge's surname
+  if (judgeName) {
+    const surname = judgeName.trim().split(/\s+/).pop().toLowerCase();
+    const match = results.find(r => r.title && r.title.toLowerCase().includes(surname));
+    return match ? match.title : '';
+  }
+  return results[0].title || '';
 }
 
 function renderWikipediaBioResult(result, judge, detail) {
@@ -588,9 +607,9 @@ function renderWikipediaBioResult(result, judge, detail) {
       </div>`;
   }
   return `
-    <p class="bio-text">Wikipedia summary not found for this judge. This can happen when a judge does not have a dedicated page or the page title differs from the judge's official name.</p>
+    <p class="bio-text" style="color:var(--text-muted);font-style:italic;">Wikipedia page not found for this judge.</p>
     <div class="source-stack">
-      <a class="source-pill primary" href="${escHtml(wikipediaSearchUrl(judge, detail))}" target="_blank" rel="noopener">Search Wikipedia</a>
+      <a class="source-pill primary" href="${escHtml(wikipediaSearchUrl(judge, detail))}" target="_blank" rel="noopener">Search Wikipedia ↗</a>
       ${officialUrl ? `<a class="source-pill" href="${escHtml(officialUrl)}" target="_blank" rel="noopener">Official source: ${escHtml(officialLabel)}</a>` : ''}
     </div>`;
 }
