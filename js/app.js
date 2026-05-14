@@ -503,6 +503,8 @@ function assetRankLabel(judgeId) {
 function renderAssetRankSummary(judgeId) {
   const rank = judgeAssetRank(judgeId);
   if (!rank) return '';
+  const judge = state.courts.find(d => d.id === judgeId && isJudgeRecord(d));
+  const courtName = (judge && judge.court) ? judge.court : 'Same court';
   return `
     <div class="asset-rank-summary">
       <div class="rank-label-row">Wealth Rankings <span class="rank-basis">based on disclosed wealth</span></div>
@@ -510,7 +512,7 @@ function renderAssetRankSummary(judgeId) {
         <div class="rank-block">
           <strong>#${rank.courtRank}</strong>
           <span>of ${rank.courtTotal}</span>
-          <em>Same court</em>
+          <em>${escHtml(courtName)}</em>
         </div>
         <div class="rank-block rank-block-global">
           <strong>#${rank.globalRank}</strong>
