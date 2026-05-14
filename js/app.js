@@ -600,6 +600,55 @@ function netWorthTip(nw, assets) {
   return lines.join('\n');
 }
 
+function netWorthTipHtml(nw, assets) {
+  if (!nw) return '';
+  const mp      = state.metalPrices;
+  const metrics = (assets && assets.metrics) || {};
+  const rateDate = mp ? new Date(mp.fetchedAt).toLocaleDateString('en-IN',
+    { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }) : 'unknown';
+  const row = (label, value) => `<div class="tip-row"><span>${escHtml(label)}</span><strong>${escHtml(value)}</strong></div>`;
+  const excluded = [];
+  if (Number(metrics.real_estate_count) > 0) excluded.push(`${metrics.real_estate_count} propert${metrics.real_estate_count > 1 ? 'ies' : 'y'}`);
+  if (Number(metrics.land_acres) > 0) excluded.push(`${Number(metrics.land_acres).toLocaleString('en-IN')} acres of land`);
+  if (Number(metrics.vehicles_count) > 0) excluded.push(`${metrics.vehicles_count} vehicle${metrics.vehicles_count > 1 ? 's' : ''}`);
+  const jewelleryGroup = [...((assets.movable || []).flat())].find(g => g && g.category === 'jewellery');
+  const watchItems = jewelleryGroup ? (jewelleryGroup.items || []).filter(raw => {
+    const t = String(raw).toLowerCase();
+    return !t.includes('gold') && !t.includes('silver') && t.length > 3;
+  }) : [];
+  if (watchItems.length > 0) excluded.push(`watches & other valuables (${watchItems.length} item${watchItems.length > 1 ? 's' : ''})`);
+
+  return `
+    <section class="tip-section">
+      <h4>Included</h4>
+      ${nw.monetary > 0 ? row('Monetary holdings', formatRupees(nw.monetary)) : ''}
+      ${nw.goldVal > 0 ? row(`Gold · ${formatWeight(nw.goldGrams)} at 22K`, formatRupees(nw.goldVal)) : ''}
+      ${nw.silverVal > 0 ? row(`Silver · ${formatWeight(nw.silverGrams)} at 92.5%`, formatRupees(nw.silverVal)) : ''}
+      ${row('Gross estimate', formatRupees(nw.gross))}
+    </section>
+    ${nw.hasLiabilities ? `
+      <section class="tip-section">
+        <h4>Liabilities</h4>
+        ${nw.liabilities.items.map(it => it.amount ? row(it.text, `-${formatRupees(it.amount)}`) : `<p>${escHtml(it.text)}</p>`).join('')}
+        ${nw.liabilities.hasAmounts ? row('Net after liabilities', formatRupees(nw.net)) : '<p>Amounts not stated in declaration.</p>'}
+      </section>` : ''}
+    ${excluded.length ? `
+      <section class="tip-section">
+        <h4>Not valued</h4>
+        <ul>${excluded.map(e => `<li>${escHtml(e)}</li>`).join('')}</ul>
+      </section>` : ''}
+    <section class="tip-section">
+      <h4>Assumptions & sources</h4>
+      <ul>
+        ${mp ? `<li>Spot rates: stooq.com · ${escHtml(rateDate)}</li>
+        <li>Gold: ₹${Math.round(mp.goldPerGram).toLocaleString('en-IN')}/g at assumed 22K purity</li>
+        <li>Silver: ₹${Math.round(mp.silverPerGram).toLocaleString('en-IN')}/g at assumed 92.5% purity</li>` : ''}
+        <li>Monetary figures come from the official affidavit.</li>
+        <li>Actual value may differ significantly.</li>
+      </ul>
+    </section>`;
+}
+
 function formatRupees(value) {
   if (!Number.isFinite(Number(value))) return 'Not valued';
   const n = Number(value);
@@ -637,7 +686,7 @@ function renderAssetRankSummary(judgeId) {
   const courtName = (judge && judge.court) ? judge.court : 'Same court';
   return `
     <div class="asset-rank-summary">
-      <div class="rank-label-row">Wealth Rankings <span class="rank-basis">based on disclosed wealth</span></div>
+      <div class="rank-label-row">Wealth Rankings <span class="rank-basis">disclosed + estimated metal value</span></div>
       <div class="rank-blocks">
         <div class="rank-block">
           <strong>#${rank.courtRank}</strong>
@@ -650,9 +699,8 @@ function renderAssetRankSummary(judgeId) {
           <em>All tracked courts</em>
         </div>
       </div>
-      <p class="rank-disclaimer">Rankings are based on disclosed monetary holdings plus estimated metal (gold/silver) values at spot rates. Property, vehicles, and other non-monetary assets are not valued. Metal values are estimates based on assumed purity — see the net worth tooltip for full details. These rankings may not be accurate.</p>
-    </div>`
-    + `</div>`;
+      <p class="rank-disclaimer">Property, vehicles and other non-monetary assets are not valued. Rankings may not be accurate.</p>
+    </div>`;
 }
 
 function judgeAssetRank(judgeId) {
@@ -1579,7 +1627,7 @@ function renderJudgeDetailView(id) {
         ? 'Monetary holdings + est. metal value'
         : assets.total_value_type || (total ? 'Disclosed monetary amounts only' : 'No monetary total available'))
     : 'No official/public asset declaration has been added for this judge yet.';
-  const nwTipAttr = nw ? `data-tip="${escAttr(netWorthTip(nw, assets))}"` : '';
+  const nwTipAttr = nw ? `data-tip="${escAttr(netWorthTip(nw, assets))}" data-tip-html="${escAttr(netWorthTipHtml(nw, assets))}"` : '';
   const liabLabel = nw && nw.hasLiabilities && nw.liabilities.hasAmounts
     ? `Less liabilities: −${formatRupees(nw.liabilities.total)}`
     : nw && nw.hasLiabilities ? 'Loans declared (amounts not stated)' : null;
@@ -1592,16 +1640,18 @@ function renderJudgeDetailView(id) {
     <div class="judge-detail-view">
       <button class="back-button" onclick="selectView('${escAttr(backView)}')">← Back to ${escHtml(backLabel)}</button>
       <section class="judge-profile-hero">
-        ${renderAvatar(judge)}
-        <div class="judge-profile-main">
-          <span class="card-role-badge ${judge.type || ''}">${escHtml(judge.role || 'Judge')}</span>
-          ${isRetiredJudge(judge) ? `<span class="retired-badge">Retired</span>` : ''}
-          <h2>${escHtml(judge.name)}</h2>
-          <p>${escHtml(judge.court || '')}${judge.state ? ` · ${escHtml(judge.state)}` : ''}</p>
-          <div class="judge-profile-facts">
-            ${judge.date_of_birth ? `<span>${getAge(judge.date_of_birth)} yrs</span>` : ''}
-            ${judge.date_assumed_role ? `<span>In role since ${formatDate(judge.date_assumed_role)}</span>` : ''}
-            ${judge.retirement_date ? `<span>${isRetiredJudge(judge) ? 'Retired' : 'Retires'} ${formatDate(judge.retirement_date)}</span>` : ''}
+        <div class="judge-profile-identity">
+          ${renderAvatar(judge)}
+          <div class="judge-profile-main">
+            <span class="card-role-badge ${judge.type || ''}">${escHtml(judge.role || 'Judge')}</span>
+            ${isRetiredJudge(judge) ? `<span class="retired-badge">Retired</span>` : ''}
+            <h2>${escHtml(judge.name)}</h2>
+            <p>${escHtml(judge.court || '')}${judge.state ? ` · ${escHtml(judge.state)}` : ''}</p>
+            <div class="judge-profile-facts">
+              ${judge.date_of_birth ? `<span>${getAge(judge.date_of_birth)} yrs</span>` : ''}
+              ${judge.date_assumed_role ? `<span>In role since ${formatDate(judge.date_assumed_role)}</span>` : ''}
+              ${judge.retirement_date ? `<span>${isRetiredJudge(judge) ? 'Retired' : 'Retires'} ${formatDate(judge.retirement_date)}</span>` : ''}
+            </div>
           </div>
         </div>
         <div class="asset-total-card">
@@ -1928,6 +1978,26 @@ function closeSidebar() {
   setSidebarOpen(false);
 }
 
+function setRightRailCollapsed(collapsed) {
+  document.body.classList.toggle('right-rail-collapsed', collapsed);
+  const toggle = document.getElementById('right-rail-toggle');
+  if (toggle) {
+    toggle.textContent = collapsed ? '‹' : '›';
+    toggle.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+    toggle.setAttribute('aria-label', collapsed ? 'Expand right panel' : 'Collapse right panel');
+  }
+  try { localStorage.setItem('jt-right-rail', collapsed ? 'collapsed' : 'open'); } catch(e) {}
+}
+
+function setupRightRailToggle() {
+  const toggle = document.getElementById('right-rail-toggle');
+  if (!toggle) return;
+  let collapsed = false;
+  try { collapsed = localStorage.getItem('jt-right-rail') === 'collapsed'; } catch(e) {}
+  setRightRailCollapsed(collapsed);
+  toggle.addEventListener('click', () => setRightRailCollapsed(!document.body.classList.contains('right-rail-collapsed')));
+}
+
 function escHtml(str) {
   return (str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
@@ -2012,6 +2082,7 @@ async function init() {
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeSidebar();
   });
+  setupRightRailToggle();
 
   const ok = await loadData();
   if (ok) {
@@ -2041,7 +2112,10 @@ async function init() {
 
   function showTip(el) {
     clearTimeout(hideTimer);
-    tip.querySelector('.jt-tip-body').textContent = el.getAttribute('data-tip') || '';
+    const body = tip.querySelector('.jt-tip-body');
+    const html = el.getAttribute('data-tip-html');
+    if (html) body.innerHTML = html;
+    else body.textContent = el.getAttribute('data-tip') || '';
     tip.classList.toggle('wide', el.classList.contains('nw-tip'));
     tip.classList.add('visible');
     positionTip(el);

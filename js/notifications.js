@@ -483,6 +483,7 @@ async function initNotifications() {
   if (menuBtn) {
     menuBtn.addEventListener('click', () => document.querySelector('.sidebar').classList.toggle('open'));
   }
+  setupRightRailToggle();
 
   const ok = await loadNotificationData();
   if (ok) {
@@ -495,6 +496,26 @@ async function initNotifications() {
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeNotificationPdf();
 });
+
+function setRightRailCollapsed(collapsed) {
+  document.body.classList.toggle('right-rail-collapsed', collapsed);
+  const toggle = document.getElementById('right-rail-toggle');
+  if (toggle) {
+    toggle.textContent = collapsed ? '‹' : '›';
+    toggle.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+    toggle.setAttribute('aria-label', collapsed ? 'Expand right panel' : 'Collapse right panel');
+  }
+  try { localStorage.setItem('jt-right-rail', collapsed ? 'collapsed' : 'open'); } catch(e) {}
+}
+
+function setupRightRailToggle() {
+  const toggle = document.getElementById('right-rail-toggle');
+  if (!toggle) return;
+  let collapsed = false;
+  try { collapsed = localStorage.getItem('jt-right-rail') === 'collapsed'; } catch(e) {}
+  setRightRailCollapsed(collapsed);
+  toggle.addEventListener('click', () => setRightRailCollapsed(!document.body.classList.contains('right-rail-collapsed')));
+}
 
 window.addEventListener('hashchange', rerenderNotificationsFromRoute);
 window.addEventListener('popstate', rerenderNotificationsFromRoute);

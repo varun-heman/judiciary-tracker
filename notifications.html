@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Judge/Staff Transfer Notifications · India Judiciary Tracker</title>
   <meta name="description" content="Court-wise index of recent judge and staff transfer notifications.">
-  <link rel="stylesheet" href="css/styles.css?v=20260514-7">
+  <link rel="stylesheet" href="css/styles.css?v=20260514-8">
 </head>
 <body>
 
@@ -53,7 +53,10 @@
   </main>
 
   <aside class="transfer-rail" id="transfer-rail">
-    <div class="transfer-rail-title">Parsed Transfers</div>
+    <div class="transfer-rail-title">
+      <span>Parsed Transfers</span>
+      <button class="right-rail-toggle" id="right-rail-toggle" type="button" aria-label="Collapse right panel" aria-expanded="true">›</button>
+    </div>
     <div class="transfer-rail-content">
       <div class="upcoming-empty">Loading…</div>
     </div>
@@ -78,6 +81,6 @@
 </div>
 
 <script src="data/data.js?v=20260514-2"></script>
-<script src="js/notifications.js?v=20260514-2"></script>
+<script src="js/notifications.js?v=20260514-3"></script>
 </body>
 </html>

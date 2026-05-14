@@ -76,6 +76,11 @@ code { font-family: 'Courier New', monospace; background: var(--unknown-bg); pad
   grid-template-columns: var(--sidebar-w) 1fr var(--upcoming-w);
   grid-template-rows: 100vh;
   overflow: hidden;
+  transition: grid-template-columns var(--transition);
+}
+
+body.right-rail-collapsed .app-layout {
+  grid-template-columns: var(--sidebar-w) 1fr 42px;
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -847,14 +852,21 @@ body.dark .show-all-btn.active {
 
 .judge-profile-hero {
   display: grid;
-  grid-template-columns: auto 1fr minmax(180px, 240px);
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 320px);
   align-items: center;
   gap: 16px;
-  padding: 18px;
+  padding: 20px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--bg-card);
   box-shadow: var(--shadow);
+}
+
+.judge-profile-identity {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
 }
 
 .judge-profile-hero .person-photo {
@@ -892,10 +904,11 @@ body.dark .show-all-btn.active {
 }
 
 .asset-total-card {
-  padding: 14px;
+  padding: 14px 16px;
   border-radius: var(--radius);
   background: color-mix(in srgb, var(--accent2) 8%, var(--bg-card));
   border: 1px solid color-mix(in srgb, var(--accent2) 24%, var(--border));
+  align-self: stretch;
 }
 
 .asset-total-card span,
@@ -910,7 +923,8 @@ body.dark .show-all-btn.active {
   display: block;
   margin: 5px 0;
   color: var(--text);
-  font-size: 22px;
+  font-size: 24px;
+  line-height: 1.1;
 }
 
 .asset-total-card em {
@@ -933,20 +947,20 @@ body.dark .show-all-btn.active {
 }
 
 .asset-rank-summary {
-  margin-top: 14px;
-  padding: 12px 14px 10px;
+  margin-top: 12px;
+  padding: 10px;
   background: color-mix(in srgb, var(--accent2) 8%, var(--bg-card));
   border: 1px solid color-mix(in srgb, var(--accent2) 28%, var(--border));
   border-radius: 10px;
 }
 
 .rank-label-row {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .06em;
   color: var(--accent2);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .rank-basis {
@@ -960,8 +974,8 @@ body.dark .show-all-btn.active {
 .rank-blocks {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  margin-bottom: 10px;
+  gap: 7px;
+  margin-bottom: 8px;
 }
 
 .rank-block {
@@ -969,7 +983,7 @@ body.dark .show-all-btn.active {
   flex-direction: column;
   align-items: flex-start;
   gap: 1px;
-  padding: 8px 10px;
+  padding: 8px;
   background: color-mix(in srgb, var(--accent2) 10%, var(--bg));
   border-radius: 8px;
   border: 1px solid color-mix(in srgb, var(--accent2) 20%, var(--border));
@@ -981,7 +995,7 @@ body.dark .show-all-btn.active {
 }
 
 .rank-block strong {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 800;
   line-height: 1;
   color: var(--accent2);
@@ -1008,11 +1022,11 @@ body.dark .show-all-btn.active {
 
 .rank-disclaimer {
   margin: 0;
-  font-size: 10px;
+  font-size: 9.5px;
   color: var(--text-muted);
-  line-height: 1.5;
+  line-height: 1.35;
   border-top: 1px solid color-mix(in srgb, var(--accent2) 15%, var(--border));
-  padding-top: 8px;
+  padding-top: 7px;
 }
 
 /* ── Live rates strip ──────────────────────────────────────────── */
@@ -1271,20 +1285,20 @@ th.est-value-col {
 }
 
 .asset-table th.note-cell {
-  width: 36px;
-  min-width: 36px;
+  width: 28px;
+  min-width: 28px;
   white-space: nowrap;
   text-align: center;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 .asset-table td.note-cell {
-  width: 36px;
-  min-width: 36px;
+  width: 28px;
+  min-width: 28px;
   text-align: center;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 /* ⓘ icon button */
@@ -1292,13 +1306,13 @@ th.est-value-col {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   border-radius: 999px;
   background: var(--unknown-bg);
   color: var(--text-muted);
   cursor: pointer;
-  font-size: 11px;
+  font-size: 10px;
   user-select: none;
   -webkit-user-select: none;
 }
@@ -1338,8 +1352,59 @@ th.est-value-col {
 }
 
 #jt-tip.wide {
-  max-width: 360px;
-  min-width: 280px;
+  max-width: 380px;
+  min-width: 300px;
+}
+
+#jt-tip.wide .jt-tip-body {
+  padding: 10px 12px 9px;
+  white-space: normal;
+}
+
+.tip-section + .tip-section {
+  margin-top: 10px;
+  padding-top: 9px;
+  border-top: 1px solid rgba(255,255,255,.14);
+}
+
+.tip-section h4 {
+  margin: 0 0 7px;
+  color: var(--bg-card);
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 850;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.tip-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: baseline;
+  margin: 4px 0;
+}
+
+.tip-row span,
+.tip-section p,
+.tip-section li {
+  color: color-mix(in srgb, var(--bg-card) 88%, transparent);
+}
+
+.tip-row strong {
+  color: var(--bg-card);
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.tip-section ul {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.tip-section li,
+.tip-section p {
+  margin: 4px 0;
 }
 
 .jt-tip-hint {
@@ -1719,6 +1784,10 @@ body.dark .court-badge {
   padding: 14px;
 }
 .upcoming-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
   font-size: 10.5px;
   font-weight: 700;
   text-transform: uppercase;
@@ -1728,6 +1797,47 @@ body.dark .court-badge {
   margin-bottom: 8px;
   border-bottom: 1px solid var(--border);
   flex-shrink: 0;
+}
+
+.right-rail-toggle {
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-muted);
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.right-rail-toggle:hover {
+  color: var(--accent2);
+  border-color: color-mix(in srgb, var(--accent2) 35%, var(--border));
+}
+
+body.right-rail-collapsed .upcoming-panel,
+body.right-rail-collapsed .transfer-rail {
+  padding: 10px 8px;
+}
+
+body.right-rail-collapsed .upcoming-title,
+body.right-rail-collapsed .transfer-rail-title {
+  justify-content: center;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
+body.right-rail-collapsed .upcoming-title span,
+body.right-rail-collapsed .upcoming-scroll,
+body.right-rail-collapsed .transfer-rail-title span,
+body.right-rail-collapsed .transfer-rail-content {
+  display: none;
 }
 .upcoming-scroll {
   overflow-y: auto;
@@ -1811,6 +1921,10 @@ body.dark .court-badge {
 ───────────────────────────────────────────────────────────────────────────── */
 .notifications-layout {
   grid-template-columns: var(--sidebar-w) 1fr 280px;
+}
+
+body.right-rail-collapsed .notifications-layout {
+  grid-template-columns: var(--sidebar-w) 1fr 42px;
 }
 
 body.modal-open {
@@ -2021,6 +2135,10 @@ body.modal-open {
 }
 
 .transfer-rail-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
   font-size: 10.5px;
   font-weight: 800;
   text-transform: uppercase;
@@ -2548,6 +2666,9 @@ body.modal-open {
     padding: 16px;
     border-radius: 14px;
     align-items: start;
+  }
+  .judge-profile-identity {
+    align-items: flex-start;
   }
   .judge-profile-hero .person-photo {
     width: 78px;
