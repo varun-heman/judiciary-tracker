@@ -2681,11 +2681,10 @@ body.modal-open {
     flex: 1;
     min-width: 0;
     display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-    gap: 6px;
-    font-size: 11px;
-    overflow: hidden;
+    flex-wrap: wrap;
+    gap: 2px 8px;
+    font-size: 12px;
+    line-height: 1.28;
   }
   .data-notice > * + *::before {
     content: none;
@@ -2693,21 +2692,15 @@ body.modal-open {
   .notice-sources {
     display: none;
   }
-  .notice-disclaimer {
-    display: none;
-  }
-  .notice-notifications {
-    display: none;
-  }
   .notice-verified {
     font-weight: 600;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
-  .notice-about {
-    flex-shrink: 0;
-    font-weight: 600;
+  .notice-disclaimer {
+    flex-basis: 100%;
+  }
+  .notice-notifications {
+    flex-basis: 100%;
+    font-weight: 650;
   }
   .content-area {
     padding: 28px 18px 36px;

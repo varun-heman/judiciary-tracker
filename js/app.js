@@ -484,7 +484,20 @@ function wikipediaSearchUrl(judge, detail) {
 }
 
 function wikipediaCacheKey(title) {
-  return `jt-wiki-bio:${encodeURIComponent(title)}`;
+  return `jt-wiki-bio-v2:${encodeURIComponent(title)}`;
+}
+
+function isValidWikiBioResult(result, judgeName) {
+  if (!result || !result.ok) return true; // "not found" results are always valid to serve
+  if (/^list of|^lists of/i.test(result.title || '')) return false;
+  if (judgeName) {
+    const surname = judgeName.trim().split(/\s+/).pop().toLowerCase();
+    if (surname.length > 2 && !(result.title || '').toLowerCase().includes(surname)) return false;
+  }
+  const legalBio = /judge|justice|jurist|advocate|lawyer|chief justice|high court|supreme court/i;
+  const firstSentence = (result.extract || '').split('.')[0];
+  if (!legalBio.test(result.description || '') && !legalBio.test(firstSentence)) return false;
+  return true;
 }
 
 function readWikipediaCache(title) {
@@ -516,14 +529,14 @@ async function loadWikipediaBio(judgeId) {
   const manualBio = (detail.bio || '').trim();
 
   const cached = state.wikiBioCache[judgeId];
-  if (cached) {
+  if (cached && isValidWikiBioResult(cached, title)) {
     if (manualBio) renderManualBioSources(judgeId, cached, judge, detail);
     else target.innerHTML = renderWikipediaBioResult(cached, judge, detail);
     return;
   }
 
   const stored = readWikipediaCache(title);
-  if (stored) {
+  if (stored && isValidWikiBioResult(stored, title)) {
     state.wikiBioCache[judgeId] = stored;
     if (manualBio) renderManualBioSources(judgeId, stored, judge, detail);
     else target.innerHTML = renderWikipediaBioResult(stored, judge, detail);
