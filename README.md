@@ -18,10 +18,49 @@ This tracker is a small attempt to fix that. It pulls together publicly availabl
 
 ---
 
+## Coverage status
+
+This is an ongoing project. Coverage varies significantly by court — some are fully detailed, others are roster-only, and several are still placeholders. Contributions to fill gaps are very welcome.
+
+| Court | Judges | Roster | Photos | Bios | Asset Declarations |
+|---|:---:|:---:|:---:|:---:|:---:|
+| Supreme Court of India | 32 | ✅ | ✅ | ✅ | ✅ |
+| Allahabad High Court | 108 | ✅ | ✅ | ✅ | ⬜ |
+| Madras High Court | 52 | ✅ | ✅ | 🟡 partial | ⬜ |
+| Calcutta High Court | 42 | ✅ | ✅ | 🟡 partial | ⬜ |
+| Andhra Pradesh High Court | 32 | ✅ | ✅ | 🟡 partial | ⬜ |
+| Bombay High Court | — | ⬜ stub | ⬜ | ⬜ | ⬜ |
+| Chhattisgarh High Court | — | ⬜ stub | ⬜ | ⬜ | ⬜ |
+| Delhi High Court | — | ⬜ stub | ⬜ | ⬜ | ⬜ |
+| Gauhati High Court | — | ⬜ stub | ⬜ | ⬜ | ⬜ |
+| Gujarat High Court | — | ⬜ stub | ⬜ | ⬜ | ⬜ |
+| Himachal Pradesh High Court | — | ⬜ stub | ⬜ | ⬜ | ⬜ |
+| J&K and Ladakh High Court | — | ⬜ stub | ⬜ | ⬜ | ⬜ |
+| Jharkhand High Court | — | ⬜ stub | ⬜ | ⬜ | ⬜ |
+| Karnataka High Court | — | ⬜ stub | ⬜ | ⬜ | ⬜ |
+| Kerala High Court | — | ⬜ stub | ⬜ | ⬜ | ⬜ |
+| Madhya Pradesh High Court | — | ⬜ stub | ⬜ | ⬜ | ⬜ |
+| Manipur High Court | — | ⬜ stub | ⬜ | ⬜ | ⬜ |
+| Meghalaya High Court | — | ⬜ stub | ⬜ | ⬜ | ⬜ |
+| Orissa High Court | — | ⬜ stub | ⬜ | ⬜ | ⬜ |
+| Patna High Court | — | ⬜ stub | ⬜ | ⬜ | ⬜ |
+| Punjab & Haryana High Court | — | ⬜ stub | ⬜ | ⬜ | ⬜ |
+| Rajasthan High Court | — | ⬜ stub | ⬜ | ⬜ | ⬜ |
+| Sikkim High Court | — | ⬜ stub | ⬜ | ⬜ | ⬜ |
+| Telangana High Court | — | ⬜ stub | ⬜ | ⬜ | ⬜ |
+| Tripura High Court | — | ⬜ stub | ⬜ | ⬜ | ⬜ |
+| Uttarakhand High Court | — | ⬜ stub | ⬜ | ⬜ | ⬜ |
+
+**Key:** ✅ Done &nbsp;·&nbsp; 🟡 Partial &nbsp;·&nbsp; ⬜ Not yet done
+
+If you want to help fill in a court, the best place to start is the [contributing section](#how-to-contribute) below. Official judge rosters and asset declarations are publicly available on each court's website.
+
+---
+
 ## Features
 
 ### Court & Judge Directory
-- Complete roster of sitting and recently retired judges across the Supreme Court and all 25 High Courts
+- Full roster of sitting judges for completed courts; stub entries for courts in progress
 - Role badges: Chief Justice, Judge, Additional Judge, Acting Chief Justice
 - Appointment dates, assumed-role dates, and calculated retirement dates (HC judges retire at 62; SC judges at 65)
 - Retirement countdown with colour-coded urgency indicators
