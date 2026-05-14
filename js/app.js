@@ -2240,6 +2240,14 @@ function escAttr(str) {
   return escHtml(str).replace(/'/g, '&#39;');
 }
 
+function judgeProfileHref(judge) {
+  if (!judge || !judge.id) return '#';
+  const params = new URLSearchParams();
+  params.set('judge', judge.id);
+  if (judge.parent_id) params.set('view', judge.parent_id);
+  return `#${params.toString()}`;
+}
+
 // ─────────────────────────────────────────────────────────────────────────────
 // Upcoming Retirements Panel
 // ─────────────────────────────────────────────────────────────────────────────
@@ -2260,6 +2268,7 @@ function renderUpcomingPanel() {
       <div class="upcoming-item ${p.tenure.status}" onclick="selectView('${escHtml(p.parent_id)}')">
         <div class="upcoming-name">${escHtml(p.name)}</div>
         <div class="upcoming-court">${escHtml(p.court || p.ministry || '')}</div>
+        ${isJudgeRecord(p) ? `<a class="upcoming-profile-link" href="${escAttr(judgeProfileHref(p))}" onclick="event.stopPropagation(); selectJudge('${escAttr(p.id)}'); return false;">View profile</a>` : ''}
         <div class="upcoming-chip ${p.tenure.status}">${p.tenure.label}</div>
       </div>`).join('')}`;
 }

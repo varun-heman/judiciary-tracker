@@ -2054,6 +2054,20 @@ body.right-rail-collapsed .transfer-rail-content {
 
 .upcoming-name  { font-size: 11.5px; font-weight: 600; color: var(--text); margin-bottom: 2px; line-height: 1.3; }
 .upcoming-court { font-size: 10.5px; color: var(--text-muted); margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.upcoming-profile-link {
+  display: inline-block;
+  margin: 0 0 5px;
+  color: var(--accent2);
+  font-size: 10.5px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.upcoming-profile-link::after {
+  content: " ↗";
+  font-size: 0.85em;
+  opacity: 0.75;
+}
 .upcoming-chip  { display: inline-block; font-size: 10px; font-weight: 700; padding: 1px 6px; border-radius: 10px; }
 .upcoming-chip.critical { background: var(--critical); color: #fff; }
 .upcoming-chip.warning  { background: var(--warning);  color: #fff; }
