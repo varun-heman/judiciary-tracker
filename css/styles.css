@@ -1088,15 +1088,26 @@ body.dark .show-all-btn.active {
   font-weight: 850;
 }
 
-.asset-table .note-cell {
-  width: 26px;
-  min-width: 26px;
+.asset-table th.note-cell {
+  width: 36px;
+  min-width: 36px;
+  white-space: nowrap;
   text-align: center;
-  padding-left: 2px;
-  padding-right: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
-.asset-table .note-cell span {
+.asset-table td.note-cell {
+  width: 36px;
+  min-width: 36px;
+  text-align: center;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+/* Custom tooltip on the ⓘ icon */
+.asset-note-tip {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1106,6 +1117,37 @@ body.dark .show-all-btn.active {
   background: var(--unknown-bg);
   color: var(--text-muted);
   cursor: help;
+  font-size: 11px;
+}
+
+.asset-note-tip::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  right: 0;
+  min-width: 200px;
+  max-width: 300px;
+  width: max-content;
+  background: var(--text);
+  color: var(--bg-card);
+  font-size: 11px;
+  line-height: 1.5;
+  padding: 7px 10px;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.25);
+  white-space: normal;
+  word-break: break-word;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .15s ease;
+  z-index: 200;
+  text-transform: none;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.asset-note-tip:hover::after {
+  opacity: 1;
 }
 
 .amount-pill {

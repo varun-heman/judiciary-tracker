@@ -606,6 +606,11 @@ function assetTableRow(category, raw) {
   return { owner, type: categoryLabel(category), note };
 }
 
+// Strip leading numbered-list markers like "1. ", "12. ", "[a] ", "(a) " from note text.
+function cleanNote(note) {
+  return (note || '').replace(/^\s*(?:\d+\.|[a-z]\.|[[(][a-z\d]+[\])])\s*/i, '').trim();
+}
+
 // Returns true if a row's note contains meaningful extra context worth showing.
 function rowHasNote(row) {
   const n = (row.note || '').trim();
@@ -637,7 +642,7 @@ function moneyAssetTable(rows, item) {
             <td>${escHtml(row.owner || 'Declared')}</td>
             <td>${escHtml(row.type)}</td>
             <td class="num">${amountPill(row.amount ? formatRupees(row.amount) : '', '💰')}</td>
-            ${hasNotes ? `<td class="note-cell">${rowHasNote(row) ? `<span title="${escAttr(row.note)}">ⓘ</span>` : ''}</td>` : ''}
+            ${hasNotes ? `<td class="note-cell">${rowHasNote(row) ? `<span class="asset-note-tip" data-tip="${escAttr(cleanNote(row.note))}">ⓘ</span>` : ''}</td>` : ''}
           </tr>`).join('')}</tbody>
         <tfoot><tr><td colspan="2">Total disclosed monetary assets</td><td class="num">${amountPill(total ? formatRupees(total) : '', '💰', true)}</td>${hasNotes ? '<td></td>' : ''}</tr></tfoot>
       </table>
@@ -661,7 +666,7 @@ function builtPropertyAssetTable(rows) {
             <td>${escHtml(row.type)}</td>
             <td>${escHtml(row.share || 'Full')}</td>
             <td>${escHtml(row.sizeStr || '—')}</td>
-            ${hasNotes ? `<td class="note-cell">${rowHasNote(row) ? `<span title="${escAttr(row.note)}">ⓘ</span>` : ''}</td>` : ''}
+            ${hasNotes ? `<td class="note-cell">${rowHasNote(row) ? `<span class="asset-note-tip" data-tip="${escAttr(cleanNote(row.note))}">ⓘ</span>` : ''}</td>` : ''}
           </tr>`).join('')}</tbody>
         <tfoot>
           <tr><td colspan="3">Total disclosed properties</td><td>${amountPill(String(rows.length), '🏠', true)}</td>${hasNotes ? '<td></td>' : ''}</tr>
@@ -685,7 +690,7 @@ function landAssetTable(rows, item) {
             <td>${escHtml(row.type)}</td>
             <td>${escHtml(row.share || 'Full')}</td>
             <td class="num">${row.acres ? amountPill(`${applyShare(row.acres, row.share).toLocaleString('en-IN')} acres`, '🌾') : ''}</td>
-            ${hasNotes ? `<td class="note-cell">${rowHasNote(row) ? `<span title="${escAttr(row.note)}">ⓘ</span>` : ''}</td>` : ''}
+            ${hasNotes ? `<td class="note-cell">${rowHasNote(row) ? `<span class="asset-note-tip" data-tip="${escAttr(cleanNote(row.note))}">ⓘ</span>` : ''}</td>` : ''}
           </tr>`).join('')}</tbody>
         <tfoot><tr><td colspan="3">Total disclosed acreage</td><td class="num">${amountPill(totalAcres ? `${totalAcres.toLocaleString('en-IN')} acres` : '', '🌾', true)}</td>${hasNotes ? '<td></td>' : ''}</tr></tfoot>
       </table>
@@ -693,23 +698,36 @@ function landAssetTable(rows, item) {
 }
 
 function jewelleryAssetTable(rows, item) {
-  const computed = rows.filter(r => r.type === 'Gold').reduce((sum, row) => sum + (row.grams || 0), 0);
-  const gold = computed || Number(item.gold_grams);
-  const hasNotes = rows.some(rowHasNote);
-  return `
+  const goldRows    = rows.filter(r => r.type === 'Gold');
+  const silverRows  = rows.filter(r => r.type === 'Silver');
+  const otherRows   = rows.filter(r => r.type !== 'Gold' && r.type !== 'Silver');
+
+  const goldTotal   = goldRows.reduce((s, r) => s + (r.grams || 0), 0) || Number(item.gold_grams);
+  const silverTotal = silverRows.reduce((s, r) => s + (r.grams || 0), 0) || Number(item.silver_grams);
+
+  function metalTable(subRows, label, emoji, footerLabel, footerTotal, footerEmoji) {
+    const hasNotes = subRows.some(rowHasNote);
+    return `
     <div class="asset-table-wrap">
       <table class="asset-table">
-        <thead><tr><th>Owner</th><th>Asset</th><th class="num">Amount</th>${hasNotes ? '<th class="note-cell">Note</th>' : ''}</tr></thead>
-        <tbody>${rows.map(row => `
+        <thead><tr><th>Owner</th><th>${escHtml(label)}</th><th class="num">Amount</th>${hasNotes ? '<th class="note-cell">Note</th>' : ''}</tr></thead>
+        <tbody>${subRows.map(row => `
           <tr>
             <td>${escHtml(row.owner || 'Declared')}</td>
             <td>${escHtml(row.type)}</td>
-            <td class="num">${amountPill(row.grams ? formatWeight(row.grams) : '', row.type === 'Silver' ? '🥈' : '🏅')}</td>
-            ${hasNotes ? `<td class="note-cell">${rowHasNote(row) ? `<span title="${escAttr(row.note)}">ⓘ</span>` : ''}</td>` : ''}
+            <td class="num">${amountPill(row.grams ? formatWeight(row.grams) : '', emoji)}</td>
+            ${hasNotes ? `<td class="note-cell">${rowHasNote(row) ? `<span class="asset-note-tip" data-tip="${escAttr(cleanNote(row.note))}">ⓘ</span>` : ''}</td>` : ''}
           </tr>`).join('')}</tbody>
-        <tfoot><tr><td colspan="2">Total gold</td><td class="num">${amountPill(gold ? formatWeight(gold) : '', '🏅', true)}</td>${hasNotes ? '<td></td>' : ''}</tr></tfoot>
+        ${footerTotal ? `<tfoot><tr><td colspan="2">${escHtml(footerLabel)}</td><td class="num">${amountPill(formatWeight(footerTotal), footerEmoji, true)}</td>${hasNotes ? '<td></td>' : ''}</tr></tfoot>` : ''}
       </table>
     </div>`;
+  }
+
+  const parts = [];
+  if (goldRows.length)   parts.push(metalTable(goldRows,   'Gold',               '🏅', 'Total gold',         goldTotal,   '🏅'));
+  if (silverRows.length) parts.push(metalTable(silverRows, 'Silver',             '🥈', 'Total silver',       silverTotal, '🥈'));
+  if (otherRows.length)  parts.push(metalTable(otherRows,  'Watches & valuables','💎', 'Total valuables',    0,           '💎'));
+  return parts.join('');
 }
 
 function vehicleAssetTable(rows, item) {
@@ -722,7 +740,7 @@ function vehicleAssetTable(rows, item) {
           <tr>
             <td>${escHtml(row.owner || 'Declared')}</td>
             <td>${escHtml(row.type)}</td>
-            ${hasNotes ? `<td class="note-cell">${rowHasNote(row) ? `<span title="${escAttr(row.note)}">ⓘ</span>` : ''}</td>` : ''}
+            ${hasNotes ? `<td class="note-cell">${rowHasNote(row) ? `<span class="asset-note-tip" data-tip="${escAttr(cleanNote(row.note))}">ⓘ</span>` : ''}</td>` : ''}
           </tr>`).join('')}</tbody>
         <tfoot><tr><td>Total vehicles</td><td>${amountPill(String(Number(item.count) || rows.length), '🚗', true)}</td>${hasNotes ? '<td></td>' : ''}</tr></tfoot>
       </table>
@@ -739,7 +757,7 @@ function notesAssetTable(rows) {
           <tr>
             <td>${escHtml(row.owner || 'Declared')}</td>
             <td>${escHtml(row.type)}</td>
-            ${hasNotes ? `<td class="note-cell">${rowHasNote(row) ? `<span title="${escAttr(row.note)}">ⓘ</span>` : ''}</td>` : ''}
+            ${hasNotes ? `<td class="note-cell">${rowHasNote(row) ? `<span class="asset-note-tip" data-tip="${escAttr(cleanNote(row.note))}">ⓘ</span>` : ''}</td>` : ''}
           </tr>`).join('')}</tbody>
       </table>
     </div>`;
