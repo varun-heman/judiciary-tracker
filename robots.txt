@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://varun-heman.github.io/judiciary-tracker/sitemap.xml
