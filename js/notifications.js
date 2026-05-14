@@ -123,15 +123,14 @@ function findJudgeForTransfer(entry) {
   return courtScoped || null;
 }
 
-function renderTransferPersonLink(entry, { compact = false } = {}) {
-  const name = escHtml(entry.person_name || 'Name not stated');
+function renderTransferProfileLink(entry, { compact = false } = {}) {
   const judge = findJudgeForTransfer(entry);
-  if (!judge) return `<strong>${name}</strong>`;
+  if (!judge) return '';
   return `
     <a class="${compact ? 'transfer-profile-link compact' : 'transfer-profile-link'}"
        href="${escAttr(judgeProfileUrl(judge))}"
        ${compact ? "onclick=\"event.stopPropagation()\"" : ''}>
-      ${name}
+      View profile
     </a>`;
 }
 
@@ -336,7 +335,8 @@ function renderTransferRail(rows) {
       ${entries.map(entry => `
         <div class="rail-transfer" role="button" tabindex="0" onclick="openNotificationPdf('${escAttr(entry.notification_id)}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openNotificationPdf('${escAttr(entry.notification_id)}')}">
           <span class="rail-court">${escHtml(entry.court)}</span>
-          ${renderTransferPersonLink(entry, { compact: true })}
+          <strong>${escHtml(entry.person_name || 'Name not stated')}</strong>
+          ${renderTransferProfileLink(entry, { compact: true })}
           <span>${escHtml(entry.assumed_role || entry.to_position || 'Role not stated')}</span>
           <span class="rail-date">${entry.effective_date ? formatDate(entry.effective_date) : formatDate(entry.date)}</span>
         </div>
@@ -361,8 +361,9 @@ function renderTransferDetails(item, entries) {
         ${entries.map(entry => `
           <div class="transfer-entry">
             <div class="transfer-person">
-              ${renderTransferPersonLink(entry)}
+              <strong>${escHtml(entry.person_name || 'Name not stated')}</strong>
               <span class="transfer-role">${escHtml(entry.role_type || 'Judicial Officer')}</span>
+              ${renderTransferProfileLink(entry)}
             </div>
             <div class="transfer-route">
               <div>
@@ -467,8 +468,9 @@ function renderModalTransferPanel(item) {
       ${entries.map(entry => `
         <div class="modal-transfer-entry">
           <div class="transfer-person">
-            ${renderTransferPersonLink(entry)}
+            <strong>${escHtml(entry.person_name || 'Name not stated')}</strong>
             <span class="transfer-role">${escHtml(entry.role_type || 'Judicial Officer')}</span>
+            ${renderTransferProfileLink(entry)}
           </div>
           <div class="modal-transfer-route">
             <span class="transfer-label">From</span>

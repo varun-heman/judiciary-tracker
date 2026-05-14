@@ -2274,10 +2274,11 @@ body.modal-open {
 .transfer-profile-link {
   width: fit-content;
   color: var(--accent2);
-  font-weight: 800;
-  font-size: 12px;
+  font-weight: 700;
+  font-size: 10.5px;
   line-height: 1.3;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .transfer-profile-link::after {
@@ -2400,7 +2401,7 @@ body.modal-open {
 }
 
 .rail-transfer .transfer-profile-link {
-  font-size: 11.5px;
+  font-size: 10.5px;
 }
 
 .rail-transfer span {
