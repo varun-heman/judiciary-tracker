@@ -1635,6 +1635,7 @@ function attachSliderListeners() {
 function renderContent() {
   const container = document.getElementById('main-content');
   const all = [...state.courts, ...state.ministries, ...state.adminStaff];
+  renderUpcomingPanel();
 
   // ── Search mode ──
   if (state.searchQuery.length > 1) {
@@ -2253,8 +2254,11 @@ function judgeProfileHref(judge) {
 // ─────────────────────────────────────────────────────────────────────────────
 function renderUpcomingPanel() {
   const all = [...state.courts, ...state.ministries];
+  const courtView = state.selectedId && state.selectedId !== 'HOME' && state.selectedId !== 'RETIRED' && state.selectedId !== 'ADMIN';
+
   const upcoming = all
     .filter(d => d.type !== 'institution' && d.type !== 'placeholder')
+    .filter(d => !courtView || d.parent_id === state.selectedId || d.id === state.selectedId)
     .map(d => ({ ...d, tenure: getTenure(d.retirement_date || d.tenure_end) }))
     .filter(d => d.tenure.daysLeft !== null && d.tenure.daysLeft >= 0 && d.tenure.daysLeft <= 365)
     .sort((a, b) => a.tenure.daysLeft - b.tenure.daysLeft);
@@ -2262,8 +2266,21 @@ function renderUpcomingPanel() {
   const panel = document.getElementById('upcoming-panel');
   if (!panel) return;
 
+  // Update title to reflect scope
+  const titleEl = document.querySelector('.upcoming-title span');
+  if (titleEl) {
+    if (courtView) {
+      const courtRecord = [...state.courts, ...state.ministries].find(d => d.id === state.selectedId);
+      const courtShortName = courtRecord ? (courtRecord.short_name || courtRecord.name || state.selectedId) : state.selectedId;
+      titleEl.textContent = `⏳ Retirements · ${courtShortName}`;
+    } else {
+      titleEl.textContent = '⏳ Upcoming Retirements';
+    }
+  }
+
+  const emptyMsg = courtView ? 'None within 1 year for this court' : 'None within 1 year';
   panel.innerHTML = `
-    ${upcoming.length === 0 ? '<div class="upcoming-empty">None within 1 year</div>' : ''}
+    ${upcoming.length === 0 ? `<div class="upcoming-empty">${emptyMsg}</div>` : ''}
     ${upcoming.map(p => `
       <div class="upcoming-item ${p.tenure.status}" onclick="selectView('${escHtml(p.parent_id)}')">
         <div class="upcoming-name">${escHtml(p.name)}</div>
