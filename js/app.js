@@ -791,7 +791,7 @@ function jewelleryAssetTable(rows, item) {
     parts.push(`
       <div class="metal-price-disclaimer">
         <p class="disclaimer-warning">⚠️ Estimated values only. Actual market value may vary significantly.</p>
-        <p>Prices sourced from <strong>Yahoo Finance</strong> (GC=F gold futures, SI=F silver futures, USDINR=X exchange rate). Last refreshed: <strong>${escHtml(fetchedStr)}</strong>.</p>
+        <p>Prices sourced from <strong>stooq.com</strong> (international spot rates for XAU/USD and XAG/USD, converted to INR). Last refreshed: <strong>${escHtml(fetchedStr)}</strong>.</p>
         <p><strong>Assumptions:</strong> Gold is priced at 22-karat purity (91.67%). Silver is priced at 92.5% purity (Sterling Silver). Making charges, wastage, GST, and local market premiums are not included. The purity and quality of declared jewellery is not stated in affidavits — actual resale or market values may differ substantially.</p>
       </div>`);
   }
