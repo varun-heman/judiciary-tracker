@@ -39,10 +39,16 @@ function renderMarkdown(markdown) {
 }
 
 function inlineMarkdown(text) {
-  return escapeHtml(text).replace(
-    /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g,
-    '<a href="$2" target="_blank" rel="noopener">$1</a>'
-  );
+  return escapeHtml(text)
+    // bold — must come before italic so ** is matched first
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    // italic
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    // inline code
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    // links — applied last so URLs inside aren't mangled
+    .replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g,
+      '<a href="$2" target="_blank" rel="noopener">$1</a>');
 }
 
 function escapeHtml(value) {
