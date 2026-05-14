@@ -7355,22 +7355,6 @@
     }
   },
   {
-    "id": "HC-TRI-CJ",
-    "bio": "",
-    "bio_source_url": "",
-    "bio_source_label": "",
-    "assets": {
-      "currency": "INR",
-      "source_url": "",
-      "source_label": "",
-      "last_verified": "",
-      "movable": [],
-      "immovable": [],
-      "family": [],
-      "notes": "No official/public asset declaration has been added for this judge yet."
-    }
-  },
-  {
     "id": "HC-UTK-CJ",
     "bio": "",
     "bio_source_url": "",
@@ -7516,6 +7500,70 @@
   },
   {
     "id": "HC-UTK-009",
+    "bio": "",
+    "bio_source_url": "",
+    "bio_source_label": "",
+    "assets": {
+      "currency": "INR",
+      "source_url": "",
+      "source_label": "",
+      "last_verified": "",
+      "movable": [],
+      "immovable": [],
+      "family": [],
+      "notes": "No official/public asset declaration has been added for this judge yet."
+    }
+  },
+  {
+    "id": "HC-TRI-CJ",
+    "bio": "",
+    "bio_source_url": "",
+    "bio_source_label": "",
+    "assets": {
+      "currency": "INR",
+      "source_url": "",
+      "source_label": "",
+      "last_verified": "",
+      "movable": [],
+      "immovable": [],
+      "family": [],
+      "notes": "No official/public asset declaration has been added for this judge yet."
+    }
+  },
+  {
+    "id": "HC-TRI-001",
+    "bio": "",
+    "bio_source_url": "",
+    "bio_source_label": "",
+    "assets": {
+      "currency": "INR",
+      "source_url": "",
+      "source_label": "",
+      "last_verified": "",
+      "movable": [],
+      "immovable": [],
+      "family": [],
+      "notes": "No official/public asset declaration has been added for this judge yet."
+    }
+  },
+  {
+    "id": "HC-TRI-002",
+    "bio": "",
+    "bio_source_url": "",
+    "bio_source_label": "",
+    "assets": {
+      "currency": "INR",
+      "source_url": "",
+      "source_label": "",
+      "last_verified": "",
+      "movable": [],
+      "immovable": [],
+      "family": [],
+      "notes": "No official/public asset declaration has been added for this judge yet."
+    }
+  },
+  {
+    "id": "HC-TRI-003",
     "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",

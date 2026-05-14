@@ -1,5 +1,13 @@
 [
   {
+    "court_id": "HC-TRI",
+    "court": "Tripura High Court",
+    "url": "https://thc.nic.in/CJ_MSRR.html",
+    "scope": "sitting-judges",
+    "verified": true,
+    "notes": "Tripura HC does not publish a single sitting-judges index. Sitting judges were compiled from the official static profile pages for the Chief Justice and three puisne judges: CJ_MSRR.html, TAGprofile.html, SDPProfile.html and BPalitProfile.html. Verified May 2026."
+  },
+  {
     "court_id": "HC-UTK",
     "court": "Uttarakhand High Court",
     "url": "https://highcourtofuttarakhand.gov.in/whos-who/",
