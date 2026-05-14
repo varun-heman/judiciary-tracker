@@ -2077,7 +2077,6 @@ body.modal-open {
 .notification-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-left: 4px solid var(--accent2);
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow);
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
@@ -2087,7 +2086,6 @@ body.modal-open {
 .notification-card:hover {
   transform: translateY(-1px);
   box-shadow: var(--shadow-md);
-  border-left-color: var(--accent);
 }
 
 .notification-row {
