@@ -1041,9 +1041,14 @@ body.dark .show-all-btn.active {
   margin-top: 8px;
 }
 
+.asset-table-scroll {
+  overflow-x: auto;
+  border-radius: var(--radius-sm);
+}
+
 .asset-table-wrap {
   margin-top: 10px;
-  overflow-x: auto;
+  overflow: visible;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   background: var(--bg-card);
@@ -1123,7 +1128,8 @@ body.dark .show-all-btn.active {
 .asset-note-tip::after {
   content: attr(data-tip);
   position: absolute;
-  bottom: calc(100% + 8px);
+  top: calc(100% + 8px);
+  bottom: auto;
   right: 0;
   min-width: 200px;
   max-width: 300px;

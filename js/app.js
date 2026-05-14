@@ -113,7 +113,7 @@ async function loadData() {
         <p>For the best experience, serve the folder via a local HTTP server:</p>
         <div class="code-block">python3 -m http.server 8000</div>
         <p>Then open: <a href="http://localhost:8000" target="_blank">http://localhost:8000</a></p>
-      </div>`;
+      </div></div>`;
     return false;
   }
 }
@@ -218,7 +218,7 @@ function renderNav() {
           <span class="nav-label">About</span>
         </a>
       </div>
-    </div>`;
+    </div></div>`;
 
   // ── Supreme Court ──
   if (sc) {
@@ -240,7 +240,7 @@ function renderNav() {
             ${scAlert ? `<span class="nav-badge critical">${scAlert}</span>` : ''}
           </a>
         </div>
-      </div>`;
+      </div></div>`;
   }
 
   // ── High Courts ──
@@ -267,7 +267,7 @@ function renderNav() {
         <span class="nav-collapse-icon">${hcCollapsed ? '▸' : '▾'}</span>
       </button>
       <div class="nav-section-items">${hcItemsHtml}</div>
-    </div>`;
+    </div></div>`;
 
   // ── Court Staff ──
   const csKey = 'Court Staff';
@@ -297,7 +297,7 @@ function renderNav() {
           <span class="nav-label">Judge/Staff Transfers</span>
         </a>
       </div>
-    </div>`;
+    </div></div>`;
 
   // ── Ministries ──
   if (ministries.length > 0) {
@@ -320,7 +320,7 @@ function renderNav() {
           <span class="nav-collapse-icon">${minCollapsed ? '▸' : '▾'}</span>
         </button>
         <div class="nav-section-items">${minItemsHtml}</div>
-      </div>`;
+      </div></div>`;
   }
 
   // ── Legend ──
@@ -330,7 +330,7 @@ function renderNav() {
       <div class="legend-item"><span class="nav-dot good"></span> &gt; 1 year</div>
       <div class="legend-item"><span class="nav-dot warning"></span> 3–12 months</div>
       <div class="legend-item"><span class="nav-dot critical"></span> &lt; 3 months</div>
-    </div>`;
+    </div></div>`;
 
   nav.innerHTML = html;
 }
@@ -375,7 +375,7 @@ function renderCard(person, isHead = false) {
           </div>
         </div>
         ${person.notes ? `<div class="card-notes">${person.notes}</div>` : ''}
-      </div>`;
+      </div></div>`;
   }
 
   const progressBar = (retireStr && tenure.status !== 'retired') ? `
@@ -410,7 +410,7 @@ function renderCard(person, isHead = false) {
         ${person.photo_source ? `<div class="meta-row"><span class="meta-icon">▧</span><span>Photo: ${escHtml(person.photo_source)}</span></div>` : ''}
         ${person.notes ? `<div class="meta-row notes-row"><span class="meta-icon">ℹ</span><span>${person.notes}</span></div>` : ''}
       </div>
-    </div>`;
+    </div></div>`;
 }
 
 function renderAvatar(person) {
@@ -507,7 +507,7 @@ function renderAssetRankSummary(judgeId) {
     <div class="asset-rank-summary">
       <div><span>Same court</span><strong>#${rank.courtRank}</strong><em>of ${rank.courtTotal} judges with declarations</em></div>
       <div><span>All tracked courts</span><strong>#${rank.globalRank}</strong><em>of ${rank.globalTotal} judges with declarations</em></div>
-    </div>`;
+    </div></div>`;
 }
 
 function judgeAssetRank(judgeId) {
@@ -634,7 +634,7 @@ function moneyAssetTable(rows, item) {
   const total = computed || assetNumber(item);
   const hasNotes = rows.some(rowHasNote);
   return `
-    <div class="asset-table-wrap">
+    <div class="asset-table-scroll"><div class="asset-table-wrap">
       <table class="asset-table">
         <thead><tr><th>Owner</th><th>Holding</th><th class="num">Amount</th>${hasNotes ? '<th class="note-cell">Note</th>' : ''}</tr></thead>
         <tbody>${rows.map(row => `
@@ -646,7 +646,7 @@ function moneyAssetTable(rows, item) {
           </tr>`).join('')}</tbody>
         <tfoot><tr><td colspan="2">Total disclosed monetary assets</td><td class="num">${amountPill(total ? formatRupees(total) : '', '💰', true)}</td>${hasNotes ? '<td></td>' : ''}</tr></tfoot>
       </table>
-    </div>`;
+    </div></div>`;
 }
 
 function propertyAssetTable(rows, item) {
@@ -657,7 +657,7 @@ function propertyAssetTable(rows, item) {
 function builtPropertyAssetTable(rows) {
   const hasNotes = rows.some(rowHasNote);
   return `
-    <div class="asset-table-wrap">
+    <div class="asset-table-scroll"><div class="asset-table-wrap">
       <table class="asset-table">
         <thead><tr><th>Owner</th><th>Property</th><th>Share</th><th>Size</th>${hasNotes ? '<th class="note-cell">Note</th>' : ''}</tr></thead>
         <tbody>${rows.map(row => `
@@ -672,7 +672,7 @@ function builtPropertyAssetTable(rows) {
           <tr><td colspan="3">Total disclosed properties</td><td>${amountPill(String(rows.length), '🏠', true)}</td>${hasNotes ? '<td></td>' : ''}</tr>
         </tfoot>
       </table>
-    </div>`;
+    </div></div>`;
 }
 
 function landAssetTable(rows, item) {
@@ -681,7 +681,7 @@ function landAssetTable(rows, item) {
   const totalAcres = computed || Number(item.acres);
   const hasNotes = rows.some(rowHasNote);
   return `
-    <div class="asset-table-wrap">
+    <div class="asset-table-scroll"><div class="asset-table-wrap">
       <table class="asset-table">
         <thead><tr><th>Owner</th><th>Type</th><th>Share</th><th class="num">Acres</th>${hasNotes ? '<th class="note-cell">Note</th>' : ''}</tr></thead>
         <tbody>${rows.map(row => `
@@ -694,7 +694,7 @@ function landAssetTable(rows, item) {
           </tr>`).join('')}</tbody>
         <tfoot><tr><td colspan="3">Total disclosed acreage</td><td class="num">${amountPill(totalAcres ? `${totalAcres.toLocaleString('en-IN')} acres` : '', '🌾', true)}</td>${hasNotes ? '<td></td>' : ''}</tr></tfoot>
       </table>
-    </div>`;
+    </div></div>`;
 }
 
 function jewelleryAssetTable(rows, item) {
@@ -708,7 +708,7 @@ function jewelleryAssetTable(rows, item) {
   function metalTable(subRows, label, emoji, footerLabel, footerTotal, footerEmoji) {
     const hasNotes = subRows.some(rowHasNote);
     return `
-    <div class="asset-table-wrap">
+    <div class="asset-table-scroll"><div class="asset-table-wrap">
       <table class="asset-table">
         <thead><tr><th>Owner</th><th>${escHtml(label)}</th><th class="num">Amount</th>${hasNotes ? '<th class="note-cell">Note</th>' : ''}</tr></thead>
         <tbody>${subRows.map(row => `
@@ -720,7 +720,7 @@ function jewelleryAssetTable(rows, item) {
           </tr>`).join('')}</tbody>
         ${footerTotal ? `<tfoot><tr><td colspan="2">${escHtml(footerLabel)}</td><td class="num">${amountPill(formatWeight(footerTotal), footerEmoji, true)}</td>${hasNotes ? '<td></td>' : ''}</tr></tfoot>` : ''}
       </table>
-    </div>`;
+    </div></div>`;
   }
 
   const parts = [];
@@ -733,7 +733,7 @@ function jewelleryAssetTable(rows, item) {
 function vehicleAssetTable(rows, item) {
   const hasNotes = rows.some(rowHasNote);
   return `
-    <div class="asset-table-wrap">
+    <div class="asset-table-scroll"><div class="asset-table-wrap">
       <table class="asset-table">
         <thead><tr><th>Owner</th><th>Vehicle</th>${hasNotes ? '<th class="note-cell">Note</th>' : ''}</tr></thead>
         <tbody>${rows.map(row => `
@@ -744,13 +744,13 @@ function vehicleAssetTable(rows, item) {
           </tr>`).join('')}</tbody>
         <tfoot><tr><td>Total vehicles</td><td>${amountPill(String(Number(item.count) || rows.length), '🚗', true)}</td>${hasNotes ? '<td></td>' : ''}</tr></tfoot>
       </table>
-    </div>`;
+    </div></div>`;
 }
 
 function notesAssetTable(rows) {
   const hasNotes = rows.some(rowHasNote);
   return `
-    <div class="asset-table-wrap">
+    <div class="asset-table-scroll"><div class="asset-table-wrap">
       <table class="asset-table">
         <thead><tr><th>Owner</th><th>Type</th>${hasNotes ? '<th class="note-cell">Note</th>' : ''}</tr></thead>
         <tbody>${rows.map(row => `
@@ -760,7 +760,7 @@ function notesAssetTable(rows) {
             ${hasNotes ? `<td class="note-cell">${rowHasNote(row) ? `<span class="asset-note-tip" data-tip="${escAttr(cleanNote(row.note))}">ⓘ</span>` : ''}</td>` : ''}
           </tr>`).join('')}</tbody>
       </table>
-    </div>`;
+    </div></div>`;
 }
 
 function moneyHoldingType(text) {
@@ -927,7 +927,7 @@ function dashboardBar(label, value, total, className = '') {
     <div class="dash-bar-row ${className}">
       <div class="dash-bar-label"><span>${escHtml(label)}</span><strong>${value}</strong></div>
       <div class="dash-bar-track"><div class="dash-bar-fill" style="width:${pct}%"></div></div>
-    </div>`;
+    </div></div>`;
 }
 
 function judgeStatusBuckets(judges) {
@@ -1103,7 +1103,7 @@ function renderUnifiedFilterBar(judgePool, adminPool) {
         <div class="role-pills-wrap">${rolePills}</div>
         <button class="clear-filter-btn${hasRoleFilter ? '' : ' hidden'}" onclick="clearAllRoleFilters()">× Clear</button>
       </div>` : ''}
-    </div>`;
+    </div></div>`;
 }
 
 // Attach smooth slider listeners after every innerHTML write.
@@ -1211,7 +1211,7 @@ function renderContent() {
     <div class="view-header">
       <h2>${escHtml(root.name)}</h2>
       ${root.notes ? `<p class="view-subtitle">${escHtml(root.notes)}</p>` : ''}
-    </div>`;
+    </div></div>`;
 
   if (isMinistry) {
     html += renderMinistryView(root, all, children);
@@ -1349,7 +1349,7 @@ function renderDashboardView() {
             </div>`
           : `<div class="empty-state compact"><p>No tracked judge retirements within 12 months.</p></div>`}
       </section>
-    </div>`;
+    </div></div>`;
 }
 
 function renderJudgeDetailView(id) {
@@ -1431,7 +1431,7 @@ function renderJudgeDetailView(id) {
           ${assetList(assets.family)}
         </article>
       </section>
-    </div>`;
+    </div></div>`;
 }
 
 function renderRetiredJudgesView() {
@@ -1509,7 +1509,7 @@ function renderCourtView(root, all, children) {
         <div class="empty-state">
           <p>No individual judges loaded for this court yet.</p>
           <p>Available public data for this court is incomplete.</p>
-        </div>`;
+        </div></div>`;
     }
   }
 
@@ -1533,7 +1533,7 @@ function renderMinistryView(root, all, children) {
         <div class="dept-name">${escHtml(dept.name)}</div>
         ${dept.notes ? `<div class="dept-desc">${escHtml(dept.notes)}</div>` : ''}
         <div class="dept-officials">${deptChildren.map(p => renderCard(p)).join('')}</div>
-      </div>`;
+      </div></div>`;
   });
 
   return html;
@@ -1609,7 +1609,7 @@ function renderAdminCard(cpc) {
         ${cpc.source_url ? `<div class="meta-row"><span class="meta-icon">↗</span><span><a class="inline-link" href="${escHtml(cpc.source_url)}" target="_blank" rel="noopener">${escHtml(cpc.source_label || 'Official source')}</a></span></div>` : ''}
         ${cleanNotes ? `<div class="meta-row notes-row"><span class="meta-icon">ℹ</span><span>${escHtml(cleanNotes)}</span></div>` : ''}
       </div>
-    </div>`;
+    </div></div>`;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
