@@ -2,10 +2,10 @@
   {
     "court_id": "HC-UTK",
     "court": "Uttarakhand High Court",
-    "url": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
-    "scope": "transfer-notifications",
+    "url": "https://highcourtofuttarakhand.gov.in/whos-who/",
+    "scope": "sitting-judges",
     "verified": true,
-    "notes": "Official notifications page. Admin.A-2 category = transfer/posting orders for judicial officers. Hosted on S3WaaS CDN (cdnbbsr.s3waas.gov.in). Verified May 2026."
+    "notes": "Official Who's Who page listing the Chief Justice and sitting judges with profile links and photos. DOB/appointment dates pulled from official profiles where published; supplementary retirement-list data used only where the profile omits DOB. Verified May 2026."
   },
   {
     "court_id": "SC",
