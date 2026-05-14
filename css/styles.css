@@ -2732,7 +2732,10 @@ body.modal-open {
     font-size: 13px;
   }
   .dashboard-action {
+    display: flex;
     width: 100%;
+    white-space: normal;
+    text-align: center;
     margin-top: 16px;
     min-height: 40px;
     border-radius: 12px;
