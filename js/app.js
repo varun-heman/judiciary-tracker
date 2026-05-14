@@ -218,13 +218,19 @@ function renderNav() {
           <span class="nav-icon">⌂</span>
           <span class="nav-label">Overview</span>
         </a>
-        <a class="nav-item" href="about.html">
-          <span class="nav-icon">ⓘ</span>
-          <span class="nav-label">About</span>
-        </a>
         <a class="nav-item" href="notifications.html">
           <span class="nav-icon">↗</span>
           <span class="nav-label">Judge/Staff Transfers</span>
+        </a>
+        <a class="nav-item ${state.selectedId === 'RETIRED' ? 'active' : ''}"
+           href="#" onclick="selectView('RETIRED'); return false;">
+          <span class="nav-icon">◌</span>
+          <span class="nav-label">Retired Judges</span>
+          <span class="nav-badge">${retiredJudges().length}</span>
+        </a>
+        <a class="nav-item" href="about.html">
+          <span class="nav-icon">ⓘ</span>
+          <span class="nav-label">About</span>
         </a>
       </div>
     </div></div>`;
@@ -294,12 +300,6 @@ function renderNav() {
            href="#" onclick="selectView('ADMIN'); return false;">
           <span class="nav-icon">▣</span>
           <span class="nav-label">Court Administration</span>
-        </a>
-        <a class="nav-item ${state.selectedId === 'RETIRED' ? 'active' : ''}"
-           href="#" onclick="selectView('RETIRED'); return false;">
-          <span class="nav-icon">◌</span>
-          <span class="nav-label">Retired Judges</span>
-          <span class="nav-badge">${retiredJudges().length}</span>
         </a>
       </div>
     </div></div>`;
