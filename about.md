@@ -2,7 +2,7 @@
 
 India Judiciary Tracker is a personal project by Varun Hemachandran. I am not a developer by training. My full-time work is closely tied to the smooth functioning of courts and to expanding access to justice — work I find genuinely meaningful. This project grew out of the frustration of trying to find basic, reliable information about judges, appointments, and declarations across dozens of disconnected official sources.
 
-The first version came together over several days in May 2026. I built it using [OpenAI Codex](https://openai.com/codex) and [Claude](https://claude.ai) (via Cowork and Claude Code) to help scrape public data, structure it, write the interface, and iterate on features. I directed the work; the AI tools did most of the coding and extraction.
+The first version came together over several days in May 2026, built with AI assistance from [OpenAI Codex](https://openai.com/codex) and [Anthropic Claude](https://claude.ai).
 
 **On accuracy:** This site was built with AI assistance, and AI makes mistakes. So do humans. Both kinds of error are possible here — in the data, in the code, and in the inferences the site draws. We have tried to mitigate this in two ways:
 
