@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Judge/Staff Transfer Notifications · India Judiciary Tracker</title>
-  <meta name="description" content="Court-wise index of recent judge and staff transfer notifications.">
-  <link rel="stylesheet" href="css/styles.css?v=20260514-9">
+  <title>HC/SC Judge Movement Notifications · India Judiciary Tracker</title>
+  <meta name="description" content="Court-wise index of recent High Court and Supreme Court judge movement notifications.">
+  <link rel="stylesheet" href="css/styles.css?v=20260514-10">
 </head>
 <body>
 
@@ -23,7 +23,7 @@
         <input
           type="text"
           id="notification-search"
-          placeholder="Search transfers…"
+          placeholder="Search HC/SC judge movements…"
           autocomplete="off"
           spellcheck="false"
         >
@@ -40,7 +40,7 @@
       <button class="menu-toggle-btn" id="menu-toggle" aria-label="Toggle sidebar">☰</button>
       <div class="data-notice">
         <a href="index.html">← Go back</a>
-        · Judge/staff transfer notifications indexed from official court pages
+        · HC/SC judge movement notifications indexed from official court pages
         · No guarantee of accuracy; data is AI parsed and not human verified.
         · <a href="about.html">About</a>
       </div>
@@ -48,13 +48,13 @@
     </header>
 
     <div id="notifications-content" class="content-area">
-      <div class="loading">Loading transfer notifications…</div>
+      <div class="loading">Loading HC/SC judge movement notifications…</div>
     </div>
   </main>
 
   <aside class="transfer-rail" id="transfer-rail">
     <div class="transfer-rail-title">
-      <span>Parsed Transfers</span>
+      <span>Parsed HC/SC Movements</span>
       <button class="right-rail-toggle" id="right-rail-toggle" type="button" aria-label="Collapse right panel" aria-expanded="true">›</button>
     </div>
     <div class="transfer-rail-content">
@@ -69,7 +69,7 @@
     <div class="pdf-modal-header">
       <div>
         <div class="pdf-modal-kicker" id="pdf-modal-court"></div>
-        <h2 id="pdf-modal-title">Transfer Notification PDF</h2>
+        <h2 id="pdf-modal-title">HC/SC Judge Movement PDF</h2>
       </div>
       <button class="pdf-modal-close" onclick="closeNotificationPdf()" aria-label="Close PDF viewer">×</button>
     </div>
@@ -80,7 +80,7 @@
   </div>
 </div>
 
-<script src="data/data.js?v=20260514-4"></script>
-<script src="js/notifications.js?v=20260514-5"></script>
+<script src="data/data.js?v=20260514-5"></script>
+<script src="js/notifications.js?v=20260514-6"></script>
 </body>
 </html>

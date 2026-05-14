@@ -60,7 +60,7 @@
     "court": "Gujarat High Court",
     "url": "https://gujarathighcourt.nic.in/miscnotifications",
     "scope": "judicial-officer-transfers",
-    "notes": "Misc notifications index includes transfer/posting PDFs for District Judge, Senior Civil Judge and Civil Judge cadres."
+    "notes": "Official notifications index. Only High Court/Supreme Court judge movement documents are included in this tracker; district judiciary and staff transfer/posting PDFs are excluded."
   },
   {
     "court_id": "HC-HP",
@@ -179,6 +179,6 @@
     "court": "Uttarakhand High Court",
     "url": "https://highcourtofuttarakhand.gov.in/circulars-notifications/",
     "scope": "official-notifications-index",
-    "notes": "Official notifications index. Admin.A-2 rows mainly cover district judiciary/judicial-officer movement; constitutional court judge movement is tagged separately where found."
+    "notes": "Official notifications index. Admin.A-2 rows mainly cover district judiciary/judicial-officer movement and are excluded here; only High Court/Supreme Court judge movement documents are included."
   }
 ]

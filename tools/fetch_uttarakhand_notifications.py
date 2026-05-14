@@ -2,9 +2,9 @@
 """
 fetch_uttarakhand_notifications.py
 ===================================
-Downloads Uttarakhand High Court transfer/posting notification PDFs
-from the last 6 months, extracts transfer entries, and appends them
-to data/notifications.json.
+Downloads Uttarakhand High Court constitutional-court judge movement
+notification PDFs from the last 6 months, extracts movement entries,
+and appends them to data/notifications.json.
 
 Run from the repo root:
     pip install requests pdfplumber
@@ -40,42 +40,13 @@ COURT_NAME  = "Uttarakhand High Court"
 CDN_BASE = "https://cdnbbsr.s3waas.gov.in/s3bc7f621451b4f5df308a8e098112185d/uploads"
 
 # Uttarakhand notifications from Nov 2025 – May 2026 that are relevant to
-# transfer/posting movement, plus constitutional court judge movement notices.
+# constitutional court judge movement. District judiciary, registry, staff and
+# routine administrative transfer/posting documents are deliberately excluded
+# from the app record.
 # Format: (local_filename, cdn_path, date_iso, notification_number, title, category, movement_scope)
 NOTIFICATIONS = [
-    # May 2026
-    ("2026/05/UTK-2026-05-13-177.pdf",    "2026/05/20260513318689963.pdf",    "2026-05-13", "No.177/UHC/Admin.A-2/2026",       "Transfer and Posting of Judicial Officers", "Transfer / Posting", "district_judiciary"),
-    ("2026/05/UTK-2026-05-05-159.pdf",    "2026/05/202605051742834785.pdf",   "2026-05-05", "No.159/UHC/Admin.A-2/2026",       "Transfer and Posting of Judicial Officers", "Transfer / Posting", "district_judiciary"),
-    # April 2026
-    ("2026/04/UTK-2026-04-30-158.pdf",    "2026/04/202604301287717167.pdf",   "2026-04-30", "No.158/UHC/Admin.A-2/2026",       "Transfer and Posting of Judicial Officers"),
-    ("2026/04/UTK-2026-04-30-157.pdf",    "2026/04/202604301243204604.pdf",   "2026-04-30", "No.157/UHC/Admin.A-2/2026",       "Transfer and Posting of Judicial Officers"),
-    ("2026/04/UTK-2026-04-23-140-151.pdf","2026/04/20260423126148812.pdf",    "2026-04-23", "No.140-151/UHC/Admin.A-2/2026",   "Transfer and Posting of Judicial Officers"),
-    ("2026/04/UTK-2026-04-20-139.pdf",    "2026/04/20260420153505668.pdf",    "2026-04-20", "No.139/UHC/Admin.A-2/2026",       "Transfer and Posting of Judicial Officers"),
-    ("2026/04/UTK-2026-04-18-133.pdf",    "2026/04/20260418630676703.pdf",    "2026-04-18", "No.133/UHC/Admin.A-2/2026",       "Transfer and Posting of Judicial Officers"),
-    ("2026/04/UTK-2026-04-15-annual-jd.pdf", "2026/04/202604152097872430.pdf","2026-04-15", "Annual Transfers-2026 (JD)",      "Annual Transfers 2026 - Judicial/District Officers"),
-    ("2026/04/UTK-2026-04-15-annual-sd.pdf", "2026/04/202604152113175629.pdf","2026-04-15", "Annual Transfers-2026 (SD)",      "Annual Transfers 2026 - Sub-Divisional Officers"),
-    ("2026/04/UTK-2026-04-15-annual-hjs.pdf","2026/04/202604151962205852.pdf","2026-04-15", "Annual Transfers-2026 (HJS)",     "Annual Transfers 2026 - Higher Judicial Service Officers"),
-    ("2026/04/UTK-2026-04-01-28.pdf",     "2026/04/20260401746504356.pdf",    "2026-04-01", "No.28/UHC/Admin.A-2/2026",        "Transfer and Posting of Judicial Officers"),
-    # March 2026
-    ("2026/03/UTK-2026-03-03-18.pdf",     "2026/03/20260303274236021.pdf",    "2026-03-03", "No.18/UHC/Admin.A-2/2026",        "Transfer and Posting of Judicial Officers"),
-    # February 2026
-    ("2026/02/UTK-2026-02-27-17.pdf",     "2026/02/20260227149237972.pdf",    "2026-02-27", "No.17/UHC/Admin.A-2/2026",        "Transfer and Posting of Judicial Officers"),
-    ("2026/02/UTK-2026-02-27-16.pdf",     "2026/02/202602271501656723.pdf",   "2026-02-27", "No.16/UHC/Admin.A-2/2026",        "Transfer and Posting of Judicial Officers"),
-    ("2026/02/UTK-2026-02-25-15.pdf",     "2026/02/20260225655595084.pdf",    "2026-02-25", "No.15/UHC/Admin.A-2/2026",        "Transfer and Posting of Judicial Officers"),
-    ("2026/02/UTK-2026-02-18-14.pdf",     "2026/02/202602181064092584.pdf",   "2026-02-18", "No.14/UHC/Admin.A-2/2026",        "DDO powers for Family Court, Udham Singh Nagar", "Administrative Notification", "district_judiciary_administration"),
-    ("2026/02/UTK-2026-02-17-13.pdf",     "2026/02/202602171056537587.pdf",   "2026-02-17", "No.13/UHC/Admin.A/2026",          "Transfer and Posting of Judicial Officers"),
     # January 2026
-    ("2026/01/UTK-2026-01-31-11.pdf",     "2026/01/202601311203992147.pdf",   "2026-01-31", "No.11/UHC/Admin.A-2/2026",        "Transfer and Posting of Judicial Officers"),
-    ("2026/01/UTK-2026-01-31-10.pdf",     "2026/01/20260131462095259.pdf",    "2026-01-31", "No.10/UHC/Admin.A-2/2026",        "Transfer and Posting of Judicial Officers"),
     ("2026/01/UTK-2026-01-06-05-oath-siddhartha-sah.pdf", "2026/01/20260106927110351.pdf", "2026-01-06", "No.05/UHC/Admin.A/2026", "Oath ceremony of Shri Siddhartha Sah as Additional Judge of the High Court of Uttarakhand", "HC Judge Movement", "constitutional_court_judges"),
-    ("2026/01/UTK-2026-01-13-09.pdf",     "2026/01/202601131093362873.pdf",   "2026-01-13", "No.09/UHC/Admin.A-2/2026",        "Transfer and Posting of Judicial Officers"),
-    ("2026/01/UTK-2026-01-05-02-03.pdf",  "2026/01/202601051862793315.pdf",   "2026-01-05", "No.02-03/UHC/Admin.A-2/2026",     "Transfer and Posting of Judicial Officers"),
-    ("2026/01/UTK-2026-01-05-01.pdf",     "2026/01/20260105914838609.pdf",    "2026-01-05", "No.01/UHC/Admin.A-2/2026",        "Transfer and Posting of Judicial Officers"),
-    # December 2025
-    ("2025/12/UTK-2025-12-22-379-380.pdf","2025/12/20251222629898363.pdf",    "2025-12-22", "No.379-380/UHC/Admin.A-2/2025",   "Transfer and Posting of Judicial Officers"),
-    ("2025/12/UTK-2025-12-09-360-361.pdf","2025/12/202512091655869395.pdf",   "2025-12-09", "No.360-361/UHC/Admin.A-2/2025",   "Transfer and Posting of Judicial Officers"),
-    # November 2025
-    ("2025/11/UTK-2025-11-19-340.pdf",    "2025/11/202511191407554613.pdf",   "2025-11-19", "No.340/UHC/Admin.A-2/2025",       "Transfer and Posting of Judicial Officers"),
 ]
 
 HEADERS = {

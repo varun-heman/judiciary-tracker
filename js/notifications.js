@@ -3,8 +3,7 @@ const notificationState = {
   notifications: [],
   sources: [],
   selectedCourt: 'ALL',
-  query: '',
-  scope: 'hc_sc_judges'
+  query: ''
 };
 
 let applyingNotificationRoute = false;
@@ -44,11 +43,10 @@ async function loadNotificationData() {
   }
 }
 
-function recentNotifications({ scope = notificationState.scope, query = notificationState.query } = {}) {
+function recentNotifications({ query = notificationState.query } = {}) {
   return notificationState.notifications
     .filter(n => new Date(n.date + 'T00:00:00') >= SIX_MONTHS_AGO)
     .filter(n => notificationState.selectedCourt === 'ALL' || n.court_id === notificationState.selectedCourt)
-    .filter(n => notificationMatchesScope(n, scope))
     .filter(n => notificationMatchesQuery(n, query))
     .sort((a, b) => new Date(b.date) - new Date(a.date) || a.court.localeCompare(b.court));
 }
@@ -65,36 +63,6 @@ function notificationMatchesQuery(notification, query = notificationState.query)
   ];
   const transferFields = (notification.transfer_entries || []).flatMap(transferSearchFields);
   return [...fields, ...transferFields].some(value => (value || '').toLowerCase().includes(q));
-}
-
-function notificationMatchesScope(notification, scope = notificationState.scope) {
-  if (scope === 'all') return true;
-  return isHcScJudgeNotification(notification);
-}
-
-function isHcScJudgeNotification(notification) {
-  if (notification.movement_scope === 'constitutional_court_judges') return true;
-  if (notification.movement_scope && notification.movement_scope !== 'constitutional_court_judges') return false;
-
-  const text = [
-    notification.title,
-    notification.category,
-    notification.extraction_notes,
-    ...(notification.transfer_entries || []).flatMap(entry => [
-      entry.role_type,
-      entry.from_position,
-      entry.to_position,
-      entry.assumed_role,
-      entry.notes
-    ])
-  ].filter(Boolean).join(' ').toLowerCase();
-
-  const districtLevel = /\b(judicial officer|district judge|additional district|civil judge|senior civil judge|junior civil judge|jr\.?\s*div|magistrate|family court|district judiciary|hjs|higher judicial service|cadre)\b/i.test(text);
-  const highCourtJudge = /\b(high court judge|judge of (?:the )?.*high court|chief justice of (?:the )?.*high court|chief justice,?\s+high court|acting chief justice|additional judge of (?:the )?.*high court|permanent judge of (?:the )?.*high court)\b/i.test(text);
-  const supremeCourtJudge = /\b(supreme court judge|judge of (?:the )?supreme court|chief justice of india|cji|judge,?\s+supreme court)\b/i.test(text);
-  const titleStrongSignal = /\b(appointment|transfer|repatriation|elevation|oath|swearing[-\s]?in)\b/i.test(text) && /\b(high court|supreme court|chief justice)\b/i.test(text);
-
-  return (highCourtJudge || supremeCourtJudge || titleStrongSignal) && !districtLevel;
 }
 
 function transferSearchFields(entry) {
@@ -137,13 +105,10 @@ function applyNotificationRoute() {
   const params = readNotificationRoute();
   notificationState.selectedCourt = 'ALL';
   notificationState.query = '';
-  notificationState.scope = 'hc_sc_judges';
 
   const court = params.get('court') || params.get('view');
   if (court && validNotificationCourt(court)) notificationState.selectedCourt = court;
   notificationState.query = (params.get('q') || '').trim();
-  const scope = params.get('scope');
-  if (scope === 'all' || scope === 'hc_sc_judges') notificationState.scope = scope;
 
   const search = document.getElementById('notification-search');
   if (search) search.value = notificationState.query;
@@ -153,7 +118,6 @@ function writeNotificationRoute({ replace = false } = {}) {
   if (applyingNotificationRoute) return;
   const params = new URLSearchParams();
   if (notificationState.selectedCourt !== 'ALL') params.set('court', notificationState.selectedCourt);
-  if (notificationState.scope === 'all') params.set('scope', 'all');
   if (notificationState.query) params.set('q', notificationState.query);
 
   const baseUrl = window.location.pathname + window.location.search;
@@ -191,8 +155,7 @@ function renderNotificationNav() {
   const nav = document.getElementById('notification-nav');
   const courts = courtList();
   const notifications = notificationState.notifications
-    .filter(n => new Date(n.date + 'T00:00:00') >= SIX_MONTHS_AGO)
-    .filter(n => notificationMatchesScope(n));
+    .filter(n => new Date(n.date + 'T00:00:00') >= SIX_MONTHS_AGO);
   const countFor = id => notifications.filter(n => n.court_id === id).length;
 
   // Views section (always ≤4, stays expanded)
@@ -209,7 +172,7 @@ function renderNotificationNav() {
       <div class="nav-section-items">
         <a class="nav-item ${notificationState.selectedCourt === 'ALL' ? 'active' : ''}" href="#" onclick="selectNotificationCourt('ALL'); return false;">
           <span class="nav-dot good"></span>
-          <span class="nav-label">All Courts</span>
+          <span class="nav-label">All HC/SC Judge Movements</span>
           <span class="nav-badge">${notifications.length}</span>
         </a>
         <a class="nav-item" href="index.html">
@@ -249,8 +212,6 @@ function renderNotificationNav() {
 function renderNotifications() {
   const container = document.getElementById('notifications-content');
   const rows = recentNotifications();
-  const allRows = recentNotifications({ scope: 'all', query: notificationState.query });
-  const hcScRows = recentNotifications({ scope: 'hc_sc_judges', query: notificationState.query });
   const selectedName = notificationState.selectedCourt === 'ALL'
     ? 'All Courts'
     : (courtList().find(c => c.id === notificationState.selectedCourt)?.name || 'Court');
@@ -267,34 +228,17 @@ function renderNotifications() {
 
   container.innerHTML = `
     <div class="view-header">
-      <h2>${escHtml(selectedName)} Judge/Staff Transfer Notifications</h2>
-      <p class="view-subtitle">Default view focuses on High Court and Supreme Court judge transfer notifications from ${formatDateIso(SIX_MONTHS_AGO)} through today. Use the filter below to show all indexed transfer/posting/staff-movement documents.</p>
+      <h2>${escHtml(selectedName)} HC/SC Judge Movement Notifications</h2>
+      <p class="view-subtitle">This page only indexes notifications about High Court and Supreme Court judge movement: appointments, elevations, transfers, oaths, repatriations and similar constitutional-court changes from ${formatDateIso(SIX_MONTHS_AGO)} through today. District judiciary, registry, court staff and routine administrative transfer/posting documents are deliberately excluded.</p>
     </div>
     <div class="stats-bar">
-      <span class="stat-chip">${rows.length} shown</span>
-      <span class="stat-chip">${allRows.length} total PDF document${allRows.length === 1 ? '' : 's'}</span>
+      <span class="stat-chip">${rows.length} HC/SC judge document${rows.length === 1 ? '' : 's'}</span>
       <span class="stat-chip">${sources.length} source page${sources.length === 1 ? '' : 's'}</span>
     </div>
-    ${renderNotificationScopeFilter(hcScRows.length, allRows.length)}
     ${rows.length ? Object.entries(grouped).map(([court, items]) => renderCourtGroup(court, items)).join('') : renderEmptySources(sources)}
     ${renderSourcePanel(sources)}
   `;
   renderTransferRail(rows);
-}
-
-function renderNotificationScopeFilter(hcScCount, allCount) {
-  const active = notificationState.scope;
-  return `
-    <div class="notification-scope-bar" aria-label="Notification scope filter">
-      <button class="scope-filter ${active === 'hc_sc_judges' ? 'active' : ''}" type="button" onclick="setNotificationScope('hc_sc_judges')">
-        <span>HC/SC judge transfers</span>
-        <strong>${hcScCount}</strong>
-      </button>
-      <button class="scope-filter ${active === 'all' ? 'active' : ''}" type="button" onclick="setNotificationScope('all')">
-        <span>All transfer notifications</span>
-        <strong>${allCount}</strong>
-      </button>
-    </div>`;
 }
 
 function renderCourtGroup(court, items) {
@@ -346,7 +290,7 @@ function renderTransferRail(rows) {
         </button>
       `).join('')}
     </div>
-  ` : `<div class="upcoming-empty">No parsed transfers for this filter.</div>`;
+  ` : `<div class="upcoming-empty">No parsed HC/SC judge movements for this view.</div>`;
 }
 
 function renderTransferDetails(item, entries) {
@@ -394,17 +338,10 @@ function renderTransferDetails(item, entries) {
 }
 
 function renderEmptySources(sources) {
-  if (notificationState.scope === 'hc_sc_judges') {
-    return `
-      <div class="empty-state">
-        <p>No High Court or Supreme Court judge transfer notifications are indexed for this filter yet.</p>
-        <button class="inline-action-btn" type="button" onclick="setNotificationScope('all')">Show all transfer notifications</button>
-      </div>`;
-  }
   return `
     <div class="empty-state">
-      <p>No indexed notification PDFs for this filter yet.</p>
-      <p>Available public data for this court is incomplete.</p>
+      <p>No High Court or Supreme Court judge movement notifications are indexed for this court in the current six-month window.</p>
+      <p>Routine district judiciary, registry, court staff and administrative transfer/posting PDFs are not included on this page.</p>
     </div>`;
 }
 
@@ -498,14 +435,6 @@ function renderModalTransferPanel(item) {
 
 window.selectNotificationCourt = function(id) {
   notificationState.selectedCourt = id;
-  writeNotificationRoute();
-  renderNotificationNav();
-  renderNotifications();
-  document.getElementById('main-panel').scrollTop = 0;
-};
-
-window.setNotificationScope = function(scope) {
-  notificationState.scope = scope === 'all' ? 'all' : 'hc_sc_judges';
   writeNotificationRoute();
   renderNotificationNav();
   renderNotifications();
