@@ -896,6 +896,7 @@ function renderDashboardView() {
           <p class="dashboard-kicker">India Judiciary Tracker</p>
           <h2>Overview</h2>
           <p class="dashboard-subtitle">A public, AI-parsed snapshot of tracked courts, sitting judges, court administration and upcoming retirements.</p>
+          <a class="dashboard-about-link" href="about.html">About this tracker</a>
         </div>
         <a class="dashboard-action" href="notifications.html">Judge/Staff Transfer Notifications</a>
       </section>

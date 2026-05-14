@@ -592,6 +592,16 @@ body.dark .show-all-btn.active {
   line-height: 1.45;
 }
 
+.dashboard-about-link {
+  display: inline-flex;
+  margin-top: 10px;
+  color: var(--accent2);
+  font-size: 12px;
+  font-weight: 750;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .dashboard-action,
 .dashboard-secondary-action {
   display: inline-flex;
