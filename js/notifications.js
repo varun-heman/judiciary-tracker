@@ -83,6 +83,58 @@ function transferMatchesQuery(entry) {
   return transferSearchFields(entry).some(value => (value || '').toLowerCase().includes(q));
 }
 
+function normalizeTransferName(name) {
+  return (name || '')
+    .toLowerCase()
+    .replace(/\b(hon'?ble|honourable|mr|mrs|ms|dr|shri|smt|kumari|justice|chief justice|cj)\b/g, ' ')
+    .replace(/[^a-z\s]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function isTrackedJudge(row) {
+  return row && ['supreme_court', 'high_court'].includes(row.type);
+}
+
+function judgeProfileUrl(judge) {
+  if (!judge || !judge.id) return '';
+  const params = new URLSearchParams();
+  params.set('judge', judge.id);
+  if (judge.parent_id) params.set('view', judge.parent_id);
+  return `index.html#${params.toString()}`;
+}
+
+function findJudgeForTransfer(entry) {
+  const targetName = normalizeTransferName(entry.person_name);
+  if (!targetName) return null;
+
+  const matches = notificationState.courts
+    .filter(isTrackedJudge)
+    .filter(judge => normalizeTransferName(judge.name) === targetName);
+
+  if (!matches.length) return null;
+  if (matches.length === 1) return matches[0];
+
+  const courtScoped = matches.find(judge =>
+    judge.id === entry.court_id ||
+    judge.parent_id === entry.court_id ||
+    judge.court === entry.court
+  );
+  return courtScoped || null;
+}
+
+function renderTransferPersonLink(entry, { compact = false } = {}) {
+  const name = escHtml(entry.person_name || 'Name not stated');
+  const judge = findJudgeForTransfer(entry);
+  if (!judge) return `<strong>${name}</strong>`;
+  return `
+    <a class="${compact ? 'transfer-profile-link compact' : 'transfer-profile-link'}"
+       href="${escAttr(judgeProfileUrl(judge))}"
+       ${compact ? "onclick=\"event.stopPropagation()\"" : ''}>
+      ${name}
+    </a>`;
+}
+
 function courtList() {
   return notificationState.courts
     .filter(c => c.type === 'institution')
@@ -282,12 +334,12 @@ function renderTransferRail(rows) {
     <div class="transfer-rail-meta">${entries.length} parsed movement${entries.length === 1 ? '' : 's'}</div>
     <div class="transfer-rail-list">
       ${entries.map(entry => `
-        <button class="rail-transfer" onclick="openNotificationPdf('${escAttr(entry.notification_id)}')">
+        <div class="rail-transfer" role="button" tabindex="0" onclick="openNotificationPdf('${escAttr(entry.notification_id)}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openNotificationPdf('${escAttr(entry.notification_id)}')}">
           <span class="rail-court">${escHtml(entry.court)}</span>
-          <strong>${escHtml(entry.person_name)}</strong>
+          ${renderTransferPersonLink(entry, { compact: true })}
           <span>${escHtml(entry.assumed_role || entry.to_position || 'Role not stated')}</span>
           <span class="rail-date">${entry.effective_date ? formatDate(entry.effective_date) : formatDate(entry.date)}</span>
-        </button>
+        </div>
       `).join('')}
     </div>
   ` : `<div class="upcoming-empty">No parsed HC/SC judge movements for this view.</div>`;
@@ -309,7 +361,7 @@ function renderTransferDetails(item, entries) {
         ${entries.map(entry => `
           <div class="transfer-entry">
             <div class="transfer-person">
-              <strong>${escHtml(entry.person_name)}</strong>
+              ${renderTransferPersonLink(entry)}
               <span class="transfer-role">${escHtml(entry.role_type || 'Judicial Officer')}</span>
             </div>
             <div class="transfer-route">
@@ -415,7 +467,7 @@ function renderModalTransferPanel(item) {
       ${entries.map(entry => `
         <div class="modal-transfer-entry">
           <div class="transfer-person">
-            <strong>${escHtml(entry.person_name)}</strong>
+            ${renderTransferPersonLink(entry)}
             <span class="transfer-role">${escHtml(entry.role_type || 'Judicial Officer')}</span>
           </div>
           <div class="modal-transfer-route">
