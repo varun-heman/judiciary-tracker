@@ -229,8 +229,6 @@ See [LICENSE](LICENSE) for the full text.
 
 **Built by** Varun Hemachandran.
 
-**Built with** [OpenAI Codex](https://openai.com/codex) and [Anthropic Claude](https://claude.ai). These tools assisted with coding, scraping, data structuring, and interface iteration.
-
 **Data** is sourced exclusively from official and public records. Judge photographs, where present, are sourced from official court websites and reproduced here for identification purposes only.
 
 If you find an error in a name, date, source, calculation, or interface, please open an issue or submit a pull request.

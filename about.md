@@ -2,9 +2,9 @@
 
 India Judiciary Tracker is a personal project by Varun Hemachandran. My work is closely tied to courts and access to justice, and this project grew out of a simple frustration: basic information about judges, appointments, transfers, court administration, and asset declarations is public, but often scattered across dozens of disconnected official sources.
 
-The first version came together over several days in May 2026 with assistance from [OpenAI Codex](https://openai.com/codex) and [Anthropic Claude](https://claude.ai). I am not a developer by training; these tools helped with scraping, data structuring, coding, and interface iteration. I update the project from time to time as sources change and the data model improves.
+The first version came together over several days in May 2026. I update the project from time to time as sources change and the data model improves.
 
-**On accuracy:** this site is AI-assisted and not authoritative. AI and human error are both possible in the data, code, calculations, and inferences. Please verify against the linked official sources before quoting or relying on anything here.
+**On accuracy:** this site is not authoritative. Errors are possible in the data, code, calculations, and inferences. Please verify against the linked official sources before quoting or relying on anything here.
 
 Sources are cited wherever possible. Where the tracker makes assumptions, especially around estimated net worth, it shows what was included, excluded, and assumed. Those estimates may not be accurate or representative of a judge’s true financial position.
 
