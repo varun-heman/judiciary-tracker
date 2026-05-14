@@ -1086,6 +1086,16 @@ body.dark .show-all-btn.active {
   outline-offset: 3px;
 }
 
+.person-card.retired-card {
+  filter: grayscale(1);
+  opacity: 0.68;
+  background: color-mix(in srgb, var(--unknown-bg) 55%, var(--bg-card));
+}
+
+.person-card.retired-card:hover {
+  opacity: 0.82;
+}
+
 /* Border accent by tenure */
 .person-card.border-good     { border-left-color: var(--good); }
 .person-card.border-warning  { border-left-color: var(--warning); }
@@ -1173,6 +1183,21 @@ body.dark .show-all-btn.active {
 .card-role-badge.minister      { background: #fff7ed; color: #c2410c; border-color: #fed7aa; }
 .card-role-badge.secretary     { background: #faf5ff; color: #7e22ce; border-color: #e9d5ff; }
 .card-role-badge.cpc           { background: #eef2ff; color: #3730a3; border-color: #c7d2fe; }
+
+.retired-badge {
+  display: inline-block;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: var(--unknown-bg);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
 
 .card-badges-row {
   display: flex;

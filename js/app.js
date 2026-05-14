@@ -122,7 +122,7 @@ async function loadData() {
 // Hash routing
 // ─────────────────────────────────────────────────────────────────────────────
 function validViewId(id) {
-  if (id === 'HOME' || id === 'ADMIN') return true;
+  if (id === 'HOME' || id === 'ADMIN' || id === 'RETIRED') return true;
   return state.courts.some(d => d.id === id) || state.ministries.some(d => d.id === id);
 }
 
@@ -146,7 +146,8 @@ function applyRoute() {
   if (judge && state.courts.some(d => d.id === judge && isJudgeRecord(d))) {
     state.selectedJudgeId = judge;
     const judgeRow = state.courts.find(d => d.id === judge);
-    if (judgeRow && judgeRow.parent_id) state.selectedId = judgeRow.parent_id;
+    if (judgeRow && isArchivedRetiredJudge(judgeRow)) state.selectedId = 'RETIRED';
+    else if (judgeRow && judgeRow.parent_id) state.selectedId = judgeRow.parent_id;
   }
 
   state.searchQuery = (params.get('q') || '').trim();
@@ -285,6 +286,12 @@ function renderNav() {
           <span class="nav-icon">▣</span>
           <span class="nav-label">Court Administration</span>
         </a>
+        <a class="nav-item ${state.selectedId === 'RETIRED' ? 'active' : ''}"
+           href="#" onclick="selectView('RETIRED'); return false;">
+          <span class="nav-icon">◌</span>
+          <span class="nav-label">Retired Judges</span>
+          <span class="nav-badge">${retiredJudges().length}</span>
+        </a>
         <a class="nav-item" href="notifications.html">
           <span class="nav-icon">↗</span>
           <span class="nav-label">Judge/Staff Transfers</span>
@@ -348,6 +355,7 @@ function renderCard(person, isHead = false) {
   const roleLabel = person.role || 'Official';
   const isPlaceholder = person.type === 'placeholder';
   const isJudge = isJudgeRecord(person);
+  const isRetired = isJudge && isRetiredJudge(person);
   const detail = isJudge ? getJudgeDetail(person.id) : null;
   const assetLabel = isJudge ? assetValueLabel(detail && detail.assets) : '';
   const assetRank = isJudge ? assetRankLabel(person.id) : '';
@@ -376,12 +384,13 @@ function renderCard(person, isHead = false) {
     </div>` : '';
 
   return `
-    <div class="person-card ${isHead ? 'head-card' : ''} ${isJudge ? 'clickable-card' : ''} border-${tenure.status}" ${cardAttrs}>
+    <div class="person-card ${isHead ? 'head-card' : ''} ${isJudge ? 'clickable-card' : ''} ${isRetired ? 'retired-card' : ''} border-${tenure.status}" ${cardAttrs}>
       <div class="card-top">
         <div class="card-identity">
           ${renderAvatar(person)}
           <div class="card-left">
             <span class="card-role-badge ${person.type || ''}">${roleLabel}</span>
+            ${isRetired ? `<span class="retired-badge">Retired</span>` : ''}
             <div class="person-name">${person.name}</div>
             ${person.parent_high_court ? `<div class="parent-court">From: ${person.parent_high_court} HC</div>` : ''}
           </div>
@@ -395,7 +404,7 @@ function renderCard(person, isHead = false) {
         ${person.date_of_birth ? `<div class="meta-row"><span class="meta-icon">👤</span><span>${getAge(person.date_of_birth)} yrs · born ${formatDate(person.date_of_birth)}</span></div>` : ''}
         ${assumedStr  ? `<div class="meta-row"><span class="meta-icon">📅</span><span>In role since ${formatDate(assumedStr)}</span></div>` : ''}
         ${initialStr  ? `<div class="meta-row"><span class="meta-icon">🔰</span><span>Initially elevated ${formatDate(initialStr)}</span></div>` : ''}
-        ${retireStr   ? `<div class="meta-row"><span class="meta-icon">🔚</span><span>Retires ${formatDate(retireStr)}</span></div>` : ''}
+        ${retireStr   ? `<div class="meta-row"><span class="meta-icon">🔚</span><span>${isRetired ? 'Retired' : 'Retires'} ${formatDate(retireStr)}</span></div>` : ''}
         ${renderContactRows(person)}
         ${person.source_url ? `<div class="meta-row"><span class="meta-icon">↗</span><span><a class="inline-link" href="${escHtml(person.source_url)}" target="_blank" rel="noopener">${escHtml(person.source_label || 'Official source')}</a></span></div>` : ''}
         ${person.photo_source ? `<div class="meta-row"><span class="meta-icon">▧</span><span>Photo: ${escHtml(person.photo_source)}</span></div>` : ''}
@@ -610,7 +619,7 @@ function dashboardBar(label, value, total, className = '') {
 }
 
 function judgeStatusBuckets(judges) {
-  const active = judges.filter(j => {
+  const active = judges.filter(j => !isRetiredJudge(j) && !isArchivedRetiredJudge(j)).filter(j => {
     const t = getTenure(j.retirement_date);
     return t.status !== 'retired';
   });
@@ -634,6 +643,41 @@ function judgeStatusBuckets(judges) {
 
 function isJudgeRecord(row) {
   return row && (row.type === 'supreme_court' || row.type === 'high_court');
+}
+
+function daysSinceRetirement(person) {
+  if (!isJudgeRecord(person) || !person.retirement_date) return null;
+  const tenure = getTenure(person.retirement_date);
+  return tenure.daysLeft !== null && tenure.daysLeft < 0 ? Math.abs(tenure.daysLeft) : null;
+}
+
+function isRetiredJudge(person) {
+  return daysSinceRetirement(person) !== null;
+}
+
+function isRecentRetiredJudge(person) {
+  const days = daysSinceRetirement(person);
+  return days !== null && days <= 60;
+}
+
+function isArchivedRetiredJudge(person) {
+  const days = daysSinceRetirement(person);
+  return days !== null && days > 60;
+}
+
+function visibleCourtJudge(person) {
+  return isJudgeRecord(person) && !isArchivedRetiredJudge(person);
+}
+
+function retiredJudges() {
+  return state.courts
+    .filter(isRetiredJudge)
+    .sort((a, b) => new Date(b.retirement_date) - new Date(a.retirement_date));
+}
+
+function retiredCutoffLabel(rows = retiredJudges()) {
+  const dates = rows.map(j => j.retirement_date).filter(Boolean).sort();
+  return dates.length ? formatDate(dates[0]) : 'No retired judges are currently in the tracker';
 }
 
 function judgeTenureRangeDays() {
@@ -661,6 +705,8 @@ function matchesJudgeRoleFilter(person) {
 function matchesJudgeTenureFilter(person) {
   if (!isJudgeRecord(person)) return true;
   if (!matchesJudgeRoleFilter(person)) return false;
+  if (isRecentRetiredJudge(person)) return state.judgeTenureShowAll;
+  if (isArchivedRetiredJudge(person)) return false;
   if (state.judgeTenureShowAll) return true;
   const tenure = getTenure(person.retirement_date);
   return tenure.daysLeft !== null && tenure.daysLeft >= 0 && tenure.daysLeft <= judgeTenureRangeDays();
@@ -792,6 +838,7 @@ function renderContent() {
     const q = state.searchQuery.toLowerCase();
     const rawResults = all.filter(d =>
       d.type !== 'institution' && d.type !== 'placeholder' &&
+      !(isJudgeRecord(d) && isArchivedRetiredJudge(d)) &&
       (d.name.toLowerCase().includes(q) ||
        (d.role || '').toLowerCase().includes(q) ||
        (d.court || d.ministry || '').toLowerCase().includes(q) ||
@@ -825,6 +872,11 @@ function renderContent() {
   if (state.selectedId === 'ADMIN') {
     container.innerHTML = renderAdminStaffView();
     attachSliderListeners();
+    return;
+  }
+
+  if (state.selectedId === 'RETIRED') {
+    container.innerHTML = renderRetiredJudgesView();
     return;
   }
 
@@ -862,11 +914,11 @@ function renderContent() {
 function renderDashboardView() {
   const courtInstitutions = state.courts.filter(d => d.type === 'institution');
   const highCourts = courtInstitutions.filter(c => c.id !== 'SC');
-  const judges = state.courts.filter(isJudgeRecord);
+  const judges = state.courts.filter(visibleCourtJudge);
   const buckets = judgeStatusBuckets(judges);
   const courtsWithJudges = courtInstitutions.filter(c => judges.some(j => j.parent_id === c.id));
   const courtsWithAdmin = courtInstitutions.filter(c => state.adminStaff.some(a => a.court_id === c.id));
-  const judgesWithRetirementDates = judges.filter(j => getTenure(j.retirement_date).daysLeft !== null).length;
+  const judgesWithRetirementDates = buckets.active.filter(j => getTenure(j.retirement_date).daysLeft !== null).length;
   const adminRoles = uniqueAdminRoles(state.adminStaff);
   const ministryPeople = state.ministries.filter(d => d.type !== 'institution').length;
   const courtRows = courtInstitutions.map(c => {
@@ -883,7 +935,7 @@ function renderDashboardView() {
   const topRetiringCourts = courtRows.filter(c => c.within12m > 0).slice(0, 6);
   const roleCounts = ['Chief Justice', 'Judge', 'Additional Judge'].map(role => ({
     role,
-    count: judges.filter(j => role === 'Chief Justice'
+    count: buckets.active.filter(j => role === 'Chief Justice'
       ? /chief justice/i.test(j.role || '')
       : (j.role || '') === role
     ).length
@@ -943,7 +995,7 @@ function renderDashboardView() {
           </div>
           ${dashboardBar('Courts with judge records', courtsWithJudges.length, courtInstitutions.length)}
           ${dashboardBar('Courts with admin/staff records', courtsWithAdmin.length, courtInstitutions.length)}
-          ${dashboardBar('Judges with retirement dates', judgesWithRetirementDates, judges.length)}
+          ${dashboardBar('Judges with retirement dates', judgesWithRetirementDates, buckets.active.length)}
           ${dashboardBar('Court admin role categories', adminRoles.length, Math.max(adminRoles.length, 12), 'neutral')}
         </article>
 
@@ -952,7 +1004,7 @@ function renderDashboardView() {
             <h3>Judge Mix</h3>
             <p>Current tracked records by role label.</p>
           </div>
-          ${roleCounts.map(r => dashboardBar(r.role, r.count, judges.length)).join('')}
+          ${roleCounts.map(r => dashboardBar(r.role, r.count, buckets.active.length)).join('')}
         </article>
 
         <article class="dashboard-panel">
@@ -1006,20 +1058,23 @@ function renderJudgeDetailView(id) {
   const valueType = hasAssets
     ? (assets.total_value_type || (total ? 'Disclosed monetary amounts only' : 'No monetary total available'))
     : 'No official/public asset declaration has been added for this judge yet.';
+  const backView = isArchivedRetiredJudge(judge) ? 'RETIRED' : judge.parent_id;
+  const backLabel = isArchivedRetiredJudge(judge) ? 'Retired Judges' : (judge.court || 'court');
 
   return `
     <div class="judge-detail-view">
-      <button class="back-button" onclick="selectView('${escAttr(judge.parent_id)}')">← Back to ${escHtml(judge.court || 'court')}</button>
+      <button class="back-button" onclick="selectView('${escAttr(backView)}')">← Back to ${escHtml(backLabel)}</button>
       <section class="judge-profile-hero">
         ${renderAvatar(judge)}
         <div class="judge-profile-main">
           <span class="card-role-badge ${judge.type || ''}">${escHtml(judge.role || 'Judge')}</span>
+          ${isRetiredJudge(judge) ? `<span class="retired-badge">Retired</span>` : ''}
           <h2>${escHtml(judge.name)}</h2>
           <p>${escHtml(judge.court || '')}${judge.state ? ` · ${escHtml(judge.state)}` : ''}</p>
           <div class="judge-profile-facts">
             ${judge.date_of_birth ? `<span>${getAge(judge.date_of_birth)} yrs</span>` : ''}
             ${judge.date_assumed_role ? `<span>In role since ${formatDate(judge.date_assumed_role)}</span>` : ''}
-            ${judge.retirement_date ? `<span>Retires ${formatDate(judge.retirement_date)}</span>` : ''}
+            ${judge.retirement_date ? `<span>${isRetiredJudge(judge) ? 'Retired' : 'Retires'} ${formatDate(judge.retirement_date)}</span>` : ''}
           </div>
         </div>
         <div class="asset-total-card">
@@ -1067,8 +1122,27 @@ function renderJudgeDetailView(id) {
     </div>`;
 }
 
+function renderRetiredJudgesView() {
+  const retired = retiredJudges();
+  const recent = retired.filter(isRecentRetiredJudge);
+  const archived = retired.filter(isArchivedRetiredJudge);
+  return `
+    <div class="view-header">
+      <h2>Retired Judges</h2>
+      <p class="view-subtitle">This is not an exhaustive list of retired judges. It only includes judges previously tracked in this project. Retired-judge tracking currently starts from ${escHtml(retiredCutoffLabel(retired))}.</p>
+    </div>
+    <div class="stats-bar">
+      <span class="stat-chip">${retired.length} retired in tracker</span>
+      ${recent.length ? `<span class="stat-chip warning">${recent.length} still visible on court pages for 60d</span>` : ''}
+      ${archived.length ? `<span class="stat-chip">${archived.length} archived from court pages</span>` : ''}
+    </div>
+    ${retired.length
+      ? `<div class="cards-grid">${retired.map(j => renderCard(j)).join('')}</div>`
+      : `<div class="empty-state"><p>No retired judges are currently in the tracker.</p></div>`}`;
+}
+
 function renderCourtView(root, all, children) {
-  const allJudges = children.filter(isJudgeRecord);
+  const allJudges = children.filter(visibleCourtJudge);
   const people = allJudges.filter(matchesJudgeTenureFilter);
   const allAdminStaff = state.adminStaff.filter(p => p.court_id === root.id);
   const adminStaff = allAdminStaff.filter(matchesAdminFilter).sort(adminSort);
@@ -1299,7 +1373,7 @@ window.selectJudge = function(id) {
   const judge = state.courts.find(d => d.id === id && isJudgeRecord(d));
   if (!judge) return;
   state.selectedJudgeId = id;
-  state.selectedId = judge.parent_id || state.selectedId;
+  state.selectedId = isArchivedRetiredJudge(judge) ? 'RETIRED' : (judge.parent_id || state.selectedId);
   state.searchQuery = '';
   const searchInput = document.getElementById('search-input');
   if (searchInput) searchInput.value = '';
