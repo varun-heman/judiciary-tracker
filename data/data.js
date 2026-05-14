@@ -8673,7 +8673,7 @@ window.ADMIN_STAFF_DATA = [
 window.JUDGE_DETAILS_DATA = [
   {
     "id": "SC-CJI",
-    "bio": "53rd CJI. Born 10 Feb 1962. Nominated by CJI B.R. Gavai. Appointed by President Droupadi Murmu.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -8782,7 +8782,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-002",
-    "bio": "Born 24 Sep 1962. Next in seniority after CJI. Expected 54th CJI (Feb–Sep 2027).",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -8873,7 +8873,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-003",
-    "bio": "Born 29 Jun 1961.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -8993,7 +8993,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-004",
-    "bio": "Born 30 Oct 1962. Expected to be 55th CJI (Sep–Oct 2027) — India's first woman CJI.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -9009,7 +9009,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-005",
-    "bio": "Born 21 Jul 1962.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -9129,7 +9129,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-006",
-    "bio": "Born 03 May 1963.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -9222,7 +9222,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-007",
-    "bio": "Born 12 Aug 1965.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -9330,7 +9330,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-008",
-    "bio": "Born 09 Feb 1965.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -9447,7 +9447,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-009",
-    "bio": "Born 17 Jun 1961.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -9557,7 +9557,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-010",
-    "bio": "Born 23 Aug 1961.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -9659,7 +9659,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-011",
-    "bio": "Born 14 Aug 1963.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -9774,7 +9774,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-012",
-    "bio": "Born 11 May 1963.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -9903,7 +9903,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-013",
-    "bio": "Born 02 Jun 1965.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -10016,7 +10016,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-014",
-    "bio": "Born 14 Jul 1962.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -10135,7 +10135,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-015",
-    "bio": "Born 29 Aug 1964.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -10261,7 +10261,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-016",
-    "bio": "Born 26 May 1966.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -10358,7 +10358,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-017",
-    "bio": "Born 02 Aug 1964.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -10475,7 +10475,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-018",
-    "bio": "Born 06 May 1962.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -10581,7 +10581,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-019",
-    "bio": "Born 30 Nov 1961.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -10671,7 +10671,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-020",
-    "bio": "Born 12 Mar 1963.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -10787,7 +10787,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-021",
-    "bio": "Born 11 Jan 1963.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -10912,7 +10912,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-022",
-    "bio": "Born 23 Jun 1962.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -11016,7 +11016,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-023",
-    "bio": "Born 01 Mar 1963.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -11032,7 +11032,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-024",
-    "bio": "Born 10 Jun 1963.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -11146,7 +11146,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-025",
-    "bio": "Born 17 Dec 1962.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -11256,7 +11256,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-026",
-    "bio": "Born 25 Apr 1963.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -11374,7 +11374,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-027",
-    "bio": "Born 03 Oct 1966.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -11481,7 +11481,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-028",
-    "bio": "Born 23 Mar 1965.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -11605,7 +11605,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-029",
-    "bio": "Born 26 Mar 1964.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -11744,7 +11744,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-030",
-    "bio": "Born 07 Apr 1965.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -11760,7 +11760,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-031",
-    "bio": "Born 13 Apr 1964.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -11867,7 +11867,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "SC-032",
-    "bio": "Born 28 May 1968.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -11980,7 +11980,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-001",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=201",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -11996,7 +11996,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-002",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=384",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12012,7 +12012,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-003",
-    "bio": "Sitting at Lucknow. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=207",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12028,7 +12028,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-004",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=383",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12044,7 +12044,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-005",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=425",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12060,7 +12060,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-006",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=241",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12076,7 +12076,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-007",
-    "bio": "Sitting at Lucknow. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=242",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12092,7 +12092,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-008",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=253",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12108,7 +12108,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-009",
-    "bio": "Sitting at Lucknow. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=379",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12124,7 +12124,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-010",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=265",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12140,7 +12140,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-011",
-    "bio": "Sitting at Lucknow. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=267",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12156,7 +12156,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-012",
-    "bio": "Sitting at Lucknow. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=268",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12172,7 +12172,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-013",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=269",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12188,7 +12188,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-014",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=270",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12204,7 +12204,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-015",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=271",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12220,7 +12220,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-016",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=272",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12236,7 +12236,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-017",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=273",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12252,7 +12252,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-018",
-    "bio": "Sitting at Lucknow. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=274",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12268,7 +12268,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-019",
-    "bio": "Sitting at Lucknow. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=275",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12284,7 +12284,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-020",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=277",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12300,7 +12300,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-021",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=385",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12316,7 +12316,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-022",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=280",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12332,7 +12332,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-023",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=281",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12348,7 +12348,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-024",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=376",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12364,7 +12364,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-025",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=285",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12380,7 +12380,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-026",
-    "bio": "Sitting at Lucknow. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=286",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12396,7 +12396,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-027",
-    "bio": "Sitting at Lucknow. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=287",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12412,7 +12412,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-028",
-    "bio": "Sitting at Lucknow. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=288",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12428,7 +12428,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-029",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=289",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12444,7 +12444,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-030",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=291",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12460,7 +12460,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-031",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=292",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12476,7 +12476,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-032",
-    "bio": "Sitting at Lucknow. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=293",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12492,7 +12492,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-033",
-    "bio": "Sitting at Lucknow. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=294",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12508,7 +12508,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-034",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=295",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12524,7 +12524,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-035",
-    "bio": "Sitting at Lucknow. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=296",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12540,7 +12540,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-036",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=297",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12556,7 +12556,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-037",
-    "bio": "Sitting at Lucknow. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=298",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12572,7 +12572,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-038",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=299",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12588,7 +12588,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-039",
-    "bio": "Sitting at Allahabad. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=311",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12604,7 +12604,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-040",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=321",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12620,7 +12620,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-041",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=322",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12636,7 +12636,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-042",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=324",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12652,7 +12652,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-043",
-    "bio": "Sitting at Lucknow. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=325",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12668,7 +12668,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-044",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=326",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12684,7 +12684,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-045",
-    "bio": "Sitting at Allahabad. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=328",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12700,7 +12700,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-046",
-    "bio": "Sitting at Allahabad. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=329",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12716,7 +12716,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-047",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=341",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12732,7 +12732,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-048",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=342",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12748,7 +12748,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-049",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=343",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12764,7 +12764,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-050",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=344",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12780,7 +12780,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-051",
-    "bio": "Sitting at Lucknow. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=345",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12796,7 +12796,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-052",
-    "bio": "Sitting at Lucknow. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=346",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12812,7 +12812,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-053",
-    "bio": "Sitting at Lucknow. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=347",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12828,7 +12828,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-054",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=348",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12844,7 +12844,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-055",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=350",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12860,7 +12860,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-056",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=356",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12876,7 +12876,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-057",
-    "bio": "Sitting at Lucknow. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=360",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12892,7 +12892,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-058",
-    "bio": "Sitting at Lucknow. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=367",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12908,7 +12908,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-059",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=368",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12924,7 +12924,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-060",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=369",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12940,7 +12940,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-061",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=370",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12956,7 +12956,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-062",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=371",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12972,7 +12972,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-063",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=372",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -12988,7 +12988,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-064",
-    "bio": "Sitting at Lucknow. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=373",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13004,7 +13004,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-065",
-    "bio": "Sitting at Lucknow. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=374",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13020,7 +13020,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-066",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=375",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13036,7 +13036,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-067",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=382",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13052,7 +13052,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-068",
-    "bio": "Sitting at Allahabad. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=386",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13068,7 +13068,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-069",
-    "bio": "Sitting at Allahabad. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=387",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13084,7 +13084,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-070",
-    "bio": "Sitting at Allahabad. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=388",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13100,7 +13100,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-071",
-    "bio": "Sitting at Allahabad. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=389",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13116,7 +13116,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-072",
-    "bio": "Sitting at Allahabad. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=390",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13132,7 +13132,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-073",
-    "bio": "Sitting at Allahabad. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=391",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13148,7 +13148,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-074",
-    "bio": "Sitting at Lucknow. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=392",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13164,7 +13164,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-075",
-    "bio": "Sitting at Allahabad. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=393",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13180,7 +13180,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-076",
-    "bio": "Sitting at Allahabad. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=394",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13196,7 +13196,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-077",
-    "bio": "Sitting at Allahabad. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=395",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13212,7 +13212,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-078",
-    "bio": "Sitting at Lucknow. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=396",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13228,7 +13228,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-079",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=397",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13244,7 +13244,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-080",
-    "bio": "Sitting at Lucknow. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=398",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13260,7 +13260,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-081",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=399",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13276,7 +13276,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-082",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=400",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13292,7 +13292,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-083",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=401",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13308,7 +13308,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-084",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=402",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13324,7 +13324,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-085",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=403",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13340,7 +13340,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-086",
-    "bio": "Sitting at Lucknow. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=404",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13356,7 +13356,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-087",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=405",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13372,7 +13372,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-088",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=406",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13388,7 +13388,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-089",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=407",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13404,7 +13404,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-090",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=408",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13420,7 +13420,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-091",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=409",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13436,7 +13436,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-092",
-    "bio": "Sitting at Allahabad. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=410",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13452,7 +13452,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-093",
-    "bio": "Sitting at Allahabad. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=411",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13468,7 +13468,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-094",
-    "bio": "Sitting at Allahabad. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=412",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13484,7 +13484,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-095",
-    "bio": "Sitting at Allahabad. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=413",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13500,7 +13500,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-096",
-    "bio": "Sitting at Allahabad. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=414",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13516,7 +13516,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-097",
-    "bio": "Sitting at Lucknow. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=415",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13532,7 +13532,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-098",
-    "bio": "Sitting at Allahabad. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=416",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13548,7 +13548,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-099",
-    "bio": "Sitting at Allahabad. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=417",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13564,7 +13564,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-100",
-    "bio": "Sitting at Allahabad. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=418",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13580,7 +13580,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-101",
-    "bio": "Sitting at Allahabad. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=419",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13596,7 +13596,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-102",
-    "bio": "Sitting at Allahabad. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=420",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13612,7 +13612,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-103",
-    "bio": "Sitting at Allahabad. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=421",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13628,7 +13628,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-104",
-    "bio": "Sitting at Allahabad. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=422",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13644,7 +13644,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-105",
-    "bio": "Sitting at Lucknow. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=423",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13660,7 +13660,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-106",
-    "bio": "Sitting at Allahabad. Source: Service. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=424",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13676,7 +13676,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-107",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=426",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13692,7 +13692,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ALD-CJ",
-    "bio": "Sitting at Allahabad. Source: Bar. Email prefix published on official profile; domain is rendered as an image on source page.",
+    "bio": "",
     "bio_source_url": "https://www.allahabadhighcourt.in/service/judgeDetail.jsp?id=381",
     "bio_source_label": "Allahabad HC judge profile",
     "assets": {
@@ -13708,7 +13708,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-AP-CJ",
-    "bio": "Appointed ~May 2026. Succeeded Justice Dhiraj Singh Thakur (retired 24 Apr 2026). Nominated by CJI Surya Kant.",
+    "bio": "",
     "bio_source_url": "https://aphc.gov.in/profiles.php",
     "bio_source_label": "AP HC profiles page",
     "assets": {
@@ -14108,7 +14108,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-AP-025",
-    "bio": "Additional Judge. Term expiry: 2026-10-27.",
+    "bio": "",
     "bio_source_url": "https://aphc.gov.in/profiles.php",
     "bio_source_label": "AP HC profiles page",
     "assets": {
@@ -14124,7 +14124,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-AP-026",
-    "bio": "Additional Judge. Term expiry: 2026-10-27.",
+    "bio": "",
     "bio_source_url": "https://aphc.gov.in/profiles.php",
     "bio_source_label": "AP HC profiles page",
     "assets": {
@@ -14140,7 +14140,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-AP-027",
-    "bio": "Additional Judge. Term expiry: 2026-10-27.",
+    "bio": "",
     "bio_source_url": "https://aphc.gov.in/profiles.php",
     "bio_source_label": "AP HC profiles page",
     "assets": {
@@ -14156,7 +14156,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-AP-028",
-    "bio": "Additional Judge. Term expiry: 2027-01-23.",
+    "bio": "",
     "bio_source_url": "https://aphc.gov.in/profiles.php",
     "bio_source_label": "AP HC profiles page",
     "assets": {
@@ -14172,7 +14172,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-AP-029",
-    "bio": "Additional Judge. Term expiry: 2027-01-23.",
+    "bio": "",
     "bio_source_url": "https://aphc.gov.in/profiles.php",
     "bio_source_label": "AP HC profiles page",
     "assets": {
@@ -14188,7 +14188,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-AP-030",
-    "bio": "Additional Judge. Term expiry: 2027-08-03.",
+    "bio": "",
     "bio_source_url": "https://aphc.gov.in/profiles.php",
     "bio_source_label": "AP HC profiles page",
     "assets": {
@@ -14204,7 +14204,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-AP-031",
-    "bio": "Additional Judge. Term expiry: 2028-02-11.",
+    "bio": "",
     "bio_source_url": "https://aphc.gov.in/profiles.php",
     "bio_source_label": "AP HC profiles page",
     "assets": {
@@ -14220,7 +14220,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-BOM-CJ",
-    "bio": "Joined from Jharkhand HC.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -14236,7 +14236,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-CAL-CJ",
-    "bio": "Joined from MP HC. Retiring Jun 2026 — very soon.",
+    "bio": "",
     "bio_source_url": "https://www.calcuttahighcourt.gov.in/Judges/CJ-and-Judges",
     "bio_source_label": "Calcutta High Court – Official Judges Page",
     "assets": {
@@ -14284,7 +14284,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-CAL-003",
-    "bio": "Originally appointed Oct 2013; subsequently transferred to another HC and returned to Calcutta HC.",
+    "bio": "",
     "bio_source_url": "https://www.calcuttahighcourt.gov.in/Judges/CJ-and-Judges",
     "bio_source_label": "Calcutta High Court – Official Judges Page",
     "assets": {
@@ -14300,7 +14300,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-CAL-004",
-    "bio": "Transferred and appointed at Calcutta HC w.e.f. 02.11.2023.",
+    "bio": "",
     "bio_source_url": "https://www.calcuttahighcourt.gov.in/Judges/CJ-and-Judges",
     "bio_source_label": "Calcutta High Court – Official Judges Page",
     "assets": {
@@ -14428,7 +14428,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-CAL-012",
-    "bio": "Elevated from West Bengal Judicial Service.",
+    "bio": "",
     "bio_source_url": "https://www.calcuttahighcourt.gov.in/Judges/CJ-and-Judges",
     "bio_source_label": "Calcutta High Court – Official Judges Page",
     "assets": {
@@ -14524,7 +14524,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-CAL-018",
-    "bio": "Elevated from West Bengal Judicial Service.",
+    "bio": "",
     "bio_source_url": "https://www.calcuttahighcourt.gov.in/Judges/CJ-and-Judges",
     "bio_source_label": "Calcutta High Court – Official Judges Page",
     "assets": {
@@ -14668,7 +14668,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-CAL-027",
-    "bio": "Elevated from West Bengal Judicial Service.",
+    "bio": "",
     "bio_source_url": "https://www.calcuttahighcourt.gov.in/Judges/CJ-and-Judges",
     "bio_source_label": "Calcutta High Court – Official Judges Page",
     "assets": {
@@ -14764,7 +14764,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-CAL-033",
-    "bio": "Elevated from West Bengal Judicial Service.",
+    "bio": "",
     "bio_source_url": "https://www.calcuttahighcourt.gov.in/Judges/CJ-and-Judges",
     "bio_source_label": "Calcutta High Court – Official Judges Page",
     "assets": {
@@ -14812,7 +14812,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-CAL-036",
-    "bio": "Elevated from West Bengal Judicial Service.",
+    "bio": "",
     "bio_source_url": "https://www.calcuttahighcourt.gov.in/Judges/CJ-and-Judges",
     "bio_source_label": "Calcutta High Court – Official Judges Page",
     "assets": {
@@ -14828,7 +14828,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-CAL-037",
-    "bio": "Born 1st February (year not available on official site).",
+    "bio": "",
     "bio_source_url": "https://www.calcuttahighcourt.gov.in/Judges/CJ-and-Judges",
     "bio_source_label": "Calcutta High Court – Official Judges Page",
     "assets": {
@@ -14844,7 +14844,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-CAL-038",
-    "bio": "Elevated from West Bengal Judicial Service.",
+    "bio": "",
     "bio_source_url": "https://www.calcuttahighcourt.gov.in/Judges/CJ-and-Judges",
     "bio_source_label": "Calcutta High Court – Official Judges Page",
     "assets": {
@@ -14892,7 +14892,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-CAL-041",
-    "bio": "Elevated from West Bengal Judicial Service.",
+    "bio": "",
     "bio_source_url": "https://www.calcuttahighcourt.gov.in/Judges/CJ-and-Judges",
     "bio_source_label": "Calcutta High Court – Official Judges Page",
     "assets": {
@@ -14908,7 +14908,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-CHG-CJ",
-    "bio": "Joined from Allahabad HC.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -14924,7 +14924,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-DEL-CJ",
-    "bio": "Previously 47th CJ of Bombay HC. Joined Delhi 21 Jan 2025. Nominated by both CJI D.Y. Chandrachud and CJI Sanjiv Khanna.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -14940,7 +14940,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-GAU-CJ",
-    "bio": "Joined from Patna HC.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -14956,7 +14956,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-GUJ-CJ",
-    "bio": "Joined from Allahabad HC.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -14972,7 +14972,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-HP-CJ",
-    "bio": "Joined from Punjab & Haryana HC.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -14988,7 +14988,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-JKL-CJ",
-    "bio": "Joined from Punjab & Haryana HC.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -15004,7 +15004,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-JHK-CJ",
-    "bio": "Joined from Bombay HC. Note: Exact retirement date from DoJ PDF was unclear (entry error); estimated Dec 2026.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -15020,7 +15020,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-KAR-CJ",
-    "bio": "Joined from Delhi HC.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -15036,7 +15036,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-KER-CJ",
-    "bio": "Joined Kerala 10 Jan 2026. Previously 14th CJ of Meghalaya HC.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -15052,7 +15052,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MP-CJ",
-    "bio": "Joined from Delhi HC.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -15068,7 +15068,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-CJ",
-    "bio": "Succeeded M.M. Shrivastava (retired 05 Mar 2026). Nominated by CJI Surya Kant.",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15084,7 +15084,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-001",
-    "bio": "Directly appointed permanent judge.",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15100,7 +15100,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-002",
-    "bio": "Directly appointed permanent judge.",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15116,7 +15116,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-003",
-    "bio": "Directly appointed permanent judge.",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15132,7 +15132,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-004",
-    "bio": "Directly appointed permanent judge (Service).",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15148,7 +15148,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-005",
-    "bio": "Directly appointed permanent judge (Service).",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15164,7 +15164,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-006",
-    "bio": "Directly appointed permanent judge (Service).",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15260,7 +15260,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-012",
-    "bio": "Full name: Pondicherry Daivasigamani Audikesavalu.",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15404,7 +15404,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-021",
-    "bio": "Transferred from Telangana HC (Jul 2025). Full name: Tadakamalla Vinod Kumar.",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15420,7 +15420,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-022",
-    "bio": "Transferred from Karnataka HC (May 2025). Addl Judge Karnataka from 11/11/2019; Perm 08/09/2021.",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15436,7 +15436,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-023",
-    "bio": "Joined Madras HC 30/09/2024 (transferred from Allahabad HC).",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15452,7 +15452,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-024",
-    "bio": "Full name: Murali Shankar Kuppuraju.",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15468,7 +15468,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-025",
-    "bio": "Full name: Thamilselvi T. Valayapalayam.",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15484,7 +15484,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-026",
-    "bio": "Full name: Sundaram Srimathi.",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15548,7 +15548,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-030",
-    "bio": "Joined Madras HC 23/11/2023 (transferred from Telangana HC).",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15564,7 +15564,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-031",
-    "bio": "Transferred from Telangana HC (May 2025). Also known as K. Surender.",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15580,7 +15580,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-032",
-    "bio": "Full name: Nidumolu Mala.",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15596,7 +15596,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-033",
-    "bio": "Full name: Sivapunniyam Sounthar.",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15628,7 +15628,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-035",
-    "bio": "Full name: Kabali Kumaresh Babu.",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15644,7 +15644,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-036",
-    "bio": "Full name: Lekshmana Chandra Victoria Gowri.",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15660,7 +15660,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-037",
-    "bio": "Full name: Pillaipakkam Bahukutumbi Balaji.",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15676,7 +15676,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-038",
-    "bio": "Full name: Kandhasami Kulandaivelu Ramakrishnan.",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15724,7 +15724,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-041",
-    "bio": "Full name: Venkatachari Lakshminarayanan.",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15756,7 +15756,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-043",
-    "bio": "Additional Judge. DOB 21 Jul 1973. Service source.",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15772,7 +15772,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-044",
-    "bio": "Additional Judge. DOB 05 Mar 1974. Service source.",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15788,7 +15788,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-045",
-    "bio": "Additional Judge. DOB 15 Jul 1972. Service source.",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15804,7 +15804,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-046",
-    "bio": "Additional Judge. DOB 29 Apr 1975. Service source.",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15820,7 +15820,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-047",
-    "bio": "Additional Judge. DOB 12 Oct 1970. Bar source.",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15836,7 +15836,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-048",
-    "bio": "Additional Judge. DOB 27 May 1976. Bar source.",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15852,7 +15852,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-049",
-    "bio": "Additional Judge. DOB 03 Jul 1966. Service source.",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15868,7 +15868,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-050",
-    "bio": "Additional Judge. DOB 04 Jun 1972. Service source.",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15884,7 +15884,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAD-051",
-    "bio": "Additional Judge. Full name: Augustine Devadoss Maria Clete. DOB 06 Nov 1965.",
+    "bio": "",
     "bio_source_url": "https://hcmadras.tn.gov.in/present_judges.php",
     "bio_source_label": "Madras HC present judges page",
     "assets": {
@@ -15900,7 +15900,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MAN-CJ",
-    "bio": "Joined from Madras HC.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -15916,7 +15916,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-MEG-CJ",
-    "bio": "Joined from Bombay HC. Retires Nov 2026.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -15932,7 +15932,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-ORI-CJ",
-    "bio": "Joined from Calcutta HC. One of most senior HC judges by initial elevation.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -15948,7 +15948,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-PAT-CJ",
-    "bio": "Joined from Orissa HC. Retiring 04 Jun 2026 — only ~23 days away.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -15964,7 +15964,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-PHC-CJ",
-    "bio": "Joined from Madhya Pradesh HC.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -15980,7 +15980,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-RAJ-CJ",
-    "bio": "Acting CJ from home court. Retires Sep 2026.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -15996,7 +15996,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-SIK-CJ",
-    "bio": "Joined from Kerala HC.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -16012,7 +16012,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-TEL-CJ",
-    "bio": "Joined Telangana 19 Jul 2025. Previously 8th CJ of Tripura HC.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -16028,7 +16028,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-TRI-CJ",
-    "bio": "Joined Tripura 22 Jul 2025. Previously 28th CJ of Himachal Pradesh HC.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
@@ -16044,7 +16044,7 @@ window.JUDGE_DETAILS_DATA = [
   },
   {
     "id": "HC-UTK-CJ",
-    "bio": "Joined from Allahabad HC. Retires Oct 2026.",
+    "bio": "",
     "bio_source_url": "",
     "bio_source_label": "",
     "assets": {
