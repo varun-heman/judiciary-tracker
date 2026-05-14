@@ -362,6 +362,61 @@ body.right-rail-collapsed .app-layout {
 .stat-chip.critical { background: var(--critical-bg); color: var(--critical); border-color: var(--critical-border); }
 .stat-chip.warning  { background: var(--warning-bg);  color: var(--warning);  border-color: var(--warning-border); }
 
+.notification-scope-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 16px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+}
+
+.scope-filter,
+.inline-action-btn {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 32px;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition), color var(--transition);
+}
+
+.scope-filter:hover,
+.inline-action-btn:hover {
+  border-color: color-mix(in srgb, var(--accent2) 45%, var(--border));
+  color: var(--text);
+}
+
+.scope-filter.active {
+  background: var(--accent2);
+  border-color: var(--accent2);
+  color: #fff;
+}
+
+.scope-filter strong {
+  min-width: 22px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: color-mix(in srgb, currentColor 12%, transparent);
+  color: inherit;
+}
+
+.inline-action-btn {
+  margin-top: 10px;
+  color: var(--accent2);
+}
+
 .role-filter-bar,
 .admin-toolbar {
   display: flex;
