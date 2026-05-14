@@ -380,7 +380,7 @@ function renderCard(person, isHead = false) {
           </div>
         </div>
         ${person.notes ? `<div class="card-notes">${person.notes}</div>` : ''}
-      </div></div>`;
+      </div>`;
   }
 
   const progressBar = (retireStr && tenure.status !== 'retired') ? `
@@ -415,7 +415,7 @@ function renderCard(person, isHead = false) {
         ${person.photo_source ? `<div class="meta-row"><span class="meta-icon">▧</span><span>Photo: ${escHtml(person.photo_source)}</span></div>` : ''}
         ${person.notes ? `<div class="meta-row notes-row"><span class="meta-icon">ℹ</span><span>${person.notes}</span></div>` : ''}
       </div>
-    </div></div>`;
+    </div>`;
 }
 
 function renderAvatar(person) {
@@ -2030,7 +2030,7 @@ function renderAdminCard(cpc) {
         ${cpc.source_url ? `<div class="meta-row"><span class="meta-icon">↗</span><span><a class="inline-link" href="${escHtml(cpc.source_url)}" target="_blank" rel="noopener">${escHtml(cpc.source_label || 'Official source')}</a></span></div>` : ''}
         ${cleanNotes ? `<div class="meta-row notes-row"><span class="meta-icon">ℹ</span><span>${escHtml(cleanNotes)}</span></div>` : ''}
       </div>
-    </div></div>`;
+    </div>`;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
