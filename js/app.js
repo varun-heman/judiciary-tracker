@@ -33,6 +33,7 @@ const state = {
   selectedId: 'HOME',
   selectedJudgeId: '',
   searchQuery: '',
+  metalPrices: null,
 };
 
 let applyingRoute = false;
@@ -720,28 +721,76 @@ function jewelleryAssetTable(rows, item) {
   const goldTotal   = goldRows.reduce((s, r) => s + (r.grams || 0), 0) || Number(item.gold_grams);
   const silverTotal = silverRows.reduce((s, r) => s + (r.grams || 0), 0) || Number(item.silver_grams);
 
-  function metalTable(subRows, label, emoji, footerLabel, footerTotal, footerEmoji) {
-    const hasNotes = subRows.some(rowHasNote);
+  const mp = state.metalPrices;
+
+  function fmtInr(amt) {
+    if (!amt || !isFinite(amt) || amt <= 0) return null;
+    if (amt >= 10000000) return `₹${(amt / 10000000).toFixed(2)} Cr`;
+    if (amt >= 100000)   return `₹${(amt / 100000).toFixed(2)} L`;
+    return `₹${Math.round(amt).toLocaleString('en-IN')}`;
+  }
+
+  function metalTable(subRows, label, emoji, footerLabel, footerTotal, footerEmoji, pricePerGram) {
+    const hasNotes  = subRows.some(rowHasNote);
+    const showValue = mp && pricePerGram > 0;
+    const rows_html = subRows.map(row => {
+      const estVal = showValue && row.grams ? fmtInr(row.grams * pricePerGram) : null;
+      return `<tr>
+        <td>${escHtml(row.owner || 'Declared')}</td>
+        <td>${escHtml(row.type)}</td>
+        <td class="num">${amountPill(row.grams ? formatWeight(row.grams) : '', emoji)}</td>
+        ${showValue ? `<td class="num">${estVal
+          ? `<span class="est-value">${escHtml(estVal)}</span>`
+          : '<span class="asset-muted-value">—</span>'}</td>` : ''}
+        ${hasNotes ? `<td class="note-cell">${rowHasNote(row)
+          ? `<span class="asset-note-tip" data-tip="${escAttr(cleanNote(row.note))}">ⓘ</span>`
+          : ''}</td>` : ''}
+      </tr>`;
+    }).join('');
+
+    const totalEstVal = showValue && footerTotal ? fmtInr(footerTotal * pricePerGram) : null;
+
     return `
     <div class="asset-table-scroll"><div class="asset-table-wrap">
       <table class="asset-table">
-        <thead><tr><th>Owner</th><th>${escHtml(label)}</th><th class="num">Amount</th>${hasNotes ? '<th class="note-cell">Note</th>' : ''}</tr></thead>
-        <tbody>${subRows.map(row => `
-          <tr>
-            <td>${escHtml(row.owner || 'Declared')}</td>
-            <td>${escHtml(row.type)}</td>
-            <td class="num">${amountPill(row.grams ? formatWeight(row.grams) : '', emoji)}</td>
-            ${hasNotes ? `<td class="note-cell">${rowHasNote(row) ? `<span class="asset-note-tip" data-tip="${escAttr(cleanNote(row.note))}">ⓘ</span>` : ''}</td>` : ''}
-          </tr>`).join('')}</tbody>
-        ${footerTotal ? `<tfoot><tr><td colspan="2">${escHtml(footerLabel)}</td><td class="num">${amountPill(formatWeight(footerTotal), footerEmoji, true)}</td>${hasNotes ? '<td></td>' : ''}</tr></tfoot>` : ''}
+        <thead><tr>
+          <th>Owner</th>
+          <th>${escHtml(label)}</th>
+          <th class="num">Amount</th>
+          ${showValue ? '<th class="num est-value-col">Est. Value</th>' : ''}
+          ${hasNotes  ? '<th class="note-cell">Note</th>' : ''}
+        </tr></thead>
+        <tbody>${rows_html}</tbody>
+        ${footerTotal ? `<tfoot><tr>
+          <td colspan="2">${escHtml(footerLabel)}</td>
+          <td class="num">${amountPill(formatWeight(footerTotal), footerEmoji, true)}</td>
+          ${showValue ? `<td class="num">${totalEstVal
+            ? `<span class="amount-pill strong">${escHtml(totalEstVal)}</span>`
+            : '<span class="asset-muted-value">—</span>'}</td>` : ''}
+          ${hasNotes ? '<td></td>' : ''}
+        </tr></tfoot>` : ''}
       </table>
     </div></div>`;
   }
 
   const parts = [];
-  if (goldRows.length)   parts.push(metalTable(goldRows,   'Gold',               '🏅', 'Total gold',         goldTotal,   '🏅'));
-  if (silverRows.length) parts.push(metalTable(silverRows, 'Silver',             '🥈', 'Total silver',       silverTotal, '🥈'));
-  if (otherRows.length)  parts.push(metalTable(otherRows,  'Watches & valuables','💎', 'Total valuables',    0,           '💎'));
+  if (goldRows.length)   parts.push(metalTable(goldRows,   'Gold',               '🏅', 'Total gold',      goldTotal,   '🏅', mp ? mp.goldPerGram   : 0));
+  if (silverRows.length) parts.push(metalTable(silverRows, 'Silver',             '🥈', 'Total silver',    silverTotal, '🥈', mp ? mp.silverPerGram : 0));
+  if (otherRows.length)  parts.push(metalTable(otherRows,  'Watches & valuables','💎', 'Total valuables', 0,           '💎', 0));
+
+  // Disclaimer
+  if (mp) {
+    const fetchedStr = new Date(mp.fetchedAt).toLocaleString('en-IN', {
+      day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit'
+    });
+    parts.push(`
+      <div class="metal-price-disclaimer">
+        <p class="disclaimer-warning">⚠️ Estimated values only. Actual market value may vary significantly.</p>
+        <p>Prices sourced from <strong>metals.live</strong> (international spot rates) and converted to INR using <strong>open.er-api.com</strong>. Last refreshed: <strong>${escHtml(fetchedStr)}</strong>.</p>
+        <p><strong>Assumptions:</strong> Gold is priced at 22-karat purity (91.67%). Silver is priced at 92.5% purity (Sterling Silver). Making charges, wastage, GST, and local market premiums are not included. The purity and quality of declared jewellery is not stated in affidavits — actual resale or market values may differ substantially.</p>
+      </div>`);
+  }
+
   return parts.join('');
 }
 
@@ -1758,6 +1807,43 @@ function renderUpcomingPanel() {
 // ─────────────────────────────────────────────────────────────────────────────
 // Init
 // ─────────────────────────────────────────────────────────────────────────────
+// ── Metal spot-price fetching ────────────────────────────────────────────────
+// Prices from metals.live (USD/troy oz), converted to INR via open.er-api.com.
+// Cached in localStorage for 24 hours so the APIs are hit at most once a day.
+const METAL_CACHE_KEY = 'jt_metal_prices';
+const METAL_CACHE_TTL = 24 * 60 * 60 * 1000; // 24 h in ms
+const TROY_OZ_GRAMS   = 31.1035;
+const GOLD_PURITY     = 22 / 24;   // 22-karat (most Indian jewellery)
+const SILVER_PURITY   = 0.925;     // Sterling silver (92.5%)
+
+async function loadMetalPrices() {
+  try {
+    const cached = JSON.parse(localStorage.getItem(METAL_CACHE_KEY) || 'null');
+    if (cached && (Date.now() - cached.fetchedAt) < METAL_CACHE_TTL) {
+      state.metalPrices = cached;
+      return;
+    }
+    const [metalsRaw, fxRaw] = await Promise.all([
+      fetch('https://metals.live/api/v1/latest').then(r => r.json()),
+      fetch('https://open.er-api.com/v6/latest/USD').then(r => r.json()),
+    ]);
+    const metals   = Array.isArray(metalsRaw) ? metalsRaw[0] : metalsRaw;
+    const usdToInr = fxRaw && fxRaw.rates && fxRaw.rates.INR;
+    if (!metals.gold || !metals.silver || !usdToInr) throw new Error('Unexpected response shape');
+
+    const data = {
+      goldPerGram:   (metals.gold   / TROY_OZ_GRAMS) * GOLD_PURITY   * usdToInr,
+      silverPerGram: (metals.silver / TROY_OZ_GRAMS) * SILVER_PURITY * usdToInr,
+      usdToInr,
+      fetchedAt: Date.now(),
+    };
+    try { localStorage.setItem(METAL_CACHE_KEY, JSON.stringify(data)); } catch (_) {}
+    state.metalPrices = data;
+  } catch (e) {
+    console.warn('Metal prices unavailable:', e);
+  }
+}
+
 async function init() {
   // Search
   const searchInput = document.getElementById('search-input');
@@ -1805,7 +1891,7 @@ async function init() {
     if (e.key === 'Escape') closeSidebar();
   });
 
-  const ok = await loadData();
+  const [ok] = await Promise.all([loadData(), loadMetalPrices()]);
   if (ok) {
     applyRoute();
     renderNav();

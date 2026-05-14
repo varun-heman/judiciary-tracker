@@ -1000,6 +1000,44 @@ body.dark .show-all-btn.active {
   padding-top: 8px;
 }
 
+/* ── Metal price estimated value column ────────────────────────── */
+.est-value {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent2);
+  white-space: nowrap;
+}
+
+th.est-value-col {
+  white-space: nowrap;
+  color: var(--text-muted);
+}
+
+/* ── Jewellery price disclaimer ────────────────────────────────── */
+.metal-price-disclaimer {
+  margin-top: 10px;
+  padding: 12px 14px;
+  background: color-mix(in srgb, var(--text-muted) 5%, var(--bg-card));
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.metal-price-disclaimer p {
+  margin: 0 0 6px;
+}
+
+.metal-price-disclaimer p:last-child {
+  margin-bottom: 0;
+}
+
+.disclaimer-warning {
+  font-weight: 600;
+  color: var(--text) !important;
+}
+
 .detail-grid {
   display: grid;
   grid-template-columns: 1fr;
