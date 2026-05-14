@@ -586,6 +586,7 @@ function assetTableRow(category, raw) {
       owner,
       type: landHoldingType(note),
       share: propertyShare(note),
+      areaSqFt: parseBuiltAreaSqFt(note),
       acres: parseAcres(note),
       note
     };
@@ -623,6 +624,33 @@ function moneyAssetTable(rows, item) {
 }
 
 function propertyAssetTable(rows, item) {
+  if (item.category === 'property') return builtPropertyAssetTable(rows, item);
+  return landAssetTable(rows, item);
+}
+
+function builtPropertyAssetTable(rows) {
+  const totalArea = rows.reduce((sum, row) => sum + (row.areaSqFt || 0), 0);
+  return `
+    <div class="asset-table-wrap">
+      <table class="asset-table">
+        <thead><tr><th>Owner</th><th>Property</th><th>Share / size</th><th class="num">Area</th><th>Note</th></tr></thead>
+        <tbody>${rows.map(row => `
+          <tr title="${escAttr(row.note)}">
+            <td>${escHtml(row.owner || 'Declared')}</td>
+            <td>${escHtml(row.type)}</td>
+            <td>${escHtml(row.share || 'Not stated')}</td>
+            <td class="num">${amountPill(row.areaSqFt ? formatSqFt(row.areaSqFt) : '', '🏠')}</td>
+            <td class="note-cell"><span title="${escAttr(row.note)}">ⓘ</span></td>
+          </tr>`).join('')}</tbody>
+        <tfoot>
+          <tr><td colspan="3">Total disclosed properties</td><td class="num">${amountPill(String(rows.length), '🏠', true)}</td><td></td></tr>
+          <tr><td colspan="3">Total disclosed residential/commercial area</td><td class="num">${amountPill(totalArea ? formatSqFt(totalArea) : '', '📐', true)}</td><td></td></tr>
+        </tfoot>
+      </table>
+    </div>`;
+}
+
+function landAssetTable(rows, item) {
   const totalAcres = Number(item.acres) || rows.reduce((sum, row) => sum + (row.acres || 0), 0);
   return `
     <div class="asset-table-wrap">
@@ -708,6 +736,7 @@ function amountPill(value, emoji = '', strong = false) {
 }
 
 function landHoldingType(text) {
+  if (/commercial|office|shop/i.test(text)) return 'Commercial property';
   if (/agricultural|acre|bigha/i.test(text)) return 'Agricultural land';
   if (/plot/i.test(text)) return 'Plot';
   if (/flat|apartment/i.test(text)) return 'Flat / apartment';
@@ -726,7 +755,7 @@ function categoryLabel(category) {
 
 function propertyShare(text) {
   const share = text.match(/\b\d+\/\d+(?:st|nd|rd|th)?\s+share\b|\b\d+\/\d+(?:st|nd|rd|th)?\b/i);
-  const size = text.match(/\b[0-9][0-9,.]*(?:\s*&\s*half|½)?\s*(?:sq\.?\s*(?:yards?|yds?|feet|ft|meters?|mtrs?)|acres?|bighas?|kanal)\b/i);
+  const size = text.match(/\b[0-9][0-9,.]*(?:\s*&\s*half|½)?\s*(?:sq\.?\s*(?:yards?|yds?|feet|ft|meters?|mtrs?)|sqft|sq\.?ft|acres?|bighas?|kanal)\b/i);
   return [share && share[0], size && size[0]].filter(Boolean).join(' · ');
 }
 
@@ -752,6 +781,26 @@ function parseAcres(text) {
   if (decimalHalf) return Number(decimalHalf[1].replace(/,/g, '')) + 0.5;
   const match = text.match(/([0-9][0-9,.]*)\s*acres?/i);
   return match ? Number(match[1].replace(/,/g, '')) : null;
+}
+
+function parseBuiltAreaSqFt(text) {
+  const patterns = [
+    { re: /([0-9][0-9,.]*)\s*sq\.?\s*(?:yards?|yds?)/i, factor: 9 },
+    { re: /([0-9][0-9,.]*)\s*(?:sq\.?\s*ft|sqft|sq\.?\s*feet)/i, factor: 1 },
+    { re: /([0-9][0-9,.]*)\s*sq\.?\s*(?:meters?|mtrs?)/i, factor: 10.7639 },
+    { re: /([0-9][0-9,.]*)\s*kanal/i, factor: 5445 },
+  ];
+  for (const { re, factor } of patterns) {
+    const match = text.match(re);
+    if (match) return Math.round(Number(match[1].replace(/,/g, '')) * factor);
+  }
+  return null;
+}
+
+function formatSqFt(value) {
+  const n = Number(value);
+  if (!Number.isFinite(n) || n <= 0) return '';
+  return `${Math.round(n).toLocaleString('en-IN')} sq ft`;
 }
 
 function parseMetalGrams(text, metal) {
