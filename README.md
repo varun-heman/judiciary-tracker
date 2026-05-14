@@ -14,7 +14,7 @@ India's courts touch nearly every aspect of public life — land, liberty, labou
 
 This tracker is a small attempt to fix that. It pulls together publicly available information on the Supreme Court of India, all High Courts, and selected administrative staff into a single, searchable, open-source interface — with no login, no paywall, and no agenda beyond making public information easier to find.
 
-**This project was built by someone who is not a developer.** Varun Hemachandran works closely with courts across India. The interface, data extraction, and tooling were built over several days in May 2026 using [OpenAI Codex](https://openai.com/codex) and [Anthropic Claude](https://claude.ai) (via Cowork and Claude Code). The AI tools did most of the coding; Varun directed the work and verified the data.
+**This project was built by someone who is not a developer.** Varun Hemachandran's full-time work is closely tied to the smooth functioning of courts and to expanding access to justice — and this tracker grew directly from that context. The interface, data extraction, and tooling were built over several days in May 2026 using [OpenAI Codex](https://openai.com/codex) and [Anthropic Claude](https://claude.ai) (via Cowork and Claude Code). The AI tools did most of the coding; Varun directed the work and verified the data.
 
 **On accuracy:** AI-assisted projects make mistakes, and so do humans. Both kinds of error are possible in the data, the code, and the inferences this site draws. We try to mitigate this in two ways. First, every data point links back to its official source — you can always check the primary record. Second, where the site makes assumptions (most notably in estimating net worth from declared assets and live metal prices), it shows exactly how the calculation works, what was included, what was excluded, and why the result may not be accurate. Look for the ⓘ icons throughout the site.
 
@@ -239,7 +239,7 @@ See [LICENSE](LICENSE) for the full text.
 
 ## Acknowledgements
 
-**Built by** Varun Hemachandran — not a developer by training, but someone who works closely with courts across India and wanted this information to be easier to find.
+**Built by** Varun Hemachandran — not a developer by training, but someone whose full-time work is closely tied to the smooth functioning of courts and to expanding access to justice, and who wanted this information to be easier to find.
 
 **Built with** [OpenAI Codex](https://openai.com/codex) and [Anthropic Claude](https://claude.ai) (via Cowork and Claude Code). These tools handled the bulk of the coding, data extraction, and interface work over several days in May 2026. This project would not exist without them.
 
