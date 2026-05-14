@@ -864,7 +864,7 @@ body.dark .show-all-btn.active {
 
 .judge-profile-identity {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 18px;
   min-width: 0;
 }
@@ -874,6 +874,7 @@ body.dark .show-all-btn.active {
   height: 102px;
   flex-basis: 86px;
   border-radius: 12px;
+  margin-top: 4px;
 }
 
 .judge-profile-main h2 {
